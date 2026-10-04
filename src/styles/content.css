@@ -1,0 +1,14 @@
+/* Typography details for rendered content (KaTeX output and figures). */
+
+.katex {
+  font-size: 1.05em;
+}
+
+.katex-display {
+  margin: 0.5em 0;
+}
+
+/* Display math must scroll inside its wrapper instead of widening the page. */
+.katex-display > .katex {
+  max-width: none;
+}

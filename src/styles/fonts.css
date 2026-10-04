@@ -1,0 +1,67 @@
+/*
+ * Self-hosted fonts (SIL OFL), woff2 only, only the subsets we use.
+ * Latin: Cormorant Garamond (display) and Inter (body). Thai: Mitr.
+ * Mitr also has Latin glyphs but the DESIGN fonts come first in every stack, see DESIGN-claude.md.
+ */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2')
+    format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-400-normal.woff2')
+    format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-normal.woff2')
+    format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/mitr/files/mitr-thai-300-normal.woff2') format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/mitr/files/mitr-thai-400-normal.woff2') format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+
+@font-face {
+  font-family: 'Mitr';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/mitr/files/mitr-thai-500-normal.woff2') format('woff2');
+  unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
+}

@@ -1,1 +1,20 @@
 CLAUDE.md
+
+# dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# generated content data (rebuilt by `npm run content`)
+src/content/generated/
+
+# test and tool output
+coverage/
+playwright-report/
+test-results/
+.vite/
+
+# logs and OS files
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,51 @@
+/* Home diagram motion and connector styling. Colors come from the design tokens. */
+
+.diagram-path {
+  fill: none;
+  stroke: var(--color-muted-soft);
+  stroke-width: 1.5;
+}
+
+.diagram-path[data-active='true'] {
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+.diagram-path[data-draw='true'] {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: diagram-draw 300ms ease-out forwards;
+}
+
+.diagram-enter {
+  animation: diagram-in 240ms ease-out both;
+}
+
+@keyframes diagram-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes diagram-in {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagram-path[data-draw='true'] {
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+
+  .diagram-enter {
+    animation: none;
+  }
+}
