@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
 import { MenuToggleIcon } from '@/components/layout/MenuToggleIcon';
@@ -11,6 +11,30 @@ import { cn } from '@/lib/cn';
 const MENU_ID = 'mobile-menu';
 
 /**
+ * Slides the highlight pill to the current tab. A pill that was hidden (home page, not found)
+ * appears in place and fades in; a pill that is already showing glides to the new tab; a
+ * re-measure after a resize or font load jumps, so it never trails behind the layout.
+ */
+function placePill(list: HTMLElement, pill: HTMLElement, animate: boolean): void {
+  const active = list.querySelector<HTMLElement>('a[aria-current="page"]');
+  if (!active) {
+    pill.style.opacity = '0';
+    return;
+  }
+  const wasHidden = pill.style.opacity !== '1';
+  const jump = !animate || wasHidden;
+  if (jump) pill.style.transitionProperty = animate ? 'opacity' : 'none';
+  pill.style.width = `${active.offsetWidth}px`;
+  pill.style.height = `${active.offsetHeight}px`;
+  pill.style.transform = `translate(${active.offsetLeft}px, ${active.offsetTop}px)`;
+  if (jump) {
+    void pill.offsetWidth;
+    pill.style.transitionProperty = '';
+  }
+  pill.style.opacity = '1';
+}
+
+/**
  * Top navigation (UI-SPEC.md section 2): a tab row from md up, a hamburger below md.
  * Chapter labels shorten to "บท N" between md and lg.
  */
@@ -20,8 +44,22 @@ export function Navbar() {
   const [shareOpen, setShareOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const shareRef = useRef<HTMLButtonElement>(null);
+  const tabsRef = useRef<HTMLUListElement>(null);
+  const pillRef = useRef<HTMLSpanElement>(null);
   const { pathname } = useLocation();
   const open = openAt === pathname;
+
+  // Follows the current page, and keeps up when the tab row changes size (resize, fonts, label length).
+  useLayoutEffect(() => {
+    const list = tabsRef.current;
+    const pill = pillRef.current;
+    if (!list || !pill) return;
+    placePill(list, pill, true);
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(() => placePill(list, pill, false));
+    observer.observe(list);
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const close = useCallback(() => {
     setOpenAt(null);
@@ -45,15 +83,20 @@ export function Navbar() {
           <Logo />
         </Link>
 
-        <ul className="hidden items-center gap-0.5 md:flex lg:gap-1">
+        <ul ref={tabsRef} className="relative hidden items-center gap-0.5 md:flex lg:gap-1">
+          <span
+            ref={pillRef}
+            aria-hidden="true"
+            className="pointer-events-none absolute top-0 left-0 rounded-md bg-surface-card opacity-0 transition-[transform,width,height,opacity] duration-[420ms] ease-[cubic-bezier(0.34,1.45,0.64,1)] motion-reduce:transition-none"
+          />
           {NAV_ITEMS.map((item) => (
             <li key={item.to}>
               <NavLink
                 to={item.to}
                 className={({ isActive }) =>
                   cn(
-                    'type-nav block rounded-md px-2.5 py-2 whitespace-nowrap lg:px-3.5',
-                    isActive ? 'bg-surface-card text-ink' : 'text-muted',
+                    'type-nav relative block rounded-md px-2.5 py-2 whitespace-nowrap transition-colors duration-300 lg:px-3.5',
+                    isActive ? 'text-ink' : 'text-muted',
                   )
                 }
               >

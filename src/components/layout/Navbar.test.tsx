@@ -128,4 +128,16 @@ describe('Navbar', () => {
     await waitFor(() => expect(screen.getByText('คัดลอกลิงก์แล้ว')).toBeInTheDocument());
     expect(writeText).toHaveBeenCalledWith(`${window.location.origin}${import.meta.env.BASE_URL}`);
   });
+
+  it('shows the highlight pill on the current tab only, and hides it on the home page', () => {
+    const { container, unmount } = setup('/chapter/3');
+    const pill = container.querySelector('header ul > span') as HTMLElement;
+    expect(pill).toHaveAttribute('aria-hidden', 'true');
+    expect(pill.style.opacity).toBe('1');
+    unmount();
+
+    const home = setup('/');
+    const hidden = home.container.querySelector('header ul > span') as HTMLElement;
+    expect(hidden.style.opacity).toBe('0');
+  });
 });
