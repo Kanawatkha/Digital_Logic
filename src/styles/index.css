@@ -60,8 +60,7 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    /* Always reserve the vertical scrollbar so opening a block never shifts the layout sideways */
-    overflow-y: scroll;
+    /* Keep the space of the vertical scrollbar without drawing it until the page scrolls */
     scrollbar-gutter: stable;
   }
 

@@ -38,6 +38,11 @@ export const UI_TEXT = {
   updateAction: 'โหลดใหม่',
   offlineReady: 'ใช้งานออฟไลน์ได้แล้ว',
   dismiss: 'ปิด',
+  share: 'แชร์เว็บไซต์',
+  shareHint: 'สแกน QR หรือคัดลอกลิงก์',
+  copyLink: 'คัดลอกลิงก์',
+  linkCopied: 'คัดลอกลิงก์แล้ว',
+  tocToggle: 'สารบัญ',
 } as const;
 
 export function isChapterNumber(value: number): value is ChapterNumber {

@@ -32,6 +32,7 @@ import {
   type FileStatus,
 } from './model';
 import { useDiagramLayout } from './useDiagramLayout';
+import { useLeavingColumns, type CanvasSize, type ColumnBox } from './useLeavingColumns';
 
 const columnId = (index: number) => `diagram-col-${index}`;
 
@@ -64,6 +65,56 @@ function labelOf(id: string, columns: Column[], chapters: ManifestEntry[]): stri
 function StatusCard({ children }: { children: ReactNode }) {
   return (
     <div className="diagram-enter relative z-10 rounded-lg border border-hairline bg-canvas p-4">
+      {children}
+    </div>
+  );
+}
+
+type ColumnShellProps = {
+  column: Column;
+  onLeave: (column: Column, box: ColumnBox) => void;
+  readCanvasSize: () => CanvasSize;
+  className: string;
+  children: ReactNode;
+};
+
+/**
+ * A live column. When it is removed it reports where it was, so the diagram can keep a fading
+ * copy there. Measured while still attached; a real removal is told apart from a StrictMode
+ * test unmount by checking in a microtask whether the element is still in the page.
+ */
+function ColumnShell({ column, onLeave, readCanvasSize, className, children }: ColumnShellProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const latest = useRef(column);
+  useLayoutEffect(() => {
+    latest.current = column;
+  });
+  const key = columnKey(column);
+  useLayoutEffect(() => {
+    const el = ref.current;
+    return () => {
+      if (!el) return;
+      const box = {
+        left: el.offsetLeft,
+        top: el.offsetTop,
+        width: el.offsetWidth,
+        canvas: readCanvasSize(),
+      };
+      queueMicrotask(() => {
+        if (!el.isConnected) onLeave(latest.current, box);
+      });
+    };
+  }, [key, onLeave, readCanvasSize]);
+  return (
+    <div
+      ref={ref}
+      id={columnId(column.index)}
+      data-col={column.index}
+      data-kind={column.kind}
+      data-parent={column.parentId}
+      data-col-key={key}
+      className={className}
+    >
       {children}
     </div>
   );
@@ -115,6 +166,7 @@ export function HomeDiagram() {
   const signature = columns.map(columnKey).join('|') + (state.rootOpen ? '+' : '-');
   const lastKey = columns.length > 0 ? columnKey(columns[columns.length - 1]) : null;
   useDiagramLayout(scrollRef, canvasRef, svgRef, signature, lastKey);
+  const { leaving, onLeave, readCanvasSize } = useLeavingColumns(scrollRef, canvasRef);
 
   useLayoutEffect(() => {
     const id = pendingFocus.current;
@@ -122,7 +174,7 @@ export function HomeDiagram() {
     if (!id) return;
     canvasRef.current
       ?.querySelectorAll<HTMLElement>('[data-node-id]')
-      .forEach((el) => el.dataset.nodeId === id && el.focus());
+      .forEach((el) => el.dataset.nodeId === id && !el.closest('[data-leaving]') && el.focus());
   }, [state]);
 
   const apply = (next: DiagramState, message: string) => {
@@ -193,6 +245,52 @@ export function HomeDiagram() {
     if (moved) event.preventDefault();
   };
 
+  const renderColumn = (column: Column, live: boolean) => (
+    <>
+      {column.kind === 'nodes'
+        ? column.items.map((item, order) => (
+            <DiagramNode
+              key={item.id}
+              id={item.id}
+              number={item.number}
+              title={item.title}
+              open={column.openId === item.id}
+              controls={live && column.openId === item.id ? columnId(column.index + 1) : undefined}
+              tone={column.index === 1 ? 'chapter' : 'item'}
+              order={live ? order : 0}
+              onToggle={() => onNode(column.index, item.id)}
+            />
+          ))
+        : null}
+      {column.kind === 'loading' ? (
+        <StatusCard>
+          <p role="status" className="type-body-sm text-muted">
+            {UI_TEXT.loading}
+          </p>
+        </StatusCard>
+      ) : null}
+      {column.kind === 'error' ? (
+        <StatusCard>
+          <p role="alert" className="type-body-sm mb-3 text-ink">
+            {UI_TEXT.loadError}
+          </p>
+          <Button variant="secondary" onClick={() => ensureFile(column.chapter, true)}>
+            {UI_TEXT.retry}
+          </Button>
+        </StatusCard>
+      ) : null}
+      {column.kind === 'block' ? (
+        <TopicBlock
+          node={column.node}
+          examplesOpen={state.examplesFor === column.node.id}
+          examplesColumnId={columnId(column.index + 1)}
+          onToggleExamples={() => onExamples(column.node.id)}
+        />
+      ) : null}
+      {column.kind === 'examples' ? <ExamplesBlock node={column.node} /> : null}
+    </>
+  );
+
   return (
     <div>
       <div
@@ -200,9 +298,12 @@ export function HomeDiagram() {
         role="region"
         aria-label="Midterm diagram"
         onKeyDown={onKeyDown}
-        className="-mx-4 overflow-x-auto px-4 pb-6 md:mx-0 md:px-0"
+        className="diagram-scroll overflow-x-auto pb-6"
       >
-        <div ref={canvasRef} className="relative flex w-max min-w-full items-start gap-8 md:gap-12">
+        <div
+          ref={canvasRef}
+          className="relative flex w-max min-w-full items-start gap-8 pr-4 pl-4 md:gap-12 md:pr-6 md:pl-[max(1.5rem,calc((100%-1200px)/2+1.5rem))]"
+        >
           <svg
             ref={svgRef}
             aria-hidden="true"
@@ -221,64 +322,29 @@ export function HomeDiagram() {
               <Icon name={state.rootOpen ? 'minus' : 'plus'} size={18} />
             </button>
           </div>
-          {columns.map((column) => {
-            const key = columnKey(column);
-            return (
-              <div
-                key={key}
-                id={columnId(column.index)}
-                data-col={column.index}
-                data-kind={column.kind}
-                data-parent={column.parentId}
-                data-col-key={key}
-                className={cn('flex shrink-0 flex-col gap-3', widthOf(column))}
-              >
-                {column.kind === 'nodes'
-                  ? column.items.map((item, order) => (
-                      <DiagramNode
-                        key={item.id}
-                        id={item.id}
-                        number={item.number}
-                        title={item.title}
-                        open={column.openId === item.id}
-                        controls={
-                          column.openId === item.id ? columnId(column.index + 1) : undefined
-                        }
-                        tone={column.index === 1 ? 'chapter' : 'item'}
-                        order={order}
-                        onToggle={() => onNode(column.index, item.id)}
-                      />
-                    ))
-                  : null}
-                {column.kind === 'loading' ? (
-                  <StatusCard>
-                    <p role="status" className="type-body-sm text-muted">
-                      {UI_TEXT.loading}
-                    </p>
-                  </StatusCard>
-                ) : null}
-                {column.kind === 'error' ? (
-                  <StatusCard>
-                    <p role="alert" className="type-body-sm mb-3 text-ink">
-                      {UI_TEXT.loadError}
-                    </p>
-                    <Button variant="secondary" onClick={() => ensureFile(column.chapter, true)}>
-                      {UI_TEXT.retry}
-                    </Button>
-                  </StatusCard>
-                ) : null}
-                {column.kind === 'block' ? (
-                  <TopicBlock
-                    node={column.node}
-                    examplesOpen={state.examplesFor === column.node.id}
-                    examplesColumnId={columnId(column.index + 1)}
-                    onToggleExamples={() => onExamples(column.node.id)}
-                  />
-                ) : null}
-                {column.kind === 'examples' ? <ExamplesBlock node={column.node} /> : null}
-              </div>
-            );
-          })}
+          {columns.map((column) => (
+            <ColumnShell
+              key={columnKey(column)}
+              column={column}
+              onLeave={onLeave}
+              readCanvasSize={readCanvasSize}
+              className={cn('flex shrink-0 flex-col gap-3', widthOf(column))}
+            >
+              {renderColumn(column, true)}
+            </ColumnShell>
+          ))}
+          {leaving.map((item) => (
+            <div
+              key={`leaving-${item.token}`}
+              data-leaving
+              aria-hidden="true"
+              inert
+              style={{ position: 'absolute', left: item.left, top: item.top, width: item.width }}
+              className={cn('diagram-leave flex flex-col gap-3', widthOf(item.column))}
+            >
+              {renderColumn(item.column, false)}
+            </div>
+          ))}
         </div>
       </div>
       {manifestFailed ? (

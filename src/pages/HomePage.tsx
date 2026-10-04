@@ -1,16 +1,13 @@
-import { PageContainer, PageHeading } from '@/components/layout/PageContainer';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { HomeDiagram } from '@/features/home-diagram/HomeDiagram';
 
+/** Full width on purpose: the diagram runs past the content column and scrolls sideways. */
 export default function HomePage() {
   usePageTitle();
   return (
-    <PageContainer>
-      <PageHeading
-        title="Midterm"
-        lead="แตะ Midterm เพื่อเปิดบทที่ 1-5 แล้วเลือกหัวข้อไปเรื่อย ๆ เพื่ออ่านสูตร คำอธิบาย และตัวอย่าง วิชา 1322201 การออกแบบดิจิทัลลอจิก"
-      />
+    <div className="w-full py-8 md:py-12">
+      <h1 className="sr-only">Midterm</h1>
       <HomeDiagram />
-    </PageContainer>
+    </div>
   );
 }

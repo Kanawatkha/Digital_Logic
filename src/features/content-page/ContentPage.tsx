@@ -57,15 +57,19 @@ export function ContentPage({ collection, chapter, variant, tabTitle, badge }: C
   const items = jumpItems(file.root);
 
   return (
-    <PageContainer>
-      <PageHeading title={plainText(file.title)} badge={badge} />
+    <PageContainer className={variant === 'formulas' ? 'lg:pl-14 xl:pl-6' : undefined}>
       {variant === 'exercises' ? (
         <>
+          <PageHeading title={plainText(file.title)} badge={badge} />
           <JumpNav items={items} label="หัวข้อในหน้านี้" />
           <ExerciseOutline root={file.root} />
         </>
       ) : (
-        <FormulaOutline root={file.root} items={items} />
+        <>
+          {/* the sheet starts straight at its content; the title stays for screen readers */}
+          <h1 className="sr-only">{plainText(file.title)}</h1>
+          <FormulaOutline root={file.root} items={items} />
+        </>
       )}
     </PageContainer>
   );

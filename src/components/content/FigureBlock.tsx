@@ -10,6 +10,7 @@ export function FigureBlock({ svg }: { svg: string }) {
       <ScrollArea
         className="flex justify-center [&_svg]:h-auto [&_svg]:max-w-full"
         html={svg}
+        centered
       />
     </figure>
   );

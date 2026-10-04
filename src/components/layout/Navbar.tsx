@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
 import { Logo } from '@/components/layout/Logo';
 import { MobileMenu } from '@/components/layout/MobileMenu';
+import { ShareDialog } from '@/components/layout/ShareDialog';
 import { NAV_ITEMS, SITE_NAME, UI_TEXT } from '@/config/site';
 import { cn } from '@/lib/cn';
 
@@ -15,7 +16,9 @@ const MENU_ID = 'mobile-menu';
 export function Navbar() {
   // The menu is "open at" a path, so any navigation (link press, back gesture) closes it.
   const [openAt, setOpenAt] = useState<string | null>(null);
+  const [shareOpen, setShareOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const shareRef = useRef<HTMLButtonElement>(null);
   const { pathname } = useLocation();
   const open = openAt === pathname;
 
@@ -23,6 +26,13 @@ export function Navbar() {
     setOpenAt(null);
     toggleRef.current?.focus();
   }, []);
+
+  const closeShare = useCallback(() => {
+    setShareOpen(false);
+    shareRef.current?.focus();
+  }, []);
+
+  const siteUrl = `${window.location.origin}${import.meta.env.BASE_URL}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-canvas">
@@ -59,18 +69,32 @@ export function Navbar() {
           ))}
         </ul>
 
-        <button
-          ref={toggleRef}
-          type="button"
-          className="inline-flex size-11 items-center justify-center rounded-md text-ink md:hidden"
-          aria-expanded={open}
-          aria-controls={MENU_ID}
-          aria-label={open ? UI_TEXT.menuClose : UI_TEXT.menuOpen}
-          onClick={() => (open ? close() : setOpenAt(pathname))}
-        >
-          <Icon name={open ? 'close' : 'menu'} size={24} />
-        </button>
+        <div className="flex items-center gap-1 md:gap-0">
+          <button
+            ref={shareRef}
+            type="button"
+            className="inline-flex size-10 items-center justify-center rounded-md bg-primary-active text-on-primary md:ms-2"
+            aria-label={UI_TEXT.share}
+            aria-haspopup="dialog"
+            onClick={() => setShareOpen(true)}
+          >
+            <Icon name="share" size={20} />
+          </button>
+          <button
+            ref={toggleRef}
+            type="button"
+            className="inline-flex size-11 items-center justify-center rounded-md text-ink md:hidden"
+            aria-expanded={open}
+            aria-controls={MENU_ID}
+            aria-label={open ? UI_TEXT.menuClose : UI_TEXT.menuOpen}
+            onClick={() => (open ? close() : setOpenAt(pathname))}
+          >
+            <Icon name={open ? 'close' : 'menu'} size={24} />
+          </button>
+        </div>
       </nav>
+
+      <ShareDialog open={shareOpen} onClose={closeShare} url={siteUrl} />
 
       <MobileMenu id={MENU_ID} open={open} onClose={close} />
     </header>

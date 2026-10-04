@@ -4,6 +4,7 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 /** Distance from the top of a block to the point its connector lands on. */
 const BLOCK_ANCHOR = 28;
 const REVEAL_INSET = 16;
+const LEAVE_PATH_MS = 220;
 
 type Box = { x: number; y: number; w: number; h: number };
 
@@ -20,6 +21,10 @@ function boxIn(el: HTMLElement, canvas: HTMLElement): Box {
   return { x, y, w: el.offsetWidth, h: el.offsetHeight };
 }
 
+const prefersReducedMotion = () =>
+  typeof window.matchMedia === 'function' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 function curve(x1: number, y1: number, x2: number, y2: number): string {
   const mid = x1 + (x2 - x1) / 2;
   return `M${x1} ${y1}C${mid} ${y1} ${mid} ${y2} ${x2} ${y2}`;
@@ -33,7 +38,7 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
   const columns = Array.from(canvas.querySelectorAll<HTMLElement>('[data-col]'));
   const nodes = new Map<string, HTMLElement>();
   canvas.querySelectorAll<HTMLElement>('[data-node-id]').forEach((el) => {
-    if (el.dataset.nodeId) nodes.set(el.dataset.nodeId, el);
+    if (el.dataset.nodeId && !el.closest('[data-leaving]')) nodes.set(el.dataset.nodeId, el);
   });
 
   const wanted: { key: string; d: string; active: boolean }[] = [];
@@ -81,7 +86,16 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
   });
   const keep = new Set(wanted.map((w) => w.key));
   existing.forEach((el, key) => {
-    if (!keep.has(key)) el.remove();
+    if (keep.has(key) || el.dataset.leaving === 'true') return;
+    // a connector to a closed column is drawn back before it goes
+    if (prefersReducedMotion()) {
+      el.remove();
+      return;
+    }
+    el.dataset.leaving = 'true';
+    setTimeout(() => {
+      if (el.dataset.leaving === 'true') el.remove();
+    }, LEAVE_PATH_MS);
   });
   for (const w of wanted) {
     let el = existing.get(w.key);
@@ -93,14 +107,11 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
       el.dataset.draw = 'true';
       svg.appendChild(el);
     }
+    delete el.dataset.leaving;
     el.setAttribute('d', w.d);
     el.dataset.active = String(w.active);
   }
 }
-
-const prefersReducedMotion = () =>
-  typeof window.matchMedia === 'function' &&
-  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Scrolls the canvas so the newest column starts 16 px inside the left edge, unless it is already fully visible. */
 function reveal(scroller: HTMLElement, canvas: HTMLElement, key: string): void {

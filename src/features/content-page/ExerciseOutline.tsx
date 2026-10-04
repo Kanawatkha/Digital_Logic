@@ -95,7 +95,7 @@ export function ExerciseOutline({ root }: { root: ContentNode }) {
   const limit = useCardLimit(sizes.reduce((sum, n) => sum + n, 0));
   const starts = sizes.map((_, i) => sizes.slice(0, i).reduce((sum, n) => sum + n, 0));
   return (
-    <div className="flex max-w-[880px] flex-col gap-4">
+    <div className="flex flex-col gap-4">
       <BlockList blocks={root.explain} />
       {root.children.map((child, i) => {
         const first = starts[i];

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ContentFile, ContentNode, Manifest } from '@/content/types';
 import { HomeDiagram } from './HomeDiagram';
@@ -145,5 +145,19 @@ describe('HomeDiagram', () => {
     fireEvent.click(await screen.findByRole('button', { name: /ระบบเลขฐาน/ }));
     fireEvent.click(await screen.findByRole('button', { name: 'ลองอีกครั้ง' }));
     expect(await screen.findByRole('button', { name: '1. กลุ่ม' })).toBeInTheDocument();
+  });
+
+  it('keeps a closed column on screen briefly so it can animate out, then removes it', async () => {
+    const { container } = render(<HomeDiagram />);
+    const root = screen.getByRole('button', { name: /Midterm/ });
+    fireEvent.click(root);
+    fireEvent.click(await screen.findByRole('button', { name: /ระบบเลขฐาน/ }));
+    await screen.findByRole('button', { name: '1. กลุ่ม' });
+    fireEvent.click(root);
+    await waitFor(() => expect(container.querySelectorAll('div[data-leaving]').length).toBe(2));
+    const copy = container.querySelector('div[data-leaving]');
+    expect(copy).toHaveAttribute('aria-hidden', 'true');
+    expect(copy).toHaveAttribute('inert');
+    await waitFor(() => expect(container.querySelector('div[data-leaving]')).toBeNull());
   });
 });

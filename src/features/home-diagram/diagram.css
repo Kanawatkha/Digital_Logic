@@ -1,5 +1,14 @@
 /* Home diagram motion and connector styling. Colors come from the design tokens. */
 
+/* The canvas still scrolls sideways (touch, wheel, drag, keys); only its scrollbar is hidden. */
+.diagram-scroll {
+  scrollbar-width: none;
+}
+
+.diagram-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 .diagram-path {
   fill: none;
   stroke: var(--color-muted-soft);
@@ -38,7 +47,42 @@
   }
 }
 
+/* Closing plays the opening backwards: the column fades and slides back, its connector is drawn in reverse. */
+.diagram-leave {
+  animation: diagram-out 200ms ease-in-out forwards;
+}
+
+/* The copy of a closed column must not replay the enter animation of its cards. */
+.diagram-leave .diagram-enter {
+  animation: none;
+}
+
+.diagram-path[data-leaving='true'] {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: diagram-undraw 200ms ease-in-out forwards;
+}
+
+@keyframes diagram-out {
+  to {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+}
+
+@keyframes diagram-undraw {
+  to {
+    stroke-dashoffset: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .diagram-leave,
+  .diagram-path[data-leaving='true'] {
+    animation: none;
+    display: none;
+  }
+
   .diagram-path[data-draw='true'] {
     stroke-dasharray: none;
     stroke-dashoffset: 0;

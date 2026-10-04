@@ -11,6 +11,7 @@ let observer: ResizeObserver | undefined;
  * layout on their own made the long exercise pages slow to start.
  */
 function watchOverflow(el: HTMLElement, onChange: Listener): () => void {
+  onChange(el.scrollWidth > el.clientWidth + 1);
   if (typeof ResizeObserver === 'undefined') return () => {};
   observer ??= new ResizeObserver((entries) => {
     for (const { target } of entries) {
@@ -30,13 +31,15 @@ type ScrollAreaProps = {
   /** Pre-rendered trusted markup (KaTeX or a validated SVG). Used instead of children. */
   html?: string;
   children?: ReactNode;
+  /** Marks content that is centered in the column (formulas, figures), see FormulaOutline. */
+  centered?: boolean;
 };
 
 /**
  * Horizontal scroll container for wide math, tables and figures. It becomes a keyboard stop
  * only while its content really overflows, so short blocks add no extra tab stops.
  */
-export function ScrollArea({ className, html, children }: ScrollAreaProps) {
+export function ScrollArea({ className, html, children, centered }: ScrollAreaProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [overflowing, setOverflowing] = useState(false);
 
@@ -50,6 +53,7 @@ export function ScrollArea({ className, html, children }: ScrollAreaProps) {
     ref,
     className: cn('overflow-x-auto', className),
     tabIndex: overflowing ? 0 : undefined,
+    'data-centered': centered ? '' : undefined,
   };
   return html !== undefined ? (
     <div {...shared} dangerouslySetInnerHTML={{ __html: html }} />

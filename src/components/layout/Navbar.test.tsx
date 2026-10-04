@@ -1,6 +1,6 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { Navbar } from '@/components/layout/Navbar';
 import { NAV_ITEMS } from '@/config/site';
 
@@ -74,5 +74,47 @@ describe('Navbar', () => {
     expect(document.getElementById('mobile-menu')).not.toBeNull();
     fireEvent.click(screen.getByRole('button', { name: 'go' }));
     expect(document.getElementById('mobile-menu')).toBeNull();
+  });
+
+  it('opens the share dialog with a QR code and the link, and closes it with Escape', async () => {
+    setup();
+    const share = screen.getByRole('button', { name: 'แชร์เว็บไซต์' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+
+    fireEvent.click(share);
+    const dialog = screen.getByRole('dialog');
+    expect(within(dialog).getByRole('img', { name: /^QR / })).toBeInTheDocument();
+    expect(within(dialog).getByRole('textbox')).toHaveValue(
+      `${window.location.origin}${import.meta.env.BASE_URL}`,
+    );
+    expect(within(dialog).getByRole('button', { name: 'คัดลอกลิงก์' })).toBeInTheDocument();
+
+    fireEvent.keyDown(document, { key: 'Escape' });
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    expect(share).toHaveFocus();
+  });
+
+  it('closes the share dialog with the cross or by pressing outside the card', async () => {
+    setup();
+    fireEvent.click(screen.getByRole('button', { name: 'แชร์เว็บไซต์' }));
+    fireEvent.click(screen.getByRole('button', { name: 'ปิด' }));
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+
+    fireEvent.click(screen.getByRole('button', { name: 'แชร์เว็บไซต์' }));
+    const overlay = screen.getByRole('dialog').parentElement as HTMLElement;
+    fireEvent.pointerDown(screen.getByRole('dialog'));
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    fireEvent.pointerDown(overlay);
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+  });
+
+  it('copies the link and shows that it was copied', async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined);
+    Object.assign(navigator, { clipboard: { writeText } });
+    setup();
+    fireEvent.click(screen.getByRole('button', { name: 'แชร์เว็บไซต์' }));
+    fireEvent.click(screen.getByRole('button', { name: 'คัดลอกลิงก์' }));
+    await waitFor(() => expect(screen.getByText('คัดลอกลิงก์แล้ว')).toBeInTheDocument());
+    expect(writeText).toHaveBeenCalledWith(`${window.location.origin}${import.meta.env.BASE_URL}`);
   });
 });
