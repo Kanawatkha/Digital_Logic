@@ -1,4 +1,5 @@
-import { useLayoutEffect, type RefObject } from 'react';
+import { useCallback, useLayoutEffect, useRef, type RefObject } from 'react';
+import { leaveDelay } from './useLeavingColumns';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 /** Distance from the top of a block to the point its connector lands on. */
@@ -7,6 +8,11 @@ const REVEAL_INSET = 16;
 const LEAVE_PATH_MS = 220;
 
 type Box = { x: number; y: number; w: number; h: number };
+
+/** Where a column last was in the canvas, kept so a copy of it can be put back there when it closes. */
+export type ColumnRect = { left: number; top: number; width: number };
+
+type CloseContext = { previous: number; current: number };
 
 /** Position inside the canvas from layout offsets, so running enter animations do not skew it. */
 function boxIn(el: HTMLElement, canvas: HTMLElement): Box {
@@ -34,14 +40,20 @@ function curve(x1: number, y1: number, x2: number, y2: number): string {
  * Aligns each column with its parent node, then draws one connector per child. Paths are kept
  * between passes so only new ones play the draw-in animation.
  */
-function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
+function layout(
+  canvas: HTMLElement,
+  svg: SVGSVGElement,
+  close: CloseContext,
+  rects: Map<string, ColumnRect>,
+): void {
   const columns = Array.from(canvas.querySelectorAll<HTMLElement>('[data-col]'));
   const nodes = new Map<string, HTMLElement>();
   canvas.querySelectorAll<HTMLElement>('[data-node-id]').forEach((el) => {
     if (el.dataset.nodeId && !el.closest('[data-leaving]')) nodes.set(el.dataset.nodeId, el);
   });
 
-  const wanted: { key: string; d: string; active: boolean }[] = [];
+  const wanted: { key: string; d: string; active: boolean; index: number }[] = [];
+  rects.clear();
   let previousOffset = 0;
   for (const col of columns) {
     const parent = col.dataset.parent ? nodes.get(col.dataset.parent) : undefined;
@@ -60,6 +72,14 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
     else offset = Math.max(0, py - col.offsetHeight / 2);
     col.style.marginTop = `${offset}px`;
     previousOffset = offset;
+    if (col.dataset.colKey) {
+      rects.set(col.dataset.colKey, {
+        left: col.offsetLeft,
+        top: col.offsetTop,
+        width: col.offsetWidth,
+      });
+    }
+    const index = Number(col.dataset.col);
 
     if (kind === 'nodes') {
       col.querySelectorAll<HTMLElement>('[data-node-id]').forEach((child) => {
@@ -68,6 +88,7 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
           key: `${col.dataset.parent}>${child.dataset.nodeId}`,
           d: curve(px, py, c.x, c.y + c.h / 2),
           active: child.dataset.open === 'true',
+          index,
         });
       });
     } else {
@@ -76,6 +97,7 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
         key: `${col.dataset.parent}>${col.dataset.colKey}`,
         d: curve(px, py, c.x, c.y + BLOCK_ANCHOR),
         active: true,
+        index,
       });
     }
   }
@@ -92,10 +114,13 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
       el.remove();
       return;
     }
+    // it leaves together with the column it leads to
+    const delay = leaveDelay(Number(el.dataset.col), close.previous, close.current);
+    el.style.animationDelay = `${delay}ms`;
     el.dataset.leaving = 'true';
     setTimeout(() => {
       if (el.dataset.leaving === 'true') el.remove();
-    }, LEAVE_PATH_MS);
+    }, delay + LEAVE_PATH_MS);
   });
   for (const w of wanted) {
     let el = existing.get(w.key);
@@ -108,6 +133,8 @@ function layout(canvas: HTMLElement, svg: SVGSVGElement): void {
       svg.appendChild(el);
     }
     delete el.dataset.leaving;
+    el.style.animationDelay = '';
+    el.dataset.col = String(w.index);
     el.setAttribute('d', w.d);
     el.dataset.active = String(w.active);
   }
@@ -138,12 +165,21 @@ export function useDiagramLayout(
   svgRef: RefObject<SVGSVGElement | null>,
   signature: string,
   lastKey: string | null,
-): void {
+  deepest: number,
+) {
+  const rects = useRef(new Map<string, ColumnRect>());
+  const depth = useRef(0);
+
+  /** Last known place of a column, read while it is being removed. */
+  const readRect = useCallback((key: string) => rects.current.get(key), []);
+
   useLayoutEffect(() => {
     const canvas = canvasRef.current;
     const svg = svgRef.current;
     if (!canvas || !svg) return;
-    const run = () => layout(canvas, svg);
+    const close = { previous: depth.current, current: deepest };
+    depth.current = deepest;
+    const run = () => layout(canvas, svg, close, rects.current);
     run();
     window.addEventListener('resize', run);
     let observer: ResizeObserver | undefined;
@@ -156,6 +192,8 @@ export function useDiagramLayout(
       window.removeEventListener('resize', run);
       observer?.disconnect();
     };
+    // `deepest` only matters together with `signature`, which changes whenever it does
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvasRef, svgRef, signature]);
 
   useLayoutEffect(() => {
@@ -163,4 +201,6 @@ export function useDiagramLayout(
     const canvas = canvasRef.current;
     if (scroller && canvas && lastKey) reveal(scroller, canvas, lastKey);
   }, [scrollRef, canvasRef, lastKey]);
+
+  return { readRect };
 }

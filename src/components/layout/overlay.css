@@ -1,13 +1,13 @@
-/* Share dialog: the page behind blurs and darkens gradually, the card eases in. */
+/* Shared by the share dialog and the mobile menu: the page behind blurs and darkens gradually. */
 
-.share-overlay {
+.blur-overlay {
   background-color: rgb(20 20 19 / 0.4);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   animation: share-backdrop-in 240ms ease-out both;
 }
 
-.share-overlay[data-state='closed'] {
+.blur-overlay[data-state='closed'] {
   animation: share-backdrop-out 200ms ease-in both;
 }
 
@@ -15,7 +15,7 @@
   animation: share-card-in 240ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
-.share-overlay[data-state='closed'] .share-card {
+.blur-overlay[data-state='closed'] .share-card {
   animation: share-card-out 200ms ease-in both;
 }
 
@@ -50,10 +50,38 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .share-overlay,
-  .share-overlay[data-state='closed'],
+  .blur-overlay,
+  .blur-overlay[data-state='closed'],
   .share-card,
-  .share-overlay[data-state='closed'] .share-card {
+  .blur-overlay[data-state='closed'] .share-card {
+    animation: none;
+  }
+}
+
+/* Mobile menu panel: slides down from under the navbar and back up. */
+.menu-panel {
+  animation: menu-down 280ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.blur-overlay[data-state='closed'] .menu-panel {
+  animation: menu-up 220ms ease-in both;
+}
+
+@keyframes menu-down {
+  from {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes menu-up {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-panel,
+  .blur-overlay[data-state='closed'] .menu-panel {
     animation: none;
   }
 }

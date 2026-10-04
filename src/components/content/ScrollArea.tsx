@@ -51,7 +51,7 @@ export function ScrollArea({ className, html, children, centered }: ScrollAreaPr
 
   const shared = {
     ref,
-    className: cn('overflow-x-auto', className),
+    className: cn('thin-scroll overflow-x-auto', className),
     tabIndex: overflowing ? 0 : undefined,
     'data-centered': centered ? '' : undefined,
   };

@@ -36,7 +36,7 @@ describe('Navbar', () => {
     expect(current[0]).toHaveAttribute('href', '/chapter/3');
   });
 
-  it('opens the mobile menu with one row per page and closes it with Escape', () => {
+  it('opens the mobile menu with one row per page and closes it with Escape', async () => {
     setup();
     const toggle = screen.getByRole('button', { name: 'เมนู' });
     expect(toggle).toHaveAttribute('aria-expanded', 'false');
@@ -53,7 +53,8 @@ describe('Navbar', () => {
     expect(within(menu as HTMLElement).getAllByRole('link')).toHaveLength(NAV_ITEMS.length + 1);
 
     fireEvent.keyDown(document, { key: 'Escape' });
-    expect(document.getElementById('mobile-menu')).toBeNull();
+    // the panel stays for the length of its slide-up animation
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
     expect(screen.getByRole('button', { name: 'เมนู' })).toHaveFocus();
   });
 
@@ -68,12 +69,22 @@ describe('Navbar', () => {
     expect(rows[0]).toHaveFocus();
   });
 
-  it('closes the mobile menu when the route changes', () => {
+  it('closes the mobile menu when the route changes', async () => {
     setup();
     fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
     expect(document.getElementById('mobile-menu')).not.toBeNull();
     fireEvent.click(screen.getByRole('button', { name: 'go' }));
-    expect(document.getElementById('mobile-menu')).toBeNull();
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+  });
+
+  it('closes the mobile menu by pressing the dimmed page below it', async () => {
+    setup();
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    const menu = document.getElementById('mobile-menu') as HTMLElement;
+    fireEvent.pointerDown(menu);
+    expect(document.getElementById('mobile-menu')).not.toBeNull();
+    fireEvent.pointerDown(menu.parentElement as HTMLElement);
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
   });
 
   it('opens the share dialog with a QR code and the link, and closes it with Escape', async () => {

@@ -2,6 +2,27 @@
 
 .katex {
   font-size: 1.05em;
+  /*
+   * KaTeX_Main has no Thai glyphs, so Thai inside formulas (tables, 	ext{...}) would fall back
+   * to whatever font the device picks. Put the site's Thai font right after it, at the body weight.
+   */
+  font-family: KaTeX_Main, 'Mitr', 'Times New Roman', serif;
+  font-weight: 300;
+}
+
+/* KaTeX's text and style commands set their own font-family; keep the Thai fallback in them too. */
+.katex .mathrm,
+.katex .textrm,
+.katex .mathit,
+.katex .textit,
+.katex .mathbf,
+.katex .textbf {
+  font-family: KaTeX_Main, 'Mitr', 'Times New Roman', serif;
+}
+
+/* Labels in the inline circuit drawings: same idea, Latin stays as drawn. */
+figure svg text {
+  font-family: 'Times New Roman', 'Mitr', serif;
 }
 
 .katex-display {
@@ -11,4 +32,23 @@
 /* Display math must scroll inside its wrapper instead of widening the page. */
 .katex-display > .katex {
   max-width: none;
+}
+
+/* Sideways scrolling blocks (formulas, tables, figures, answers): one slim scrollbar on every screen. */
+.thin-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-muted-soft) transparent;
+}
+
+.thin-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scroll::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: var(--color-muted-soft);
 }

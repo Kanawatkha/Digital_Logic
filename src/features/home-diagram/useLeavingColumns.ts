@@ -4,11 +4,23 @@ import type { Column } from './model';
 
 /** Length of the close animation, UI-SPEC.md section 4.4. */
 export const LEAVE_MS = 200;
+/** Closing runs from the deepest column back to the root; each step starts this much later. */
+export const LEAVE_STAGGER_MS = 70;
+
+/**
+ * How long a column that is being closed waits before it starts to leave. Columns that disappear
+ * from the right end go one after the other, the deepest first, so a block and the connector into
+ * it always leave together. A column that is only replaced does not wait.
+ */
+export function leaveDelay(index: number, previousDeepest: number, deepest: number): number {
+  return index > deepest ? Math.max(0, previousDeepest - index) * LEAVE_STAGGER_MS : 0;
+}
 /** The canvas keeps its old width this long so the sideways scroll can glide back instead of jumping. */
 const HOLD_MS = 420;
 
 export type LeavingColumn = {
   token: number;
+  delay: number;
   column: Column;
   left: number;
   top: number;
@@ -30,9 +42,11 @@ const prefersReducedMotion = () =>
 export function useLeavingColumns(
   scrollRef: RefObject<HTMLDivElement | null>,
   canvasRef: RefObject<HTMLDivElement | null>,
+  deepest: number,
 ) {
   const [leaving, setLeaving] = useState<LeavingColumn[]>([]);
   const lastSize = useRef<CanvasSize>({ width: 0, height: 0 });
+  const depth = useRef({ previous: 0, current: 0 });
   const nextToken = useRef(0);
   const heldHeight = useRef(0);
   const holdTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -45,12 +59,18 @@ export function useLeavingColumns(
     };
   });
 
+  // Only a change of depth counts, so the copies created by one closing all see the same pair.
+  useLayoutEffect(() => {
+    depth.current = { previous: depth.current.current, current: deepest };
+  }, [deepest]);
+
   /** Canvas size as of the previous commit. Must be read while the column is being removed. */
   const readCanvasSize = useCallback(() => lastSize.current, []);
 
   const onLeave = useCallback(
     (column: Column, { canvas: size, ...box }: ColumnBox) => {
       if (prefersReducedMotion()) return;
+      const delay = leaveDelay(column.index, depth.current.previous, depth.current.current);
       const canvas = canvasRef.current;
       if (canvas) {
         // the canvas keeps its old size for a moment, so the page does not shrink under the animation
@@ -62,14 +82,14 @@ export function useLeavingColumns(
           canvas.style.minWidth = '';
           canvas.style.minHeight = '';
           heldHeight.current = 0;
-        }, HOLD_MS);
+        }, HOLD_MS + delay);
       }
       const token = nextToken.current++;
       // flushed at once: a render left to the scheduler would show an empty frame before the copy
-      flushSync(() => setLeaving((list) => [...list, { token, column, ...box }]));
+      flushSync(() => setLeaving((list) => [...list, { token, delay, column, ...box }]));
       setTimeout(
         () => setLeaving((list) => list.filter((item) => item.token !== token)),
-        LEAVE_MS + 20,
+        delay + LEAVE_MS + 20,
       );
     },
     [canvasRef],

@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
+import { MenuToggleIcon } from '@/components/layout/MenuToggleIcon';
 import { Logo } from '@/components/layout/Logo';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ShareDialog } from '@/components/layout/ShareDialog';
@@ -76,7 +77,10 @@ export function Navbar() {
             className="inline-flex size-10 items-center justify-center rounded-md bg-primary-active text-on-primary md:ms-2"
             aria-label={UI_TEXT.share}
             aria-haspopup="dialog"
-            onClick={() => setShareOpen(true)}
+            onClick={() => {
+              setOpenAt(null);
+              setShareOpen(true);
+            }}
           >
             <Icon name="share" size={20} />
           </button>
@@ -89,7 +93,7 @@ export function Navbar() {
             aria-label={open ? UI_TEXT.menuClose : UI_TEXT.menuOpen}
             onClick={() => (open ? close() : setOpenAt(pathname))}
           >
-            <Icon name={open ? 'close' : 'menu'} size={24} />
+            <MenuToggleIcon open={open} />
           </button>
         </div>
       </nav>

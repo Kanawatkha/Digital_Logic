@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ContentFile, ContentNode } from '@/content/types';
@@ -88,7 +88,8 @@ describe('ContentPage', () => {
     expect(
       screen.getByRole('heading', { level: 3, name: 'หัวข้อว่าง' }).closest('article'),
     ).toBeNull();
-    expect(document.title).toBe('บทที่ 3 พีชคณิตบูลีน | Digital Logic Notes');
+    // the title is set by an effect, so it can land a moment after the heading
+    await waitFor(() => expect(document.title).toBe('บทที่ 3 พีชคณิตบูลีน | Digital Logic Notes'));
   });
 
   it('shows an error with a retry button and recovers', async () => {

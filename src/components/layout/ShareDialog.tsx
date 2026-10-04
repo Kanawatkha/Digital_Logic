@@ -4,7 +4,7 @@ import { QrCode } from '@/components/layout/QrCode';
 import { UI_TEXT } from '@/config/site';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
-import './share-dialog.css';
+import './overlay.css';
 
 const CLOSE_MS = 200;
 const COPIED_MS = 1800;
@@ -60,7 +60,7 @@ export function ShareDialog({ open, onClose, url }: ShareDialogProps) {
   return (
     <div
       data-state={open ? 'open' : 'closed'}
-      className="share-overlay fixed inset-0 z-[70] flex items-center justify-center p-4"
+      className="blur-overlay fixed inset-0 z-[70] flex overflow-y-auto p-4"
       onPointerDown={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
@@ -70,7 +70,7 @@ export function ShareDialog({ open, onClose, url }: ShareDialogProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="share-card relative flex w-full max-w-[420px] flex-col items-center gap-5 rounded-lg bg-canvas p-6 pt-8 shadow-[0_24px_64px_rgb(20_20_19/0.25)] md:p-8"
+        className="share-card relative m-auto flex w-full max-w-[420px] flex-col items-center gap-5 rounded-lg bg-canvas p-6 pt-8 shadow-[0_24px_64px_rgb(20_20_19/0.25)] md:p-8"
       >
         <button
           type="button"
@@ -89,7 +89,7 @@ export function ShareDialog({ open, onClose, url }: ShareDialogProps) {
         <QrCode
           value={url}
           label={`QR ${url}`}
-          className="size-[min(60vw,224px)] rounded-md border border-hairline"
+          className="size-[min(60vw,224px,36dvh)] rounded-md border border-hairline"
         />
         <div className="flex w-full items-center gap-2 rounded-md border border-hairline bg-surface-soft py-1 ps-3 pe-1">
           <input

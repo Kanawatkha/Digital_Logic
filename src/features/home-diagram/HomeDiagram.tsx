@@ -31,7 +31,7 @@ import {
   type DiagramState,
   type FileStatus,
 } from './model';
-import { useDiagramLayout } from './useDiagramLayout';
+import { useDiagramLayout, type ColumnRect } from './useDiagramLayout';
 import { useLeavingColumns, type CanvasSize, type ColumnBox } from './useLeavingColumns';
 
 const columnId = (index: number) => `diagram-col-${index}`;
@@ -74,6 +74,7 @@ type ColumnShellProps = {
   column: Column;
   onLeave: (column: Column, box: ColumnBox) => void;
   readCanvasSize: () => CanvasSize;
+  readRect: (key: string) => ColumnRect | undefined;
   className: string;
   children: ReactNode;
 };
@@ -83,7 +84,14 @@ type ColumnShellProps = {
  * copy there. Measured while still attached; a real removal is told apart from a StrictMode
  * test unmount by checking in a microtask whether the element is still in the page.
  */
-function ColumnShell({ column, onLeave, readCanvasSize, className, children }: ColumnShellProps) {
+function ColumnShell({
+  column,
+  onLeave,
+  readCanvasSize,
+  readRect,
+  className,
+  children,
+}: ColumnShellProps) {
   const ref = useRef<HTMLDivElement>(null);
   const latest = useRef(column);
   useLayoutEffect(() => {
@@ -94,17 +102,19 @@ function ColumnShell({ column, onLeave, readCanvasSize, className, children }: C
     const el = ref.current;
     return () => {
       if (!el) return;
-      const box = {
+      // Where it was is read from the last layout pass, not from the page: columns that are
+      // removed in the same commit are taken out one by one and would slide into each other.
+      const rect = readRect(key) ?? {
         left: el.offsetLeft,
         top: el.offsetTop,
         width: el.offsetWidth,
-        canvas: readCanvasSize(),
       };
+      const box = { ...rect, canvas: readCanvasSize() };
       queueMicrotask(() => {
         if (!el.isConnected) onLeave(latest.current, box);
       });
     };
-  }, [key, onLeave, readCanvasSize]);
+  }, [key, onLeave, readCanvasSize, readRect]);
   return (
     <div
       ref={ref}
@@ -165,8 +175,9 @@ export function HomeDiagram() {
   const columns = useMemo(() => buildColumns(chapters, files, state), [chapters, files, state]);
   const signature = columns.map(columnKey).join('|') + (state.rootOpen ? '+' : '-');
   const lastKey = columns.length > 0 ? columnKey(columns[columns.length - 1]) : null;
-  useDiagramLayout(scrollRef, canvasRef, svgRef, signature, lastKey);
-  const { leaving, onLeave, readCanvasSize } = useLeavingColumns(scrollRef, canvasRef);
+  const deepest = columns.length > 0 ? columns[columns.length - 1].index : 0;
+  const { readRect } = useDiagramLayout(scrollRef, canvasRef, svgRef, signature, lastKey, deepest);
+  const { leaving, onLeave, readCanvasSize } = useLeavingColumns(scrollRef, canvasRef, deepest);
 
   useLayoutEffect(() => {
     const id = pendingFocus.current;
@@ -328,6 +339,7 @@ export function HomeDiagram() {
               column={column}
               onLeave={onLeave}
               readCanvasSize={readCanvasSize}
+              readRect={readRect}
               className={cn('flex shrink-0 flex-col gap-3', widthOf(column))}
             >
               {renderColumn(column, true)}
@@ -339,7 +351,13 @@ export function HomeDiagram() {
               data-leaving
               aria-hidden="true"
               inert
-              style={{ position: 'absolute', left: item.left, top: item.top, width: item.width }}
+              style={{
+                position: 'absolute',
+                left: item.left,
+                top: item.top,
+                width: item.width,
+                animationDelay: `${item.delay}ms`,
+              }}
               className={cn('diagram-leave flex flex-col gap-3', widthOf(item.column))}
             >
               {renderColumn(item.column, false)}

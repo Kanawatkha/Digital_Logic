@@ -71,9 +71,9 @@ export function BlockRenderer({ block }: { block: Block }) {
             </>
           ) : null}
           {block.ans.length > 0 ? (
-            <>
-              <BlockList blocks={block.ans} className="rounded-md bg-surface-soft p-4" />
-            </>
+            <ScrollArea className="rounded-md bg-surface-soft p-4">
+              <BlockList blocks={block.ans} />
+            </ScrollArea>
           ) : null}
         </section>
       );
