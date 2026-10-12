@@ -155,10 +155,39 @@ $\mathbf{Ans}\quad (1011.101)_2=\mathbf{11.625}_{10},\quad (127.4)_8=\mathbf{87.
 
 **สูตร** ให้ฐานปลายทาง $b$
 
-- ส่วนจำนวนเต็ม : หารด้วย $b$ ซ้ำจนผลหารเป็น $0$ เศษที่ได้อ่านจาก **ล่างขึ้นบน** (เศษแรก = LSB)
-  $$q_k = b\cdot q_{k+1} + r_k$$
-- ส่วนทศนิยม : คูณด้วย $b$ ซ้ำ ส่วนเต็มที่ได้อ่านจาก **บนลงล่าง** (ตัวแรก = MSB) แล้วนำเฉพาะส่วนทศนิยมที่เหลือไปคูณต่อ จนเหลือ $0$ หรือครบตำแหน่งที่ต้องการ
-  $$F_k\times b = d_{k+1} + F_{k+1}$$
+**ส่วนจำนวนเต็ม** : หารด้วย $b$ ซ้ำ จนผลหารเป็น $0$ แล้วอ่านเศษจาก **ล่างขึ้นบน** (เศษแรกคือ LSB)
+
+$$
+\begin{array}{c|r|l}
+b & N & r_0\ \ (\text{LSB}) \\
+b & q_1 & r_1 \\
+b & q_2 & r_2 \\
+\vdots & \vdots & \vdots \\
+b & q_k & r_k\ \ (\text{MSB}) \\
+ & 0 &
+\end{array}
+$$
+
+- $b$ คือฐานปลายทาง (ตัวหาร) และ $N$ คือเลขฐาน 10 ส่วนจำนวนเต็มที่จะแปลง (ตัวตั้งในรอบแรก)
+- $q_1, q_2, \ldots$ คือผลหารของแต่ละรอบ ซึ่งนำไปหารต่อในรอบถัดไป (รอบแรก $q_1=N\div b$)
+- $r_0, r_1, \ldots$ คือเศษของแต่ละรอบ ซึ่งต้องน้อยกว่า $b$ เสมอ
+- ผลลัพธ์ส่วนจำนวนเต็ม คือ $r_k\ \cdots\ r_2\ r_1\ r_0$
+
+**ส่วนทศนิยม** : คูณด้วย $b$ ซ้ำ แล้วอ่านส่วนเต็มจาก **บนลงล่าง** (ตัวแรกคือ MSB) ในแต่ละรอบนำเฉพาะส่วนทศนิยมที่เหลือไปคูณต่อ จนเหลือ $0$ หรือครบตำแหน่งที่ต้องการ
+
+$$
+\begin{aligned}
+F_0\times b &= d_1 + F_1 &&\Rightarrow d_1\ \ (\text{MSB}) \\
+F_1\times b &= d_2 + F_2 &&\Rightarrow d_2 \\
+F_2\times b &= d_3 + F_3 &&\Rightarrow d_3 \\
+&\ \ \vdots &&\ \ \vdots
+\end{aligned}
+$$
+
+- $F_0$ คือส่วนทศนิยมเดิมที่จะแปลง (เช่น $0.6875$) และ $b$ คือฐานปลายทาง (ตัวคูณ)
+- $d_1, d_2, \ldots$ คือส่วนเต็มที่ได้ในแต่ละรอบ ซึ่งเป็นหลักของคำตอบ
+- $F_1, F_2, \ldots$ คือส่วนทศนิยมที่เหลือ ซึ่งนำไปคูณต่อในรอบถัดไป
+- ผลลัพธ์ส่วนทศนิยม คือ $.d_1d_2d_3\ldots$
 
 **ตัวอย่าง**
 
@@ -213,7 +242,62 @@ $\mathbf{Ans}\quad 37.6875_{10}=\mathbf{(100101.1011)_2},\quad 703.375_{10}=\mat
 
 เลขฐาน 8 หนึ่งหลัก = ฐาน 2 จำนวน **3 บิต** และเลขฐาน 16 หนึ่งหลัก = ฐาน 2 จำนวน **4 บิต**
 
-**สูตร**
+**สูตร** ดูจากภาพ : แบ่งเลขฐานสองเป็นกลุ่ม แต่ละกลุ่มเป็น 1 หลักของฐานปลายทาง
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="632" height="276" viewBox="0 0 790 345" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="355" y="20" text-anchor="middle" font-size="19" font-weight="bold">ฐานแปด (Octal) : 3 บิต = 1 หลัก</text>
+<text x="355" y="334" text-anchor="middle" font-size="19" font-weight="bold">ฐานสิบหก (Hex) : 4 บิต = 1 หลัก</text>
+<text x="782" y="176" text-anchor="end" font-size="19" font-weight="bold">เลขฐานสอง</text>
+<circle cx="60" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="60" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="112" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="112" y="176" text-anchor="middle" font-size="20">0</text>
+<circle cx="164" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="164" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="216" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="216" y="176" text-anchor="middle" font-size="20">0</text>
+<circle cx="268" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="268" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="320" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="320" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="372" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="372" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="424" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="424" y="176" text-anchor="middle" font-size="20">0</text>
+<circle cx="476" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="476" y="176" text-anchor="middle" font-size="20">0</text>
+<circle cx="528" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="528" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="580" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="580" y="176" text-anchor="middle" font-size="20">1</text>
+<circle cx="632" cy="170" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="632" y="176" text-anchor="middle" font-size="20">0</text>
+<g stroke="#e8743b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M42 134V126H182V134"/><line x1="112" y1="126" x2="112" y2="112"/><line x1="112" y1="112" x2="112" y2="90"/><polygon points="112,78 104,92 120,92" fill="#e8743b" stroke="none"/></g>
+<circle cx="112" cy="50" r="22" fill="#e8743b" fill-opacity="0.28" stroke="#e8743b" stroke-width="2.5"/>
+<text x="112" y="57" text-anchor="middle" font-size="22" font-weight="bold">5</text>
+<g stroke="#e8743b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M198 134V126H338V134"/><line x1="268" y1="126" x2="268" y2="112"/><line x1="268" y1="112" x2="268" y2="90"/><polygon points="268,78 260,92 276,92" fill="#e8743b" stroke="none"/></g>
+<circle cx="268" cy="50" r="22" fill="#e8743b" fill-opacity="0.28" stroke="#e8743b" stroke-width="2.5"/>
+<text x="268" y="57" text-anchor="middle" font-size="22" font-weight="bold">3</text>
+<g stroke="#e8743b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M354 134V126H494V134"/><line x1="424" y1="126" x2="424" y2="112"/><line x1="424" y1="112" x2="424" y2="90"/><polygon points="424,78 416,92 432,92" fill="#e8743b" stroke="none"/></g>
+<circle cx="424" cy="50" r="22" fill="#e8743b" fill-opacity="0.28" stroke="#e8743b" stroke-width="2.5"/>
+<text x="424" y="57" text-anchor="middle" font-size="22" font-weight="bold">4</text>
+<g stroke="#e8743b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M510 134V126H650V134"/><line x1="580" y1="126" x2="580" y2="112"/><line x1="580" y1="112" x2="580" y2="90"/><polygon points="580,78 572,92 588,92" fill="#e8743b" stroke="none"/></g>
+<circle cx="580" cy="50" r="22" fill="#e8743b" fill-opacity="0.28" stroke="#e8743b" stroke-width="2.5"/>
+<text x="580" y="57" text-anchor="middle" font-size="22" font-weight="bold">6</text>
+<g stroke="#2fae5f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M42 206V214H234V206"/><line x1="138" y1="214" x2="138" y2="228"/><line x1="138" y1="228" x2="138" y2="250"/><polygon points="138,262 130,248 146,248" fill="#2fae5f" stroke="none"/></g>
+<circle cx="138" cy="290" r="22" fill="#2fae5f" fill-opacity="0.28" stroke="#2fae5f" stroke-width="2.5"/>
+<text x="138" y="297" text-anchor="middle" font-size="22" font-weight="bold">A</text>
+<g stroke="#2fae5f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M250 206V214H442V206"/><line x1="346" y1="214" x2="346" y2="228"/><line x1="346" y1="228" x2="346" y2="250"/><polygon points="346,262 338,248 354,248" fill="#2fae5f" stroke="none"/></g>
+<circle cx="346" cy="290" r="22" fill="#2fae5f" fill-opacity="0.28" stroke="#2fae5f" stroke-width="2.5"/>
+<text x="346" y="297" text-anchor="middle" font-size="22" font-weight="bold">E</text>
+<g stroke="#2fae5f" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M458 206V214H650V206"/><line x1="554" y1="214" x2="554" y2="228"/><line x1="554" y1="228" x2="554" y2="250"/><polygon points="554,262 546,248 562,248" fill="#2fae5f" stroke="none"/></g>
+<circle cx="554" cy="290" r="22" fill="#2fae5f" fill-opacity="0.28" stroke="#2fae5f" stroke-width="2.5"/>
+<text x="554" y="297" text-anchor="middle" font-size="22" font-weight="bold">6</text>
+</svg>
+</div>
+
+เช่น $101011100110_2=(5346)_8=(AE6)_{16}$
 
 - ฐาน 2 → ฐาน 8 หรือ 16 : แบ่งกลุ่มละ 3 หรือ 4 บิต โดยส่วนจำนวนเต็มแบ่งจาก **ขวาไปซ้าย** (เติม 0 ทางซ้าย) และส่วนทศนิยมแบ่งจาก **ซ้ายไปขวา** (เติม 0 ทางขวา) แล้วแปลงแต่ละกลุ่มเป็น 1 หลัก
 - ฐาน 8 หรือ 16 → ฐาน 2 : แตกแต่ละหลักเป็น 3 หรือ 4 บิต

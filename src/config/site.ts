@@ -22,6 +22,16 @@ export const NAV_ITEMS: readonly NavItem[] = [
   { to: '/formulas', label: 'สรุปสูตรรวม' },
 ];
 
+/**
+ * The practice exams behind the "ข้อสอบกลางภาค" tab. Set 1 is the first practice exam with its solutions;
+ * sets 2 and 3 are the solutions of the second and third practice exams (worked-solutions/08 and /10).
+ */
+export const EXAM_SETS = [
+  { set: '1', to: '/exam', label: 'ชุดที่ 1', chapter: '06' },
+  { set: '2', to: '/exam/2', label: 'ชุดที่ 2', chapter: '08' },
+  { set: '3', to: '/exam/3', label: 'ชุดที่ 3', chapter: '10' },
+] as const;
+
 export const HOME_ITEM: NavItem = { to: '/', label: 'หน้าหลัก' };
 
 /** Other student-facing strings, see UI-SPEC.md section 1. */

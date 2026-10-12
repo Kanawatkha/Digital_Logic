@@ -58,7 +58,8 @@ No footer. A small toast host (bottom-left) shows update and offline-ready messa
 |---|---|---|---|
 | `#/` | Home | `summary/01..05` trees | Diagram canvas (section 4) |
 | `#/chapter/:n` | Chapter exercises | `worked-solutions/0n` | Prose column, jump chips, exercise cards (section 5) |
-| `#/exam` | Midterm practice exam | `worked-solutions/06` | Same as chapter page |
+| `#/exam` | Midterm practice exam, set 1 | `worked-solutions/06` | Same as chapter page, with the exam set switcher above the heading |
+| `#/exam/2`, `#/exam/3` | Solutions of practice exam sets 2 and 3 | `worked-solutions/08`, `worked-solutions/10` | Same as the exam page. The question-only files 07 and 09 have no page. The navbar tab "ข้อสอบกลางภาค" stays active on all three |
 | `#/formulas` | Formula sheet | `summary/00` | Prose with per-chapter sections and a contents rail (section 6) |
 | `*` | Not found | none | Centered message and link to Home |
 

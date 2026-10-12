@@ -789,3 +789,241 @@ $$
 </div>
 
 $\mathbf{Ans}\quad Z=\overline{\overline{AB}\cdot\overline{C}}$ ใช้แนนด์เกต 3 ตัว
+
+
+---
+
+## ข้อ 9 จาก Block Diagram และเงื่อนไขที่กำหนดให้ จงออกแบบ Combination circuit เพื่อแจ้งเตือนภัยจากการเกิดคลื่นยักษ์ "สึนามิ"
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="128" viewBox="0 0 500 150" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="150" y="30" width="200" height="90" rx="6"/>
+<line x1="60" y1="50" x2="150" y2="50"/>
+<line x1="350" y1="50" x2="440" y2="50"/>
+<line x1="60" y1="75" x2="150" y2="75"/>
+<line x1="350" y1="75" x2="440" y2="75"/>
+<line x1="60" y1="100" x2="150" y2="100"/>
+<line x1="350" y1="100" x2="440" y2="100"/></g>
+<text x="48" y="56" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">A</text><text x="48" y="81" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">B</text><text x="48" y="106" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">C</text><text x="452" y="56" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text><text x="452" y="81" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Y</text><text x="452" y="106" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Z</text><text x="250" y="68" font-size="17" text-anchor="middle" fill="currentColor" stroke="none">Logic Diagram</text><text x="250" y="92" font-size="17" text-anchor="middle" fill="currentColor" stroke="none">“ภัยจากสึนามิ”</text>
+</svg>
+</div>
+
+- **a.** จงเขียน Truth Table
+- **b.** จงเขียนสมการบูลีน
+- **c.** จงเขียน Logic Diagram
+
+**เงื่อนไข Input**
+
+- ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป ให้ A ทำงาน  A ทำงาน= "A=1"
+- ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ลงมา ให้ A ไม่ทำงาน  A ไม่ทำงาน= "A=0"
+- ถ้าตำแหน่งที่แผ่นดินไหวมีผลต่อประเทศไทยโดยตรง ให้ B ทำงาน
+- ถ้าตำแหน่งที่เกิดที่แผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม ให้ B ไม่ทำงาน
+- ถ้าอยู่ในช่วงน้ำขึ้น ให้ C ทำงาน   ถ้าอยู่ในช่วงน้ำลง ให้ C ไม่ทำงาน
+
+**เงื่อนไขความรุนแรง**
+
+1. ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป (A=1) และตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยตรง (B=1) ให้ X แจ้งเตือนภัย (X=1)
+2. ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป (A=1) และตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม (B=0) ให้ Y แจ้งเตือนภัย (Y=1)
+3. ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ (A=0) แต่ตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยตรง (B=1) ให้ Y แจ้งเตือนภัย (Y=1)
+4. ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ (A=0) แต่ตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม (B=0) และอยู่ในช่วงน้ำขึ้น (C=1) ให้ Y แจ้งเตือนภัย (Y=1)
+5. ถ้าไม่ตรงกับเงื่อนไขข้างบนทั้ง 4 ข้อ ให้ Z แจ้งเตือนภัย (A,B,C = 0) ทำให้ Z= 1
+
+### ข้อ 9.a  จงเขียน Truth Table
+
+$\mathbf{Sol}^{n}$
+
+อินพุต $A$ คือความแรงของแผ่นดินไหว ($1$ เมื่อ $\ge 8$ ริกเตอร์) $B$ คือผลต่อประเทศไทย ($1$ เมื่อโดยตรง) และ $C$ คือระดับน้ำ ($1$ เมื่อน้ำขึ้น) อ่านเงื่อนไขความรุนแรงแล้วหาว่าแต่ละแถวของ $ABC$ ตรงกับข้อไหน
+
+- $A=1,\ B=1$ ตรงข้อ 1 ได้ $X=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $110$ และ $111$)
+- $A=1,\ B=0$ ตรงข้อ 2 ได้ $Y=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $100$ และ $101$)
+- $A=0,\ B=1$ ตรงข้อ 3 ได้ $Y=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $010$ และ $011$)
+- $A=0,\ B=0,\ C=1$ ตรงข้อ 4 ได้ $Y=1$ (แถว $001$)
+- แถวที่เหลือคือ $A=0,\ B=0,\ C=0$ ไม่ตรงข้อ 1 ถึง 4 จึงตรงข้อ 5 ได้ $Z=1$ (แถว $000$)
+
+ตรวจ : ทุกแถวมีเอาต์พุตเป็น $1$ เพียงตัวเดียว
+
+| $A$ | $B$ | $C$ | $X$ | $Y$ | $Z$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
+
+$\mathbf{Ans}\quad X=1$ ที่ $ABC=110,111$ และ $Y=1$ ที่ $ABC=001,010,011,100,101$ และ $Z=1$ ที่ $ABC=000$ (ตารางดังด้านบน)
+
+---
+
+### ข้อ 9.b  จงเขียนสมการบูลีน
+
+$\mathbf{Sol}^{n}$
+
+เขียนเป็นผลรวมของมินเทอม ($A$ เป็น MSB) แล้วลดรูป
+
+$$
+\begin{aligned}
+X &= \sum m(6,7) = AB\overline{C}+ABC \\
+&= AB(\overline{C}+C) &&\text{ดึง $AB$ ออก (กระจาย ข้อ 3(b))} \\
+&= AB\cdot1 &&\text{ข้อ 8(a) $C+\overline{C}=1$} \\
+&= AB &&\text{ข้อ 7(b) $X\cdot1=X$}
+\end{aligned}
+$$
+
+$$
+Z=\sum m(0)=\overline{A}\,\overline{B}\,\overline{C}
+$$
+
+$Y=\sum m(1,2,3,4,5)$ ลดรูปด้วย K-map ใส่ $1$ ที่ช่อง $1,2,3,4,5$ แล้วจับลูป
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">BC</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">A</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text>
+<g><rect x="162" y="60" width="50" height="108" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="222" y="62" width="104" height="46" rx="14" stroke="#3b8be8" stroke-width="3" fill="none"/>
+<rect x="108" y="122" width="100" height="42" rx="14" stroke="#2fae5f" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+- ลูปสีส้ม (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow \overline{B}C$
+- ลูปสีน้ำเงิน (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- ลูปสีเขียว (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow A\overline{B}$
+
+**Y แบบ POS** : $Y=0$ ที่ช่อง $0,6,7$ ($Y=\prod M(0,6,7)$) จึงจับลูปของ $0$ แทน แล้วอ่านค่าแบบ POS คือตัวแปรที่เป็น $0$ เขียนไม่กลับค่า และตัวแปรที่เป็น $1$ เขียนกลับค่า แล้วต่อกันด้วย $+$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">BC</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">A</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text>
+<g><rect x="220" y="118" width="108" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="106" y="62" width="46" height="46" rx="14" stroke="#3b8be8" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+- ลูปสีส้ม (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow (\overline{A}+\overline{B})$
+- ลูปสีน้ำเงิน (ช่อง $0$ ช่องเดียว เพราะช่องข้างเคียงเป็น $1$ หมด) : $A=0,\ B=0,\ C=0$ $\Rightarrow (A+B+C)$
+
+$$
+Y=(A+B+C)(\overline{A}+\overline{B})
+$$
+
+ตรวจว่าเท่ากับแบบ SOP ด้วยการกระจาย (ใช้ทฤษฎีบทในตารางสรุปบทที่ 3)
+
+$$
+\begin{aligned}
+Y &= (A+B+C)(\overline{A}+\overline{B}) \\
+&= A\overline{A}+A\overline{B}+B\overline{A}+B\overline{B}+C\overline{A}+C\overline{B} &&\text{กระจาย ข้อ 3(b)} \\
+&= 0+A\overline{B}+\overline{A}B+0+\overline{A}C+\overline{B}C &&\text{ข้อ 8(b) $X\cdot\overline{X}=0$} \\
+&= A\overline{B}+\overline{A}B+\overline{A}C+\overline{B}C &&\text{ข้อ 7(a) $0+X=X$}
+\end{aligned}
+$$
+
+แยกพจน์ $\overline{A}C$ ออกเป็นสองพจน์ แล้วดึงกลับด้วยข้อ 6
+
+$$
+\begin{aligned}
+\overline{A}C &= \overline{A}C(B+\overline{B}) &&\text{ข้อ 8(a) และข้อ 7(b)} \\
+&= \overline{A}BC+\overline{A}\,\overline{B}C &&\text{กระจาย ข้อ 3(b)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= A\overline{B}+\overline{A}B+\overline{A}BC+\overline{A}\,\overline{B}C+\overline{B}C \\
+&= A\overline{B}+\overline{A}B+\overline{B}C &&\text{ข้อ 6(a) $X+XY=X$ ทั้งคู่ คือ $\overline{A}B+\overline{A}BC=\overline{A}B$ และ $\overline{A}\,\overline{B}C+\overline{B}C=\overline{B}C$}
+\end{aligned}
+$$
+
+จึงได้ผลเท่ากับแบบ SOP ทุกประการ
+
+ตรวจ $X$ และ $Z$ ด้วย K-map ได้เช่นกัน
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">BC</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">A</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text>
+<g><rect x="220" y="118" width="108" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">BC</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">A</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text>
+<g><rect x="104" y="60" width="50" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+$\mathbf{Ans}\quad X=\mathbf{AB},\quad Y=\mathbf{\overline{A}B+A\overline{B}+\overline{B}C}\ \text{(SOP)}=\mathbf{(A+B+C)(\overline{A}+\overline{B})}\ \text{(POS)},\quad Z=\mathbf{\overline{A}\,\overline{B}\,\overline{C}}$
+
+---
+
+### ข้อ 9.c  จงเขียน Logic Diagram
+
+$\mathbf{Sol}^{n}$
+
+ใช้สมการจากข้อ 9.b : $X=AB$ ใช้ AND 1 ตัว, $Y=\overline{A}B+A\overline{B}+\overline{B}C$ ใช้ AND 3 ตัวแล้ว OR รวม และ $Z=\overline{A}\,\overline{B}\,\overline{C}$ ใช้ AND 3 อินพุต 1 ตัว โดยมีตัวกลับค่า (NOT) ของ $A$, $B$, $C$ ไว้ใช้ร่วมกัน
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="468" viewBox="0 0 640 520" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><path d="M90 20L130 40L90 60Z"/>
+<circle cx="135" cy="40" r="5"/>
+<path d="M90 130L130 150L90 170Z"/>
+<circle cx="135" cy="150" r="5"/>
+<path d="M90 240L130 260L90 280Z"/>
+<circle cx="135" cy="260" r="5"/>
+<path d="M240 70H270A25.0 25.0 0 0 1 270 120H240Z"/>
+<path d="M240 175H270A25.0 25.0 0 0 1 270 225H240Z"/>
+<path d="M240 290H270A25.0 25.0 0 0 1 270 340H240Z"/>
+<path d="M240 360H270A25.0 25.0 0 0 1 270 410H240Z"/>
+<path d="M240 430H270A33.0 33.0 0 0 1 270 496H240Z"/>
+<path d="M400 270Q440 270 460 303.0Q440 336 400 336Q414 303.0 400 270Z"/>
+<polyline points="36,40 90,40"/>
+<polyline points="36,40 50,40 50,82.0 240,82.0"/>
+<polyline points="36,40 56,40 56,302.0 240,302.0"/>
+<polyline points="36,150 40,150 90,150"/>
+<polyline points="36,150 62,150 62,108.0 240,108.0"/>
+<polyline points="36,150 68,150 68,213.0 240,213.0"/>
+<polyline points="36,260 90,260"/>
+<polyline points="36,260 74,260 74,398.0 240,398.0"/>
+<polyline points="140,40 160,40 160,187.0 240,187.0"/>
+<polyline points="140,40 170,40 170,442.0 240,442.0"/>
+<polyline points="140,150 180,150 180,328.0 240,328.0"/>
+<polyline points="140,150 190,150 190,372.0 240,372.0"/>
+<polyline points="140,150 200,150 200,463.0 240,463.0"/>
+<polyline points="140,260 210,260 210,484.0 240,484.0"/>
+<polyline points="295.0,200.0 340,200.0 340,282.0 400,282.0"/>
+<polyline points="295.0,315.0 350,315.0 350,303.0 400,303.0"/>
+<polyline points="295.0,385.0 360,385.0 360,324.0 400,324.0"/>
+<line x1="295.0" y1="95.0" x2="345.0" y2="95.0"/>
+<line x1="460" y1="303.0" x2="510" y2="303.0"/>
+<line x1="303.0" y1="463.0" x2="353.0" y2="463.0"/></g>
+<circle cx="50" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="56" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="62" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="68" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="74" cy="260" r="3" fill="currentColor" stroke="none"/><circle cx="160" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="170" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="180" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="190" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="200" cy="150" r="3" fill="currentColor" stroke="none"/>
+<text x="12" y="46" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">A</text><text x="12" y="156" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">B</text><text x="12" y="266" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">C</text><text x="357.0" y="101.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text><text x="522" y="309.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Y</text><text x="365.0" y="469.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Z</text>
+</svg>
+</div>
+
+$\mathbf{Ans}\quad$ วงจรดังรูปด้านบน

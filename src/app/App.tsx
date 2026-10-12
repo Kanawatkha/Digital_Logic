@@ -7,6 +7,7 @@ import { PageSkeleton } from '@/components/ui/Skeleton';
 const HomePage = lazy(() => import('@/pages/HomePage'));
 const ChapterPage = lazy(() => import('@/pages/ChapterPage'));
 const ExamPage = lazy(() => import('@/pages/ExamPage'));
+const ExamSetPage = lazy(() => import('@/pages/ExamSetPage'));
 const FormulaSheetPage = lazy(() => import('@/pages/FormulaSheetPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
@@ -25,6 +26,7 @@ export function App() {
             <Route index element={<HomePage />} />
             <Route path="chapter/:n" element={<ChapterPage />} />
             <Route path="exam" element={<ExamPage />} />
+            <Route path="exam/:set" element={<ExamSetPage />} />
             <Route path="formulas" element={<FormulaSheetPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { PageContainer, PageHeading } from '@/components/layout/PageContainer';
 import { Button } from '@/components/ui/Button';
 import { PageSkeleton } from '@/components/ui/Skeleton';
@@ -19,6 +20,8 @@ type ContentPageProps = {
   /** Short title for the browser tab. Defaults to the file's own title. */
   tabTitle?: string;
   badge?: string;
+  /** Shown above the page heading in every state (for example the exam set switcher). */
+  above?: ReactNode;
 };
 
 function jumpItems(root: ContentNode): JumpItem[] {
@@ -29,7 +32,14 @@ function jumpItems(root: ContentNode): JumpItem[] {
 }
 
 /** Loads a generated content file and renders it as exercise cards or as the formula sheet. */
-export function ContentPage({ collection, chapter, variant, tabTitle, badge }: ContentPageProps) {
+export function ContentPage({
+  collection,
+  chapter,
+  variant,
+  tabTitle,
+  badge,
+  above,
+}: ContentPageProps) {
   const state = useContentFile(collection, chapter);
   const title = state.status === 'ready' ? plainText(state.file.title) : undefined;
   usePageTitle(tabTitle ?? title);
@@ -37,6 +47,7 @@ export function ContentPage({ collection, chapter, variant, tabTitle, badge }: C
   if (state.status === 'loading') {
     return (
       <PageContainer>
+        {above}
         <PageSkeleton />
       </PageContainer>
     );
@@ -45,6 +56,7 @@ export function ContentPage({ collection, chapter, variant, tabTitle, badge }: C
   if (state.status === 'error') {
     return (
       <PageContainer>
+        {above}
         <div role="alert" className="flex flex-col items-start gap-4">
           <p className="type-body-md">{UI_TEXT.loadError}</p>
           <Button onClick={state.retry}>{UI_TEXT.retry}</Button>
@@ -58,6 +70,7 @@ export function ContentPage({ collection, chapter, variant, tabTitle, badge }: C
 
   return (
     <PageContainer className={variant === 'formulas' ? 'lg:pl-14 xl:pl-6' : undefined}>
+      {above}
       {variant === 'exercises' ? (
         <>
           <PageHeading title={plainText(file.title)} badge={badge} />
