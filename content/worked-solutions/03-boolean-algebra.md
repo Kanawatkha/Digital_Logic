@@ -6,6 +6,8 @@
 
 ### ข้อ 1  $A+\overline{A}B = A+B$
 
+$\mathbf{Sol}^{n}$
+
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
@@ -24,6 +26,8 @@ $$
 
 ### ข้อ 2  $\overline{A}+AB = \overline{A}+B$
 
+$\mathbf{Sol}^{n}$
+
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
@@ -41,6 +45,8 @@ A & B & \overline{A} & AB & \overline{A}+AB & \overline{A}+B \\
 $$
 
 ### ข้อ 3  $A(B+C) = AB+AC$
+
+$\mathbf{Sol}^{n}$
 
 $$
 \begin{array}{|c|c|c|c|c|c|c|c|}
@@ -67,6 +73,8 @@ A & B & C & AB & AC & B+C & A(B+C) & AB+AC \\
 $$
 
 ### ข้อ 4  $A+BC = (A+B)(A+C)$
+
+$\mathbf{Sol}^{n}$
 
 $$
 \begin{array}{|c|c|c|c|c|c|c|c|}
@@ -244,6 +252,8 @@ $$
 
 ### ข้อ 1  $\overline{A\cdot B} = \overline{A}+\overline{B}$
 
+$\mathbf{Sol}^{n}$
+
 $$
 \begin{array}{|c|c|c|c|c|c|}
 \hline
@@ -261,6 +271,8 @@ A & B & \overline{A} & \overline{B} & \overline{AB} & \overline{A}+\overline{B} 
 $$
 
 ### ข้อ 2  $\overline{A+B} = \overline{A}\cdot\overline{B}$
+
+$\mathbf{Sol}^{n}$
 
 $$
 \begin{array}{|c|c|c|c|c|c|}
