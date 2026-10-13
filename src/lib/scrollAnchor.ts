@@ -1,160 +1,159 @@
 /**
- * Keeps the card the student is reading at the same place on screen while the solutions open or
- * close around it.
+ * Plans one flip of the "show solutions" switch so the card the student is reading stays where it
+ * is on screen, without moving the page while anything animates.
  *
- * The page is not scrolled while the blocks animate. Writing the scroll position on every frame
- * fights the layout (whole pixels, one frame late) and shakes. Instead the page content is drawn
- * shifted with a transform (`[data-scroll-shift]`), which moves in the same frame and by fractions
- * of a pixel. When everything has settled, the transform is traded for one real scroll in a single
- * step, so nothing visibly moves. Sticky parts inside the shifted content (`[data-scroll-pin]`)
- * get the opposite transform so they stay put.
+ * - Blocks in the card being read and below it animate their height. Growing or shrinking
+ *   downward never moves that card, so the screen holds still by itself.
+ * - Blocks above it change in one step. A single scroll correction, made before the browser
+ *   paints, puts the card back in place, and the cards above that are on screen fade in softly.
+ * - Blocks near the screen are mounted in the same step; far ones are mounted later, when the
+ *   browser is idle.
+ * - For a short while afterwards, any card that still changes size (mounted late, or drawn late
+ *   by the browser because of `content-visibility`) is caught by a ResizeObserver, which runs
+ *   after layout and before paint, and the card being read is put back before anything shows.
  */
 
 /** Where on the screen the student is reading, as a share of the viewport height. */
 const READ_LINE = 0.4;
-/** Smallest piece of the anchor that stays on screen, so the page never lands past it. */
-const KEEP_VISIBLE = 120;
-/** Longest the anchor is held while blocks are still animating or being mounted. */
-const HOLD_MAX_MS = 5000;
-/** The last stretch the page is too short to scroll (near its top or end) glides in this long. */
-const GLIDE_MS = 320;
-const GLIDE_EASING = 'cubic-bezier(0.22, 1, 0.36, 1)';
+/** Blocks this many viewport heights above or below the screen are mounted at once. */
+const NEAR = 1.5;
+/** Room under the sticky header (px) when a card has to be brought back into view. */
+const BELOW_HEADER = 80;
+/** A card whose top is this many viewport heights above the screen is read from its middle. */
+const DEEP = 0.25;
+/** Smallest part of the card being read that stays on screen after it shrank. */
+const KEEP_VISIBLE = 160;
+const FADE_MS = 320;
+/** How long after a flip late size changes are still followed. */
+const KEEP_MS = 2000;
 
-export type ScrollAnchor = { el: Element; top: number };
+export type TogglePlan = {
+  /** The card being read (marked `data-anchor`), and its top on screen before the flip. */
+  anchor: Element | null;
+  top: number;
+  /** The card is read from deep inside a solution that is about to close: it changes at once. */
+  anchorJumps: boolean;
+  /** Examples (by id) mounted at once, and the ones that animate. */
+  near: Set<string>;
+  animate: Set<string>;
+};
 
-let activity = 0;
-/** Animations and pending mounts that are still changing the page size keep the hold alive. */
-export function trackActivity(delta: 1 | -1): void {
-  activity = Math.max(0, activity + delta);
-}
+let current: TogglePlan | null = null;
 
-/** The hold in progress, settled at once when the switch is flipped again or the student scrolls. */
-let settleRunning: (() => void) | null = null;
-
-const EVENTS = ['wheel', 'touchstart', 'keydown', 'pointerdown'] as const;
-
-let unlockTimer = 0;
-/** The browser's own scroll anchoring would move the page as well. */
-function lockNativeAnchoring(lock: boolean) {
-  window.clearTimeout(unlockTimer);
-  if (lock) {
-    document.documentElement.style.overflowAnchor = 'none';
-    return;
-  }
-  // a moment later, so the browser does not "repair" the scroll it has just seen us make
-  unlockTimer = window.setTimeout(() => {
-    document.documentElement.style.overflowAnchor = '';
-  }, 200);
-}
-
-const shiftElement = () => document.querySelector<HTMLElement>('[data-scroll-shift]');
-
-/**
- * The card the student is reading (marked `data-anchor`): the one under the reading line, or else
- * the last one above it. Also turns the native scroll anchoring off and freezes the page height,
- * so the page cannot get shorter (and the browser cannot clamp the scroll) until the hold ends.
- */
-export function captureAnchor(): ScrollAnchor | null {
-  settleRunning?.();
-  const line = window.innerHeight * READ_LINE;
-  let found: Element | undefined;
-  for (const el of document.querySelectorAll('[data-anchor]')) {
-    found = el;
-    if (el.getBoundingClientRect().bottom > line) break;
-  }
-  if (!found) return null;
-  lockNativeAnchoring(true);
-  const shift = shiftElement();
-  if (shift) shift.style.minHeight = `${shift.offsetHeight}px`;
-  return { el: found, top: found.getBoundingClientRect().top };
-}
-
-/** Gives scrolling back to the browser (when no hold follows a capture). */
-export function releaseAnchor(): void {
-  const shift = shiftElement();
-  if (shift) shift.style.minHeight = '';
-  lockNativeAnchoring(false);
+/** The plan of the flip being rendered, read by every Collapse (see Collapse.tsx). */
+export function currentPlan(): TogglePlan | null {
+  return current;
 }
 
 function reducedMotion(): boolean {
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 }
 
-/** Holds the anchor in place until the page has settled. Call it right after the DOM changed. */
-export function holdAnchor(anchor: ScrollAnchor): void {
-  const { el, top } = anchor;
-  const shift = shiftElement();
-  const pins = Array.from(document.querySelectorAll<HTMLElement>('[data-scroll-pin]'));
-  /** How far the content is drawn up (px) instead of being scrolled. */
-  let offset = 0;
-  let frame = 0;
-  let done = false;
+const isAfter = (a: Node, b: Node) =>
+  (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) !== 0;
 
-  const draw = () => {
-    if (!shift) return;
-    shift.style.transform = offset ? `translate3d(0, ${-offset}px, 0)` : '';
-    for (const pin of pins) pin.style.transform = offset ? `translate3d(0, ${offset}px, 0)` : '';
+/** The browser's own scroll anchoring would move the page as well while a flip settles. */
+function lockNativeAnchoring(lock: boolean) {
+  document.documentElement.style.overflowAnchor = lock ? 'none' : '';
+}
+
+const EVENTS = ['wheel', 'touchstart', 'keydown', 'pointerdown'] as const;
+let stopKeeping: (() => void) | null = null;
+
+/** Scrolls the card being read back to where it was on screen, at once. */
+function putBack(plan: TogglePlan, anchor: Element) {
+  const delta = anchor.getBoundingClientRect().top - plan.top;
+  if (Math.abs(delta) >= 0.5) window.scrollBy({ top: delta, behavior: 'instant' });
+}
+
+/**
+ * Keeps the card being read in place for a while: every time a card changes size, the page is
+ * scrolled back in the same frame. Stops early when the student scrolls.
+ */
+function keepInPlace(plan: TogglePlan, anchor: Element) {
+  stopKeeping?.();
+  const fix = () => {
+    if (!anchor.isConnected) return stop();
+    putBack(plan, anchor);
   };
-
-  const correct = () => {
-    if (!el.isConnected) return false;
-    const rect = el.getBoundingClientRect();
-    const wanted = Math.max(top, KEEP_VISIBLE - rect.height);
-    const delta = rect.top - wanted;
-    if (Math.abs(delta) < 0.01) return true;
-    if (!shift) {
-      window.scrollBy({ top: delta, behavior: 'instant' });
-      return true;
-    }
-    // the page cannot be scrolled above its top
-    offset = Math.max(offset + delta, -window.scrollY);
-    draw();
-    return true;
-  };
-
-  const settle = () => {
-    if (done) return;
-    done = true;
-    cancelAnimationFrame(frame);
-    for (const type of EVENTS) window.removeEventListener(type, settle, true);
-    if (settleRunning === settle) settleRunning = null;
-    if (!shift) return lockNativeAnchoring(false);
-
-    // trade the drawn shift for a real scroll in one step: nothing moves on screen
-    const target = window.scrollY + offset;
-    offset = 0;
-    draw();
-    shift.style.minHeight = '';
-    shift.style.willChange = '';
-    const max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-    const final = Math.min(Math.max(target, 0), max);
-    window.scrollTo({ top: final, behavior: 'instant' });
+  const observer = typeof ResizeObserver === 'function' ? new ResizeObserver(fix) : null;
+  const timer = window.setTimeout(() => stop(), KEEP_MS);
+  const stop = () => {
+    observer?.disconnect();
+    window.clearTimeout(timer);
+    for (const type of EVENTS) window.removeEventListener(type, stop, true);
     lockNativeAnchoring(false);
-
-    // near the top or the end the page may be too short for the full scroll: glide the rest
-    const rest = target - final;
-    if (Math.abs(rest) < 0.5 || typeof shift.animate !== 'function' || reducedMotion()) return;
-    const glide = { duration: GLIDE_MS, easing: GLIDE_EASING };
-    shift.animate([{ transform: `translate3d(0, ${-rest}px, 0)` }, { transform: 'none' }], glide);
-    for (const pin of pins)
-      pin.animate([{ transform: `translate3d(0, ${rest}px, 0)` }, { transform: 'none' }], glide);
+    if (stopKeeping === stop) stopKeeping = null;
   };
+  for (const card of document.querySelectorAll('[data-anchor]')) observer?.observe(card);
+  for (const type of EVENTS) window.addEventListener(type, stop, { capture: true, passive: true });
+  stopKeeping = stop;
+}
 
-  if (shift) shift.style.willChange = 'transform';
-  if (!correct()) return settle();
-  // blocks mounted a moment later in the same task (see Collapse) are followed before the paint
-  queueMicrotask(() => {
-    if (!done) correct();
-  });
+/** Measures the page before the switch flips. Call it right before the state changes. */
+export function planToggle(closing: boolean): TogglePlan {
+  stopKeeping?.();
+  const vh = window.innerHeight;
+  const line = vh * READ_LINE;
+  let anchor: Element | null = null;
+  for (const card of document.querySelectorAll('[data-anchor]')) {
+    anchor = card;
+    if (card.getBoundingClientRect().bottom > line) break;
+  }
+  const top = anchor ? anchor.getBoundingClientRect().top : 0;
+  // reading deep inside a long solution that is about to close
+  const anchorJumps = closing && top < -vh * DEEP;
+  const motion = !reducedMotion();
 
-  const start = performance.now();
-  const step = () => {
-    const alive = correct();
-    if (!alive || activity === 0 || performance.now() - start > HOLD_MAX_MS) return settle();
-    frame = requestAnimationFrame(step);
-  };
-  for (const type of EVENTS)
-    window.addEventListener(type, settle, { capture: true, passive: true });
-  settleRunning = settle;
-  frame = requestAnimationFrame(step);
+  const near = new Set<string>();
+  const animate = new Set<string>();
+  for (const section of document.querySelectorAll<HTMLElement>('[data-example]')) {
+    const id = section.dataset.example;
+    if (!id) continue;
+    // cards drawn on demand report their own box but not their content's
+    const card = section.closest('[data-anchor]') ?? section;
+    const rect = card.getBoundingClientRect();
+    if (rect.bottom > -vh * NEAR && rect.top < vh * (1 + NEAR)) near.add(id);
+    const onScreen = rect.bottom > 0 && rect.top < vh;
+    const below = !anchor || (card === anchor ? !anchorJumps : isAfter(anchor, card));
+    if (motion && onScreen && below) animate.add(id);
+  }
+
+  lockNativeAnchoring(true);
+  current = { anchor, top, anchorJumps, near, animate };
+  return current;
+}
+
+/**
+ * Runs right after the flip was committed, before the browser paints: one scroll correction puts
+ * the card being read back in place, then the cards above it that changed fade in.
+ */
+export function settleToggle(plan: TogglePlan): void {
+  if (current === plan) current = null;
+  const { anchor } = plan;
+  if (!anchor?.isConnected) return lockNativeAnchoring(false);
+
+  putBack(plan, anchor);
+  const rect = anchor.getBoundingClientRect();
+  if (plan.anchorJumps && rect.bottom < BELOW_HEADER + KEEP_VISIBLE) {
+    // read from deep inside a solution that just closed: the card is now above the screen, so the
+    // page glides back up to it
+    lockNativeAnchoring(false);
+    window.scrollBy({
+      top: rect.top - BELOW_HEADER,
+      behavior: reducedMotion() ? 'instant' : 'smooth',
+    });
+    return;
+  }
+  keepInPlace(plan, anchor);
+
+  if (reducedMotion()) return;
+  const vh = window.innerHeight;
+  for (const card of document.querySelectorAll<HTMLElement>('[data-anchor]')) {
+    const changed = card === anchor ? plan.anchorJumps : isAfter(card, anchor);
+    if (!changed || !card.querySelector('[data-example]')) continue;
+    const r = card.getBoundingClientRect();
+    if (r.bottom <= 0 || r.top >= vh) continue;
+    card.animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: FADE_MS, easing: 'ease-out' });
+  }
 }

@@ -1,6 +1,6 @@
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { SolutionsContext } from '@/components/content/solutions';
-import { captureAnchor, holdAnchor, releaseAnchor, type ScrollAnchor } from '@/lib/scrollAnchor';
+import { planToggle, settleToggle, type TogglePlan } from '@/lib/scrollAnchor';
 
 const STORAGE_KEY = 'dln:show-solutions';
 
@@ -16,17 +16,16 @@ function readStored(): boolean {
 export function SolutionsProvider({ children }: { children: ReactNode }) {
   const [show, setShowState] = useState(readStored);
 
-  // the example on screen when the switch was flipped; the page follows it while blocks resize
-  const anchor = useRef<ScrollAnchor | null>(null);
+  // measured before a flip; runs once the new blocks are on the page, before the paint
+  const plan = useRef<TogglePlan | null>(null);
 
   useLayoutEffect(() => {
-    if (anchor.current) holdAnchor(anchor.current);
-    else releaseAnchor();
-    anchor.current = null;
+    if (plan.current) settleToggle(plan.current);
+    plan.current = null;
   }, [show]);
 
   const setShow = useCallback((next: boolean) => {
-    anchor.current = captureAnchor();
+    plan.current = planToggle(!next);
     setShowState(next);
     try {
       window.localStorage.setItem(STORAGE_KEY, next ? '1' : '0');

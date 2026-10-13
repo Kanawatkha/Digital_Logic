@@ -11,7 +11,6 @@ import { cn } from '@/lib/cn';
 export function FloatingSolutionsSwitch({ reserveRow = false }: { reserveRow?: boolean }) {
   return (
     <div
-      data-scroll-pin=""
       className={cn(
         'pointer-events-none sticky top-[calc(var(--spacing-nav)+0.75rem)] z-30 flex h-0 items-start justify-end',
         reserveRow && 'mb-4 h-11 sm:mb-0 sm:h-0',

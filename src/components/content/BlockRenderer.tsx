@@ -81,7 +81,7 @@ function ExampleBlock({ block }: { block: Extract<Block, { t: 'example' }> }) {
     <section data-example={block.id} className="flex flex-col">
       <BlockList blocks={block.problem} />
       {block.sol.length > 0 || block.ans.length > 0 ? (
-        <Collapse open={showSolutions}>
+        <Collapse id={block.id} open={showSolutions}>
           <div className={cn('flex flex-col gap-3', block.problem.length > 0 && 'pt-3')}>
             {block.sol.length > 0 ? (
               <>
