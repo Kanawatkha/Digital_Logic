@@ -4,6 +4,14 @@ const READ_LINE = 0.4;
 const KEEP_VISIBLE = 120;
 /** How long the anchor is held while the blocks around it animate (a little over the animation). */
 const HOLD_MS = 560;
+/** Longest the hold waits for blocks that are still being mounted in the background. */
+const HOLD_MAX_MS = 5000;
+
+let pendingMounts = 0;
+/** Blocks that will still change size soon (mounted when the browser is idle) keep the hold alive. */
+export function trackPendingMount(delta: 1 | -1): void {
+  pendingMounts += delta;
+}
 
 export type ScrollAnchor = { el: Element; top: number };
 
@@ -62,10 +70,15 @@ export function holdAnchor(anchor: ScrollAnchor): void {
     return true;
   };
   if (!correct()) return finish();
+  // blocks far from the screen are swapped in a moment later in the same task; follow those too
+  queueMicrotask(correct);
 
   const start = performance.now();
   const step = () => {
-    if (performance.now() - start > HOLD_MS || !correct()) return finish();
+    const elapsed = performance.now() - start;
+    const busy = elapsed < HOLD_MS || (pendingMounts > 0 && elapsed < HOLD_MAX_MS);
+    const alive = correct();
+    if (!busy || !alive) return finish();
     frame = requestAnimationFrame(step);
   };
   for (const type of EVENTS) window.addEventListener(type, finish, { passive: true });

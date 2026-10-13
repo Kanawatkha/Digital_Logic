@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Block } from '@/content/types';
 import { Collapse } from '@/components/content/Collapse';
 import { FigureBlock } from '@/components/content/FigureBlock';
@@ -8,7 +9,13 @@ import { TableBlock } from '@/components/content/TableBlock';
 import { cn } from '@/lib/cn';
 
 /** Vertical stack of blocks with the standard reading rhythm. */
-export function BlockList({ blocks, className }: { blocks: Block[]; className?: string }) {
+export const BlockList = memo(function BlockList({
+  blocks,
+  className,
+}: {
+  blocks: Block[];
+  className?: string;
+}) {
   if (blocks.length === 0) return null;
   return (
     <div className={cn('flex flex-col gap-4', className)}>
@@ -17,13 +24,12 @@ export function BlockList({ blocks, className }: { blocks: Block[]; className?: 
       ))}
     </div>
   );
-}
+});
 
 const LABEL = 'type-caption-upper text-body';
 
 /** Maps one content block to its component. Adding a block type breaks the build here first. */
 export function BlockRenderer({ block }: { block: Block }) {
-  const { show: showSolutions } = useSolutions();
   switch (block.t) {
     case 'p':
       return (
@@ -64,27 +70,33 @@ export function BlockRenderer({ block }: { block: Block }) {
         </aside>
       );
     case 'example':
-      return (
-        <section data-example={block.id} className="flex flex-col">
-          <BlockList blocks={block.problem} />
-          {block.sol.length > 0 || block.ans.length > 0 ? (
-            <Collapse open={showSolutions}>
-              <div className={cn('flex flex-col gap-3', block.problem.length > 0 && 'pt-3')}>
-                {block.sol.length > 0 ? (
-                  <>
-                    <p className={LABEL}>Sol</p>
-                    <BlockList blocks={block.sol} />
-                  </>
-                ) : null}
-                {block.ans.length > 0 ? (
-                  <ScrollArea className="rounded-md bg-surface-soft p-4">
-                    <BlockList blocks={block.ans} />
-                  </ScrollArea>
-                ) : null}
-              </div>
-            </Collapse>
-          ) : null}
-        </section>
-      );
+      return <ExampleBlock block={block} />;
   }
+}
+
+/** A problem with its solution; the only block that follows the "show solutions" switch. */
+function ExampleBlock({ block }: { block: Extract<Block, { t: 'example' }> }) {
+  const { show: showSolutions } = useSolutions();
+  return (
+    <section data-example={block.id} className="flex flex-col">
+      <BlockList blocks={block.problem} />
+      {block.sol.length > 0 || block.ans.length > 0 ? (
+        <Collapse open={showSolutions}>
+          <div className={cn('flex flex-col gap-3', block.problem.length > 0 && 'pt-3')}>
+            {block.sol.length > 0 ? (
+              <>
+                <p className={LABEL}>Sol</p>
+                <BlockList blocks={block.sol} />
+              </>
+            ) : null}
+            {block.ans.length > 0 ? (
+              <ScrollArea className="rounded-md bg-surface-soft p-4">
+                <BlockList blocks={block.ans} />
+              </ScrollArea>
+            ) : null}
+          </div>
+        </Collapse>
+      ) : null}
+    </section>
+  );
 }
