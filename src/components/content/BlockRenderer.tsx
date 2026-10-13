@@ -1,4 +1,5 @@
 import type { Block } from '@/content/types';
+import { Collapse } from '@/components/content/Collapse';
 import { FigureBlock } from '@/components/content/FigureBlock';
 import { InlineContent } from '@/components/content/InlineContent';
 import { ScrollArea } from '@/components/content/ScrollArea';
@@ -64,18 +65,24 @@ export function BlockRenderer({ block }: { block: Block }) {
       );
     case 'example':
       return (
-        <section data-example={block.id} className="flex flex-col gap-3">
+        <section data-example={block.id} className="flex flex-col">
           <BlockList blocks={block.problem} />
-          {showSolutions && block.sol.length > 0 ? (
-            <>
-              <p className={LABEL}>Sol</p>
-              <BlockList blocks={block.sol} />
-            </>
-          ) : null}
-          {showSolutions && block.ans.length > 0 ? (
-            <ScrollArea className="rounded-md bg-surface-soft p-4">
-              <BlockList blocks={block.ans} />
-            </ScrollArea>
+          {block.sol.length > 0 || block.ans.length > 0 ? (
+            <Collapse open={showSolutions}>
+              <div className={cn('flex flex-col gap-3', block.problem.length > 0 && 'pt-3')}>
+                {block.sol.length > 0 ? (
+                  <>
+                    <p className={LABEL}>Sol</p>
+                    <BlockList blocks={block.sol} />
+                  </>
+                ) : null}
+                {block.ans.length > 0 ? (
+                  <ScrollArea className="rounded-md bg-surface-soft p-4">
+                    <BlockList blocks={block.ans} />
+                  </ScrollArea>
+                ) : null}
+              </div>
+            </Collapse>
           ) : null}
         </section>
       );

@@ -3,13 +3,19 @@ import { UI_TEXT } from '@/config/site';
 import { cn } from '@/lib/cn';
 
 /**
- * The switch, floating under the header: it follows the scroll so it can be flipped from anywhere
- * on the page. From the `sm` width up it takes no room in the layout (it sits over the right end
- * of the first row); on phones it keeps its own row so it never covers the page content.
+ * The switch, floating under the header on every screen size: it follows the scroll so it can be
+ * flipped from anywhere on the page and takes no room in the layout (it sits over the right end of
+ * the first row). `reserveRow` gives it its own row below the `sm` width, for a first row that is
+ * too full to share (the exam set pills).
  */
-export function FloatingSolutionsSwitch() {
+export function FloatingSolutionsSwitch({ reserveRow = false }: { reserveRow?: boolean }) {
   return (
-    <div className="pointer-events-none sticky top-[calc(var(--spacing-nav)+0.75rem)] z-30 mb-4 flex h-11 items-start justify-end sm:mb-0 sm:h-0">
+    <div
+      className={cn(
+        'pointer-events-none sticky top-[calc(var(--spacing-nav)+0.75rem)] z-30 flex h-0 items-start justify-end',
+        reserveRow && 'mb-4 h-11 sm:mb-0 sm:h-0',
+      )}
+    >
       <div className="pointer-events-auto rounded-md shadow-[0_2px_10px_rgba(20,20,19,0.12)]">
         <SolutionsSwitch />
       </div>

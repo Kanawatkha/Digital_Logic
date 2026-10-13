@@ -10,7 +10,7 @@ import { cn } from '@/lib/cn';
 export function ExamSetTabs() {
   return (
     <>
-      <FloatingSolutionsSwitch />
+      <FloatingSolutionsSwitch reserveRow />
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <nav aria-label="ชุดข้อสอบ">
           <ul className="flex flex-wrap gap-2">
