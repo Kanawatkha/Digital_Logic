@@ -501,19 +501,36 @@ $\mathbf{Sol}^{n}$
 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 |
 
-เขียนเป็นผลรวมของมินเทอมแล้วลดรูป
+ใส่ $1$ ที่ช่อง $1,3,5,7$ แล้วจับลูป
 
-$$
-\begin{aligned}
-F &= \overline{X}\,\overline{Y}Z+\overline{X}YZ+X\overline{Y}Z+XYZ \\
-&= \overline{X}Z(\overline{Y}+Y)+XZ(\overline{Y}+Y) &&\text{ดึงตัวร่วมออก (กระจาย ข้อ 3(b))} \\
-&= \overline{X}Z\cdot1+XZ\cdot1 &&\text{ข้อ 8(a)} \\
-&= \overline{X}Z+XZ &&\text{ข้อ 7(b)} \\
-&= Z(\overline{X}+X) &&\text{ดึง $Z$ ออก (กระจาย ข้อ 3(b))} \\
-&= Z\cdot1=Z &&\text{ข้อ 8(a) และข้อ 7(b)}
-\end{aligned}
-$$
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">XY</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">Z</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text>
+<g><rect x="104" y="118" width="224" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
 
-ดังนั้นเอาต์พุต $F$ ต่อตรงกับอินพุต $Z$ ได้เลย ไม่ต้องใช้เกต (สายเดียว)
+- ลูปสีส้ม (ช่อง $1,3,5,7$ คือแถว $Z=1$ ทั้งแถว) : $Z=1$ ส่วน $X$ และ $Y$ เปลี่ยนค่าได้ทุกแบบ จึงตัดออก $\Rightarrow Z$
 
-$\mathbf{Ans}\quad F=\mathbf{Z}$ (ต่อสาย $Z$ ไปที่เอาต์พุตโดยตรง)
+ออกแบบวงจร: เนื่องจาก $F=Z$ ใช้บัฟเฟอร์ (Buffer gate) 1 ตัว ต่ออินพุต $Z$ เข้าและเอาต์พุต $F$ ออก ส่วนอินพุต $X$ และ $Y$ ไม่ถูกใช้ (เส้นประ)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="308" height="143" viewBox="0 0 280 130" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><line x1="36" y1="20" x2="90" y2="20" stroke-dasharray="4 4" opacity="0.45"/>
+<line x1="36" y1="60" x2="90" y2="60" stroke-dasharray="4 4" opacity="0.45"/>
+<path d="M100 80L140 100L100 120Z"/>
+<line x1="36" y1="100" x2="100" y2="100"/>
+<line x1="140" y1="100" x2="220" y2="100"/></g>
+<text x="12" y="26" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text><text x="12" y="66" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Y</text><text x="12" y="106" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Z</text><text x="232" y="106" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">F</text>
+</svg>
+</div>
+
+ดังนั้นเอาต์พุต $F$ เท่ากับอินพุต $Z$ (ใช้บัฟเฟอร์ส่งค่า $Z$ ออกไปตรง ๆ)
+
+$\mathbf{Ans}\quad F=\mathbf{Z}$ (วงจรดังรูปด้านบน)

@@ -135,7 +135,7 @@ exports[`real content > keeps counts stable (review any change before accepting 
       {
         "chapter": "09",
         "examples": 15,
-        "figures": 5,
+        "figures": 7,
         "file": "worked-solutions/09.json",
         "nodes": 21,
         "slug": "midterm-practice-exam-4",
