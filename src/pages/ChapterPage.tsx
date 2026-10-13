@@ -1,4 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom';
+import { SolutionsProvider } from '@/components/content/SolutionsProvider';
+import { SolutionsSwitch } from '@/components/layout/SolutionsSwitch';
 import { isChapterNumber } from '@/config/site';
 import { ContentPage } from '@/features/content-page/ContentPage';
 
@@ -10,12 +12,20 @@ export default function ChapterPage() {
     return <Navigate to="/" replace />;
   }
   return (
-    <ContentPage
-      collection="worked-solutions"
-      chapter={`0${chapter}`}
-      variant="exercises"
-      badge="แบบฝึกหัด"
-      tabTitle={`บทที่ ${chapter}`}
-    />
+    <SolutionsProvider>
+      <ContentPage
+        key={chapter}
+        collection="worked-solutions"
+        chapter={`0${chapter}`}
+        variant="exercises"
+        badge="แบบฝึกหัด"
+        tabTitle={`บทที่ ${chapter}`}
+        above={
+          <div className="mb-6 flex justify-end">
+            <SolutionsSwitch />
+          </div>
+        }
+      />
+    </SolutionsProvider>
   );
 }

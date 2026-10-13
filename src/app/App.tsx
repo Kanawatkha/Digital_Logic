@@ -1,8 +1,9 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { AppLayout } from '@/app/layouts/AppLayout';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { PageSkeleton } from '@/components/ui/Skeleton';
+import { installDragScroll } from '@/lib/dragScroll';
 
 const HomePage = lazy(() => import('@/pages/HomePage'));
 const ChapterPage = lazy(() => import('@/pages/ChapterPage'));
@@ -12,6 +13,7 @@ const FormulaSheetPage = lazy(() => import('@/pages/FormulaSheetPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export function App() {
+  useEffect(installDragScroll, []);
   return (
     <HashRouter>
       <Suspense

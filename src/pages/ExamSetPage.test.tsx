@@ -2,6 +2,7 @@ import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ContentFile } from '@/content/types';
+import ChapterPage from './ChapterPage';
 import ExamPage from './ExamPage';
 import ExamSetPage from './ExamSetPage';
 
@@ -29,6 +30,7 @@ function renderAt(path: string) {
   return render(
     <MemoryRouter initialEntries={[path]}>
       <Routes>
+        <Route path="/chapter/:n" element={<ChapterPage />} />
         <Route path="/exam" element={<ExamPage />} />
         <Route path="/exam/:set" element={<ExamSetPage />} />
       </Routes>
@@ -71,6 +73,12 @@ describe('exam pages', () => {
     renderAt('/exam');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 06' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'ชุดที่ 1' })).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('gives each chapter page the solutions switch', async () => {
+    renderAt('/chapter/2');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 02' })).toBeInTheDocument();
+    expect(screen.getByRole('switch', { name: 'แสดงเฉลย' })).toBeInTheDocument();
   });
 
   it('sends an unknown set back to the first exam page', () => {
