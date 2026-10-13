@@ -47,13 +47,32 @@ function preloadFonts(): Plugin {
   };
 }
 
+/** One id per build; the page carries it and `version.json` publishes it (see src/app/pwa/versionCheck.ts). */
+const BUILD_ID = String(Date.now());
+
+/** Publishes `version.json`, which pages compare with their own build id to find out they are old. */
+function versionFile(): Plugin {
+  return {
+    name: 'version-file',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'version.json',
+        source: JSON.stringify({ id: BUILD_ID }),
+      });
+    },
+  };
+}
+
 export default defineConfig(({ command, isPreview }) => ({
+  define: { __BUILD_ID__: JSON.stringify(BUILD_ID) },
   // GitHub Pages serves the site under /<repo name>/. The dev server uses the root;
   // preview mirrors production so the real base path can be tested locally.
   base: command === 'build' || isPreview ? `/${REPO_NAME}/` : '/',
   plugins: [
     katexWoff2Only(),
     preloadFonts(),
+    versionFile(),
     react(),
     tailwindcss(),
     // Precaches the whole build so every page works offline. The app reloads itself

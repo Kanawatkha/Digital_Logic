@@ -3,6 +3,7 @@ import { useRegisterSW } from 'virtual:pwa-register/react';
 import { Button } from '@/components/ui/Button';
 import { Toast } from '@/components/ui/Toast';
 import { UI_TEXT } from '@/config/site';
+import { watchVersion } from './versionCheck';
 
 /** How often an open page asks the server whether a new version exists. */
 const UPDATE_CHECK_MS = 60_000;
@@ -27,6 +28,8 @@ export function ToastHost() {
       });
     },
   });
+
+  useEffect(() => watchVersion(), []);
 
   useEffect(() => {
     if (needRefresh) void updateServiceWorker(true);
