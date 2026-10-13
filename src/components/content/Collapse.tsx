@@ -35,8 +35,10 @@ export function Collapse({ open, children }: { open: boolean; children: ReactNod
     }
     const box = outer.current;
     const content = inner.current;
-    // where the box is right now, in case the switch was flipped mid-animation
-    const from = box ? box.getBoundingClientRect().height : 0;
+    // a freshly mounted box is already at full height, so opening starts from nothing; flipping
+    // the switch mid-animation continues from where the box is right now
+    const midway = running.current.length > 0;
+    const from = box && (!open || midway) ? box.getBoundingClientRect().height : 0;
     for (const a of running.current) a.cancel();
     running.current = [];
     if (!box || !content || !worthAnimating(box)) {
@@ -62,10 +64,16 @@ export function Collapse({ open, children }: { open: boolean; children: ReactNod
     );
     running.current = [grow, slide];
     grow.onfinish = () => {
-      box.style.overflow = '';
-      for (const a of running.current) a.cancel();
-      running.current = [];
-      if (!open) setClosing(false);
+      if (open) {
+        // the box is at its natural height now; let go of the animation
+        box.style.overflow = '';
+        for (const a of running.current) a.cancel();
+        running.current = [];
+      } else {
+        // keep the collapsed look until React removes the box, so it never flashes back open
+        running.current = [];
+        setClosing(false);
+      }
     };
   }, [open]);
 
