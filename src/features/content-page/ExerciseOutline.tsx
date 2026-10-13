@@ -30,6 +30,7 @@ function Exercise({ node }: { node: ContentNode }) {
     <Card
       as="article"
       id={anchorId(node.id)}
+      data-anchor=""
       tabIndex={-1}
       className={`flex flex-col gap-4 [content-visibility:auto] [contain-intrinsic-size:auto_480px] ${TARGET}`}
     >

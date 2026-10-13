@@ -1,6 +1,6 @@
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { SolutionsContext } from '@/components/content/solutions';
-import { captureAnchor, holdAnchor, type ScrollAnchor } from '@/lib/scrollAnchor';
+import { captureAnchor, holdAnchor, releaseAnchor, type ScrollAnchor } from '@/lib/scrollAnchor';
 
 const STORAGE_KEY = 'dln:show-solutions';
 
@@ -21,6 +21,7 @@ export function SolutionsProvider({ children }: { children: ReactNode }) {
 
   useLayoutEffect(() => {
     if (anchor.current) holdAnchor(anchor.current);
+    else releaseAnchor();
     anchor.current = null;
   }, [show]);
 
