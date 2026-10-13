@@ -2,6 +2,7 @@ import type { Block } from '@/content/types';
 import { FigureBlock } from '@/components/content/FigureBlock';
 import { InlineContent } from '@/components/content/InlineContent';
 import { ScrollArea } from '@/components/content/ScrollArea';
+import { useSolutions } from '@/components/content/solutions';
 import { TableBlock } from '@/components/content/TableBlock';
 import { cn } from '@/lib/cn';
 
@@ -21,6 +22,7 @@ const LABEL = 'type-caption-upper text-body';
 
 /** Maps one content block to its component. Adding a block type breaks the build here first. */
 export function BlockRenderer({ block }: { block: Block }) {
+  const { show: showSolutions } = useSolutions();
   switch (block.t) {
     case 'p':
       return (
@@ -64,13 +66,13 @@ export function BlockRenderer({ block }: { block: Block }) {
       return (
         <section data-example={block.id} className="flex flex-col gap-3">
           <BlockList blocks={block.problem} />
-          {block.sol.length > 0 ? (
+          {showSolutions && block.sol.length > 0 ? (
             <>
               <p className={LABEL}>Sol</p>
               <BlockList blocks={block.sol} />
             </>
           ) : null}
-          {block.ans.length > 0 ? (
+          {showSolutions && block.ans.length > 0 ? (
             <ScrollArea className="rounded-md bg-surface-soft p-4">
               <BlockList blocks={block.ans} />
             </ScrollArea>

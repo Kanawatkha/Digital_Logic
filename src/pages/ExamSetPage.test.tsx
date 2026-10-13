@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { cleanup, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ContentFile } from '@/content/types';
@@ -44,21 +44,27 @@ describe('exam pages', () => {
     );
   });
 
-  it('shows the solutions of set 2 from worked-solutions/08 with the set switcher', async () => {
+  it('shows set 2 from worked-solutions/07 with the set switcher', async () => {
     renderAt('/exam/2');
-    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 08' })).toBeInTheDocument();
-    expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '08');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 07' })).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '07');
     const tabs = screen.getByRole('navigation', { name: 'ชุดข้อสอบ' });
-    expect(tabs.querySelectorAll('a')).toHaveLength(3);
+    expect(tabs.querySelectorAll('a')).toHaveLength(4);
     expect(screen.getByRole('link', { name: 'ชุดที่ 2' })).toHaveAttribute('aria-current', 'page');
-    await waitFor(() => expect(document.title).toBe('เฉลยข้อสอบ ชุดที่ 2 | Digital Logic Notes'));
+    await waitFor(() =>
+      expect(document.title).toBe('ข้อสอบกลางภาค ชุดที่ 2 | Digital Logic Notes'),
+    );
   });
 
-  it('shows the solutions of set 3 from worked-solutions/10', async () => {
+  it('shows set 3 from worked-solutions/08 and set 4 from worked-solutions/09', async () => {
     renderAt('/exam/3');
-    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 10' })).toBeInTheDocument();
-    expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '10');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 08' })).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '08');
     expect(screen.getByRole('link', { name: 'ชุดที่ 3' })).toHaveAttribute('aria-current', 'page');
+    cleanup();
+    renderAt('/exam/4');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 09' })).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '09');
   });
 
   it('keeps set 1 on /exam with the same switcher', async () => {
@@ -69,7 +75,7 @@ describe('exam pages', () => {
 
   it('sends an unknown set back to the first exam page', () => {
     renderAt('/exam/9');
-    expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '08');
-    expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '10');
+    expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '07');
+    expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '09');
   });
 });

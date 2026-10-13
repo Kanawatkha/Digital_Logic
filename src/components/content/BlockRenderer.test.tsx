@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import type { Block, Inline } from '@/content/types';
 import { BlockList } from '@/components/content/BlockRenderer';
+import { SolutionsContext } from '@/components/content/solutions';
 
 const text = (v: string): Inline => ({ t: 'text', v });
 const math = (tex: string): Inline => ({ t: 'math', tex, html: `<span class="katex">${tex}</span>` });
@@ -71,5 +72,25 @@ describe('BlockRenderer', () => {
     expect(sections[0].textContent).toContain('คำตอบ');
     expect(sections[1].textContent).toContain('Sol');
     expect(sections[1].textContent).not.toContain('คำตอบ');
+  });
+
+  it('shows only the question of an example when the solutions are hidden', () => {
+    const example: Block = {
+      t: 'example',
+      id: 'e1',
+      problem: [{ t: 'p', c: [text('โจทย์')] }],
+      sol: [{ t: 'p', c: [text('วิธี')] }],
+      ans: [{ t: 'p', c: [text('คำตอบ')] }],
+    };
+    const { container } = render(
+      <SolutionsContext.Provider value={{ show: false, setShow: () => {} }}>
+        <BlockList blocks={[example]} />
+      </SolutionsContext.Provider>,
+    );
+    const section = container.querySelector('section[data-example]');
+    expect(section?.textContent).toContain('โจทย์');
+    expect(section?.textContent).not.toContain('Sol');
+    expect(section?.textContent).not.toContain('วิธี');
+    expect(section?.textContent).not.toContain('คำตอบ');
   });
 });
