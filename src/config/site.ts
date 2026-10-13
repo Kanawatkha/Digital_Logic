@@ -45,6 +45,8 @@ export const UI_TEXT = {
   menuOpen: 'เมนู',
   menuClose: 'ปิดเมนู',
   comingSoon: 'กำลังจัดทำ',
+  updateReady: 'มีเวอร์ชันใหม่ พร้อมใช้งาน',
+  updateAction: 'โหลดใหม่',
   solutions: 'แสดงเฉลย',
   offlineReady: 'ใช้งานออฟไลน์ได้แล้ว',
   dismiss: 'ปิด',

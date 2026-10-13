@@ -81,7 +81,7 @@ Pin action versions to current stable majors at implementation time and update t
 
 ## 6. Offline and PWA
 
-- `vite-plugin-pwa`, `generateSW`, `registerType: 'prompt'`: `ToastHost` polls for a new worker every minute and when the tab regains focus, then activates it and reloads the page by itself (no prompt).
+- `vite-plugin-pwa`, `generateSW`, `registerType: 'prompt'`: `ToastHost` polls for a new worker every minute and when the tab regains focus, then activates it and reloads the page by itself (the "new version ready" toast with a reload button stays as a backup).
 - `version.json` (emitted by the build, never cached) carries the build id that is also compiled into the page. `src/app/pwa/versionCheck.ts` compares them when the page opens, comes back to the screen, goes online and every minute; on a mismatch it unregisters the service worker, clears all caches and reloads (at most 3 times in 5 minutes). This does not wait for the service worker, which phones can be slow to update.
 - Precache the whole build output: HTML, JS, CSS, generated content chunks, KaTeX CSS and fonts, Mitr, Inter and Cormorant Garamond font files, icons.
 - Manifest: `name` "Digital Logic Notes", `short_name` "Logic Notes", `display: standalone`, `start_url` and `scope` set to the base path, `theme_color` and `background_color` = `canvas`, icons 192, 512 and maskable.

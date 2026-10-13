@@ -9,9 +9,10 @@ import { watchVersion } from './versionCheck';
 const UPDATE_CHECK_MS = 60_000;
 
 /**
- * Bottom-left host for the "offline ready" toast, driven by the service worker. A new version
- * is applied automatically: the page checks for one on a timer and when the tab regains focus,
- * then activates it and reloads without asking.
+ * Bottom-left host for the "offline ready" and "new version ready" toasts, driven by the service
+ * worker. A new version is applied automatically: the page checks for one on a timer and when the
+ * tab regains focus, then activates it and reloads without asking. The toast stays as a backup:
+ * on a phone that is slow to switch, its button applies the update at once.
  */
 export function ToastHost() {
   const {
@@ -37,7 +38,15 @@ export function ToastHost() {
 
   return (
     <div aria-live="polite" className="fixed bottom-4 left-4 z-50 max-w-[calc(100vw-2rem)]">
-      {offlineReady ? (
+      {needRefresh ? (
+        <Toast
+          action={
+            <Button onClick={() => void updateServiceWorker(true)}>{UI_TEXT.updateAction}</Button>
+          }
+        >
+          {UI_TEXT.updateReady}
+        </Toast>
+      ) : offlineReady ? (
         <Toast
           action={
             <Button
