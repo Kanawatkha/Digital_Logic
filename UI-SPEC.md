@@ -58,7 +58,7 @@ No footer. A small toast host (bottom-left) shows update and offline-ready messa
 | Route | Page | Data | Layout summary |
 |---|---|---|---|
 | `#/` | Home | `summary/01..05` trees | Diagram canvas (section 4) |
-| `#/chapter/:n` | Chapter exercises | `worked-solutions/0n` | Prose column, jump chips, exercise cards (section 5), "แสดงเฉลย" switch |
+| `#/chapter/:n` | Chapter exercises | `worked-solutions/0n` | Prose column, jump chips, exercise cards (section 5), floating "แสดงเฉลย" switch (sticky under the header) |
 | `#/exam` | Midterm practice exam, set 1 | `worked-solutions/06` | Same as chapter page, with the exam set switcher above the heading |
 | `#/exam/2`, `#/exam/3`, `#/exam/4` | Practice exam sets 2 to 4 | `worked-solutions/07` to `/09` | Same as the exam page. Each file holds the questions with their solutions. The navbar tab "ข้อสอบกลางภาค" stays active on all four. Above the heading: the set switcher and a "แสดงเฉลย" switch that hides the Sol and Ans of every sub-question so only the questions remain (remembered in the browser) |
 | `#/formulas` | Formula sheet | `summary/00` | Prose with per-chapter sections and a contents rail (section 6) |

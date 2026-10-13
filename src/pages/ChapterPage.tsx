@@ -1,6 +1,6 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { SolutionsProvider } from '@/components/content/SolutionsProvider';
-import { SolutionsSwitch } from '@/components/layout/SolutionsSwitch';
+import { FloatingSolutionsSwitch } from '@/components/layout/SolutionsSwitch';
 import { isChapterNumber } from '@/config/site';
 import { ContentPage } from '@/features/content-page/ContentPage';
 
@@ -20,11 +20,7 @@ export default function ChapterPage() {
         variant="exercises"
         badge="แบบฝึกหัด"
         tabTitle={`บทที่ ${chapter}`}
-        above={
-          <div className="mb-6 flex justify-end">
-            <SolutionsSwitch />
-          </div>
-        }
+        above={<FloatingSolutionsSwitch />}
       />
     </SolutionsProvider>
   );

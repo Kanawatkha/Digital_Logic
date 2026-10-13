@@ -2,6 +2,21 @@ import { useSolutions } from '@/components/content/solutions';
 import { UI_TEXT } from '@/config/site';
 import { cn } from '@/lib/cn';
 
+/**
+ * The switch, floating under the header: it follows the scroll so it can be flipped from anywhere
+ * on the page. From the `sm` width up it takes no room in the layout (it sits over the right end
+ * of the first row); on phones it keeps its own row so it never covers the page content.
+ */
+export function FloatingSolutionsSwitch() {
+  return (
+    <div className="pointer-events-none sticky top-[calc(var(--spacing-nav)+0.75rem)] z-30 mb-4 flex h-11 items-start justify-end sm:mb-0 sm:h-0">
+      <div className="pointer-events-auto rounded-md shadow-[0_2px_10px_rgba(20,20,19,0.12)]">
+        <SolutionsSwitch />
+      </div>
+    </div>
+  );
+}
+
 /** Switch that shows or hides the solutions (hidden, each sub-question shows only its question). */
 export function SolutionsSwitch() {
   const { show, setShow } = useSolutions();
