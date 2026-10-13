@@ -70,15 +70,17 @@ export function ContentPage({
 
   return (
     <PageContainer className={variant === 'formulas' ? 'lg:pl-14 xl:pl-6' : undefined}>
-      {above}
       {variant === 'exercises' ? (
-        <>
+        // drawn shifted while the solutions switch animates (see lib/scrollAnchor)
+        <div data-scroll-shift="">
+          {above}
           <PageHeading title={plainText(file.title)} badge={badge} />
           <JumpNav items={items} label="หัวข้อในหน้านี้" />
           <ExerciseOutline root={file.root} />
-        </>
+        </div>
       ) : (
         <>
+          {above}
           {/* the sheet starts straight at its content; the title stays for screen readers */}
           <h1 className="sr-only">{plainText(file.title)}</h1>
           <FormulaOutline root={file.root} items={items} />

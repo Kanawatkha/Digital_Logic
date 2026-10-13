@@ -1,6 +1,6 @@
-import { flushSync } from 'react-dom';
-import { trackPendingMount } from '@/lib/scrollAnchor';
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { flushSync } from 'react-dom';
+import { trackActivity } from '@/lib/scrollAnchor';
 
 const DURATION = 420;
 const EASING = 'cubic-bezier(0.22, 1, 0.36, 1)';
@@ -16,35 +16,38 @@ function isNear(el: HTMLElement, margin: number): boolean {
 }
 
 /**
- * Runs `fn` when the browser is idle, so far-away boxes never block the first frames. The page
- * holds the reader's place until it has run (see scrollAnchor).
+ * Runs a React update outside the current commit but still before the next paint (`soon`), or
+ * when the browser is idle (`idle`). Either way it is committed at once and counted as activity,
+ * so the hold on the reader's place (see scrollAnchor) waits for it.
  */
-function whenIdle(fn: () => void): () => void {
-  trackPendingMount(1);
+function schedule(when: 'soon' | 'idle', update: () => void): () => void {
+  trackActivity(1);
   let done = false;
-  const run = () => {
+  const finish = () => {
     if (done) return;
     done = true;
-    fn();
-    trackPendingMount(-1);
+    trackActivity(-1);
   };
+  const run = () => {
+    if (done) return;
+    flushSync(update);
+    finish();
+  };
+  if (when === 'soon') {
+    queueMicrotask(run);
+    return finish;
+  }
   if (typeof requestIdleCallback === 'function') {
     const id = requestIdleCallback(run, { timeout: 1500 });
     return () => {
       cancelIdleCallback(id);
-      if (!done) {
-        done = true;
-        trackPendingMount(-1);
-      }
+      finish();
     };
   }
   const id = setTimeout(run, 60);
   return () => {
     clearTimeout(id);
-    if (!done) {
-      done = true;
-      trackPendingMount(-1);
-    }
+    finish();
   };
 }
 
@@ -53,24 +56,30 @@ function whenIdle(fn: () => void): () => void {
  * text down into place, closing rolls it back up. Hidden children are not rendered at all.
  *
  * Only boxes on or near the screen are mounted at once and animated. The far ones (most of a long
- * page) are mounted a few at a time while the browser is idle, so the switch never freezes the
- * page for a moment before the animation starts.
+ * page) are mounted while the browser is idle, so the switch never freezes the page.
  */
 export function Collapse({ open, children }: { open: boolean; children: ReactNode }) {
   const [mounted, setMounted] = useState(open);
   const outer = useRef<HTMLDivElement>(null);
   const inner = useRef<HTMLDivElement>(null);
   const running = useRef<Animation[]>([]);
-  const cancelIdle = useRef<() => void>(() => {});
-  const first = useRef(true);
+  const cancelPending = useRef<() => void>(() => {});
+  const lastOpen = useRef(open); // the switch position the box last followed
   const unroll = useRef(false); // the next mount comes from the switch, so it may animate
 
-  useEffect(() => () => cancelIdle.current(), []);
-
   const stopAnimations = () => {
+    if (running.current.length > 0) trackActivity(-1);
     for (const a of running.current) a.cancel();
     running.current = [];
   };
+
+  useEffect(
+    () => () => {
+      cancelPending.current();
+      stopAnimations();
+    },
+    [],
+  );
 
   const animate = (to: 'open' | 'closed') => {
     const box = outer.current;
@@ -100,6 +109,7 @@ export function Collapse({ open, children }: { open: boolean; children: ReactNod
       ],
       opts,
     );
+    trackActivity(1);
     running.current = [grow, slide];
     grow.onfinish = () => {
       if (opening) {
@@ -107,9 +117,9 @@ export function Collapse({ open, children }: { open: boolean; children: ReactNod
         box.style.overflow = '';
         stopAnimations();
       } else {
-        // keep the collapsed look until React removes the children, so it never flashes back open
-        running.current = [];
-        setMounted(false);
+        // keep the collapsed look until the children are gone, so it never flashes back open
+        flushSync(() => setMounted(false));
+        stopAnimations();
       }
     };
     return true;
@@ -117,29 +127,22 @@ export function Collapse({ open, children }: { open: boolean; children: ReactNod
 
   // the switch was flipped
   useLayoutEffect(() => {
-    if (first.current) {
-      first.current = false;
-      return;
-    }
-    cancelIdle.current();
+    if (lastOpen.current === open) return;
+    lastOpen.current = open;
+    cancelPending.current();
     const box = outer.current;
     if (open) {
       if (mounted) {
         // opened again while still closing: turn around from the current height
         animate('open');
-      } else if (box && isNear(box, window.innerHeight)) {
-        unroll.current = true;
-        queueMicrotask(() => setMounted(true));
       } else {
         unroll.current = true;
-        // flushed at once, so the page has its final size when the hold on the reader's place ends
-        cancelIdle.current = whenIdle(() => flushSync(() => setMounted(true)));
+        const near = box !== null && isNear(box, window.innerHeight);
+        cancelPending.current = schedule(near ? 'soon' : 'idle', () => setMounted(true));
       }
-    } else if (mounted) {
-      if (!animate('closed')) {
-        stopAnimations();
-        queueMicrotask(() => setMounted(false));
-      }
+    } else if (mounted && !animate('closed')) {
+      stopAnimations();
+      cancelPending.current = schedule('soon', () => setMounted(false));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- reacts to the switch only
   }, [open]);
