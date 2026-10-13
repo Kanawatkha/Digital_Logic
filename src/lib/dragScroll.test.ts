@@ -26,20 +26,28 @@ afterEach(() => {
 });
 
 describe('installDragScroll', () => {
-  it.each([0, 2])('pans a wide area when dragging with button %i', (button) => {
+  it('pans a wide area when dragging with the right button', () => {
     box.scrollLeft = 200;
-    pointer('pointerdown', { button, buttons: button === 0 ? 1 : 2, clientX: 300 });
-    pointer('pointermove', { button, buttons: button === 0 ? 1 : 2, clientX: 250 });
+    pointer('pointerdown', { button: 2, buttons: 2, clientX: 300 });
+    pointer('pointermove', { button: 2, buttons: 2, clientX: 250 });
     expect(box.scrollLeft).toBe(250);
-    pointer('pointerup', { button });
+    pointer('pointerup', { button: 2 });
     pointer('pointermove', { buttons: 0, clientX: 100 });
     expect(box.scrollLeft).toBe(250);
   });
 
+  it('leaves the left button alone so text can be selected', () => {
+    box.scrollLeft = 200;
+    pointer('pointerdown', { button: 0, buttons: 1, clientX: 300 });
+    pointer('pointermove', { button: 0, buttons: 1, clientX: 100 });
+    expect(box.scrollLeft).toBe(200);
+    expect(document.body.style.userSelect).toBe('');
+  });
+
   it('ignores a tiny movement so clicks keep working', () => {
     box.scrollLeft = 10;
-    pointer('pointerdown', { button: 0, buttons: 1, clientX: 100 });
-    pointer('pointermove', { button: 0, buttons: 1, clientX: 102 });
+    pointer('pointerdown', { button: 2, buttons: 2, clientX: 100 });
+    pointer('pointermove', { button: 2, buttons: 2, clientX: 102 });
     expect(box.scrollLeft).toBe(10);
   });
 

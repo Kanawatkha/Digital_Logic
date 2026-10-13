@@ -13,13 +13,12 @@ function findScroller(start: EventTarget | null): HTMLElement | null {
 
 /**
  * Lets a mouse user pan every sideways-scrolling area (tables, formulas, figures, the jump chips,
- * the home diagram) by holding the left or right button and dragging. One delegated listener
- * serves the whole page. Touch keeps its native scrolling; a click or context menu that ends a
- * drag is swallowed so links and buttons do not fire by accident.
+ * the home diagram) by holding the RIGHT button and dragging. The left button is left alone so
+ * text can still be selected. One delegated listener serves the whole page. Touch keeps its
+ * native scrolling; the context menu that ends a drag is swallowed.
  */
 export function installDragScroll(): () => void {
   let scroller: HTMLElement | null = null;
-  let button = 0;
   let startX = 0;
   let startLeft = 0;
   let dragging = false;
@@ -35,11 +34,10 @@ export function installDragScroll(): () => void {
   };
 
   const down = (e: PointerEvent) => {
-    if (e.pointerType !== 'mouse' || (e.button !== 0 && e.button !== 2)) return;
+    if (e.pointerType !== 'mouse' || e.button !== 2) return;
     if (e.target instanceof Element && e.target.closest('input, textarea, select')) return;
     scroller = findScroller(e.target);
     if (!scroller) return;
-    button = e.button;
     startX = e.clientX;
     startLeft = scroller.scrollLeft;
     dragging = false;
@@ -62,18 +60,15 @@ export function installDragScroll(): () => void {
 
   const up = () => {
     const wasDragging = dragging;
-    const wasButton = button;
     stop();
     if (!wasDragging) return;
-    // the click (left) or context menu (right) that follows the release belongs to the drag
-    const type = wasButton === 0 ? 'click' : 'contextmenu';
-    const swallow = (ev: Event) => ev.preventDefault();
+    // the context menu that follows the release belongs to the drag
     const block = (ev: Event) => {
-      swallow(ev);
+      ev.preventDefault();
       ev.stopPropagation();
     };
-    window.addEventListener(type, block, { capture: true, once: true });
-    setTimeout(() => window.removeEventListener(type, block, true), 0);
+    window.addEventListener('contextmenu', block, { capture: true, once: true });
+    setTimeout(() => window.removeEventListener('contextmenu', block, true), 0);
   };
 
   document.addEventListener('pointerdown', down);

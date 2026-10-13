@@ -7,7 +7,7 @@ Pages, components, interactions and responsive behavior. Visual tokens (colors, 
 - Canvas is `canvas` (#faf9f5). Text is `ink` / `body`. Coral (`primary`) is scarce: the diagram root node, the active connector path, primary buttons, focus ring accent.
 - No footer. No dark theme. No hover styling beyond DESIGN (primary darkens on press only). Focus is always visible (2 px ring, coral at 40% plus ink outline).
 - Max content width 1200 px; reading width for prose pages 880 px.
-- Every sideways-scrolling area (tables, formulas, figures, jump chips, home diagram) can be panned with a mouse by holding the left or right button and dragging (`src/lib/dragScroll.ts`); touch keeps native scrolling.
+- Every sideways-scrolling area (tables, formulas, figures, jump chips, home diagram) can be panned with a mouse by holding the right mouse button and dragging (the left button still selects text) (`src/lib/dragScroll.ts`); touch keeps native scrolling.
 - Fonts: Thai script uses Mitr, Latin uses the DESIGN stack (see `DESIGN-claude.md` addendum). Code/mono uses JetBrains Mono (only if code appears).
 - UI labels shown to students are Thai. Code, comments and docs are English.
 
