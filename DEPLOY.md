@@ -81,7 +81,7 @@ Pin action versions to current stable majors at implementation time and update t
 
 ## 6. Offline and PWA
 
-- `vite-plugin-pwa`, `generateSW`, `registerType: 'prompt'`: the new worker waits until the student presses the update action, so a page is never reloaded in the middle of studying.
+- `vite-plugin-pwa`, `generateSW`, `registerType: 'prompt'`: `ToastHost` polls for a new worker every minute and when the tab regains focus, then activates it and reloads the page by itself (no prompt).
 - Precache the whole build output: HTML, JS, CSS, generated content chunks, KaTeX CSS and fonts, Mitr, Inter and Cormorant Garamond font files, icons.
 - Manifest: `name` "Digital Logic Notes", `short_name` "Logic Notes", `display: standalone`, `start_url` and `scope` set to the base path, `theme_color` and `background_color` = `canvas`, icons 192, 512 and maskable.
 - `HashRouter` means the service worker only needs to serve `index.html` for the base path; no navigation fallback rules are needed.

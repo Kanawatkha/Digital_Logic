@@ -126,7 +126,7 @@ app    ->  pages, components, config
 ## 10. Offline and PWA
 
 - `vite-plugin-pwa` in `generateSW` mode precaches all build output including fonts and generated JSON chunks.
-- `registerType: 'prompt'`; the app shows a small "new version ready" notice from `app/pwa/`.
+- `registerType: 'prompt'` with automatic apply: `app/pwa/ToastHost` checks for a new worker every minute and on tab focus, then activates it and reloads without asking.
 - Scope and `start_url` use the repository base path. See `DEPLOY.md`.
 
 ## 11. Naming and conventions

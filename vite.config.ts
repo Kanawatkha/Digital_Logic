@@ -56,8 +56,8 @@ export default defineConfig(({ command, isPreview }) => ({
     preloadFonts(),
     react(),
     tailwindcss(),
-    // Precaches the whole build so every page works offline. The app asks before reloading
-    // for a new version (see src/app/pwa/ToastHost.tsx).
+    // Precaches the whole build so every page works offline. The app reloads itself
+    // when a new version is found (see src/app/pwa/ToastHost.tsx).
     VitePWA({
       registerType: 'prompt',
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],

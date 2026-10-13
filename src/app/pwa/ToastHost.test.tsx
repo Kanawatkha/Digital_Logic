@@ -36,12 +36,10 @@ describe('ToastHost', () => {
     expect(sw.setOffline).toHaveBeenCalledWith(false);
   });
 
-  it('offers a reload for a new version and activates it only on request', () => {
+  it('applies a new version automatically without showing a prompt', () => {
     sw.state.needRefresh = true;
     render(<ToastHost />);
-    expect(screen.getByRole('status')).toHaveTextContent('มีเวอร์ชันใหม่ พร้อมใช้งาน');
-    expect(sw.update).not.toHaveBeenCalled();
-    fireEvent.click(screen.getByRole('button', { name: 'โหลดใหม่' }));
     expect(sw.update).toHaveBeenCalledWith(true);
+    expect(screen.queryByRole('status')).toBeNull();
   });
 });
