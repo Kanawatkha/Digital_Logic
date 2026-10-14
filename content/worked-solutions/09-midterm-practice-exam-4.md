@@ -1,6 +1,6 @@
 # แนวข้อสอบกลางภาค ชุดที่ 4 (Midterm Practice Exam 4)
 
-ข้อสอบมี 5 ข้อใหญ่ รวม 34 คะแนน (ข้อ 1 = 8, ข้อ 2 = 6, ข้อ 3 = 7, ข้อ 4 = 8, ข้อ 5 = 5) ข้อ 4 ให้วงจรมา ส่วนข้อ 5 เป็นโจทย์ออกแบบแบบประโยค เฉลยอ้างทฤษฎีบทตามเลขข้อในตารางสรุปบทที่ 3
+ข้อสอบมี 5 ข้อใหญ่ รวม 34 คะแนน (ข้อ 1 = 8, ข้อ 2 = 6, ข้อ 3 = 7, ข้อ 4 = 8, ข้อ 5 = 5) ข้อ 4 ให้วงจรมา ส่วนข้อ 5 เป็นโจทย์ออกแบบแบบประโยค ท้ายชุดมีข้อพิเศษอีก 2 ข้อไว้ฝึกเพิ่ม ไม่รวมในคะแนน เฉลยอ้างทฤษฎีบทตามเลขข้อในตารางสรุปบทที่ 3
 
 ---
 
@@ -534,3 +534,194 @@ $\mathbf{Sol}^{n}$
 ดังนั้นเอาต์พุต $F$ เท่ากับอินพุต $Z$ (ใช้บัฟเฟอร์ส่งค่า $Z$ ออกไปตรง ๆ)
 
 $\mathbf{Ans}\quad F=\mathbf{Z}$ (วงจรดังรูปด้านบน)
+
+---
+
+## ข้อพิเศษ 1 ฟังก์ชัน $Y$ ที่มีขีดคลุมซ้อนกันหลายชั้น (ข้อพิเศษ ไม่รวมในคะแนน)
+
+$$
+Y=\overline{\overline{\left(\overline{B}+C\right)}+\overline{\left(B+\overline{C}\right)}}+\overline{\overline{A}+B+\overline{C}}
+$$
+
+### ข้อพิเศษ 1.ก  จงลดรูปสมการ $Y$ ด้วยพีชคณิตบูลีน
+
+$\mathbf{Sol}^{n}$
+
+ขั้นที่ 1 ใช้เดอร์มอร์แกนกับขีดคลุมชั้นนอกสุดของแต่ละพจน์ แล้วตัดขีดคลุมซ้ำซ้อนด้วยข้อ 5(b)
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{\left(\overline{B}+C\right)}+\overline{\left(B+\overline{C}\right)}}+\overline{\overline{A}+B+\overline{C}} \\
+&= \overline{\overline{\left(\overline{B}+C\right)}}\cdot\overline{\overline{\left(B+\overline{C}\right)}}+\overline{\overline{A}}\,\overline{B}\,\overline{\overline{C}} &&\text{เดอร์มอร์แกน ข้อ 10(a)} \\
+&= \left(\overline{B}+C\right)\left(B+\overline{C}\right)+A\overline{B}C &&\text{ข้อ 5(b) $\overline{\overline{X}}=X$}
+\end{aligned}
+$$
+
+ขั้นที่ 2 คูณวงเล็บออก แล้วลดรูป
+
+$$
+\begin{aligned}
+\left(\overline{B}+C\right)\left(B+\overline{C}\right) &= \overline{B}B+\overline{B}\,\overline{C}+CB+C\overline{C} &&\text{กฎกระจาย ข้อ 3(b)} \\
+&= 0+\overline{B}\,\overline{C}+BC+0 &&\text{ข้อ 8(b) $X\cdot\overline{X}=0$} \\
+&= \overline{B}\,\overline{C}+BC &&\text{ข้อ 7(a) $0+X=X$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= \overline{B}\,\overline{C}+BC+A\overline{B}C \\
+&= \overline{B}\,\overline{C}+C\left(B+A\overline{B}\right) &&\text{ดึงตัวร่วม $C$ ออก (กฎกระจาย ข้อ 3(b))} \\
+&= \overline{B}\,\overline{C}+C\left(B+A\right) &&\text{ข้อ 9(a) $B+\overline{B}A=B+A$} \\
+&= \overline{B}\,\overline{C}+BC+AC &&\text{กฎกระจาย ข้อ 3(b)}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad Y=\mathbf{\overline{B}\,\overline{C}+BC+AC}$
+
+---
+
+### ข้อพิเศษ 1.ข  จากสมการ $Y$ ที่กำหนด จงเขียนในรูป POS ตรง ๆ
+
+$\mathbf{Sol}^{n}$
+
+POS ใช้แถวของตารางความจริงที่ $Y=0$ จึงแทนค่า $A,B,C$ ลงในสมการที่กำหนดทีละแถวโดยไม่ต้องลดรูปก่อน
+
+| $A$ | $B$ | $C$ | พจน์แรก | พจน์หลัง | $Y$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 1 |
+
+แถวที่ $Y=0$ คือแถว $1,2,6$ (ได้จาก $ABC=001,\ 010,\ 110$) เขียนแมกซ์เทอมของแถวเหล่านี้ โดยตัวแปรที่เป็น $0$ ในแถวเขียนตรง ๆ และตัวแปรที่เป็น $1$ เขียนกลับค่า
+
+$$
+Y=\prod M(1,2,6)=(A+B+\overline{C})(A+\overline{B}+C)(\overline{A}+\overline{B}+C)
+$$
+
+ลดรูปต่อด้วยแผนผังคาร์โน จับลูปช่อง $0$ แล้วอ่านเป็นผลบวก
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">AB</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">C</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text>
+<g><rect x="162" y="60" width="108" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="106" y="120" width="46" height="46" rx="14" stroke="#3b8be8" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+- ลูปสีส้ม (ช่อง $2,6$) : $B=1,\ C=0$ คงที่ ส่วน $A$ เปลี่ยนค่า จึงตัด $A$ ออก ได้ผลบวก $\left(\overline{B}+C\right)$ (ตัวแปรที่เป็น $1$ เขียนกลับค่า ตัวแปรที่เป็น $0$ เขียนตรง ๆ)
+- ลูปสีน้ำเงิน (ช่อง $1$ ช่องเดียว) : $ABC=001$ ได้ผลบวก $\left(A+B+\overline{C}\right)$
+
+$\mathbf{Ans}\quad Y=\prod M(1,2,6)=(A+B+\overline{C})(A+\overline{B}+C)(\overline{A}+\overline{B}+C)=\mathbf{\left(\overline{B}+C\right)\left(A+B+\overline{C}\right)}$
+
+---
+
+## ข้อพิเศษ 2 จากวงจรที่กำหนดให้ (ข้อพิเศษ ไม่รวมในคะแนน)
+
+วงจรเดียวกับข้อ 4 แต่เปลี่ยนเกต NAND เป็นเกต AND ธรรมดา
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="504" height="297" viewBox="0 0 560 330" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><path d="M110 30Q150 30 170 55.0Q150 80 110 80Q124 55.0 110 30Z"/>
+<circle cx="175" cy="55.0" r="5"/>
+<path d="M110 120Q150 120 170 145.0Q150 170 110 170Q124 145.0 110 120Z"/>
+<path d="M260 70H290A25.0 25.0 0 0 1 290 120H260Z"/>
+<path d="M110 250Q150 250 170 275.0Q150 300 110 300Q124 275.0 110 250Z"/>
+<path d="M102 250Q116 275.0 102 300"/>
+<path d="M230 255L270 275L230 295Z"/>
+<circle cx="275" cy="275" r="5"/>
+<path d="M400 150Q440 150 460 175.0Q440 200 400 200Q414 175.0 400 150Z"/>
+<circle cx="465" cy="175.0" r="5"/>
+<polyline points="36,42 60,42 110,42.0"/>
+<polyline points="36,68 60,68 110,68.0"/>
+<polyline points="36,132 60,132 110,132.0"/>
+<polyline points="36,158 60,158 110,158.0"/>
+<polyline points="36,262 60,262 110,262.0"/>
+<polyline points="36,288 60,288 110,288.0"/>
+<polyline points="180,55.0 225,55.0 225,82.0 260,82.0"/>
+<polyline points="170,145.0 238,145.0 238,108.0 260,108.0"/>
+<polyline points="170,275.0 200,275.0 230,275"/>
+<polyline points="315,95 365,95.0 365,162.0 400,162.0"/>
+<polyline points="280,275 385,275 385,188.0 400,188.0"/>
+<line x1="470" y1="175.0" x2="520" y2="175.0"/></g>
+<text x="12" y="48" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">A</text><text x="12" y="74" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">B</text><text x="12" y="138" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">C</text><text x="12" y="164" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">D</text><text x="12" y="268" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">E</text><text x="12" y="294" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">F</text><text x="532" y="181.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text>
+</svg>
+</div>
+
+### ข้อพิเศษ 2.1  จงเขียนสมการของเอาต์พุต $X$ จากวงจร
+
+$\mathbf{Sol}^{n}$
+
+ไล่เอาต์พุตของเกตแต่ละตัวจากอินพุตไปหาเอาต์พุต
+
+$$
+\begin{aligned}
+G_1 &= \overline{A+B} \quad(\text{NOR}) \\
+G_2 &= C+D \quad(\text{OR}) \\
+G_3 &= G_1\cdot G_2 \quad(\text{AND}) \\
+G_4 &= E\oplus F \quad(\text{XOR}) \\
+G_5 &= \overline{G_4} \quad(\text{NOT}) \\
+X &= \overline{G_3+G_5} \quad(\text{NOR})
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad X=\overline{\overline{A+B}\cdot(C+D)+\overline{E\oplus F}}$
+
+---
+
+### ข้อพิเศษ 2.2  จากสมการในข้อพิเศษ 2.1 จงลดรูปด้วยทฤษฎีของเดอร์มอร์แกนให้ไม่มีเครื่องหมายขีดคลุมเหนือหลายตัวแปรหรือหลายพจน์
+
+$\mathbf{Sol}^{n}$
+
+$$
+\begin{aligned}
+X &= \overline{\overline{A+B}\cdot(C+D)+\overline{E\oplus F}} \\
+&= \overline{\overline{A+B}\cdot(C+D)}\cdot\overline{\overline{E\oplus F}} &&\text{เดอร์มอร์แกน ข้อ 10(a)} \\
+&= \overline{\overline{A+B}\cdot(C+D)}\cdot(E\oplus F) &&\text{ข้อ 5(b) $\overline{\overline{X}}=X$} \\
+&= \left(\overline{\overline{A+B}}+\overline{C+D}\right)\cdot(E\oplus F) &&\text{เดอร์มอร์แกน ข้อ 10(b)} \\
+&= \left(A+B+\overline{C}\,\overline{D}\right)\cdot(E\oplus F) &&\text{ข้อ 5(b) และเดอร์มอร์แกน ข้อ 10(a)}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad X=\left(A+B+\overline{C}\,\overline{D}\right)(E\oplus F)$
+
+---
+
+### ข้อพิเศษ 2.3  จงหาเงื่อนไขทั้งหมดของอินพุต $A$ ถึง $F$ ที่ทำให้เอาต์พุต $X=1$
+
+$\mathbf{Sol}^{n}$
+
+$X=\left(A+B+\overline{C}\,\overline{D}\right)(E\oplus F)$ เป็นผลคูณของ 2 พจน์ ดังนั้น $X=1$ ก็ต่อเมื่อทั้งสองพจน์เป็น $1$
+
+- $E\oplus F=1$ คือ $EF=01,10$ (ได้ 2 กรณี เพราะ $E$ ต้องไม่เท่ากับ $F$)
+- $A+B+\overline{C}\,\overline{D}=1$ ให้หาจากกรณีที่พจน์นี้เป็น $0$ แล้วตัดออก พจน์นี้เป็น $0$ ก็ต่อเมื่อ $A=0,\ B=0$ และ $\overline{C}\,\overline{D}=0$ คือ $C+D=1$ ($CD=01,10,11$ ได้ 3 กรณี) ดังนั้นพจน์นี้เป็น $1$ ได้ $16-3=13$ กรณีของ $ABCD$ (ทุกกรณียกเว้น $ABCD=0001,0010,0011$)
+
+จำนวนกรณีที่ $X=1$ คือ $13\times2=26$ กรณี จากทั้งหมด $2^6=64$ กรณี
+
+| $A$ | $B$ | $C$ | $D$ | $E\,F$ ที่ทำให้ $X=1$ |
+|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 01 หรือ 10 |
+| 0 | 1 | 0 | 0 | 01 หรือ 10 |
+| 0 | 1 | 0 | 1 | 01 หรือ 10 |
+| 0 | 1 | 1 | 0 | 01 หรือ 10 |
+| 0 | 1 | 1 | 1 | 01 หรือ 10 |
+| 1 | 0 | 0 | 0 | 01 หรือ 10 |
+| 1 | 0 | 0 | 1 | 01 หรือ 10 |
+| 1 | 0 | 1 | 0 | 01 หรือ 10 |
+| 1 | 0 | 1 | 1 | 01 หรือ 10 |
+| 1 | 1 | 0 | 0 | 01 หรือ 10 |
+| 1 | 1 | 0 | 1 | 01 หรือ 10 |
+| 1 | 1 | 1 | 0 | 01 หรือ 10 |
+| 1 | 1 | 1 | 1 | 01 หรือ 10 |
+
+$\mathbf{Ans}\quad X=1$ เมื่อ $E\ne F$ และ $ABCD$ เป็นค่าใดก็ได้ ยกเว้น $0001,\ 0010,\ 0011$ (รวม 26 กรณีตามตาราง) กรณีอื่น $X=0$

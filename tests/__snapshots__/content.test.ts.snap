@@ -134,10 +134,10 @@ exports[`real content > keeps counts stable (review any change before accepting 
       },
       {
         "chapter": "09",
-        "examples": 15,
-        "figures": 7,
+        "examples": 20,
+        "figures": 9,
         "file": "worked-solutions/09.json",
-        "nodes": 21,
+        "nodes": 28,
         "slug": "midterm-practice-exam-4",
         "title": "แนวข้อสอบกลางภาค ชุดที่ 4 (Midterm Practice Exam 4)",
       },
