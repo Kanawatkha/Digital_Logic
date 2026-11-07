@@ -1,0 +1,826 @@
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
+import { icFrame, pointPosition } from '@/features/lab/board/geometry';
+import { BOARD_SIZE, SWITCHES } from '@/features/lab/board/layout';
+import { STORAGE_KEY } from '@/features/lab/state/storage';
+import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
+import LabPage from './LabPage';
+
+const SLOW = { timeout: 3000 };
+
+// the lab saves the circuit in the browser; every test starts with an empty one
+beforeEach(() => localStorage.clear());
+
+/** A `matchMedia` that answers yes to reduced motion and to the queries `also` says yes to. */
+const media = (also: (query: string) => boolean) =>
+  ((query: string) => ({
+    matches: query.includes('prefers-reduced-motion') || also(query),
+    media: query,
+    onchange: null,
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    addListener: () => {},
+    removeListener: () => {},
+    dispatchEvent: () => false,
+  })) as typeof window.matchMedia;
+
+beforeAll(() => {
+  // reduced motion: the view jumps instead of gliding, and panels open and close at once, so the
+  // tests do not depend on frame timing. A wide window: every wire color and chip is in the row.
+  window.matchMedia = media((query) => query.includes('min-width'));
+});
+
+describe('LabPage', () => {
+  it('shows the board canvas with the zoom controls', () => {
+    render(
+      <MemoryRouter>
+        <LabPage />
+      </MemoryRouter>,
+    );
+    expect(screen.getByRole('heading', { level: 1, name: 'บอร์ดทดลอง NX-4i' })).toBeInTheDocument();
+    expect(screen.getByRole('application')).toHaveAccessibleName(/บอร์ดทดลอง NX-4i/);
+    for (const name of ['ซูมเข้า', 'ซูมออก', 'พอดีจอ', 'ขนาดจริง 100%']) {
+      expect(screen.getByRole('button', { name })).toBeInTheDocument();
+    }
+    // the board is drawn: the title block and the power supply are in the canvas
+    expect(document.body.textContent).toContain('POWER SUPPLY');
+    expect(document.body.textContent).toContain('LOGIC SWITCH'.replace(' ', ''));
+  });
+
+  it('zooms with the buttons and the keyboard, and goes back to 100%', async () => {
+    render(
+      <MemoryRouter>
+        <LabPage />
+      </MemoryRouter>,
+    );
+    const percent = () =>
+      Number(screen.getByRole('button', { name: 'ขนาดจริง 100%' }).textContent?.replace('%', ''));
+    // the label starts at 100 until the first frame shows the fitted view (8% in jsdom, which has no size)
+    await waitFor(() => expect(percent()).toBeLessThan(100), SLOW);
+    const fitted = percent();
+    fireEvent.click(screen.getByRole('button', { name: 'ซูมเข้า' }));
+    await waitFor(() => expect(percent()).toBeGreaterThan(fitted), SLOW);
+    fireEvent.keyDown(screen.getByRole('application'), { key: '1' });
+    await waitFor(() => expect(percent()).toBe(100), SLOW);
+    fireEvent.click(screen.getByRole('button', { name: 'ซูมออก' }));
+    await waitFor(() => expect(percent()).toBeLessThan(100), SLOW);
+  });
+});
+
+describe('LabPage board', () => {
+  /** The canvas is 1200 x 800, so at 100% the board is centered: its corner is at this screen point. */
+  const OFFSET = { x: (1200 - BOARD_SIZE.width) / 2, y: (800 - BOARD_SIZE.height) / 2 };
+  const SHORT = 'ลัดวงจร: +5V ต่อกับ GND';
+
+  beforeAll(() => {
+    // jsdom has no pointer capture
+    Element.prototype.setPointerCapture = () => {};
+    Element.prototype.releasePointerCapture = () => {};
+    Element.prototype.hasPointerCapture = () => false;
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  async function openBoard(zoom100 = true) {
+    vi.spyOn(Element.prototype, 'getBoundingClientRect').mockReturnValue({
+      x: 0,
+      y: 0,
+      left: 0,
+      top: 0,
+      right: 1200,
+      bottom: 800,
+      width: 1200,
+      height: 800,
+      toJSON: () => ({}),
+    });
+    const mounted = render(
+      <MemoryRouter>
+        <LabPage />
+      </MemoryRouter>,
+    );
+    const board = screen.getByRole('application');
+    const transform = () => board.querySelector('svg > g')?.getAttribute('transform');
+    if (zoom100) {
+      fireEvent.keyDown(board, { key: '1' });
+      await waitFor(
+        () => expect(transform()).toBe(`translate(${OFFSET.x} ${OFFSET.y}) scale(1)`),
+        SLOW,
+      );
+    }
+    const at = (id: string) => {
+      const p = pointPosition(id)!;
+      return { clientX: p.x + OFFSET.x, clientY: p.y + OFFSET.y };
+    };
+    const drag = (from: string, to: string, pointerType = 'mouse') => {
+      const common = { pointerId: 1, pointerType, isPrimary: true };
+      fireEvent.pointerDown(board, { ...common, button: 0, buttons: 1, ...at(from) });
+      fireEvent.pointerMove(board, { ...common, buttons: 1, ...at(to) });
+      fireEvent.pointerUp(board, { ...common, button: 0, buttons: 0, ...at(to) });
+    };
+    const wires = () => board.querySelectorAll('[data-wire-id]').length;
+    const chips = () => board.querySelectorAll('[data-ic-id]').length;
+    const led = (n: number) =>
+      board.querySelector(`[data-lab-led="${n}"]`)?.getAttribute('data-lit') === 'true';
+    const switchUp = (k: number) =>
+      board.querySelector(`[data-lab-switch="${k}"]`)?.getAttribute('data-up') === 'true';
+    /** A tap on a logic switch */
+    const tapSwitch = (k: number, pointerType = 'mouse') => {
+      const element = board.querySelector(`[data-lab-switch="${k}"] rect`)!;
+      const { button } = SWITCHES[k]!;
+      const common = {
+        pointerId: 2,
+        pointerType,
+        isPrimary: true,
+        clientX: button.x + button.width / 2 + OFFSET.x,
+        clientY: button.y + button.height / 2 + OFFSET.y,
+      };
+      fireEvent.pointerDown(element, { ...common, button: 0, buttons: 1 });
+      fireEvent.pointerUp(element, { ...common, button: 0, buttons: 0 });
+    };
+    /** Drags a chip out of the tray to where a chip with pin 1 at `col` of `breadboard` sits */
+    const trayDrag = (name: string, breadboard: number, col: number) => {
+      const frame = icFrame(breadboard, col)!;
+      const common = { pointerId: 3, pointerType: 'mouse', isPrimary: true };
+      const target = { clientX: frame.centerX + OFFSET.x, clientY: frame.centerY + OFFSET.y };
+      fireEvent.pointerDown(screen.getByRole('button', { name }), {
+        ...common,
+        button: 0,
+        buttons: 1,
+        clientX: 20,
+        clientY: 60,
+      });
+      fireEvent.pointerMove(document.body, { ...common, buttons: 1, ...target });
+      fireEvent.pointerUp(document.body, { ...common, button: 0, buttons: 0, ...target });
+    };
+    const saved = () => JSON.parse(localStorage.getItem(STORAGE_KEY) ?? 'null');
+    return {
+      board,
+      at,
+      transform,
+      drag,
+      wires,
+      chips,
+      led,
+      switchUp,
+      tapSwitch,
+      trayDrag,
+      saved,
+      unmount: mounted.unmount,
+    };
+  }
+
+  it('draws a wire from one point to another and selects it', async () => {
+    const { board, drag, wires } = await openBoard();
+    expect(screen.getByRole('button', { name: 'ย้อนกลับ' })).toBeDisabled();
+    drag('power:+5V:0', 'b0:r:top1:3');
+    expect(wires()).toBe(1);
+    expect(board.querySelectorAll('[data-lab-handle]')).toHaveLength(1);
+    expect(screen.getByRole('button', { name: 'ย้อนกลับ' })).toBeEnabled();
+    expect(screen.getByRole('button', { name: 'ลบสาย' })).toBeEnabled();
+  });
+
+  it('shows a short circuit when +5V and GND meet, and clears it with undo', async () => {
+    const { drag, wires } = await openBoard();
+    drag('power:+5V:0', 'b0:r:top1:3');
+    expect(screen.queryByText(SHORT)).not.toBeInTheDocument();
+    drag('power:GND:0', 'b0:r:top1:20');
+    expect(wires()).toBe(2);
+    expect(screen.getByText(SHORT)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect(wires()).toBe(1);
+    expect(screen.queryByText(SHORT)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'ทำซ้ำ' }));
+    expect(screen.getByText(SHORT)).toBeInTheDocument();
+  });
+
+  it('recolors the selected wire, and deletes it with the Delete key', async () => {
+    const { board, drag, wires } = await openBoard();
+    drag('power:+5V:0', 'b0:r:top1:3');
+    fireEvent.click(screen.getByRole('radio', { name: 'น้ำเงิน' }));
+    expect(screen.getByRole('radio', { name: 'น้ำเงิน' })).toHaveAttribute('aria-checked', 'true');
+    fireEvent.keyDown(board, { key: 'Delete' });
+    expect(wires()).toBe(0);
+    fireEvent.keyDown(board, { key: 'z', ctrlKey: true });
+    expect(wires()).toBe(1);
+  });
+
+  it('does not draw with a finger when the board is zoomed out, and pans instead', async () => {
+    const { transform, drag, wires } = await openBoard(false);
+    const before = transform();
+    drag('power:+5V:0', 'b0:r:top1:3', 'touch');
+    expect(wires()).toBe(0);
+    expect(transform()).not.toBe(before);
+  });
+
+  it('keeps one wire to a hole: a wire dropped on a taken hole lands on a free one', async () => {
+    const { board, drag, wires } = await openBoard();
+    drag('power:+5V:0', 'b0:c10:b');
+    drag('b0:c20:b', 'b0:c10:b');
+    expect(wires()).toBe(2);
+    const plugs = [...board.querySelectorAll('circle[r="4.9"]')].map(
+      (plug) => `${plug.getAttribute('cx')},${plug.getAttribute('cy')}`,
+    );
+    expect(plugs).toHaveLength(4);
+    expect(new Set(plugs).size).toBe(4);
+  });
+
+  it('shows the warnings as a button with a count, red for a fault, and opens the list over the board', async () => {
+    const { drag } = await openBoard();
+    const warningsButton = (count: number) =>
+      screen.queryByRole('button', { name: `คำเตือนของวงจร: ${count}` });
+    // nothing to say: no button
+    expect(screen.queryByRole('button', { name: /^คำเตือนของวงจร/ })).not.toBeInTheDocument();
+    drag('power:+5V:0', 'b0:r:top1:3');
+    drag('power:GND:0', 'b0:r:top1:20');
+    const button = warningsButton(1)!;
+    expect(button.className).toContain('bg-error');
+    expect(button).toHaveAttribute('aria-expanded', 'false');
+    // the list is not on screen until it is asked for (a screen reader still gets it)
+    expect(screen.queryByText(SHORT, { selector: 'li' })).not.toBeInTheDocument();
+    fireEvent.click(button);
+    expect(button).toHaveAttribute('aria-expanded', 'true');
+    const item = screen.getByText(SHORT, { selector: 'li' });
+    expect(item).toBeInTheDocument();
+    // inside a box that scrolls the entrance only fades: a move or a bounce would flash scroll bars
+    expect(item.className).toContain('lab-fade');
+    expect(item.parentElement?.className).toContain('overflow-x-hidden');
+    // Esc closes the list and keeps the button
+    fireEvent.keyDown(item, { key: 'Escape' });
+    expect(screen.queryByText(SHORT, { selector: 'li' })).not.toBeInTheDocument();
+    expect(button).toHaveFocus();
+    // the fault goes and so does the button
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect(screen.queryByRole('button', { name: /^คำเตือนของวงจร/ })).not.toBeInTheDocument();
+  });
+
+  it('shows an amber button when the warnings are only hints, with how many there are', async () => {
+    await openBoard();
+    fireEvent.click(screen.getByRole('button', { name: '7408 AND' }));
+    const button = screen.getByRole('button', { name: /^คำเตือนของวงจร: \d+$/ });
+    expect(button.className).toContain('bg-warning');
+    expect(button.className).not.toContain('bg-error');
+    fireEvent.click(button);
+    expect(screen.getByText(/ไม่มีไฟ ต่อขา 14/, { selector: 'li' })).toBeInTheDocument();
+  });
+
+  it('places a chip from the tray with a tap, and warns that it has no power', async () => {
+    const { board, chips, saved } = await openBoard();
+    fireEvent.click(screen.getByRole('button', { name: '7408 AND' }));
+    expect(chips()).toBe(1);
+    expect(saved().ics).toHaveLength(1);
+    expect(screen.getByRole('status', { name: 'คำเตือนของวงจร' })).toHaveTextContent('7408');
+    expect(screen.getByRole('status', { name: 'คำเตือนของวงจร' })).toHaveTextContent('ไม่มีไฟ');
+    expect(board.textContent).toContain('ไม่มีไฟ');
+    fireEvent.click(screen.getByRole('button', { name: '7432 OR' }));
+    // the second chip takes another place, not the first one
+    const [a, b] = saved().ics as { board: number; col: number }[];
+    expect(a?.board === b?.board && Math.abs((a?.col ?? 0) - (b?.col ?? 0)) < 7).toBe(false);
+  });
+
+  it('places a chip by dragging it out of the tray, and snaps it to the columns', async () => {
+    const { chips, saved, trayDrag } = await openBoard();
+    expect(chips()).toBe(0);
+    trayDrag('7400 NAND', 1, 20);
+    expect(chips()).toBe(1);
+    expect(saved().ics[0]).toMatchObject({ type: '7400', board: 1, col: 20 });
+  });
+
+  it('moves a chip by dragging it, removes it off the boards, and undo brings it back', async () => {
+    const { board, drag, chips, saved, trayDrag } = await openBoard();
+    trayDrag('7404 NOT', 0, 10);
+    const body = () => board.querySelector('[data-ic-id] rect:nth-of-type(2)')!;
+    const frame10 = icFrame(0, 10)!;
+    const press = (x: number, y: number, type: 'down' | 'move' | 'up') => {
+      const init = {
+        pointerId: 4,
+        pointerType: 'mouse',
+        isPrimary: true,
+        button: 0,
+        buttons: type === 'up' ? 0 : 1,
+        clientX: x + OFFSET.x,
+        clientY: y + OFFSET.y,
+      };
+      if (type === 'down') fireEvent.pointerDown(body(), init);
+      else if (type === 'move') fireEvent.pointerMove(body(), init);
+      else fireEvent.pointerUp(body(), init);
+    };
+    // move it ten columns to the right
+    const to = icFrame(0, 20)!;
+    press(frame10.centerX, frame10.centerY, 'down');
+    press(to.centerX, to.centerY, 'move');
+    press(to.centerX, to.centerY, 'up');
+    expect(saved().ics[0]).toMatchObject({ board: 0, col: 20 });
+    // dragged away from both breadboards, up into the monitor
+    press(to.centerX, to.centerY, 'down');
+    press(to.centerX, to.centerY - 300, 'move');
+    press(to.centerX, to.centerY - 300, 'up');
+    expect(chips()).toBe(0);
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect(chips()).toBe(1);
+    // a wire dropped on a leg of the chip, which is back at column 20, lands on a free hole instead
+    drag('power:+5V:0', 'b0:c20:f');
+    const ends = (saved().wires as { from: string; to: string }[]).flatMap((w) => [w.from, w.to]);
+    expect(ends).toHaveLength(2);
+    expect(ends).not.toContain('b0:c20:f');
+  });
+
+  it('flips a logic switch with a tap and lights the monitor LED through a NOT gate', async () => {
+    const { chips, wires, led, switchUp, tapSwitch, drag, trayDrag } = await openBoard();
+    trayDrag('7404 NOT', 0, 10);
+    expect(chips()).toBe(1);
+    // power on pins 14 and 7, switch 1 into pin 1, pin 2 out to LED 1
+    drag('power:+5V:0', 'b0:c10:b');
+    drag('power:GND:0', 'b0:c16:i');
+    drag('sw0:0', 'b0:c10:i');
+    drag('b0:c11:i', 'led1:0');
+    expect(wires()).toBe(4);
+    expect(screen.queryByRole('status', { name: 'คำเตือนของวงจร' })?.textContent ?? '').toBe('');
+    expect(switchUp(0)).toBe(false);
+    expect(led(1)).toBe(true);
+    tapSwitch(0);
+    expect(switchUp(0)).toBe(true);
+    expect(led(1)).toBe(false);
+    tapSwitch(0);
+    expect(led(1)).toBe(true);
+  });
+
+  it('pans on a drag that starts on a switch instead of flipping it', async () => {
+    const { board, transform, switchUp } = await openBoard();
+    const element = board.querySelector('[data-lab-switch="3"] rect')!;
+    const { button } = SWITCHES[3]!;
+    const start = { clientX: button.x + 30 + OFFSET.x, clientY: button.y + 40 + OFFSET.y };
+    const common = { pointerId: 5, pointerType: 'touch', isPrimary: true };
+    const before = transform();
+    fireEvent.pointerDown(element, { ...common, button: 0, buttons: 1, ...start });
+    // the first move hands the press over to the viewport, the next ones pan
+    for (const step of [40, 60, 80]) {
+      fireEvent.pointerMove(element, {
+        ...common,
+        buttons: 1,
+        clientX: start.clientX - step,
+        clientY: start.clientY - step * 0.75,
+      });
+    }
+    fireEvent.pointerUp(element, { ...common, button: 0, buttons: 0 });
+    expect(switchUp(3)).toBe(false);
+    expect(transform()).not.toBe(before);
+  });
+
+  it('keeps the circuit when the page is opened again', async () => {
+    const first = await openBoard();
+    first.trayDrag('7404 NOT', 0, 10);
+    first.drag('power:+5V:0', 'b0:c10:b');
+    first.drag('sw0:0', 'b0:c10:i');
+    first.tapSwitch(2);
+    first.unmount();
+    const second = await openBoard();
+    expect(second.chips()).toBe(1);
+    expect(second.wires()).toBe(2);
+    expect(second.switchUp(2)).toBe(true);
+    expect(second.switchUp(0)).toBe(false);
+  });
+
+  it('clears the circuit with one button, and undo brings it back', async () => {
+    const { board, drag, chips, wires, saved, trayDrag } = await openBoard();
+    expect(screen.getByRole('button', { name: 'ล้างวงจร' })).toBeDisabled();
+    trayDrag('7408 AND', 0, 10);
+    drag('power:+5V:0', 'b0:c10:b');
+    fireEvent.click(screen.getByRole('button', { name: 'ล้างวงจร' }));
+    expect(chips()).toBe(0);
+    expect(wires()).toBe(0);
+    expect(saved()).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect(chips()).toBe(1);
+    expect(board.querySelectorAll('[data-wire-id]')).toHaveLength(1);
+  });
+
+  it('runs (A AND B) OR C from a saved circuit, for every row of the truth table', async () => {
+    const wire = (id: string, from: string, to: string) => ({
+      id,
+      from,
+      to,
+      color: 'red',
+      bend: { x: 0, y: 0 },
+    });
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        ics: [
+          { id: 'u1', type: '7408', board: 0, col: 11 },
+          { id: 'u2', type: '7432', board: 0, col: 25 },
+        ],
+        wires: [
+          wire('w1', 'power:+5V:0', 'b0:c11:b'),
+          wire('w2', 'power:+5V:1', 'b0:c25:b'),
+          wire('w3', 'power:GND:0', 'b0:c17:i'),
+          wire('w4', 'power:GND:1', 'b0:c31:i'),
+          wire('w5', 'sw0:0', 'b0:c11:i'),
+          wire('w6', 'sw1:0', 'b0:c12:i'),
+          wire('w7', 'b0:c13:h', 'b0:c25:h'),
+          wire('w8', 'sw2:0', 'b0:c26:i'),
+          wire('w9', 'b0:c27:h', 'led1:0'),
+        ],
+        switches: [],
+      }),
+    );
+    const { led, switchUp, tapSwitch } = await openBoard();
+    expect(screen.queryByRole('status', { name: 'คำเตือนของวงจร' })?.textContent ?? '').toBe('');
+    for (let n = 0; n < 8; n++) {
+      const want = [Boolean(n & 4), Boolean(n & 2), Boolean(n & 1)];
+      want.forEach((up, k) => {
+        if (switchUp(k) !== up) tapSwitch(k);
+      });
+      const [A, B, C] = want;
+      expect(led(1), `A=${A} B=${B} C=${C}`).toBe(Boolean((A && B) || C));
+    }
+  });
+
+  it('shows a magnifier while a finger drags a wire, and not for a mouse', async () => {
+    const { board, at } = await openBoard();
+    const lens = () => document.querySelector('[data-lab-magnifier]');
+    const run = (pointerType: string) => {
+      const common = { pointerId: 6, pointerType, isPrimary: true };
+      fireEvent.pointerDown(board, { ...common, button: 0, buttons: 1, ...at('b0:c10:b') });
+      fireEvent.pointerMove(board, { ...common, buttons: 1, ...at('b0:c20:b') });
+      const during = lens();
+      fireEvent.pointerUp(board, { ...common, button: 0, buttons: 0, ...at('b0:c20:b') });
+      return during;
+    };
+    expect(run('mouse')).toBeNull();
+    const withFinger = run('touch');
+    expect(withFinger).not.toBeNull();
+    // it draws the scene again, larger, around the finger
+    expect(withFinger?.querySelector('use')?.getAttribute('href')).toBe('#lab-scene');
+    expect(board.querySelector('#lab-scene')).not.toBeNull();
+    expect(lens()).toBeNull();
+  });
+
+  it('arranges the wires with one press, and undo brings the old shapes back', async () => {
+    const wire = (id: string, from: string, to: string) => ({
+      id,
+      from,
+      to,
+      color: 'red',
+      bend: { x: 0, y: 0 },
+    });
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        ics: [{ id: 'u1', type: '7404', board: 0, col: 10 }],
+        // across the chip: straight, it would lie on it
+        wires: [wire('w1', 'b0:c13:b', 'b0:c13:i')],
+        switches: [],
+      }),
+    );
+    const { saved } = await openBoard();
+    const arrange = screen.getByRole('button', { name: 'จัดสายอัตโนมัติ' });
+    expect(arrange).toBeEnabled();
+    fireEvent.click(arrange);
+    const [bent] = saved().wires as { bend: { x: number; y: number } }[];
+    expect(Math.hypot(bent!.bend.x, bent!.bend.y)).toBeGreaterThan(20);
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect(saved().wires[0].bend).toEqual({ x: 0, y: 0 });
+  });
+
+  it('paints the wires by what they carry with one press, and undo brings the old colors back', async () => {
+    const wire = (id: string, from: string, to: string) => ({
+      id,
+      from,
+      to,
+      color: 'orange',
+      bend: { x: 0, y: 0 },
+    });
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        ics: [],
+        wires: [
+          wire('w1', 'power:+5V:0', 'b0:r:top1:3'),
+          wire('w2', 'power:GND:0', 'b0:r:top2:3'),
+          wire('w3', 'sw0:0', 'b0:c11:i'),
+        ],
+        switches: [],
+      }),
+    );
+    const { saved } = await openBoard();
+    const paint = screen.getByRole('button', { name: 'จัดสีสายอัตโนมัติ' });
+    expect(paint).toBeEnabled();
+    fireEvent.click(paint);
+    const colors = (saved().wires as { color: string }[]).map((w) => w.color);
+    expect(colors[0]).toBe('red');
+    expect(colors[1]).toBe('black');
+    expect(['red', 'black']).not.toContain(colors[2]);
+    fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
+    expect((saved().wires as { color: string }[]).map((w) => w.color)).toEqual([
+      'orange',
+      'orange',
+      'orange',
+    ]);
+  });
+
+  it('has nothing to paint on an empty board', async () => {
+    await openBoard();
+    expect(screen.getByRole('button', { name: 'จัดสีสายอัตโนมัติ' })).toBeDisabled();
+  });
+
+  it('has nothing to arrange on an empty board', async () => {
+    await openBoard();
+    expect(screen.getByRole('button', { name: 'จัดสายอัตโนมัติ' })).toBeDisabled();
+  });
+
+  it('opens the results of what is built, over the board, and follows the switches', async () => {
+    const wire = (id: string, from: string, to: string) => ({
+      id,
+      from,
+      to,
+      color: 'red',
+      bend: { x: 0, y: 0 },
+    });
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        ics: [
+          { id: 'u1', type: '7408', board: 0, col: 11 },
+          { id: 'u2', type: '7432', board: 0, col: 25 },
+        ],
+        wires: [
+          wire('w1', 'power:+5V:0', 'b0:c11:b'),
+          wire('w2', 'power:+5V:1', 'b0:c25:b'),
+          wire('w3', 'power:GND:0', 'b0:c17:i'),
+          wire('w4', 'power:GND:1', 'b0:c31:i'),
+          wire('w5', 'sw0:0', 'b0:c11:i'),
+          wire('w6', 'sw1:0', 'b0:c12:i'),
+          wire('w7', 'b0:c13:h', 'b0:c25:h'),
+          wire('w8', 'sw2:0', 'b0:c26:i'),
+          wire('w9', 'b0:c27:h', 'led1:0'),
+        ],
+        switches: [true, false, true],
+      }),
+    );
+    const { wires } = await openBoard();
+    const open = screen.getByRole('button', { name: 'ผลลัพธ์วงจร' });
+    fireEvent.click(open);
+    const dialog = screen.getByRole('dialog', { name: 'ผลลัพธ์วงจร' });
+    expect(within(dialog).getAllByRole('row')).toHaveLength(9);
+    // the switches are A=1, B=0, C=1: row 5
+    const marked = within(dialog)
+      .getAllByRole('row')
+      .filter((row) => row.getAttribute('aria-current') === 'true');
+    expect(marked[0]).toHaveTextContent('1011');
+    // the keys belong to the drawer
+    const before = wires();
+    fireEvent.keyDown(dialog, { key: 'Delete' });
+    expect(wires()).toBe(before);
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(open).toHaveFocus();
+  });
+
+  it('opens the pin diagrams over the board, and gives the board back when they close', async () => {
+    const { drag, wires } = await openBoard();
+    drag('power:+5V:0', 'b0:r:top1:3');
+    expect(wires()).toBe(1);
+    const open = screen.getByRole('button', { name: 'ไดอะแกรมขา IC' });
+    fireEvent.click(open);
+    const dialog = screen.getByRole('dialog', { name: 'ไดอะแกรมขา IC' });
+    expect(within(dialog).getAllByRole('region')).toHaveLength(5);
+    // the keys belong to the drawer: Delete does not remove the selected wire behind it
+    fireEvent.keyDown(dialog, { key: 'Delete' });
+    expect(wires()).toBe(1);
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(open).toHaveFocus();
+    // chips on the board are marked in the drawer
+    fireEvent.click(screen.getByRole('button', { name: '7408 AND' }));
+    fireEvent.click(open);
+    expect(screen.getByRole('region', { name: '7408 Quad 2-input AND' })).toHaveTextContent(
+      'อยู่บนบอร์ด',
+    );
+  });
+
+  it('folds the tools away and brings them back', async () => {
+    await openBoard();
+    expect(screen.getByRole('group', { name: 'ชิป IC' })).toBeInTheDocument();
+    const toggle = screen.getByRole('button', { name: 'ซ่อนเครื่องมือ' });
+    expect(toggle).toHaveAttribute('aria-expanded', 'true');
+    fireEvent.click(toggle);
+    expect(screen.queryByRole('group', { name: 'ชิป IC' })).not.toBeInTheDocument();
+    const show = screen.getByRole('button', { name: 'แสดงเครื่องมือ' });
+    expect(show).toHaveAttribute('aria-expanded', 'false');
+    fireEvent.click(show);
+    expect(screen.getByRole('group', { name: 'ชิป IC' })).toBeInTheDocument();
+  });
+
+  it('starts with the tools folded on a phone', async () => {
+    const before = window.matchMedia;
+    window.matchMedia = media((query) => query.includes('max-width'));
+    try {
+      await openBoard();
+      expect(screen.queryByRole('group', { name: 'ชิป IC' })).not.toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'แสดงเครื่องมือ' })).toBeInTheDocument();
+    } finally {
+      window.matchMedia = before;
+    }
+  });
+
+  it('keeps the wire colors in a row, and every chip, when the window is wide', async () => {
+    await openBoard();
+    expect(screen.getByRole('radiogroup', { name: 'สีสาย' })).toBeInTheDocument();
+    expect(screen.getAllByRole('radio')).toHaveLength(8);
+    for (const name of ['7404 NOT', '7408 AND', '7432 OR', '7400 NAND', '7402 NOR']) {
+      expect(screen.getByRole('button', { name })).toBeInTheDocument();
+    }
+    expect(screen.queryByRole('button', { name: 'เลือกชิป IC' })).not.toBeInTheDocument();
+  });
+
+  describe('on a narrow window', () => {
+    let wide: typeof window.matchMedia;
+    beforeAll(() => {
+      wide = window.matchMedia;
+      window.matchMedia = media(() => false);
+    });
+    afterAll(() => {
+      window.matchMedia = wide;
+    });
+
+    it('folds the wire colors into one button that opens them, and closes after a pick', async () => {
+      const { drag } = await openBoard();
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      const button = screen.getByRole('button', { name: 'สีสาย: แดง' });
+      expect(button).toHaveAttribute('aria-expanded', 'false');
+      fireEvent.click(button);
+      expect(button).toHaveAttribute('aria-expanded', 'true');
+      expect(screen.getAllByRole('radio')).toHaveLength(8);
+      expect(screen.getByRole('radio', { name: 'แดง' })).toHaveAttribute('aria-checked', 'true');
+      fireEvent.click(screen.getByRole('radio', { name: 'น้ำเงิน' }));
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'สีสาย: น้ำเงิน' })).toHaveAttribute(
+        'aria-expanded',
+        'false',
+      );
+      // the next wire has the color that was picked
+      drag('power:+5V:0', 'b0:r:top1:3');
+      expect(screen.getByRole('button', { name: 'สีสาย: น้ำเงิน' })).toBeInTheDocument();
+    });
+
+    it('closes the color panel with Escape and with a press elsewhere, without touching the board', async () => {
+      await openBoard();
+      const button = screen.getByRole('button', { name: 'สีสาย: แดง' });
+      fireEvent.click(button);
+      fireEvent.keyDown(screen.getByRole('radio', { name: 'แดง' }), { key: 'Escape' });
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(button).toHaveFocus();
+      fireEvent.click(button);
+      expect(screen.getAllByRole('radio')).toHaveLength(8);
+      fireEvent.pointerDown(screen.getByRole('application'));
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+    });
+
+    it('moves the switches and LEDs to the bottom of the screen, stacked, and keeps them working', async () => {
+      const { switchUp } = await openBoard();
+      const strip = screen.getByRole('group', { name: 'สวิตช์และ LED' });
+      // not in the row of tools any more: in the dock above the zoom buttons
+      expect(document.getElementById('lab-tools')?.contains(strip)).toBe(false);
+      expect(strip.parentElement?.className).toContain('lab-dock');
+      expect(screen.getAllByRole('img')).toHaveLength(16);
+      fireEvent.click(screen.getByRole('button', { name: 'สวิตช์ 2' }));
+      expect(switchUp(1)).toBe(true);
+      // folding the tools folds the dock too
+      fireEvent.click(screen.getByRole('button', { name: 'ซ่อนเครื่องมือ' }));
+      expect(screen.queryByRole('group', { name: 'สวิตช์และ LED' })).not.toBeInTheDocument();
+    });
+
+    it('puts the tools button in the navbar when the page has a place for it', async () => {
+      const slot = document.createElement('div');
+      slot.id = NAVBAR_SLOT_ID;
+      document.body.append(slot);
+      try {
+        await openBoard();
+        const toggle = screen.getByRole('button', { name: 'ซ่อนเครื่องมือ' });
+        expect(slot.contains(toggle)).toBe(true);
+        fireEvent.click(toggle);
+        expect(screen.getByRole('button', { name: 'แสดงเครื่องมือ' })).toHaveAttribute(
+          'aria-expanded',
+          'false',
+        );
+      } finally {
+        slot.remove();
+      }
+    });
+
+    it('lets presses through the empty space around the tools, so the board can be dragged there', async () => {
+      await openBoard();
+      const tools = document.getElementById('lab-tools')!;
+      expect(tools.parentElement?.className).toContain('pointer-events-none');
+      // each panel takes presses back for itself
+      for (const panel of tools.children) expect(panel.className).toContain('pointer-events-auto');
+    });
+
+    it('shows one chip, swaps it for another, and places the one that shows', async () => {
+      const { chips, saved } = await openBoard();
+      expect(screen.getByRole('button', { name: '7404 NOT' })).toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: '7408 AND' })).not.toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', { name: 'เลือกชิป IC' }));
+      expect(screen.getAllByRole('radio')).toHaveLength(5);
+      fireEvent.click(screen.getByRole('radio', { name: '7402 NOR' }));
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: '7404 NOT' })).not.toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', { name: '7402 NOR' }));
+      expect(chips()).toBe(1);
+      expect(saved().ics[0]).toMatchObject({ type: '7402' });
+    });
+  });
+
+  it('flips the switches from the strip, and keeps the strip and the board in step', async () => {
+    const { switchUp } = await openBoard();
+    const button = screen.getByRole('button', { name: 'สวิตช์ 4' });
+    expect(button).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(button);
+    expect(button).toHaveAttribute('aria-pressed', 'true');
+    expect(switchUp(3)).toBe(true);
+    fireEvent.click(button);
+    expect(switchUp(3)).toBe(false);
+  });
+
+  it('lights the LED dot in the strip with the LED on the board', async () => {
+    const { led, trayDrag, drag } = await openBoard();
+    trayDrag('7404 NOT', 0, 10);
+    drag('power:+5V:0', 'b0:c10:b');
+    drag('power:GND:0', 'b0:c16:i');
+    drag('sw0:0', 'b0:c10:i');
+    drag('b0:c11:i', 'led1:0');
+    expect(led(1)).toBe(true);
+    expect(screen.getByRole('img', { name: 'LED 1: ติด' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'สวิตช์ 1' }));
+    expect(led(1)).toBe(false);
+    expect(screen.getByRole('img', { name: 'LED 1: ดับ' })).toBeInTheDocument();
+  });
+
+  it('wires with the keyboard: Enter, arrows, Enter, and the board does not pan', async () => {
+    const { board, transform, wires } = await openBoard();
+    const key = (name: string, init: object = {}) =>
+      fireEvent.keyDown(board, { key: name, ...init });
+    const hint = () => screen.getByRole('status', { name: 'โหมดคีย์บอร์ด' }).textContent ?? '';
+    const before = transform();
+    expect(board.querySelector('[data-lab-keyboard-cursor]')).toBeNull();
+    key('Enter');
+    expect(board.querySelector('[data-lab-keyboard-cursor]')).not.toBeNull();
+    expect(hint()).toContain('โหมดคีย์บอร์ด');
+    key('Enter');
+    expect(hint()).toContain('เริ่มสายจาก');
+    for (let n = 0; n < 3; n++) key('ArrowRight');
+    expect(transform()).toBe(before);
+    key('Enter');
+    expect(hint()).toContain('ต่อสายแล้ว');
+    expect(wires()).toBe(1);
+    // the new wire is selected, so Delete takes it away
+    key('Delete');
+    expect(wires()).toBe(0);
+    key('Escape');
+    expect(board.querySelector('[data-lab-keyboard-cursor]')).toBeNull();
+  });
+
+  it('keeps the arrow keys for panning when the keyboard cursor is off', async () => {
+    const { board, transform } = await openBoard();
+    const before = transform();
+    fireEvent.keyDown(board, { key: 'ArrowLeft' });
+    await waitFor(() => expect(transform()).not.toBe(before), SLOW);
+  });
+
+  it('cancels a wire that was started, and refuses a point that is taken', async () => {
+    const { board, wires } = await openBoard();
+    const key = (name: string) => fireEvent.keyDown(board, { key: name });
+    const hint = () => screen.getByRole('status', { name: 'โหมดคีย์บอร์ด' }).textContent ?? '';
+    key('Enter');
+    key('Enter');
+    key('Escape');
+    expect(hint()).toContain('ยกเลิกสายที่เริ่มไว้');
+    expect(board.querySelector('[data-lab-keyboard-cursor]')).not.toBeNull();
+    // wire it for real, then try to end a second wire on the end of the first
+    key('Enter');
+    key('ArrowRight');
+    key('Enter');
+    expect(wires()).toBe(1);
+    key('ArrowLeft');
+    key('Enter'); // on the wire end: selects the wire
+    expect(hint()).toContain('เลือกสาย');
+    key('Escape');
+    key('Escape');
+    expect(board.querySelector('[data-lab-keyboard-cursor]')).toBeNull();
+  });
+
+  it('tells a screen reader what is on the board, and what is selected', async () => {
+    await openBoard();
+    const summary = () => screen.getByRole('status', { name: 'สรุปวงจร' }).textContent;
+    expect(summary()).toBe('ยังไม่มีสายหรือชิป');
+    fireEvent.click(screen.getByRole('button', { name: '7408 AND' }));
+    expect(summary()).toBe('0 สาย, 1 ชิป. เลือกชิป 7408');
+  });
+});

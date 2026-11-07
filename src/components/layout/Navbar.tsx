@@ -7,6 +7,7 @@ import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ShareDialog } from '@/components/layout/ShareDialog';
 import { NAV_ITEMS, SITE_NAME, UI_TEXT } from '@/config/site';
 import { cn } from '@/lib/cn';
+import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
 
 const MENU_ID = 'mobile-menu';
 
@@ -114,6 +115,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-1 md:gap-0">
+          <div id={NAVBAR_SLOT_ID} className="flex items-center empty:hidden" />
           <button
             ref={shareRef}
             type="button"

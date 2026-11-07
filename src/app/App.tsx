@@ -10,6 +10,7 @@ const ChapterPage = lazy(() => import('@/pages/ChapterPage'));
 const ExamPage = lazy(() => import('@/pages/ExamPage'));
 const ExamSetPage = lazy(() => import('@/pages/ExamSetPage'));
 const FormulaSheetPage = lazy(() => import('@/pages/FormulaSheetPage'));
+const LabPage = lazy(() => import('@/pages/LabPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export function App() {
@@ -30,6 +31,7 @@ export function App() {
             <Route path="exam" element={<ExamPage />} />
             <Route path="exam/:set" element={<ExamSetPage />} />
             <Route path="formulas" element={<FormulaSheetPage />} />
+            <Route path="lab" element={<LabPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

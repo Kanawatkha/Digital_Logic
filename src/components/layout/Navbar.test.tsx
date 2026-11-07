@@ -49,7 +49,7 @@ describe('Navbar', () => {
       'aria-expanded',
       'true',
     );
-    // Home row plus the 7 nav items
+    // Home row plus the 8 nav items
     expect(within(menu as HTMLElement).getAllByRole('link')).toHaveLength(NAV_ITEMS.length + 1);
 
     fireEvent.keyDown(document, { key: 'Escape' });

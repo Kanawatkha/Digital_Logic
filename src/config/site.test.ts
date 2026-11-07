@@ -6,8 +6,8 @@ describe('site config', () => {
     expect(REPO_NAME).toBe('Digital_Logic');
   });
 
-  it('lists five chapters, the exam and the formula sheet in the navbar', () => {
-    expect(NAV_ITEMS).toHaveLength(CHAPTER_NUMBERS.length + 2);
+  it('lists five chapters, the exam, the formula sheet and the lab in the navbar', () => {
+    expect(NAV_ITEMS).toHaveLength(CHAPTER_NUMBERS.length + 3);
     expect(NAV_ITEMS.map((i) => i.to)).toEqual([
       '/chapter/1',
       '/chapter/2',
@@ -16,6 +16,7 @@ describe('site config', () => {
       '/chapter/5',
       '/exam',
       '/formulas',
+      '/lab',
     ]);
   });
 

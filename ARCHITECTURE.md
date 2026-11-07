@@ -50,7 +50,8 @@ Digital_Logic/
 │  ├─ features/
 │  │  ├─ diagram/           home diagram: Diagram.tsx, nodes/, connectors/, layout/, useDiagramState.ts
 │  │  ├─ home-diagram/      HomeDiagram, DiagramNode, DiagramBlocks, model (state and columns), useDiagramLayout
-│  │  └─ content-page/      chapter, exam and formula sheet pages: ContentPage, ExerciseOutline, FormulaOutline, JumpNav, useContentFile
+│  │  ├─ content-page/      chapter, exam and formula sheet pages: ContentPage, ExerciseOutline, FormulaOutline, JumpNav, useContentFile
+│  │  └─ lab/               NX-4i board simulator: board art and data, sim (pure TypeScript), canvas (pan, zoom, wires), state, ui. See LAB-PLAN.md
 │  ├─ components/
 │  │  ├─ ui/                Button, Badge, Card, Skeleton, Icon, Prose, Toast
 │  │  ├─ content/           shared block renderer used by pages and the diagram: BlockRenderer, InlineContent, TableBlock, FigureBlock
@@ -108,7 +109,7 @@ app    ->  pages, components, config
 ## 7. Routing
 
 - `HashRouter`, because GitHub Pages cannot rewrite deep links.
-- Routes: `/`, `/chapter/:n` (1-5), `/exam`, `/formulas`, `*` (not found).
+- Routes: `/`, `/chapter/:n` (1-5), `/exam`, `/exam/:set`, `/formulas`, `/lab`, `*` (not found).
 - Each route is code-split with `React.lazy`.
 
 ## 8. Styling and tokens

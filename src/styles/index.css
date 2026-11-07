@@ -80,6 +80,7 @@
     *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
+      animation-delay: 0s !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
@@ -167,4 +168,209 @@
 }
 @utility tracking-display {
   letter-spacing: -0.3px;
+}
+
+/*
+ * Motion of the lab toolbar. Things spring in a little past their place and settle; they fold away
+ * faster than they came. `data-state` is "open" or "closed" (see usePresence). `--i` is the place of
+ * an item in its row, so a row opens one item after another.
+ */
+@keyframes lab-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-16px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lab-slide-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-12px) scale(0.94);
+  }
+}
+@keyframes lab-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lab-pop-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.94);
+  }
+}
+@keyframes lab-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lab-dock-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lab-dock-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+}
+@keyframes lab-pop-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lab-pop-up-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(6px) scale(0.94);
+  }
+}
+@keyframes lab-fade-out {
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+/* something that shows up by itself, like the warnings button, and goes when it is not needed */
+@utility lab-appear {
+  &[data-state='open'] {
+    animation: lab-rise 360ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  }
+  &[data-state='closed'] {
+    animation: lab-fade-out 180ms ease-in both;
+  }
+}
+@utility lab-dock {
+  &[data-state='open'] {
+    animation: lab-dock-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  }
+  &[data-state='closed'] {
+    animation: lab-dock-out 170ms ease-in both;
+  }
+}
+@utility lab-slide {
+  &[data-state='open'] {
+    animation: lab-slide-in 380ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+  &[data-state='closed'] {
+    animation: lab-slide-out 170ms ease-in both;
+  }
+}
+@utility lab-pop {
+  transform-origin: top left;
+  &[data-state='open'] {
+    animation: lab-pop-in 280ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  }
+  &[data-state='closed'] {
+    animation: lab-pop-out 140ms ease-in both;
+  }
+  /* a panel that opens upward springs out of the bottom */
+  &[data-placement='top'] {
+    transform-origin: bottom left;
+    &[data-state='open'] {
+      animation-name: lab-pop-up-in;
+    }
+    &[data-state='closed'] {
+      animation-name: lab-pop-up-out;
+    }
+  }
+}
+/* a fade only, for things inside a box that scrolls: a move or a bounce there would flash a scroll bar */
+@keyframes lab-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@utility lab-fade {
+  animation: lab-fade-in 260ms ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 45ms + 60ms);
+}
+@utility lab-item {
+  animation: lab-rise 300ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 40ms + 70ms);
+}
+@utility lab-swap {
+  animation: lab-rise 240ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+/* The pin diagram drawer of the lab: from the right on a tablet or desktop, from the bottom on a phone. */
+.lab-drawer {
+  animation: lab-drawer-in-x 360ms cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+[data-state='closed'] > .lab-drawer {
+  animation: lab-drawer-out-x 230ms ease-in both;
+}
+@keyframes lab-drawer-in-x {
+  from {
+    transform: translateX(100%);
+  }
+}
+@keyframes lab-drawer-out-x {
+  to {
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 767px) {
+  .lab-drawer {
+    animation-name: lab-drawer-in-y;
+  }
+  [data-state='closed'] > .lab-drawer {
+    animation-name: lab-drawer-out-y;
+  }
+}
+@keyframes lab-drawer-in-y {
+  from {
+    transform: translateY(100%);
+  }
+}
+@keyframes lab-drawer-out-y {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* NOT in a boolean expression: a bar over the letter or the group (see Notation.tsx) */
+.notation-bar {
+  border-top: 1.6px solid currentColor;
 }
