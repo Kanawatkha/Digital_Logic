@@ -47,6 +47,8 @@ const COLORS_IN_ROW_MIN = 1660;
 const CHIPS_IN_ROW_MIN = 1400;
 const ONE_ROW_MIN = 1190;
 const WIDE_STRIP_MIN = 560;
+/** Under this width the wire toolbar cannot hold arrange, paint and straighten as three buttons: they fold into one */
+const INLINE_WIRE_TOOLS_MIN = 372;
 
 /**
  * On a phone (narrow, or short because it is turned sideways) the tools start folded away, to leave
@@ -92,6 +94,7 @@ export function LabBoard() {
   const resultsButton = useRef<HTMLButtonElement>(null);
   const oneRow = useMinWidth(ONE_ROW_MIN);
   const wideStrip = useMinWidth(WIDE_STRIP_MIN);
+  const inlineWireTools = useMinWidth(INLINE_WIRE_TOOLS_MIN);
   const tool = useWireTool({
     containerRef,
     toBoard,
@@ -317,6 +320,7 @@ export function LabBoard() {
                 onPaint={paint}
                 canClear={wires.length > 0 || ics.length > 0}
                 onClear={() => dispatch({ type: 'clear' })}
+                foldTools={!inlineWireTools}
               />
             </div>
             <div

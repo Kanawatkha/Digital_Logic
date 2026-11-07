@@ -81,6 +81,7 @@ export const UI_TEXT = {
   labStraighten: 'ทำสายให้ตรง',
   labArrange: 'จัดสายอัตโนมัติ',
   labPaint: 'จัดสีสายอัตโนมัติ',
+  labWireTools: 'เลือกเครื่องมือจัดสาย',
   labClear: 'ล้างวงจร',
   labTray: 'ชิป IC',
   labTrayHint: 'ลากไปวางบนเบรดบอร์ด หรือแตะเพื่อวาง',

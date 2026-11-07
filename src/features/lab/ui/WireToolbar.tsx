@@ -29,6 +29,8 @@ type WireToolbarProps = {
   /** There is something on the breadboards to clear */
   canClear: boolean;
   onClear: () => void;
+  /** Very narrow screen: arrange, paint and straighten fold into one button that shows one of them */
+  foldTools: boolean;
 };
 
 const BUTTON =
@@ -68,6 +70,91 @@ function Swatch({ name, checked, onPick, order }: SwatchProps) {
   );
 }
 
+type ToolSpec = {
+  id: 'arrange' | 'paint' | 'straighten';
+  icon: 'wand' | 'palette' | 'straight';
+  label: string;
+  disabled: boolean;
+  run: () => void;
+};
+
+function ToolButton({ tool }: { tool: ToolSpec }) {
+  return (
+    <button
+      type="button"
+      className={BUTTON}
+      aria-label={tool.label}
+      title={tool.label}
+      disabled={tool.disabled}
+      onClick={tool.run}
+    >
+      <Icon name={tool.icon} />
+    </button>
+  );
+}
+
+/**
+ * For a very narrow screen: one of arrange, paint and straighten shows, as a button that does it,
+ * and a small arrow opens the list to swap it for another (as with the chips).
+ */
+function ToolPicker({ tools }: { tools: readonly ToolSpec[] }) {
+  const [picked, setPicked] = useState<ToolSpec['id']>('arrange');
+  const [open, setOpen] = useState(false);
+  const close = useCallback(() => setOpen(false), []);
+  const menuId = useId();
+  const shown = tools.find((tool) => tool.id === picked) ?? tools[0]!;
+  return (
+    <div className="relative flex items-center">
+      <span key={shown.id} className="lab-swap">
+        <ToolButton tool={shown} />
+      </span>
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        aria-label={UI_TEXT.labWireTools}
+        title={UI_TEXT.labWireTools}
+        className={`inline-flex h-10 w-6 items-center justify-center rounded-md text-ink transition-colors active:bg-surface-card ${
+          open ? 'bg-surface-card' : ''
+        }`}
+        onClick={() => setOpen((was) => !was)}
+      >
+        <Icon
+          name="chevron-down"
+          size={14}
+          className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+      <Popover open={open} onClose={close} id={menuId} className="w-max">
+        <div role="radiogroup" aria-label={UI_TEXT.labWireTools} className="flex flex-col gap-0.5">
+          {tools.map((tool, order) => (
+            <button
+              key={tool.id}
+              type="button"
+              role="radio"
+              aria-checked={tool.id === picked}
+              aria-label={tool.label}
+              title={tool.label}
+              className={`lab-item flex h-10 items-center gap-3 rounded-md px-3 text-left text-ink transition-colors active:bg-surface-card ${
+                tool.id === picked ? 'bg-surface-card' : ''
+              }`}
+              style={{ '--i': order } as CSSProperties}
+              onClick={() => {
+                setPicked(tool.id);
+                close();
+              }}
+            >
+              <Icon name={tool.icon} size={20} />
+              <span className="type-caption grow">{tool.label}</span>
+              {tool.id === picked ? <Icon name="check" size={16} /> : null}
+            </button>
+          ))}
+        </div>
+      </Popover>
+    </div>
+  );
+}
+
 /**
  * Wire tools, floating at the top left of the canvas: the color of the next wire (or of the
  * selected one), undo and redo, and straighten, delete and clear. Icons only; on a narrow screen
@@ -91,13 +178,31 @@ export function WireToolbar({
   onPaint,
   canClear,
   onClear,
+  foldTools,
 }: WireToolbarProps) {
   const [open, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const menuId = useId();
+  const tools: ToolSpec[] = [
+    {
+      id: 'arrange',
+      icon: 'wand',
+      label: UI_TEXT.labArrange,
+      disabled: !canArrange,
+      run: onArrange,
+    },
+    { id: 'paint', icon: 'palette', label: UI_TEXT.labPaint, disabled: !canPaint, run: onPaint },
+    {
+      id: 'straighten',
+      icon: 'straight',
+      label: UI_TEXT.labStraighten,
+      disabled: !canStraighten,
+      run: onStraighten,
+    },
+  ];
 
   return (
-    <div className="flex items-center gap-0.5 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_2px_10px_rgba(20,20,19,0.12)]">
+    <div className="flex max-w-full items-center gap-0 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_2px_10px_rgba(20,20,19,0.12)] md:gap-0.5">
       {compact ? (
         <div className="relative">
           <button
@@ -150,7 +255,7 @@ export function WireToolbar({
           ))}
         </div>
       )}
-      <span className="mx-1 h-6 w-px bg-hairline" aria-hidden="true" />
+      <span className="mx-0 h-6 w-px bg-hairline md:mx-1" aria-hidden="true" />
       <button
         type="button"
         className={BUTTON}
@@ -171,37 +276,12 @@ export function WireToolbar({
       >
         <Icon name="redo" />
       </button>
-      <span className="mx-1 h-6 w-px bg-hairline" aria-hidden="true" />
-      <button
-        type="button"
-        className={BUTTON}
-        aria-label={UI_TEXT.labArrange}
-        title={UI_TEXT.labArrange}
-        disabled={!canArrange}
-        onClick={onArrange}
-      >
-        <Icon name="wand" />
-      </button>
-      <button
-        type="button"
-        className={BUTTON}
-        aria-label={UI_TEXT.labPaint}
-        title={UI_TEXT.labPaint}
-        disabled={!canPaint}
-        onClick={onPaint}
-      >
-        <Icon name="palette" />
-      </button>
-      <button
-        type="button"
-        className={BUTTON}
-        aria-label={UI_TEXT.labStraighten}
-        title={UI_TEXT.labStraighten}
-        disabled={!canStraighten}
-        onClick={onStraighten}
-      >
-        <Icon name="straight" />
-      </button>
+      <span className="mx-0 h-6 w-px bg-hairline md:mx-1" aria-hidden="true" />
+      {foldTools ? (
+        <ToolPicker tools={tools} />
+      ) : (
+        tools.map((tool) => <ToolButton key={tool.id} tool={tool} />)
+      )}
       <button
         type="button"
         className={BUTTON}

@@ -723,6 +723,46 @@ describe('LabPage board', () => {
       for (const panel of tools.children) expect(panel.className).toContain('pointer-events-auto');
     });
 
+    it('folds arrange, paint and straighten into one button, and swaps the one that shows', async () => {
+      const wire = (id: string, from: string, to: string) => ({
+        id,
+        from,
+        to,
+        color: 'orange',
+        bend: { x: 0, y: 0 },
+      });
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({
+          version: 1,
+          ics: [],
+          wires: [wire('w1', 'power:+5V:0', 'b0:r:top1:3'), wire('w2', 'sw0:0', 'b0:c11:i')],
+          switches: [],
+        }),
+      );
+      const { saved } = await openBoard();
+      // one of the three shows: arrange
+      expect(screen.getByRole('button', { name: 'จัดสายอัตโนมัติ' })).toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'จัดสีสายอัตโนมัติ' })).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'ทำสายให้ตรง' })).not.toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', { name: 'เลือกเครื่องมือจัดสาย' }));
+      expect(screen.getAllByRole('radio')).toHaveLength(3);
+      expect(screen.getByRole('radio', { name: 'จัดสายอัตโนมัติ' })).toHaveAttribute(
+        'aria-checked',
+        'true',
+      );
+      fireEvent.click(screen.getByRole('radio', { name: 'จัดสีสายอัตโนมัติ' }));
+      expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'จัดสายอัตโนมัติ' })).not.toBeInTheDocument();
+      // choosing does not do it: the button that shows does
+      expect((saved().wires as { color: string }[]).map((w) => w.color)).toEqual([
+        'orange',
+        'orange',
+      ]);
+      fireEvent.click(screen.getByRole('button', { name: 'จัดสีสายอัตโนมัติ' }));
+      expect((saved().wires as { color: string }[])[0]?.color).toBe('red');
+    });
+
     it('shows one chip, swaps it for another, and places the one that shows', async () => {
       const { chips, saved } = await openBoard();
       expect(screen.getByRole('button', { name: '7404 NOT' })).toBeInTheDocument();
