@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { BlockList } from '@/components/content/BlockRenderer';
 import { InlineContent } from '@/components/content/InlineContent';
 import { Icon } from '@/components/ui/Icon';
@@ -11,6 +11,9 @@ import { TaskTruthTable } from './TaskTruthTable';
 type TaskDetailProps = {
   task: LabTask;
   onBack: () => void;
+  /** Whether the solution is shown, kept by the page so it is as it was left */
+  solutionOpen: boolean;
+  onSolutionOpenChange: (open: boolean) => void;
   /** The answer, put on the boards in place of what is there */
   onLoadSolution: (placed: PlacedSolution) => void;
 };
@@ -19,8 +22,13 @@ const buttonClass =
   'type-nav inline-flex h-10 items-center justify-center gap-2 rounded-md px-4 transition-transform duration-150 active:scale-95';
 
 /** One task: the statement, and behind one button the worked solution, the answer and the circuit. */
-export function TaskDetail({ task, onBack, onLoadSolution }: TaskDetailProps) {
-  const [solutionOpen, setSolutionOpen] = useState(false);
+export function TaskDetail({
+  task,
+  onBack,
+  solutionOpen,
+  onSolutionOpenChange,
+  onLoadSolution,
+}: TaskDetailProps) {
   const outputNames = useMemo(() => task.outputs.map((o) => o.name), [task.outputs]);
 
   // A, B and C are switches 1, 2 and 3; the outputs are LED 1 and LED 2
@@ -69,7 +77,7 @@ export function TaskDetail({ task, onBack, onLoadSolution }: TaskDetailProps) {
           type="button"
           aria-expanded={solutionOpen}
           className={`${buttonClass} self-start border border-hairline bg-canvas text-ink active:bg-surface-card`}
-          onClick={() => setSolutionOpen((was) => !was)}
+          onClick={() => onSolutionOpenChange(!solutionOpen)}
         >
           {solutionOpen ? UI_TEXT.labTaskSolutionHide : UI_TEXT.labTaskSolutionShow}
           <Icon

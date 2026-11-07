@@ -14,6 +14,9 @@ type TasksDrawerProps = {
   /** The kinds that are unfolded in the list (kept by the page, so the list is as it was left) */
   openKinds: ReadonlySet<string>;
   onOpenKinds: (kinds: ReadonlySet<string>) => void;
+  /** The tasks whose solution is shown (kept by the page, like the kinds) */
+  openSolutions: ReadonlySet<string>;
+  onOpenSolutions: (tasks: ReadonlySet<string>) => void;
   /** The answer, to be put on the boards in place of what is there */
   onLoadSolution: (placed: PlacedSolution) => void;
 };
@@ -24,6 +27,8 @@ function TasksBody({
   onSelect,
   openKinds,
   onOpenKinds,
+  openSolutions,
+  onOpenSolutions,
   onLoadSolution,
 }: Omit<TasksDrawerProps, 'open' | 'onClose'>) {
   const tasks = useLabTasks();
@@ -46,6 +51,13 @@ function TasksBody({
           key={task.id}
           task={task}
           onBack={() => onSelect(null)}
+          solutionOpen={openSolutions.has(task.id)}
+          onSolutionOpenChange={(open) => {
+            const next = new Set(openSolutions);
+            if (open) next.add(task.id);
+            else next.delete(task.id);
+            onOpenSolutions(next);
+          }}
           onLoadSolution={onLoadSolution}
         />
       ) : (

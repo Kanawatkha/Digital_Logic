@@ -97,10 +97,11 @@ export function LabBoard() {
   const diagramsButton = useRef<HTMLButtonElement>(null);
   const [resultsOpen, setResultsOpen] = useState(false);
   const resultsButton = useRef<HTMLButtonElement>(null);
-  // the tasks: what was open last (the task, and the kinds that are unfolded in the list) is kept while the drawer is closed
+  // the tasks: what was open last (the task, the kinds that are unfolded in the list, and the tasks whose solution is shown) is kept while the drawer is closed
   const [tasksOpen, setTasksOpen] = useState(false);
   const [taskId, setTaskId] = useState<string | null>(null);
   const [openKinds, setOpenKinds] = useState<ReadonlySet<string>>(new Set());
+  const [openSolutions, setOpenSolutions] = useState<ReadonlySet<string>>(new Set());
   const tasksButton = useRef<HTMLButtonElement>(null);
   const oneRow = useMinWidth(ONE_ROW_MIN);
   const wideStrip = useMinWidth(WIDE_STRIP_MIN);
@@ -424,6 +425,8 @@ export function LabBoard() {
         onSelect={setTaskId}
         openKinds={openKinds}
         onOpenKinds={setOpenKinds}
+        openSolutions={openSolutions}
+        onOpenSolutions={setOpenSolutions}
         onLoadSolution={loadSolution}
       />
       <IcDiagramDrawer open={diagramsOpen} onClose={closeDiagrams} onBoard={onBoard} />
