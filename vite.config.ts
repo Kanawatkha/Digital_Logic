@@ -114,5 +114,7 @@ export default defineConfig(({ command, isPreview }) => ({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     include: ['src/**/*.test.{ts,tsx}', 'tests/**/*.test.{ts,tsx}'],
+    // the lab tests render the whole board; with every test file running at once they can pass 5 s
+    testTimeout: 20000,
   },
 }));

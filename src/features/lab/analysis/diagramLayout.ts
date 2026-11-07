@@ -26,6 +26,8 @@ export type LNode = {
   led?: number;
   switchIndex?: number;
   value?: boolean;
+  /** The name of an LED output, when it has one (a task output is called Y, not LED 1) */
+  title?: string;
   /** The y of each input lead of a gate */
   inputYs: number[];
 };
@@ -58,7 +60,11 @@ const GAP = 34;
 /** Where a node starts, from the left of its column, for what is not a switch or a supply */
 const INSET = 20;
 const GATE_INPUT_OFFSET = 9 * GATE_SCALE;
-const CURVE_IN = 3.75 * GATE_SCALE;
+/** The curved back of an OR or NOR is this far in at a lead `dy` (in symbol units) from the middle */
+const curveIn = (dy: number) => {
+  const t = (1 - Math.min(1, Math.abs(dy) / 18)) / 2;
+  return 20 * t * (1 - t);
+};
 /** The narrowest the space between two columns is, and the room kept for each wire that has to change height in it */
 const MIN_GAP = 70;
 const CHANNEL_SPACING = 18;
@@ -83,6 +89,8 @@ export function signalKey(signal: Signal): string {
 export function layoutDiagram(
   netlist: Netlist,
   nameOf: (switchIndex: number) => string,
+  /** `inputsInOrder`: the switches are in the first column from the top in the order of their number (A, B, C), even if that costs a crossing */
+  options: { inputsInOrder?: boolean } = {},
 ): DiagramLayout {
   const nodes = new Map<string, LNode>();
   const make = (node: Omit<LNode, 'x' | 'outX' | 'y' | 'level' | 'inputYs'>): LNode => {
@@ -95,7 +103,7 @@ export function layoutDiagram(
     make({
       id: `g:${gate.id}`,
       kind: 'gate',
-      label: `${gate.ic.toUpperCase()}·${gate.gate}`,
+      label: gate.label ?? `${gate.ic.toUpperCase()}·${gate.gate}`,
       gate,
     });
   }
@@ -131,7 +139,7 @@ export function layoutDiagram(
   }
   for (const output of netlist.outputs) {
     const id = `o:${output.led}`;
-    make({ id, kind: 'output', label: String(output.led), led: output.led });
+    make({ id, kind: 'output', label: String(output.led), led: output.led, title: output.name });
     raw.push({ from: sourceOf(output.source), to: id, pin: 0 });
   }
 
@@ -218,6 +226,15 @@ export function layoutDiagram(
       refresh();
     }
   }
+  if (options.inputsInOrder) {
+    const first = columns[0]!;
+    const index = (id: string) => nodes.get(id)?.switchIndex ?? 0;
+    const inputs = first
+      .filter((id) => nodes.get(id)?.kind === 'input')
+      .sort((a, b) => index(a) - index(b));
+    columns[0] = [...inputs, ...first.filter((id) => nodes.get(id)?.kind !== 'input')];
+    refresh();
+  }
 
   // places: first how high everything is, then, knowing how many wires have to change height
   // between two columns, how far apart the columns are
@@ -235,10 +252,18 @@ export function layoutDiagram(
       node.y = y + h / 2;
       y += h + GAP;
       if (node.kind === 'gate') {
+        // one lead in the middle, two above and below it, three with one in the middle too
+        const n = node.gate!.inputs.length;
         node.inputYs =
-          node.gate!.inputs.length === 1
+          n === 1
             ? [node.y]
-            : [node.y - GATE_INPUT_OFFSET, node.y + GATE_INPUT_OFFSET];
+            : n === 2
+              ? [node.y - GATE_INPUT_OFFSET, node.y + GATE_INPUT_OFFSET]
+              : [
+                  node.y - 2 * GATE_INPUT_OFFSET * 0.9,
+                  node.y,
+                  node.y + 2 * GATE_INPUT_OFFSET * 0.9,
+                ];
       } else if (node.kind === 'output') {
         node.inputYs = [node.y];
       }
@@ -310,9 +335,10 @@ export function layoutDiagram(
   });
 
   // wires: one channel in the gap between two columns for each wire that has to change height
-  const entryX = (node: LNode) => {
+  const entryX = (node: LNode, pin = 0) => {
     const curved = node.gate && (node.gate.kind === 'or' || node.gate.kind === 'nor');
-    return node.x + (curved && node.gate!.inputs.length === 2 ? CURVE_IN : 0);
+    if (!curved || node.gate!.inputs.length < 2) return node.x;
+    return node.x + curveIn((node.inputYs[pin]! - node.y) / GATE_SCALE) * GATE_SCALE;
   };
   for (const [level, list] of moving) {
     const left = lefts[level]! + spans[level]! + 10;
@@ -337,9 +363,9 @@ export function layoutDiagram(
         { x: from.outX, y: from.y },
         { x: from.outX + 16, y: from.y },
         { x: from.outX + 16, y: yLow },
-        { x: entryX(to) - 16, y: yLow },
-        { x: entryX(to) - 16, y: yIn },
-        { x: entryX(to), y: yIn },
+        { x: entryX(to, chain.edge.pin) - 16, y: yLow },
+        { x: entryX(to, chain.edge.pin) - 16, y: yIn },
+        { x: entryX(to, chain.edge.pin), y: yIn },
       );
     } else {
       points.push({ x: from.outX, y: from.y });
@@ -349,7 +375,10 @@ export function layoutDiagram(
         if (seg.ya !== seg.yb) {
           points.push({ x: seg.channel, y: seg.ya }, { x: seg.channel, y: seg.yb });
         }
-        points.push({ x: k === chain.ids.length - 1 ? entryX(next) : next.x, y: seg.yb });
+        points.push({
+          x: k === chain.ids.length - 1 ? entryX(next, chain.edge.pin) : next.x,
+          y: seg.yb,
+        });
         if (k < chain.ids.length - 1) points.push({ x: next.outX, y: next.y });
       }
     }

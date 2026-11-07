@@ -8,6 +8,8 @@ type PopoverProps = {
   id: string;
   /** Opens under the button (default) or over it */
   placement?: 'bottom' | 'top';
+  /** Which edge of the button the panel lines up with (default the left one) */
+  align?: 'left' | 'right';
   /** Width and the like, for the panel */
   className?: string;
   children: ReactNode;
@@ -23,6 +25,7 @@ export function Popover({
   onClose,
   id,
   placement = 'bottom',
+  align = 'left',
   className = '',
   children,
 }: PopoverProps) {
@@ -68,7 +71,7 @@ export function Popover({
       data-state={state}
       tabIndex={-1}
       data-placement={placement}
-      className={`lab-pop absolute left-0 z-30 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_10px_28px_rgba(20,20,19,0.2)] outline-none ${
+      className={`lab-pop absolute ${align === 'right' ? 'right-0' : 'left-0'} z-30 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_10px_28px_rgba(20,20,19,0.2)] outline-none ${
         placement === 'top' ? 'bottom-full mb-2' : 'top-full mt-2'
       } ${className}`}
       onKeyDown={(event: KeyboardEvent) => {

@@ -26,6 +26,7 @@ Playwright and Lighthouse are dev dependencies only. They are introduced in the 
 5. **Tree rules.** Node ids are unique. Every chapter in `summary/01..05` yields at least one leaf. Examples attach to the right leaf (fixture-based test on a small sample file per construct).
 6. **Counts snapshot.** `report.txt` counts (nodes, examples, figures per file) are committed as a snapshot. A change must be reviewed, not silently accepted.
 7. **Reference integrity.** References like "ข้อ 3(a)" and "หัวข้อ 4.1" resolve where they can be checked mechanically.
+8. **Lab tasks.** The build refuses a task that is malformed, constant, XOR or XNOR, or whose written answer or steps are wrong (`CONTENT-SCHEMA.md` section 12; `tests/lab-steps.test.ts` has a built task that fails for each kind of mistake). `src/features/lab/tasks/solutions.test.ts` builds the real tasks, puts the answer of every one on the breadboards, runs the real simulator over all eight rows and checks it does what the task asks with no warning.
 
 Fixtures live in `tests/fixtures/` and cover each construct in `CONTENT-SCHEMA.md` section 2, including: example without `Ans`, `###` examples group, group section with intro, table with entities, blockquote, figure.
 

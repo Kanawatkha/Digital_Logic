@@ -39,9 +39,10 @@ Digital_Logic/
 │  └─ skills/               edit-content/, verify-math/, add-component/
 ├─ content/                 SOURCE OF TRUTH (Markdown only)
 │  ├─ summary/              00-formula-sheet-ch1-5.md, 01..05-*-summary.md
-│  └─ worked-solutions/     01..05-*.md, 06-midterm-practice-exam.md
+│  ├─ worked-solutions/     01..05-*.md, 06-midterm-practice-exam.md
+│  └─ lab-tasks/            01..05-*.md, the tasks of the lab (CONTENT-SCHEMA.md section 12)
 ├─ scripts/
-│  └─ build-content/        run.ts (CLI), index.ts, parse.ts, tree.ts, math.ts, svg.ts, project.ts, report.ts
+│  └─ build-content/        run.ts (CLI), index.ts, parse.ts, tree.ts, math.ts, svg.ts, project.ts, report.ts, tasks.ts and latexExpr.ts (lab tasks)
 ├─ public/                  favicon, manifest icons, robots.txt
 ├─ src/
 │  ├─ main.tsx              entry
@@ -51,7 +52,7 @@ Digital_Logic/
 │  │  ├─ diagram/           home diagram: Diagram.tsx, nodes/, connectors/, layout/, useDiagramState.ts
 │  │  ├─ home-diagram/      HomeDiagram, DiagramNode, DiagramBlocks, model (state and columns), useDiagramLayout
 │  │  ├─ content-page/      chapter, exam and formula sheet pages: ContentPage, ExerciseOutline, FormulaOutline, JumpNav, useContentFile
-│  │  └─ lab/               NX-4i board simulator: board art and data, sim (pure TypeScript), canvas (pan, zoom, wires), state, ui. See LAB-PLAN.md
+│  │  └─ lab/               NX-4i board simulator: board art and data, sim (pure TypeScript), canvas (pan, zoom, wires), state, ui, tasks (the task drawer, the answer and putting it on the boards; `tasks/logic.ts` is also run by the content build). See LAB-PLAN.md
 │  ├─ components/
 │  │  ├─ ui/                Button, Badge, Card, Skeleton, Icon, Prose, Toast
 │  │  ├─ content/           shared block renderer used by pages and the diagram: BlockRenderer, InlineContent, TableBlock, FigureBlock
@@ -97,7 +98,7 @@ app    ->  pages, components, config
 - `features/*` MUST NOT import from other `features/*`. Shared pieces move to `components/` or `lib/`.
 - `components/ui/*` MUST NOT import from `features/` or `pages/`.
 - `scripts/*` MAY import `src/content/types.ts` only. It MUST NOT import React code.
-- `src/content/generated/*` is imported only by `src/content/loaders.ts`.
+- `src/content/generated/*` is imported only by `src/content/loaders.ts` (the lab tasks too: `loadLabTasks`).
 - Enforce with ESLint `no-restricted-imports` and path patterns.
 
 ## 6. State management

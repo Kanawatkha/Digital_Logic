@@ -33,6 +33,12 @@ export type CircuitAction =
   | { type: 'bend'; id: string; bend: Bend }
   | { type: 'arrange'; bends: ReadonlyMap<string, Bend> }
   | { type: 'paint'; colors: ReadonlyMap<string, WireColor> }
+  /** Wires and chips put on the boards in place of what is there, in one step that undo takes back */
+  | {
+      type: 'replace';
+      ics: readonly Omit<PlacedIc, 'id'>[];
+      wires: readonly { from: string; to: string; color: WireColor; bend: Bend }[];
+    }
   | { type: 'moveEnd'; id: string; end: WireEnd; point: string }
   | { type: 'placeIc'; icType: IcType; board: number; col: number }
   | { type: 'moveIc'; id: string; board: number; col: number }
@@ -215,6 +221,20 @@ export function circuitReducer(state: CircuitState, action: CircuitAction): Circ
         return { ...wire, color };
       });
       return changed ? commit(state, { wires }, state.selected) : state;
+    }
+    case 'replace': {
+      let nextId = state.nextId;
+      const ics: PlacedIc[] = [];
+      for (const ic of action.ics) {
+        if (!canPlace([], ics, ic.board, ic.col)) continue;
+        ics.push({ id: `u${nextId++}`, ...ic });
+      }
+      const wires: LabWire[] = [];
+      for (const w of action.wires) {
+        if (!canConnect(wires, ics, w.from, w.to)) continue;
+        wires.push({ id: `w${nextId++}`, ...w });
+      }
+      return { ...commit(state, { wires, ics }, null), nextId };
     }
     case 'moveEnd': {
       const wire = state.wires.find((w) => w.id === action.id);

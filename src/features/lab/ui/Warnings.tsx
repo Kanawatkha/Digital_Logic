@@ -10,6 +10,10 @@ import { warningMessages, type WarningMessage } from './warningMessages';
 type WarningsProps = {
   warnings: readonly Warning[];
   ics: readonly PlacedIc[];
+  /** Where the list opens: over the button (the button is at the bottom of the screen) or under it */
+  placement?: 'top' | 'bottom';
+  /** The edge of the button the list lines up with: the right one when the button is at the right of the screen */
+  align?: 'left' | 'right';
 };
 
 const sameMessages = (a: readonly WarningMessage[], b: readonly WarningMessage[]) =>
@@ -22,7 +26,7 @@ const sameMessages = (a: readonly WarningMessage[], b: readonly WarningMessage[]
  * panel over the board (it takes no room of its own). A screen reader gets the messages as they
  * come, from a live region.
  */
-export function Warnings({ warnings, ics }: WarningsProps) {
+export function Warnings({ warnings, ics, placement = 'top', align = 'left' }: WarningsProps) {
   const messages = useMemo(
     () => warningMessages(warnings, ics).sort((a, b) => Number(b.severe) - Number(a.severe)),
     [warnings, ics],
@@ -69,7 +73,8 @@ export function Warnings({ warnings, ics }: WarningsProps) {
             open={open && has}
             onClose={close}
             id={panelId}
-            placement="top"
+            placement={placement}
+            align={align}
             className="w-[min(26rem,calc(100vw-1.5rem))]"
           >
             <ul className="flex max-h-[40dvh] flex-col gap-1 overflow-x-hidden overflow-y-auto">

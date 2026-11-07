@@ -19,6 +19,9 @@ type IconName =
   | 'wand'
   | 'alert'
   | 'table'
+  | 'tasks'
+  | 'play'
+  | 'pause'
   | 'palette';
 
 const PATHS: Record<IconName, string> = {
@@ -43,6 +46,9 @@ const PATHS: Record<IconName, string> = {
   palette:
     'M12 3a9 9 0 1 0 0 18c1.1 0 1.7-.9 1.3-1.9-.4-1 .2-2.1 1.3-2.1H17a4 4 0 0 0 4-4c0-5-4-10-9-10zM7.5 11.5h.01M10 7.5h.01M14.5 7.5h.01',
   table: 'M4 5h16v14H4zM4 10h16M4 15h16M10 5v14',
+  play: 'M8 5.5v13l11-6.5z',
+  pause: 'M8.5 5v14M15.5 5v14',
+  tasks: 'M10 6h10M10 12h10M10 18h10M3.5 6l1.3 1.3L7 5M3.5 12l1.3 1.3L7 11M3.5 18l1.3 1.3L7 17',
   alert: 'M12 4.5l9 15.5H3zM12 10.5v4M12 17.4h.01',
   wand: 'M4 20L15 9M13 4v3M13 4.5l1.8 1.8M19 10.5h-3M18.5 4.5l-1.8 1.8M5 6l.8 1.7L7.5 8.5 5.8 9.3 5 11l-.8-1.7L2.5 8.5l1.7-.8zM19 15l.6 1.4L21 17l-1.4.6L19 19l-.6-1.4L17 17l1.4-.6z',
 };

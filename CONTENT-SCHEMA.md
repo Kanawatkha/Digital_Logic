@@ -8,6 +8,7 @@ Rules for turning the Markdown in `content/` into typed data. This is the contra
 |---|---|---|
 | `summary` | `00-formula-sheet-ch1-5.md`, `01..05-<name>-summary.md` | Home diagram (01-05), Formula sheet page (00) |
 | `worked-solutions` | `01..05-<name>.md`, `06-midterm-practice-exam.md` | Chapter pages (01-05), Exam page (06) |
+| `lab-tasks` | `01..05-<name>.md` (one per kind of task) | Task card of the Lab page, see section 12 |
 
 Chapter keys: 01 number-systems-and-codes, 02 digital-ic-and-logic-gates, 03 boolean-algebra, 04 karnaugh-map, 05 combination-circuit.
 
@@ -131,6 +132,8 @@ src/content/generated/
   manifest.json                  # collections, ordered node index, ids, titles
   summary/<NN>.json              # ContentFile, NN = two digit chapter key from the file name
   worked-solutions/<NN>.json
+  lab-tasks.json                 # the tasks of the lab (section 12)
+  lab-tasks-report.txt           # every task with its truth row, answer, gate count and the chains checked, for review
 ```
 
 Git-ignored. Regenerate with `npm run content`. A build report (`generated/report.txt`) lists chapters, node counts per kind, example counts, figure counts, and warnings.
@@ -143,6 +146,7 @@ Git-ignored. Regenerate with `npm run content`. A build report (`generated/repor
 4. Every node id is unique.
 5. Round-trip: converting data back to normalized text equals the normalized Markdown text (see `TESTING.md`).
 6. Every in-text reference such as "ข้อ 3(a)" or "หัวข้อ 4.1" points to something that exists, where it can be checked mechanically.
+7. Every lab task is well formed and can be answered (section 12).
 
 ## 10. Author rules (what to keep doing in the Markdown)
 
@@ -158,4 +162,36 @@ Git-ignored. Regenerate with `npm run content`. A build report (`generated/repor
 - Math is pre-rendered with `output: 'html'` (no MathML) to keep the generated files small (10 to 25 KB gzip per file). Screen reader support for formulas is a Phase 6 accessibility item (for example an `aria-label` carrying the TeX).
 - Round trip (`project.ts`): the Markdown and the generated data are both reduced to canonical text (whitespace removed), the ordered list of formulas, and the figure count. The `Sol` marker lines and the headings of attached examples groups are accounted for explicitly. Any difference fails `npm run content` and the test suite.
 - Warnings are printed in `generated/report.txt`. The current content produces none.
+- The lab tasks are built by `tasks.ts` in the same folder, with the logic of `src/features/lab/tasks/logic.ts` (the same file the app uses to draw and place the answer, so the two cannot drift apart); `latexExpr.ts` reads the formulas of the written solutions back for the checks; that file and the files it imports carry `.ts` extensions for Node.
 - Node ids: numbered headings use the number (`summary/02/5.3`); worked-solutions and the formula sheet use positional ids (`worked-solutions/04/h2-3.h3-5`). Ids are stable while headings keep their order.
+
+## 12. Lab tasks (`content/lab-tasks/`)
+
+The tasks of the lab page (`LAB-PLAN.md`, Round 14). Five files, one per kind of task: `01-large-boolean-expression.md`, `02-truth-table.md`, `03-sop-pos-expression.md`, `04-large-logic-circuit.md`, `05-word-description.md` (the file name must look like `NN-name.md`). They are ordinary content (section 2) with one more construct, the `lab` block.
+
+- `# Title` is the name of the kind, the text under it before the first `##` is its introduction, and each `##` heading (`## ข้อ N <title>`) is one task. The id of a task is `<file number>.<position in the file>` (for example `03.2`); a task keeps its id as long as it keeps its place.
+- A task is the statement (paragraphs, formulas, tables), then a fenced block with the language `lab`. Text may come before and after the block. Every task says to simplify and draw the circuit; every task has three inputs named A, B and C and one or two outputs; XOR and XNOR functions are refused.
+
+````text
+```lab
+outputs: X, Y            one or two output names
+X = m(3,5,6,7)           rows that are 1 (row = A*4 + B*2 + C), and rows that do not matter: m(1,5,6) d(0,2)
+Y = expr A'B + AC        or a boolean expression
+Y = rule ones >= 2       or a rule: `ones` (inputs that are 1) or `value` (ABC as a number) with >=, <=, >, <, ==, !=
+Y = figure               or what the circuit of `figure:` does
+only: nand               optional: only NAND (7400) or only NOR (7402) may be used (nand | nor)
+form: pos                optional: the statement asks for a sum of products or a product of sums (sop | pos); the circuit of the answer is then in that form, and the statement must say SOP or POS
+figure:                  optional: the circuit drawn in the statement, one gate a line, a gate has 2 or 3 inputs (NOT has 1)
+  g1 = NAND A B
+  g2 = AND g1 B C
+  X = g2                 `<output> = <gate>` says which gate drives an output
+```
+````
+
+- Expressions use `A B C 0 1`, `'` or `!` for NOT, `&`, `*` or nothing between two factors for AND (`AB`), `+` or `|` for OR, and brackets; NOT binds tighter than AND and AND tighter than OR. Gate kinds: NOT, AND, OR, NAND, NOR. An input of a gate is A, B, C, 0, 1 or another gate.
+- Placeholders in the statement, written by the build from the data of the block (so the text cannot disagree with what is checked): a line `@table` is the truth table of all outputs (X for a don't care); `@expr:Y` is the expression of Y as LaTeX (the output must be given as `expr`), `@sum:Y` is `Σm(...)` (with `+ Σd(...)`) and `@prod:Y` is `ΠM(...)` (with `· Πd(...)`).
+- **The solution is written by hand**, after the block, as in the worked solutions of the chapters: the line `$\mathbf{Sol}^{n}$` (it is not shown; the page writes its own heading), the steps (paragraphs, formulas, tables, `@kmap:Y`), then one answer line for each output, `$\mathbf{Ans}\quad Y = ...$`, and nothing after them. In the statement the text before the `Sol` line and around the block is the statement. `@kmap:Y` is the Karnaugh map of three variables (A on the side, BC across in Gray code, X for a don't care), written from the data like `@table`.
+- **The circuit of the answer is not written.** The build finds the smallest circuit (AND, OR and NOT when no gate is named; NAND only; NOR only; only the form named by `form:`), shown as a diagram with its gate count and put on the boards by the Put-on-the-boards button. Write a task, run `npm run content`, and read `src/content/generated/lab-tasks-report.txt` (the statement, the truth row, the answer, the gate count and the chains checked of every task) to review it.
+- **What the build reads back from the steps**: every answer line (`Y = formula`, of A, B, C, `\overline{}`, `\cdot`, `+`, brackets) must do what the task asks for that output, with a don't care row taking either value, and every display formula made only of such formulas joined by `=` (an `aligned` block with `&=` and `\\`, `\text{...}` notes without formulas or braces inside) must be true in every part. Formulas that use anything else (`\sum`, arrows, words) are explanation and are left alone, so a note may not hold math: write it in plain text.
+- Build-time checks (all fail the build): the block is present, closed and well formed; one or two outputs, each given once; an output that is constant, or an XOR or XNOR; a figure with a gate of the wrong number of inputs, an unknown name or a gate that reads one that does not exist; a figure that is not larger than the answer (counted in two input gates); `only: nand` or `only: nor`, or `form: sop` or `pos`, with a statement that does not name it; no `Sol` line, no steps, no answer line, an answer line missing for an output, text after the answer lines; a wrong answer or a wrong step; a duplicate id.
+- Output: `src/content/generated/lab-tasks.json` (`LabTasksData` in `src/content/types.ts`) and `lab-tasks-report.txt`, both git-ignored. The app loads the JSON only when the lab opens its tasks (`loadLabTasks` in `src/content/loaders.ts`).

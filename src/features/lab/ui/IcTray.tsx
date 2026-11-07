@@ -14,6 +14,9 @@ type IcTrayProps = {
   /** Opens the drawer with the truth table, the circuit diagram and the equations of what is built */
   onOpenResults: () => void;
   resultsRef: RefObject<HTMLButtonElement | null>;
+  /** Opens the drawer with the tasks */
+  onOpenTasks: () => void;
+  tasksRef: RefObject<HTMLButtonElement | null>;
   /** A tap or the keyboard: put this chip on a free place of a breadboard */
   onPlace: (type: IcType) => void;
   /** A drag out of the tray: the board takes over the pointer; `onEnd` says whether it moved */
@@ -31,6 +34,8 @@ export function IcTray({
   diagramsRef,
   onOpenResults,
   resultsRef,
+  onOpenTasks,
+  tasksRef,
   onPlace,
   onDragStart,
 }: IcTrayProps) {
@@ -161,6 +166,17 @@ export function IcTray({
         onClick={onOpenResults}
       >
         <Icon name="table" />
+      </button>
+      <button
+        ref={tasksRef}
+        type="button"
+        aria-haspopup="dialog"
+        aria-label={UI_TEXT.labTasksOpen}
+        title={UI_TEXT.labTasksOpen}
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        onClick={onOpenTasks}
+      >
+        <Icon name="tasks" />
       </button>
     </div>
   );

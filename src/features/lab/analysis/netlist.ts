@@ -36,13 +36,17 @@ export type NetGate = {
   inputs: Signal[];
   /** Pin 14 is on +5V and pin 7 is on GND */
   powered: boolean;
+  /** A name to draw instead of the chip and gate number (for the gates of a lab task) */
+  label?: string;
+  /** What to write under the label instead of the chip type */
+  subLabel?: string;
 };
 
 export type Netlist = {
   /** The gates that lead to the chosen LEDs, each after the gates it reads (when there is no feedback) */
   gates: NetGate[];
   /** The chosen LEDs and what drives each */
-  outputs: { led: number; source: Signal }[];
+  outputs: { led: number; source: Signal; name?: string }[];
   /** Every LED with a wire to it, in order: what can be chosen */
   wiredLeds: number[];
   /** The switches that reach the chosen LEDs, from the lowest */

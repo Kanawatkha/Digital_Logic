@@ -163,3 +163,63 @@ describe('circuit: with the simulator', () => {
     expect(sim(state).warnings).toContainEqual({ kind: 'unsupportedSupply', socket: '-12V' });
   });
 });
+
+describe('circuit: replacing what is on the boards', () => {
+  const wire = (from: string, to: string) => ({
+    from,
+    to,
+    color: 'blue' as const,
+    bend: { x: 2, y: 3 },
+  });
+
+  it('puts chips and wires in place of the ones there, as one step that undo takes back', () => {
+    const before = run([
+      add('b0:c1:a', 'b0:c9:a'),
+      { type: 'placeIc', icType: '7404', board: 1, col: 3 },
+    ]);
+    const after = circuitReducer(before, {
+      type: 'replace',
+      ics: [
+        { type: '7408', board: 0, col: 11 },
+        { type: '7432', board: 0, col: 25 },
+      ],
+      wires: [wire('power:+5V:0', 'b0:c11:b'), wire('sw0:0', 'b0:c11:i')],
+    });
+    expect(after.ics.map((ic) => ic.type)).toEqual(['7408', '7432']);
+    expect(after.wires.map((w) => w.from)).toEqual(['power:+5V:0', 'sw0:0']);
+    expect(after.wires[0]).toMatchObject({ color: 'blue', bend: { x: 2, y: 3 } });
+    expect(after.selected).toBeNull();
+    // every id is new, so nothing mixes with the history
+    const old = new Set([...before.wires.map((w) => w.id), ...before.ics.map((ic) => ic.id)]);
+    for (const part of [...after.wires, ...after.ics]) expect(old.has(part.id)).toBe(false);
+    // one undo gives the old circuit back, one redo the new
+    const undone = circuitReducer(after, { type: 'undo' });
+    expect(undone.wires).toEqual(before.wires);
+    expect(undone.ics).toEqual(before.ics);
+    expect(circuitReducer(undone, { type: 'redo' }).wires).toEqual(after.wires);
+  });
+
+  it('leaves out a chip that does not fit and a wire that has no free end', () => {
+    const state = circuitReducer(initialCircuit, {
+      type: 'replace',
+      ics: [
+        { type: '7408', board: 0, col: 11 },
+        // on the legs of the first
+        { type: '7432', board: 0, col: 12 },
+        // not on a board
+        { type: '7404', board: 9, col: 1 },
+      ],
+      wires: [
+        wire('power:+5V:0', 'b0:c11:b'),
+        // the same socket again
+        wire('power:+5V:0', 'b0:c12:b'),
+        // the same wire end as itself
+        wire('sw0:0', 'sw0:0'),
+        // a point that is not on the boards
+        wire('nowhere', 'b0:c13:b'),
+      ],
+    });
+    expect(state.ics).toHaveLength(1);
+    expect(state.wires).toHaveLength(1);
+  });
+});

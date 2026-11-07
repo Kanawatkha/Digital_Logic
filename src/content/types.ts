@@ -74,3 +74,48 @@ export type ManifestEntry = {
 export type Manifest = {
   collections: Record<Collection, ManifestEntry[]>;
 };
+
+// ---------------------------------------------------------------- lab tasks
+
+/** A gate of a lab task: its inputs are A, B, C, 0, 1 or the name of another gate. */
+export type LabGate = { name: string; kind: 'NOT' | 'AND' | 'OR' | 'NAND' | 'NOR'; inputs: string[] };
+
+/** Gates by name and the signal that drives each output. A gate of a figure has 2 or 3 inputs, one of a solution 2. */
+export type LabNetlist = { gates: LabGate[]; outputs: Record<string, string> };
+
+export type LabTaskOutput = {
+  name: string;
+  /** What the output must be in rows 0 to 7 (A is the top bit): 1, 0, or x when it does not matter */
+  cells: ('0' | '1' | 'x')[];
+};
+
+export type LabTask = {
+  /** Stable, for example "03.2": file number, then place in the file */
+  id: string;
+  /** Place in the file, from 1 */
+  number: number;
+  title: Inline[];
+  /** The statement: text, formulas and tables */
+  statement: Block[];
+  outputs: LabTaskOutput[];
+  /** The only kind of chip that may be used, or null */
+  only: 'nand' | 'nor' | null;
+  /** The circuit given in the statement, drawn from this */
+  figure: LabNetlist | null;
+  /** The worked solution written in the Markdown, up to the answer */
+  steps: Block[];
+  /** The answer lines written in the Markdown, one for each output */
+  answer: Block[];
+  /** The circuit of the answer: a smallest circuit found by the build, its gates and its simplified equations */
+  solution: { netlist: LabNetlist; gates: number; equations: Record<string, string> };
+};
+
+export type LabTaskGroup = {
+  /** The file number, for example "03" */
+  id: string;
+  title: Inline[];
+  intro: Block[];
+  tasks: LabTask[];
+};
+
+export type LabTasksData = { groups: LabTaskGroup[] };

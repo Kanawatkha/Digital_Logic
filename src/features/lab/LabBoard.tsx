@@ -20,6 +20,8 @@ import { IC_TYPES, type IcType } from './sim/ics';
 import { icNotes } from './sim/notes';
 import { circuitReducer, findFreeSlot } from './state/circuit';
 import { loadCircuit, saveCircuit } from './state/storage';
+import type { PlacedSolution } from './tasks/place';
+import { TasksDrawer } from './tasks/TasksDrawer';
 import { IcDiagramDrawer } from './ui/IcDiagramDrawer';
 import { IcTray } from './ui/IcTray';
 import { ResultsDrawer } from './ui/ResultsDrawer';
@@ -28,6 +30,7 @@ import { describePoint } from './ui/pointName';
 import { ToolsToggle } from './ui/ToolsToggle';
 import { useMinWidth } from './ui/useMinWidth';
 import { usePresence } from './ui/usePresence';
+import { ExamTimer } from './ui/ExamTimer';
 import { Warnings } from './ui/Warnings';
 import { WireToolbar } from './ui/WireToolbar';
 import { arrangeWires } from './wire/arrange';
@@ -43,10 +46,12 @@ const TOOLS_ID = 'lab-tools';
  * shrinks: the strip moves to the bottom of the screen and the tools button to the navbar. Under
  * `WIDE_STRIP_MIN` the strip itself stacks its LEDs under the switches.
  */
-const COLORS_IN_ROW_MIN = 1660;
-const CHIPS_IN_ROW_MIN = 1400;
-const ONE_ROW_MIN = 1190;
+const COLORS_IN_ROW_MIN = 1706;
+const CHIPS_IN_ROW_MIN = 1446;
+const ONE_ROW_MIN = 1236;
 const WIDE_STRIP_MIN = 560;
+/** Under this width (the `md` of the site) the screen is a phone: the warnings button is at the top */
+const MD_MIN = 768;
 /** Under this width the wire toolbar cannot hold arrange, paint and straighten as three buttons: they fold into one */
 const INLINE_WIRE_TOOLS_MIN = 372;
 
@@ -92,9 +97,16 @@ export function LabBoard() {
   const diagramsButton = useRef<HTMLButtonElement>(null);
   const [resultsOpen, setResultsOpen] = useState(false);
   const resultsButton = useRef<HTMLButtonElement>(null);
+  // the tasks: what was open last (the task, and the kinds that are unfolded in the list) is kept while the drawer is closed
+  const [tasksOpen, setTasksOpen] = useState(false);
+  const [taskId, setTaskId] = useState<string | null>(null);
+  const [openKinds, setOpenKinds] = useState<ReadonlySet<string>>(new Set());
+  const tasksButton = useRef<HTMLButtonElement>(null);
   const oneRow = useMinWidth(ONE_ROW_MIN);
   const wideStrip = useMinWidth(WIDE_STRIP_MIN);
   const inlineWireTools = useMinWidth(INLINE_WIRE_TOOLS_MIN);
+  // on a phone the warnings button stays at the top right: at the end of the row of the chips while the tools are shown, in the first row when they are folded
+  const phone = !useMinWidth(MD_MIN);
   const tool = useWireTool({
     containerRef,
     toBoard,
@@ -177,7 +189,7 @@ export function LabBoard() {
 
   const onKeyDown = (event: KeyboardEvent) => {
     // a drawer has the keys while it is open
-    if (diagramsOpen || resultsOpen) return;
+    if (diagramsOpen || resultsOpen || tasksOpen) return;
     if (event.ctrlKey || event.metaKey) {
       const key = event.key.toLowerCase();
       if (key === 'z') dispatch({ type: event.shiftKey ? 'redo' : 'undo' });
@@ -202,6 +214,15 @@ export function LabBoard() {
     setResultsOpen(false);
     resultsButton.current?.focus();
   }, []);
+  const closeTasks = useCallback(() => {
+    setTasksOpen(false);
+    tasksButton.current?.focus();
+  }, []);
+  /** The answer goes on the boards, and the drawer gives them back to be looked at */
+  const loadSolution = (placed: PlacedSolution) => {
+    dispatch({ type: 'replace', ics: placed.ics, wires: placed.wires });
+    closeTasks();
+  };
   const closeDiagrams = useCallback(() => {
     setDiagramsOpen(false);
     diagramsButton.current?.focus();
@@ -334,6 +355,8 @@ export function LabBoard() {
                 diagramsRef={diagramsButton}
                 onOpenResults={() => setResultsOpen(true)}
                 resultsRef={resultsButton}
+                onOpenTasks={() => setTasksOpen(true)}
+                tasksRef={tasksButton}
                 onPlace={placeChip}
                 onDragStart={tool.startTrayDrag}
               />
@@ -347,9 +370,20 @@ export function LabBoard() {
                 {strip}
               </div>
             ) : null}
+            {phone ? (
+              <div className="pointer-events-auto ml-auto">
+                <Warnings warnings={result.warnings} ics={ics} placement="bottom" align="right" />
+              </div>
+            ) : null}
           </div>
         ) : null}
       </div>
+
+      {phone && !tools.shown ? (
+        <div className="pointer-events-auto absolute top-3 right-3">
+          <Warnings warnings={result.warnings} ics={ics} placement="bottom" align="right" />
+        </div>
+      ) : null}
 
       {/* the bottom of the screen: the keyboard hint, the warnings, the zoom buttons, and, on a window too narrow for one row, the switches and LEDs */}
       <div className="pointer-events-none absolute inset-x-3 bottom-3 flex flex-col gap-2 md:inset-x-4 md:bottom-4">
@@ -370,8 +404,9 @@ export function LabBoard() {
             {strip}
           </div>
         ) : null}
-        <div className="flex items-end justify-between gap-2">
-          <Warnings warnings={result.warnings} ics={ics} />
+        <div className="flex flex-wrap items-end justify-between gap-2">
+          {phone ? null : <Warnings warnings={result.warnings} ics={ics} />}
+          <ExamTimer />
           <ViewButtons
             percent={percent}
             onZoomIn={zoomIn}
@@ -382,6 +417,15 @@ export function LabBoard() {
         </div>
       </div>
       <ResultsDrawer open={resultsOpen} onClose={closeResults} circuit={live} />
+      <TasksDrawer
+        open={tasksOpen}
+        onClose={closeTasks}
+        taskId={taskId}
+        onSelect={setTaskId}
+        openKinds={openKinds}
+        onOpenKinds={setOpenKinds}
+        onLoadSolution={loadSolution}
+      />
       <IcDiagramDrawer open={diagramsOpen} onClose={closeDiagrams} onBoard={onBoard} />
       <p role="status" aria-live="polite" aria-label={UI_TEXT.labSummary} className="sr-only">
         {summary}

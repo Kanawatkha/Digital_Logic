@@ -697,6 +697,31 @@ describe('LabPage board', () => {
       expect(screen.queryByRole('group', { name: 'สวิตช์และ LED' })).not.toBeInTheDocument();
     });
 
+    it('keeps the warnings button at the top: at the right end of the row of the chips, and in the first row when the tools are folded', async () => {
+      await openBoard();
+      fireEvent.click(screen.getByRole('button', { name: '7404 NOT' }));
+      const tools = document.getElementById('lab-tools')!;
+      const button = screen.getByRole('button', { name: /^คำเตือนของวงจร: \d+$/ });
+      expect(tools.contains(button)).toBe(true);
+      // its box takes the rest of the row, and presses pass through it
+      expect(button.closest('#lab-tools > div')?.className).toContain('ml-auto');
+      // the list opens under the button, lined up with its right edge
+      fireEvent.click(button);
+      const panel = document.querySelector('[data-placement]');
+      expect(panel?.getAttribute('data-placement')).toBe('bottom');
+      expect(panel?.className).toContain('right-0');
+      // folded tools: it stays at the top, now at the right of the first row, and still opens downward
+      fireEvent.click(screen.getByRole('button', { name: 'ซ่อนเครื่องมือ' }));
+      const folded = screen.getByRole('button', { name: /^คำเตือนของวงจร: \d+$/ });
+      expect(document.getElementById('lab-tools')).toBeNull();
+      expect(folded.closest('.absolute')?.className).toContain('top-3');
+      expect(folded.closest('.absolute')?.className).toContain('right-3');
+      fireEvent.click(folded);
+      expect(document.querySelector('[data-placement]')?.getAttribute('data-placement')).toBe(
+        'bottom',
+      );
+    });
+
     it('puts the tools button in the navbar when the page has a place for it', async () => {
       const slot = document.createElement('div');
       slot.id = NAVBAR_SLOT_ID;

@@ -11,6 +11,8 @@ type ResultDiagramProps = {
   scale: number | null;
   /** For a screen reader: the circuit in words */
   description: string;
+  /** Say which switch a box is ("สวิตช์ 1"); a task figure only has A, B and C */
+  switchNames?: boolean;
 };
 
 const line = (points: readonly { x: number; y: number }[]) =>
@@ -33,13 +35,15 @@ function Edge({ edge, value }: { edge: LEdge; value: boolean | null }) {
   );
 }
 
-function SourceBox({ node }: { node: LNode }) {
+function SourceBox({ node, switchNames }: { node: LNode; switchNames: boolean }) {
   const width = node.outX - node.x;
   const bad = node.kind === 'conflict';
   const loose = node.kind === 'floating';
   const sub =
     node.kind === 'input'
-      ? `${UI_TEXT.labResultsSwitch} ${(node.switchIndex ?? 0) + 1}`
+      ? switchNames
+        ? `${UI_TEXT.labResultsSwitch} ${(node.switchIndex ?? 0) + 1}`
+        : ''
       : node.kind === 'const'
         ? node.value
           ? UI_TEXT.labResultsSupply
@@ -116,7 +120,7 @@ function GateShape({ node }: { node: LNode }) {
         fontSize={12}
         className={`select-none ${gate.powered ? 'fill-muted' : 'fill-error'}`}
       >
-        {gate.powered ? gate.type : UI_TEXT.labResultsNoPower}
+        {gate.powered ? (gate.subLabel ?? gate.type) : UI_TEXT.labResultsNoPower}
       </text>
     </g>
   );
@@ -147,7 +151,7 @@ function Led({ node, lit }: { node: LNode; lit: boolean | null }) {
         fontWeight={600}
         className="fill-ink select-none"
       >
-        LED {node.label}
+        {node.title ?? `LED ${node.label}`}
       </text>
     </g>
   );
@@ -158,7 +162,7 @@ function Led({ node, lit }: { node: LNode; lit: boolean | null }) {
  * right. A wire that is carrying a 1 now is orange, a 0 is black.
  */
 export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(function ResultDiagram(
-  { layout, value, scale, description },
+  { layout, value, scale, description, switchNames = true },
   ref,
 ) {
   // a signal that feeds more than one wire is marked where it leaves
@@ -191,7 +195,7 @@ export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(funct
           const feeder = into.get(node.id);
           return <Led key={node.id} node={node} lit={feeder ? value(feeder.signal) : null} />;
         }
-        return <SourceBox key={node.id} node={node} />;
+        return <SourceBox key={node.id} node={node} switchNames={switchNames} />;
       })}
     </svg>
   );
