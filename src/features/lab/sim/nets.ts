@@ -1,7 +1,7 @@
 /** Union-find over net keys: points that are connected end up with the same root. */
 export type Nets = {
-  /** Joins the nets of two keys. */
-  union: (a: string, b: string) => void;
+  /** Joins the nets of two keys. Returns false when they were one net already (the join added nothing). */
+  union: (a: string, b: string) => boolean;
   /** The representative key of the net a key belongs to. */
   root: (key: string) => string;
 };
@@ -29,7 +29,9 @@ export function createNets(): Nets {
     union(a, b) {
       const rootA = root(a);
       const rootB = root(b);
-      if (rootA !== rootB) parent.set(rootB, rootA);
+      if (rootA === rootB) return false;
+      parent.set(rootB, rootA);
+      return true;
     },
   };
 }

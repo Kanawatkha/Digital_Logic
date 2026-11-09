@@ -11,155 +11,77 @@ import {
   wiredExpression,
 } from '../analysis/expression';
 import { buildNetlist, type Netlist } from '../analysis/netlist';
+import { saveBlob, svgToPng } from '../analysis/exportPng';
 import {
   buildTruthTable,
   currentRow,
   inputName,
   mintermsOf,
-  tableAsText,
   type TruthTable,
 } from '../analysis/truthTable';
 import type { Circuit } from '../sim/evaluate';
 import { simulate } from '../sim/evaluate';
+import { CopyButton } from './CopyButton';
 import { Drawer } from './Drawer';
+import { KmapView } from './KmapView';
 import { Notation } from './Notation';
+import { TruthTableView } from './TruthTableView';
+import { warningMessages } from './warningMessages';
 
 type ResultsDrawerProps = {
   open: boolean;
   onClose: () => void;
   circuit: Circuit;
+  /** Sets switches (from 0) to positions: a row of the table or a cell of the map was pressed */
+  onSetSwitches?: (changes: readonly { index: number; up: boolean }[]) => void;
+  /** Shows a chip on the board (its id), after the drawer has been closed */
+  onLocate?: (ic: string) => void;
 };
 
-const TABS = ['table', 'circuit', 'equations'] as const;
+const TABS = ['table', 'circuit', 'equations', 'kmap'] as const;
 type Tab = (typeof TABS)[number];
 const TAB_TEXT: Record<Tab, string> = {
   table: UI_TEXT.labResultsTable,
   circuit: UI_TEXT.labResultsCircuit,
   equations: UI_TEXT.labResultsEquations,
+  kmap: UI_TEXT.labResultsKmap,
 };
 
 const ZOOM_STEP = 1.25;
 
-function Problems({ netlist, table }: { netlist: Netlist; table: TruthTable | null }) {
-  const lines: string[] = [];
-  if (netlist.faults.short) lines.push(UI_TEXT.labResultsShort);
-  if (netlist.faults.conflict || table?.problems.conflict) lines.push(UI_TEXT.labResultsConflict);
-  if (netlist.faults.unpowered.length > 0) {
-    lines.push(
-      `${UI_TEXT.labResultsUnpowered} ${netlist.faults.unpowered.map((id) => id.toUpperCase()).join(', ')}`,
+/** What is wrong with the circuit, in the words of the warnings on the board (suggestions about the wiring are left to the board). */
+function Problems({ circuit, table }: { circuit: Circuit; table: TruthTable | null }) {
+  const { warnings } = useMemo(() => simulate(circuit), [circuit]);
+  const lines = useMemo(() => {
+    const found = warningMessages(warnings, circuit.ics).filter(
+      (message) => message.level !== 'hint' && message.kind !== 'redundantWire',
     );
-  }
-  if (netlist.faults.floating) lines.push(UI_TEXT.labResultsFloating);
+    // the table finds a conflict that shows only for some switches
+    if (table?.problems.conflict && !found.some((message) => message.kind === 'conflict')) {
+      found.push({
+        text: UI_TEXT.labResultsConflict,
+        level: 'severe',
+        kind: 'conflict',
+        soft: false,
+      });
+    }
+    return found.sort((a, b) => Number(b.level === 'severe') - Number(a.level === 'severe'));
+  }, [warnings, circuit.ics, table]);
   if (lines.length === 0) return null;
   return (
     <ul className="mb-3 flex flex-col gap-1" aria-label={UI_TEXT.labWarnings}>
-      {lines.map((line) => (
+      {lines.map(({ text, level }) => (
         <li
-          key={line}
-          className="type-nav flex items-start gap-2 rounded-md bg-warning px-3 py-2 text-ink"
+          key={text}
+          className={`type-nav flex items-start gap-2 rounded-md px-3 py-2 ${
+            level === 'severe' ? 'bg-error text-on-primary' : 'bg-warning text-ink'
+          }`}
         >
           <Icon name="alert" size={18} className="mt-0.5 shrink-0" />
-          {line}
+          {text}
         </li>
       ))}
     </ul>
-  );
-}
-
-function TableView({ table, switches }: { table: TruthTable; switches: readonly boolean[] }) {
-  const [copied, setCopied] = useState(false);
-  const now = currentRow(switches, table.inputs);
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(tableAsText(table));
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1800);
-    } catch {
-      setCopied(false);
-    }
-  };
-  return (
-    <div>
-      <div className="mb-2 flex items-center justify-between gap-2">
-        <p className="type-caption text-muted">
-          {table.inputs.length === 0
-            ? UI_TEXT.labResultsNoInputs
-            : `${table.rows.length} แถว · ${UI_TEXT.labResultsNow} ${now}`}
-        </p>
-        <button
-          type="button"
-          onClick={copy}
-          className="type-caption inline-flex h-9 items-center gap-1.5 rounded-md border border-hairline bg-canvas px-3 text-ink active:bg-surface-card"
-        >
-          <Icon name={copied ? 'check' : 'copy'} size={16} />
-          {copied ? UI_TEXT.labResultsCopied : UI_TEXT.labResultsCopy}
-        </button>
-      </div>
-      <div className="max-h-[52dvh] overflow-auto rounded-lg border border-hairline">
-        <table className="w-full border-collapse text-center tabular-nums">
-          <caption className="sr-only">{UI_TEXT.labResultsTable}</caption>
-          <thead className="sticky top-0 z-10 bg-surface-card">
-            <tr>
-              <th scope="col" className="type-caption px-3 py-2 text-muted">
-                #
-              </th>
-              {table.inputs.map((k, i) => (
-                <th
-                  key={k}
-                  scope="col"
-                  className="type-caption border-s border-hairline px-3 py-2 text-ink"
-                >
-                  {inputName(i)}
-                  <span className="block text-[10px] font-normal text-muted">
-                    {UI_TEXT.labResultsSwitch} {k + 1}
-                  </span>
-                </th>
-              ))}
-              {table.outputs.map((led, i) => (
-                <th
-                  key={led}
-                  scope="col"
-                  className={`type-caption px-3 py-2 text-ink ${i === 0 ? 'border-s-2 border-ink' : 'border-s border-hairline'}`}
-                >
-                  LED {led}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {table.rows.map((row, index) => (
-              <tr
-                key={index}
-                aria-current={index === now ? 'true' : undefined}
-                className={`border-t border-hairline-soft ${index === now ? 'bg-primary/15' : ''}`}
-              >
-                <th scope="row" className="type-caption px-3 py-1.5 font-normal text-muted">
-                  {index}
-                </th>
-                {row.values.map((v, i) => (
-                  <td
-                    key={i}
-                    className="type-body-sm border-s border-hairline-soft px-3 py-1.5 text-body"
-                  >
-                    {v ? 1 : 0}
-                  </td>
-                ))}
-                {row.outputs.map((v, i) => (
-                  <td
-                    key={i}
-                    className={`type-body-sm px-3 py-1.5 font-medium ${
-                      i === 0 ? 'border-s-2 border-ink' : 'border-s border-hairline-soft'
-                    } ${v ? 'text-error' : 'text-ink'}`}
-                  >
-                    {v ? 1 : 0}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
   );
 }
 
@@ -173,8 +95,18 @@ function EquationsView({
   nameOf: (switchIndex: number) => string;
 }) {
   const n = table.inputs.length;
+  const simplified = (led: number) =>
+    `LED${led} = ${simplifiedExpression(n, mintermsOf(table, led))}`;
   return (
     <div className="flex flex-col gap-3">
+      {netlist.outputs.length > 1 ? (
+        <div className="flex justify-end">
+          <CopyButton
+            text={netlist.outputs.map((output) => simplified(output.led)).join('\n')}
+            label={UI_TEXT.labResultsCopyAllEq}
+          />
+        </div>
+      ) : null}
       {netlist.outputs.map((output) => {
         const ones = mintermsOf(table, output.led);
         const wired = wiredExpression(netlist, output.source, nameOf);
@@ -188,17 +120,29 @@ function EquationsView({
             <dl className="flex flex-col gap-2">
               <div>
                 <dt className="type-caption text-muted">{UI_TEXT.labResultsSimplified}</dt>
-                <dd className="rounded-md bg-canvas px-3 py-2 font-mono text-[15px] text-ink">
-                  <Notation text={`LED${output.led} = ${simplifiedExpression(n, ones)}`} />
+                <dd className="flex items-center justify-between gap-2 rounded-md bg-canvas py-1 ps-3 pe-1 font-mono text-[15px] text-ink">
+                  <Notation text={simplified(output.led)} />
+                  <CopyButton
+                    iconOnly
+                    text={simplified(output.led)}
+                    label={`${UI_TEXT.labResultsCopyEq} ${UI_TEXT.labResultsSimplified}`}
+                  />
                 </dd>
               </div>
               <div>
                 <dt className="type-caption text-muted">{UI_TEXT.labResultsWired}</dt>
-                <dd className="rounded-md bg-canvas px-3 py-2 font-mono text-[15px] break-words text-ink">
+                <dd className="flex items-center justify-between gap-2 rounded-md bg-canvas py-1 ps-3 pe-1 font-mono text-[15px] break-words text-ink">
                   {wired === null ? (
-                    <span className="font-sans text-muted">{UI_TEXT.labResultsNoWired}</span>
+                    <span className="py-1 font-sans text-muted">{UI_TEXT.labResultsNoWired}</span>
                   ) : (
-                    <Notation text={`LED${output.led} = ${wired}`} />
+                    <>
+                      <Notation text={`LED${output.led} = ${wired}`} />
+                      <CopyButton
+                        iconOnly
+                        text={`LED${output.led} = ${wired}`}
+                        label={`${UI_TEXT.labResultsCopyEq} ${UI_TEXT.labResultsWired}`}
+                      />
+                    </>
                   )}
                 </dd>
               </div>
@@ -218,13 +162,26 @@ function CircuitView({
   netlist,
   circuit,
   nameOf,
+  onLocate,
 }: {
   netlist: Netlist;
   circuit: Circuit;
   nameOf: (switchIndex: number) => string;
+  onLocate?: (ic: string) => void;
 }) {
   const layout = useMemo(() => layoutDiagram(netlist, nameOf), [netlist, nameOf]);
   const result = useMemo(() => simulate(circuit), [circuit]);
+  const [saveFailed, setSaveFailed] = useState(false);
+  const savePicture = async () => {
+    const element = svg.current;
+    if (!element) return;
+    try {
+      saveBlob(await svgToPng(element), 'circuit.png');
+      setSaveFailed(false);
+    } catch {
+      setSaveFailed(true);
+    }
+  };
   // null fits the width of the drawer; the buttons zoom from wherever it is
   const [scale, setScale] = useState<number | null>(null);
   const svg = useRef<SVGSVGElement>(null);
@@ -252,8 +209,20 @@ function CircuitView({
   return (
     <div>
       <div className="mb-2 flex items-center justify-between gap-2">
-        <p className="type-caption text-muted">{UI_TEXT.labResultsLegend}</p>
+        <p className="type-caption text-muted">
+          {UI_TEXT.labResultsLegend}
+          {onLocate ? `. ${UI_TEXT.labResultsGateHint}` : ''}
+        </p>
         <div className="flex items-center rounded-lg border border-hairline bg-canvas p-0.5">
+          <button
+            type="button"
+            className={zoomButton}
+            aria-label={UI_TEXT.labResultsSavePng}
+            title={UI_TEXT.labResultsSavePng}
+            onClick={savePicture}
+          >
+            <Icon name="download" size={18} />
+          </button>
           <button
             type="button"
             className={zoomButton}
@@ -287,14 +256,24 @@ function CircuitView({
           value={value}
           scale={scale}
           description={description}
+          onGate={onLocate}
         />
       </div>
+      {saveFailed ? (
+        <p role="alert" className="type-caption mt-2 text-error">
+          {UI_TEXT.labResultsSaveFailed}
+        </p>
+      ) : null}
     </div>
   );
 }
 
 /** What is inside the drawer: it is made only while the drawer is open. */
-function ResultsBody({ circuit }: { circuit: Circuit }) {
+function ResultsBody({
+  circuit,
+  onSetSwitches,
+  onLocate,
+}: Pick<ResultsDrawerProps, 'circuit' | 'onSetSwitches' | 'onLocate'>) {
   const [tab, setTab] = useState<Tab>('table');
   const [off, setOff] = useState<ReadonlySet<number>>(new Set());
   const ids = useId();
@@ -342,6 +321,23 @@ function ResultsBody({ circuit }: { circuit: Circuit }) {
     });
 
   const empty = everything.wiredLeds.length === 0;
+  // what to do next depends on how far the circuit is
+  const emptyText =
+    ics.length === 0 && wires.length === 0
+      ? UI_TEXT.labResultsEmptyStart
+      : wires.length === 0
+        ? UI_TEXT.labResultsEmptyWire
+        : UI_TEXT.labResultsEmpty;
+
+  // a row of the table (or a cell of the map) sets the switches that are its inputs
+  const now = table ? currentRow(circuit.switches, table.inputs) : 0;
+  const pickRow = (row: number) => {
+    if (!table || !onSetSwitches) return;
+    const n = table.inputs.length;
+    onSetSwitches(
+      table.inputs.map((index, i) => ({ index, up: Boolean((row >> (n - 1 - i)) & 1) })),
+    );
+  };
   return (
     <>
       <div
@@ -378,7 +374,7 @@ function ResultsBody({ circuit }: { circuit: Circuit }) {
         className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain p-4 outline-none md:p-5"
       >
         {empty ? (
-          <p className="type-body-md text-muted">{UI_TEXT.labResultsEmpty}</p>
+          <p className="type-body-md text-muted">{emptyText}</p>
         ) : (
           <>
             <div
@@ -403,20 +399,30 @@ function ResultsBody({ circuit }: { circuit: Circuit }) {
                 </button>
               ))}
             </div>
-            <Problems netlist={netlist} table={table} />
-            {chosen.length === 0 ? (
-              <p className="type-body-md text-muted">{UI_TEXT.labResultsNoOutputs}</p>
-            ) : tab === 'circuit' ? (
-              <CircuitView netlist={netlist} circuit={circuit} nameOf={nameOf} />
-            ) : netlist.feedback || !table ? (
-              <p className="type-body-md rounded-md bg-surface-card px-3 py-2 text-body">
-                {UI_TEXT.labResultsFeedback}
-              </p>
-            ) : tab === 'table' ? (
-              <TableView table={table} switches={circuit.switches} />
-            ) : (
-              <EquationsView netlist={netlist} table={table} nameOf={nameOf} />
-            )}
+            <Problems circuit={circuit} table={table} />
+            {/* a tab comes in with a fade (a fade only: a move would flash the scroll bars of the drawer) */}
+            <div key={tab} className="lab-fade">
+              {chosen.length === 0 ? (
+                <p className="type-body-md text-muted">{UI_TEXT.labResultsNoOutputs}</p>
+              ) : tab === 'circuit' ? (
+                <CircuitView
+                  netlist={netlist}
+                  circuit={circuit}
+                  nameOf={nameOf}
+                  onLocate={onLocate}
+                />
+              ) : netlist.feedback || !table ? (
+                <p className="type-body-md rounded-md bg-surface-card px-3 py-2 text-body">
+                  {UI_TEXT.labResultsFeedback}
+                </p>
+              ) : tab === 'table' ? (
+                <TruthTableView table={table} switches={circuit.switches} onPickRow={pickRow} />
+              ) : tab === 'kmap' ? (
+                <KmapView table={table} now={now} onPickRow={pickRow} />
+              ) : (
+                <EquationsView netlist={netlist} table={table} nameOf={nameOf} />
+              )}
+            </div>
           </>
         )}
       </div>
@@ -429,7 +435,13 @@ function ResultsBody({ circuit }: { circuit: Circuit }) {
  * of the LEDs that have a wire, the circuit as a gate diagram, and the equations. All three are made
  * from the wires and chips, so they say what the simulator would do.
  */
-export function ResultsDrawer({ open, onClose, circuit }: ResultsDrawerProps) {
+export function ResultsDrawer({
+  open,
+  onClose,
+  circuit,
+  onSetSwitches,
+  onLocate,
+}: ResultsDrawerProps) {
   return (
     <Drawer
       open={open}
@@ -438,7 +450,7 @@ export function ResultsDrawer({ open, onClose, circuit }: ResultsDrawerProps) {
       hint={UI_TEXT.labResultsHint}
       size="lg"
     >
-      <ResultsBody circuit={circuit} />
+      <ResultsBody circuit={circuit} onSetSwitches={onSetSwitches} onLocate={onLocate} />
     </Drawer>
   );
 }

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { UI_TEXT } from '@/config/site';
 import { IC_OVERHANG, icFrame, icFrameAt, type IcFrame, type Position } from '../board/geometry';
 import { CHANNEL_GAP, PITCH } from '../board/layout';
@@ -8,6 +10,7 @@ import type { IcNote } from '../sim/notes';
 import type { Preview } from './useWireTool';
 
 const NOTE_TEXT: Record<IcNote, string> = {
+  reversed: UI_TEXT.labIcReversed,
   unpowered: UI_TEXT.labIcNoPower,
   floating: UI_TEXT.labIcFloating,
   unstable: UI_TEXT.labIcUnstable,
@@ -146,7 +149,17 @@ function Chip({ frame, type, scale, opacity = 1, outline, tint = false }: ChipPr
   );
 }
 
-function Badge({ frame, text, scale }: { frame: IcFrame; text: string; scale: number }) {
+function Badge({
+  frame,
+  text,
+  scale,
+  danger = false,
+}: {
+  frame: IcFrame;
+  text: string;
+  scale: number;
+  danger?: boolean;
+}) {
   // keeps a readable size on screen, between 8 and 18 board px
   const size = Math.min(18, Math.max(8, 11 / scale));
   const width = text.length * size * 0.62 + size;
@@ -160,7 +173,7 @@ function Badge({ frame, text, scale }: { frame: IcFrame; text: string; scale: nu
         width={width}
         height={size * 1.5}
         rx={size * 0.5}
-        fill={EDIT_COLORS.badge}
+        fill={danger ? EDIT_COLORS.invalid : EDIT_COLORS.badge}
         stroke={EDIT_COLORS.badgeText}
         strokeWidth={0.6}
       />
@@ -194,6 +207,21 @@ type IcLayerProps = {
  */
 export function IcLayer({ ics, selected, notes, preview, scale }: IcLayerProps) {
   const held = preview?.kind === 'ic' ? preview : null;
+  // a chip that is new to the board drops in (one after the other when there are many); the chips
+  // that were there when the page opened do not
+  const [known, setKnown] = useState<ReadonlySet<string>>(() => new Set(ics.map((ic) => ic.id)));
+  const [fresh, setFresh] = useState<ReadonlyMap<string, number>>(new Map());
+  const ids = new Set(ics.map((ic) => ic.id));
+  const unseen = ics.filter((ic) => !known.has(ic.id));
+  const gone = [...known].filter((id) => !ids.has(id));
+  if (unseen.length > 0 || gone.length > 0) {
+    setKnown(new Set([...known].filter((id) => ids.has(id)).concat(unseen.map((ic) => ic.id))));
+    setFresh((was) => {
+      const next = new Map([...was].filter(([id]) => ids.has(id)));
+      unseen.forEach((ic, order) => next.set(ic.id, order));
+      return next;
+    });
+  }
   let ghost: { frame: IcFrame; outline: string } | null = null;
   if (held) {
     const snapped = held.snap && icFrame(held.snap.board, held.snap.col);
@@ -213,7 +241,16 @@ export function IcLayer({ ics, selected, notes, preview, scale }: IcLayerProps) 
         if (!frame) return null;
         const note = notes[ic.id];
         return (
-          <g key={ic.id} data-ic-id={ic.id}>
+          <g
+            key={ic.id}
+            data-ic-id={ic.id}
+            className={fresh.has(ic.id) ? 'lab-chip-drop' : undefined}
+            style={
+              fresh.has(ic.id)
+                ? ({ '--i': Math.min(fresh.get(ic.id) ?? 0, 8) } as CSSProperties)
+                : undefined
+            }
+          >
             <Chip
               frame={frame}
               type={ic.type}
@@ -222,7 +259,12 @@ export function IcLayer({ ics, selected, notes, preview, scale }: IcLayerProps) 
               outline={ic.id === selected ? EDIT_COLORS.halo : undefined}
             />
             {note && held?.icId !== ic.id ? (
-              <Badge frame={frame} text={NOTE_TEXT[note]} scale={scale} />
+              <Badge
+                frame={frame}
+                text={NOTE_TEXT[note]}
+                scale={scale}
+                danger={note === 'reversed'}
+              />
             ) : null}
           </g>
         );

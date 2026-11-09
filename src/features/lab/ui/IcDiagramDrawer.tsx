@@ -5,14 +5,21 @@ import { UI_TEXT } from '@/config/site';
 import { IcDiagram, type DiagramFocus } from '../diagram/IcDiagram';
 import { gateHint, pinHint } from '../diagram/diagramText';
 import { buildIcDiagram } from '../diagram/pinDiagram';
+import type { PlacedIc, SimResult } from '../sim/evaluate';
 import { IC_TYPES, type IcType } from '../sim/ics';
 import { Drawer } from './Drawer';
+import { LiveChipPanel } from './LiveChipPanel';
 
 type IcDiagramDrawerProps = {
   open: boolean;
   onClose: () => void;
   /** How many of each chip sit on the breadboards now */
   onBoard: Readonly<Record<IcType, number>>;
+  /** The chips on the boards and what the simulator says about them: with them the drawer starts with the live view of a chip */
+  ics?: readonly PlacedIc[];
+  result?: SimResult;
+  /** The chip the live view starts on */
+  focusIc?: string | null;
 };
 
 const NO_FOCUS: DiagramFocus = { pin: null, gate: null };
@@ -59,7 +66,14 @@ function Card({ type, count, order }: { type: IcType; count: number; order: numb
  * The pin diagrams of the five chips in a drawer. A chip that sits on a breadboard is marked on its
  * card.
  */
-export function IcDiagramDrawer({ open, onClose, onBoard }: IcDiagramDrawerProps) {
+export function IcDiagramDrawer({
+  open,
+  onClose,
+  onBoard,
+  ics = [],
+  result,
+  focusIc = null,
+}: IcDiagramDrawerProps) {
   return (
     <Drawer
       open={open}
@@ -68,6 +82,12 @@ export function IcDiagramDrawer({ open, onClose, onBoard }: IcDiagramDrawerProps
       hint={UI_TEXT.labDiagramsHint}
     >
       <div className="grid min-h-0 flex-1 content-start gap-3 overflow-x-hidden overflow-y-auto overscroll-contain p-4 md:p-5">
+        {result && ics.length > 0 ? (
+          <>
+            <LiveChipPanel key={focusIc ?? ''} ics={ics} result={result} initial={focusIc} />
+            <h3 className="type-title-sm text-ink">{UI_TEXT.labPinsAll}</h3>
+          </>
+        ) : null}
         {IC_TYPES.map((type, order) => (
           <Card key={type} type={type} count={onBoard[type]} order={order} />
         ))}

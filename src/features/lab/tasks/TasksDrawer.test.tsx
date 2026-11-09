@@ -5,7 +5,7 @@ import { LabBoard } from '../LabBoard';
 import { resetLabTasks } from './useLabTasks';
 
 // the kinds whose tasks were asked for, in order
-const asked = vi.hoisted(() => ({ groups: [] as string[] }));
+const asked = vi.hoisted(() => ({ groups: [] as string[], failing: new Set<string>() }));
 
 // the tasks come from the content, built here the way `npm run content` builds them
 vi.mock('@/content/loaders', async (importOriginal) => {
@@ -18,6 +18,7 @@ vi.mock('@/content/loaders', async (importOriginal) => {
     loadLabTasksIndex: () => Promise.resolve(index),
     loadLabTaskGroup: (group: string) => {
       asked.groups.push(group);
+      if (asked.failing.has(group)) return Promise.reject(new Error('no chunk'));
       return Promise.resolve(data.groups.find((g) => g.id === group)?.tasks ?? []);
     },
   };
@@ -39,6 +40,7 @@ beforeAll(() => {
 
 beforeEach(() => {
   asked.groups.length = 0;
+  asked.failing.clear();
   localStorage.clear();
   resetLabTasks();
 });
@@ -205,6 +207,8 @@ describe('the tasks drawer of the lab', () => {
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAccessibleName('ซ่อนเฉลย');
     expect(within(dialog).getByText('Sol')).toBeInTheDocument();
+    // it is uncovered from the top down (a wipe and a fade: nothing that moves, so no scroll bar flashes)
+    expect(within(dialog).getByText('Sol').closest('.lab-wipe')).not.toBeNull();
     // the written answer line and the table of the answer
     expect(dialog.querySelectorAll('.katex').length).toBeGreaterThan(2);
     expect(within(dialog).getByText('Ans')).toBeInTheDocument();
@@ -349,5 +353,76 @@ describe('the tasks drawer of the lab', () => {
     expect(chips()).toBe(2);
     fireEvent.click(screen.getByRole('button', { name: 'ย้อนกลับ' }));
     expect(chips()).toBe(2);
+  });
+
+  describe('the filters and the random task, in the real list', () => {
+    const chosen = (dialog: HTMLElement, group: string, name: string) =>
+      within(within(dialog).getByRole('group', { name })).getByRole('button', { name: group });
+
+    it('narrow the list, and stay as they were left when a task is opened or the drawer is closed', async () => {
+      openLab();
+      const dialog = await openDrawer();
+      expect(within(dialog).getByRole('status')).toHaveTextContent('แสดง 88 จาก 88 ข้อ');
+      fireEvent.click(chosen(dialog, 'ยาก', 'ระดับ'));
+      // the file counts of the hard tasks: 3 in kind 1 and 1 in kind 4 (none in the others)
+      expect(within(dialog).getByRole('status')).toHaveTextContent('แสดง 4 จาก 88 ข้อ');
+      expect(within(dialog).getAllByRole('heading', { level: 3 })).toHaveLength(2);
+      // close and open again
+      fireEvent.keyDown(document, { key: 'Escape' });
+      const again = await openDrawer();
+      expect(chosen(again, 'ยาก', 'ระดับ')).toHaveAttribute('aria-pressed', 'true');
+      expect(within(again).getByRole('status')).toHaveTextContent('แสดง 4 จาก 88 ข้อ');
+      // open a task and come back
+      openKind(again, /สมการบูลีนขนาดใหญ่/);
+      fireEvent.click(within(again).getAllByRole('button', { name: /^ข้อ \d+ / })[0]!);
+      await within(again).findByRole('button', { name: 'กลับรายการโจทย์' });
+      fireEvent.click(within(again).getByRole('button', { name: 'กลับรายการโจทย์' }));
+      expect(chosen(again, 'ยาก', 'ระดับ')).toHaveAttribute('aria-pressed', 'true');
+      fireEvent.click(within(again).getByRole('button', { name: 'ล้างตัวกรอง' }));
+      expect(within(again).getByRole('status')).toHaveTextContent('แสดง 88 จาก 88 ข้อ');
+    });
+
+    it('open a task of the list by chance, one that passes the filter', async () => {
+      openLab();
+      const dialog = await openDrawer();
+      // the only hard task that allows every chip is in kind 1: the choice cannot be anything else
+      fireEvent.click(chosen(dialog, 'ยาก', 'ระดับ'));
+      fireEvent.click(chosen(dialog, 'ใช้ได้ทุกเกต', 'เกตที่ใช้'));
+      expect(within(dialog).getByRole('status')).toHaveTextContent('แสดง 1 จาก 88 ข้อ');
+      fireEvent.click(within(dialog).getByRole('button', { name: 'สุ่มโจทย์' }));
+      await within(dialog).findByRole('button', { name: 'กลับรายการโจทย์' });
+      expect(asked.groups).toEqual(['01']);
+      expect(within(dialog).getByText('ยาก')).toBeInTheDocument();
+    });
+  });
+
+  describe('when a kind of tasks cannot be loaded', () => {
+    it('says so, keeps the way back to the list, and loads it again the next time it is asked for', async () => {
+      openLab();
+      const dialog = await openDrawer();
+      asked.failing.add('01');
+      // the random task is the one of kind 1 when only that one passes the filter
+      fireEvent.click(
+        within(within(dialog).getByRole('group', { name: 'ระดับ' })).getByRole('button', {
+          name: 'ยาก',
+        }),
+      );
+      fireEvent.click(
+        within(within(dialog).getByRole('group', { name: 'เกตที่ใช้' })).getByRole('button', {
+          name: 'ใช้ได้ทุกเกต',
+        }),
+      );
+      fireEvent.click(within(dialog).getByRole('button', { name: 'สุ่มโจทย์' }));
+      expect(await within(dialog).findByRole('alert')).toHaveTextContent('โหลดโจทย์ไม่สำเร็จ');
+      // the list is one step away, with its filter as it was
+      fireEvent.click(within(dialog).getByRole('button', { name: 'กลับรายการโจทย์' }));
+      expect(within(dialog).queryByRole('alert')).not.toBeInTheDocument();
+      expect(within(dialog).getByRole('status')).toHaveTextContent('แสดง 1 จาก 88 ข้อ');
+      // the kind comes back: asking again loads it
+      asked.failing.clear();
+      fireEvent.click(within(dialog).getByRole('button', { name: 'สุ่มโจทย์' }));
+      expect(await within(dialog).findByRole('button', { name: 'ดูเฉลย' })).toBeInTheDocument();
+      expect(asked.groups.filter((g) => g === '01')).toHaveLength(2);
+    });
   });
 });

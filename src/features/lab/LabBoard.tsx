@@ -5,12 +5,16 @@ import { UI_TEXT } from '@/config/site';
 import { useLayer, useRestoreFocus } from '@/lib/layers';
 import type { LabMethodId } from '@/content/types';
 import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
+import { buildNetlist } from './analysis/netlist';
 import { BoardArt } from './board/BoardArt';
-import { icSlots } from './board/geometry';
+import { icFrame, icSlots, pointPosition } from './board/geometry';
 import { BOARD_SIZE } from './board/layout';
 import type { WireColor } from './board/palette';
 import { IcLayer } from './canvas/IcLayer';
+import { InputLabels } from './canvas/InputLabels';
+import { sceneToPng, saveBlob } from './analysis/exportPng';
 import { SCENE_ID } from './canvas/lens';
+import { LocatePulse, type Pulse } from './canvas/LocatePulse';
 import { Magnifier } from './canvas/Magnifier';
 import { useKeyboardWiring } from './canvas/useKeyboardWiring';
 import { useViewport } from './canvas/useViewport';
@@ -18,31 +22,49 @@ import { useWireTool } from './canvas/useWireTool';
 import { ViewButtons } from './canvas/ViewButtons';
 import { WireLayer } from './canvas/WireLayer';
 import { simulate } from './sim/evaluate';
+import { netOf } from './sim/netOf';
 import { IC_TYPES, type IcType } from './sim/ics';
 import { icNotes } from './sim/notes';
 import { circuitReducer, findFreeSlot } from './state/circuit';
+import {
+  addSaved,
+  cleanName,
+  entryCircuit,
+  loadSaved,
+  removeSaved,
+  writeSaved,
+  type SavedEntry,
+} from './state/savedCircuits';
 import type { LabAction } from './shortcuts';
 import { useLabShortcuts } from './useLabShortcuts';
 import { loadCircuit, saveCircuit } from './state/storage';
 import type { PlacedSolution } from './tasks/place';
+import { NO_FILTER, type TaskFilter } from './tasks/filter';
 import { TasksDrawer } from './tasks/TasksDrawer';
 import { IcDiagramDrawer } from './ui/IcDiagramDrawer';
 import { HelpDrawer } from './ui/HelpDrawer';
 import { IcTray } from './ui/IcTray';
 import { ResultsDrawer } from './ui/ResultsDrawer';
+import { SavedDrawer } from './ui/SavedDrawer';
+import { TaskPin } from './ui/TaskPin';
 import { IoPanel } from './ui/IoPanel';
+import { NetBar } from './ui/NetBar';
 import { describePoint } from './ui/pointName';
+import { useSignalView } from './ui/useSignalView';
 import { ToolsToggle } from './ui/ToolsToggle';
 import { useMinWidth } from './ui/useMinWidth';
 import { usePresence } from './ui/usePresence';
 import { ExamTimer } from './ui/ExamTimer';
 import { Warnings } from './ui/Warnings';
+import type { WarningTarget } from './ui/warningMessages';
 import { WireToolbar } from './ui/WireToolbar';
 import { arrangeWires } from './wire/arrange';
 import { recolorWires } from './wire/recolor';
 import { isStraight, type Bend } from './wire/curve';
 
 const TOOLS_ID = 'lab-tools';
+/** How long the ring that points at a warning stays on the board */
+const PULSE_MS = 1600;
 
 /**
  * Window widths at which the tools change shape. From `COLORS_IN_ROW_MIN` every wire color and chip
@@ -100,10 +122,16 @@ export function LabBoard() {
   // what is open on top of the board is a layer of the history, so the back gesture closes it
   const diagrams = useLayer('lab:diagrams');
   const diagramsOpen = diagrams.open;
+  // the chip the pin diagrams start on: the one a warning is about, or the one that is selected
+  const [diagramIc, setDiagramIc] = useState<string | null>(null);
   const [glide, setGlide] = useState<{ from: ReadonlyMap<string, Bend>; id: number } | null>(null);
   const diagramsButton = useRef<HTMLButtonElement>(null);
   const results = useLayer('lab:results');
   const help = useLayer('lab:help');
+  // the circuits kept by name
+  const savedLayer = useLayer('lab:saved');
+  const savedButton = useRef<HTMLButtonElement>(null);
+  const [saved, setSaved] = useState<SavedEntry[]>(loadSaved);
   const helpButton = useRef<HTMLButtonElement>(null);
   const resultsOpen = results.open;
   const resultsButton = useRef<HTMLButtonElement>(null);
@@ -114,6 +142,7 @@ export function LabBoard() {
   const taskLayer = useLayer('lab:task');
   const [taskId, setTaskId] = useState<string | null>(null);
   const [openKinds, setOpenKinds] = useState<ReadonlySet<string>>(new Set());
+  const [taskFilter, setTaskFilter] = useState<TaskFilter>(NO_FILTER);
   const [openSolutions, setOpenSolutions] = useState<ReadonlySet<string>>(new Set());
   const [taskMethod, setTaskMethod] = useState<LabMethodId>('algebra');
   const tasksButton = useRef<HTMLButtonElement>(null);
@@ -122,6 +151,9 @@ export function LabBoard() {
   const inlineWireTools = useMinWidth(INLINE_WIRE_TOOLS_MIN);
   // on a phone the warnings button stays at the top right: at the end of the row of the chips while the tools are shown, in the first row when they are folded
   const phone = !useMinWidth(MD_MIN);
+  // the signal view colors the wires by what they carry; a tap on a free point (or a selected wire) lights its net
+  const [signalOn, toggleSignal] = useSignalView();
+  const [probe, setProbe] = useState<string | null>(null);
   const tool = useWireTool({
     containerRef,
     toBoard,
@@ -130,6 +162,7 @@ export function LabBoard() {
     state: circuit,
     dispatch,
     color,
+    onProbe: setProbe,
   });
   const keyboard = useKeyboardWiring({
     containerRef,
@@ -154,7 +187,34 @@ export function LabBoard() {
   const live = useMemo(() => ({ wires, ics, switches }), [wires, ics, switches]);
   const result = useMemo(() => simulate(live), [live]);
   const notes = useMemo(() => icNotes(result.warnings), [result.warnings]);
+  // a warning that has a place moves the board there and rings it for a moment
+  const [pulse, setPulse] = useState<Pulse | null>(null);
+  useEffect(() => {
+    if (!pulse) return;
+    const timer = window.setTimeout(() => setPulse(null), PULSE_MS);
+    return () => window.clearTimeout(timer);
+  }, [pulse]);
+  const locate = (target: WarningTarget) => {
+    const ic = target.kind === 'ic' ? ics.find((item) => item.id === target.id) : undefined;
+    const frame = ic ? icFrame(ic.board, ic.col) : null;
+    const at = frame ? { x: frame.centerX, y: frame.centerY } : pointPosition(target.id);
+    if (!at) return;
+    panIntoView(at);
+    setPulse((was) => ({ id: (was?.id ?? 0) + 1, at, frame }));
+  };
   const selectedWire = wires.find((wire) => wire.id === circuit.selected);
+  // the net that is lit: the one of the selected wire, or else of the point that was tapped
+  const netPoint = selectedWire ? selectedWire.from : probe;
+  const net = useMemo(
+    () => (netPoint ? netOf({ wires, ics }, netPoint) : null),
+    [netPoint, wires, ics],
+  );
+  const netView = useMemo(
+    () => (net ? { wireIds: new Set(net.wireIds), points: net.points } : null),
+    [net],
+  );
+  // the switches the circuit reads get their letters (A, B, C as in the results)
+  const inputs = useMemo(() => buildNetlist({ wires, ics }).inputs, [wires, ics]);
   const selectedIc = ics.find((ic) => ic.id === circuit.selected);
   const hasSelection = circuit.selected !== null;
 
@@ -175,6 +235,12 @@ export function LabBoard() {
   const pickColor = (next: WireColor) => {
     setColor(next);
     if (selectedWire) dispatch({ type: 'recolor', id: selectedWire.id, color: next });
+  };
+
+  /** Opens the pin diagrams, on the chip asked for or else on the chip that is selected */
+  const openDiagrams = (icId?: string) => {
+    setDiagramIc(icId ?? selectedIc?.id ?? null);
+    diagrams.show();
   };
 
   /** Puts a chip on the free place nearest the middle of what is on screen. */
@@ -198,6 +264,46 @@ export function LabBoard() {
   /** Colors every wire by what it carries: GND black, +5V red, each other signal its own color. */
   const paint = () => dispatch({ type: 'paint', colors: recolorWires(wires) });
 
+  /** Keeps what is on the boards under a name; false when the browser refuses */
+  const saveByName = (typed: string): boolean => {
+    const name = cleanName(typed, `${UI_TEXT.labSavedDefault} ${saved.length + 1}`);
+    const next = addSaved(saved, name, live, Date.now());
+    if (!writeSaved(next)) return false;
+    setSaved(next);
+    return true;
+  };
+  /** Puts a kept circuit on the boards in one step that undo takes back, switches included */
+  const openSaved = (entry: SavedEntry) => {
+    const kept = entryCircuit(entry);
+    if (!kept) return;
+    dispatch({
+      type: 'replace',
+      ics: kept.ics.map(({ type, board, col }) => ({ type, board, col })),
+      wires: kept.wires.map(({ from, to, color, bend }) => ({ from, to, color, bend })),
+    });
+    dispatch({
+      type: 'setSwitches',
+      changes: kept.switches.map((up, index) => ({ index, up })),
+    });
+    savedLayer.hide();
+  };
+  const deleteSaved = (id: string) => {
+    const next = removeSaved(saved, id);
+    if (writeSaved(next)) setSaved(next);
+  };
+  /** Saves the picture of the board as a PNG */
+  const saveImage = async () => {
+    const scene = document.getElementById(SCENE_ID);
+    if (!scene) return;
+    try {
+      saveBlob(await sceneToPng(scene, BOARD_SIZE.width, BOARD_SIZE.height), 'nx-4i-board.png');
+      setImageFailed(false);
+    } catch {
+      setImageFailed(true);
+    }
+  };
+  const [imageFailed, setImageFailed] = useState(false);
+
   const removeSelected = () => {
     if (circuit.selected) dispatch({ type: 'remove', id: circuit.selected });
   };
@@ -211,6 +317,7 @@ export function LabBoard() {
   useRestoreFocus(tasksOpen, tasksButton);
   useRestoreFocus(diagramsOpen, diagramsButton);
   useRestoreFocus(help.open, helpButton);
+  useRestoreFocus(savedLayer.open, savedButton);
   /** The drawer of the tasks opens on the task it was left on, below which is the list */
   const openTasks = () => {
     tasks.show();
@@ -240,6 +347,7 @@ export function LabBoard() {
         return true;
       case 'escape':
         tool.cancel();
+        setProbe(null);
         dispatch({ type: 'select', id: null });
         return false;
       case 'arrange':
@@ -256,15 +364,21 @@ export function LabBoard() {
         results.show();
         return true;
       case 'diagrams':
-        diagrams.show();
+        openDiagrams();
         return true;
       case 'help':
         help.show();
         return true;
+      case 'signal':
+        toggleSignal();
+        return true;
     }
   };
   // a drawer has the keys while it is open
-  useLabShortcuts(diagramsOpen || resultsOpen || tasksOpen || help.open, onShortcut);
+  useLabShortcuts(
+    diagramsOpen || resultsOpen || tasksOpen || help.open || savedLayer.open,
+    onShortcut,
+  );
 
   // coming back from a task to the list, by the arrow or by the back gesture, leaves the drawer on the
   // list; closing the drawer from a task keeps the task, which the drawer opens on next time
@@ -327,6 +441,7 @@ export function LabBoard() {
           <g ref={groupRef}>
             <g id={SCENE_ID}>
               <BoardArt ledsLit={result.leds} switchesUp={switches} short={result.short} />
+              <InputLabels inputs={inputs} />
               <IcLayer
                 ics={ics}
                 selected={circuit.selected}
@@ -343,7 +458,10 @@ export function LabBoard() {
                 color={color}
                 keyboard={keyboard.cursor}
                 glide={glide}
+                signal={signalOn ? result.state : null}
+                net={netView}
               />
+              {pulse ? <LocatePulse pulse={pulse} scale={percent / 100} /> : null}
             </g>
           </g>
         </svg>
@@ -399,7 +517,7 @@ export function LabBoard() {
             >
               <IcTray
                 compact={!roomyForChips}
-                onOpenDiagrams={diagrams.show}
+                onOpenDiagrams={() => openDiagrams()}
                 diagramsRef={diagramsButton}
                 onOpenResults={results.show}
                 resultsRef={resultsButton}
@@ -422,7 +540,14 @@ export function LabBoard() {
             ) : null}
             {phone ? (
               <div className="pointer-events-auto ml-auto">
-                <Warnings warnings={result.warnings} ics={ics} placement="bottom" align="right" />
+                <Warnings
+                  warnings={result.warnings}
+                  ics={ics}
+                  placement="bottom"
+                  align="right"
+                  onLocate={locate}
+                  onShowPins={openDiagrams}
+                />
               </div>
             ) : null}
           </div>
@@ -431,7 +556,14 @@ export function LabBoard() {
 
       {phone && !tools.shown ? (
         <div className="pointer-events-auto absolute top-3 right-3">
-          <Warnings warnings={result.warnings} ics={ics} placement="bottom" align="right" />
+          <Warnings
+            warnings={result.warnings}
+            ics={ics}
+            placement="bottom"
+            align="right"
+            onLocate={locate}
+            onShowPins={openDiagrams}
+          />
         </div>
       ) : null}
 
@@ -449,13 +581,42 @@ export function LabBoard() {
         >
           {keyboard.message}
         </p>
+        {taskId !== null && !tasksOpen ? (
+          <TaskPin id={taskId} onOpen={openTasks} onClear={() => setTaskId(null)} />
+        ) : null}
+        {imageFailed ? (
+          <p
+            role="alert"
+            className="type-nav pointer-events-auto mx-auto w-fit rounded-md bg-error px-3 py-2 text-on-primary"
+          >
+            {UI_TEXT.labBoardImageFail}
+          </p>
+        ) : null}
+        {net && netPoint ? (
+          <NetBar
+            point={netPoint}
+            members={net}
+            state={result.state(netPoint)}
+            onClear={() => {
+              setProbe(null);
+              dispatch({ type: 'select', id: null });
+            }}
+          />
+        ) : null}
         {!oneRow && tools.shown ? (
           <div className="lab-dock pointer-events-auto self-center" data-state={tools.state}>
             {strip}
           </div>
         ) : null}
         <div className="flex flex-wrap items-end justify-between gap-2">
-          {phone ? null : <Warnings warnings={result.warnings} ics={ics} />}
+          {phone ? null : (
+            <Warnings
+              warnings={result.warnings}
+              ics={ics}
+              onLocate={locate}
+              onShowPins={openDiagrams}
+            />
+          )}
           <ExamTimer />
           <ViewButtons
             percent={percent}
@@ -463,10 +624,25 @@ export function LabBoard() {
             onZoomOut={zoomOut}
             onFit={fit}
             onActualSize={actualSize}
+            signal={signalOn}
+            onSignal={toggleSignal}
+            onImage={saveImage}
+            onSaved={savedLayer.show}
+            savedRef={savedButton}
           />
         </div>
       </div>
-      <ResultsDrawer open={resultsOpen} onClose={results.hide} circuit={live} />
+      <ResultsDrawer
+        open={resultsOpen}
+        onClose={results.hide}
+        circuit={live}
+        onSetSwitches={(changes) => dispatch({ type: 'setSwitches', changes })}
+        onLocate={(id) => {
+          // the drawer covers the board: it goes, and the board shows the chip
+          results.hide();
+          locate({ kind: 'ic', id });
+        }}
+      />
       <TasksDrawer
         open={tasksOpen}
         onClose={tasks.hide}
@@ -474,14 +650,32 @@ export function LabBoard() {
         onSelect={selectTask}
         openKinds={openKinds}
         onOpenKinds={setOpenKinds}
+        filter={taskFilter}
+        onFilterChange={setTaskFilter}
         openSolutions={openSolutions}
         onOpenSolutions={setOpenSolutions}
         method={taskMethod}
         onMethodChange={setTaskMethod}
         onLoadSolution={loadSolution}
       />
-      <IcDiagramDrawer open={diagramsOpen} onClose={diagrams.hide} onBoard={onBoard} />
+      <IcDiagramDrawer
+        open={diagramsOpen}
+        onClose={diagrams.hide}
+        onBoard={onBoard}
+        ics={ics}
+        result={result}
+        focusIc={diagramIc}
+      />
       <HelpDrawer open={help.open} onClose={help.hide} />
+      <SavedDrawer
+        open={savedLayer.open}
+        onClose={savedLayer.hide}
+        list={saved}
+        canSave={wires.length > 0 || ics.length > 0}
+        onSave={saveByName}
+        onOpen={openSaved}
+        onDelete={deleteSaved}
+      />
       <p role="status" aria-live="polite" aria-label={UI_TEXT.labSummary} className="sr-only">
         {summary}
       </p>

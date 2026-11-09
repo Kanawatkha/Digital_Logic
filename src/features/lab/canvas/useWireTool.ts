@@ -74,6 +74,8 @@ type Options = {
   dispatch: Dispatch<CircuitAction>;
   /** The color of the next wire */
   color: WireColor;
+  /** A tap on a free point asks for its net to be shown (its id), any other press takes the question back (null) */
+  onProbe?: (pointId: string | null) => void;
 };
 
 type TrayPointer = Pick<PointerEvent, 'pointerId' | 'pointerType' | 'clientX' | 'clientY'>;
@@ -112,12 +114,19 @@ export function useWireTool({
   state,
   dispatch,
   color,
+  onProbe,
 }: Options) {
   const [preview, setPreview] = useState<Preview | null>(null);
   const [hover, setHover] = useState<Hover | null>(null);
   const [finger, setFinger] = useState<Finger | null>(null);
   const gesture = useRef<Gesture | null>(null);
-  const latest = useRef({ state, dispatch, color, taken: occupancy(state.wires, state.ics) });
+  const latest = useRef({
+    state,
+    dispatch,
+    color,
+    onProbe,
+    taken: occupancy(state.wires, state.ics),
+  });
   const trayStart = useRef<
     (icType: IcType, event: TrayPointer, onEnd: (moved: boolean) => void) => void
   >(() => {});
@@ -127,9 +136,10 @@ export function useWireTool({
       state,
       dispatch,
       color,
+      onProbe,
       taken: occupancy(state.wires, state.ics),
     };
-  }, [state, dispatch, color]);
+  }, [state, dispatch, color, onProbe]);
 
   const resolve = useCallback(
     (event: PointerEvent): PressTarget | null =>
@@ -223,6 +233,7 @@ export function useWireTool({
         return;
       }
       if (event.pointerType === 'mouse' && event.button !== 0) return;
+      latest.current.onProbe?.(null);
       const target = resolve(event);
       if (!target) {
         tap = { id: event.pointerId, x: event.clientX, y: event.clientY };
@@ -377,6 +388,8 @@ export function useWireTool({
         }
       } else if (target.kind === 'new') {
         send({ type: 'select', id: target.overWire ?? null });
+        // a tap on a free point asks what is joined to it
+        if (!target.overWire) latest.current.onProbe?.(target.point.id);
       }
     };
 

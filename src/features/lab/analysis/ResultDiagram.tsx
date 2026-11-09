@@ -13,6 +13,8 @@ type ResultDiagramProps = {
   description: string;
   /** Say which switch a box is ("สวิตช์ 1"); a task figure only has A, B and C */
   switchNames?: boolean;
+  /** Makes a gate a button that is given the chip it is on ("u1"); without it the diagram is a picture */
+  onGate?: (ic: string) => void;
 };
 
 const line = (points: readonly { x: number; y: number }[]) =>
@@ -79,13 +81,34 @@ function SourceBox({ node, switchNames }: { node: LNode; switchNames: boolean })
   );
 }
 
-function GateShape({ node }: { node: LNode }) {
+function GateShape({ node, onSelect }: { node: LNode; onSelect?: (ic: string) => void }) {
   const gate = node.gate!;
   const bubble = GATE_BUBBLE[gate.kind];
   const width = GATE_WIDTH[gate.kind] * GATE_SCALE;
   const stroke = gate.powered ? 'stroke-ink' : 'stroke-error';
+  const pick = onSelect ? () => onSelect(gate.ic) : undefined;
   return (
-    <g data-node={node.id}>
+    <g
+      data-node={node.id}
+      role={pick ? 'button' : undefined}
+      tabIndex={pick ? 0 : undefined}
+      aria-label={pick ? `${node.label} ${gate.type}: ${UI_TEXT.labResultsGateShow}` : undefined}
+      className={
+        pick
+          ? 'cursor-pointer outline-none focus-visible:[&>g:first-child>path]:stroke-primary-active'
+          : undefined
+      }
+      onClick={pick}
+      onKeyDown={
+        pick
+          ? (event) => {
+              if (event.key !== 'Enter' && event.key !== ' ') return;
+              event.preventDefault();
+              pick();
+            }
+          : undefined
+      }
+    >
       <g transform={`translate(${node.x} ${node.y}) scale(${GATE_SCALE})`}>
         <path
           d={GATE_PATH[gate.kind]}
@@ -162,7 +185,7 @@ function Led({ node, lit }: { node: LNode; lit: boolean | null }) {
  * right. A wire that is carrying a 1 now is orange, a 0 is black.
  */
 export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(function ResultDiagram(
-  { layout, value, scale, description, switchNames = true },
+  { layout, value, scale, description, switchNames = true, onGate },
   ref,
 ) {
   // a signal that feeds more than one wire is marked where it leaves
@@ -175,7 +198,7 @@ export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(funct
       viewBox={`0 0 ${layout.width} ${layout.height}`}
       width={scale === null ? '100%' : layout.width * scale}
       height={scale === null ? undefined : layout.height * scale}
-      role="img"
+      role={onGate ? 'group' : 'img'}
       aria-label={UI_TEXT.labResultsCircuit}
       className={`block ${scale === null ? 'h-auto w-full' : 'max-w-none'}`}
       fontFamily="Inter, 'Helvetica Neue', Arial, sans-serif"
@@ -190,7 +213,7 @@ export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(funct
           <circle key={`dot:${node.id}`} cx={node.outX} cy={node.y} r={3.6} className="fill-ink" />
         ))}
       {layout.nodes.map((node) => {
-        if (node.kind === 'gate') return <GateShape key={node.id} node={node} />;
+        if (node.kind === 'gate') return <GateShape key={node.id} node={node} onSelect={onGate} />;
         if (node.kind === 'output') {
           const feeder = into.get(node.id);
           return <Led key={node.id} node={node} lit={feeder ? value(feeder.signal) : null} />;

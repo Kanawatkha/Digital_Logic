@@ -77,6 +77,18 @@ export const WIRE_COLORS: Readonly<Record<WireColor, { body: string; edge: strin
   purple: { body: '#8d57c9', edge: '#4b2678' },
 };
 
+/** The signal view: what a wire carries, drawn around it. */
+export const SIGNAL_COLORS = {
+  /** The glow of a wire at 1 */
+  high: '#ffae1a',
+  /** The thin dark core of a wire at 0 */
+  low: '#101214',
+  /** A wire that carries nothing is drawn as dashes of this color over its own */
+  floating: '#ffffff',
+  /** Two outputs fighting on the wire */
+  conflict: '#ff3b30',
+} as const;
+
 /** Halo, handles and snap rings drawn over the board while editing wires. */
 export const EDIT_COLORS = {
   halo: '#4cc3ff',

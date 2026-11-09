@@ -11,6 +11,7 @@ import {
   type DiagramGate,
   type DiagramPin,
 } from './pinDiagram';
+import type { NetState } from '../sim/evaluate';
 import type { IcType } from '../sim/ics';
 
 /** What the pointer or a finger is on: a pin (and so its gate), or a gate. */
@@ -20,6 +21,16 @@ type IcDiagramProps = {
   type: IcType;
   focus: DiagramFocus;
   onFocus: (focus: DiagramFocus) => void;
+  /** What each pin of a chip on the board carries, by pin number: the boxes of the pins are colored by it */
+  pinStates?: Readonly<Record<number, NetState>>;
+};
+
+/** How a pin box looks for what it carries: 1 orange, 0 plain, nothing dashed, a conflict red */
+const STATE_STYLE: Record<NetState, string> = {
+  high: 'fill-primary/20 stroke-primary-active',
+  low: 'fill-surface-card stroke-ink',
+  floating: 'fill-canvas stroke-muted',
+  conflict: 'fill-error/20 stroke-error',
 };
 
 const points = (line: readonly { x: number; y: number }[]) =>
@@ -52,10 +63,12 @@ function Gate({ gate, active }: { gate: DiagramGate; active: boolean }) {
 function Pin({
   pin,
   active,
+  state,
   onFocus,
 }: {
   pin: DiagramPin;
   active: boolean;
+  state?: NetState;
   onFocus: (focus: DiagramFocus) => void;
 }) {
   return (
@@ -73,8 +86,14 @@ function Pin({
         height={PIN_BOX.height}
         rx={2}
         strokeWidth={2}
+        strokeDasharray={!active && state === 'floating' ? '4 3' : undefined}
+        data-state={state}
         className={`transition-colors duration-150 ${
-          active ? 'fill-primary stroke-primary-active' : 'fill-canvas stroke-ink'
+          active
+            ? 'fill-primary stroke-primary-active'
+            : state
+              ? STATE_STYLE[state]
+              : 'fill-canvas stroke-ink'
         }`}
       />
       <text
@@ -95,7 +114,7 @@ function Pin({
  * The pin diagram of one chip, like the one in a datasheet. Pointing at a pin lights it and its
  * gate; pointing at a gate lights its symbol, its leads and its pins.
  */
-export function IcDiagram({ type, focus, onFocus }: IcDiagramProps) {
+export function IcDiagram({ type, focus, onFocus, pinStates }: IcDiagramProps) {
   const diagram = useMemo(() => buildIcDiagram(type), [type]);
   const gateOf = (pin: DiagramPin) => pin.gate !== null && pin.gate === focus.gate;
   return (
@@ -171,6 +190,7 @@ export function IcDiagram({ type, focus, onFocus }: IcDiagramProps) {
           key={pin.number}
           pin={pin}
           active={focus.pin === pin.number || gateOf(pin)}
+          state={pinStates?.[pin.number]}
           onFocus={onFocus}
         />
       ))}

@@ -326,12 +326,145 @@
   animation: lab-fade-in 260ms ease-out backwards;
   animation-delay: calc(var(--i, 0) * 45ms + 60ms);
 }
+/* the solution of a task is uncovered from the top down, as it is asked for; a fade and a wipe only, so no scroll bar flashes */
+@keyframes lab-wipe-down {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@utility lab-wipe {
+  animation: lab-wipe-down 380ms ease-out backwards;
+}
 @utility lab-item {
   animation: lab-rise 300ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
   animation-delay: calc(var(--i, 0) * 40ms + 70ms);
 }
 @utility lab-swap {
   animation: lab-rise 240ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+/* the warnings button when a fault that breaks the circuit appears: one shake and one ring */
+@keyframes lab-shake {
+  0%,
+  100% {
+    transform: none;
+  }
+  15% {
+    transform: translateX(-5px);
+  }
+  35% {
+    transform: translateX(5px);
+  }
+  55% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+}
+@keyframes lab-ring {
+  from {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-error) 55%, transparent);
+  }
+  to {
+    box-shadow: 0 0 0 14px transparent;
+  }
+}
+@utility lab-shake {
+  &[data-shaking] {
+    animation:
+      lab-shake 420ms ease-in-out,
+      lab-ring 700ms ease-out;
+  }
+}
+/* parts that are new to the board: a wire is drawn from one end to the other, its plugs and the chips come in after it */
+@keyframes lab-wire-draw {
+  from {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@utility lab-wire-in {
+  animation: lab-wire-draw 420ms ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+@keyframes lab-plug-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+@utility lab-plug-in {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: lab-plug-fade 220ms ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 70ms + 160ms);
+}
+@keyframes lab-chip-fall {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+}
+@utility lab-chip-drop {
+  animation: lab-chip-fall 320ms cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  animation-delay: calc(var(--i, 0) * 90ms);
+}
+/* a LED that has just lit: its halo swells once */
+@keyframes lab-led-swell {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 0.5;
+    transform: scale(1.18);
+  }
+}
+@utility lab-led-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: lab-led-swell 360ms ease-out;
+}
+/* the glow of a wire that carries a 1 comes up softly */
+@keyframes lab-signal-rise {
+  from {
+    opacity: 0;
+  }
+}
+@utility lab-signal-glow {
+  animation: lab-signal-rise 240ms ease-out;
+}
+/* a ring on the board that says "here", twice; a person who wants no motion gets it still */
+@keyframes lab-locate {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@utility lab-locate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: lab-locate 750ms ease-out 2 both;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    opacity: 0.9;
+  }
 }
 
 /* The pin diagram drawer of the lab: from the right on a tablet or desktop, from the bottom on a phone. */

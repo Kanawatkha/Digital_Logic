@@ -28,7 +28,7 @@ circuit is saved in the browser, with undo and redo, and a 15 minute exam timer 
 warnings. A drawer shows the truth table, the diagram and the equations of what is built. A help
 button (or the key `H`) lists what every button does and the keyboard shortcuts (Ctrl+Z, A, T, R, P,
 1 to 8 for the switches and more), and the back gesture of a phone closes a drawer before it leaves
-the page.
+the page. A signal view colors every wire by what it carries, a tap on a point lights its whole net, the board can be saved as a picture, and circuits can be kept by name in the browser.
 
 The tasks button opens 88 tasks in five kinds: large Boolean expressions, truth tables, SOP and POS
 expressions, large logic circuits and word descriptions. Each kind has free tasks, tasks that allow

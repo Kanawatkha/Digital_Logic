@@ -38,6 +38,7 @@ describe('the shortcuts of the lab', () => {
     expect(labActionOf(press({ code: 'KeyP', key: 'ย' }))).toEqual({ kind: 'diagrams' });
     expect(labActionOf(press({ code: 'KeyA', key: 'ฟ' }))).toEqual({ kind: 'arrange' });
     expect(labActionOf(press({ code: 'KeyH', key: '้' }))).toEqual({ kind: 'help' });
+    expect(labActionOf(press({ code: 'KeyV', key: 'อ' }))).toEqual({ kind: 'signal' });
   });
 
   it('falls back to what the key printed when it says no place (a screen keyboard)', () => {
@@ -55,6 +56,9 @@ describe('the shortcuts of the lab', () => {
     expect(labActionOf(press({ code: 'KeyP' }))).toEqual({ kind: 'diagrams' });
     expect(labActionOf(press({ code: 'KeyA' }))).toEqual({ kind: 'arrange' });
     expect(labActionOf(press({ code: 'KeyH' }))).toEqual({ kind: 'help' });
+    expect(labActionOf(press({ code: 'KeyV' }))).toEqual({ kind: 'signal' });
+    expect(labActionOf(press({ code: 'KeyV', ctrlKey: true }))).toBeNull();
+    expect(labActionOf(press({ code: 'KeyV', repeat: true }))).toBeNull();
     expect(labActionOf(press({ code: 'Slash', key: '?', shiftKey: true }))).toEqual({
       kind: 'help',
     });

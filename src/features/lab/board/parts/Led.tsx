@@ -23,13 +23,21 @@ export function Led({ x, y, color = 'red', radius = 8, lit = false, glow = true 
   return (
     <g>
       {lit && glow ? (
-        <circle cx={x} cy={y} r={radius * 2.1} fill={BRIGHT[color]} opacity={0.28} />
+        <circle
+          cx={x}
+          cy={y}
+          r={radius * 2.1}
+          fill={BRIGHT[color]}
+          opacity={0.28}
+          className="lab-led-glow"
+        />
       ) : null}
       <circle
         cx={x}
         cy={y}
         r={radius}
         fill={lit ? BRIGHT[color] : DULL[color]}
+        className="transition-[fill] duration-150"
         stroke="#00000055"
         strokeWidth={1}
       />

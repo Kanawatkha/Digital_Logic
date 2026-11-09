@@ -112,7 +112,7 @@ export function TaskDetail({
           />
         </button>
         {solutionOpen ? (
-          <div className="lab-fade flex flex-col gap-4">
+          <div className="lab-wipe flex flex-col gap-4">
             <div>
               <p className="type-caption-upper mb-1 text-body">{UI_TEXT.labTaskSteps}</p>
               {task.methods && shown ? (

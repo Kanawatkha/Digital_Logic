@@ -136,6 +136,28 @@ describe('the back gesture in the lab', () => {
     expect(where()).toBe('/home');
   });
 
+  it('pins the task over the board while the drawer is closed, opens it from the pin, and lets go', async () => {
+    openLab();
+    expect(screen.queryByRole('button', { name: /^เปิดโจทย์ข้อนี้อีกครั้ง/ })).toBeNull();
+    const drawer = await openTasks();
+    await openFirstTask(drawer);
+    // with the drawer open the label is not needed
+    expect(screen.queryByRole('button', { name: /^เปิดโจทย์ข้อนี้อีกครั้ง/ })).toBeNull();
+    fireEvent.click(within(drawer).getByRole('button', { name: 'ปิด' }));
+    const pin = screen.getByRole('button', { name: /^เปิดโจทย์ข้อนี้อีกครั้ง/ });
+    expect(pin).toHaveTextContent('โจทย์ หมวด 1 ข้อ 1');
+    fireEvent.click(pin);
+    const reopened = screen.getByRole('dialog', { name: 'โจทย์' });
+    expect(await within(reopened).findByRole('button', { name: 'กลับรายการโจทย์' })).toBeVisible();
+    expect(screen.queryByRole('button', { name: /^เปิดโจทย์ข้อนี้อีกครั้ง/ })).toBeNull();
+    // closed again, and let go of: the label goes and the drawer opens on the list
+    fireEvent.click(within(reopened).getByRole('button', { name: 'ปิด' }));
+    fireEvent.click(screen.getByRole('button', { name: 'เลิกปักโจทย์' }));
+    expect(screen.queryByRole('button', { name: /^เปิดโจทย์ข้อนี้อีกครั้ง/ })).toBeNull();
+    const again = await openTasks();
+    expect(within(again).queryByRole('button', { name: 'กลับรายการโจทย์' })).toBeNull();
+  });
+
   it('leaves nothing in the history when a drawer is closed with the cross, Esc or the blur', async () => {
     openLab();
     await openTasks();

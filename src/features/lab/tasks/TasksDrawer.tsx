@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 import { UI_TEXT } from '@/config/site';
 import type { LabMethodId } from '@/content/types';
 import { taskActionOf } from '../shortcuts';
 import { Drawer } from '../ui/Drawer';
 import type { PlacedSolution } from './place';
 import { TaskDetail } from './TaskDetail';
+import type { TaskFilter } from './filter';
 import { TaskList } from './TaskList';
 import { prefetchLabTaskGroup, useLabTask, useLabTasks } from './useLabTasks';
 
@@ -17,6 +19,9 @@ type TasksDrawerProps = {
   /** The kinds that are unfolded in the list (kept by the page, so the list is as it was left) */
   openKinds: ReadonlySet<string>;
   onOpenKinds: (kinds: ReadonlySet<string>) => void;
+  /** What the list is narrowed to (kept by the page, like the kinds) */
+  filter: TaskFilter;
+  onFilterChange: Dispatch<SetStateAction<TaskFilter>>;
   /** The tasks whose solution is shown (kept by the page, like the kinds) */
   openSolutions: ReadonlySet<string>;
   onOpenSolutions: (tasks: ReadonlySet<string>) => void;
@@ -33,6 +38,8 @@ function TasksBody({
   onSelect,
   openKinds,
   onOpenKinds,
+  filter,
+  onFilterChange,
   openSolutions,
   onOpenSolutions,
   method,
@@ -83,9 +90,21 @@ function TasksBody({
       className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain p-4 md:p-5"
     >
       {failed ? (
-        <p className="type-body-md text-error" role="alert">
-          {UI_TEXT.labTasksError}
-        </p>
+        <div className="flex flex-col items-start gap-3">
+          <p className="type-body-md text-error" role="alert">
+            {UI_TEXT.labTasksError}
+          </p>
+          {/* a task that could not be loaded is not the end of the list: back to it, and try another */}
+          {taskId !== null && tasks.status === 'ready' ? (
+            <button
+              type="button"
+              onClick={() => onSelect(null)}
+              className="type-nav inline-flex h-10 items-center rounded-md border border-hairline bg-canvas px-4 text-ink active:bg-surface-card"
+            >
+              {UI_TEXT.labTasksBack}
+            </button>
+          ) : null}
+        </div>
       ) : waiting ? (
         <p className="type-body-md text-muted" role="status">
           {UI_TEXT.labTasksLoading}
@@ -111,6 +130,8 @@ function TasksBody({
           data={tasks.data}
           onSelect={onSelect}
           open={openKinds}
+          filter={filter}
+          onFilterChange={onFilterChange}
           onOpenChange={(kinds) => {
             // a kind that is unfolded is likely to be opened next: bring its tasks in the meantime
             kinds.forEach((kind) => {

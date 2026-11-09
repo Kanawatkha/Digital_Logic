@@ -1,4 +1,4 @@
-import { LED_COUNT, SWITCH_COUNT } from '../board/layout';
+import { LED_COUNT, RAIL_SPLIT_AT, SWITCH_COUNT } from '../board/layout';
 import { GND_PIN, IC_SPECS, VCC_PIN, icPinPoints, type IcType } from './ics';
 import { createNets } from './nets';
 import { GND_KEY, UNSUPPORTED_SUPPLIES, VCC_KEY, netKey, parsePoint } from './points';
@@ -18,15 +18,32 @@ export type Circuit = {
 /** What a net carries. `floating` means nothing drives it. `conflict` means drivers disagree. */
 export type NetState = 'high' | 'low' | 'floating' | 'conflict';
 
+/** Something that drives a net, with the point it can be found at (for showing where it is). */
+export type DriverRef =
+  | { kind: 'supply'; name: '+5V' | 'GND'; at: string }
+  | { kind: 'switch'; index: number; at: string }
+  | { kind: 'gate'; ic: string; gate: number; at: string };
+
 export type Warning =
   | { kind: 'short' }
-  | { kind: 'conflict'; net: string; drivers: string[] }
-  | { kind: 'unpowered'; ic: string }
+  | { kind: 'conflict'; net: string; drivers: DriverRef[] }
+  /** A chip without power: which of pin 14 (`vcc`) and pin 7 (`gnd`) is not on its supply, and whether the other half of a split rail has it */
+  | { kind: 'unpowered'; ic: string; missing: ('vcc' | 'gnd')[]; railSplit: boolean }
+  /** Pin 14 is on GND and pin 7 on +5V */
+  | { kind: 'reversed'; ic: string }
   | { kind: 'floatingInput'; ic: string; gate: number; pin: number }
   | { kind: 'unstable'; ics: string[] }
   | { kind: 'unsupportedSupply'; socket: string }
   | { kind: 'overlap'; ics: [string, string] }
-  | { kind: 'badPoint'; id: string };
+  | { kind: 'badPoint'; id: string }
+  /** LED number `led` has a wire but nothing drives it */
+  | { kind: 'ledUndriven'; led: number }
+  /** A wire between two points that were one net already */
+  | { kind: 'redundantWire'; from: string; to: string }
+  /** Gates (numbered from 1) of a chip whose inputs are wired but whose output goes nowhere */
+  | { kind: 'outputUnused'; ic: string; gates: number[] }
+  /** There are chips and wires, and no LED is connected */
+  | { kind: 'noOutput' };
 
 export type IcState = {
   /** Pin 14 is on +5V and pin 7 is on GND. */
@@ -51,7 +68,14 @@ export type SimResult = {
  */
 const reads = (state: NetState): boolean => state === 'high' || state === 'floating';
 
-type Driver = { name: string; value: boolean };
+type Driver = { ref: DriverRef; value: boolean };
+
+/** The other half of a rail line that is split in two, or null for a key that is not a rail half. */
+function railSibling(key: string): string | null {
+  const m = /^(b\d+:r:(?:top1|top2|bot1|bot2))(:2)?$/.exec(key);
+  if (!m || RAIL_SPLIT_AT === null) return null;
+  return m[2] ? (m[1] ?? null) : `${m[1]}:2`;
+}
 
 /**
  * Works out what every net carries. The board's own joins (hole strips, rails, socket blocks)
@@ -64,6 +88,7 @@ export function simulate(circuit: Circuit): SimResult {
   /** Keys a wire touches: the nets that have something connected to them. */
   const wired = new Set<string>();
   const badPoints = new Set<string>();
+  const redundant: { from: string; to: string }[] = [];
 
   for (const wire of circuit.wires) {
     const a = parsePoint(wire.from);
@@ -78,7 +103,7 @@ export function simulate(circuit: Circuit): SimResult {
       }
     }
     if (!a || !b) continue;
-    nets.union(netKey(a), netKey(b));
+    if (!nets.union(netKey(a), netKey(b))) redundant.push({ from: wire.from, to: wire.to });
     wired.add(netKey(a));
     wired.add(netKey(b));
   }
@@ -135,10 +160,13 @@ export function simulate(circuit: Circuit): SimResult {
     list.push(driver);
     staticDrivers.set(root, list);
   };
-  drive(vcc, { name: '+5V', value: true });
-  drive(gnd, { name: 'GND', value: false });
+  drive(vcc, { ref: { kind: 'supply', name: '+5V', at: `${VCC_KEY}:0` }, value: true });
+  drive(gnd, { ref: { kind: 'supply', name: 'GND', at: `${GND_KEY}:0` }, value: false });
   for (let k = 0; k < SWITCH_COUNT; k++) {
-    drive(nets.root(`sw${k}`), { name: `switch ${k + 1}`, value: Boolean(circuit.switches[k]) });
+    drive(nets.root(`sw${k}`), {
+      ref: { kind: 'switch', index: k, at: `sw${k}:0` },
+      value: Boolean(circuit.switches[k]),
+    });
   }
 
   const powered = new Map<string, boolean>(
@@ -164,7 +192,15 @@ export function simulate(circuit: Circuit): SimResult {
         if (value === null || value === undefined || pin === undefined) return;
         const root = nets.root(pin);
         const list = drivers.get(root) ?? [];
-        list.push({ name: `${ic.id} gate ${g + 1}`, value });
+        list.push({
+          ref: {
+            kind: 'gate',
+            ic: ic.id,
+            gate: g + 1,
+            at: icPinPoints(ic.board, ic.col)[gate.output] ?? '',
+          },
+          value,
+        });
         drivers.set(root, list);
       });
     }
@@ -222,9 +258,28 @@ export function simulate(circuit: Circuit): SimResult {
 
   for (const [root, list] of settled.drivers) {
     if (settled.states.get(root) === 'conflict') {
-      warnings.push({ kind: 'conflict', net: root, drivers: list.map((d) => d.name) });
+      warnings.push({ kind: 'conflict', net: root, drivers: list.map((d) => d.ref) });
     }
   }
+
+  /** Whether a pin sits on a rail half whose other half is on the given supply: the rail is split in two */
+  const onSplitRail = (pinKey: string, supplyRoot: string): boolean => {
+    const root = nets.root(pinKey);
+    for (const key of wired) {
+      const other = railSibling(key);
+      if (other && nets.root(key) === root && nets.root(other) === supplyRoot) return true;
+    }
+    return false;
+  };
+
+  const ledWired = Array.from({ length: LED_COUNT }, (_, k) => k + 1).filter((n) =>
+    wired.has(`led${n}`),
+  );
+  /** Nets that a chip without power would have driven: an LED on one is dark because of the chip */
+  const deadOutputs = new Set<string>();
+  const unusedOutputs: Warning[] = [];
+  /** Some gate has a wire on one of its pins */
+  let gateUsed = false;
 
   const icStates: Record<string, IcState> = {};
   for (const { ic, pins } of placed) {
@@ -235,19 +290,57 @@ export function simulate(circuit: Circuit): SimResult {
       outputs: spec.gates.map((_, g) => outputs.get(outputKey(ic.id, g)) ?? null),
     };
     if (!on) {
-      warnings.push({ kind: 'unpowered', ic: ic.id });
+      for (const gate of spec.gates) deadOutputs.add(nets.root(pins[gate.output] ?? ''));
+      const vccPin = pins[VCC_PIN] ?? '';
+      const gndPin = pins[GND_PIN] ?? '';
+      if (nets.root(vccPin) === gnd && nets.root(gndPin) === vcc) {
+        warnings.push({ kind: 'reversed', ic: ic.id });
+        continue;
+      }
+      const missing: ('vcc' | 'gnd')[] = [];
+      if (nets.root(vccPin) !== vcc) missing.push('vcc');
+      if (nets.root(gndPin) !== gnd) missing.push('gnd');
+      const railSplit =
+        (missing.includes('vcc') && onSplitRail(vccPin, vcc)) ||
+        (missing.includes('gnd') && onSplitRail(gndPin, gnd));
+      warnings.push({ kind: 'unpowered', ic: ic.id, missing, railSplit });
       continue;
     }
+    const gatesUnused: number[] = [];
     spec.gates.forEach((gate, g) => {
       // a gate nobody uses is left alone: its inputs may float without a hint
       const used = [gate.output, ...gate.inputs].some((pin) => wired.has(pins[pin] ?? ''));
       if (!used) return;
+      gateUsed = true;
       for (const pin of gate.inputs) {
         if (stateOf(settled.states, pins[pin] ?? '') === 'floating') {
           warnings.push({ kind: 'floatingInput', ic: ic.id, gate: g + 1, pin });
         }
       }
+      if (
+        gate.inputs.every((pin) => wired.has(pins[pin] ?? '')) &&
+        !wired.has(pins[gate.output] ?? '')
+      ) {
+        gatesUnused.push(g + 1);
+      }
     });
+    if (gatesUnused.length > 0) {
+      unusedOutputs.push({ kind: 'outputUnused', ic: ic.id, gates: gatesUnused });
+    }
+  }
+
+  // hints about the wiring itself
+  for (const wire of redundant) warnings.push({ kind: 'redundantWire', ...wire });
+  for (const led of ledWired) {
+    const root = nets.root(`led${led}`);
+    if (stateOf(settled.states, `led${led}`) === 'floating' && !deadOutputs.has(root)) {
+      warnings.push({ kind: 'ledUndriven', led });
+    }
+  }
+  if (gateUsed && ledWired.length === 0) {
+    warnings.push({ kind: 'noOutput' });
+  } else if (ledWired.length > 0) {
+    warnings.push(...unusedOutputs);
   }
 
   return {

@@ -236,7 +236,12 @@ describe('simulate: power and warnings', () => {
     const result = simulate(circuit(notWires, [ic], []));
     expect(result.leds[0]).toBe(false);
     expect(result.ics['u1']?.powered).toBe(false);
-    expect(result.warnings).toContainEqual({ kind: 'unpowered', ic: 'u1' });
+    expect(result.warnings).toContainEqual({
+      kind: 'unpowered',
+      ic: 'u1',
+      missing: ['vcc', 'gnd'],
+      railSplit: false,
+    });
     expect(result.state(pins[2] ?? '')).toBe('floating');
   });
 
@@ -249,6 +254,21 @@ describe('simulate: power and warnings', () => {
       circuit([...notWires, wire(GND, pins[14] ?? ''), wire(VCC, pins[7] ?? '')], [ic]),
     );
     expect(swapped.ics['u1']?.powered).toBe(false);
+    // the wrong way round is told apart from no power
+    expect(swapped.warnings).toContainEqual({ kind: 'reversed', ic: 'u1' });
+    expect(swapped.warnings.some((w) => w.kind === 'unpowered')).toBe(false);
+    expect(onlyVcc.warnings).toContainEqual({
+      kind: 'unpowered',
+      ic: 'u1',
+      missing: ['gnd'],
+      railSplit: false,
+    });
+    expect(onlyGnd.warnings).toContainEqual({
+      kind: 'unpowered',
+      ic: 'u1',
+      missing: ['vcc'],
+      railSplit: false,
+    });
   });
 
   it('powers a chip through a rail', () => {
@@ -274,7 +294,13 @@ describe('simulate: power and warnings', () => {
     ];
     const cut = simulate(circuit(wires, [ic], []));
     expect(cut.ics['u1']?.powered).toBe(false);
-    expect(cut.warnings).toContainEqual({ kind: 'unpowered', ic: 'u1' });
+    // the other half of each rail has the supply: the message can say the rail is split
+    expect(cut.warnings).toContainEqual({
+      kind: 'unpowered',
+      ic: 'u1',
+      missing: ['vcc', 'gnd'],
+      railSplit: true,
+    });
     const jumpered = [
       ...wires,
       wire('b0:r:top1:20', 'b0:r:top1:40'),
@@ -313,7 +339,10 @@ describe('simulate: power and warnings', () => {
     expect(result.warnings).toContainEqual({
       kind: 'conflict',
       net: expect.any(String),
-      drivers: ['switch 1', 'switch 2'],
+      drivers: [
+        { kind: 'switch', index: 0, at: 'sw0:0' },
+        { kind: 'switch', index: 1, at: 'sw1:0' },
+      ],
     });
   });
 
@@ -324,7 +353,10 @@ describe('simulate: power and warnings', () => {
     expect(result.warnings).toContainEqual({
       kind: 'conflict',
       net: expect.any(String),
-      drivers: ['+5V', 'u1 gate 1'],
+      drivers: [
+        { kind: 'supply', name: '+5V', at: 'power:+5V:0' },
+        { kind: 'gate', ic: 'u1', gate: 1, at: pins[2] ?? '' },
+      ],
     });
   });
 
@@ -359,5 +391,67 @@ describe('simulate: power and warnings', () => {
   it('says when a supply that is only drawn is wired', () => {
     const result = simulate(circuit([wire('power:+12V:0', 'b0:c1:a')]));
     expect(result.warnings).toContainEqual({ kind: 'unsupportedSupply', socket: '+12V' });
+  });
+});
+
+describe('simulate: hints about the wiring', () => {
+  const ic: PlacedIc = { id: 'u1', type: '7404', board: 0, col: 10 };
+  const pins = icPinPoints(0, 10);
+  const kinds = (c: Circuit) => simulate(c).warnings.map((w) => w.kind);
+
+  it('flags a wire between points that were one net already, and only the extra one', () => {
+    // two holes of one column half are joined by the board
+    expect(simulate(circuit([wire('b0:c1:a', 'b0:c1:b')])).warnings).toContainEqual({
+      kind: 'redundantWire',
+      from: 'b0:c1:a',
+      to: 'b0:c1:b',
+    });
+    // the same wire twice: the second one adds nothing
+    const twice = simulate(circuit([wire(sw(0), 'b0:c1:a'), wire(sw(0), 'b0:c1:a')]));
+    expect(twice.warnings.filter((w) => w.kind === 'redundantWire')).toHaveLength(1);
+    // two wires that do not repeat each other
+    expect(kinds(circuit([wire(sw(0), 'b0:c1:a'), wire(sw(1), 'b0:c2:a')]))).not.toContain(
+      'redundantWire',
+    );
+  });
+
+  it('flags an LED that has a wire and nothing to drive it', () => {
+    expect(simulate(circuit([wire('b0:c1:a', led(1))])).warnings).toContainEqual({
+      kind: 'ledUndriven',
+      led: 1,
+    });
+    expect(kinds(circuit([wire(sw(0), led(1))]))).not.toContain('ledUndriven');
+    expect(kinds(circuit([]))).not.toContain('ledUndriven');
+  });
+
+  it('does not blame an LED that is dark because its chip has no power', () => {
+    const wires = [wire(sw(0), pins[1] ?? ''), wire(pins[2] ?? '', led(1))];
+    const found = kinds(circuit(wires, [ic]));
+    expect(found).toContain('unpowered');
+    expect(found).not.toContain('ledUndriven');
+  });
+
+  it('says so when chips and wires are there but no LED is connected', () => {
+    const wires = [...power(ic), wire(sw(0), pins[1] ?? '')];
+    expect(kinds(circuit(wires, [ic]))).toContain('noOutput');
+    expect(kinds(circuit([]))).not.toContain('noOutput');
+    expect(kinds(circuit([], [ic]))).not.toContain('noOutput');
+    expect(kinds(circuit([...wires, wire(pins[2] ?? '', led(1))], [ic]))).not.toContain('noOutput');
+  });
+
+  it('names the gates whose inputs are wired and whose output goes nowhere, once an LED is used', () => {
+    const wires = [
+      ...power(ic),
+      wire(sw(0), pins[1] ?? ''),
+      wire(sw(1), pins[3] ?? ''),
+      wire(pins[4] ?? '', led(1)),
+    ];
+    const result = simulate(circuit(wires, [ic]));
+    expect(result.warnings).toContainEqual({ kind: 'outputUnused', ic: 'u1', gates: [1] });
+    expect(result.warnings.some((w) => w.kind === 'noOutput')).toBe(false);
+    // with no LED the one hint is that there is none
+    const noLed = kinds(circuit(wires.slice(0, 3), [ic]));
+    expect(noLed).toContain('noOutput');
+    expect(noLed).not.toContain('outputUnused');
   });
 });

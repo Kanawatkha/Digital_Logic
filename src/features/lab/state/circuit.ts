@@ -43,6 +43,8 @@ export type CircuitAction =
   | { type: 'placeIc'; icType: IcType; board: number; col: number }
   | { type: 'moveIc'; id: string; board: number; col: number }
   | { type: 'toggleSwitch'; index: number }
+  /** Sets the switches named by `index` (from 0) to the given positions, leaving the others */
+  | { type: 'setSwitches'; changes: readonly { index: number; up: boolean }[] }
   | { type: 'clear' }
   | { type: 'select'; id: string | null }
   | { type: 'undo' }
@@ -275,6 +277,15 @@ export function circuitReducer(state: CircuitState, action: CircuitAction): Circ
         ...state,
         switches: state.switches.map((up, k) => (k === action.index ? !up : up)),
       };
+    }
+    case 'setSwitches': {
+      const valid = action.changes.filter(
+        ({ index }) => Number.isInteger(index) && index >= 0 && index < SWITCH_COUNT,
+      );
+      if (valid.every(({ index, up }) => state.switches[index] === up)) return state;
+      const switches = [...state.switches];
+      for (const { index, up } of valid) switches[index] = up;
+      return { ...state, switches };
     }
     case 'clear': {
       if (state.wires.length === 0 && state.ics.length === 0) return state;

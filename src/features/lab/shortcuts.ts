@@ -16,6 +16,8 @@ export type LabAction =
   | { kind: 'results' }
   | { kind: 'diagrams' }
   | { kind: 'help' }
+  /** The signal view of the board: wires colored by what they carry */
+  | { kind: 'signal' }
   /** Switch 0 to 7, from the keys 1 to 8 */
   | { kind: 'switch'; index: number };
 
@@ -88,6 +90,7 @@ export function labActionOf(press: KeyPress): LabAction | null {
   if (code === 'KeyR') return { kind: 'results' };
   if (code === 'KeyP') return { kind: 'diagrams' };
   if (code === 'KeyA') return { kind: 'arrange' };
+  if (code === 'KeyV') return { kind: 'signal' };
   if (HELP_CODES.has(code)) return { kind: 'help' };
   return null;
 }
@@ -118,6 +121,7 @@ export const KEYS = {
   results: 'R',
   diagrams: 'P',
   help: 'H',
+  signal: 'V',
   fit: '0',
   actualSize: 'Shift+0',
   zoomIn: '+',
@@ -134,4 +138,5 @@ export const ARIA_KEYS = {
   results: 'R',
   diagrams: 'P',
   help: 'H ?',
+  signal: 'V',
 } as const;

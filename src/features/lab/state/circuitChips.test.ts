@@ -132,6 +132,31 @@ describe('circuit: switches and clearing', () => {
     expect(run([{ type: 'toggleSwitch', index: 3 }], state).switches[3]).toBe(false);
   });
 
+  it('sets several switches at once, leaves the others, and keeps them out of the history', () => {
+    const start = run([{ type: 'toggleSwitch', index: 5 }]);
+    const state = run(
+      [
+        {
+          type: 'setSwitches',
+          changes: [
+            { index: 0, up: true },
+            { index: 1, up: false },
+            { index: 5, up: false },
+            { index: 9, up: true },
+            { index: -1, up: true },
+          ],
+        },
+      ],
+      start,
+    );
+    expect(state.switches.map(Number)).toEqual([1, 0, 0, 0, 0, 0, 0, 0]);
+    expect(state.past).toBe(start.past);
+    // nothing to change: the same state comes back, so nothing is saved or redrawn
+    const same = [{ index: 0, up: true }];
+    expect(run([{ type: 'setSwitches', changes: same }], state)).toBe(state);
+    expect(run([{ type: 'setSwitches', changes: [] }], state)).toBe(state);
+  });
+
   it('ignores a switch that does not exist', () => {
     for (const index of [-1, 8, 1.5]) {
       expect(circuitReducer(initialCircuit, { type: 'toggleSwitch', index })).toBe(initialCircuit);

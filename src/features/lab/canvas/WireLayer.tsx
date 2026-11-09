@@ -1,7 +1,9 @@
 import { pointPosition, type Position } from '../board/geometry';
 import { PITCH } from '../board/layout';
-import { EDIT_COLORS, WIRE_COLORS, type WireColor } from '../board/palette';
+import { EDIT_COLORS, SIGNAL_COLORS, WIRE_COLORS, type WireColor } from '../board/palette';
 import { useEffect, useState } from 'react';
+import type { CSSProperties } from 'react';
+import type { NetState } from '../sim/evaluate';
 import type { LabWire } from '../state/circuit';
 import { handlePoint, wirePath, type Bend } from '../wire/curve';
 import type { KeyboardCursor } from './useKeyboardWiring';
@@ -27,6 +29,10 @@ type WireLayerProps = {
   keyboard?: KeyboardCursor | null;
   /** Wires that were just rearranged: where each was, so that it can glide from there. `id` counts the rearrangements */
   glide?: { from: ReadonlyMap<string, Bend>; id: number } | null;
+  /** The signal view: what the net at a point carries; without it the wires are drawn as they are */
+  signal?: ((pointId: string) => NetState) | null;
+  /** The net a student is looking at: its wires get a halo and the points on it a ring */
+  net?: { wireIds: ReadonlySet<string>; points: readonly string[] } | null;
 };
 
 const GLIDE_MS = 380;
@@ -52,10 +58,18 @@ function shapeOf(wire: LabWire, preview: Preview | null, shown: Bend): Shape | n
   return a && b ? { a, b, bend } : null;
 }
 
-function Plug({ at, color }: { at: Position; color: WireColor }) {
+/** The look of a wire that has just been put on the board: it is drawn in, and its plugs follow. */
+const drawIn = (order: number | undefined): CSSProperties | undefined =>
+  order === undefined ? undefined : ({ '--i': Math.min(order, 12) } as CSSProperties);
+
+function Plug({ at, color, fresh }: { at: Position; color: WireColor; fresh?: number }) {
   const { body, edge } = WIRE_COLORS[color];
   return (
-    <g pointerEvents="none">
+    <g
+      pointerEvents="none"
+      className={fresh === undefined ? undefined : 'lab-plug-in'}
+      style={drawIn(fresh)}
+    >
       <circle
         cx={at.x}
         cy={at.y}
@@ -70,15 +84,94 @@ function Plug({ at, color }: { at: Position; color: WireColor }) {
   );
 }
 
-function Rope({ shape, color, opacity = 1 }: { shape: Shape; color: WireColor; opacity?: number }) {
+function Rope({
+  shape,
+  color,
+  opacity = 1,
+  fresh,
+}: {
+  shape: Shape;
+  color: WireColor;
+  opacity?: number;
+  fresh?: number;
+}) {
   const { body, edge } = WIRE_COLORS[color];
   const d = wirePath(shape.a, shape.b, shape.bend);
+  const grow = fresh === undefined ? '' : ' lab-wire-in';
   return (
-    <g pointerEvents="none" opacity={opacity} fill="none" strokeLinecap="round">
-      <path d={d} stroke={edge} strokeWidth={WIRE_WIDTH + 1.6} className={COLOR_FADE} />
-      <path d={d} stroke={body} strokeWidth={WIRE_WIDTH} className={COLOR_FADE} />
+    <g
+      pointerEvents="none"
+      opacity={opacity}
+      fill="none"
+      strokeLinecap="round"
+      style={drawIn(fresh)}
+    >
+      <path
+        d={d}
+        stroke={edge}
+        strokeWidth={WIRE_WIDTH + 1.6}
+        pathLength={1}
+        className={COLOR_FADE + grow}
+      />
+      <path
+        d={d}
+        stroke={body}
+        strokeWidth={WIRE_WIDTH}
+        pathLength={1}
+        className={COLOR_FADE + grow}
+      />
     </g>
   );
+}
+
+/** What a wire carries, drawn round it (1 glows, a clash is red) and over it (0 a dark core, nothing dashes). */
+function SignalSkin({ d, state, over }: { d: string; state: NetState; over: boolean }) {
+  if (!over) {
+    if (state !== 'high' && state !== 'conflict') return null;
+    return (
+      <path
+        d={d}
+        data-signal={state}
+        fill="none"
+        stroke={state === 'high' ? SIGNAL_COLORS.high : SIGNAL_COLORS.conflict}
+        strokeWidth={WIRE_WIDTH + 7}
+        strokeLinecap="round"
+        opacity={0.62}
+        pointerEvents="none"
+        className="lab-signal-glow"
+      />
+    );
+  }
+  if (state === 'low') {
+    return (
+      <path
+        d={d}
+        data-signal="low"
+        fill="none"
+        stroke={SIGNAL_COLORS.low}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        opacity={0.55}
+        pointerEvents="none"
+      />
+    );
+  }
+  if (state === 'floating') {
+    return (
+      <path
+        d={d}
+        data-signal="floating"
+        fill="none"
+        stroke={SIGNAL_COLORS.floating}
+        strokeWidth={WIRE_WIDTH - 1}
+        strokeDasharray="2.5 6"
+        strokeLinecap="butt"
+        opacity={0.8}
+        pointerEvents="none"
+      />
+    );
+  }
+  return null;
 }
 
 function Ring({ at, radius, filled = false }: { at: Position; radius: number; filled?: boolean }) {
@@ -111,7 +204,24 @@ export function WireLayer({
   color,
   keyboard = null,
   glide = null,
+  signal = null,
+  net = null,
 }: WireLayerProps) {
+  // a wire that is new to the board is drawn in, one after the other when there are many (the
+  // answer of a task); the wires that were there when the page opened are not
+  const [known, setKnown] = useState<ReadonlySet<string>>(() => new Set(wires.map((w) => w.id)));
+  const [fresh, setFresh] = useState<ReadonlyMap<string, number>>(new Map());
+  const ids = new Set(wires.map((wire) => wire.id));
+  const unseen = wires.filter((wire) => !known.has(wire.id));
+  const gone = [...known].filter((id) => !ids.has(id));
+  if (unseen.length > 0 || gone.length > 0) {
+    setKnown(new Set([...known].filter((id) => ids.has(id)).concat(unseen.map((w) => w.id))));
+    setFresh((was) => {
+      const next = new Map([...was].filter(([id]) => ids.has(id)));
+      unseen.forEach((wire, order) => next.set(wire.id, order));
+      return next;
+    });
+  }
   // a rearrangement glides: the wires are drawn between their old bend and their new one
   const [seen, setSeen] = useState(glide?.id ?? 0);
   const [from, setFrom] = useState<ReadonlyMap<string, Bend> | null>(null);
@@ -152,8 +262,25 @@ export function WireLayer({
         const shape = shapeOf(wire, preview, shownBend(wire));
         if (!shape) return null;
         const isSelected = wire.id === selected;
+        const isOnNet = net?.wireIds.has(wire.id) === true;
+        const order = fresh.get(wire.id);
+        const d = wirePath(shape.a, shape.b, shape.bend);
+        const state = signal ? signal(wire.from) : null;
         return (
           <g key={wire.id}>
+            {isOnNet && !isSelected ? (
+              <path
+                d={d}
+                data-net-wire={wire.id}
+                fill="none"
+                stroke={EDIT_COLORS.halo}
+                strokeWidth={WIRE_WIDTH + 7}
+                strokeLinecap="round"
+                opacity={0.5}
+                pointerEvents="none"
+              />
+            ) : null}
+            {state ? <SignalSkin d={d} state={state} over={false} /> : null}
             {isSelected ? (
               <path
                 d={wirePath(shape.a, shape.b, shape.bend)}
@@ -165,9 +292,10 @@ export function WireLayer({
                 pointerEvents="none"
               />
             ) : null}
-            <Rope shape={shape} color={wire.color} />
-            <Plug at={shape.a} color={wire.color} />
-            <Plug at={shape.b} color={wire.color} />
+            <Rope shape={shape} color={wire.color} fresh={order} />
+            {state ? <SignalSkin d={d} state={state} over /> : null}
+            <Plug at={shape.a} color={wire.color} fresh={order} />
+            <Plug at={shape.b} color={wire.color} fresh={order} />
             <path
               data-wire-id={wire.id}
               d={wirePath(shape.a, shape.b, shape.bend)}
@@ -205,6 +333,13 @@ export function WireLayer({
           </g>
         );
       })}
+
+      {net
+        ? net.points.map((id) => {
+            const at = pointPosition(id);
+            return at ? <Ring key={id} at={at} radius={PITCH * 0.6} /> : null;
+          })
+        : null}
 
       {preview?.kind === 'draft' && draftFrom ? (
         <>
