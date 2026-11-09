@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'r
 import type { CSSProperties, KeyboardEvent } from 'react';
 import { createPortal } from 'react-dom';
 import { UI_TEXT } from '@/config/site';
+import type { LabMethodId } from '@/content/types';
 import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
 import { BoardArt } from './board/BoardArt';
 import { icSlots } from './board/geometry';
@@ -102,6 +103,7 @@ export function LabBoard() {
   const [taskId, setTaskId] = useState<string | null>(null);
   const [openKinds, setOpenKinds] = useState<ReadonlySet<string>>(new Set());
   const [openSolutions, setOpenSolutions] = useState<ReadonlySet<string>>(new Set());
+  const [taskMethod, setTaskMethod] = useState<LabMethodId>('algebra');
   const tasksButton = useRef<HTMLButtonElement>(null);
   const oneRow = useMinWidth(ONE_ROW_MIN);
   const wideStrip = useMinWidth(WIDE_STRIP_MIN);
@@ -427,6 +429,8 @@ export function LabBoard() {
         onOpenKinds={setOpenKinds}
         openSolutions={openSolutions}
         onOpenSolutions={setOpenSolutions}
+        method={taskMethod}
+        onMethodChange={setTaskMethod}
         onLoadSolution={loadSolution}
       />
       <IcDiagramDrawer open={diagramsOpen} onClose={closeDiagrams} onBoard={onBoard} />

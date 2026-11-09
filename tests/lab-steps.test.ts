@@ -203,4 +203,74 @@ $\mathbf{Ans}\quad Y = AB + C$
   it('refuses text after the answer lines', () => {
     expect(build(good + '\nมีข้อความต่อท้าย\n').errors[0]).toMatch(/only answer lines/);
   });
+
+  describe('a task worked two ways', () => {
+    const twoWays = String.raw`$\mathbf{Sol}^{n}$
+
+@method algebra
+
+$$Y = AB + C = C + AB$$
+
+@method kmap
+
+ใส่ $1$ ที่ช่อง $1,3,5,6,7$
+
+@kmap:Y 1,3,5,7 | 6,7
+- ลูปสีส้ม (ช่อง $1,3,5,7$) : $C=1$ $\Rightarrow C$
+
+@method all
+
+$$Y = C + AB = BA + C$$
+
+$\mathbf{Ans}\quad Y = AB + C$
+`;
+
+    it('builds each way with the part both share put at its end, and checks every chain', () => {
+      const { errors, task } = build(twoWays);
+      expect(errors).toEqual([]);
+      expect(task?.methods?.map((m) => m.id)).toEqual(['algebra', 'kmap']);
+      // the algebra way: its chain, then the shared chain; the K-map way: text, the map, a list, the shared chain
+      expect(task?.methods?.[0]?.steps.map((b) => b.t)).toEqual(['math', 'math']);
+      expect(task?.methods?.[1]?.steps.map((b) => b.t)).toEqual(['p', 'figure', 'list', 'math']);
+      // the plain steps are the first way
+      expect(task?.steps).toEqual(task?.methods?.[0]?.steps);
+      expect(task?.answer).toHaveLength(1);
+    });
+
+    it('leaves methods null for a task worked one way', () => {
+      expect(build(good).task?.methods).toBeNull();
+    });
+
+    it('checks the chains of every way, the shared part included', () => {
+      const wrongAlgebra = twoWays.replace('= C + AB$$', () => '= C + A$$');
+      expect(build(wrongAlgebra).errors[0]).toMatch(/step \(algebra\)/);
+      const wrongShared = twoWays.replace('= BA + C$$', () => '= BA$$');
+      expect(build(wrongShared).errors[0]).toMatch(/step/);
+    });
+
+    it('refuses a K-map way with no map, an algebra way with no chain, or ways out of order', () => {
+      expect(build(twoWays.replace('@kmap:Y 1,3,5,7 | 6,7\n', '')).errors[0]).toMatch(/no @kmap/);
+      const noChain = twoWays.replace('$$Y = AB + C = C + AB$$', 'ลดรูปด้วยพีชคณิต');
+      // the shared chain after both ways does not stand in for the chain of the algebra way
+      expect(build(noChain).errors[0]).toMatch(/no chain/);
+      expect(
+        build(
+          twoWays
+            .replace('@method algebra', '@method TMP')
+            .replace('@method kmap', '@method algebra')
+            .replace('@method TMP', '@method kmap'),
+        ).errors[0],
+      ).toMatch(/in that order/);
+      expect(build(twoWays.replace('@method all', '@method kmap')).errors[0]).toMatch(
+        /in that order/,
+      );
+    });
+
+    it('refuses text before the first way and an empty way', () => {
+      expect(
+        build(twoWays.replace('@method algebra', 'ข้อความก่อน\n\n@method algebra')).errors[0],
+      ).toMatch(/before the first/);
+      expect(build(twoWays.replace('$$Y = AB + C = C + AB$$\n\n', '')).errors[0]).toMatch(/empty/);
+    });
+  });
 });

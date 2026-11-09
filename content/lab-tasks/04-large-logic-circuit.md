@@ -21,6 +21,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -30,6 +32,35 @@ Y &= \overline{A}\,\overline{B}C + A\overline{B}C + ABC \\
  &= \overline{B}C + ABC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
  &= C(\overline{B} + AB) && \text{$X(Y+Z)=XY+XZ$} \\
  &= C(\overline{B} + A) && \text{$X+\overline{X}Y=X+Y$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = \overline{A}\,\overline{B}C + A\overline{B}C + ABC$$
+
+$$
+\begin{aligned}
+\overline{A}\,\overline{B}C &= m_1 \\
+A\overline{B}C &= m_5 \\
+ABC &= m_7 \\
+Y &= m_1 + m_5 + m_7 \\
+ &= \sum m(1,5,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,5,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 1,5 | 5,7
+- ลูปสีส้ม (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow \overline{B}C$
+- ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+
+$$
+\begin{aligned}
+Y &= AC + \overline{B}C \\
+ &= (A + \overline{B})C && \text{$X(Y+Z)=XY+XZ,\ XY=YX$}
 \end{aligned}
 $$
 
@@ -53,6 +84,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -65,6 +98,35 @@ Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
  &= A + \overline{C} && \text{$X\cdot 1=X$}
 \end{aligned}
 $$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
+ &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+\overline{C} &= \overline{A}\,\overline{B}\,\overline{C} + \overline{A}B\overline{C} + A\overline{B}\,\overline{C} + AB\overline{C} = m_0 + m_2 + m_4 + m_6 \\
+A\overline{B} &= A\overline{B}\,\overline{C} + A\overline{B}C = m_4 + m_5 \\
+Y &= m_6 + m_7 + m_0 + m_2 + m_4 + m_6 + m_4 + m_5 \\
+ &= m_0 + m_2 + m_4 + m_5 + m_6 + m_7 && \text{$X+X=X,\ X+Y=Y+X$} \\
+ &= \sum m(0,2,4,5,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $0,2,4,5,6,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 0,2,4,6 | 4,5,6,7
+- ลูปสีส้ม (ช่อง $0,2,4,6$) : $C=0$ $\Rightarrow \overline{C}$
+- ลูปสีน้ำเงิน (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
 
 $\mathbf{Ans}\quad Y = A + \overline{C}$
 
@@ -89,6 +151,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -109,6 +173,43 @@ Y &= \overline{A}B + \overline{A}BC + ABC \\
  &= \overline{A}B + BC && \text{$X(Y+Z)=XY+XZ$}
 \end{aligned}
 $$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$X = \overline{A}B + \overline{A}BC$$
+
+$$Y = \overline{A}B + \overline{A}BC + ABC$$
+
+$$
+\begin{aligned}
+\overline{A}B &= \overline{A}B\overline{C} + \overline{A}BC = m_2 + m_3 \\
+\overline{A}BC &= m_3 \\
+X &= m_2 + m_3 + m_3 \\
+ &= m_2 + m_3 && \text{$X+X=X$} \\
+ &= \sum m(2,3)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\overline{A}B &= \overline{A}B\overline{C} + \overline{A}BC = m_2 + m_3 \\
+\overline{A}BC &= m_3 \\
+ABC &= m_7 \\
+Y &= m_2 + m_3 + m_3 + m_7 \\
+ &= m_2 + m_3 + m_7 && \text{$X+X=X$} \\
+ &= \sum m(2,3,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $2,3$ ของ $X$ และช่อง $2,3,7$ ของ $Y$ แล้วจับลูปของ $1$
+
+@kmap:X 2,3
+@kmap:Y 2,3 | 3,7
+- $X$ ลูปสีส้ม (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- $Y$ ลูปสีส้ม (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
 
 $\mathbf{Ans}\quad X = \overline{A}B$
 
@@ -133,6 +234,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -143,6 +246,36 @@ F &= A\overline{B}C + ABC + \overline{A}BC \\
  &= AC + \overline{A}BC && \text{$X\cdot 1=X$} \\
  &= C(A + \overline{A}B) && \text{$X(Y+Z)=XY+XZ$} \\
  &= C(A + B) && \text{$X+\overline{X}Y=X+Y$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$F = A\overline{B}C + ABC + \overline{A}BC$$
+
+$$
+\begin{aligned}
+A\overline{B}C &= m_5 \\
+ABC &= m_7 \\
+\overline{A}BC &= m_3 \\
+F &= m_5 + m_7 + m_3 \\
+ &= m_3 + m_5 + m_7 && \text{$X+Y=Y+X$} \\
+ &= \sum m(3,5,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $3,5,7$ แล้วจับลูปของ $1$
+
+@kmap:F 5,7 | 3,7
+- ลูปสีส้ม (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- ลูปสีน้ำเงิน (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
+
+$$
+\begin{aligned}
+F &= AC + BC \\
+ &= (A + B)C && \text{$X(Y+Z)=XY+XZ,\ XY=YX$}
 \end{aligned}
 $$
 
@@ -167,6 +300,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -179,6 +314,31 @@ Y &= \overline{A}B + AC + BC \\
 \end{aligned}
 $$
 
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = \overline{A}B + AC + BC$$
+
+$$
+\begin{aligned}
+\overline{A}B &= \overline{A}B\overline{C} + \overline{A}BC = m_2 + m_3 \\
+AC &= A\overline{B}C + ABC = m_5 + m_7 \\
+BC &= \overline{A}BC + ABC = m_3 + m_7 \\
+Y &= m_2 + m_3 + m_5 + m_7 + m_3 + m_7 \\
+ &= m_2 + m_3 + m_5 + m_7 && \text{$X+X=X$} \\
+ &= \sum m(2,3,5,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $2,3,5,7$ แล้วจับลูปของ $1$ (ช่อง $3,7$ ถูกลูปอื่นคลุมครบแล้ว ไม่ต้องจับ)
+
+@kmap:Y 2,3 | 5,7
+- ลูปสีส้ม (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+
+@method all
+
 เขียนด้วย NAND
 
 $$
@@ -189,7 +349,7 @@ Y &= \overline{A}B + AC \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Y = \overline{A}B + AC$
+$\mathbf{Ans}\quad Y = \overline{\overline{\overline{A}B}\cdot\overline{AC}}$
 
 ## ข้อ 6 ใช้ NAND อย่างเดียว (2)
 
@@ -211,6 +371,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -225,17 +387,45 @@ Z &= AB + A\overline{B}C + \overline{A}BC \\
 \end{aligned}
 $$
 
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Z = AB + A\overline{B}C + \overline{A}BC$$
+
+$$
+\begin{aligned}
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+A\overline{B}C &= m_5 \\
+\overline{A}BC &= m_3 \\
+Z &= m_6 + m_7 + m_5 + m_3 \\
+ &= m_3 + m_5 + m_6 + m_7 && \text{$X+Y=Y+X$} \\
+ &= \sum m(3,5,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $3,5,6,7$ แล้วจับลูปของ $1$
+
+@kmap:Z 6,7 | 5,7 | 3,7
+- ลูปสีส้ม (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
+- ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- ลูปสีเขียว (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
+
+@method all
+
 เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Z &= AB + AC + BC \\
  &= \overline{\overline{AB + AC + BC}} && \text{$\overline{\overline{X}}=X$} \\
- &= \overline{\overline{AB}\cdot\overline{AC}\cdot\overline{BC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+ &= \overline{\overline{AB}\cdot\overline{AC}\cdot\overline{BC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{(\overline{AB}\cdot\overline{AC})\cdot\overline{BC}} && \text{$XYZ=(XY)Z$} \\
+ &= \overline{\overline{\overline{\overline{AB}\cdot\overline{AC}}}\cdot\overline{BC}} && \text{$X=\overline{\overline{X}}$}
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Z = AB + AC + BC$
+$\mathbf{Ans}\quad Z = \overline{\overline{\overline{\overline{AB}\cdot\overline{AC}}}\cdot\overline{BC}}$
 
 ## ข้อ 7 ใช้ NOR อย่างเดียว (1)
 
@@ -257,6 +447,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -275,6 +467,30 @@ Y &= (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C) \\
 \end{aligned}
 $$
 
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C)$$
+
+$$
+\begin{aligned}
+(A + B + C) &= M_0 \\
+(A + \overline{B} + C) &= M_2 \\
+(\overline{A} + B + C) &= M_4 \\
+Y &= M_0 M_2 M_4 \\
+ &= \prod M(0,2,4)
+\end{aligned}
+$$
+
+ใส่ $0$ ที่ช่อง $0,2,4$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
+
+@kmap:Y 0,2 | 0,4
+- ลูปสีส้ม (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
+- ลูปสีน้ำเงิน (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+
+@method all
+
 เขียนด้วย NOR
 
 $$
@@ -285,7 +501,7 @@ Y &= (A + C)(B + C) \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Y = (A + C)(B + C)$
+$\mathbf{Ans}\quad Y = \overline{\overline{A + C} + \overline{B + C}}$
 
 ## ข้อ 8 ใช้ NOR อย่างเดียว สองเอาต์พุต
 
@@ -308,6 +524,8 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
 ถอดสมการจากรูป
 
 $$
@@ -327,6 +545,48 @@ Y &= \overline{(A + B)}\,C \\
 \end{aligned}
 $$
 
+@method kmap
+
+ถอดสมการจากรูป
+
+$$X = (A + B + C)(A + B)$$
+
+$$
+\begin{aligned}
+(A + B + C) &= M_0 \\
+(A + B) &= (A + B + C)(A + B + \overline{C}) = M_0 M_1 \\
+X &= M_0 M_0 M_1 \\
+ &= M_0 M_1 && \text{$XX=X$} \\
+ &= \prod M(0,1)
+\end{aligned}
+$$
+
+จากรูป $Y=\overline{X}\,C$ แทน $X=A+B$
+
+$$
+\begin{aligned}
+Y &= \overline{(A + B)}\,C \\
+ &= \overline{A}\,\overline{B}C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\overline{A}\,\overline{B}C &= m_1 \\
+Y &= m_1 \\
+ &= \sum m(1)
+\end{aligned}
+$$
+
+ใส่ $0$ ที่ช่อง $0,1$ ของ $X$ นอกนั้นเป็น $1$ และใส่ $1$ ที่ช่อง $1$ ของ $Y$ นอกนั้นเป็น $0$ แล้วจับลูปของ $0$ ใน $X$ และลูปของ $1$ ใน $Y$
+
+@kmap:X 0,1
+@kmap:Y 1
+- $X$ ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow (A+B)$
+- $Y$ ลูปสีส้ม (ช่อง $1$) : $A=0,\ B=0,\ C=1$ $\Rightarrow \overline{A}\,\overline{B}C$
+
+@method all
+
 เขียนด้วย NOR
 
 $$
@@ -340,10 +600,12 @@ $$
 \begin{aligned}
 Y &= \overline{A}\,\overline{B}C \\
  &= \overline{\overline{\overline{A}\,\overline{B}C}} && \text{$\overline{\overline{X}}=X$} \\
- &= \overline{A + B + \overline{C}} && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$}
+ &= \overline{A + B + \overline{C}} && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$} \\
+ &= \overline{(A + B) + \overline{C}} && \text{$X+Y+Z=(X+Y)+Z$} \\
+ &= \overline{\overline{\overline{A + B}} + \overline{C}} && \text{$X=\overline{\overline{X}}$}
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad X = A + B$
+$\mathbf{Ans}\quad X = \overline{\overline{A + B}}$
 
-$\mathbf{Ans}\quad Y = \overline{A}\,\overline{B}C$
+$\mathbf{Ans}\quad Y = \overline{\overline{\overline{A + B}} + \overline{C}}$

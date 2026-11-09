@@ -45,6 +45,28 @@ describe('the lab tasks of the content', () => {
     }
   });
 
+  it('work every task two ways, algebra and a K-map, unless it has a row that does not matter or its answer is one minterm', () => {
+    for (const t of tasks) {
+      const cells = t.outputs.flatMap((o) => o.cells);
+      const dontCare = cells.includes('x');
+      // a single 1 or a single 0 in every output leaves nothing to simplify or loop
+      const single = t.outputs.every((o) => {
+        const ones = o.cells.filter((c) => c === '1').length;
+        return ones === 1;
+      });
+      if (dontCare || single) {
+        expect(t.methods, t.id).toBeNull();
+      } else {
+        expect(
+          t.methods?.map((m) => m.id),
+          t.id,
+        ).toEqual(['algebra', 'kmap']);
+      }
+    }
+    // the plan counts 37 of the 44 tasks
+    expect(tasks.filter((t) => t.methods).length).toBe(37);
+  });
+
   it('use two input gates in every answer, and the right chip for a task that names one', () => {
     for (const t of tasks) {
       for (const gate of t.solution.netlist.gates) {

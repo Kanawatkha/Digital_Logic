@@ -211,6 +211,68 @@ describe('the tasks drawer of the lab', () => {
     expect(await within(third).findByRole('button', { name: 'ดูเฉลย' })).toBeInTheDocument();
   });
 
+  describe('a task worked two ways', () => {
+    /** The solution of the first task, open. */
+    async function openTwoWays() {
+      openLab();
+      const dialog = await openFirstTask();
+      fireEvent.click(within(dialog).getByRole('button', { name: 'ดูเฉลย' }));
+      return dialog;
+    }
+
+    it('shows the algebra first and a K-map behind a second tab, the answer staying under both', async () => {
+      const dialog = await openTwoWays();
+      const tabs = within(dialog).getByRole('tablist', { name: 'วิธีทำ' });
+      const [algebra, kmap] = within(tabs).getAllByRole('tab');
+      expect(algebra).toHaveAccessibleName('พีชคณิต');
+      expect(kmap).toHaveAccessibleName('K-map');
+      expect(algebra).toHaveAttribute('aria-selected', 'true');
+      expect(kmap).toHaveAttribute('aria-selected', 'false');
+      expect(within(dialog).queryByText(/ลูปสีส้ม/)).not.toBeInTheDocument();
+      fireEvent.click(kmap!);
+      expect(kmap).toHaveAttribute('aria-selected', 'true');
+      expect(within(dialog).getByText(/ลูปสีส้ม/)).toBeInTheDocument();
+      expect(within(dialog).getByRole('tabpanel')).toHaveAttribute('aria-labelledby', kmap!.id);
+      expect(within(dialog).getByText('Ans')).toBeInTheDocument();
+      fireEvent.click(algebra!);
+      expect(within(dialog).queryByText(/ลูปสีส้ม/)).not.toBeInTheDocument();
+    });
+
+    it('moves between the two ways with the arrow keys, as tabs do', async () => {
+      const dialog = await openTwoWays();
+      const [algebra, kmap] = within(dialog).getAllByRole('tab');
+      algebra!.focus();
+      fireEvent.keyDown(algebra!, { key: 'ArrowRight' });
+      expect(kmap).toHaveAttribute('aria-selected', 'true');
+      expect(kmap).toHaveFocus();
+      fireEvent.keyDown(kmap!, { key: 'ArrowLeft' });
+      expect(algebra).toHaveAttribute('aria-selected', 'true');
+    });
+
+    it('keeps the way that was chosen when the drawer is closed and opened again', async () => {
+      const dialog = await openTwoWays();
+      fireEvent.click(within(dialog).getByRole('tab', { name: 'K-map' }));
+      fireEvent.keyDown(document, { key: 'Escape' });
+      fireEvent.click(screen.getByRole('button', { name: 'โจทย์' }));
+      const again = await screen.findByRole('dialog', { name: 'โจทย์' });
+      expect(await within(again).findByRole('tab', { name: 'K-map' })).toHaveAttribute(
+        'aria-selected',
+        'true',
+      );
+    });
+
+    it("has no tabs for a task worked one way (one with don't care rows)", async () => {
+      openLab();
+      const dialog = await openDrawer();
+      openKind(dialog, /ตารางความจริง/);
+      fireEvent.click(within(dialog).getByRole('button', { name: /^ข้อ 3 / }));
+      fireEvent.click(within(dialog).getByRole('button', { name: 'ดูเฉลย' }));
+      expect(within(dialog).getByText('Sol')).toBeInTheDocument();
+      expect(within(dialog).queryByRole('tablist')).not.toBeInTheDocument();
+      expect(within(dialog).queryByRole('tabpanel')).not.toBeInTheDocument();
+    });
+  });
+
   it("marks the don't care rows of the table of the answer", async () => {
     openLab();
     const dialog = await openDrawer();

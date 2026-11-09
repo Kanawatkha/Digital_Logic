@@ -89,6 +89,12 @@ export type LabTaskOutput = {
   cells: ('0' | '1' | 'x')[];
 };
 
+/** The ways a task can be worked: boolean algebra, or a Karnaugh map */
+export type LabMethodId = 'algebra' | 'kmap';
+
+/** One way of working a task: its steps up to the answer, the part every way shares included */
+export type LabMethod = { id: LabMethodId; steps: Block[] };
+
 export type LabTask = {
   /** Stable, for example "03.2": file number, then place in the file */
   id: string;
@@ -102,8 +108,10 @@ export type LabTask = {
   only: 'nand' | 'nor' | null;
   /** The circuit given in the statement, drawn from this */
   figure: LabNetlist | null;
-  /** The worked solution written in the Markdown, up to the answer */
+  /** The worked solution written in the Markdown, up to the answer (the first method when there are two) */
   steps: Block[];
+  /** The same solution worked two ways, when the task can be done by algebra and by a K-map, else null */
+  methods: LabMethod[] | null;
   /** The answer lines written in the Markdown, one for each output */
   answer: Block[];
   /** The circuit of the answer: a smallest circuit found by the build, its gates and its simplified equations */

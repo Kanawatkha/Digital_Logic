@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type {
   Block,
+  LabMethod,
   LabNetlist,
   LabTask,
   LabTaskGroup,
@@ -75,6 +76,7 @@ const LAB_OPEN = /^```lab\s*$/;
 const SOL_LINE = '$\\mathbf{Sol}^{n}$';
 const ANS_LINE = /^\$\\mathbf\{Ans\}/;
 const FENCE = /^```\s*$/;
+const METHOD_LINE = /^@method\s+(algebra|kmap|all)\s*$/;
 const GATE_LINE = /^(\w+)\s*=\s*([A-Z]+)\s+(.+)$/;
 const KIND_SET = new Set<string>(GATE_KIND_NAMES);
 
@@ -188,6 +190,46 @@ function parseLab(lines: Line[], where: string): Block0 {
       throw new ParseError(`${where}:${g.no}: ${g.name} is not an output`);
   }
   return { outputs, only, form, figure, specs };
+}
+
+type WorkedWays = { algebra: Line[]; kmap: Line[]; shared: Line[] };
+
+/**
+ * A solution may be worked two ways: `@method algebra`, then `@method kmap`, then optionally
+ * `@method all` for what follows both (such as the conversion to NAND or NOR). Returns null for a
+ * solution written one way only.
+ */
+function splitMethods(lines: Line[], where: string): WorkedWays | null {
+  const marks = lines
+    .map((l, k) => ({ k, m: METHOD_LINE.exec(l.text.trim()) }))
+    .filter((x): x is { k: number; m: RegExpExecArray } => x.m !== null);
+  if (marks.length === 0) return null;
+  const names = marks.map((x) => x.m[1]);
+  const order = names.join(' ');
+  if (order !== 'algebra kmap' && order !== 'algebra kmap all') {
+    throw new ParseError(
+      `${where}: the methods must be @method algebra, @method kmap and optionally @method all, in that order`,
+    );
+  }
+  const stray = lines.slice(0, marks[0]!.k).find((l) => l.text.trim() !== '');
+  if (stray) throw new ParseError(`${where}:${stray.no}: text before the first @method line`);
+  const part = (i: number): Line[] => lines.slice(marks[i]!.k + 1, marks[i + 1]?.k ?? lines.length);
+  const ways: WorkedWays = {
+    algebra: part(0),
+    kmap: part(1),
+    shared: marks.length === 3 ? part(2) : [],
+  };
+  for (const [name, list] of Object.entries(ways)) {
+    if (name === 'shared' && marks.length === 2) continue;
+    if (list.every((l) => l.text.trim() === ''))
+      throw new ParseError(
+        `${where}: the @method ${name === 'shared' ? 'all' : name} part is empty`,
+      );
+  }
+  if (!ways.kmap.some((l) => /^@kmap:/.test(l.text.trim()))) {
+    throw new ParseError(`${where}: the K-map method has no @kmap figure`);
+  }
+  return ways;
 }
 
 /** The formula and table placeholders of a statement, written from the data of the task. */
@@ -367,7 +409,15 @@ export function buildLabTasks(contentDir: string): TasksResult {
             throw new ParseError(
               `${where}:${stray.no}: only answer lines may follow the first one`,
             );
-          const steps = blocksOf(written.slice(0, ansAt));
+          const ways = splitMethods(written.slice(0, ansAt), where);
+          const lineGap = (no: number): Line => ({ text: '', no });
+          const methods: LabMethod[] | null = ways
+            ? (['algebra', 'kmap'] as const).map((id) => ({
+                id,
+                steps: blocksOf([...ways[id], lineGap(ways[id].at(-1)?.no ?? 0), ...ways.shared]),
+              }))
+            : null;
+          const steps = methods ? methods[0]!.steps : blocksOf(written.slice(0, ansAt));
           if (steps.length === 0) throw new ParseError(`${where}: the solution has no steps`);
           const answer = blocksOf(written.slice(ansAt));
 
@@ -385,11 +435,21 @@ export function buildLabTasks(contentDir: string): TasksResult {
               throw new ParseError(`${where}: no answer line for ${o.name}`);
           }
           let chains = 0;
-          for (const tex of mathOf(steps)) {
-            const bad = checkChain(tex, outs);
-            if (bad === null) continue;
-            if (bad.length) throw new ParseError(`${where}: step: ${bad.join('; ')}`);
-            chains++;
+          for (const way of methods ?? [{ id: 'algebra' as const, steps }]) {
+            for (const tex of mathOf(way.steps)) {
+              const bad = checkChain(tex, outs);
+              if (bad === null) continue;
+              if (bad.length) throw new ParseError(`${where}: step (${way.id}): ${bad.join('; ')}`);
+              chains++;
+            }
+            // the algebra way is the one with the laws: its own part, not only the shared tail, must hold a chain
+            if (
+              ways &&
+              way.id === 'algebra' &&
+              !mathOf(blocksOf(ways.algebra)).some((tex) => checkChain(tex, outs) !== null)
+            ) {
+              throw new ParseError(`${where}: the algebra method has no chain of equal formulas`);
+            }
           }
 
           // checks on the task
@@ -455,6 +515,7 @@ export function buildLabTasks(contentDir: string): TasksResult {
             only: lab.only,
             figure: lab.figure as LabNetlist | null,
             steps,
+            methods,
             answer,
             solution: { netlist: solved.netlist, gates: solved.gates, equations: solved.equations },
           };
@@ -467,7 +528,7 @@ export function buildLabTasks(contentDir: string): TasksResult {
               (s) =>
                 `   ${s.name}: ${cellsOf(s.spec).join('')}   answer: ${solved.equations[s.name]}  (${solved.forms[s.name]})`,
             ),
-            `   steps: ${steps.length} blocks, ${chains} chains of equal formulas checked`,
+            `   steps: ${steps.length} blocks, ${chains} chains of equal formulas checked${methods ? ' (two methods: algebra and K-map)' : ''}`,
             `   budget: ${solved.gates} gates (${solved.basis})${lab.figure ? `; figure ${lab.figure.gates.length} gates (${Object.keys(truthOf(lab.figure)).length} outputs)` : ''}`,
             '',
           );

@@ -1,4 +1,5 @@
 import { UI_TEXT } from '@/config/site';
+import type { LabMethodId } from '@/content/types';
 import { Drawer } from '../ui/Drawer';
 import type { PlacedSolution } from './place';
 import { TaskDetail } from './TaskDetail';
@@ -17,6 +18,9 @@ type TasksDrawerProps = {
   /** The tasks whose solution is shown (kept by the page, like the kinds) */
   openSolutions: ReadonlySet<string>;
   onOpenSolutions: (tasks: ReadonlySet<string>) => void;
+  /** The way a task with two ways is worked (kept by the page, so it follows the student from task to task) */
+  method: LabMethodId;
+  onMethodChange: (method: LabMethodId) => void;
   /** The answer, to be put on the boards in place of what is there */
   onLoadSolution: (placed: PlacedSolution) => void;
 };
@@ -29,6 +33,8 @@ function TasksBody({
   onOpenKinds,
   openSolutions,
   onOpenSolutions,
+  method,
+  onMethodChange,
   onLoadSolution,
 }: Omit<TasksDrawerProps, 'open' | 'onClose'>) {
   const tasks = useLabTasks();
@@ -58,6 +64,8 @@ function TasksBody({
             else next.delete(task.id);
             onOpenSolutions(next);
           }}
+          method={method}
+          onMethodChange={onMethodChange}
           onLoadSolution={onLoadSolution}
         />
       ) : (

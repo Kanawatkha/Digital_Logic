@@ -1,9 +1,9 @@
-import { useMemo } from 'react';
+import { useId, useMemo, type KeyboardEvent } from 'react';
 import { BlockList } from '@/components/content/BlockRenderer';
 import { InlineContent } from '@/components/content/InlineContent';
 import { Icon } from '@/components/ui/Icon';
 import { UI_TEXT } from '@/config/site';
-import type { LabTask } from '@/content/types';
+import type { LabMethodId, LabTask } from '@/content/types';
 import { placeSolution, type PlacedSolution } from './place';
 import { TaskDiagram } from './TaskDiagram';
 import { TaskTruthTable } from './TaskTruthTable';
@@ -14,6 +14,9 @@ type TaskDetailProps = {
   /** Whether the solution is shown, kept by the page so it is as it was left */
   solutionOpen: boolean;
   onSolutionOpenChange: (open: boolean) => void;
+  /** The way a task with two ways is worked, kept by the page so it follows the student from task to task */
+  method: LabMethodId;
+  onMethodChange: (method: LabMethodId) => void;
   /** The answer, put on the boards in place of what is there */
   onLoadSolution: (placed: PlacedSolution) => void;
 };
@@ -27,9 +30,27 @@ export function TaskDetail({
   onBack,
   solutionOpen,
   onSolutionOpenChange,
+  method,
+  onMethodChange,
   onLoadSolution,
 }: TaskDetailProps) {
   const outputNames = useMemo(() => task.outputs.map((o) => o.name), [task.outputs]);
+  const ids = useId();
+  const shown = task.methods?.find((m) => m.id === method) ?? task.methods?.[0] ?? null;
+  const steps = shown ? shown.steps : task.steps;
+
+  // arrow keys move between the two ways, as in any set of tabs
+  const onMethodKey = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (!task.methods || (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight')) return;
+    e.preventDefault();
+    const at = task.methods.findIndex((m) => m.id === shown?.id);
+    const next =
+      task.methods[
+        (at + (e.key === 'ArrowRight' ? 1 : task.methods.length - 1)) % task.methods.length
+      ]!;
+    onMethodChange(next.id);
+    document.getElementById(`${ids}-tab-${next.id}`)?.focus();
+  };
 
   // A, B and C are switches 1, 2 and 3; the outputs are LED 1 and LED 2
   const load = () =>
@@ -90,7 +111,43 @@ export function TaskDetail({
           <div className="lab-fade flex flex-col gap-4">
             <div>
               <p className="type-caption-upper mb-1 text-body">{UI_TEXT.labTaskSteps}</p>
-              <BlockList blocks={task.steps} />
+              {task.methods && shown ? (
+                <div
+                  role="tablist"
+                  aria-label={UI_TEXT.labTaskMethods}
+                  className="mb-3 flex flex-wrap gap-2"
+                  onKeyDown={onMethodKey}
+                >
+                  {task.methods.map((m) => (
+                    <button
+                      key={m.id}
+                      id={`${ids}-tab-${m.id}`}
+                      type="button"
+                      role="tab"
+                      aria-selected={shown.id === m.id}
+                      aria-controls={`${ids}-steps`}
+                      tabIndex={shown.id === m.id ? 0 : -1}
+                      className={`type-nav rounded-md px-3.5 py-2 transition-colors duration-200 ${
+                        shown.id === m.id
+                          ? 'bg-surface-dark text-on-dark'
+                          : 'bg-surface-card text-ink active:bg-surface-soft'
+                      }`}
+                      onClick={() => onMethodChange(m.id)}
+                    >
+                      {m.id === 'algebra'
+                        ? UI_TEXT.labTaskMethodAlgebra
+                        : UI_TEXT.labTaskMethodKmap}
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+              <div
+                id={`${ids}-steps`}
+                role={task.methods ? 'tabpanel' : undefined}
+                aria-labelledby={shown && task.methods ? `${ids}-tab-${shown.id}` : undefined}
+              >
+                <BlockList blocks={steps} />
+              </div>
             </div>
             <div className="rounded-md bg-surface-soft px-4 py-3">
               <BlockList blocks={task.answer} />

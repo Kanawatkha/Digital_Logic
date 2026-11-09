@@ -15,6 +15,25 @@ Y = m(0,1,2,3,7)
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
+เขียนแมกซ์เทอมของแถว $4,5,6$ ที่เป็น $0$ คูณกัน
+
+$$
+\begin{aligned}
+Y &= (\overline{A} + B + C)(\overline{A} + B + \overline{C})(\overline{A} + \overline{B} + C) \\
+ &= (\overline{A} + B + C\overline{C})(\overline{A} + \overline{B} + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= (\overline{A} + B + 0)(\overline{A} + \overline{B} + C) && \text{$X\overline{X}=0$} \\
+ &= (\overline{A} + B)(\overline{A} + \overline{B} + C) && \text{$X+0=X$} \\
+ &= \overline{A} + B(\overline{B} + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= \overline{A} + B\overline{B} + BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A} + 0 + BC && \text{$X\overline{X}=0$} \\
+ &= \overline{A} + BC && \text{$X+0=X$}
+\end{aligned}
+$$
+
+@method kmap
+
 ใส่ $1$ ที่ช่อง $0,1,2,3,7$
 
 @kmap:Y 0,1,2,3 | 3,7
@@ -25,7 +44,7 @@ $\mathbf{Ans}\quad Y = \overline{A} + BC$
 
 ## ข้อ 2 เขียนในรูป SOP
 
-จากตารางความจริงต่อไปนี้ จงเขียนสมการของเอาต์พุต F ในรูป SOP ลดรูปด้วย K-map แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
+จากตารางความจริงต่อไปนี้ จงเขียนสมการของเอาต์พุต F ในรูป SOP ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
 
 @table
 
@@ -36,6 +55,23 @@ F = m(1,2,3,5,7)
 ```
 
 $\mathbf{Sol}^{n}$
+
+@method algebra
+
+เขียนมินเทอมของแถว $1,2,3,5,7$ ที่เป็น $1$ รวมกัน
+
+$$
+\begin{aligned}
+F &= \overline{A}\,\overline{B}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{B}C + ABC \\
+ &= (\overline{A} + A)\overline{B}C + \overline{A}B\overline{C} + (\overline{A} + A)BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{B}C + \overline{A}B\overline{C} + BC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= (\overline{B} + B)C + \overline{A}B\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= C + \overline{A}B\overline{C} && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= C + \overline{A}B && \text{$X+\overline{X}Y=X+Y$}
+\end{aligned}
+$$
+
+@method kmap
 
 ใส่ $1$ ที่ช่อง $1,2,3,5,7$
 
@@ -83,6 +119,30 @@ Y = m(5,6,7)
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
+เขียนมินเทอมของแถว $3,5,6,7$ ของ $X$ และแถว $5,6,7$ ของ $Y$ รวมกัน
+
+$$
+\begin{aligned}
+X &= \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC \\
+ &= \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC + ABC + ABC && \text{$X+X=X$} \\
+ &= (\overline{A} + A)BC + A(\overline{B} + B)C + AB(\overline{C} + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= BC + AC + AB && \text{$X+\overline{X}=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= A\overline{B}C + AB\overline{C} + ABC \\
+ &= A\overline{B}C + AB\overline{C} + ABC + ABC && \text{$X+X=X$} \\
+ &= A(\overline{B} + B)C + AB(\overline{C} + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC + AB && \text{$X+\overline{X}=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
 ใส่ $1$ ที่ช่อง $3,5,6,7$ ของ $X$ และช่อง $5,6,7$ ของ $Y$
 
 @kmap:X 3,7 | 5,7 | 6,7
@@ -111,11 +171,27 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
+เขียนมินเทอมของแถว $1,3,4,5$ ที่เป็น $1$ รวมกัน
+
+$$
+\begin{aligned}
+Y &= \overline{A}\,\overline{B}C + \overline{A}BC + A\overline{B}\,\overline{C} + A\overline{B}C \\
+ &= \overline{A}(\overline{B} + B)C + A\overline{B}(\overline{C} + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}C + A\overline{B} && \text{$X+\overline{X}=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
 ใส่ $1$ ที่ช่อง $1,3,4,5$
 
 @kmap:Y 1,3 | 4,5
 - ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
 - ลูปสีน้ำเงิน (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow A\overline{B}$
+
+@method all
 
 เขียนด้วย NAND
 
@@ -127,7 +203,7 @@ Y &= \overline{A}C + A\overline{B} \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Y = \overline{A}C + A\overline{B}$
+$\mathbf{Ans}\quad Y = \overline{\overline{\overline{A}C}\cdot\overline{A\overline{B}}}$
 
 ## ข้อ 6 ใช้ NAND อย่างเดียวและมีค่าไม่สนใจ
 
@@ -160,7 +236,7 @@ F &= \overline{C} + \overline{A}B \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad F = \overline{C} + \overline{A}B$
+$\mathbf{Ans}\quad F = \overline{C\,\overline{\overline{A}B}}$
 
 ## ข้อ 7 ใช้ NOR อย่างเดียว (1)
 
@@ -176,11 +252,28 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
+@method algebra
+
+เขียนแมกซ์เทอมของแถว $0,4,6,7$ ที่เป็น $0$ คูณกัน
+
+$$
+\begin{aligned}
+Y &= (A + B + C)(\overline{A} + B + C)(\overline{A} + \overline{B} + C)(\overline{A} + \overline{B} + \overline{C}) \\
+ &= (B + C + A\overline{A})(\overline{A} + \overline{B} + C\overline{C}) && \text{$X+YZ=(X+Y)(X+Z),\ X+Y=Y+X$} \\
+ &= (B + C + 0)(\overline{A} + \overline{B} + 0) && \text{$X\overline{X}=0$} \\
+ &= (B + C)(\overline{A} + \overline{B}) && \text{$X+0=X$}
+\end{aligned}
+$$
+
+@method kmap
+
 ใส่ $0$ ที่ช่อง $0,4,6,7$ แล้วจับลูปของ $0$
 
 @kmap:Y 0,4 | 6,7
 - ลูปสีส้ม (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
 - ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow (\overline{A}+\overline{B})$
+
+@method all
 
 เขียนด้วย NOR
 
@@ -192,7 +285,7 @@ Y &= (B + C)(\overline{A} + \overline{B}) \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Y = (B + C)(\overline{A} + \overline{B})$
+$\mathbf{Ans}\quad Y = \overline{\overline{B + C} + \overline{\overline{A} + \overline{B}}}$
 
 ## ข้อ 8 ใช้ NOR อย่างเดียว สองเอาต์พุตและมีค่าไม่สนใจ
 
@@ -236,6 +329,6 @@ Y &= (B + \overline{C})(\overline{A} + \overline{B}) \\
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad X = (A + C)(B + \overline{C})$
+$\mathbf{Ans}\quad X = \overline{\overline{A + C} + \overline{B + \overline{C}}}$
 
-$\mathbf{Ans}\quad Y = (B + \overline{C})(\overline{A} + \overline{B})$
+$\mathbf{Ans}\quad Y = \overline{\overline{B + \overline{C}} + \overline{\overline{A} + \overline{B}}}$
