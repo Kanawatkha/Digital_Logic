@@ -1001,6 +1001,35 @@ describe('LabPage board', () => {
       expect(board.querySelectorAll('.lab-chip-drop')).toHaveLength(1);
     });
 
+    it('lets a wire go on being new only while it comes in, so selecting wires does not draw them again', async () => {
+      saveAndOr();
+      const { board, drag, wires, at } = await openBoard();
+      drag('power:+5V:2', 'b0:r:top1:3');
+      expect(wires()).toBe(11);
+      expect(board.querySelectorAll('path.lab-wire-in')).toHaveLength(2);
+      // when it is in, nothing of it is left to play again
+      await waitFor(
+        () =>
+          expect(board.querySelectorAll('.lab-wire-in, .lab-plug-in, .lab-chip-drop')).toHaveLength(
+            0,
+          ),
+        { timeout: 4000 },
+      );
+      // select a wire and let go of it: the wires are put in another order, and none is drawn in again
+      const tap = (id: string) => {
+        const common = { pointerId: 6, pointerType: 'mouse', isPrimary: true };
+        fireEvent.pointerDown(board, { ...common, button: 0, buttons: 1, ...at(id) });
+        fireEvent.pointerUp(board, { ...common, button: 0, buttons: 0, ...at(id) });
+      };
+      tap('power:+5V:0');
+      expect(board.querySelectorAll('[data-lab-handle]')).toHaveLength(1);
+      expect(board.querySelectorAll('.lab-wire-in, .lab-plug-in')).toHaveLength(0);
+      // a free hole: the wire is let go of
+      tap('b0:c50:a');
+      expect(board.querySelectorAll('[data-lab-handle]')).toHaveLength(0);
+      expect(board.querySelectorAll('.lab-wire-in, .lab-plug-in')).toHaveLength(0);
+    });
+
     it('swells the halo of a LED only while it is lit', async () => {
       saveAndOr();
       const off = await openBoard();

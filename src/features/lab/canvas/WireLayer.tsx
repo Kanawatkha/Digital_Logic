@@ -7,6 +7,7 @@ import type { NetState } from '../sim/evaluate';
 import type { LabWire } from '../state/circuit';
 import { handlePoint, wirePath, type Bend } from '../wire/curve';
 import type { KeyboardCursor } from './useKeyboardWiring';
+import { useFresh } from './useFresh';
 import type { Hover, Preview } from './useWireTool';
 
 /** Thickness of a wire and the radius of the plug in a hole, in board px. */
@@ -36,6 +37,8 @@ type WireLayerProps = {
 };
 
 const GLIDE_MS = 380;
+/** The longest an entrance lasts: twelve wires one after the other, and the last one drawn */
+const WIRE_ENTRANCE_MS = 1600;
 /** A wire that is painted another color fades to it */
 const COLOR_FADE = 'transition-[stroke,fill] duration-300';
 const easeOut = (t: number) => 1 - (1 - t) ** 3;
@@ -208,20 +211,12 @@ export function WireLayer({
   net = null,
 }: WireLayerProps) {
   // a wire that is new to the board is drawn in, one after the other when there are many (the
-  // answer of a task); the wires that were there when the page opened are not
-  const [known, setKnown] = useState<ReadonlySet<string>>(() => new Set(wires.map((w) => w.id)));
-  const [fresh, setFresh] = useState<ReadonlyMap<string, number>>(new Map());
-  const ids = new Set(wires.map((wire) => wire.id));
-  const unseen = wires.filter((wire) => !known.has(wire.id));
-  const gone = [...known].filter((id) => !ids.has(id));
-  if (unseen.length > 0 || gone.length > 0) {
-    setKnown(new Set([...known].filter((id) => ids.has(id)).concat(unseen.map((w) => w.id))));
-    setFresh((was) => {
-      const next = new Map([...was].filter(([id]) => ids.has(id)));
-      unseen.forEach((wire, order) => next.set(wire.id, order));
-      return next;
-    });
-  }
+  // answer of a task); the wires that were there when the page opened are not, and a wire stops
+  // being new once its entrance is over, so that moving it in the page does not play it again
+  const fresh = useFresh(
+    wires.map((wire) => wire.id),
+    WIRE_ENTRANCE_MS,
+  );
   // a rearrangement glides: the wires are drawn between their old bend and their new one
   const [seen, setSeen] = useState(glide?.id ?? 0);
   const [from, setFrom] = useState<ReadonlyMap<string, Bend> | null>(null);

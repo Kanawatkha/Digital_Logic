@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import type { CSSProperties } from 'react';
 import { UI_TEXT } from '@/config/site';
 import { IC_OVERHANG, icFrame, icFrameAt, type IcFrame, type Position } from '../board/geometry';
@@ -7,6 +6,7 @@ import { BOARD_COLORS, EDIT_COLORS, SILK_FONT } from '../board/palette';
 import type { PlacedIc } from '../sim/evaluate';
 import { DIP_PINS, DIP_SPAN, IC_SPECS, type IcType } from '../sim/ics';
 import type { IcNote } from '../sim/notes';
+import { useFresh } from './useFresh';
 import type { Preview } from './useWireTool';
 
 const NOTE_TEXT: Record<IcNote, string> = {
@@ -15,6 +15,9 @@ const NOTE_TEXT: Record<IcNote, string> = {
   floating: UI_TEXT.labIcFloating,
   unstable: UI_TEXT.labIcUnstable,
 };
+
+/** The longest an entrance lasts: eight chips one after the other, and the last one dropped */
+const CHIP_ENTRANCE_MS = 1500;
 
 /** Pin numbers are drawn once the board is zoomed in this far. */
 const PIN_NUMBERS_SCALE = 1.8;
@@ -208,20 +211,11 @@ type IcLayerProps = {
 export function IcLayer({ ics, selected, notes, preview, scale }: IcLayerProps) {
   const held = preview?.kind === 'ic' ? preview : null;
   // a chip that is new to the board drops in (one after the other when there are many); the chips
-  // that were there when the page opened do not
-  const [known, setKnown] = useState<ReadonlySet<string>>(() => new Set(ics.map((ic) => ic.id)));
-  const [fresh, setFresh] = useState<ReadonlyMap<string, number>>(new Map());
-  const ids = new Set(ics.map((ic) => ic.id));
-  const unseen = ics.filter((ic) => !known.has(ic.id));
-  const gone = [...known].filter((id) => !ids.has(id));
-  if (unseen.length > 0 || gone.length > 0) {
-    setKnown(new Set([...known].filter((id) => ids.has(id)).concat(unseen.map((ic) => ic.id))));
-    setFresh((was) => {
-      const next = new Map([...was].filter(([id]) => ids.has(id)));
-      unseen.forEach((ic, order) => next.set(ic.id, order));
-      return next;
-    });
-  }
+  // that were there when the page opened do not, and it stops being new when its entrance is over
+  const fresh = useFresh(
+    ics.map((ic) => ic.id),
+    CHIP_ENTRANCE_MS,
+  );
   let ghost: { frame: IcFrame; outline: string } | null = null;
   if (held) {
     const snapped = held.snap && icFrame(held.snap.board, held.snap.col);
