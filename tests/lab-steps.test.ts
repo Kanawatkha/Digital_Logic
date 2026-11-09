@@ -3,7 +3,12 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterAll, describe, expect, it } from 'vitest';
-import { checkAnswer, checkChain, latexToExpr } from '../scripts/build-content/latexExpr';
+import {
+  checkAnswer,
+  checkChain,
+  latexToExpr,
+  withoutNotes,
+} from '../scripts/build-content/latexExpr';
 import { buildLabTasks } from '../scripts/build-content/tasks';
 import { cellsOf, parseExpr, specOfExpr, specOfMinterms } from '../src/features/lab/tasks/logic';
 
@@ -36,6 +41,26 @@ describe('chains of equal formulas', () => {
         abOrC,
       ),
     ).toEqual([]);
+  });
+
+  it('lets a note hold the formula of the law, and still checks the steps around it', () => {
+    const note = String.raw`\text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}`;
+    expect(
+      checkChain(
+        String.raw`\begin{aligned} Y &= AB + AC + \overline{A}C && ${note} \\ &= AB + C && \text{$X+\overline{X}Y=X+Y$} \end{aligned}`,
+        abOrC,
+      ),
+    ).toEqual([]);
+    // a wrong step is still found when the notes carry math
+    expect(
+      checkChain(
+        String.raw`\begin{aligned} Y &= AB + C && ${note} \\ &= AB && \text{$X+0=X$} \end{aligned}`,
+        abOrC,
+      ),
+    ).toHaveLength(1);
+    expect(withoutNotes(String.raw`A \text{$\overline{B}$ and {C}} + B`).replace(/\s+/g, ' ')).toBe(
+      'A + B',
+    );
   });
 
   it('finds a step that is not equal', () => {
@@ -130,13 +155,31 @@ $\mathbf{Ans}\quad Y = AB + C$
   it('keeps the steps and the answer apart and builds the Karnaugh map from the data', () => {
     const { errors, task } = build(good);
     expect(errors).toEqual([]);
-    expect(task?.steps.map((b) => b.t)).toEqual(['p', 'table', 'math']);
+    expect(task?.steps.map((b) => b.t)).toEqual(['p', 'figure', 'math']);
     expect(task?.answer).toHaveLength(1);
-    const table = task?.steps[1];
-    expect(table?.t === 'table' && table.rows.map((r) => r.map((c) => c.length))).toEqual([
-      [1, 1, 1, 1, 1],
-      [1, 1, 1, 1, 1],
-    ]);
+    const figure = task?.steps[1];
+    const svg = figure?.t === 'figure' ? figure.svg : '';
+    // AB across the top and C down the side, as in the chapters; no loops were asked for
+    expect(svg).toContain('viewBox="0 0 340 196"');
+    expect(svg).toContain('>AB</text>');
+    expect(svg).not.toContain('rx="14"');
+  });
+
+  it('draws the loops of a map in the colours of the chapters', () => {
+    const { errors, task } = build(good.replace('@kmap:Y', '@kmap:Y 1,3,5,7 | 6,7'));
+    expect(errors).toEqual([]);
+    const figure = task?.steps[1];
+    const svg = figure?.t === 'figure' ? figure.svg : '';
+    expect(svg).toContain('stroke="#e8743b"');
+    expect(svg).toContain('stroke="#3b8be8"');
+  });
+
+  it('refuses loops that are not blocks, that hold the wrong value, or that leave a cell out', () => {
+    const loops = (spec: string) => build(good.replace('@kmap:Y', `@kmap:Y ${spec}`)).errors[0];
+    expect(loops('1,2,3 | 6,7')).toMatch(/not a block/);
+    expect(loops('0,1 | 6,7')).toMatch(/not 1/);
+    expect(loops('1,3,5,7')).toMatch(/cell 6 \(1\) is in no loop/);
+    expect(loops('1,3 | 5,7 | 6,7 | 2,6')).toMatch(/at most 3/);
   });
 
   it('refuses a task with no solution, no answer line or no steps', () => {

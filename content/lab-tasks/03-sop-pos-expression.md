@@ -15,17 +15,14 @@ Y = expr !A & B & C | !A & B & !C | A & !B & C | A & B & C
 
 $\mathbf{Sol}^{n}$
 
-รวมพจน์ที่ต่างกันเพียงตัวแปรเดียว
-
 $$
 \begin{aligned}
 Y &= \overline{A}BC + \overline{A}B\overline{C} + A\overline{B}C + ABC \\
- &= \overline{A}B(C + \overline{C}) + AC(\overline{B} + B) && \text{(ดึงตัวร่วมออก)} \\
- &= \overline{A}B + AC && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)}
+ &= \overline{A}B(C + \overline{C}) + AC(\overline{B} + B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}B\cdot 1 + AC\cdot 1 && \text{$X+\overline{X}=1$} \\
+ &= \overline{A}B + AC && \text{$X\cdot 1=X$}
 \end{aligned}
 $$
-
-ใช้ NOT 1 ตัว, AND 2 ตัว และ OR 1 ตัว รวม 4 เกต
 
 $\mathbf{Ans}\quad Y = \overline{A}B + AC$
 
@@ -42,15 +39,11 @@ Y = m(0,1,4,5,6)
 
 $\mathbf{Sol}^{n}$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $0,1,4,5,6$
 
-@kmap:Y
-
-จับกลุ่ม 1: ช่อง 0, 1, 4, 5 ได้ $\overline{B}$ และช่อง 4 กับ 6 ได้ $A\overline{C}$
-
-$$Y = \overline{B} + A\overline{C}$$
-
-ใช้ NOT 2 ตัว, AND 1 ตัว และ OR 1 ตัว รวม 4 เกต
+@kmap:Y 0,1,4,5 | 4,6
+- ลูปสีส้ม (ช่อง $0,1,4,5$) : $B=0$ $\Rightarrow \overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $4,6$) : $A=1,\ C=0$ $\Rightarrow A\overline{C}$
 
 $\mathbf{Ans}\quad Y = \overline{B} + A\overline{C}$
 
@@ -68,22 +61,11 @@ F = m(1,2,3,6,7)
 
 $\mathbf{Sol}^{n}$
 
-โจทย์ให้ $\Pi M(0,4,5)$ แปลว่า $F$ เป็น 0 ที่ช่อง 0, 4, 5 และเป็น 1 ที่ช่องที่เหลือ จับกลุ่มของ 0 เพื่อได้ POS
+$F=\prod M(0,4,5)$ ใส่ $0$ ที่ช่อง $0,4,5$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
-
-@kmap:F
-
-จับกลุ่ม 0: ช่อง 0 กับ 4 ได้ $(B+C)$ และช่อง 4 กับ 5 ได้ $(\overline{A}+B)$
-
-$$
-\begin{aligned}
-F &= (B + C)(\overline{A} + B) \\
- &= B + \overline{A}C && \text{(แจกแจง)}
-\end{aligned}
-$$
-
-เขียนเป็น POS ใช้ NOT 1 ตัว, OR 2 ตัว และ AND 1 ตัว รวม 4 เกต
+@kmap:F 0,4 | 4,5
+- ลูปสีส้ม (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+- ลูปสีน้ำเงิน (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow (\overline{A}+B)$
 
 $\mathbf{Ans}\quad F = (B + C)(\overline{A} + B)$
 
@@ -100,17 +82,11 @@ Y = m(1,2,6) d(3,7)
 
 $\mathbf{Sol}^{n}$
 
-ช่อง X (3 และ 7) เลือกเป็น 1 เพื่อให้กลุ่มใหญ่ขึ้น
+ใส่ $1$ ที่ช่อง $1,2,6$ และใส่ $X$ ที่ช่อง $3,7$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
-
-@kmap:Y
-
-จับกลุ่ม 1: ช่อง 2, 3, 6, 7 (3 กับ 7 เป็น X) ได้ $B$ และช่อง 1 กับ 3 ได้ $\overline{A}C$
-
-$$Y = B + \overline{A}C$$
-
-ใช้ NOT 1 ตัว, AND 1 ตัว และ OR 1 ตัว รวม 3 เกต
+@kmap:Y 2,3,6,7 | 1,3
+- ลูปสีส้ม (ช่อง $2,3,6,7$ นับ $X$ ที่ช่อง $3,7$ เป็น $1$) : $B=1$ $\Rightarrow B$
+- ลูปสีน้ำเงิน (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
 
 $\mathbf{Ans}\quad Y = B + \overline{A}C$
 
@@ -128,31 +104,28 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ตัดพจน์ที่ถูกดูดซับ แล้วใช้ $X + \overline{X}Y = X + Y$
-
 $$
 \begin{aligned}
 Y &= AB + A\overline{B}C + AB\overline{C} + \overline{A}BC \\
- &= AB + A\overline{B}C + \overline{A}BC && \text{(AB ดูดซับพจน์ที่มี AB อยู่ด้วย)} \\
- &= A(B + \overline{B}C) + \overline{A}BC && \text{(ดึง A ออก)} \\
- &= A(B + C) + \overline{A}BC && \text{(กฎ X + X'Y = X + Y)} \\
- &= AB + AC + \overline{A}BC && \text{(แจกแจง)} \\
- &= AB + C(A + \overline{A}B) && \text{(ดึง C ออก)} \\
- &= AB + C(A + B) && \text{(กฎ X + X'Y = X + Y)} \\
- &= AB + AC + BC && \text{(แจกแจง)}
+ &= AB + A\overline{B}C + \overline{A}BC && \text{$X+XY=X$} \\
+ &= A(B + \overline{B}C) + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A(B + C) + \overline{A}BC && \text{$X+\overline{X}Y=X+Y$} \\
+ &= AB + AC + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + C(A + \overline{A}B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + C(A + B) && \text{$X+\overline{X}Y=X+Y$} \\
+ &= AB + AC + BC && \text{$X(Y+Z)=XY+XZ$}
 \end{aligned}
 $$
 
-แปลงเป็น NAND อย่างเดียว
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= AB + AC + BC \\
- &= \overline{\overline{AB}\cdot\overline{AC}\cdot\overline{BC}} && \text{(กลับสองครั้งและเดอมอร์แกน)}
+ &= \overline{\overline{AB + AC + BC}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{AB}\cdot\overline{AC}\cdot\overline{BC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-NAND สามอินพุตไม่มีบนชิป ใช้ NAND สองอินพุต: NAND ของ $AB$, $AC$, $BC$ สามตัว, ต่อ NAND ของสองตัวแรกกับตัวกลับ (NAND ต่อสองอินพุตเข้าด้วยกัน) เป็น AND ของมัน แล้ว NAND กับตัวที่สาม รวม 6 ตัว
 
 $\mathbf{Ans}\quad Y = AB + AC + BC$
 
@@ -170,23 +143,22 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ช่อง X (0 และ 2) เลือกเป็น 1 เพื่อให้กลุ่มใหญ่ขึ้น
+ใส่ $1$ ที่ช่อง $3,4,6$ และใส่ $X$ ที่ช่อง $0,2$ แล้วจับลูปของ $1$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+@kmap:F 0,2,4,6 | 2,3
+- ลูปสีส้ม (ช่อง $0,2,4,6$ นับ $X$ ที่ช่อง $0,2$ เป็น $1$) : $C=0$ $\Rightarrow \overline{C}$
+- ลูปสีน้ำเงิน (ช่อง $2,3$ นับ $X$ ที่ช่อง $2$ เป็น $1$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
 
-@kmap:F
-
-จับกลุ่ม 1: ช่อง 0, 2, 4, 6 ได้ $\overline{C}$ และช่อง 2 กับ 3 ได้ $\overline{A}B$
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 F &= \overline{C} + \overline{A}B \\
- &= \overline{\overline{\overline{C}}\cdot\overline{\overline{A}B}} && \text{(กลับสองครั้งและเดอมอร์แกน)} \\
- &= \overline{C\,\overline{\overline{A}B}} && \text{(ตัด NOT สองชั้นของ C)}
+ &= \overline{\overline{\overline{C} + \overline{A}B}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{C}}\cdot\overline{\overline{A}B}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{C\,\overline{\overline{A}B}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-ใช้ NAND 3 ตัว: ตัวกลับของ $A$, NAND ของ $\overline{A},B$ และ NAND ของ $C$ กับตัวนั้น
 
 $\mathbf{Ans}\quad F = \overline{C} + \overline{A}B$
 
@@ -204,25 +176,21 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-ตัดพจน์ฉันทามติของ POS (พจน์ที่เกิดจากตัวแปรที่กลับกันของสองพจน์)
+แต่ละวงเล็บเป็น $0$ ที่ช่อง $0,2$ ($A+C$), $1,5$ ($B+\overline{C}$) และ $0,1$ ($A+B$) จึงได้ $Y=0$ ที่ช่อง $0,1,2,5$
 
-$$
-\begin{aligned}
-Y &= (A + C)(B + \overline{C})(A + B) \\
- &= (A + C)(B + \overline{C}) && \text{((A+B) เป็นพจน์ฉันทามติ จึงตัดได้)}
-\end{aligned}
-$$
+@kmap:Y 0,2 | 1,5
+- ลูปสีส้ม (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
+- ลูปสีน้ำเงิน (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow (B+\overline{C})$
 
-แปลงเป็น NOR อย่างเดียว
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= (A + C)(B + \overline{C}) \\
- &= \overline{\overline{A + C} + \overline{B + \overline{C}}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{(A + C)(B + \overline{C})}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + C} + \overline{B + \overline{C}}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 4 ตัว: ตัวกลับของ $C$, NOR ของ $A,C$, NOR ของ $B,\overline{C}$ และ NOR ตัวสุดท้าย
 
 $\mathbf{Ans}\quad Y = (A + C)(B + \overline{C})$
 
@@ -243,33 +211,33 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $1,2,3$ ของ $X$ และช่อง $0,1,3,4$ ของ $Y$
 
-@kmap:X
+@kmap:X 1,3 | 2,3
+@kmap:Y 0,4 | 1,3
+- $X$ ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
+- $X$ ลูปสีน้ำเงิน (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- $Y$ ลูปสีส้ม (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow \overline{B}\,\overline{C}$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
 
-@kmap:Y
-
-$X$: กลุ่ม 1 ช่อง 1, 2, 3 ได้ $\overline{A}B + \overline{A}C = \overline{A}(B + C)$ ($\Pi M$ ของ $X$ คือช่อง 0, 4, 5, 6, 7)
-
-$Y$: กลุ่ม 1 ช่อง 0 กับ 4 ได้ $\overline{B}\,\overline{C}$ และช่อง 1 กับ 3 ได้ $\overline{A}C$
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 X &= \overline{A}B + \overline{A}C \\
- &= \overline{A}(B + C) && \text{(ดึงตัวร่วมออก)} \\
- &= \overline{A + \overline{B + C}} && \text{(เดอมอร์แกน)}
+ &= \overline{A}(B + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{\overline{\overline{A}(B + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{A + \overline{B + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y &= \overline{B}\,\overline{C} + \overline{A}C \\
- &= \overline{B + C} + \overline{A + \overline{C}} && \text{(เดอมอร์แกนทีละพจน์)} \\
- &= \overline{\overline{\overline{B + C} + \overline{A + \overline{C}}}} && \text{(กลับสองครั้ง)}
+ &= \overline{B + C} + \overline{A + \overline{C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y},\ \overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{B + C} + \overline{A + \overline{C}}}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-ใช้ NOR 6 ตัว: NOR ของ $B,C$ (ใช้ร่วมกับ $X$), NOR ของ $A$ กับตัวนั้นได้ $X$, ตัวกลับของ $C$, NOR ของ $A,\overline{C}$, NOR ของสองตัวแรกของ $Y$ และตัวกลับอีกหนึ่งตัวเพื่อกลับสองครั้ง
 
 $\mathbf{Ans}\quad X = \overline{A}(B + C)$
 

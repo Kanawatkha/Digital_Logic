@@ -132,7 +132,7 @@ describe('the tasks drawer of the lab', () => {
     const dialog = await openFirstTask();
     expect(within(dialog).getByRole('heading', { level: 3, name: /^ข้อ 1 / })).toBeInTheDocument();
     // the answer is not shown until it is asked for
-    expect(within(dialog).queryByText('วิธีทำ')).not.toBeInTheDocument();
+    expect(within(dialog).queryByText('Sol')).not.toBeInTheDocument();
     fireEvent.click(within(dialog).getByRole('button', { name: 'กลับรายการโจทย์' }));
     expect(within(dialog).getAllByRole('heading', { level: 3 })).toHaveLength(5);
     // the kind of the task is still unfolded
@@ -171,7 +171,7 @@ describe('the tasks drawer of the lab', () => {
     fireEvent.click(button);
     expect(button).toHaveAttribute('aria-expanded', 'true');
     expect(button).toHaveAccessibleName('ซ่อนเฉลย');
-    expect(within(dialog).getByText('วิธีทำ')).toBeInTheDocument();
+    expect(within(dialog).getByText('Sol')).toBeInTheDocument();
     // the written answer line and the table of the answer
     expect(dialog.querySelectorAll('.katex').length).toBeGreaterThan(2);
     expect(within(dialog).getByText('Ans')).toBeInTheDocument();
@@ -179,18 +179,18 @@ describe('the tasks drawer of the lab', () => {
     expect(within(table).getAllByRole('row')).toHaveLength(9);
     expect(within(dialog).getByText(/^วงจรเฉลย · เฉลยใช้ \d+ เกต$/)).toBeInTheDocument();
     fireEvent.click(button);
-    expect(within(dialog).queryByText('วิธีทำ')).not.toBeInTheDocument();
+    expect(within(dialog).queryByText('Sol')).not.toBeInTheDocument();
   });
 
   it('keeps the solution shown when the drawer is closed and opened again, for that task only', async () => {
     openLab();
     const dialog = await openFirstTask();
     fireEvent.click(within(dialog).getByRole('button', { name: 'ดูเฉลย' }));
-    expect(within(dialog).getByText('วิธีทำ')).toBeInTheDocument();
+    expect(within(dialog).getByText('Sol')).toBeInTheDocument();
     fireEvent.keyDown(document, { key: 'Escape' });
     fireEvent.click(screen.getByRole('button', { name: 'โจทย์' }));
     const again = await screen.findByRole('dialog', { name: 'โจทย์' });
-    expect(await within(again).findByText('วิธีทำ')).toBeInTheDocument();
+    expect(await within(again).findByText('Sol')).toBeInTheDocument();
     expect(within(again).getByRole('button', { name: 'ซ่อนเฉลย' })).toHaveAttribute(
       'aria-expanded',
       'true',
@@ -198,11 +198,11 @@ describe('the tasks drawer of the lab', () => {
     // another task has its own solution, folded to start with
     fireEvent.click(within(again).getByRole('button', { name: 'กลับรายการโจทย์' }));
     fireEvent.click(within(again).getByRole('button', { name: /^ข้อ 2 / }));
-    expect(within(again).queryByText('วิธีทำ')).not.toBeInTheDocument();
+    expect(within(again).queryByText('Sol')).not.toBeInTheDocument();
     // and the first one still has its solution shown
     fireEvent.click(within(again).getByRole('button', { name: 'กลับรายการโจทย์' }));
     fireEvent.click(within(again).getByRole('button', { name: /^ข้อ 1 / }));
-    expect(within(again).getByText('วิธีทำ')).toBeInTheDocument();
+    expect(within(again).getByText('Sol')).toBeInTheDocument();
     // hiding it is remembered too
     fireEvent.click(within(again).getByRole('button', { name: 'ซ่อนเฉลย' }));
     fireEvent.keyDown(document, { key: 'Escape' });

@@ -30,6 +30,7 @@ import {
   type Spec,
   type TaskNetlist,
 } from '../../src/features/lab/tasks/logic.ts';
+import { kmapSvg, loopsProblem, type KmapCell } from './kmapSvg.ts';
 import { checkAnswer, checkChain } from './latexExpr.ts';
 import { ParseError, parseInline, parseLines } from './parse.ts';
 import { inlineText } from './tree.ts';
@@ -210,19 +211,18 @@ function fillPlaceholders(lines: Line[], specs: OutputSpec[], where: string): Li
       }
       continue;
     }
-    const km = /^@kmap:(\w+)$/.exec(text.trim());
+    const km = /^@kmap:(\w+)(?:\s+(.+))?$/.exec(text.trim());
     if (km) {
-      // the Karnaugh map of three variables: A on the side, BC across in Gray code
-      const cells = cellsOf(need(km[1]!, no).spec);
-      const order = [0, 1, 3, 2];
-      out.push({ no, text: '| A / BC | 00 | 01 | 11 | 10 |' });
-      out.push({ no, text: '|:-:|:-:|:-:|:-:|:-:|' });
-      for (const a of [0, 1]) {
-        out.push({
-          no,
-          text: `| ${a} | ${order.map((bc) => cells[a * 4 + bc]!.toUpperCase()).join(' | ')} |`,
-        });
-      }
+      // the Karnaugh map of three variables, drawn like the figures of the chapters; the loops are
+      // written after the name as cells joined by commas and loops joined by bars: @kmap:Y 2,3 | 5,7
+      const cells = cellsOf(need(km[1]!, no).spec) as KmapCell[];
+      const loops = (km[2] ?? '')
+        .split('|')
+        .filter((part) => part.trim() !== '')
+        .map((part) => part.split(',').map((n) => Number(n.trim())));
+      const problem = loopsProblem(cells, loops);
+      if (problem) throw new ParseError(`${where}:${no}: @kmap:${km[1]}: ${problem}`);
+      for (const line of kmapSvg(cells, loops)) out.push({ no, text: line });
       continue;
     }
     const replaced = text.replace(/@(expr|sum|prod):(\w+)/g, (_m, kind: string, name: string) => {

@@ -59,6 +59,26 @@ export function latexToExpr(tex: string): string {
   return out;
 }
 
+/**
+ * The text with every `\text{...}` note taken out. A note may hold math (`\text{$X+0=X$}`, the law
+ * a step uses), so the end of the note is found by counting braces. The formulas inside a note are
+ * explanation and are not checked.
+ */
+export function withoutNotes(tex: string): string {
+  let out = '';
+  let i = 0;
+  while (i < tex.length) {
+    if (tex.startsWith('\\text{', i)) {
+      i = closing(tex, i + '\\text'.length) + 1;
+      out += ' ';
+    } else {
+      out += tex[i];
+      i++;
+    }
+  }
+  return out;
+}
+
 /** Splits at the `=` signs that are not inside braces. */
 function splitEquals(tex: string): string[] {
   const parts: string[] = [];
@@ -89,9 +109,8 @@ const valuesOf = (formula: string) => {
  * wrong with it (empty when it holds). Every part must do what one of the outputs asks.
  */
 export function checkChain(tex: string, outputs: readonly Output[]): string[] | null {
-  const plain = tex
+  const plain = withoutNotes(tex)
     .replace(/\\begin\{aligned\}|\\end\{aligned\}/g, ' ')
-    .replace(/\\text\{[^}]*\}/g, ' ')
     .replace(/\\\\/g, ' ')
     .replace(/&/g, ' ');
   const parts = splitEquals(plain).map((p) => p.trim());

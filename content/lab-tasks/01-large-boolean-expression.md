@@ -15,22 +15,20 @@ Y = expr !(!A & B | A & C) & (A | B)
 
 $\mathbf{Sol}^{n}$
 
-ใช้กฎของเดอมอร์แกนกระจายขีดที่ครอบ แล้วใช้กฎการแจกแจงและ $A\overline{A}=0$
-
 $$
 \begin{aligned}
 Y &= \overline{\overline{A}B + AC}(A + B) \\
- &= (\overline{\overline{A}B})(\overline{AC})(A + B) && \text{(เดอมอร์แกน)} \\
- &= (A + \overline{B})(\overline{A} + \overline{C})(A + B) && \text{(เดอมอร์แกน)} \\
- &= (A + \overline{B})(A + B)(\overline{A} + \overline{C}) && \text{(สลับที่)} \\
- &= (A + \overline{B}B)(\overline{A} + \overline{C}) && \text{((X+Y)(X+Z) = X + YZ)} \\
- &= A(\overline{A} + \overline{C}) && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)} \\
- &= A\overline{A} + A\overline{C} && \text{(แจกแจง)} \\
- &= A\overline{C} && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)}
+ &= (\overline{\overline{A}B})(\overline{AC})(A + B) && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= (A + \overline{B})(\overline{A} + \overline{C})(A + B) && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= (A + \overline{B})(A + B)(\overline{A} + \overline{C}) && \text{$XY=YX$} \\
+ &= (A + \overline{B}B)(\overline{A} + \overline{C}) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= (A + 0)(\overline{A} + \overline{C}) && \text{$X\overline{X}=0$} \\
+ &= A(\overline{A} + \overline{C}) && \text{$X+0=X$} \\
+ &= A\overline{A} + A\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= 0 + A\overline{C} && \text{$X\overline{X}=0$} \\
+ &= A\overline{C} && \text{$X+0=X$}
 \end{aligned}
 $$
-
-ใช้ AND 1 ตัวกับ NOT 1 ตัว รวม 2 เกต
 
 $\mathbf{Ans}\quad Y = A\overline{C}$
 
@@ -47,14 +45,15 @@ F = expr (A | !B) & (!A | C) | B & !C
 
 $\mathbf{Sol}^{n}$
 
-แจกแจงวงเล็บ แล้วตัดพจน์ที่เป็น 0 และพจน์ที่ซ้ำซ้อนด้วยทฤษฎีบทฉันทามติ (consensus)
-
 $$
 \begin{aligned}
 F &= (A + \overline{B})(\overline{A} + C) + B\overline{C} \\
- &= A\overline{A} + AC + \overline{A}\,\overline{B} + \overline{B}C + B\overline{C} && \text{(แจกแจง)} \\
- &= AC + \overline{A}\,\overline{B} + \overline{B}C + B\overline{C} && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)} \\
- &= AC + \overline{A}\,\overline{B} + B\overline{C} && \text{(ตัดพจน์ฉันทามติ)}
+ &= A\overline{A} + AC + \overline{A}\,\overline{B} + \overline{B}C + B\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC + \overline{A}\,\overline{B} + \overline{B}C + B\overline{C} && \text{$X\overline{X}=0,\ X+0=X$} \\
+ &= AC + \overline{A}\,\overline{B} + (A + \overline{A})\overline{B}C + B\overline{C} && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= AC + \overline{A}\,\overline{B} + A\overline{B}C + \overline{A}\,\overline{B}C + B\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC(1 + \overline{B}) + \overline{A}\,\overline{B}(1 + C) + B\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC + \overline{A}\,\overline{B} + B\overline{C} && \text{$1+X=1,\ X\cdot 1=X$}
 \end{aligned}
 $$
 
@@ -73,21 +72,17 @@ Y = expr A & B | A & !B & C | !A & B & C | !A & !B & C
 
 $\mathbf{Sol}^{n}$
 
-รวมพจน์ที่มี $\overline{B}C$ ร่วมกัน แล้วใช้ $X + \overline{X}Y = X + Y$
-
 $$
 \begin{aligned}
 Y &= AB + A\overline{B}C + \overline{A}BC + \overline{A}\,\overline{B}C \\
- &= AB + \overline{B}C(A + \overline{A}) + \overline{A}BC && \text{(จัดกลุ่ม)} \\
- &= AB + \overline{B}C + \overline{A}BC && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)} \\
- &= AB + C(\overline{B} + \overline{A}B) && \text{(ดึง C ออก)} \\
- &= AB + C(\overline{B} + \overline{A}) && \text{(กฎ X + X'Y = X + Y)} \\
- &= AB + C\,\overline{AB} && \text{(เดอมอร์แกน)} \\
- &= AB + C && \text{(กฎ X + X'Y = X + Y)}
+ &= AB + (A + \overline{A})\overline{B}C + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + \overline{B}C + \overline{A}BC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= AB + C(\overline{B} + \overline{A}B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + C(\overline{B} + \overline{A}) && \text{$X+\overline{X}Y=X+Y$} \\
+ &= AB + C\,\overline{AB} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + C && \text{$X+\overline{X}Y=X+Y$}
 \end{aligned}
 $$
-
-ใช้ AND 1 ตัวกับ OR 1 ตัว รวม 2 เกต
 
 $\mathbf{Ans}\quad Y = AB + C$
 
@@ -107,26 +102,25 @@ Y = expr !(A | C) | A & B
 
 $\mathbf{Sol}^{n}$
 
-ลดรูปทีละสมการ
-
 $$
 \begin{aligned}
 X &= \overline{AB}(A + C) \\
- &= (\overline{A} + \overline{B})(A + C) && \text{(เดอมอร์แกน)} \\
- &= \overline{A}A + \overline{A}C + A\overline{B} + \overline{B}C && \text{(แจกแจง)} \\
- &= \overline{A}C + A\overline{B} + \overline{B}C && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)} \\
- &= \overline{A}C + A\overline{B} && \text{(ตัดพจน์ฉันทามติ)}
+ &= (\overline{A} + \overline{B})(A + C) && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= \overline{A}A + \overline{A}C + A\overline{B} + \overline{B}C && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}C + A\overline{B} + \overline{B}C && \text{$X\overline{X}=0,\ X+0=X$} \\
+ &= \overline{A}C + A\overline{B} + (A + \overline{A})\overline{B}C && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= \overline{A}C + A\overline{B} + A\overline{B}C + \overline{A}\,\overline{B}C && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}C(1 + \overline{B}) + A\overline{B}(1 + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}C + A\overline{B} && \text{$1+X=1,\ X\cdot 1=X$}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y &= \overline{A + C} + AB \\
- &= \overline{A}\,\overline{C} + AB && \text{(เดอมอร์แกน)}
+ &= \overline{A}\,\overline{C} + AB && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-สังเกตว่า $Y = \overline{X}$ แต่เมื่อลดรูปแล้วต้องใช้เกตแยกกัน เพราะพจน์ของ $X$ กับ $Y$ ไม่ซ้ำกัน
 
 $\mathbf{Ans}\quad X = \overline{A}C + A\overline{B}$
 
@@ -146,30 +140,29 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ลดรูปเป็น SOP ก่อน
-
 $$
 \begin{aligned}
 Y &= \overline{A\overline{B} + \overline{A}C} + BC \\
- &= (\overline{A\overline{B}})(\overline{\overline{A}C}) + BC && \text{(เดอมอร์แกน)} \\
- &= (\overline{A} + B)(A + \overline{C}) + BC && \text{(เดอมอร์แกน)} \\
- &= \overline{A}\,\overline{C} + AB + B\overline{C} + BC && \text{(แจกแจงและตัดพจน์ที่เป็น 0)} \\
- &= \overline{A}\,\overline{C} + AB + B && \text{(รวมพจน์ที่ต่างกันที่ C)} \\
- &= \overline{A}\,\overline{C} + B && \text{(ดูดซับ AB เข้า B)}
+ &= (\overline{A\overline{B}})(\overline{\overline{A}C}) + BC && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= (\overline{A} + B)(A + \overline{C}) + BC && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= \overline{A}A + \overline{A}\,\overline{C} + AB + B\overline{C} + BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}\,\overline{C} + AB + B\overline{C} + BC && \text{$X\overline{X}=0,\ X+0=X$} \\
+ &= \overline{A}\,\overline{C} + AB + B(\overline{C} + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}\,\overline{C} + AB + B\cdot 1 && \text{$X+\overline{X}=1$} \\
+ &= \overline{A}\,\overline{C} + AB + B && \text{$X\cdot 1=X$} \\
+ &= \overline{A}\,\overline{C} + B && \text{$X+XY=X$}
 \end{aligned}
 $$
 
-แปลงเป็น NAND อย่างเดียวด้วยการกลับสองครั้ง (เดอมอร์แกน)
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= \overline{A}\,\overline{C} + B \\
- &= \overline{\overline{\overline{A}\,\overline{C} + B}} && \text{(กลับสองครั้ง)} \\
- &= \overline{\overline{\overline{A}\,\overline{C}}\cdot\overline{B}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{\overline{A}\,\overline{C} + B}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{A}\,\overline{C}}\cdot\overline{B}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-ต้องใช้ NAND 5 ตัว: ตัวกลับของ $A$, $C$ และ $B$ สามตัว, NAND ของ $\overline{A}$ กับ $\overline{C}$ หนึ่งตัว และ NAND ตัวสุดท้ายหนึ่งตัว
 
 $\mathbf{Ans}\quad Y = \overline{A}\,\overline{C} + B$
 
@@ -187,29 +180,21 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ใช้ทฤษฎีบทฉันทามติกับพจน์ $(B+C)$
+แต่ละวงเล็บเป็น $0$ ที่ช่อง $0,1$ ($A+B$), $4,6$ ($\overline{A}+C$) และ $0,4$ ($B+C$) จึงได้ $F=0$ ที่ช่อง $0,1,4,6$ และ $F=1$ ที่ช่อง $2,3,5,7$
 
-$$
-\begin{aligned}
-F &= (A + B)(\overline{A} + C)(B + C) \\
- &= (A + B)(\overline{A} + C) && \text{((B+C) เป็นพจน์ฉันทามติ จึงตัดได้)} \\
- &= A\overline{A} + AC + \overline{A}B + BC && \text{(แจกแจง)} \\
- &= AC + \overline{A}B + BC && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)} \\
- &= AC + \overline{A}B && \text{(ตัดพจน์ฉันทามติ BC)}
-\end{aligned}
-$$
+@kmap:F 2,3 | 5,7
+- ลูปสีส้ม (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
 
-แปลงเป็น NAND อย่างเดียว
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 F &= AC + \overline{A}B \\
- &= \overline{\overline{AC + \overline{A}B}} && \text{(กลับสองครั้ง)} \\
- &= \overline{\overline{AC}\cdot\overline{\overline{A}B}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{AC + \overline{A}B}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{AC}\cdot\overline{\overline{A}B}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NAND 4 ตัว: ตัวกลับของ $A$ หนึ่งตัว, NAND ของ $A,C$ หนึ่งตัว, NAND ของ $\overline{A},B$ หนึ่งตัว และ NAND ตัวสุดท้ายหนึ่งตัว
 
 $\mathbf{Ans}\quad F = \overline{A}B + AC$
 
@@ -227,30 +212,27 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-กระจายขีดของสองพจน์แรก แล้วลดรูป
-
 $$
 \begin{aligned}
-Y &= \overline{\overline{A}+B} + \overline{A+\overline{C}} + ABC \\
- &= A\overline{B} + \overline{A}C + ABC && \text{(เดอมอร์แกน)} \\
- &= A\overline{B} + C(\overline{A} + AB) && \text{(ดึง C ออก)} \\
- &= A\overline{B} + C(\overline{A} + B) && \text{(กฎ X + X'Y = X + Y)} \\
- &= A\overline{B} + C\,\overline{A\overline{B}} && \text{(เดอมอร์แกน)} \\
- &= A\overline{B} + C && \text{(กฎ X + X'Y = X + Y)}
+Y &= \overline{\overline{A} + B} + \overline{A + \overline{C}} + ABC \\
+ &= A\overline{B} + \overline{A}C + ABC && \text{$\overline{X+Y}=\overline{X}\,\overline{Y},\ \overline{\overline{X}}=X$} \\
+ &= A\overline{B} + C(\overline{A} + AB) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A\overline{B} + C(\overline{A} + B) && \text{$X+\overline{X}Y=X+Y$} \\
+ &= A\overline{B} + C\,\overline{A\overline{B}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= A\overline{B} + C && \text{$X+\overline{X}Y=X+Y$}
 \end{aligned}
 $$
 
-แปลงเป็น NOR อย่างเดียว: เปลี่ยน SOP เป็น POS ก่อน แล้วกลับสองครั้ง
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= A\overline{B} + C \\
- &= (A + C)(\overline{B} + C) && \text{(แจกแจง)} \\
- &= \overline{\overline{A + C} + \overline{\overline{B} + C}} && \text{(เดอมอร์แกน)}
+ &= (A + C)(\overline{B} + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= \overline{\overline{(A + C)(\overline{B} + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + C} + \overline{\overline{B} + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 4 ตัว: ตัวกลับของ $B$ หนึ่งตัว, NOR ของ $A,C$, NOR ของ $\overline{B},C$ และ NOR ตัวสุดท้ายอย่างละหนึ่งตัว
 
 $\mathbf{Ans}\quad Y = A\overline{B} + C$
 
@@ -268,28 +250,27 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-แจกแจงและตัดพจน์ที่เป็น 0
-
 $$
 \begin{aligned}
 Z &= (A + \overline{B})(\overline{A} + C) + \overline{B}\,\overline{C} \\
- &= AC + \overline{A}\,\overline{B} + \overline{B}C + \overline{B}\,\overline{C} && \text{(แจกแจงและตัดพจน์ที่เป็น 0)} \\
- &= AC + \overline{A}\,\overline{B} + \overline{B}(C + \overline{C}) && \text{(จัดกลุ่ม)} \\
- &= AC + \overline{A}\,\overline{B} + \overline{B} && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)} \\
- &= AC + \overline{B} && \text{(ดูดซับ)}
+ &= A\overline{A} + AC + \overline{A}\,\overline{B} + \overline{B}C + \overline{B}\,\overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC + \overline{A}\,\overline{B} + \overline{B}C + \overline{B}\,\overline{C} && \text{$X\overline{X}=0,\ X+0=X$} \\
+ &= AC + \overline{A}\,\overline{B} + \overline{B}(C + \overline{C}) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC + \overline{A}\,\overline{B} + \overline{B}\cdot 1 && \text{$X+\overline{X}=1$} \\
+ &= AC + \overline{A}\,\overline{B} + \overline{B} && \text{$X\cdot 1=X$} \\
+ &= AC + \overline{B} && \text{$X+XY=X$}
 \end{aligned}
 $$
 
-แปลงเป็น NOR อย่างเดียว: เปลี่ยนเป็น POS แล้วกลับสองครั้ง
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Z &= AC + \overline{B} \\
- &= (A + \overline{B})(C + \overline{B}) && \text{(แจกแจง)} \\
- &= \overline{\overline{A + \overline{B}} + \overline{C + \overline{B}}} && \text{(เดอมอร์แกน)}
+ &= (A + \overline{B})(C + \overline{B}) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= \overline{\overline{(A + \overline{B})(C + \overline{B})}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + \overline{B}} + \overline{C + \overline{B}}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 4 ตัว: ตัวกลับของ $B$ หนึ่งตัว, NOR ของ $A,\overline{B}$, NOR ของ $C,\overline{B}$ และ NOR ตัวสุดท้ายอย่างละหนึ่งตัว
 
 $\mathbf{Ans}\quad Z = AC + \overline{B}$

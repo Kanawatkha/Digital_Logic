@@ -89,7 +89,7 @@ export function TaskDetail({
         {solutionOpen ? (
           <div className="lab-fade flex flex-col gap-4">
             <div>
-              <h4 className="type-caption mb-1 text-muted">{UI_TEXT.labTaskSteps}</h4>
+              <p className="type-caption-upper mb-1 text-body">{UI_TEXT.labTaskSteps}</p>
               <BlockList blocks={task.steps} />
             </div>
             <div className="rounded-md bg-surface-soft px-4 py-3">

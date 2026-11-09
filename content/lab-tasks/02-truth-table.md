@@ -15,15 +15,11 @@ Y = m(0,1,2,3,7)
 
 $\mathbf{Sol}^{n}$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $0,1,2,3,7$
 
-@kmap:Y
-
-จับกลุ่ม 1: แถว $A=0$ ทั้งแถว (ช่อง 0, 1, 2, 3) ได้ $\overline{A}$ และช่อง 3 กับ 7 ได้ $BC$ (ช่อง 3 ใช้ซ้ำได้)
-
-$$Y = \overline{A} + BC$$
-
-ใช้ NOT, AND และ OR อย่างละหนึ่งตัว รวม 3 เกต
+@kmap:Y 0,1,2,3 | 3,7
+- ลูปสีส้ม (ช่อง $0,1,2,3$) : $A=0$ $\Rightarrow \overline{A}$
+- ลูปสีน้ำเงิน (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
 
 $\mathbf{Ans}\quad Y = \overline{A} + BC$
 
@@ -41,17 +37,11 @@ F = m(1,2,3,5,7)
 
 $\mathbf{Sol}^{n}$
 
-โจทย์สั่งให้ใช้ SOP จึงจับกลุ่มของ 1
+ใส่ $1$ ที่ช่อง $1,2,3,5,7$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
-
-@kmap:F
-
-จับกลุ่ม 1: คอลัมน์ $C=1$ ทั้งสี่ช่อง (1, 3, 5, 7) ได้ $C$ และช่อง 2 กับ 3 ได้ $\overline{A}B$
-
-$$F = C + \overline{A}B$$
-
-ใช้ NOT, AND และ OR อย่างละหนึ่งตัว รวม 3 เกต
+@kmap:F 1,3,5,7 | 2,3
+- ลูปสีส้ม (ช่อง $1,3,5,7$) : $C=1$ $\Rightarrow C$
+- ลูปสีน้ำเงิน (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
 
 $\mathbf{Ans}\quad F = C + \overline{A}B$
 
@@ -69,17 +59,13 @@ Y = m(1,3,6) d(2,5)
 
 $\mathbf{Sol}^{n}$
 
-โจทย์สั่งให้ใช้ POS จึงจับกลุ่มของ 0 และอ่านเป็นผลบวก (ตัวแปรที่เป็น 1 ในกลุ่มต้องกลับ) ช่อง X ใช้เป็น 0 เมื่อช่วยให้กลุ่มใหญ่ขึ้น
+ใส่ $1$ ที่ช่อง $1,3,6$ ใส่ $X$ ที่ช่อง $2,5$ และใส่ $0$ ที่ช่อง $0,4,7$ แล้วจับลูปของ $0$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+@kmap:Y 0,4 | 5,7
+- ลูปสีส้ม (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+- ลูปสีน้ำเงิน (ช่อง $5,7$ นับ $X$ ที่ช่อง $5$ เป็น $0$) : $A=1,\ C=1$ $\Rightarrow (\overline{A}+\overline{C})$
 
-@kmap:Y
-
-จับกลุ่ม 0: ช่อง 0 กับ 4 ได้ $(B+C)$ และช่อง 5 (X ที่เลือกเป็น 0) กับ 7 ได้ $(\overline{A}+\overline{C})$ ส่วนช่อง 2 (X) ไม่ต้องใช้
-
-$$Y = (B + C)(\overline{A} + \overline{C})$$
-
-ใช้ NOT 2 ตัว, OR 2 ตัว และ AND 1 ตัว รวม 5 เกต
+ช่อง $2$ (ค่าไม่สนใจ) ไม่ต้องครอบ
 
 $\mathbf{Ans}\quad Y = (B + C)(\overline{A} + \overline{C})$
 
@@ -97,21 +83,15 @@ Y = m(5,6,7)
 
 $\mathbf{Sol}^{n}$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $3,5,6,7$ ของ $X$ และช่อง $5,6,7$ ของ $Y$
 
-@kmap:X
-
-@kmap:Y
-
-จับกลุ่ม 1 ของ $X$: ช่อง 3 กับ 7 ได้ $BC$, ช่อง 5 กับ 7 ได้ $AC$, ช่อง 6 กับ 7 ได้ $AB$
-
-จับกลุ่ม 1 ของ $Y$: ช่อง 5 กับ 7 ได้ $AC$ และช่อง 6 กับ 7 ได้ $AB$
-
-$$X = BC + AC + AB$$
-
-$$Y = AC + AB$$
-
-พจน์ $AC$ และ $AB$ ใช้ร่วมกันได้ จึงนับเกต AND ของมันครั้งเดียว
+@kmap:X 3,7 | 5,7 | 6,7
+@kmap:Y 5,7 | 6,7
+- $X$ ลูปสีส้ม (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
+- $X$ ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- $X$ ลูปสีเขียว (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
+- $Y$ ลูปสีส้ม (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
 
 $\mathbf{Ans}\quad X = BC + AC + AB$
 
@@ -131,21 +111,21 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $1,3,4,5$
 
-@kmap:Y
+@kmap:Y 1,3 | 4,5
+- ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
+- ลูปสีน้ำเงิน (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow A\overline{B}$
 
-จับกลุ่ม 1: ช่อง 1 กับ 3 ได้ $\overline{A}C$ และช่อง 4 กับ 5 ได้ $A\overline{B}$
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= \overline{A}C + A\overline{B} \\
- &= \overline{\overline{\overline{A}C + A\overline{B}}} && \text{(กลับสองครั้ง)} \\
- &= \overline{\overline{\overline{A}C}\cdot\overline{A\overline{B}}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{\overline{A}C + A\overline{B}}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{A}C}\cdot\overline{A\overline{B}}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NAND 5 ตัว: ตัวกลับของ $A$ และ $B$ สองตัว, NAND ของ $\overline{A},C$ หนึ่งตัว, NAND ของ $A,\overline{B}$ หนึ่งตัว และ NAND ตัวสุดท้ายหนึ่งตัว
 
 $\mathbf{Ans}\quad Y = \overline{A}C + A\overline{B}$
 
@@ -163,23 +143,22 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-ช่อง X (0 และ 4) เลือกเป็น 1 เพื่อให้กลุ่มใหญ่ขึ้น
+ใส่ $1$ ที่ช่อง $2,3,6$ และใส่ $X$ ที่ช่อง $0,4$ แล้วจับลูปของ $1$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+@kmap:F 0,2,4,6 | 2,3
+- ลูปสีส้ม (ช่อง $0,2,4,6$ นับ $X$ ที่ช่อง $0,4$ เป็น $1$) : $C=0$ $\Rightarrow \overline{C}$
+- ลูปสีน้ำเงิน (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
 
-@kmap:F
-
-จับกลุ่ม 1: คอลัมน์ $C=0$ ทั้งสี่ช่อง (0, 2, 4, 6 โดย 0 กับ 4 เป็น X ที่เลือกเป็น 1) ได้ $\overline{C}$ และช่อง 2 กับ 3 ได้ $\overline{A}B$
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 F &= \overline{C} + \overline{A}B \\
- &= \overline{\overline{\overline{C}}\cdot\overline{\overline{A}B}} && \text{(กลับสองครั้งและเดอมอร์แกน)} \\
- &= \overline{C\,\overline{\overline{A}B}} && \text{(ตัด NOT สองชั้นของ C)}
+ &= \overline{\overline{\overline{C} + \overline{A}B}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{C}}\cdot\overline{\overline{A}B}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{C\,\overline{\overline{A}B}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-ใช้ NAND 3 ตัว: ตัวกลับของ $A$ หนึ่งตัว, NAND ของ $\overline{A},B$ หนึ่งตัว และ NAND ของ $C$ กับตัวนั้นเป็นตัวสุดท้าย
 
 $\mathbf{Ans}\quad F = \overline{C} + \overline{A}B$
 
@@ -197,22 +176,21 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-ในการแปลงเป็น NOR อย่างเดียว ใช้รูป POS จับกลุ่มของ 0 ก่อน
+ใส่ $0$ ที่ช่อง $0,4,6,7$ แล้วจับลูปของ $0$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+@kmap:Y 0,4 | 6,7
+- ลูปสีส้ม (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+- ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow (\overline{A}+\overline{B})$
 
-@kmap:Y
-
-จับกลุ่ม 0 (ช่อง 0, 4, 6, 7): ช่อง 0 กับ 4 ได้ $(B+C)$ และช่อง 6 กับ 7 ได้ $(\overline{A}+\overline{B})$
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= (B + C)(\overline{A} + \overline{B}) \\
- &= \overline{\overline{B + C} + \overline{\overline{A} + \overline{B}}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{(B + C)(\overline{A} + \overline{B})}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{B + C} + \overline{\overline{A} + \overline{B}}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 5 ตัว: ตัวกลับของ $A$ และ $B$ สองตัว, NOR ของ $B,C$ หนึ่งตัว, NOR ของ $\overline{A},\overline{B}$ หนึ่งตัว และ NOR ตัวสุดท้ายหนึ่งตัว
 
 $\mathbf{Ans}\quad Y = (B + C)(\overline{A} + \overline{B})$
 
@@ -231,37 +209,32 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-ใช้ POS จับกลุ่มของ 0 เพื่อแปลงเป็น NOR ช่อง X เลือกเป็น 0 เมื่อช่วยให้กลุ่มใหญ่ขึ้น
+ใส่ $1$ ที่ช่อง $3,4,6$ และ $X$ ที่ช่อง $7$ ของ $X$ ใส่ $1$ ที่ช่อง $0,3,4$ และ $X$ ที่ช่อง $2,5$ ของ $Y$ แล้วจับลูปของ $0$
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+@kmap:X 0,2 | 1,5
+@kmap:Y 1,5 | 6,7
+- $X$ ลูปสีส้ม (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
+- $X$ ลูปสีน้ำเงิน (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow (B+\overline{C})$
+- $Y$ ลูปสีส้ม (ช่อง $1,5$ นับ $X$ ที่ช่อง $5$ เป็น $0$) : $B=0,\ C=1$ $\Rightarrow (B+\overline{C})$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow (\overline{A}+\overline{B})$
 
-@kmap:X
-
-@kmap:Y
-
-$X$: กลุ่ม 0 ช่อง 0 กับ 2 ได้ $(A+C)$ และช่อง 1 กับ 5 ได้ $(B+\overline{C})$
-
-$Y$: กลุ่ม 0 ช่อง 1 กับ 5 (5 เป็น X เลือกเป็น 0) ได้ $(B+\overline{C})$ และช่อง 6 กับ 7 ได้ $(\overline{A}+\overline{B})$
-
-$$X = (A + C)(B + \overline{C})$$
-
-$$Y = (B + \overline{C})(\overline{A} + \overline{B})$$
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 X &= (A + C)(B + \overline{C}) \\
- &= \overline{\overline{A + C} + \overline{B + \overline{C}}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{(A + C)(B + \overline{C})}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + C} + \overline{B + \overline{C}}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y &= (B + \overline{C})(\overline{A} + \overline{B}) \\
- &= \overline{\overline{B + \overline{C}} + \overline{\overline{A} + \overline{B}}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{(B + \overline{C})(\overline{A} + \overline{B})}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{B + \overline{C}} + \overline{\overline{A} + \overline{B}}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 8 ตัว: ตัวกลับของ $A$, $B$ และ $C$ สามตัว, NOR ของ $A,C$ หนึ่งตัว, NOR ของ $B,\overline{C}$ (ใช้ร่วมกัน) หนึ่งตัว, NOR ของ $\overline{A},\overline{B}$ หนึ่งตัว และ NOR ตัวสุดท้ายของ $X$ กับ $Y$ อย่างละตัว
 
 $\mathbf{Ans}\quad X = (A + C)(B + \overline{C})$
 

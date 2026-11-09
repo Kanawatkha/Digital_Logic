@@ -21,19 +21,17 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-เกต AND สามอินพุตสามตัวให้พจน์ $\overline{A}\,\overline{B}C$, $A\overline{B}C$ และ $ABC$ แล้วรวมด้วย OR
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 Y &= \overline{A}\,\overline{B}C + A\overline{B}C + ABC \\
- &= \overline{B}C(\overline{A} + A) + ABC && \text{(จัดกลุ่ม)} \\
- &= \overline{B}C + ABC && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)} \\
- &= C(\overline{B} + AB) && \text{(ดึง C ออก)} \\
- &= C(\overline{B} + A) && \text{(กฎ X + X'Y = X + Y)}
+ &= (\overline{A} + A)\overline{B}C + ABC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{B}C + ABC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= C(\overline{B} + AB) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= C(\overline{B} + A) && \text{$X+\overline{X}Y=X+Y$}
 \end{aligned}
 $$
-
-ใช้ NOT 1 ตัว, OR 1 ตัว และ AND 1 ตัว รวม 3 เกต
 
 $\mathbf{Ans}\quad Y = (A + \overline{B})C$
 
@@ -55,18 +53,18 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-NAND ตัวแรกให้ $\overline{AB}$ ต่อกับ $C$ ใน NAND ตัวที่สอง ส่วน NOR ให้ $\overline{\overline{A}+B}$ แล้ว OR รวมกัน
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
- &= AB + \overline{C} + A\overline{B} && \text{(เดอมอร์แกน)} \\
- &= A(B + \overline{B}) + \overline{C} && \text{(ดึง A ออก)} \\
- &= A + \overline{C} && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)}
+ &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= A(B + \overline{B}) + \overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A\cdot 1 + \overline{C} && \text{$X+\overline{X}=1$} \\
+ &= A + \overline{C} && \text{$X\cdot 1=X$}
 \end{aligned}
 $$
-
-ใช้ NOT 1 ตัวและ OR 1 ตัว รวม 2 เกต
 
 $\mathbf{Ans}\quad Y = A + \overline{C}$
 
@@ -91,27 +89,26 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-$X$ ออกจาก OR ของ $\overline{A}B$ กับ $\overline{A}BC$ ส่วน $Y$ คือ $X$ รวมกับ $ABC$
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 X &= \overline{A}B + \overline{A}BC \\
- &= \overline{A}B(1 + C) && \text{(ดึงตัวร่วมออก)} \\
- &= \overline{A}B && \text{(1 บวกอะไรก็ได้ 1)}
+ &= \overline{A}B(1 + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}B\cdot 1 && \text{$1+X=1$} \\
+ &= \overline{A}B && \text{$X\cdot 1=X$}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y &= \overline{A}B + \overline{A}BC + ABC \\
- &= \overline{A}B + ABC && \text{(ดูดซับ)} \\
- &= B(\overline{A} + AC) && \text{(ดึง B ออก)} \\
- &= B(\overline{A} + C) && \text{(กฎ X + X'Y = X + Y)} \\
- &= \overline{A}B + BC && \text{(แจกแจง)}
+ &= \overline{A}B + ABC && \text{$X+XY=X$} \\
+ &= B(\overline{A} + AC) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= B(\overline{A} + C) && \text{$X+\overline{X}Y=X+Y$} \\
+ &= \overline{A}B + BC && \text{$X(Y+Z)=XY+XZ$}
 \end{aligned}
 $$
-
-พจน์ $\overline{A}B$ ใช้ร่วมกันได้ ใช้ NOT 1 ตัว, AND 2 ตัว และ OR 1 ตัว รวม 4 เกต
 
 $\mathbf{Ans}\quad X = \overline{A}B$
 
@@ -136,19 +133,18 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-เกต AND สามอินพุตสามตัวให้พจน์ $A\overline{B}C$, $ABC$ และ $\overline{A}BC$ แล้วรวมด้วย OR
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 F &= A\overline{B}C + ABC + \overline{A}BC \\
- &= AC(\overline{B} + B) + \overline{A}BC && \text{(จัดกลุ่ม)} \\
- &= AC + \overline{A}BC && \text{(ตัวแปรบวกกับตัวกลับของมันได้ 1)} \\
- &= C(A + \overline{A}B) && \text{(ดึง C ออก)} \\
- &= C(A + B) && \text{(กฎ X + X'Y = X + Y)}
+ &= AC(\overline{B} + B) + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AC\cdot 1 + \overline{A}BC && \text{$X+\overline{X}=1$} \\
+ &= AC + \overline{A}BC && \text{$X\cdot 1=X$} \\
+ &= C(A + \overline{A}B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= C(A + B) && \text{$X+\overline{X}Y=X+Y$}
 \end{aligned}
 $$
-
-ใช้ OR 1 ตัวและ AND 1 ตัว รวม 2 เกต
 
 $\mathbf{Ans}\quad F = (A + B)C$
 
@@ -171,28 +167,27 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-วงจรให้พจน์ $\overline{A}B$, $AC$ และ $BC$ รวมด้วย OR สามอินพุต ลดรูปด้วยทฤษฎีบทฉันทามติ
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 Y &= \overline{A}B + AC + BC \\
- &= \overline{A}B + AC + BC(A + \overline{A}) && \text{(คูณด้วย 1)} \\
- &= \overline{A}B + AC + ABC + \overline{A}BC && \text{(แจกแจง)} \\
- &= \overline{A}B(1 + C) + AC(1 + B) && \text{(จัดกลุ่ม)} \\
- &= \overline{A}B + AC && \text{(1 บวกอะไรก็ได้ 1)}
+ &= \overline{A}B + AC + (A + \overline{A})BC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= \overline{A}B + AC + ABC + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}B(1 + C) + AC(1 + B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}B + AC && \text{$1+X=1,\ X\cdot 1=X$}
 \end{aligned}
 $$
 
-แปลงเป็น NAND อย่างเดียว
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= \overline{A}B + AC \\
- &= \overline{\overline{\overline{A}B}\cdot\overline{AC}} && \text{(กลับสองครั้งและเดอมอร์แกน)}
+ &= \overline{\overline{\overline{A}B + AC}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{\overline{A}B}\cdot\overline{AC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NAND 4 ตัว: ตัวกลับของ $A$ หนึ่งตัว, NAND ของ $\overline{A},B$ หนึ่งตัว, NAND ของ $A,C$ หนึ่งตัว และ NAND ตัวสุดท้ายหนึ่งตัว
 
 $\mathbf{Ans}\quad Y = \overline{A}B + AC$
 
@@ -216,21 +211,29 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-เกต AND ในรูปให้พจน์ $AB$, $A\overline{B}C$ และ $\overline{A}BC$ แล้วรวมด้วย OR
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 Z &= AB + A\overline{B}C + \overline{A}BC \\
- &= A(B + \overline{B}C) + \overline{A}BC && \text{(ดึง A ออก)} \\
- &= A(B + C) + \overline{A}BC && \text{(กฎ X + X'Y = X + Y)} \\
- &= AB + AC + \overline{A}BC && \text{(แจกแจง)} \\
- &= AB + C(A + \overline{A}B) && \text{(ดึง C ออก)} \\
- &= AB + C(A + B) && \text{(กฎ X + X'Y = X + Y)} \\
- &= AB + AC + BC && \text{(แจกแจง)}
+ &= A(B + \overline{B}C) + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A(B + C) + \overline{A}BC && \text{$X+\overline{X}Y=X+Y$} \\
+ &= AB + AC + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + C(A + \overline{A}B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + C(A + B) && \text{$X+\overline{X}Y=X+Y$} \\
+ &= AB + AC + BC && \text{$X(Y+Z)=XY+XZ$}
 \end{aligned}
 $$
 
-NAND สามอินพุตไม่มีบนชิป ใช้ NAND สองอินพุต: NAND ของ $AB$, $AC$, $BC$ สามตัว, NAND ของสองตัวแรกแล้วกลับด้วย NAND อีกตัวเป็น AND ของมัน แล้ว NAND กับตัวที่สาม รวม 6 ตัว
+เขียนด้วย NAND
+
+$$
+\begin{aligned}
+Z &= AB + AC + BC \\
+ &= \overline{\overline{AB + AC + BC}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{AB}\cdot\overline{AC}\cdot\overline{BC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
 
 $\mathbf{Ans}\quad Z = AB + AC + BC$
 
@@ -254,19 +257,33 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-เกต OR สามอินพุตสามตัวให้ $(A+B+C)$, $(A+\overline{B}+C)$ และ $(\overline{A}+B+C)$ แล้วคูณกันด้วย AND ใช้กฎ $(X+Y)(X+\overline{Y}) = X$
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 Y &= (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C) \\
- &= (A + C)(\overline{A} + B + C) && \text{((A+C+B)(A+C+B กลับ) = A + C)} \\
- &= C + A(\overline{A} + B) && \text{(แจกแจงกลับ)} \\
- &= C + AB && \text{(ตัวแปรคูณกับตัวกลับของมันได้ 0)} \\
- &= (A + C)(B + C) && \text{(แจกแจง)}
+ &= (A + C + B)(A + C + \overline{B})(\overline{A} + B + C) && \text{$X+Y=Y+X$} \\
+ &= (A + C + B\overline{B})(\overline{A} + B + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= (A + C + 0)(\overline{A} + B + C) && \text{$X\overline{X}=0$} \\
+ &= (A + C)(\overline{A} + B + C) && \text{$X+0=X$} \\
+ &= (C + A)(C + \overline{A} + B) && \text{$X+Y=Y+X$} \\
+ &= C + A(\overline{A} + B) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= C + A\overline{A} + AB && \text{$X(Y+Z)=XY+XZ$} \\
+ &= C + 0 + AB && \text{$X\overline{X}=0$} \\
+ &= C + AB && \text{$X+0=X$} \\
+ &= (A + C)(B + C) && \text{$X+YZ=(X+Y)(X+Z)$}
 \end{aligned}
 $$
 
-แปลงเป็น NOR อย่างเดียว: $Y = (A+C)(B+C) = \overline{\overline{A+C}+\overline{B+C}}$ ใช้ NOR 3 ตัว
+เขียนด้วย NOR
+
+$$
+\begin{aligned}
+Y &= (A + C)(B + C) \\
+ &= \overline{\overline{(A + C)(B + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + C} + \overline{B + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
+\end{aligned}
+$$
 
 $\mathbf{Ans}\quad Y = (A + C)(B + C)$
 
@@ -291,23 +308,41 @@ figure:
 
 $\mathbf{Sol}^{n}$
 
-$X$ คือ AND ของ $(A+B+C)$ กับ $(A+B)$ ส่วน $Y$ คือตัวกลับของ $X$ แล้ว AND กับ $C$
+ถอดสมการจากรูป
 
 $$
 \begin{aligned}
 X &= (A + B + C)(A + B) \\
- &= A + B && \text{(ดูดซับ)}
+ &= (A + B)(A + B + C) && \text{$XY=YX$} \\
+ &= A + B && \text{$X(X+Y)=X$}
+\end{aligned}
+$$
+
+จากรูป $Y=\overline{X}\,C$ แทน $X=A+B$
+
+$$
+\begin{aligned}
+Y &= \overline{(A + B)}\,C \\
+ &= \overline{A}\,\overline{B}C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+เขียนด้วย NOR
+
+$$
+\begin{aligned}
+X &= A + B \\
+ &= \overline{\overline{A + B}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
-Y &= \overline{(A + B)}\,C \\
- &= \overline{A}\,\overline{B}C && \text{(เดอมอร์แกน)}
+Y &= \overline{A}\,\overline{B}C \\
+ &= \overline{\overline{\overline{A}\,\overline{B}C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{A + B + \overline{C}} && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-แปลงเป็น NOR อย่างเดียว: $X = A+B$ คือ NOR ของ $A,B$ แล้วกลับ, $Y = \overline{A}\,\overline{B}C = \overline{(A+B)+\overline{C}}$ ใช้ NOR 4 ตัว (NOR ของ $A,B$ ใช้ร่วมกัน)
 
 $\mathbf{Ans}\quad X = A + B$
 

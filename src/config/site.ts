@@ -193,7 +193,7 @@ export const UI_TEXT = {
   labTaskGateUnit: 'เกต',
   labTaskSolutionShow: 'ดูเฉลย',
   labTaskSolutionHide: 'ซ่อนเฉลย',
-  labTaskSteps: 'วิธีทำ',
+  labTaskSteps: 'Sol',
   labTaskTruthTable: 'ตารางความจริงของเฉลย',
   labTaskDontCare: 'X คือค่าไม่สนใจ',
   labTaskSolutionCircuit: 'วงจรเฉลย',

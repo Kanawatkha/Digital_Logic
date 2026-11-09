@@ -13,19 +13,22 @@ Y = rule value > 4
 
 $\mathbf{Sol}^{n}$
 
-ค่าฐานสองของ $ABC$ ที่มากกว่า 4 คือ 5, 6 และ 7 ($101$, $110$, $111$) จึงเขียนตารางความจริงได้ดังนี้
+ค่าที่มากกว่า $4$ คือ $5,6,7$ ($101,110,111$)
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $5,6,7$
 
-@kmap:Y
+@kmap:Y 5,7 | 6,7
+- ลูปสีส้ม (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
 
-จับกลุ่ม 1: ช่อง 5 กับ 7 ได้ $AC$ และช่อง 6 กับ 7 ได้ $AB$
-
-$$Y = AC + AB = A(B + C)$$
-
-ใช้ OR 1 ตัวและ AND 1 ตัว รวม 2 เกต
+$$
+\begin{aligned}
+Y &= AC + AB \\
+ &= A(B + C) && \text{$X(Y+Z)=XY+XZ$}
+\end{aligned}
+$$
 
 $\mathbf{Ans}\quad Y = A(B + C)$
 
@@ -41,19 +44,16 @@ Y = rule ones >= 2
 
 $\mathbf{Sol}^{n}$
 
-"ไม่น้อยกว่า 2 ตัว" คือมีอินพุตที่เป็น 1 อยู่ตั้งแต่ 2 ตัวขึ้นไป คือแถว 3, 5, 6 และ 7 โจทย์สั่งให้ใช้ SOP
+อินพุตที่เป็น $1$ ตั้งแต่ $2$ ตัวขึ้นไป คือแถว $3,5,6,7$
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $3,5,6,7$
 
-@kmap:Y
-
-จับกลุ่ม 1: ช่อง 3 กับ 7 ได้ $BC$, ช่อง 5 กับ 7 ได้ $AC$ และช่อง 6 กับ 7 ได้ $AB$
-
-$$Y = BC + AC + AB$$
-
-ใช้ AND 3 ตัวและ OR 2 ตัว รวม 5 เกต
+@kmap:Y 3,7 | 5,7 | 6,7
+- ลูปสีส้ม (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
+- ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- ลูปสีเขียว (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
 
 $\mathbf{Ans}\quad Y = BC + AC + AB$
 
@@ -68,15 +68,11 @@ Y = rule value == 5
 
 $\mathbf{Sol}^{n}$
 
-"เท่ากับ 5" คือ $ABC = 101$ มีเพียงแถว 5 ที่เอาต์พุตเป็น 1
+เลขฐานสองเท่ากับ $5$ คือ $ABC=101$ เป็น $1$ เฉพาะแถว $5$
 
 @table
 
-มีช่อง 1 ช่องเดียว จับกลุ่มกับช่องอื่นไม่ได้ จึงใช้พจน์เต็มของแถว 5 คือ $A=1,B=0,C=1$
-
-$$Y = A\overline{B}C$$
-
-ใช้ NOT 1 ตัวและ AND 2 ตัว รวม 3 เกต
+มีช่อง $1$ ช่องเดียว จับลูปกับช่องอื่นไม่ได้ จึงใช้พจน์เต็มของแถว $5$ ($A=1,\ B=0,\ C=1$) $\Rightarrow A\overline{B}C$
 
 $\mathbf{Ans}\quad Y = A\overline{B}C$
 
@@ -91,19 +87,15 @@ F = rule value <= 4
 
 $\mathbf{Sol}^{n}$
 
-"ไม่เกิน 4" คือค่า 0 ถึง 4 (แถว 0, 1, 2, 3 และ 4)
+ค่าไม่เกิน $4$ คือ $0$ ถึง $4$ (แถว $0,1,2,3,4$)
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $0,1,2,3,4$
 
-@kmap:F
-
-จับกลุ่ม 1: แถว $A=0$ ทั้งแถว (ช่อง 0, 1, 2, 3) ได้ $\overline{A}$ และช่อง 0 กับ 4 ได้ $\overline{B}\,\overline{C}$
-
-$$F = \overline{A} + \overline{B}\,\overline{C}$$
-
-ใช้ NOT 3 ตัว, AND 1 ตัว และ OR 1 ตัว รวม 5 เกต
+@kmap:F 0,1,2,3 | 0,4
+- ลูปสีส้ม (ช่อง $0,1,2,3$) : $A=0$ $\Rightarrow \overline{A}$
+- ลูปสีน้ำเงิน (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow \overline{B}\,\overline{C}$
 
 $\mathbf{Ans}\quad F = \overline{A} + \overline{B}\,\overline{C}$
 
@@ -119,23 +111,17 @@ Y = rule value > 4
 
 $\mathbf{Sol}^{n}$
 
-$X$: อินพุตที่เป็น 1 อย่างน้อย 2 ตัว คือแถว 3, 5, 6, 7 ส่วน $Y$: ค่ามากกว่า 4 คือแถว 5, 6, 7
+$X$ เป็น $1$ ที่แถว $3,5,6,7$ (อินพุตเป็น $1$ ตั้งแต่ $2$ ตัวขึ้นไป) และ $Y$ เป็น $1$ ที่แถว $5,6,7$ (ค่ามากกว่า $4$)
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
-
-@kmap:X
-
-@kmap:Y
-
-$X$ จับกลุ่ม 1 ได้ $BC$, $AC$ และ $AB$ ส่วน $Y$ ได้ $AC$ และ $AB$
-
-$$X = BC + AC + AB$$
-
-$$Y = AC + AB$$
-
-พจน์ $AC$ และ $AB$ ใช้ร่วมกันได้ จึงนับเกต AND ของมันครั้งเดียว
+@kmap:X 3,7 | 5,7 | 6,7
+@kmap:Y 5,7 | 6,7
+- $X$ ลูปสีส้ม (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
+- $X$ ลูปสีน้ำเงิน (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- $X$ ลูปสีเขียว (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
+- $Y$ ลูปสีส้ม (ช่อง $5,7$) : $A=1,\ C=1$ $\Rightarrow AC$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
 
 $\mathbf{Ans}\quad X = BC + AC + AB$
 
@@ -152,19 +138,16 @@ Y = rule ones < 2
 
 $\mathbf{Sol}^{n}$
 
-"น้อยกว่า 2 ตัว" คือมีอินพุตเป็น 1 ได้ไม่เกินหนึ่งตัว รวมกรณีที่ไม่มีเลข 1 เลย (แถว 0, 1, 2 และ 4)
+อินพุตที่เป็น $1$ น้อยกว่า $2$ ตัว คือแถว $0,1,2,4$
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $0,1,2,4$
 
-@kmap:Y
-
-จับกลุ่ม 1: ช่อง 0 กับ 1 ได้ $\overline{A}\,\overline{B}$, ช่อง 0 กับ 2 ได้ $\overline{A}\,\overline{C}$ และช่อง 0 กับ 4 ได้ $\overline{B}\,\overline{C}$
-
-$$Y = \overline{A}\,\overline{B} + \overline{A}\,\overline{C} + \overline{B}\,\overline{C}$$
-
-ใช้ NOT 3 ตัว, AND 3 ตัว และ OR 2 ตัว รวม 8 เกต
+@kmap:Y 0,1 | 0,2 | 0,4
+- ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow \overline{A}\,\overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow \overline{A}\,\overline{C}$
+- ลูปสีเขียว (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow \overline{B}\,\overline{C}$
 
 $\mathbf{Ans}\quad Y = \overline{A}\,\overline{B} + \overline{A}\,\overline{C} + \overline{B}\,\overline{C}$
 
@@ -180,20 +163,21 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-"อย่างน้อย 1 ตัว" คือเอาต์พุตเป็น 0 เพียงกรณีเดียวที่อินพุตเป็น 0 ทั้งหมด
+$Y=0$ เฉพาะแถว $0$ ($A=0,\ B=0,\ C=0$)
 
 @table
 
-จึงเขียนสมการเป็น OR ของอินพุตได้ แล้วแปลงเป็น NAND ด้วยเดอมอร์แกน
+จับลูปของ $0$ ช่องเดียว $\Rightarrow Y=A+B+C$
+
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= A + B + C \\
- &= \overline{\overline{A}\,\overline{B}\,\overline{C}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{A + B + C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A}\,\overline{B}\,\overline{C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-NAND สามอินพุตไม่มีบนชิป ใช้ NAND 6 ตัว: ตัวกลับของ $A$, $B$, $C$ สามตัว, NAND ของ $\overline{A},\overline{B}$ แล้วกลับด้วย NAND อีกตัวได้ $\overline{A}\,\overline{B}$ และ NAND ของมันกับ $\overline{C}$ เป็นตัวสุดท้าย
 
 $\mathbf{Ans}\quad Y = A + B + C$
 
@@ -209,25 +193,25 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-"ตั้งแต่ 3 ขึ้นไป" คือค่า 3 ถึง 7 (แถว 3, 4, 5, 6 และ 7)
+ค่าตั้งแต่ $3$ ขึ้นไป คือ $3$ ถึง $7$ (แถว $3,4,5,6,7$)
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $3,4,5,6,7$
 
-@kmap:Y
+@kmap:Y 4,5,6,7 | 3,7
+- ลูปสีส้ม (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
 
-จับกลุ่ม 1: ช่อง 4, 5, 6, 7 ได้ $A$ และช่อง 3 กับ 7 ได้ $BC$
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= A + BC \\
- &= \overline{\overline{A + BC}} && \text{(กลับสองครั้ง)} \\
- &= \overline{\overline{A}\cdot\overline{BC}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{A + BC}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A}\cdot\overline{BC}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NAND 3 ตัว: ตัวกลับของ $A$, NAND ของ $B,C$ และ NAND ตัวสุดท้ายของสองตัวนั้น
 
 $\mathbf{Ans}\quad Y = A + BC$
 
@@ -243,20 +227,21 @@ only: nand
 
 $\mathbf{Sol}^{n}$
 
-"ไม่เท่ากับ 4" คือเป็น 1 ทุกแถวยกเว้นแถว 4 ($ABC=100$)
+$Y=0$ เฉพาะแถว $4$ ($A=1,\ B=0,\ C=0$)
 
 @table
 
-ช่อง 0 มีช่องเดียว จึงเขียนจากช่อง 0 แล้วกลับ จะง่ายกว่าจับกลุ่ม 1 หลายกลุ่ม
+จับลูปของ $0$ ช่องเดียว $\Rightarrow Y=\overline{A}+B+C$
+
+เขียนด้วย NAND
 
 $$
 \begin{aligned}
 Y &= \overline{A} + B + C \\
- &= \overline{A\overline{B}\,\overline{C}} && \text{(เดอมอร์แกน)}
+ &= \overline{\overline{\overline{A} + B + C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{A\overline{B}\,\overline{C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y},\ \overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-NAND สามอินพุตไม่มีบนชิป ใช้ NAND 5 ตัว: ตัวกลับของ $B$ และ $C$ สองตัว, NAND ของ $\overline{B},\overline{C}$ แล้วกลับด้วย NAND อีกตัวได้ $\overline{B}\,\overline{C}$ และ NAND ของมันกับ $A$ เป็นตัวสุดท้าย
 
 $\mathbf{Ans}\quad Y = \overline{A} + B + C$
 
@@ -272,21 +257,21 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-"ไม่มีตัวใดเป็น 1" คือ $ABC=000$ มีเพียงแถว 0 ที่เอาต์พุตเป็น 1
+$Y=1$ เฉพาะแถว $0$ ($A=0,\ B=0,\ C=0$)
 
 @table
 
-แถว 0 เป็นแถวเดียว จึงได้ $\overline{A}\,\overline{B}\,\overline{C}$ ซึ่งเท่ากับ NOR ของ $A,B,C$
+มีช่อง $1$ ช่องเดียว $\Rightarrow Y=\overline{A}\,\overline{B}\,\overline{C}$
+
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= \overline{A}\,\overline{B}\,\overline{C} \\
- &= \overline{A + B + C} && \text{(เดอมอร์แกน)} \\
- &= \overline{(A + B) + C} && \text{(จัดกลุ่ม)}
+ &= \overline{A + B + C} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{(A + B) + C} && \text{$X+Y+Z=(X+Y)+Z$}
 \end{aligned}
 $$
-
-NOR สามอินพุตไม่มีบนชิป ใช้ NOR 3 ตัว: NOR ของ $A,B$ แล้วกลับด้วย NOR อีกตัวได้ $A+B$ และ NOR ของมันกับ $C$ เป็นตัวสุดท้าย
 
 $\mathbf{Ans}\quad Y = \overline{A}\,\overline{B}\,\overline{C}$
 
@@ -302,25 +287,25 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-"ไม่เกิน 2" คือค่า 0, 1 และ 2 (แถว 0, 1, 2)
+ค่าไม่เกิน $2$ คือ $0,1,2$
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $0,1,2$
 
-@kmap:Y
+@kmap:Y 0,1 | 0,2
+- ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow \overline{A}\,\overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow \overline{A}\,\overline{C}$
 
-จับกลุ่ม 1: ช่อง 0 กับ 1 ได้ $\overline{A}\,\overline{B}$ และช่อง 0 กับ 2 ได้ $\overline{A}\,\overline{C}$
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= \overline{A}\,\overline{B} + \overline{A}\,\overline{C} \\
- &= \overline{A + B} + \overline{A + C} && \text{(เดอมอร์แกน)} \\
- &= \overline{\overline{\overline{A + B} + \overline{A + C}}} && \text{(กลับสองครั้ง)}
+ &= \overline{A + B} + \overline{A + C} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{\overline{\overline{A + B} + \overline{A + C}}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
-
-ใช้ NOR 4 ตัว: NOR ของ $A,B$ และ NOR ของ $A,C$ อย่างละตัว, NOR ของสองตัวนั้น และ NOR ต่อสองอินพุตเข้าด้วยกันเพื่อกลับอีกครั้ง
 
 $\mathbf{Ans}\quad Y = \overline{A}\,\overline{B} + \overline{A}\,\overline{C}$
 
@@ -336,24 +321,25 @@ only: nor
 
 $\mathbf{Sol}^{n}$
 
-"มากกว่า 2" คือค่า 3 ถึง 7 (แถว 3, 4, 5, 6 และ 7)
+ค่ามากกว่า $2$ คือ $3$ ถึง $7$ (แถว $3,4,5,6,7$)
 
 @table
 
-ใส่ค่าจากตารางความจริงลงแผนผังคาร์โนห์ (แถวบนคือ $A=0$ แถวล่างคือ $A=1$ คอลัมน์เรียงตาม $BC$ แบบเกรย์โค้ด)
+ใส่ $1$ ที่ช่อง $3,4,5,6,7$
 
-@kmap:Y
+@kmap:Y 4,5,6,7 | 3,7
+- ลูปสีส้ม (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $3,7$) : $B=1,\ C=1$ $\Rightarrow BC$
 
-จับกลุ่ม 1: ช่อง 4, 5, 6, 7 ได้ $A$ และช่อง 3 กับ 7 ได้ $BC$ ใช้ NOR จึงแปลงเป็น POS
+เขียนด้วย NOR
 
 $$
 \begin{aligned}
 Y &= A + BC \\
- &= (A + B)(A + C) && \text{(แจกแจง)} \\
- &= \overline{\overline{A + B} + \overline{A + C}} && \text{(เดอมอร์แกน)}
+ &= (A + B)(A + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= \overline{\overline{(A + B)(A + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + B} + \overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
 \end{aligned}
 $$
-
-ใช้ NOR 3 ตัว: NOR ของ $A,B$ และ NOR ของ $A,C$ อย่างละตัว และ NOR ตัวสุดท้ายของสองตัวนั้น
 
 $\mathbf{Ans}\quad Y = A + BC$
