@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
 import { MenuToggleIcon } from '@/components/layout/MenuToggleIcon';
@@ -7,6 +7,7 @@ import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ShareDialog } from '@/components/layout/ShareDialog';
 import { NAV_ITEMS, SITE_NAME, UI_TEXT } from '@/config/site';
 import { cn } from '@/lib/cn';
+import { useLayer, useRestoreFocus } from '@/lib/layers';
 import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
 
 const MENU_ID = 'mobile-menu';
@@ -40,15 +41,16 @@ function placePill(list: HTMLElement, pill: HTMLElement, animate: boolean): void
  * Chapter labels shorten to "บท N" between md and lg.
  */
 export function Navbar() {
-  // The menu is "open at" a path, so any navigation (link press, back gesture) closes it.
-  const [openAt, setOpenAt] = useState<string | null>(null);
-  const [shareOpen, setShareOpen] = useState(false);
+  // The menu and the share card are layers of the history: the back gesture closes them, and a
+  // press on a link of the menu replaces the entry of the menu, so back never returns to an open menu.
+  const menu = useLayer('menu');
+  const share = useLayer('share');
   const toggleRef = useRef<HTMLButtonElement>(null);
   const shareRef = useRef<HTMLButtonElement>(null);
   const tabsRef = useRef<HTMLUListElement>(null);
   const pillRef = useRef<HTMLSpanElement>(null);
   const { pathname } = useLocation();
-  const open = openAt === pathname;
+  const open = menu.open;
 
   // Follows the current page, and keeps up when the tab row changes size (resize, fonts, label length).
   useLayoutEffect(() => {
@@ -62,15 +64,8 @@ export function Navbar() {
     return () => observer.disconnect();
   }, [pathname]);
 
-  const close = useCallback(() => {
-    setOpenAt(null);
-    toggleRef.current?.focus();
-  }, []);
-
-  const closeShare = useCallback(() => {
-    setShareOpen(false);
-    shareRef.current?.focus();
-  }, []);
+  useRestoreFocus(open, toggleRef);
+  useRestoreFocus(share.open, shareRef);
 
   const siteUrl = `${window.location.origin}${import.meta.env.BASE_URL}`;
 
@@ -123,8 +118,8 @@ export function Navbar() {
             aria-label={UI_TEXT.share}
             aria-haspopup="dialog"
             onClick={() => {
-              setOpenAt(null);
-              setShareOpen(true);
+              menu.hide();
+              share.show();
             }}
           >
             <Icon name="share" size={20} />
@@ -136,16 +131,16 @@ export function Navbar() {
             aria-expanded={open}
             aria-controls={MENU_ID}
             aria-label={open ? UI_TEXT.menuClose : UI_TEXT.menuOpen}
-            onClick={() => (open ? close() : setOpenAt(pathname))}
+            onClick={() => (open ? menu.hide() : menu.show())}
           >
             <MenuToggleIcon open={open} />
           </button>
         </div>
       </nav>
 
-      <ShareDialog open={shareOpen} onClose={closeShare} url={siteUrl} />
+      <ShareDialog open={share.open} onClose={share.hide} url={siteUrl} />
 
-      <MobileMenu id={MENU_ID} open={open} onClose={close} />
+      <MobileMenu id={MENU_ID} open={open} onClose={menu.hide} />
     </header>
   );
 }

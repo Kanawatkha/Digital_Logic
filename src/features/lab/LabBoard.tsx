@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'r
 import type { CSSProperties, KeyboardEvent } from 'react';
 import { createPortal } from 'react-dom';
 import { UI_TEXT } from '@/config/site';
+import { useLayer, useRestoreFocus } from '@/lib/layers';
 import type { LabMethodId } from '@/content/types';
 import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
 import { BoardArt } from './board/BoardArt';
@@ -20,10 +21,13 @@ import { simulate } from './sim/evaluate';
 import { IC_TYPES, type IcType } from './sim/ics';
 import { icNotes } from './sim/notes';
 import { circuitReducer, findFreeSlot } from './state/circuit';
+import type { LabAction } from './shortcuts';
+import { useLabShortcuts } from './useLabShortcuts';
 import { loadCircuit, saveCircuit } from './state/storage';
 import type { PlacedSolution } from './tasks/place';
 import { TasksDrawer } from './tasks/TasksDrawer';
 import { IcDiagramDrawer } from './ui/IcDiagramDrawer';
+import { HelpDrawer } from './ui/HelpDrawer';
 import { IcTray } from './ui/IcTray';
 import { ResultsDrawer } from './ui/ResultsDrawer';
 import { IoPanel } from './ui/IoPanel';
@@ -93,13 +97,21 @@ export function LabBoard() {
   const tools = usePresence(toolsOpen, 180);
   const roomyForColors = useMinWidth(COLORS_IN_ROW_MIN);
   const roomyForChips = useMinWidth(CHIPS_IN_ROW_MIN);
-  const [diagramsOpen, setDiagramsOpen] = useState(false);
+  // what is open on top of the board is a layer of the history, so the back gesture closes it
+  const diagrams = useLayer('lab:diagrams');
+  const diagramsOpen = diagrams.open;
   const [glide, setGlide] = useState<{ from: ReadonlyMap<string, Bend>; id: number } | null>(null);
   const diagramsButton = useRef<HTMLButtonElement>(null);
-  const [resultsOpen, setResultsOpen] = useState(false);
+  const results = useLayer('lab:results');
+  const help = useLayer('lab:help');
+  const helpButton = useRef<HTMLButtonElement>(null);
+  const resultsOpen = results.open;
   const resultsButton = useRef<HTMLButtonElement>(null);
   // the tasks: what was open last (the task, the kinds that are unfolded in the list, and the tasks whose solution is shown) is kept while the drawer is closed
-  const [tasksOpen, setTasksOpen] = useState(false);
+  const tasks = useLayer('lab:tasks');
+  const tasksOpen = tasks.open;
+  // one task open in the drawer is a layer above the list: back goes from the task to the list
+  const taskLayer = useLayer('lab:task');
   const [taskId, setTaskId] = useState<string | null>(null);
   const [openKinds, setOpenKinds] = useState<ReadonlySet<string>>(new Set());
   const [openSolutions, setOpenSolutions] = useState<ReadonlySet<string>>(new Set());
@@ -190,46 +202,82 @@ export function LabBoard() {
     if (circuit.selected) dispatch({ type: 'remove', id: circuit.selected });
   };
 
-  const onKeyDown = (event: KeyboardEvent) => {
-    // a drawer has the keys while it is open
-    if (diagramsOpen || resultsOpen || tasksOpen) return;
-    if (event.ctrlKey || event.metaKey) {
-      const key = event.key.toLowerCase();
-      if (key === 'z') dispatch({ type: event.shiftKey ? 'redo' : 'undo' });
-      else if (key === 'y') dispatch({ type: 'redo' });
-      else return;
-      event.preventDefault();
-    } else if ((event.key === 'Delete' || event.key === 'Backspace') && hasSelection) {
-      removeSelected();
-      event.preventDefault();
-    } else if (event.key === 'Escape') {
-      tool.cancel();
-      dispatch({ type: 'select', id: null });
-    }
-  };
-
   const onBoard = useMemo(() => {
     const counts = Object.fromEntries(IC_TYPES.map((type) => [type, 0])) as Record<IcType, number>;
     for (const ic of ics) counts[ic.type] += 1;
     return counts;
   }, [ics]);
-  const closeResults = useCallback(() => {
-    setResultsOpen(false);
-    resultsButton.current?.focus();
-  }, []);
-  const closeTasks = useCallback(() => {
-    setTasksOpen(false);
-    tasksButton.current?.focus();
-  }, []);
+  useRestoreFocus(resultsOpen, resultsButton);
+  useRestoreFocus(tasksOpen, tasksButton);
+  useRestoreFocus(diagramsOpen, diagramsButton);
+  useRestoreFocus(help.open, helpButton);
+  /** The drawer of the tasks opens on the task it was left on, below which is the list */
+  const openTasks = () => {
+    tasks.show();
+    if (taskId !== null) taskLayer.show();
+  };
+  const selectTask = (id: string | null) => {
+    if (id === null) {
+      taskLayer.hide();
+    } else {
+      setTaskId(id);
+      // from one task to the next there is no new layer: only from the list
+      if (!taskLayer.open) taskLayer.show();
+    }
+  };
+  /** The keyboard: returns whether the key did something, so that the browser keeps out of it */
+  const onShortcut = (action: LabAction): boolean => {
+    switch (action.kind) {
+      case 'undo':
+        dispatch({ type: 'undo' });
+        return true;
+      case 'redo':
+        dispatch({ type: 'redo' });
+        return true;
+      case 'delete':
+        if (!hasSelection) return false;
+        removeSelected();
+        return true;
+      case 'escape':
+        tool.cancel();
+        dispatch({ type: 'select', id: null });
+        return false;
+      case 'arrange':
+        if (wires.length === 0) return false;
+        arrange();
+        return true;
+      case 'switch':
+        dispatch({ type: 'toggleSwitch', index: action.index });
+        return true;
+      case 'tasks':
+        openTasks();
+        return true;
+      case 'results':
+        results.show();
+        return true;
+      case 'diagrams':
+        diagrams.show();
+        return true;
+      case 'help':
+        help.show();
+        return true;
+    }
+  };
+  // a drawer has the keys while it is open
+  useLabShortcuts(diagramsOpen || resultsOpen || tasksOpen || help.open, onShortcut);
+
+  // coming back from a task to the list, by the arrow or by the back gesture, leaves the drawer on the
+  // list; closing the drawer from a task keeps the task, which the drawer opens on next time
+  const taskWasOpen = useRef(false);
+  useEffect(() => {
+    if (taskWasOpen.current && !taskLayer.open && tasksOpen) setTaskId(null);
+    taskWasOpen.current = taskLayer.open;
+  }, [taskLayer.open, tasksOpen]);
   /** The answer goes on the boards, and the drawer gives them back to be looked at */
   const loadSolution = (placed: PlacedSolution) => {
     dispatch({ type: 'replace', ics: placed.ics, wires: placed.wires });
-    closeTasks();
+    tasks.hide();
   };
-  const closeDiagrams = useCallback(() => {
-    setDiagramsOpen(false);
-    diagramsButton.current?.focus();
-  }, []);
 
   /** The switch and LED strip: in the row of tools, or in the dock at the bottom */
   const strip = (
@@ -266,10 +314,7 @@ export function LabBoard() {
               : undefined;
 
   return (
-    <div
-      className="relative h-[calc(100dvh-var(--spacing-nav)-1px)] w-full overflow-hidden bg-surface-soft"
-      onKeyDown={onKeyDown}
-    >
+    <div className="relative h-[calc(100dvh-var(--spacing-nav)-1px)] w-full overflow-hidden bg-surface-soft">
       <div
         ref={containerRef}
         tabIndex={0}
@@ -354,12 +399,14 @@ export function LabBoard() {
             >
               <IcTray
                 compact={!roomyForChips}
-                onOpenDiagrams={() => setDiagramsOpen(true)}
+                onOpenDiagrams={diagrams.show}
                 diagramsRef={diagramsButton}
-                onOpenResults={() => setResultsOpen(true)}
+                onOpenResults={results.show}
                 resultsRef={resultsButton}
-                onOpenTasks={() => setTasksOpen(true)}
+                onOpenTasks={openTasks}
                 tasksRef={tasksButton}
+                onOpenHelp={help.show}
+                helpRef={helpButton}
                 onPlace={placeChip}
                 onDragStart={tool.startTrayDrag}
               />
@@ -419,12 +466,12 @@ export function LabBoard() {
           />
         </div>
       </div>
-      <ResultsDrawer open={resultsOpen} onClose={closeResults} circuit={live} />
+      <ResultsDrawer open={resultsOpen} onClose={results.hide} circuit={live} />
       <TasksDrawer
         open={tasksOpen}
-        onClose={closeTasks}
-        taskId={taskId}
-        onSelect={setTaskId}
+        onClose={tasks.hide}
+        taskId={taskLayer.open ? taskId : null}
+        onSelect={selectTask}
         openKinds={openKinds}
         onOpenKinds={setOpenKinds}
         openSolutions={openSolutions}
@@ -433,7 +480,8 @@ export function LabBoard() {
         onMethodChange={setTaskMethod}
         onLoadSolution={loadSolution}
       />
-      <IcDiagramDrawer open={diagramsOpen} onClose={closeDiagrams} onBoard={onBoard} />
+      <IcDiagramDrawer open={diagramsOpen} onClose={diagrams.hide} onBoard={onBoard} />
+      <HelpDrawer open={help.open} onClose={help.hide} />
       <p role="status" aria-live="polite" aria-label={UI_TEXT.labSummary} className="sr-only">
         {summary}
       </p>

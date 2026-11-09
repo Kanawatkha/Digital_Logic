@@ -2,6 +2,7 @@ import { useCallback, useId, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UI_TEXT } from '@/config/site';
+import { ARIA_KEYS, KEYS, withKey } from '../shortcuts';
 import { WIRE_COLORS, WIRE_COLOR_NAMES, type WireColor } from '../board/palette';
 import { Popover } from './Popover';
 
@@ -74,6 +75,8 @@ type ToolSpec = {
   id: 'arrange' | 'paint' | 'straighten';
   icon: 'wand' | 'palette' | 'straight';
   label: string;
+  /** The key that does it, for the tooltip and for assistive technology */
+  key?: { shown: string; aria: string };
   disabled: boolean;
   run: () => void;
 };
@@ -84,7 +87,8 @@ function ToolButton({ tool }: { tool: ToolSpec }) {
       type="button"
       className={BUTTON}
       aria-label={tool.label}
-      title={tool.label}
+      aria-keyshortcuts={tool.key?.aria}
+      title={tool.key ? withKey(tool.label, tool.key.shown) : tool.label}
       disabled={tool.disabled}
       onClick={tool.run}
     >
@@ -188,6 +192,7 @@ export function WireToolbar({
       id: 'arrange',
       icon: 'wand',
       label: UI_TEXT.labArrange,
+      key: { shown: KEYS.arrange, aria: ARIA_KEYS.arrange },
       disabled: !canArrange,
       run: onArrange,
     },
@@ -260,7 +265,8 @@ export function WireToolbar({
         type="button"
         className={BUTTON}
         aria-label={UI_TEXT.labUndo}
-        title={UI_TEXT.labUndo}
+        aria-keyshortcuts={ARIA_KEYS.undo}
+        title={withKey(UI_TEXT.labUndo, KEYS.undo)}
         disabled={!canUndo}
         onClick={onUndo}
       >
@@ -270,7 +276,8 @@ export function WireToolbar({
         type="button"
         className={BUTTON}
         aria-label={UI_TEXT.labRedo}
-        title={UI_TEXT.labRedo}
+        aria-keyshortcuts={ARIA_KEYS.redo}
+        title={withKey(UI_TEXT.labRedo, KEYS.redo)}
         disabled={!canRedo}
         onClick={onRedo}
       >
@@ -286,7 +293,8 @@ export function WireToolbar({
         type="button"
         className={BUTTON}
         aria-label={UI_TEXT.labDeleteWire}
-        title={UI_TEXT.labDeleteWire}
+        aria-keyshortcuts={ARIA_KEYS.delete}
+        title={withKey(UI_TEXT.labDeleteWire, KEYS.delete)}
         disabled={!hasSelection}
         onClick={onDelete}
       >

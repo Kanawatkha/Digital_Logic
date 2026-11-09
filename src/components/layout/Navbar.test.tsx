@@ -1,8 +1,9 @@
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { MemoryRouter, Route, Routes, useNavigate } from 'react-router-dom';
-import { describe, expect, it, vi } from 'vitest';
+import { MemoryRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Navbar } from '@/components/layout/Navbar';
 import { NAV_ITEMS } from '@/config/site';
+import { resetLayers } from '@/lib/layers';
 
 function GoToExam() {
   const navigate = useNavigate();
@@ -12,6 +13,22 @@ function GoToExam() {
     </button>
   );
 }
+
+/** The back gesture of a phone, and where the page is. */
+function Gesture() {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  return (
+    <div>
+      <p data-testid="where">{pathname}</p>
+      <button type="button" onClick={() => navigate(-1)}>
+        gesture back
+      </button>
+    </div>
+  );
+}
+
+beforeEach(() => resetLayers());
 
 function setup(initial = '/') {
   return render(
@@ -23,6 +40,82 @@ function setup(initial = '/') {
     </MemoryRouter>,
   );
 }
+
+describe('Navbar and the back gesture', () => {
+  function setupWithHistory() {
+    return render(
+      <MemoryRouter initialEntries={['/chapter/1', '/']} initialIndex={1}>
+        <Navbar />
+        <Gesture />
+      </MemoryRouter>,
+    );
+  }
+  const back = () => fireEvent.click(screen.getByRole('button', { name: 'gesture back' }));
+  const where = () => screen.getByTestId('where').textContent;
+
+  it('closes the mobile menu, and only then leaves the page', async () => {
+    setupWithHistory();
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    expect(document.getElementById('mobile-menu')).not.toBeNull();
+    back();
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+    expect(where()).toBe('/');
+    expect(screen.getByRole('button', { name: 'เมนู' })).toHaveFocus();
+    back();
+    expect(where()).toBe('/chapter/1');
+  });
+
+  it('lets a row of the menu take the place of the menu, so back goes to the page it was opened on', async () => {
+    setupWithHistory();
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    const menu = document.getElementById('mobile-menu') as HTMLElement;
+    const row = within(menu)
+      .getAllByRole('link')
+      .find((link) => link.getAttribute('href') === '/exam') as HTMLElement;
+    fireEvent.click(row);
+    expect(where()).toBe('/exam');
+    back();
+    expect(where()).toBe('/');
+    // the panel stays for the length of its slide-up animation
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+  });
+
+  it('closes the share card with the back gesture', async () => {
+    setupWithHistory();
+    const share = screen.getByRole('button', { name: 'แชร์เว็บไซต์' });
+    fireEvent.click(share);
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    back();
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    expect(where()).toBe('/');
+    expect(share).toHaveFocus();
+  });
+
+  it('closes the menu before it opens the share card, leaving one entry for the card', async () => {
+    setupWithHistory();
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    fireEvent.click(screen.getByRole('button', { name: 'แชร์เว็บไซต์' }));
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+    back();
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    expect(where()).toBe('/');
+    back();
+    expect(where()).toBe('/chapter/1');
+  });
+
+  it('leaves nothing in the history when the menu or the card is closed with Escape or the cross', async () => {
+    setupWithHistory();
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    fireEvent.keyDown(document, { key: 'Escape' });
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+    fireEvent.click(screen.getByRole('button', { name: 'แชร์เว็บไซต์' }));
+    fireEvent.click(screen.getByRole('button', { name: 'ปิด' }));
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    back();
+    expect(where()).toBe('/chapter/1');
+  });
+});
 
 describe('Navbar', () => {
   it('lists every page as a link in the tab row', () => {

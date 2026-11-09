@@ -1,4 +1,4 @@
-type IconName =
+export type IconName =
   | 'menu'
   | 'close'
   | 'chevron-right'
@@ -22,7 +22,8 @@ type IconName =
   | 'tasks'
   | 'play'
   | 'pause'
-  | 'palette';
+  | 'palette'
+  | 'help';
 
 const PATHS: Record<IconName, string> = {
   menu: 'M4 7h16M4 12h16M4 17h16',
@@ -50,6 +51,7 @@ const PATHS: Record<IconName, string> = {
   pause: 'M8.5 5v14M15.5 5v14',
   tasks: 'M10 6h10M10 12h10M10 18h10M3.5 6l1.3 1.3L7 5M3.5 12l1.3 1.3L7 11M3.5 18l1.3 1.3L7 17',
   alert: 'M12 4.5l9 15.5H3zM12 10.5v4M12 17.4h.01',
+  help: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.4 9.6a2.6 2.6 0 1 1 3.7 2.3c-.8.4-1.1.9-1.1 1.7M12 17h.01',
   wand: 'M4 20L15 9M13 4v3M13 4.5l1.8 1.8M19 10.5h-3M18.5 4.5l-1.8 1.8M5 6l.8 1.7L7.5 8.5 5.8 9.3 5 11l-.8-1.7L2.5 8.5l1.7-.8zM19 15l.6 1.4L21 17l-1.4.6L19 19l-.6-1.4L17 17l1.4-.6z',
 };
 

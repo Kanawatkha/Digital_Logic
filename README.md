@@ -25,7 +25,10 @@ build a circuit that really works: jumper wires between holes and sockets, the f
 inputs and sixteen LEDs as outputs. Power is strict like the real board (an IC works only with +5V on
 pin 14 and GND on pin 7) and the page warns about shorts, floating inputs and unpowered chips. The
 circuit is saved in the browser, with undo and redo, and a 15 minute exam timer sits next to the
-warnings. A drawer shows the truth table, the diagram and the equations of what is built.
+warnings. A drawer shows the truth table, the diagram and the equations of what is built. A help
+button (or the key `H`) lists what every button does and the keyboard shortcuts (Ctrl+Z, A, T, R, P,
+1 to 8 for the switches and more), and the back gesture of a phone closes a drawer before it leaves
+the page.
 
 The tasks button opens 88 tasks in five kinds: large Boolean expressions, truth tables, SOP and POS
 expressions, large logic circuits and word descriptions. Each kind has free tasks, tasks that allow

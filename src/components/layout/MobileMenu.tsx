@@ -63,6 +63,8 @@ export function MobileMenu({ id, open, onClose }: MobileMenuProps) {
               <NavLink
                 to={item.to}
                 end={item.to === '/'}
+                // the menu is an entry of the history: the page takes its place, so back skips it
+                replace
                 className={({ isActive }) =>
                   cn(
                     'type-title-sm flex h-14 items-center justify-between px-4',

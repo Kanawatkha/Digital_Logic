@@ -2,6 +2,7 @@ import { useCallback, useId, useRef, useState } from 'react';
 import type { CSSProperties, PointerEvent, RefObject } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UI_TEXT } from '@/config/site';
+import { ARIA_KEYS, KEYS, withKey } from '../shortcuts';
 import { IC_SPECS, IC_TYPES, type IcType } from '../sim/ics';
 import { Popover } from './Popover';
 
@@ -17,6 +18,9 @@ type IcTrayProps = {
   /** Opens the drawer with the tasks */
   onOpenTasks: () => void;
   tasksRef: RefObject<HTMLButtonElement | null>;
+  /** Opens the drawer with what each button does and the keyboard shortcuts */
+  onOpenHelp: () => void;
+  helpRef: RefObject<HTMLButtonElement | null>;
   /** A tap or the keyboard: put this chip on a free place of a breadboard */
   onPlace: (type: IcType) => void;
   /** A drag out of the tray: the board takes over the pointer; `onEnd` says whether it moved */
@@ -36,6 +40,8 @@ export function IcTray({
   resultsRef,
   onOpenTasks,
   tasksRef,
+  onOpenHelp,
+  helpRef,
   onPlace,
   onDragStart,
 }: IcTrayProps) {
@@ -150,7 +156,8 @@ export function IcTray({
         type="button"
         aria-haspopup="dialog"
         aria-label={UI_TEXT.labDiagrams}
-        title={UI_TEXT.labDiagrams}
+        aria-keyshortcuts={ARIA_KEYS.diagrams}
+        title={withKey(UI_TEXT.labDiagrams, KEYS.diagrams)}
         className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenDiagrams}
       >
@@ -161,7 +168,8 @@ export function IcTray({
         type="button"
         aria-haspopup="dialog"
         aria-label={UI_TEXT.labResults}
-        title={UI_TEXT.labResults}
+        aria-keyshortcuts={ARIA_KEYS.results}
+        title={withKey(UI_TEXT.labResults, KEYS.results)}
         className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenResults}
       >
@@ -172,11 +180,24 @@ export function IcTray({
         type="button"
         aria-haspopup="dialog"
         aria-label={UI_TEXT.labTasksOpen}
-        title={UI_TEXT.labTasksOpen}
+        aria-keyshortcuts={ARIA_KEYS.tasks}
+        title={withKey(UI_TEXT.labTasksOpen, KEYS.tasks)}
         className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenTasks}
       >
         <Icon name="tasks" />
+      </button>
+      <button
+        ref={helpRef}
+        type="button"
+        aria-haspopup="dialog"
+        aria-label={UI_TEXT.labHelp}
+        aria-keyshortcuts={ARIA_KEYS.help}
+        title={withKey(UI_TEXT.labHelp, KEYS.help)}
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        onClick={onOpenHelp}
+      >
+        <Icon name="help" />
       </button>
     </div>
   );

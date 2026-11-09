@@ -53,6 +53,28 @@ No footer. A small toast host (bottom-left) shows update and offline-ready messa
 - One row per page, 56 px high, full-width tap target, in this order: Home, บทที่ 1-5, ข้อสอบกลางภาค, สรุปสูตรรวม.
 - Closes on: row selected, close button, `Esc`, route change, or back gesture. Focus is trapped inside while open and returns to the hamburger on close. Body scroll is locked while open.
 
+### Back gesture and layers
+
+What opens on top of a page is a layer, and every layer is an entry of the browser history (`src/lib/layers.ts`), so the back gesture of a phone, the back button and Alt+Left close the layer on top instead of leaving the page. The layers are the mobile menu, the share card, and in the lab the drawers of the tasks, the results and the pin diagrams, and, inside the tasks drawer, one open task (a layer above the list: back goes from the task to the list, back again closes the drawer, back again leaves the page). The cross, Esc and a press on the blur close a layer by going back too, so the history never keeps an entry for a layer that is closed. A reload does not open the layers it found: it goes back to the entry below them. A row of the mobile menu replaces the entry of the menu, so back from the page it opens goes to the page the menu was opened on. The tasks drawer opens on the task it was closed from, with the list below it; coming back to the list by the arrow or by the gesture makes it open on the list next time. Small panels (wire colors, chips, the list of warnings) and the nodes of the home diagram are not layers.
+
+### Lab keyboard shortcuts and the help
+
+The shortcuts are in `src/features/lab/shortcuts.ts` (what a press means, pure and tested) and run on the whole page through `useLabShortcuts`, wherever the focus is. They read the place of the key (`event.code`), not the letter it prints, so they are the same on a Thai layout; where an event has no place (a screen keyboard) the printed Latin letter is used. They never run while text is typed, with Alt held, or while a drawer is open (the drawer has the keys), and a key held down does not open or flip again.
+
+| Keys | Action |
+|---|---|
+| Ctrl or Cmd with Z; with Shift and Z, or Y | undo; redo |
+| Delete, Backspace | delete the selected wire or chip |
+| Esc | cancel the wire being drawn, deselect (Esc in a drawer closes it) |
+| A | arrange the wires |
+| 1 to 8 (digit row or number pad) | flip switch 1 to 8 |
+| T, R, P | open the tasks, the results, the pin diagrams |
+| H, ? | open the help |
+| on the board: + and -, 0, Shift and 0, arrows, Enter | zoom, fit, real size (100%), pan, keyboard wiring |
+| in the tasks drawer with a task open: [ and ], S, left and right | task before and after (moving from one task to the next adds no layer), show or hide the solution, switch the algebra and K-map tabs |
+
+The keys appear in the tooltips of the buttons (`title`, "ย้อนกลับ (Ctrl+Z)") and in `aria-keyshortcuts`. A help button (icon with a question mark) at the end of the chip tray opens the help drawer (a layer, like the others): three tabs, "ปุ่มเครื่องมือ" (every button of the page with its icon and one line of what it does, in three groups: the wire tools, the chips and panels, testing and view), "ใช้กระดาน" (wires, chips, switches, pan and zoom, keyboard wiring, saving) and "คีย์ลัด" (the table above, with a note for Mac). The words are in `ui/helpContent.ts`.
+
 ## 3. Routes and pages
 
 | Route | Page | Data | Layout summary |

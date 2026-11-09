@@ -333,17 +333,23 @@ export function useViewport({ content, shouldPan, claimKey }: Options) {
     const onKey = (event: KeyboardEvent) => {
       if (event.ctrlKey || event.metaKey || event.altKey) return;
       if (keyClaim.current?.(event)) return;
-      const key = event.key;
-      if (key === '+' || key === '=') zoomBy(BUTTON_ZOOM);
-      else if (key === '-' || key === '_') zoomBy(1 / BUTTON_ZOOM);
-      else if (key === '0') fit();
-      else if (key === '1') actualSize();
+      // by the place of the key as well as the letter it prints, so the keys work on a Thai layout;
+      // 1 to 8 belong to the switches, so the real size is Shift and 0
+      const { key, code } = event;
+      const fitKey = (code === 'Digit0' || code === 'Numpad0' || key === '0') && !event.shiftKey;
+      const sizeKey = (code === 'Digit0' || code === 'Numpad0') && event.shiftKey;
+      if (key === '+' || key === '=' || code === 'Equal' || code === 'NumpadAdd') {
+        zoomBy(BUTTON_ZOOM);
+      } else if (key === '-' || key === '_' || code === 'Minus' || code === 'NumpadSubtract') {
+        zoomBy(1 / BUTTON_ZOOM);
+      } else if (fitKey) fit();
+      else if (sizeKey) actualSize();
       else if (key === 'ArrowLeft') goTo(panBy(view.current, KEY_PAN, 0));
       else if (key === 'ArrowRight') goTo(panBy(view.current, -KEY_PAN, 0));
       else if (key === 'ArrowUp') goTo(panBy(view.current, 0, KEY_PAN));
       else if (key === 'ArrowDown') goTo(panBy(view.current, 0, -KEY_PAN));
       else return;
-      touched.current = key !== '0';
+      touched.current = !fitKey;
       event.preventDefault();
     };
 

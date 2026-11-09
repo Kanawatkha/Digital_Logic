@@ -61,7 +61,12 @@ describe('LabPage', () => {
     const fitted = percent();
     fireEvent.click(screen.getByRole('button', { name: 'ซูมเข้า' }));
     await waitFor(() => expect(percent()).toBeGreaterThan(fitted), SLOW);
-    fireEvent.keyDown(screen.getByRole('application'), { key: '1' });
+    // the real size is Shift and 0: the keys 1 to 8 are the switches
+    fireEvent.keyDown(screen.getByRole('application'), {
+      key: ')',
+      code: 'Digit0',
+      shiftKey: true,
+    });
     await waitFor(() => expect(percent()).toBe(100), SLOW);
     fireEvent.click(screen.getByRole('button', { name: 'ซูมออก' }));
     await waitFor(() => expect(percent()).toBeLessThan(100), SLOW);
@@ -104,7 +109,7 @@ describe('LabPage board', () => {
     const board = screen.getByRole('application');
     const transform = () => board.querySelector('svg > g')?.getAttribute('transform');
     if (zoom100) {
-      fireEvent.keyDown(board, { key: '1' });
+      fireEvent.keyDown(board, { key: ')', code: 'Digit0', shiftKey: true });
       await waitFor(
         () => expect(transform()).toBe(`translate(${OFFSET.x} ${OFFSET.y}) scale(1)`),
         SLOW,

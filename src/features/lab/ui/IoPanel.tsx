@@ -46,7 +46,8 @@ export function IoPanel({ switches, leds, stacked, onToggle }: IoPanelProps) {
               type="button"
               aria-label={`${UI_TEXT.labSwitch} ${k + 1}`}
               aria-pressed={up}
-              title={`${UI_TEXT.labSwitch} ${k + 1}: ${up ? 1 : 0}`}
+              aria-keyshortcuts={String(k + 1)}
+              title={`${UI_TEXT.labSwitch} ${k + 1}: ${up ? 1 : 0} (${k + 1})`}
               className={`flex size-10 flex-col items-center justify-center rounded-md transition-colors duration-150 select-none active:scale-95 ${
                 up ? 'bg-ink text-on-dark' : 'bg-surface-card text-ink'
               }`}

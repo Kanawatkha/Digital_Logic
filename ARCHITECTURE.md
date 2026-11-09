@@ -62,7 +62,7 @@ Digital_Logic/
 │  │  ├─ loaders.ts         lazy loaders for generated JSON
 │  │  └─ generated/         BUILD OUTPUT, git-ignored
 │  ├─ hooks/                generic hooks (useMediaQuery, useReducedMotion, useResizeObserver)
-│  ├─ lib/                  pure helpers (cn, ids, paths, text utilities)
+│  ├─ lib/                  pure helpers (cn, ids, paths, text utilities); layers.ts keeps what is open on top of a page in the history
 │  ├─ styles/               index.css (Tailwind, @theme tokens, fonts, KaTeX CSS import)
 │  ├─ assets/               fonts/, logo/
 │  └─ config/               site.ts (name, base path, nav items)

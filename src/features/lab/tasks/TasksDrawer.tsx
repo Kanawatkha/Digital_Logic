@@ -1,5 +1,7 @@
+import { useEffect, useMemo, useRef } from 'react';
 import { UI_TEXT } from '@/config/site';
 import type { LabMethodId } from '@/content/types';
+import { taskActionOf } from '../shortcuts';
 import { Drawer } from '../ui/Drawer';
 import type { PlacedSolution } from './place';
 import { TaskDetail } from './TaskDetail';
@@ -43,8 +45,43 @@ function TasksBody({
   // the list needs the index, an open task needs the tasks of its own kind
   const failed = tasks.status === 'error' || (taskId !== null && detail.status === 'error');
   const waiting = tasks.status === 'loading' || (taskId !== null && detail.status === 'loading');
+
+  // with a task open: [ and ] go to the task before and after (in the order of the list), S shows or hides the solution
+  const order = useMemo(
+    () =>
+      tasks.status === 'ready' ? tasks.data.groups.flatMap((g) => g.tasks.map((t) => t.id)) : [],
+    [tasks],
+  );
+  const scroller = useRef<HTMLDivElement>(null);
+  // another task starts at its top, not where the one before was left
+  useEffect(() => {
+    scroller.current?.scrollTo?.({ top: 0 });
+  }, [taskId]);
+  useEffect(() => {
+    if (taskId === null) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      const action = taskActionOf(event);
+      if (!action) return;
+      if (action === 'solution') {
+        const next = new Set(openSolutions);
+        if (!next.delete(taskId)) next.add(taskId);
+        onOpenSolutions(next);
+      } else {
+        const target = order[order.indexOf(taskId) + (action === 'next' ? 1 : -1)];
+        if (target === undefined) return;
+        onSelect(target);
+      }
+      event.preventDefault();
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [taskId, order, onSelect, openSolutions, onOpenSolutions]);
+
   return (
-    <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain p-4 md:p-5">
+    <div
+      ref={scroller}
+      className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain p-4 md:p-5"
+    >
       {failed ? (
         <p className="type-body-md text-error" role="alert">
           {UI_TEXT.labTasksError}
