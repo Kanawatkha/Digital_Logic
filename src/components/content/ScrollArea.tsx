@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 
 type Listener = (overflowing: boolean) => void;
@@ -30,6 +30,11 @@ type ScrollAreaProps = {
   className?: string;
   /** Pre-rendered trusted markup (KaTeX or a validated SVG). Used instead of children. */
   html?: string;
+  /**
+   * Another layout of the same markup that is narrower (a chain with its notes under the rows). It is
+   * shown when `html` overflows, and `html` comes back when the area is wide enough for it again.
+   */
+  narrowHtml?: string;
   children?: ReactNode;
   /** Marks content that is centered in the column (formulas, figures), see FormulaOutline. */
   centered?: boolean;
@@ -39,15 +44,30 @@ type ScrollAreaProps = {
  * Horizontal scroll container for wide math, tables and figures. It becomes a keyboard stop
  * only while its content really overflows, so short blocks add no extra tab stops.
  */
-export function ScrollArea({ className, html, children, centered }: ScrollAreaProps) {
+export function ScrollArea({ className, html, narrowHtml, children, centered }: ScrollAreaProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [overflowing, setOverflowing] = useState(false);
+  const [narrow, setNarrow] = useState(false);
+  /** The width the wide layout wanted when it overflowed */
+  const wideWidth = useRef(0);
 
-  useEffect(() => {
+  // before the first paint, so the wide layout is never seen when it does not fit
+  useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
-    return watchOverflow(el, setOverflowing);
-  }, [html]);
+    return watchOverflow(el, (over) => {
+      if (narrowHtml === undefined) {
+        setOverflowing(over);
+      } else if (!narrow && over) {
+        wideWidth.current = el.scrollWidth;
+        setNarrow(true);
+      } else if (narrow && el.clientWidth >= wideWidth.current) {
+        setNarrow(false);
+      } else {
+        setOverflowing(over);
+      }
+    });
+  }, [html, narrowHtml, narrow]);
 
   const shared = {
     ref,
@@ -55,8 +75,9 @@ export function ScrollArea({ className, html, children, centered }: ScrollAreaPr
     tabIndex: overflowing ? 0 : undefined,
     'data-centered': centered ? '' : undefined,
   };
-  return html !== undefined ? (
-    <div {...shared} dangerouslySetInnerHTML={{ __html: html }} />
+  const shown = narrow && narrowHtml !== undefined ? narrowHtml : html;
+  return shown !== undefined ? (
+    <div {...shared} dangerouslySetInnerHTML={{ __html: shown }} />
   ) : (
     <div {...shared}>{children}</div>
   );
