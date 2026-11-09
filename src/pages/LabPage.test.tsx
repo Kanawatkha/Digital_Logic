@@ -884,6 +884,18 @@ describe('LabPage board', () => {
     const kinds = (board: HTMLElement) =>
       [...board.querySelectorAll('[data-signal]')].map((e) => e.getAttribute('data-signal'));
 
+    it('puts the button for the signal view, the picture and the saved circuits in the tray of the chips', async () => {
+      await openBoard();
+      const tray = screen.getByRole('group', { name: 'ชิป IC' });
+      expect(within(tray).getByRole('button', { name: 'มุมมองสัญญาณ' })).toBeInTheDocument();
+      expect(
+        within(tray).getByRole('button', { name: 'เลือกเครื่องมือกระดาน' }),
+      ).toBeInTheDocument();
+      // and not with the zoom buttons
+      const zoom = screen.getByRole('button', { name: 'ซูมเข้า' }).parentElement!;
+      expect(within(zoom).queryByRole('button', { name: 'มุมมองสัญญาณ' })).not.toBeInTheDocument();
+    });
+
     it('starts with the signal view off, turns it on and off by the button and by V, and remembers it', async () => {
       saveAndOr([0, 1]);
       const first = await openBoard();

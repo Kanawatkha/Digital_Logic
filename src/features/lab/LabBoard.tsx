@@ -55,6 +55,7 @@ import { ToolsToggle } from './ui/ToolsToggle';
 import { useMinWidth } from './ui/useMinWidth';
 import { usePresence } from './ui/usePresence';
 import { ExamTimer } from './ui/ExamTimer';
+import { BoardTools } from './ui/BoardTools';
 import { Warnings } from './ui/Warnings';
 import type { WarningTarget } from './ui/warningMessages';
 import { WireToolbar } from './ui/WireToolbar';
@@ -73,9 +74,9 @@ const PULSE_MS = 1600;
  * shrinks: the strip moves to the bottom of the screen and the tools button to the navbar. Under
  * `WIDE_STRIP_MIN` the strip itself stacks its LEDs under the switches.
  */
-const COLORS_IN_ROW_MIN = 1706;
-const CHIPS_IN_ROW_MIN = 1446;
-const ONE_ROW_MIN = 1236;
+const COLORS_IN_ROW_MIN = 1815;
+const CHIPS_IN_ROW_MIN = 1555;
+const ONE_ROW_MIN = 1345;
 const WIDE_STRIP_MIN = 560;
 /** Under this width (the `md` of the site) the screen is a phone: the warnings button is at the top */
 const MD_MIN = 768;
@@ -525,6 +526,15 @@ export function LabBoard() {
                 tasksRef={tasksButton}
                 onOpenHelp={help.show}
                 helpRef={helpButton}
+                boardTools={
+                  <BoardTools
+                    signal={signalOn}
+                    onSignal={toggleSignal}
+                    onImage={saveImage}
+                    onSaved={savedLayer.show}
+                    buttonRef={savedButton}
+                  />
+                }
                 onPlace={placeChip}
                 onDragStart={tool.startTrayDrag}
               />
@@ -624,11 +634,6 @@ export function LabBoard() {
             onZoomOut={zoomOut}
             onFit={fit}
             onActualSize={actualSize}
-            signal={signalOn}
-            onSignal={toggleSignal}
-            onImage={saveImage}
-            onSaved={savedLayer.show}
-            savedRef={savedButton}
           />
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useCallback, useId, useRef, useState } from 'react';
-import type { CSSProperties, PointerEvent, RefObject } from 'react';
+import type { CSSProperties, PointerEvent, ReactNode, RefObject } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UI_TEXT } from '@/config/site';
 import { ARIA_KEYS, KEYS, withKey } from '../shortcuts';
@@ -21,6 +21,8 @@ type IcTrayProps = {
   /** Opens the drawer with what each button does and the keyboard shortcuts */
   onOpenHelp: () => void;
   helpRef: RefObject<HTMLButtonElement | null>;
+  /** What else the board can do, as one button with a menu, at the end of the tray */
+  boardTools?: ReactNode;
   /** A tap or the keyboard: put this chip on a free place of a breadboard */
   onPlace: (type: IcType) => void;
   /** A drag out of the tray: the board takes over the pointer; `onEnd` says whether it moved */
@@ -42,6 +44,7 @@ export function IcTray({
   tasksRef,
   onOpenHelp,
   helpRef,
+  boardTools,
   onPlace,
   onDragStart,
 }: IcTrayProps) {
@@ -199,6 +202,12 @@ export function IcTray({
       >
         <Icon name="help" />
       </button>
+      {boardTools ? (
+        <>
+          <span className="mx-0.5 h-6 w-px bg-hairline" aria-hidden="true" />
+          {boardTools}
+        </>
+      ) : null}
     </div>
   );
 }
