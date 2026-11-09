@@ -98,7 +98,7 @@ app    ->  pages, components, config
 - `features/*` MUST NOT import from other `features/*`. Shared pieces move to `components/` or `lib/`.
 - `components/ui/*` MUST NOT import from `features/` or `pages/`.
 - `scripts/*` MAY import `src/content/types.ts` only. It MUST NOT import React code.
-- `src/content/generated/*` is imported only by `src/content/loaders.ts` (the lab tasks too: `loadLabTasks`).
+- `src/content/generated/*` is imported only by `src/content/loaders.ts` (the lab tasks too: `loadLabTasksIndex` for the list and `loadLabTaskGroup` for the tasks of one kind).
 - Enforce with ESLint `no-restricted-imports` and path patterns.
 
 ## 6. State management

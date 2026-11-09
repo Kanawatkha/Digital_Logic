@@ -1,10 +1,11 @@
 import { BlockList } from '@/components/content/BlockRenderer';
 import { InlineContent } from '@/components/content/InlineContent';
 import { Icon } from '@/components/ui/Icon';
-import type { LabTasksData } from '@/content/types';
+import type { LabTasksIndex } from '@/content/types';
+import { LevelChip } from './LevelChip';
 
 type TaskListProps = {
-  data: LabTasksData;
+  data: LabTasksIndex;
   onSelect: (id: string) => void;
   /** The kinds that are unfolded, kept by the page: every kind is folded to start with */
   open: ReadonlySet<string>;
@@ -60,6 +61,7 @@ export function TaskList({ data, onSelect, open, onOpenChange }: TaskListProps) 
                       <span className="type-body-sm min-w-0 grow">
                         <InlineContent nodes={task.title} />
                       </span>
+                      <LevelChip level={task.level} />
                       {task.only ? (
                         <span className="type-caption shrink-0 rounded-full bg-surface-dark px-2 py-0.5 text-on-dark">
                           {task.only === 'nand' ? 'NAND' : 'NOR'}

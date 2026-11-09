@@ -4,7 +4,7 @@ import { Drawer } from '../ui/Drawer';
 import type { PlacedSolution } from './place';
 import { TaskDetail } from './TaskDetail';
 import { TaskList } from './TaskList';
-import { useLabTasks } from './useLabTasks';
+import { prefetchLabTaskGroup, useLabTask, useLabTasks } from './useLabTasks';
 
 type TasksDrawerProps = {
   open: boolean;
@@ -38,19 +38,20 @@ function TasksBody({
   onLoadSolution,
 }: Omit<TasksDrawerProps, 'open' | 'onClose'>) {
   const tasks = useLabTasks();
-  const task =
-    tasks.status === 'ready'
-      ? (tasks.data.groups.flatMap((g) => g.tasks).find((t) => t.id === taskId) ?? null)
-      : null;
+  const detail = useLabTask(taskId);
+  const task = detail.status === 'ready' ? detail.data : null;
+  // the list needs the index, an open task needs the tasks of its own kind
+  const failed = tasks.status === 'error' || (taskId !== null && detail.status === 'error');
+  const waiting = tasks.status === 'loading' || (taskId !== null && detail.status === 'loading');
   return (
     <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-contain p-4 md:p-5">
-      {tasks.status === 'loading' ? (
-        <p className="type-body-md text-muted" role="status">
-          {UI_TEXT.labTasksLoading}
-        </p>
-      ) : tasks.status === 'error' ? (
+      {failed ? (
         <p className="type-body-md text-error" role="alert">
           {UI_TEXT.labTasksError}
+        </p>
+      ) : waiting ? (
+        <p className="type-body-md text-muted" role="status">
+          {UI_TEXT.labTasksLoading}
         </p>
       ) : task ? (
         <TaskDetail
@@ -73,7 +74,13 @@ function TasksBody({
           data={tasks.data}
           onSelect={onSelect}
           open={openKinds}
-          onOpenChange={onOpenKinds}
+          onOpenChange={(kinds) => {
+            // a kind that is unfolded is likely to be opened next: bring its tasks in the meantime
+            kinds.forEach((kind) => {
+              if (!openKinds.has(kind)) prefetchLabTaskGroup(kind);
+            });
+            onOpenKinds(kinds);
+          }}
         />
       )}
     </div>

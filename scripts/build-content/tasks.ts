@@ -2,11 +2,13 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type {
   Block,
+  LabLevel,
   LabMethod,
   LabNetlist,
   LabTask,
   LabTaskGroup,
   LabTasksData,
+  LabTasksIndex,
 } from '../../src/content/types.ts';
 import {
   GATE_KIND_NAMES,
@@ -42,6 +44,7 @@ import { inlineText } from './tree.ts';
  *
  *   ```lab
  *   outputs: Y
+ *   level: medium
  *   Y = expr !(!A & B | A & C) & (A | B)
  *   only: nand
  *   figure:
@@ -103,6 +106,7 @@ function parseNetlist(lines: Line[], where: string): TaskNetlist {
 
 type Block0 = {
   outputs: string[];
+  level: LabLevel;
   only: 'nand' | 'nor' | null;
   /** The task asks for a sum of products or a product of sums */
   form: Form | null;
@@ -115,6 +119,7 @@ function parseLab(lines: Line[], where: string): Block0 {
   let outputs: string[] = [];
   let only: 'nand' | 'nor' | null = null;
   let form: Form | null = null;
+  let level: LabLevel | null = null;
   let figureLines: Line[] | null = null;
   const given: { name: string; rest: string; no: number }[] = [];
   for (let i = 0; i < lines.length; i++) {
@@ -131,14 +136,17 @@ function parseLab(lines: Line[], where: string): Block0 {
       }
       continue;
     }
-    const kv = /^(outputs|only|form):\s*(.+)$/.exec(t);
+    const kv = /^(outputs|only|form|level):\s*(.+)$/.exec(t);
     if (kv) {
       if (kv[1] === 'outputs')
         outputs = kv[2]!
           .split(',')
           .map((x) => x.trim())
           .filter(Boolean);
-      else if (kv[1] === 'form') {
+      else if (kv[1] === 'level') {
+        if (kv[2] === 'easy' || kv[2] === 'medium' || kv[2] === 'hard') level = kv[2];
+        else throw new ParseError(`${where}:${no}: level must be easy, medium or hard`);
+      } else if (kv[1] === 'form') {
         if (kv[2] === 'sop' || kv[2] === 'pos') form = kv[2];
         else throw new ParseError(`${where}:${no}: form must be sop or pos`);
       } else if (kv[2] === 'nand' || kv[2] === 'nor') only = kv[2];
@@ -189,7 +197,8 @@ function parseLab(lines: Line[], where: string): Block0 {
     if (!outputs.includes(g.name))
       throw new ParseError(`${where}:${g.no}: ${g.name} is not an output`);
   }
-  return { outputs, only, form, figure, specs };
+  if (!level) throw new ParseError(`${where}: the task has no "level: easy|medium|hard" line`);
+  return { outputs, level, only, form, figure, specs };
 }
 
 type WorkedWays = { algebra: Line[]; kmap: Line[]; shared: Line[] };
@@ -329,6 +338,24 @@ const fileOf = (name: string) => {
   return m[1]!;
 };
 
+/** The small index of the tasks (what the list shows); the tasks themselves go to a file for each kind. */
+export function labTasksIndex(data: LabTasksData): LabTasksIndex {
+  return {
+    groups: data.groups.map((g) => ({
+      id: g.id,
+      title: g.title,
+      intro: g.intro,
+      tasks: g.tasks.map((t) => ({
+        id: t.id,
+        number: t.number,
+        title: t.title,
+        only: t.only,
+        level: t.level,
+      })),
+    })),
+  };
+}
+
 /** Converts content/lab-tasks. Never writes. */
 export function buildLabTasks(contentDir: string): TasksResult {
   const errors: string[] = [];
@@ -437,6 +464,11 @@ export function buildLabTasks(contentDir: string): TasksResult {
           let chains = 0;
           for (const way of methods ?? [{ id: 'algebra' as const, steps }]) {
             for (const tex of mathOf(way.steps)) {
+              // a line of an aligned chain ends in two backslashes; one makes the whole chain a single row that nothing can check
+              if (/[^\\]\\[ \t]*\n/.test(tex))
+                throw new ParseError(
+                  `${where}: a formula line ends in one backslash, a row ends in two`,
+                );
               const bad = checkChain(tex, outs);
               if (bad === null) continue;
               if (bad.length) throw new ParseError(`${where}: step (${way.id}): ${bad.join('; ')}`);
@@ -513,6 +545,7 @@ export function buildLabTasks(contentDir: string): TasksResult {
             statement,
             outputs: lab.specs.map((s) => ({ name: s.name, cells: cellsOf(s.spec) })),
             only: lab.only,
+            level: lab.level,
             figure: lab.figure as LabNetlist | null,
             steps,
             methods,

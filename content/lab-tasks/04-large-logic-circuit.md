@@ -2,12 +2,129 @@
 
 โจทย์ในหมวดนี้ให้วงจรลอจิกขนาดใหญ่เป็นรูป ให้อ่านวงจรเพื่อถอดสมการ ลดรูป แล้วออกแบบวงจรใหม่ที่เล็กลงต่อบนบอร์ด เกตในรูปโจทย์อาจมีอินพุตถึง 3 เส้น แต่เกตบนบอร์ดมีอินพุตได้แค่ 2 เส้น ต้องต่อเกต 2 อินพุตสองตัวแทนเกต 3 อินพุตหนึ่งตัว กดดูเฉลยเพื่อดูวิธีทำ คำตอบ และวงจร แล้ววางเฉลยลงบอร์ดได้
 
-## ข้อ 1 วงจร AND สามอินพุตสามตัวรวมกัน
+## ข้อ 1 วงจรที่มีเทอมถูกดูดซับ
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
 
 ```lab
 outputs: Y
+level: easy
+Y = figure
+figure:
+  g1 = NOT A
+  g2 = NOT B
+  g3 = AND g1 C
+  g4 = AND g1 g2 C
+  g5 = OR g3 g4
+  Y = g5
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{A}C + \overline{A}\,\overline{B}C \\
+ &= \overline{A}C(1 + \overline{B}) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= \overline{A}C && \text{$1+X=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = \overline{A}C + \overline{A}\,\overline{B}C$$
+
+$$
+\begin{aligned}
+\overline{A}C &= \overline{A}\,\overline{B}C + \overline{A}BC = m_1 + m_3 \\
+\overline{A}\,\overline{B}C &= m_1 \\
+Y &= m_1 + m_3 + m_1 \\
+ &= m_1 + m_3 && \text{$X+X=X$} \\
+ &= \sum m(1,3)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,3$ แล้วจับลูปของ $1$
+
+@kmap:Y 1,3
+- ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
+
+$\mathbf{Ans}\quad Y = \overline{A}C$
+
+## ข้อ 2 วงจรผสม NOR AND และ OR
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
+
+```lab
+outputs: Y
+level: easy
+Y = figure
+figure:
+  g1 = NOR A B
+  g2 = AND g1 C
+  g3 = OR g2 A
+  g4 = AND A B
+  g5 = OR g3 g4
+  Y = g5
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{A + B}\,C + A + AB \\
+ &= \overline{A}\,\overline{B}C + A + AB && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= \overline{A}\,\overline{B}C + A && \text{$X+XY=X$} \\
+ &= A + \overline{B}C && \text{$X+\overline{X}Y=X+Y$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{A + B}\,C + A + AB \\
+ &= \overline{A}\,\overline{B}C + A + AB && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\overline{A}\,\overline{B}C &= m_1 \\
+A &= A\overline{B}\,\overline{C} + A\overline{B}C + AB\overline{C} + ABC = m_4 + m_5 + m_6 + m_7 \\
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+Y &= m_1 + m_4 + m_5 + m_6 + m_7 + m_6 + m_7 \\
+ &= m_1 + m_4 + m_5 + m_6 + m_7 && \text{$X+X=X$} \\
+ &= \sum m(1,4,5,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,4,5,6,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 4,5,6,7 | 1,5
+- ลูปสีส้ม (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow \overline{B}C$
+
+$\mathbf{Ans}\quad Y = A + \overline{B}C$
+
+## ข้อ 3 วงจร AND สามอินพุตสามตัวรวมกัน
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
+
+```lab
+outputs: Y
+level: easy
 Y = figure
 figure:
   g1 = NOT A
@@ -66,76 +183,13 @@ $$
 
 $\mathbf{Ans}\quad Y = (A + \overline{B})C$
 
-## ข้อ 2 วงจรผสม NAND NOR และ OR
-
-จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
-
-```lab
-outputs: Y
-Y = figure
-figure:
-  g1 = NAND A B
-  g2 = NAND g1 C
-  g3 = NOT A
-  g4 = NOR g3 B
-  g5 = OR g2 g4
-  Y = g5
-```
-
-$\mathbf{Sol}^{n}$
-
-@method algebra
-
-ถอดสมการจากรูป
-
-$$
-\begin{aligned}
-Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
- &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
- &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$} \\
- &= A(B + \overline{B}) + \overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
- &= A\cdot 1 + \overline{C} && \text{$X+\overline{X}=1$} \\
- &= A + \overline{C} && \text{$X\cdot 1=X$}
-\end{aligned}
-$$
-
-@method kmap
-
-ถอดสมการจากรูป
-
-$$
-\begin{aligned}
-Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
- &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
- &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$}
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-AB &= AB\overline{C} + ABC = m_6 + m_7 \\
-\overline{C} &= \overline{A}\,\overline{B}\,\overline{C} + \overline{A}B\overline{C} + A\overline{B}\,\overline{C} + AB\overline{C} = m_0 + m_2 + m_4 + m_6 \\
-A\overline{B} &= A\overline{B}\,\overline{C} + A\overline{B}C = m_4 + m_5 \\
-Y &= m_6 + m_7 + m_0 + m_2 + m_4 + m_6 + m_4 + m_5 \\
- &= m_0 + m_2 + m_4 + m_5 + m_6 + m_7 && \text{$X+X=X,\ X+Y=Y+X$} \\
- &= \sum m(0,2,4,5,6,7)
-\end{aligned}
-$$
-
-ใส่ $1$ ที่ช่อง $0,2,4,5,6,7$ แล้วจับลูปของ $1$
-
-@kmap:Y 0,2,4,6 | 4,5,6,7
-- ลูปสีส้ม (ช่อง $0,2,4,6$) : $C=0$ $\Rightarrow \overline{C}$
-- ลูปสีน้ำเงิน (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
-
-$\mathbf{Ans}\quad Y = A + \overline{C}$
-
-## ข้อ 3 วงจรสองเอาต์พุตที่มีเทอมซ้ำซ้อน
+## ข้อ 4 วงจรสองเอาต์พุตที่มีเทอมซ้ำซ้อน
 
 จงถอดสมการของ X และ Y จากวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดที่ให้ทั้งสองเอาต์พุตโดยใช้เกตรวมกันให้น้อยที่สุด (เกตที่ใช้ร่วมกันนับครั้งเดียว)
 
 ```lab
 outputs: X, Y
+level: easy
 X = figure
 Y = figure
 figure:
@@ -215,12 +269,136 @@ $\mathbf{Ans}\quad X = \overline{A}B$
 
 $\mathbf{Ans}\quad Y = \overline{A}B + BC$
 
-## ข้อ 4 วงจรที่มีเทอมซ้ำซ้อน
+## ข้อ 5 วงจรที่มีสาขาซ้ำซ้อน
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
+
+```lab
+outputs: Y
+level: medium
+Y = figure
+figure:
+  g1 = NOT A
+  g2 = AND A B
+  g3 = AND g1 C
+  g4 = AND B C
+  g5 = OR g2 g3 g4
+  Y = g5
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= AB + \overline{A}C + BC \\
+ &= AB + \overline{A}C + (A + \overline{A})BC && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= AB + \overline{A}C + ABC + \overline{A}BC && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB(1 + C) + \overline{A}C(1 + B) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB + \overline{A}C && \text{$1+X=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = AB + \overline{A}C + BC$$
+
+$$
+\begin{aligned}
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+\overline{A}C &= \overline{A}\,\overline{B}C + \overline{A}BC = m_1 + m_3 \\
+BC &= \overline{A}BC + ABC = m_3 + m_7 \\
+Y &= m_6 + m_7 + m_1 + m_3 + m_3 + m_7 \\
+ &= m_1 + m_3 + m_6 + m_7 && \text{$X+X=X,\ X+Y=Y+X$} \\
+ &= \sum m(1,3,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,3,6,7$ แล้วจับลูปของ $1$ (ช่อง $3,7$ ถูกลูปอื่นคลุมครบแล้ว ไม่ต้องจับ)
+
+@kmap:Y 1,3 | 6,7
+- ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
+- ลูปสีน้ำเงิน (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
+
+$\mathbf{Ans}\quad Y = AB + \overline{A}C$
+
+## ข้อ 6 วงจรผสม NAND NOR และ OR
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
+
+```lab
+outputs: Y
+level: medium
+Y = figure
+figure:
+  g1 = NAND A B
+  g2 = NAND g1 C
+  g3 = NOT A
+  g4 = NOR g3 B
+  g5 = OR g2 g4
+  Y = g5
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
+ &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= A(B + \overline{B}) + \overline{C} && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A\cdot 1 + \overline{C} && \text{$X+\overline{X}=1$} \\
+ &= A + \overline{C} && \text{$X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{AB}C} + \overline{\overline{A} + B} \\
+ &= \overline{\overline{AB}} + \overline{C} + \overline{\overline{A} + B} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + \overline{C} + A\overline{B} && \text{$\overline{\overline{X}}=X,\ \overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+\overline{C} &= \overline{A}\,\overline{B}\,\overline{C} + \overline{A}B\overline{C} + A\overline{B}\,\overline{C} + AB\overline{C} = m_0 + m_2 + m_4 + m_6 \\
+A\overline{B} &= A\overline{B}\,\overline{C} + A\overline{B}C = m_4 + m_5 \\
+Y &= m_6 + m_7 + m_0 + m_2 + m_4 + m_6 + m_4 + m_5 \\
+ &= m_0 + m_2 + m_4 + m_5 + m_6 + m_7 && \text{$X+X=X,\ X+Y=Y+X$} \\
+ &= \sum m(0,2,4,5,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $0,2,4,5,6,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 0,2,4,6 | 4,5,6,7
+- ลูปสีส้ม (ช่อง $0,2,4,6$) : $C=0$ $\Rightarrow \overline{C}$
+- ลูปสีน้ำเงิน (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
+
+$\mathbf{Ans}\quad Y = A + \overline{C}$
+
+## ข้อ 7 วงจรที่มีเทอมซ้ำซ้อน
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้เกตให้น้อยที่สุด
 
 ```lab
 outputs: F
+level: medium
 F = figure
 figure:
   g1 = NOT B
@@ -281,12 +459,13 @@ $$
 
 $\mathbf{Ans}\quad F = (A + B)C$
 
-## ข้อ 5 ใช้ NAND อย่างเดียว (1)
+## ข้อ 8 ใช้ NAND อย่างเดียว (1)
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
 
 ```lab
 outputs: Y
+level: easy
 Y = figure
 only: nand
 figure:
@@ -351,12 +530,240 @@ $$
 
 $\mathbf{Ans}\quad Y = \overline{\overline{\overline{A}B}\cdot\overline{AC}}$
 
-## ข้อ 6 ใช้ NAND อย่างเดียว (2)
+## ข้อ 9 วงจร NAND ล้วนที่มีสาขาซ้ำซ้อน
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
+
+```lab
+outputs: Y
+level: easy
+Y = figure
+only: nand
+figure:
+  g1 = NAND A B
+  g2 = NAND A B C
+  g3 = NAND g1 g2
+  Y = g3
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{AB}\cdot\overline{ABC}} \\
+ &= \overline{\overline{AB}} + \overline{\overline{ABC}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + ABC && \text{$\overline{\overline{X}}=X$} \\
+ &= AB(1 + C) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= AB && \text{$1+X=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{AB}\cdot\overline{ABC}} \\
+ &= \overline{\overline{AB}} + \overline{\overline{ABC}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= AB + ABC && \text{$\overline{\overline{X}}=X$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+AB &= AB\overline{C} + ABC = m_6 + m_7 \\
+ABC &= m_7 \\
+Y &= m_6 + m_7 + m_7 \\
+ &= m_6 + m_7 && \text{$X+X=X$} \\
+ &= \sum m(6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $6,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 6,7
+- ลูปสีส้ม (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow AB$
+
+@method all
+
+เขียนด้วย NAND
+
+$$
+\begin{aligned}
+Y &= AB \\
+ &= \overline{\overline{AB}} && \text{$\overline{\overline{X}}=X$}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad Y = \overline{\overline{AB}}$
+
+## ข้อ 10 วงจรผสม NOR กับ NAND
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
+
+```lab
+outputs: Y
+level: easy
+Y = figure
+only: nand
+figure:
+  g1 = NOR A B
+  g2 = NAND g1 C
+  g3 = NOR A C
+  g4 = NAND g2 g3
+  Y = g4
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{\overline{A + B}\,C}\cdot\overline{A + C}} \\
+ &= \overline{\overline{\overline{A + B}\,C}} + \overline{\overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= \overline{A + B}\,C + A + C && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{A}\,\overline{B}C + A + C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= A + C && \text{$X+XY=X,\ X+Y=Y+X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{\overline{A + B}\,C}\cdot\overline{A + C}} \\
+ &= \overline{\overline{\overline{A + B}\,C}} + \overline{\overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+ &= \overline{A + B}\,C + A + C && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{A}\,\overline{B}C + A + C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\overline{A}\,\overline{B}C &= m_1 \\
+A &= A\overline{B}\,\overline{C} + A\overline{B}C + AB\overline{C} + ABC = m_4 + m_5 + m_6 + m_7 \\
+C &= \overline{A}\,\overline{B}C + \overline{A}BC + A\overline{B}C + ABC = m_1 + m_3 + m_5 + m_7 \\
+Y &= m_1 + m_4 + m_5 + m_6 + m_7 + m_1 + m_3 + m_5 + m_7 \\
+ &= m_1 + m_3 + m_4 + m_5 + m_6 + m_7 && \text{$X+X=X,\ X+Y=Y+X$} \\
+ &= \sum m(1,3,4,5,6,7)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,3,4,5,6,7$ แล้วจับลูปของ $1$
+
+@kmap:Y 4,5,6,7 | 1,3,5,7
+- ลูปสีส้ม (ช่อง $4,5,6,7$) : $A=1$ $\Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $1,3,5,7$) : $C=1$ $\Rightarrow C$
+
+@method all
+
+เขียนด้วย NAND
+
+$$
+\begin{aligned}
+Y &= A + C \\
+ &= \overline{\overline{A + C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A}\,\overline{C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad Y = \overline{\overline{A}\,\overline{C}}$
+
+## ข้อ 11 วงจร NAND ที่มีสาขาซ้ำซ้อนแบบ consensus
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
+
+```lab
+outputs: Y
+level: medium
+Y = figure
+only: nand
+figure:
+  g1 = NOT A
+  g2 = NOT B
+  g3 = NAND A g2
+  g4 = NAND g1 C
+  g5 = NAND g2 C
+  g6 = NAND g3 g4 g5
+  Y = g6
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
+ &= A\overline{B} + \overline{A}C + \overline{B}C && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$} \\
+ &= A\overline{B} + \overline{A}C + (A + \overline{A})\overline{B}C && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
+ &= A\overline{B} + \overline{A}C + A\overline{B}C + \overline{A}\,\overline{B}C && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A\overline{B}(1 + C) + \overline{A}C(1 + \overline{B}) && \text{$X(Y+Z)=XY+XZ$} \\
+ &= A\overline{B} + \overline{A}C && \text{$1+X=1,\ X\cdot 1=X$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
+ &= A\overline{B} + \overline{A}C + \overline{B}C && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+A\overline{B} &= A\overline{B}\,\overline{C} + A\overline{B}C = m_4 + m_5 \\
+\overline{A}C &= \overline{A}\,\overline{B}C + \overline{A}BC = m_1 + m_3 \\
+\overline{B}C &= \overline{A}\,\overline{B}C + A\overline{B}C = m_1 + m_5 \\
+Y &= m_4 + m_5 + m_1 + m_3 + m_1 + m_5 \\
+ &= m_1 + m_3 + m_4 + m_5 && \text{$X+X=X,\ X+Y=Y+X$} \\
+ &= \sum m(1,3,4,5)
+\end{aligned}
+$$
+
+ใส่ $1$ ที่ช่อง $1,3,4,5$ แล้วจับลูปของ $1$ (ช่อง $1,5$ ถูกลูปอื่นคลุมครบแล้ว ไม่ต้องจับ)
+
+@kmap:Y 4,5 | 1,3
+- ลูปสีส้ม (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow A\overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $1,3$) : $A=0,\ C=1$ $\Rightarrow \overline{A}C$
+
+@method all
+
+เขียนด้วย NAND
+
+$$
+\begin{aligned}
+Y &= A\overline{B} + \overline{A}C \\
+ &= \overline{\overline{A\overline{B} + \overline{A}C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad Y = \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}}$
+
+## ข้อ 12 ใช้ NAND อย่างเดียว (2)
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น
 
 ```lab
 outputs: Z
+level: medium
 Z = figure
 only: nand
 figure:
@@ -427,22 +834,20 @@ $$
 
 $\mathbf{Ans}\quad Z = \overline{\overline{\overline{\overline{AB}\cdot\overline{AC}}}\cdot\overline{BC}}$
 
-## ข้อ 7 ใช้ NOR อย่างเดียว (1)
+## ข้อ 13 วงจร NOR ล้วนที่มีสาขาซ้ำซ้อน
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NOR** (7402) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NOR เข้าด้วยกัน
 
 ```lab
 outputs: Y
+level: easy
 Y = figure
 only: nor
 figure:
-  g1 = NOT B
-  g2 = NOT A
-  g3 = OR A B C
-  g4 = OR A g1 C
-  g5 = OR g2 B C
-  g6 = AND g3 g4 g5
-  Y = g6
+  g1 = NOR A B
+  g2 = NOR A B C
+  g3 = NOR g1 g2
+  Y = g3
 ```
 
 $\mathbf{Sol}^{n}$
@@ -453,17 +858,10 @@ $\mathbf{Sol}^{n}$
 
 $$
 \begin{aligned}
-Y &= (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C) \\
- &= (A + C + B)(A + C + \overline{B})(\overline{A} + B + C) && \text{$X+Y=Y+X$} \\
- &= (A + C + B\overline{B})(\overline{A} + B + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
- &= (A + C + 0)(\overline{A} + B + C) && \text{$X\overline{X}=0$} \\
- &= (A + C)(\overline{A} + B + C) && \text{$X+0=X$} \\
- &= (C + A)(C + \overline{A} + B) && \text{$X+Y=Y+X$} \\
- &= C + A(\overline{A} + B) && \text{$X+YZ=(X+Y)(X+Z)$} \\
- &= C + A\overline{A} + AB && \text{$X(Y+Z)=XY+XZ$} \\
- &= C + 0 + AB && \text{$X\overline{X}=0$} \\
- &= C + AB && \text{$X+0=X$} \\
- &= (A + C)(B + C) && \text{$X+YZ=(X+Y)(X+Z)$}
+Y &= \overline{\overline{A + B} + \overline{A + B + C}} \\
+ &= \overline{\overline{A + B}}\cdot\overline{\overline{A + B + C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= (A + B)(A + B + C) && \text{$\overline{\overline{X}}=X$} \\
+ &= A + B && \text{$X(X+Y)=X$}
 \end{aligned}
 $$
 
@@ -471,23 +869,28 @@ $$
 
 ถอดสมการจากรูป
 
-$$Y = (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C)$$
-
 $$
 \begin{aligned}
-(A + B + C) &= M_0 \\
-(A + \overline{B} + C) &= M_2 \\
-(\overline{A} + B + C) &= M_4 \\
-Y &= M_0 M_2 M_4 \\
- &= \prod M(0,2,4)
+Y &= \overline{\overline{A + B} + \overline{A + B + C}} \\
+ &= \overline{\overline{A + B}}\cdot\overline{\overline{A + B + C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+ &= (A + B)(A + B + C) && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
 
-ใส่ $0$ ที่ช่อง $0,2,4$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
+$$
+\begin{aligned}
+(A + B) &= (A + B + C)(A + B + \overline{C}) = M_0 M_1 \\
+(A + B + C) &= M_0 \\
+Y &= M_0 M_1 M_0 \\
+ &= M_0 M_1 && \text{$XX=X$} \\
+ &= \prod M(0,1)
+\end{aligned}
+$$
 
-@kmap:Y 0,2 | 0,4
-- ลูปสีส้ม (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
-- ลูปสีน้ำเงิน (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+ใส่ $0$ ที่ช่อง $0,1$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
+
+@kmap:Y 0,1
+- ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow (A+B)$
 
 @method all
 
@@ -495,20 +898,20 @@ $$
 
 $$
 \begin{aligned}
-Y &= (A + C)(B + C) \\
- &= \overline{\overline{(A + C)(B + C)}} && \text{$\overline{\overline{X}}=X$} \\
- &= \overline{\overline{A + C} + \overline{B + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
+Y &= A + B \\
+ &= \overline{\overline{A + B}} && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad Y = \overline{\overline{A + C} + \overline{B + C}}$
+$\mathbf{Ans}\quad Y = \overline{\overline{A + B}}$
 
-## ข้อ 8 ใช้ NOR อย่างเดียว สองเอาต์พุต
+## ข้อ 14 ใช้ NOR อย่างเดียว สองเอาต์พุต
 
 จงถอดสมการของ X และ Y จากวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดที่ให้ทั้งสองเอาต์พุตโดยใช้**เฉพาะเกต NOR** (7402) เท่านั้น (เกตที่ใช้ร่วมกันนับครั้งเดียว)
 
 ```lab
 outputs: X, Y
+level: medium
 X = figure
 Y = figure
 only: nor
@@ -609,3 +1012,190 @@ $$
 $\mathbf{Ans}\quad X = \overline{\overline{A + B}}$
 
 $\mathbf{Ans}\quad Y = \overline{\overline{\overline{A + B}} + \overline{C}}$
+
+## ข้อ 15 ใช้ NOR อย่างเดียว สองเอาต์พุตที่ใช้เกตร่วมกัน
+
+จงถอดสมการของ X และ Y จากวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดที่ให้ทั้งสองเอาต์พุตโดยใช้**เฉพาะเกต NOR** (7402) เท่านั้น (เกตที่ใช้ร่วมกันนับครั้งเดียว)
+
+```lab
+outputs: X, Y
+level: medium
+X = figure
+Y = figure
+only: nor
+figure:
+  g1 = OR A B
+  g2 = OR A C
+  g3 = OR A B C
+  g4 = AND g1 g2 g3
+  g5 = AND g1 C
+  X = g4
+  Y = g5
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+X &= (A + B)(A + C)(A + B + C) \\
+ &= (A + B)(A + B + C)(A + C) && \text{$XY=YX$} \\
+ &= (A + B)(A + C) && \text{$X(X+Y)=X$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= (A + B)C
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+X &= (A + B)(A + C)(A + B + C)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+(A + B) &= (A + B + C)(A + B + \overline{C}) = M_0 M_1 \\
+(A + C) &= (A + B + C)(A + \overline{B} + C) = M_0 M_2 \\
+(A + B + C) &= M_0 \\
+X &= M_0 M_1 M_0 M_2 M_0 \\
+ &= M_0 M_1 M_2 && \text{$XX=X$} \\
+ &= \prod M(0,1,2)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= (A + B)C
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+(A + B) &= (A + B + C)(A + B + \overline{C}) = M_0 M_1 \\
+(C) &= (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C)(\overline{A} + \overline{B} + C) = M_0 M_2 M_4 M_6 \\
+Y &= M_0 M_1 M_0 M_2 M_4 M_6 \\
+ &= M_0 M_1 M_2 M_4 M_6 && \text{$XX=X$} \\
+ &= \prod M(0,1,2,4,6)
+\end{aligned}
+$$
+
+ใส่ $0$ ที่ช่อง $0,1,2$ ของ $X$ และช่อง $0,1,2,4,6$ ของ $Y$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
+
+@kmap:X 0,1 | 0,2
+@kmap:Y 0,2,4,6 | 0,1
+- $X$ ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow (A+B)$
+- $X$ ลูปสีน้ำเงิน (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
+- $Y$ ลูปสีส้ม (ช่อง $0,2,4,6$) : $C=0$ $\Rightarrow C$
+- $Y$ ลูปสีน้ำเงิน (ช่อง $0,1$) : $A=0,\ B=0$ $\Rightarrow (A+B)$
+
+@method all
+
+เขียนด้วย NOR
+
+$$
+\begin{aligned}
+X &= (A + B)(A + C) \\
+ &= \overline{\overline{(A + B)(A + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + B} + \overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= (A + B)C \\
+ &= \overline{\overline{(A + B)C}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + B} + \overline{C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad X = \overline{\overline{A + B} + \overline{A + C}}$
+
+$\mathbf{Ans}\quad Y = \overline{\overline{A + B} + \overline{C}}$
+
+## ข้อ 16 ใช้ NOR อย่างเดียวจากวงจร OR สามตัวเข้า AND
+
+จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NOR** (7402) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NOR เข้าด้วยกัน
+
+```lab
+outputs: Y
+level: hard
+Y = figure
+only: nor
+figure:
+  g1 = NOT B
+  g2 = NOT A
+  g3 = OR A B C
+  g4 = OR A g1 C
+  g5 = OR g2 B C
+  g6 = AND g3 g4 g5
+  Y = g6
+```
+
+$\mathbf{Sol}^{n}$
+
+@method algebra
+
+ถอดสมการจากรูป
+
+$$
+\begin{aligned}
+Y &= (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C) \\
+ &= (A + C + B)(A + C + \overline{B})(\overline{A} + B + C) && \text{$X+Y=Y+X$} \\
+ &= (A + C + B\overline{B})(\overline{A} + B + C) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= (A + C + 0)(\overline{A} + B + C) && \text{$X\overline{X}=0$} \\
+ &= (A + C)(\overline{A} + B + C) && \text{$X+0=X$} \\
+ &= (C + A)(C + \overline{A} + B) && \text{$X+Y=Y+X$} \\
+ &= C + A(\overline{A} + B) && \text{$X+YZ=(X+Y)(X+Z)$} \\
+ &= C + A\overline{A} + AB && \text{$X(Y+Z)=XY+XZ$} \\
+ &= C + 0 + AB && \text{$X\overline{X}=0$} \\
+ &= C + AB && \text{$X+0=X$} \\
+ &= (A + C)(B + C) && \text{$X+YZ=(X+Y)(X+Z)$}
+\end{aligned}
+$$
+
+@method kmap
+
+ถอดสมการจากรูป
+
+$$Y = (A + B + C)(A + \overline{B} + C)(\overline{A} + B + C)$$
+
+$$
+\begin{aligned}
+(A + B + C) &= M_0 \\
+(A + \overline{B} + C) &= M_2 \\
+(\overline{A} + B + C) &= M_4 \\
+Y &= M_0 M_2 M_4 \\
+ &= \prod M(0,2,4)
+\end{aligned}
+$$
+
+ใส่ $0$ ที่ช่อง $0,2,4$ นอกนั้นเป็น $1$ แล้วจับลูปของ $0$
+
+@kmap:Y 0,2 | 0,4
+- ลูปสีส้ม (ช่อง $0,2$) : $A=0,\ C=0$ $\Rightarrow (A+C)$
+- ลูปสีน้ำเงิน (ช่อง $0,4$) : $B=0,\ C=0$ $\Rightarrow (B+C)$
+
+@method all
+
+เขียนด้วย NOR
+
+$$
+\begin{aligned}
+Y &= (A + C)(B + C) \\
+ &= \overline{\overline{(A + C)(B + C)}} && \text{$\overline{\overline{X}}=X$} \\
+ &= \overline{\overline{A + C} + \overline{B + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$}
+\end{aligned}
+$$
+
+$\mathbf{Ans}\quad Y = \overline{\overline{A + C} + \overline{B + C}}$

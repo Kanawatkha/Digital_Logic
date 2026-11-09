@@ -102,7 +102,7 @@ export default defineConfig(({ command, isPreview }) => ({
       workbox: {
         globPatterns: ['**/*.{html,js,css,woff2,svg,png,webmanifest}'],
         cleanupOutdatedCaches: true,
-        // the lab tasks are one lazy chunk of pre-rendered formulas, two ways to work most tasks, so it is larger than the 2 MiB default (about 160 KB gzipped); it is precached so the tasks work offline
+        // the lab tasks are lazy chunks of pre-rendered formulas, one for each kind, and with two ways to work most tasks a kind can pass the 2 MiB default; they are precached so the tasks work offline
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
       },
     }),

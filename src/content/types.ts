@@ -95,6 +95,9 @@ export type LabMethodId = 'algebra' | 'kmap';
 /** One way of working a task: its steps up to the answer, the part every way shares included */
 export type LabMethod = { id: LabMethodId; steps: Block[] };
 
+/** How hard a task is, for the student to choose by */
+export type LabLevel = 'easy' | 'medium' | 'hard';
+
 export type LabTask = {
   /** Stable, for example "03.2": file number, then place in the file */
   id: string;
@@ -106,6 +109,7 @@ export type LabTask = {
   outputs: LabTaskOutput[];
   /** The only kind of chip that may be used, or null */
   only: 'nand' | 'nor' | null;
+  level: LabLevel;
   /** The circuit given in the statement, drawn from this */
   figure: LabNetlist | null;
   /** The worked solution written in the Markdown, up to the answer (the first method when there are two) */
@@ -127,3 +131,11 @@ export type LabTaskGroup = {
 };
 
 export type LabTasksData = { groups: LabTaskGroup[] };
+
+/** What the list of tasks needs of one task, so the list opens without loading any solution */
+export type LabTaskSummary = Pick<LabTask, 'id' | 'number' | 'title' | 'only' | 'level'>;
+
+export type LabTaskGroupSummary = Omit<LabTaskGroup, 'tasks'> & { tasks: LabTaskSummary[] };
+
+/** The small index of the tasks; the tasks of each file are a chunk of their own, loaded when needed */
+export type LabTasksIndex = { groups: LabTaskGroupSummary[] };

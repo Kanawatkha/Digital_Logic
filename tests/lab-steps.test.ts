@@ -114,7 +114,12 @@ describe('a task with a solution, built from Markdown', () => {
   afterAll(() => dirs.forEach((d) => rmSync(d, { recursive: true, force: true })));
 
   /** Builds a one task file and returns the errors and the task. */
-  function build(solution: string, outputs = 'Y', extra = 'Y = expr AB + C') {
+  function build(
+    solution: string,
+    outputs = 'Y',
+    extra = 'Y = expr AB + C',
+    level = 'level: easy',
+  ) {
     const root = mkdtempSync(join(tmpdir(), 'lab-steps-'));
     dirs.push(root);
     mkdirSync(join(root, 'lab-tasks'));
@@ -131,6 +136,7 @@ describe('a task with a solution, built from Markdown', () => {
         '',
         '```lab',
         `outputs: ${outputs}`,
+        level,
         extra,
         '```',
         '',
@@ -202,6 +208,29 @@ $\mathbf{Ans}\quad Y = AB + C$
 
   it('refuses text after the answer lines', () => {
     expect(build(good + '\nมีข้อความต่อท้าย\n').errors[0]).toMatch(/only answer lines/);
+  });
+
+  it('refuses a chain row that ends in one backslash, which would join the rows and hide the chain', () => {
+    const oneBackslash = good.replace(
+      '$$Y = AB + C = C + AB$$',
+      // a function, so the "$$" of the text is not read as a "$" of the replacement
+      () => String.raw`$$
+\begin{aligned}
+Y &= AB + C \
+ &= C + AB
+\end{aligned}
+$$`,
+    );
+    expect(build(oneBackslash).errors[0]).toMatch(/one backslash/);
+    // two backslashes are fine
+    expect(build(oneBackslash.replace('AB + C \\\n', 'AB + C \\\\\n')).errors).toEqual([]);
+  });
+
+  it('needs a level, easy, medium or hard, and keeps it in the task', () => {
+    expect(build(good).task?.level).toBe('easy');
+    expect(build(good, 'Y', 'Y = expr AB + C', 'level: hard').task?.level).toBe('hard');
+    expect(build(good, 'Y', 'Y = expr AB + C', '').errors[0]).toMatch(/no "level/);
+    expect(build(good, 'Y', 'Y = expr AB + C', 'level: tricky').errors[0]).toMatch(/level must be/);
   });
 
   describe('a task worked two ways', () => {

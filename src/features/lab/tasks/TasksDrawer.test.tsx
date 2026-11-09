@@ -4,12 +4,23 @@ import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { LabBoard } from '../LabBoard';
 import { resetLabTasks } from './useLabTasks';
 
+// the kinds whose tasks were asked for, in order
+const asked = vi.hoisted(() => ({ groups: [] as string[] }));
+
 // the tasks come from the content, built here the way `npm run content` builds them
 vi.mock('@/content/loaders', async (importOriginal) => {
   const { join } = await import('node:path');
-  const { buildLabTasks } = await import('../../../../scripts/build-content/tasks');
+  const { buildLabTasks, labTasksIndex } = await import('../../../../scripts/build-content/tasks');
   const data = buildLabTasks(join(process.cwd(), 'content')).data;
-  return { ...(await importOriginal<object>()), loadLabTasks: () => Promise.resolve(data) };
+  const index = labTasksIndex(data);
+  return {
+    ...(await importOriginal<object>()),
+    loadLabTasksIndex: () => Promise.resolve(index),
+    loadLabTaskGroup: (group: string) => {
+      asked.groups.push(group);
+      return Promise.resolve(data.groups.find((g) => g.id === group)?.tasks ?? []);
+    },
+  };
 });
 
 beforeAll(() => {
@@ -27,6 +38,7 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
+  asked.groups.length = 0;
   localStorage.clear();
   resetLabTasks();
 });
@@ -55,15 +67,33 @@ function openKind(dialog: HTMLElement, name: RegExp) {
   fireEvent.click(within(dialog).getByRole('button', { name }));
 }
 
+/** Opens a task from the list and waits until it is shown: its kind is loaded when it is pressed. */
+async function pick(scope: HTMLElement, name: RegExp, root: HTMLElement = scope) {
+  fireEvent.click(within(scope).getByRole('button', { name }));
+  await within(root).findByRole('button', { name: 'กลับรายการโจทย์' });
+}
+
 /** Opens the first task of the first kind. */
 async function openFirstTask() {
   const dialog = await openDrawer();
   openKind(dialog, /สมการบูลีนขนาดใหญ่/);
-  fireEvent.click(within(dialog).getByRole('button', { name: /^ข้อ 1 / }));
+  await pick(dialog, /^ข้อ 1 /, dialog);
   return dialog;
 }
 
 describe('the tasks drawer of the lab', () => {
+  it('loads the tasks of a kind only when it is unfolded or one of them is opened', async () => {
+    openLab();
+    const dialog = await openDrawer();
+    // the list shows with no solution loaded
+    expect(asked.groups).toEqual([]);
+    openKind(dialog, /ตารางความจริง/);
+    fireEvent.click(await within(dialog).findByRole('button', { name: /^ข้อ 1 / }));
+    expect(await within(dialog).findByRole('button', { name: 'ดูเฉลย' })).toBeInTheDocument();
+    // one kind, loaded once, though it was unfolded and then opened
+    expect(asked.groups).toEqual(['02']);
+  });
+
   it('opens from the tray button over the board, and closes with Esc and gives the focus back', async () => {
     openLab();
     const button = screen.getByRole('button', { name: 'โจทย์' });
@@ -84,12 +114,15 @@ describe('the tasks drawer of the lab', () => {
     expect(toggles).toHaveLength(5);
     expect(toggles.every((b) => b.getAttribute('aria-expanded') === 'false')).toBe(true);
     expect(within(dialog).queryAllByRole('button', { name: /^ข้อ \d+ / })).toHaveLength(0);
+    // the number in the header of a kind is how many tasks the list shows when it is unfolded
+    const count = (k: number) => Number(within(toggles[k]!).getByText(/^\d+$/).textContent);
+    const shown = () => within(dialog).queryAllByRole('button', { name: /^ข้อ \d+ / }).length;
     fireEvent.click(toggles[0]!);
-    expect(within(dialog).getAllByRole('button', { name: /^ข้อ \d+ / })).toHaveLength(8);
+    expect(shown()).toBe(count(0));
     fireEvent.click(toggles[1]!);
-    expect(within(dialog).getAllByRole('button', { name: /^ข้อ \d+ / })).toHaveLength(16);
+    expect(shown()).toBe(count(0) + count(1));
     fireEvent.click(toggles[0]!);
-    expect(within(dialog).getAllByRole('button', { name: /^ข้อ \d+ / })).toHaveLength(8);
+    expect(shown()).toBe(count(1));
   });
 
   it('keeps the list as it was left: coming back from a task, and closing and opening the drawer', async () => {
@@ -98,7 +131,7 @@ describe('the tasks drawer of the lab', () => {
     // open the truth table kind, and the first task in it
     openKind(dialog, /ตารางความจริง/);
     const list = document.getElementById('lab-task-list-02')!;
-    fireEvent.click(within(list).getByRole('button', { name: /^ข้อ 1 / }));
+    await pick(list, /^ข้อ 1 /, dialog);
     fireEvent.click(within(dialog).getByRole('button', { name: 'กลับรายการโจทย์' }));
     // the kind that was open is still the one open, and no other opened in its place
     const states = () =>
@@ -136,7 +169,7 @@ describe('the tasks drawer of the lab', () => {
     fireEvent.click(within(dialog).getByRole('button', { name: 'กลับรายการโจทย์' }));
     expect(within(dialog).getAllByRole('heading', { level: 3 })).toHaveLength(5);
     // the kind of the task is still unfolded
-    fireEvent.click(within(dialog).getByRole('button', { name: /^ข้อ 2 / }));
+    await pick(dialog, /^ข้อ 2 /, dialog);
     fireEvent.keyDown(document, { key: 'Escape' });
     // the drawer remembers the task that was open
     fireEvent.click(screen.getByRole('button', { name: 'โจทย์' }));
@@ -148,7 +181,7 @@ describe('the tasks drawer of the lab', () => {
     openLab();
     const dialog = await openDrawer();
     openKind(dialog, /สมการบูลีนขนาดใหญ่/);
-    fireEvent.click(within(dialog).getByRole('button', { name: /^ข้อ 5 .*NAND$/ }));
+    await pick(dialog, /^ข้อ 9 .*NAND$/, dialog);
     expect(within(dialog).getByText('ใช้ได้เฉพาะ NAND (7400)')).toBeInTheDocument();
   });
 
@@ -157,7 +190,7 @@ describe('the tasks drawer of the lab', () => {
     const dialog = await openDrawer();
     fireEvent.click(within(dialog).getByRole('button', { name: /วงจรลอจิกขนาดใหญ่/ }));
     const list = document.getElementById('lab-task-list-04')!;
-    fireEvent.click(within(list).getByRole('button', { name: /^ข้อ 1 / }));
+    await pick(list, /^ข้อ 1 /, dialog);
     const figure = within(dialog).getByRole('region', { name: 'วงจรในโจทย์' });
     expect(within(figure).getByRole('img', { name: 'วงจร' })).toBeInTheDocument();
     expect(figure.querySelector('desc')?.textContent).toMatch(/(AND|OR|NOT|NAND|NOR) \(/);
@@ -197,11 +230,11 @@ describe('the tasks drawer of the lab', () => {
     );
     // another task has its own solution, folded to start with
     fireEvent.click(within(again).getByRole('button', { name: 'กลับรายการโจทย์' }));
-    fireEvent.click(within(again).getByRole('button', { name: /^ข้อ 2 / }));
+    await pick(again, /^ข้อ 2 /, again);
     expect(within(again).queryByText('Sol')).not.toBeInTheDocument();
     // and the first one still has its solution shown
     fireEvent.click(within(again).getByRole('button', { name: 'กลับรายการโจทย์' }));
-    fireEvent.click(within(again).getByRole('button', { name: /^ข้อ 1 / }));
+    await pick(again, /^ข้อ 1 /, again);
     expect(within(again).getByText('Sol')).toBeInTheDocument();
     // hiding it is remembered too
     fireEvent.click(within(again).getByRole('button', { name: 'ซ่อนเฉลย' }));
@@ -265,7 +298,7 @@ describe('the tasks drawer of the lab', () => {
       openLab();
       const dialog = await openDrawer();
       openKind(dialog, /ตารางความจริง/);
-      fireEvent.click(within(dialog).getByRole('button', { name: /^ข้อ 3 / }));
+      await pick(dialog, /^ข้อ 2 /, dialog);
       fireEvent.click(within(dialog).getByRole('button', { name: 'ดูเฉลย' }));
       expect(within(dialog).getByText('Sol')).toBeInTheDocument();
       expect(within(dialog).queryByRole('tablist')).not.toBeInTheDocument();
@@ -278,7 +311,7 @@ describe('the tasks drawer of the lab', () => {
     const dialog = await openDrawer();
     fireEvent.click(within(dialog).getByRole('button', { name: /ตารางความจริง/ }));
     const list = document.getElementById('lab-task-list-02')!;
-    fireEvent.click(within(list).getByRole('button', { name: /^ข้อ 3 / }));
+    await pick(list, /^ข้อ 2 /, dialog);
     fireEvent.click(within(dialog).getByRole('button', { name: 'ดูเฉลย' }));
     const table = within(dialog).getByRole('table', { name: 'ตารางความจริงของเฉลย' });
     expect(within(table).getAllByText('X').length).toBeGreaterThan(0);

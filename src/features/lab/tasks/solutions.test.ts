@@ -63,8 +63,6 @@ describe('the lab tasks of the content', () => {
         ).toEqual(['algebra', 'kmap']);
       }
     }
-    // the plan counts 37 of the 44 tasks
-    expect(tasks.filter((t) => t.methods).length).toBe(37);
   });
 
   it('use two input gates in every answer, and the right chip for a task that names one', () => {

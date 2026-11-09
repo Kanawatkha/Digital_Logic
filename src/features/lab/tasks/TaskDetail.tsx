@@ -4,6 +4,7 @@ import { InlineContent } from '@/components/content/InlineContent';
 import { Icon } from '@/components/ui/Icon';
 import { UI_TEXT } from '@/config/site';
 import type { LabMethodId, LabTask } from '@/content/types';
+import { LevelChip } from './LevelChip';
 import { placeSolution, type PlacedSolution } from './place';
 import { TaskDiagram } from './TaskDiagram';
 import { TaskTruthTable } from './TaskTruthTable';
@@ -78,11 +79,14 @@ export function TaskDetail({
         </h3>
       </div>
 
-      {task.only ? (
-        <p className="type-caption w-fit rounded-full bg-surface-dark px-3 py-1 text-on-dark">
-          {task.only === 'nand' ? UI_TEXT.labTaskOnlyNand : UI_TEXT.labTaskOnlyNor}
-        </p>
-      ) : null}
+      <div className="flex flex-wrap items-center gap-2">
+        <LevelChip level={task.level} />
+        {task.only ? (
+          <p className="type-caption w-fit rounded-full bg-surface-dark px-3 py-1 text-on-dark">
+            {task.only === 'nand' ? UI_TEXT.labTaskOnlyNand : UI_TEXT.labTaskOnlyNor}
+          </p>
+        ) : null}
+      </div>
 
       <BlockList blocks={task.statement} />
 
