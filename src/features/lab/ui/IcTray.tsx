@@ -61,7 +61,7 @@ export function IcTray({
       type="button"
       aria-label={`${type} ${IC_SPECS[type].symbol}`}
       title={`${type} ${IC_SPECS[type].name}. ${UI_TEXT.labTrayHint}`}
-      className="flex h-10 min-w-14 touch-none flex-col items-center justify-center overflow-hidden rounded-md bg-surface-dark px-2 text-on-dark transition-transform duration-150 select-none active:scale-95 active:bg-surface-dark-elevated"
+      className="flex h-10 min-w-14 touch-none flex-col max-[400px]:h-9 max-[400px]:min-w-12 items-center justify-center overflow-hidden rounded-md bg-surface-dark px-2 text-on-dark transition-transform duration-150 select-none active:scale-95 active:bg-surface-dark-elevated"
       onPointerDown={(event) => {
         if (event.pointerType === 'mouse' && event.button !== 0) return;
         dragged.current = false;
@@ -95,7 +95,7 @@ export function IcTray({
       role="group"
       aria-label={UI_TEXT.labTray}
       title={UI_TEXT.labTrayHint}
-      className="flex items-center gap-1 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_2px_10px_rgba(20,20,19,0.12)]"
+      className="flex items-center gap-1 rounded-lg border border-hairline bg-canvas p-1 shadow-[0_2px_10px_rgba(20,20,19,0.12)] max-[400px]:gap-0"
     >
       {compact ? (
         <div className="relative flex items-center gap-0.5">
@@ -106,7 +106,7 @@ export function IcTray({
             aria-controls={open ? menuId : undefined}
             aria-label={UI_TEXT.labTrayPick}
             title={UI_TEXT.labTrayPick}
-            className={`inline-flex h-10 w-7 items-center justify-center rounded-md text-ink transition-colors active:bg-surface-card ${
+            className={`inline-flex h-10 w-7 items-center justify-center rounded-md text-ink max-[400px]:h-9 max-[400px]:w-6 transition-colors active:bg-surface-card ${
               open ? 'bg-surface-card' : ''
             }`}
             onClick={() => setOpen((was) => !was)}
@@ -153,7 +153,7 @@ export function IcTray({
       ) : (
         IC_TYPES.map((type) => chip(type))
       )}
-      <span className="mx-0.5 h-6 w-px bg-hairline" aria-hidden="true" />
+      <span className="mx-0.5 h-6 w-px bg-hairline max-[400px]:mx-0" aria-hidden="true" />
       <button
         ref={diagramsRef}
         type="button"
@@ -161,7 +161,7 @@ export function IcTray({
         aria-label={UI_TEXT.labDiagrams}
         aria-keyshortcuts={ARIA_KEYS.diagrams}
         title={withKey(UI_TEXT.labDiagrams, KEYS.diagrams)}
-        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink max-[400px]:size-9 transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenDiagrams}
       >
         <Icon name="chip" />
@@ -173,7 +173,7 @@ export function IcTray({
         aria-label={UI_TEXT.labResults}
         aria-keyshortcuts={ARIA_KEYS.results}
         title={withKey(UI_TEXT.labResults, KEYS.results)}
-        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink max-[400px]:size-9 transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenResults}
       >
         <Icon name="table" />
@@ -185,7 +185,7 @@ export function IcTray({
         aria-label={UI_TEXT.labTasksOpen}
         aria-keyshortcuts={ARIA_KEYS.tasks}
         title={withKey(UI_TEXT.labTasksOpen, KEYS.tasks)}
-        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink max-[400px]:size-9 transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenTasks}
       >
         <Icon name="tasks" />
@@ -197,14 +197,14 @@ export function IcTray({
         aria-label={UI_TEXT.labHelp}
         aria-keyshortcuts={ARIA_KEYS.help}
         title={withKey(UI_TEXT.labHelp, KEYS.help)}
-        className="inline-flex size-10 items-center justify-center rounded-md text-ink transition-transform duration-150 active:scale-90 active:bg-surface-card"
+        className="inline-flex size-10 items-center justify-center rounded-md text-ink max-[400px]:size-9 transition-transform duration-150 active:scale-90 active:bg-surface-card"
         onClick={onOpenHelp}
       >
         <Icon name="help" />
       </button>
       {boardTools ? (
         <>
-          <span className="mx-0.5 h-6 w-px bg-hairline" aria-hidden="true" />
+          <span className="mx-0.5 h-6 w-px bg-hairline max-[400px]:mx-0" aria-hidden="true" />
           {boardTools}
         </>
       ) : null}

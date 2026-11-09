@@ -18,7 +18,7 @@ type BoardToolsProps = {
 };
 
 const BUTTON =
-  'inline-flex size-10 items-center justify-center rounded-md text-ink active:bg-surface-card';
+  'inline-flex size-10 items-center justify-center rounded-md text-ink max-[400px]:size-9 active:bg-surface-card';
 
 /** The three things the board can do besides zooming; one is shown, the others are in the menu. */
 type Action = 'signal' | 'image' | 'saved';
@@ -75,7 +75,7 @@ export function BoardTools({ signal, onSignal, onImage, onSaved, buttonRef }: Bo
         aria-controls={open ? menuId : undefined}
         aria-label={UI_TEXT.labBoardMenu}
         title={UI_TEXT.labBoardMenu}
-        className={`inline-flex h-10 w-6 items-center justify-center rounded-md text-ink transition-colors active:bg-surface-card ${
+        className={`inline-flex h-10 w-6 items-center justify-center rounded-md text-ink max-[400px]:h-9 max-[400px]:w-5 transition-colors active:bg-surface-card ${
           open ? 'bg-surface-card' : ''
         }`}
         onClick={() => setOpen((was) => !was)}

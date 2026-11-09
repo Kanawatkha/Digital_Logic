@@ -896,6 +896,22 @@ describe('LabPage board', () => {
       expect(within(zoom).queryByRole('button', { name: 'มุมมองสัญญาณ' })).not.toBeInTheDocument();
     });
 
+    it('gives the tray smaller buttons and no gaps on a screen under 400 px wide, and keeps its look above', async () => {
+      await openBoard();
+      const tray = screen.getByRole('group', { name: 'ชิป IC' });
+      // a layout is not drawn here, so the rules for a narrow screen are checked in the classes: each
+      // size is a 400 px rule over the usual one (40 px buttons, 4 px gaps), which stays
+      expect(tray.className).toContain('gap-1');
+      expect(tray.className).toContain('max-[400px]:gap-0');
+      const buttons = within(tray).getAllByRole('button');
+      expect(buttons.length).toBeGreaterThanOrEqual(8);
+      for (const button of buttons) {
+        // the chip and the arrows are 40 px high, the rest are 40 px squares: all get 36 px when narrow
+        expect(button.className).toMatch(/\b(h-10|size-10)\b/);
+        expect(button.className).toMatch(/max-\[400px\]:(h-9|size-9)/);
+      }
+    });
+
     it('starts with the signal view off, turns it on and off by the button and by V, and remembers it', async () => {
       saveAndOr([0, 1]);
       const first = await openBoard();
