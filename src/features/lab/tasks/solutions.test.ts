@@ -80,6 +80,22 @@ describe('the lab tasks of the content', () => {
     expect(group.tasks.some((t) => t.figure!.gates.some((g) => g.inputs.length === 3))).toBe(true);
   });
 
+  it('draw every circuit with at least one NOT, AND or OR, never with NAND and NOR gates alone', () => {
+    const group = result.data.groups.find((g) => g.id === '04')!;
+    for (const t of group.tasks) {
+      const kinds = new Set(t.figure!.gates.map((g) => g.kind));
+      expect(
+        ['NOT', 'AND', 'OR'].some((k) => kinds.has(k as 'NOT')),
+        t.id,
+      ).toBe(true);
+      // and no circuit is one kind of gate only
+      expect(kinds.size, t.id).toBeGreaterThan(1);
+    }
+    // the circuits as a whole use all five kinds
+    const all = new Set(group.tasks.flatMap((t) => t.figure!.gates.map((g) => g.kind)));
+    expect([...all].sort()).toEqual(['AND', 'NAND', 'NOR', 'NOT', 'OR']);
+  });
+
   for (const task of tasks) {
     it(`${task.id}: the answer, put on the boards, does what the task asks with no warning`, () => {
       // as the lab puts it: A, B and C are switches 1 to 3, the outputs are LED 1 and LED 2

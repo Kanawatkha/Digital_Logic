@@ -530,7 +530,7 @@ $$
 
 $\mathbf{Ans}\quad Y = \overline{\overline{\overline{A}B}\cdot\overline{AC}}$
 
-## ข้อ 9 วงจร NAND ล้วนที่มีสาขาซ้ำซ้อน
+## ข้อ 9 วงจรผสมที่มีสาขาซ้ำซ้อน
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
 
@@ -540,10 +540,11 @@ level: easy
 Y = figure
 only: nand
 figure:
-  g1 = NAND A B
+  g1 = AND A B
   g2 = NAND A B C
-  g3 = NAND g1 g2
-  Y = g3
+  g3 = NOT g2
+  g4 = OR g1 g3
+  Y = g4
 ```
 
 $\mathbf{Sol}^{n}$
@@ -554,8 +555,7 @@ $\mathbf{Sol}^{n}$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{AB}\cdot\overline{ABC}} \\
- &= \overline{\overline{AB}} + \overline{\overline{ABC}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+Y &= AB + \overline{\overline{ABC}} \\
  &= AB + ABC && \text{$\overline{\overline{X}}=X$} \\
  &= AB(1 + C) && \text{$X(Y+Z)=XY+XZ$} \\
  &= AB && \text{$1+X=1,\ X\cdot 1=X$}
@@ -568,8 +568,7 @@ $$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{AB}\cdot\overline{ABC}} \\
- &= \overline{\overline{AB}} + \overline{\overline{ABC}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
+Y &= AB + \overline{\overline{ABC}} \\
  &= AB + ABC && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
@@ -602,7 +601,7 @@ $$
 
 $\mathbf{Ans}\quad Y = \overline{\overline{AB}}$
 
-## ข้อ 10 วงจรผสม NOR กับ NAND
+## ข้อ 10 วงจรผสมที่ลดเหลือ OR สองตัว
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
 
@@ -613,9 +612,9 @@ Y = figure
 only: nand
 figure:
   g1 = NOR A B
-  g2 = NAND g1 C
-  g3 = NOR A C
-  g4 = NAND g2 g3
+  g2 = AND g1 C
+  g3 = OR A g2
+  g4 = OR g3 C
   Y = g4
 ```
 
@@ -627,9 +626,7 @@ $\mathbf{Sol}^{n}$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{\overline{A + B}\,C}\cdot\overline{A + C}} \\
- &= \overline{\overline{\overline{A + B}\,C}} + \overline{\overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
- &= \overline{A + B}\,C + A + C && \text{$\overline{\overline{X}}=X$} \\
+Y &= A + \overline{A + B}\,C + C \\
  &= \overline{A}\,\overline{B}C + A + C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
  &= A + C && \text{$X+XY=X,\ X+Y=Y+X$}
 \end{aligned}
@@ -641,9 +638,7 @@ $$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{\overline{A + B}\,C}\cdot\overline{A + C}} \\
- &= \overline{\overline{\overline{A + B}\,C}} + \overline{\overline{A + C}} && \text{$\overline{XY}=\overline{X}+\overline{Y}$} \\
- &= \overline{A + B}\,C + A + C && \text{$\overline{\overline{X}}=X$} \\
+Y &= A + \overline{A + B}\,C + C \\
  &= \overline{A}\,\overline{B}C + A + C && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$}
 \end{aligned}
 $$
@@ -679,7 +674,7 @@ $$
 
 $\mathbf{Ans}\quad Y = \overline{\overline{A}\,\overline{C}}$
 
-## ข้อ 11 วงจร NAND ที่มีสาขาซ้ำซ้อนแบบ consensus
+## ข้อ 11 วงจรผสมที่มีสาขาแบบ consensus
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NAND** (7400) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NAND เข้าด้วยกัน
 
@@ -691,11 +686,12 @@ only: nand
 figure:
   g1 = NOT A
   g2 = NOT B
-  g3 = NAND A g2
+  g3 = AND A g2
   g4 = NAND g1 C
   g5 = NAND g2 C
-  g6 = NAND g3 g4 g5
-  Y = g6
+  g6 = NAND g4 g5
+  g7 = OR g3 g6
+  Y = g7
 ```
 
 $\mathbf{Sol}^{n}$
@@ -706,7 +702,7 @@ $\mathbf{Sol}^{n}$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
+Y &= A\overline{B} + \overline{\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
  &= A\overline{B} + \overline{A}C + \overline{B}C && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$} \\
  &= A\overline{B} + \overline{A}C + (A + \overline{A})\overline{B}C && \text{$X+\overline{X}=1,\ X\cdot 1=X$} \\
  &= A\overline{B} + \overline{A}C + A\overline{B}C + \overline{A}\,\overline{B}C && \text{$X(Y+Z)=XY+XZ$} \\
@@ -721,7 +717,7 @@ $$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{A\overline{B}}\cdot\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
+Y &= A\overline{B} + \overline{\overline{\overline{A}C}\cdot\overline{\overline{B}C}} \\
  &= A\overline{B} + \overline{A}C + \overline{B}C && \text{$\overline{XY}=\overline{X}+\overline{Y},\ \overline{\overline{X}}=X$}
 \end{aligned}
 $$
@@ -834,7 +830,7 @@ $$
 
 $\mathbf{Ans}\quad Z = \overline{\overline{\overline{\overline{AB}\cdot\overline{AC}}}\cdot\overline{BC}}$
 
-## ข้อ 13 วงจร NOR ล้วนที่มีสาขาซ้ำซ้อน
+## ข้อ 13 วงจรผสมที่มีสาขา NOR ซ้ำซ้อน
 
 จงถอดสมการของวงจรในรูป ลดรูป แล้วออกแบบวงจรลอจิกบนบอร์ดโดยใช้**เฉพาะเกต NOR** (7402) เท่านั้น ห้ามใช้ชิปชนิดอื่น ถ้าต้องการอินเวอร์เตอร์ให้ต่อสองอินพุตของ NOR เข้าด้วยกัน
 
@@ -844,10 +840,11 @@ level: easy
 Y = figure
 only: nor
 figure:
-  g1 = NOR A B
+  g1 = OR A B
   g2 = NOR A B C
-  g3 = NOR g1 g2
-  Y = g3
+  g3 = NOT g2
+  g4 = AND g1 g3
+  Y = g4
 ```
 
 $\mathbf{Sol}^{n}$
@@ -858,8 +855,7 @@ $\mathbf{Sol}^{n}$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{A + B} + \overline{A + B + C}} \\
- &= \overline{\overline{A + B}}\cdot\overline{\overline{A + B + C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+Y &= (A + B)\,\overline{\overline{A + B + C}} \\
  &= (A + B)(A + B + C) && \text{$\overline{\overline{X}}=X$} \\
  &= A + B && \text{$X(X+Y)=X$}
 \end{aligned}
@@ -871,8 +867,7 @@ $$
 
 $$
 \begin{aligned}
-Y &= \overline{\overline{A + B} + \overline{A + B + C}} \\
- &= \overline{\overline{A + B}}\cdot\overline{\overline{A + B + C}} && \text{$\overline{X+Y}=\overline{X}\,\overline{Y}$} \\
+Y &= (A + B)\,\overline{\overline{A + B + C}} \\
  &= (A + B)(A + B + C) && \text{$\overline{\overline{X}}=X$}
 \end{aligned}
 $$
