@@ -39,12 +39,7 @@ export function BlockRenderer({ block }: { block: Block }) {
       );
     case 'math':
       return (
-        <ScrollArea
-          className="overflow-y-hidden"
-          html={block.html}
-          narrowHtml={block.htmlNarrow}
-          centered
-        />
+        <ScrollArea className="overflow-y-hidden" html={block.html} centered />
       );
     case 'list': {
       const Tag = block.ordered ? 'ol' : 'ul';

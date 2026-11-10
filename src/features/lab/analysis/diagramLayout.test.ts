@@ -1,6 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { andOr, direct, latch, nand } from './circuits.fixture';
-import { layoutDiagram, signalKey, type DiagramLayout, type LNode } from './diagramLayout';
+import {
+  MIN_WIRE_GAP,
+  layoutDiagram,
+  signalKey,
+  type DiagramLayout,
+  type LNode,
+} from './diagramLayout';
+import type { LabNetlist } from '@/content/types';
+import { taskInputName, toNetlist } from '../tasks/toNetlist';
 import { buildNetlist } from './netlist';
 
 const letters = (k: number) => String.fromCharCode(65 + k);
@@ -148,5 +156,118 @@ describe('layoutDiagram', () => {
     expect(signalKey({ kind: 'gate', id: 'u1:3' })).toBe('g:u1:3');
     expect(signalKey({ kind: 'const', value: true })).toBe('c:1');
     expect(signalKey({ kind: 'const', value: false })).toBe('c:0');
+  });
+
+  describe('the places where a signal branches', () => {
+    const task = (gates: LabNetlist['gates'], output: string) =>
+      layoutDiagram(toNetlist({ gates, outputs: { Y: output } }, ['Y']), taskInputName, {
+        inputsInOrder: true,
+      });
+
+    it('has none when no signal feeds more than one gate', () => {
+      const layout = task(
+        [
+          { name: 'g1', kind: 'AND', inputs: ['A', 'B'] },
+          { name: 'g2', kind: 'OR', inputs: ['g1', 'C'] },
+        ],
+        'g2',
+      );
+      expect(layout.junctions).toEqual([]);
+    });
+
+    it('has one for a signal that feeds two gates, on the wire and not at the box of the signal', () => {
+      const layout = task(
+        [
+          { name: 'g1', kind: 'AND', inputs: ['A', 'B'] },
+          { name: 'g2', kind: 'OR', inputs: ['A', 'g1'] },
+        ],
+        'g2',
+      );
+      const a = layout.nodes.find((n) => n.id === 'in:0')!;
+      expect(layout.junctions.length).toBeGreaterThanOrEqual(1);
+      for (const dot of layout.junctions) {
+        // to the right of the box of A, on a wire that comes from A
+        expect(dot.x).toBeGreaterThan(a.outX);
+        const onWire = layout.edges
+          .filter((e) => e.from === 'in:0')
+          .some((e) =>
+            e.points.some((p, k) => {
+              const q = e.points[k + 1];
+              if (!q) return p.x === dot.x && p.y === dot.y;
+              return (
+                dot.x >= Math.min(p.x, q.x) &&
+                dot.x <= Math.max(p.x, q.x) &&
+                dot.y >= Math.min(p.y, q.y) &&
+                dot.y <= Math.max(p.y, q.y)
+              );
+            }),
+          );
+        expect(onWire).toBe(true);
+      }
+    });
+
+    it('has two for a signal that feeds three gates, and each once', () => {
+      const layout = task(
+        [
+          { name: 'g1', kind: 'AND', inputs: ['A', 'B'] },
+          { name: 'g2', kind: 'OR', inputs: ['A', 'C'] },
+          { name: 'g3', kind: 'NAND', inputs: ['A', 'g1'] },
+          { name: 'g4', kind: 'OR', inputs: ['g2', 'g3'] },
+        ],
+        'g4',
+      );
+      const dots = layout.junctions.map((p) => `${p.x},${p.y}`);
+      expect(new Set(dots).size).toBe(dots.length);
+      // three wires of A leave one line: it parts at least twice
+      expect(dots.length).toBeGreaterThanOrEqual(2);
+    });
+
+    it('has none for wires of different signals that only cross', () => {
+      // B and C cross on their way, and neither branches
+      const layout = task(
+        [
+          { name: 'g1', kind: 'AND', inputs: ['A', 'C'] },
+          { name: 'g2', kind: 'OR', inputs: ['B', 'g1'] },
+        ],
+        'g2',
+      );
+      expect(layout.junctions).toEqual([]);
+    });
+  });
+
+  it('keeps wires of different signals apart where they run side by side, by turning them in an order that allows it', () => {
+    // the wire of B ends at the height where A starts, and the wire of A ends where B starts: the
+    // two stretches would lie on one another unless one wire turns before the other
+    const layout = layoutDiagram(
+      toNetlist(
+        {
+          gates: [
+            { name: 'g1', kind: 'AND', inputs: ['B', 'C'] },
+            { name: 'g2', kind: 'OR', inputs: ['A', 'g1'] },
+            { name: 'g3', kind: 'NAND', inputs: ['A', 'B'] },
+            { name: 'g4', kind: 'OR', inputs: ['g2', 'g3'] },
+          ],
+          outputs: { Y: 'g4' },
+        },
+        ['Y'],
+      ),
+      taskInputName,
+      { inputsInOrder: true },
+    );
+    const runs = layout.edges.flatMap((edge) =>
+      edge.points.slice(1).flatMap((q, k) => {
+        const p = edge.points[k]!;
+        return p.y === q.y && p.x !== q.x
+          ? [{ src: edge.from, y: p.y, from: Math.min(p.x, q.x), to: Math.max(p.x, q.x) }]
+          : [];
+      }),
+    );
+    for (const a of runs) {
+      for (const b of runs) {
+        if (a === b || a.src === b.src) continue;
+        if (Math.min(a.to, b.to) - Math.max(a.from, b.from) <= 0) continue;
+        expect(Math.abs(a.y - b.y)).toBeGreaterThanOrEqual(MIN_WIRE_GAP);
+      }
+    }
   });
 });

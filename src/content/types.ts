@@ -16,8 +16,7 @@ export type ListItem = { c: Inline[]; children: Block[] };
 
 export type Block =
   | { t: 'p'; c: Inline[] }
-  /** `htmlNarrow`: the same chain with its notes under the rows, for a screen too narrow for them at the side */
-  | { t: 'math'; tex: string; html: string; htmlNarrow?: string }
+  | { t: 'math'; tex: string; html: string }
   | { t: 'list'; ordered: boolean; items: ListItem[] }
   | { t: 'table'; align: Align[]; head: Inline[][]; rows: Inline[][][] }
   | { t: 'figure'; svg: string }

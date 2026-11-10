@@ -35,7 +35,6 @@ import {
 } from '../../src/features/lab/tasks/logic.ts';
 import { kmapSvg, loopsProblem, type KmapCell } from './kmapSvg.ts';
 import { checkAnswer, checkChain } from './latexExpr.ts';
-import { addNarrowLayouts } from './noteLayout.ts';
 import { ParseError, parseInline, parseLines } from './parse.ts';
 import { inlineText } from './tree.ts';
 
@@ -538,10 +537,6 @@ export function buildLabTasks(contentDir: string): TasksResult {
           }
           if (gateCount(solved.netlist) !== solved.gates)
             throw new ParseError(`${where}: gate count`);
-
-          // every chain with notes also gets the layout with the notes under the rows, for narrow screens
-          addNarrowLayouts(steps);
-          for (const way of methods ?? []) addNarrowLayouts(way.steps);
 
           const task: LabTask = {
             id: `${id}.${index + 1}`,

@@ -188,9 +188,6 @@ export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(funct
   { layout, value, scale, description, switchNames = true, onGate },
   ref,
 ) {
-  // a signal that feeds more than one wire is marked where it leaves
-  const fanOut = new Map<string, number>();
-  for (const edge of layout.edges) fanOut.set(edge.from, (fanOut.get(edge.from) ?? 0) + 1);
   const into = new Map(layout.edges.map((edge) => [edge.to, edge]));
   return (
     <svg
@@ -207,11 +204,17 @@ export const ResultDiagram = forwardRef<SVGSVGElement, ResultDiagramProps>(funct
       {layout.edges.map((edge) => (
         <Edge key={edge.id} edge={edge} value={value(edge.signal)} />
       ))}
-      {layout.nodes
-        .filter((node) => (fanOut.get(node.id) ?? 0) > 1)
-        .map((node) => (
-          <circle key={`dot:${node.id}`} cx={node.outX} cy={node.y} r={3.6} className="fill-ink" />
-        ))}
+      {/* a wire that branches is marked where it does, so that a crossing is not read as a join */}
+      {layout.junctions.map((p) => (
+        <circle
+          key={`dot:${p.x},${p.y}`}
+          data-junction=""
+          cx={p.x}
+          cy={p.y}
+          r={3.8}
+          className="fill-ink"
+        />
+      ))}
       {layout.nodes.map((node) => {
         if (node.kind === 'gate') return <GateShape key={node.id} node={node} onSelect={onGate} />;
         if (node.kind === 'output') {

@@ -65,6 +65,33 @@ describe('the lab tasks of the content', () => {
     }
   });
 
+  it('keep the law of each row of a chain at the side of the row, in one layout only, for every task', () => {
+    type Walk = { t: string; html?: string; items?: { children: Walk[] }[]; c?: Walk[] };
+    let chains = 0;
+    let withNotes = 0;
+    const walk = (blocks: Walk[]) => {
+      for (const block of blocks) {
+        if (block.t === 'math') {
+          chains++;
+          // there is no second layout with the notes under the rows
+          expect(Object.keys(block)).not.toContain('htmlNarrow');
+          if (block.html?.includes('mtext')) withNotes++;
+        } else if (block.t === 'list') {
+          for (const item of block.items ?? []) walk(item.children);
+        } else if (block.t === 'note') {
+          walk(block.c ?? []);
+        }
+      }
+    };
+    for (const t of tasks) {
+      walk(t.steps as unknown as Walk[]);
+      for (const way of t.methods ?? []) walk(way.steps as unknown as Walk[]);
+    }
+    expect(chains).toBeGreaterThan(80);
+    // the chains with a law at the side are many: the check above is about something
+    expect(withNotes).toBeGreaterThan(40);
+  });
+
   it('use two input gates in every answer, and the right chip for a task that names one', () => {
     for (const t of tasks) {
       for (const gate of t.solution.netlist.gates) {

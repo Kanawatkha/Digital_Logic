@@ -45,7 +45,14 @@ export type LEdge = {
   back: boolean;
 };
 
-export type DiagramLayout = { nodes: LNode[]; edges: LEdge[]; width: number; height: number };
+export type DiagramLayout = {
+  nodes: LNode[];
+  edges: LEdge[];
+  /** The places where the wires of one signal branch, each of which is drawn with a dot */
+  junctions: Pt[];
+  width: number;
+  height: number;
+};
 
 /** How much larger a gate symbol is drawn than the symbols of the pin diagrams */
 export const GATE_SCALE = 1.35;
@@ -69,6 +76,11 @@ const curveIn = (dy: number) => {
 const MIN_GAP = 70;
 const CHANNEL_SPACING = 18;
 const BACK_TRACK = 14;
+/**
+ * The least space between two wires of different signals that run side by side. Under it two wires
+ * read as one, or as joined; it is half the distance between the two inputs of a gate.
+ */
+export const MIN_WIRE_GAP = 12;
 
 /** The id of what a signal is, shared by the node that drives it and the wires that carry it. */
 export function signalKey(signal: Signal): string {
@@ -84,6 +96,157 @@ export function signalKey(signal: Signal): string {
     case 'conflict':
       return 'x';
   }
+}
+
+/**
+ * The order of the vertical channels in the gap between two columns, left to right. A wire runs
+ * along its own height from the column on the left to its channel, and along the height of its
+ * target from its channel to the column on the right. Two wires of different signals whose two
+ * stretches would lie side by side (the start of one is at about the height where the other ends)
+ * do not overlap when the first turns before the second does, so that order is asked for. Where
+ * the wishes go round in a circle the usual order, by starting height, stands.
+ */
+function orderChannels<T extends { src: string; ya: number; yb: number }>(list: T[]): T[] {
+  const first = list.map((_, i) => i);
+  const before = list.map(() => new Set<number>());
+  list.forEach((a, i) => {
+    list.forEach((b, j) => {
+      if (i === j || a.src === b.src) return;
+      // the start of `a` and the end of `b` are side by side: `a` turns first
+      if (Math.abs(a.ya - b.yb) < MIN_WIRE_GAP) before[j]!.add(i);
+    });
+  });
+  const placed = new Set<number>();
+  const out: T[] = [];
+  while (out.length < list.length) {
+    // the wire that no wire waiting still has to turn before, the first in the usual order
+    const ready = first.find(
+      (i) => !placed.has(i) && [...before[i]!].every((other) => placed.has(other)),
+    );
+    // a circle of wishes: the first one left goes, the usual order decides
+    const next = ready ?? first.find((i) => !placed.has(i))!;
+    placed.add(next);
+    out.push(list[next]!);
+  }
+  return out;
+}
+
+/**
+ * Where the wires of one signal branch: a point at which three or more directions meet, once the
+ * wires that share a line are counted as one. Each such place is drawn with a dot.
+ */
+function junctionsOf(edges: readonly LEdge[]): Pt[] {
+  type Line = { horizontal: boolean; at: number; from: number; to: number };
+  const bySignal = new Map<string, LEdge[]>();
+  for (const edge of edges) bySignal.set(edge.from, [...(bySignal.get(edge.from) ?? []), edge]);
+  const found: Pt[] = [];
+  for (const group of bySignal.values()) {
+    if (group.length < 2) continue;
+    const lines: Line[] = [];
+    for (const edge of group) {
+      for (let k = 1; k < edge.points.length; k++) {
+        const a = edge.points[k - 1]!;
+        const b = edge.points[k]!;
+        if (a.x === b.x && a.y === b.y) continue;
+        const horizontal = a.y === b.y;
+        lines.push(
+          horizontal
+            ? { horizontal, at: a.y, from: Math.min(a.x, b.x), to: Math.max(a.x, b.x) }
+            : { horizontal, at: a.x, from: Math.min(a.y, b.y), to: Math.max(a.y, b.y) },
+        );
+      }
+    }
+    // wires that lie on one another are one wire
+    const merged: Line[] = [];
+    for (const horizontal of [true, false]) {
+      const same = lines
+        .filter((l) => l.horizontal === horizontal)
+        .sort((l, m) => l.at - m.at || l.from - m.from);
+      let current: Line | null = null;
+      for (const line of same) {
+        if (current && current.at === line.at && line.from <= current.to) {
+          current.to = Math.max(current.to, line.to);
+        } else {
+          if (current) merged.push(current);
+          current = { ...line };
+        }
+      }
+      if (current) merged.push(current);
+    }
+    const at = (line: Line, p: Pt) => (line.horizontal ? p.x : p.y);
+    const across = (line: Line, p: Pt) => (line.horizontal ? p.y : p.x);
+    const ends = new Map<string, Pt>();
+    for (const line of merged) {
+      const [a, b] = line.horizontal
+        ? [
+            { x: line.from, y: line.at },
+            { x: line.to, y: line.at },
+          ]
+        : [
+            { x: line.at, y: line.from },
+            { x: line.at, y: line.to },
+          ];
+      ends.set(`${a.x},${a.y}`, a);
+      ends.set(`${b.x},${b.y}`, b);
+    }
+    for (const p of ends.values()) {
+      let directions = 0;
+      for (const line of merged) {
+        if (line.at !== across(line, p) || at(line, p) < line.from || at(line, p) > line.to)
+          continue;
+        if (at(line, p) > line.from) directions++;
+        if (at(line, p) < line.to) directions++;
+      }
+      if (directions >= 3) found.push(p);
+    }
+  }
+  return found;
+}
+
+/**
+ * How many places there are where two wires of different signals lie side by side closer than
+ * `MIN_WIRE_GAP` (or on one another), or where a wire ends or turns on the line of another signal.
+ */
+function crowdedPlaces(edges: readonly LEdge[]): number {
+  type Seg = { src: string; horizontal: boolean; at: number; from: number; to: number };
+  const segs: Seg[] = [];
+  for (const edge of edges) {
+    for (let k = 1; k < edge.points.length; k++) {
+      const a = edge.points[k - 1]!;
+      const b = edge.points[k]!;
+      if (a.x === b.x && a.y === b.y) continue;
+      const horizontal = a.y === b.y;
+      segs.push({
+        src: edge.from,
+        horizontal,
+        at: horizontal ? a.y : a.x,
+        from: horizontal ? Math.min(a.x, b.x) : Math.min(a.y, b.y),
+        to: horizontal ? Math.max(a.x, b.x) : Math.max(a.y, b.y),
+      });
+    }
+  }
+  let count = 0;
+  for (let i = 0; i < segs.length; i++) {
+    for (let j = i + 1; j < segs.length; j++) {
+      const a = segs[i]!;
+      const b = segs[j]!;
+      if (a.src === b.src || a.horizontal !== b.horizontal) continue;
+      if (Math.min(a.to, b.to) - Math.max(a.from, b.from) <= 0) continue;
+      if (Math.abs(a.at - b.at) < MIN_WIRE_GAP) count++;
+    }
+  }
+  for (const edge of edges) {
+    for (const p of edge.points) {
+      for (const s of segs) {
+        if (s.src === edge.from) continue;
+        const onLine = s.horizontal
+          ? p.y === s.at && p.x > s.from && p.x < s.to
+          : p.x === s.at && p.y > s.from && p.y < s.to;
+        if (onLine) count++;
+      }
+    }
+  }
+  return count;
 }
 
 export function layoutDiagram(
@@ -270,134 +433,193 @@ export function layoutDiagram(
     }
   }
 
-  const entryY = (node: LNode, pin: number) => node.inputYs[pin] ?? node.y;
-  type Segment = { chain: number; step: number; ya: number; yb: number; channel: number };
-  const segments = new Map<number, Segment[]>();
-  chains.forEach((chain, c) => {
-    if (chain.back) return;
-    for (let k = 1; k < chain.ids.length; k++) {
-      const a = nodes.get(chain.ids[k - 1]!)!;
-      const b = nodes.get(chain.ids[k]!)!;
-      const last = k === chain.ids.length - 1;
-      const seg: Segment = {
-        chain: c,
-        step: k,
-        ya: a.y,
-        yb: last ? entryY(b, chain.edge.pin) : b.y,
-        channel: 0,
-      };
-      segments.set(a.level, [...(segments.get(a.level) ?? []), seg]);
-    }
-  });
-  const moving = new Map<number, Segment[]>();
-  for (const [level, list] of segments) {
-    moving.set(
-      level,
-      list.filter((s) => s.ya !== s.yb).sort((a, b) => a.ya - b.ya || a.yb - b.yb),
-    );
+  // how high everything was placed, which each column can be moved down from as a whole
+  const baseY = new Map<string, number>();
+  const baseInputs = new Map<string, number[]>();
+  for (const node of nodes.values()) {
+    baseY.set(node.id, node.y);
+    baseInputs.set(node.id, [...node.inputYs]);
   }
 
-  const spanOf = (col: string[]) =>
-    Math.max(
-      0,
-      ...col.map((id) => {
+  /** Lays out and routes everything with column `c` moved down by `shift[c]`; the nodes are left there. */
+  const route = (shift: readonly number[]) => {
+    columns.forEach((col, c) => {
+      for (const id of col) {
         const node = nodes.get(id)!;
-        if (node.kind === 'gate') return INSET + gateWidth(node);
-        if (node.kind === 'output') return INSET + OUTPUT_WIDTH;
-        return node.kind === 'dummy' ? INSET : SOURCE_WIDTH;
-      }),
-    );
-  const lefts: number[] = [];
-  const spans: number[] = [];
-  let edgeOfLast = MARGIN;
-  columns.forEach((col, c) => {
-    lefts[c] = edgeOfLast;
-    spans[c] = spanOf(col);
-    const room = Math.max(MIN_GAP, ((moving.get(c)?.length ?? 0) + 1) * CHANNEL_SPACING + 24);
-    edgeOfLast += spans[c]! + (c < top ? room : 0);
-  });
-  columns.forEach((col, c) => {
-    for (const id of col) {
-      const node = nodes.get(id)!;
-      if (node.kind === 'gate') {
-        node.x = lefts[c]! + INSET;
-        node.outX = node.x + gateWidth(node);
-      } else if (node.kind === 'dummy') {
-        node.x = node.outX = lefts[c]! + INSET;
-      } else if (node.kind === 'output') {
-        node.x = lefts[c]! + INSET;
-        node.outX = node.x + OUTPUT_WIDTH;
-      } else {
-        node.x = lefts[c]!;
-        node.outX = node.x + SOURCE_WIDTH;
+        node.y = baseY.get(id)! + shift[c]!;
+        node.inputYs = baseInputs.get(id)!.map((y) => y + shift[c]!);
       }
-    }
-  });
-
-  // wires: one channel in the gap between two columns for each wire that has to change height
-  const entryX = (node: LNode, pin = 0) => {
-    const curved = node.gate && (node.gate.kind === 'or' || node.gate.kind === 'nor');
-    if (!curved || node.gate!.inputs.length < 2) return node.x;
-    return node.x + curveIn((node.inputYs[pin]! - node.y) / GATE_SCALE) * GATE_SCALE;
-  };
-  for (const [level, list] of moving) {
-    const left = lefts[level]! + spans[level]! + 10;
-    const right = lefts[level + 1]! + 10;
-    list.forEach((seg, rank) => {
-      seg.channel = left + ((rank + 1) * (right - left)) / (list.length + 1);
     });
-  }
-  const bySeg = new Map<string, Segment>();
-  for (const list of segments.values()) for (const s of list) bySeg.set(`${s.chain}:${s.step}`, s);
-
-  const bottom = MARGIN + tallest;
-  let backTrack = 0;
-  const edges: LEdge[] = chains.map((chain, c) => {
-    const from = nodes.get(chain.ids[0]!)!;
-    const to = nodes.get(chain.edge.to)!;
-    const points: Pt[] = [];
-    if (chain.back) {
-      const yLow = bottom + 22 + backTrack++ * BACK_TRACK;
-      const yIn = entryY(to, chain.edge.pin);
-      points.push(
-        { x: from.outX, y: from.y },
-        { x: from.outX + 16, y: from.y },
-        { x: from.outX + 16, y: yLow },
-        { x: entryX(to, chain.edge.pin) - 16, y: yLow },
-        { x: entryX(to, chain.edge.pin) - 16, y: yIn },
-        { x: entryX(to, chain.edge.pin), y: yIn },
-      );
-    } else {
-      points.push({ x: from.outX, y: from.y });
+    const entryY = (node: LNode, pin: number) => node.inputYs[pin] ?? node.y;
+    type Segment = {
+      chain: number;
+      step: number;
+      /** The signal the wire carries: wires of one signal may share a line */
+      src: string;
+      ya: number;
+      yb: number;
+      channel: number;
+    };
+    const segments = new Map<number, Segment[]>();
+    chains.forEach((chain, c) => {
+      if (chain.back) return;
       for (let k = 1; k < chain.ids.length; k++) {
-        const seg = bySeg.get(`${c}:${k}`)!;
-        const next = nodes.get(chain.ids[k]!)!;
-        if (seg.ya !== seg.yb) {
-          points.push({ x: seg.channel, y: seg.ya }, { x: seg.channel, y: seg.yb });
+        const a = nodes.get(chain.ids[k - 1]!)!;
+        const b = nodes.get(chain.ids[k]!)!;
+        const last = k === chain.ids.length - 1;
+        const seg: Segment = {
+          chain: c,
+          step: k,
+          src: chain.edge.from,
+          ya: a.y,
+          yb: last ? entryY(b, chain.edge.pin) : b.y,
+          channel: 0,
+        };
+        segments.set(a.level, [...(segments.get(a.level) ?? []), seg]);
+      }
+    });
+    const moving = new Map<number, Segment[]>();
+    for (const [level, list] of segments) {
+      moving.set(
+        level,
+        list.filter((s) => s.ya !== s.yb).sort((a, b) => a.ya - b.ya || a.yb - b.yb),
+      );
+    }
+
+    const spanOf = (col: string[]) =>
+      Math.max(
+        0,
+        ...col.map((id) => {
+          const node = nodes.get(id)!;
+          if (node.kind === 'gate') return INSET + gateWidth(node);
+          if (node.kind === 'output') return INSET + OUTPUT_WIDTH;
+          return node.kind === 'dummy' ? INSET : SOURCE_WIDTH;
+        }),
+      );
+    const lefts: number[] = [];
+    const spans: number[] = [];
+    let edgeOfLast = MARGIN;
+    columns.forEach((col, c) => {
+      lefts[c] = edgeOfLast;
+      spans[c] = spanOf(col);
+      const room = Math.max(MIN_GAP, ((moving.get(c)?.length ?? 0) + 1) * CHANNEL_SPACING + 24);
+      edgeOfLast += spans[c]! + (c < top ? room : 0);
+    });
+    columns.forEach((col, c) => {
+      for (const id of col) {
+        const node = nodes.get(id)!;
+        if (node.kind === 'gate') {
+          node.x = lefts[c]! + INSET;
+          node.outX = node.x + gateWidth(node);
+        } else if (node.kind === 'dummy') {
+          node.x = node.outX = lefts[c]! + INSET;
+        } else if (node.kind === 'output') {
+          node.x = lefts[c]! + INSET;
+          node.outX = node.x + OUTPUT_WIDTH;
+        } else {
+          node.x = lefts[c]!;
+          node.outX = node.x + SOURCE_WIDTH;
         }
-        points.push({
-          x: k === chain.ids.length - 1 ? entryX(next, chain.edge.pin) : next.x,
-          y: seg.yb,
-        });
-        if (k < chain.ids.length - 1) points.push({ x: next.outX, y: next.y });
+      }
+    });
+
+    // wires: one channel in the gap between two columns for each wire that has to change height
+    const entryX = (node: LNode, pin = 0) => {
+      const curved = node.gate && (node.gate.kind === 'or' || node.gate.kind === 'nor');
+      if (!curved || node.gate!.inputs.length < 2) return node.x;
+      return node.x + curveIn((node.inputYs[pin]! - node.y) / GATE_SCALE) * GATE_SCALE;
+    };
+    for (const [level, list] of moving) {
+      const left = lefts[level]! + spans[level]! + 10;
+      const right = lefts[level + 1]! + 10;
+      orderChannels(list).forEach((seg, rank) => {
+        seg.channel = left + ((rank + 1) * (right - left)) / (list.length + 1);
+      });
+    }
+    const bySeg = new Map<string, Segment>();
+    for (const list of segments.values())
+      for (const s of list) bySeg.set(`${s.chain}:${s.step}`, s);
+
+    const bottom = Math.max(
+      MARGIN + tallest,
+      ...[...nodes.values()].map((n) => n.y + heightOf(n) / 2),
+    );
+    let backTrack = 0;
+    const edges: LEdge[] = chains.map((chain, c) => {
+      const from = nodes.get(chain.ids[0]!)!;
+      const to = nodes.get(chain.edge.to)!;
+      const points: Pt[] = [];
+      if (chain.back) {
+        const yLow = bottom + 22 + backTrack++ * BACK_TRACK;
+        const yIn = entryY(to, chain.edge.pin);
+        points.push(
+          { x: from.outX, y: from.y },
+          { x: from.outX + 16, y: from.y },
+          { x: from.outX + 16, y: yLow },
+          { x: entryX(to, chain.edge.pin) - 16, y: yLow },
+          { x: entryX(to, chain.edge.pin) - 16, y: yIn },
+          { x: entryX(to, chain.edge.pin), y: yIn },
+        );
+      } else {
+        points.push({ x: from.outX, y: from.y });
+        for (let k = 1; k < chain.ids.length; k++) {
+          const seg = bySeg.get(`${c}:${k}`)!;
+          const next = nodes.get(chain.ids[k]!)!;
+          if (seg.ya !== seg.yb) {
+            points.push({ x: seg.channel, y: seg.ya }, { x: seg.channel, y: seg.yb });
+          }
+          points.push({
+            x: k === chain.ids.length - 1 ? entryX(next, chain.edge.pin) : next.x,
+            y: seg.yb,
+          });
+          if (k < chain.ids.length - 1) points.push({ x: next.outX, y: next.y });
+        }
+      }
+      return {
+        id: `e${c}`,
+        from: chain.edge.from,
+        to: chain.edge.to,
+        pin: chain.edge.pin,
+        signal: chain.edge.from,
+        points: points.filter(
+          (p, i) => i === 0 || p.x !== points[i - 1]!.x || p.y !== points[i - 1]!.y,
+        ),
+        back: chain.back,
+      };
+    });
+    return { edges, bottom, backTrack, edgeOfLast };
+  };
+
+  // Where two wires of different signals would lie side by side, or one would end on the line of
+  // another, a column is moved down a little, as a whole, until they do not. The columns are tried
+  // one after the other, a few rounds, and a move is kept only when it leaves fewer such places.
+  const STEPS = [0, 6, 12, 18, 24, 30, 36, 42, 48];
+  let shift = columns.map(() => 0);
+  let cost = crowdedPlaces(route(shift).edges);
+  for (let round = 0; round < 3 && cost > 0; round++) {
+    let better = false;
+    for (let c = 0; c <= top && cost > 0; c++) {
+      for (const step of STEPS) {
+        if (step === shift[c]) continue;
+        const trial = shift.map((moved, i) => (i === c ? step : moved));
+        const attempt = route(trial);
+        const attemptCost = crowdedPlaces(attempt.edges);
+        if (attemptCost < cost) {
+          shift = trial;
+          cost = attemptCost;
+          better = true;
+        }
       }
     }
-    return {
-      id: `e${c}`,
-      from: chain.edge.from,
-      to: chain.edge.to,
-      pin: chain.edge.pin,
-      signal: chain.edge.from,
-      points: points.filter(
-        (p, i) => i === 0 || p.x !== points[i - 1]!.x || p.y !== points[i - 1]!.y,
-      ),
-      back: chain.back,
-    };
-  });
+    if (!better) break;
+  }
+  // the nodes are where the last trial left them: put them where the best one was
+  const { edges, bottom, backTrack, edgeOfLast } = route(shift);
 
   return {
     nodes: [...nodes.values()].filter((n) => n.kind !== 'dummy'),
     edges,
+    junctions: junctionsOf(edges),
     width: edgeOfLast + MARGIN,
     height: bottom + MARGIN + (backTrack > 0 ? 22 + backTrack * BACK_TRACK : 0),
   };
