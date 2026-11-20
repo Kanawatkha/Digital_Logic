@@ -11,7 +11,7 @@ const ChapterPage = lazy(() => import('@/pages/ChapterPage'));
 const ExamPage = lazy(() => import('@/pages/ExamPage'));
 const ExamSetPage = lazy(() => import('@/pages/ExamSetPage'));
 const FinalChapterPage = lazy(() => import('@/pages/FinalChapterPage'));
-const FinalPage = lazy(() => import('@/pages/FinalPage'));
+const FinalExamPage = lazy(() => import('@/pages/FinalExamPage'));
 const FormulaSheetPage = lazy(() => import('@/pages/FormulaSheetPage'));
 const LabPage = lazy(() => import('@/pages/LabPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
@@ -37,7 +37,8 @@ export function AppRoutes() {
           <Route path="exam" element={<Navigate to="/exam/mid" replace />} />
           <Route path="exam/mid" element={<ExamPage />} />
           <Route path="exam/mid/:set" element={<ExamSetPage />} />
-          <Route path="exam/final" element={<FinalPage />} />
+          <Route path="exam/final" element={<Navigate to="/exam/final/1" replace />} />
+          <Route path="exam/final/:n" element={<FinalExamPage />} />
           <Route path="formulas" element={<Navigate to="/formulas/mid" replace />} />
           <Route path="formulas/mid" element={<FormulaSheetPage term="mid" />} />
           <Route path="formulas/final" element={<FormulaSheetPage term="final" />} />

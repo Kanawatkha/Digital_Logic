@@ -79,3 +79,26 @@ describe('the choices of a page', () => {
     expect(readSelection('final/06', selectors)).toEqual({ code: 'bcd', digit: 'none' });
   });
 });
+
+describe('the sections that are solutions', () => {
+  const sol = (id: string, children: ContentNode[] = []): ContentNode => ({
+    ...node(id, undefined, children),
+    solution: true,
+  });
+
+  it('are hidden, with what is inside them, when the solutions are off, and shown when they are on', () => {
+    const root = node('root', undefined, [node('problem'), sol('answer', [node('inside')])]);
+    expect(filterTree(root, {}, false).children.map((c) => c.id)).toEqual(['problem']);
+    expect(filterTree(root, {}, true).children.map((c) => c.id)).toEqual(['problem', 'answer']);
+    // the default : the solutions are shown
+    expect(filterTree(root, {}).children).toHaveLength(2);
+  });
+
+  it('can also name choices : both must agree', () => {
+    const one: ContentNode = { ...sol('one'), when: { code: ['bcd'] } };
+    const root = node('root', undefined, [one]);
+    expect(filterTree(root, { code: 'bcd' }, true).children).toHaveLength(1);
+    expect(filterTree(root, { code: 'xs3' }, true).children).toHaveLength(0);
+    expect(filterTree(root, { code: 'bcd' }, false).children).toHaveLength(0);
+  });
+});

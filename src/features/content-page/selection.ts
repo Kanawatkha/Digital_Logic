@@ -13,13 +13,20 @@ export function isVisible(node: ContentNode, selection: Selection): boolean {
   return Object.entries(node.when ?? {}).every(([key, values]) => values.includes(selection[key]));
 }
 
-/** The tree without the nodes that the selection hides (and without what is inside them). */
-export function filterTree(node: ContentNode, selection: Selection): ContentNode {
+/**
+ * The tree without the nodes that the selection hides (and without what is inside them), and, when the solutions
+ * are off, without the sections that are solutions.
+ */
+export function filterTree(
+  node: ContentNode,
+  selection: Selection,
+  showSolutions = true,
+): ContentNode {
   return {
     ...node,
     children: node.children
-      .filter((c) => isVisible(c, selection))
-      .map((c) => filterTree(c, selection)),
+      .filter((c) => isVisible(c, selection) && (showSolutions || !c.solution))
+      .map((c) => filterTree(c, selection, showSolutions)),
   };
 }
 

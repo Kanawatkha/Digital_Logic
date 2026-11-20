@@ -34,6 +34,26 @@ export const FINAL_CHAPTERS = [
 
 export type FinalChapter = (typeof FINAL_CHAPTERS)[number];
 
+/**
+ * The four big problems of the exam of the final, in the order of the exam: their Markdown is in
+ * `content/final-exam/`.
+ */
+export const FINAL_EXAM_PROBLEMS = [
+  { n: 1, title: 'วงจรถอดรหัส' },
+  { n: 2, title: 'ฟลิป-ฟลอป' },
+  { n: 3, title: 'วงจรนับ' },
+  { n: 4, title: 'Verilog' },
+] as const;
+
+export type FinalExamProblem = (typeof FINAL_EXAM_PROBLEMS)[number];
+
+/** The page of a big problem of the exam of the final. */
+export const finalExamPath = (n: number): string => `/exam/final/${n}`;
+
+export function findFinalExamProblem(n: number): FinalExamProblem | undefined {
+  return FINAL_EXAM_PROBLEMS.find((p) => p.n === n);
+}
+
 /** The page of a chapter of the final. */
 export const finalChapterPath = (n: number): string => `/chapters/final/${n}`;
 
@@ -71,10 +91,9 @@ export const UI_TEXT = {
   backHome: 'กลับหน้าหลัก',
   menuOpen: 'เมนู',
   menuClose: 'ปิดเมนู',
-  comingSoon: 'กำลังจัดทำ',
-  finalSoon: 'เนื้อหาปลายภาคจะมาเพิ่มที่หน้านี้',
   termSwitch: 'ภาคการศึกษา',
   chapterPick: 'เลือกบท',
+  examProblemPick: 'เลือกข้อสอบ',
   finalExam: 'ข้อสอบปลายภาค',
   finalFormulas: 'สรุปสูตรปลายภาค',
   updateReady: 'มีเวอร์ชันใหม่ พร้อมใช้งาน',

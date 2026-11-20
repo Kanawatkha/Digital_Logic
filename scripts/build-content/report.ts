@@ -30,7 +30,7 @@ function line(n: ContentNode, depth: number): string[] {
 export function renderReport(files: ContentFile[], manifest: Manifest, warnings: string[]): string {
   const out: string[] = ['CONTENT REPORT', ''];
   out.push('Counts per file');
-  for (const c of ['summary', 'worked-solutions', 'final'] as const) {
+  for (const c of ['summary', 'worked-solutions', 'final', 'final-exam'] as const) {
     for (const e of manifest.collections[c]) {
       out.push(
         `  ${c}/${e.chapter}  ${e.slug}: nodes ${e.nodes}, examples ${e.examples}, figures ${e.figures}`,

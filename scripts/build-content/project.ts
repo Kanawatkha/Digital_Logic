@@ -25,7 +25,7 @@ export function projectMarkdown(md: string): Projection {
   // the lines that choose and the marker at the end of a heading are read by the build, not text
   s = s.replace(/^@select .*$/gm, '').replace(/^@choices\s*$/gm, '');
   s = s.replace(
-    /^(#{1,6} .*?)\s*\{\s*[a-z][a-z0-9_]*=[a-z0-9_,]+(?:\s*;\s*[a-z][a-z0-9_]*=[a-z0-9_,]+)*\s*\}\s*$/gm,
+    /^(#{1,6} .*?)\s*\{\s*[a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?(?:\s*;\s*[a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?)*\s*\}\s*$/gm,
     '$1',
   );
   // inline code is raw too: a pipe, a dollar or a star in it is not Markdown

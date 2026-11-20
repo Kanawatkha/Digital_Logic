@@ -40,7 +40,8 @@ Digital_Logic/
 ├─ content/                 SOURCE OF TRUTH (Markdown only)
 │  ├─ summary/              00-formula-sheet-ch1-5.md, 01..05-*-summary.md
 │  ├─ worked-solutions/     01..05-*.md, 06..09 midterm practice exams
-│  ├─ final/                06..10-*.md, the chapters of the final exam
+│  ├─ final/                00 formula sheet of the final, 06..10-*.md, the chapters of the final exam
+│  ├─ final-exam/           01..04-*.md, the four big problems of the exam of the final
 │  └─ lab-tasks/            01..05-*.md, the tasks of the lab (CONTENT-SCHEMA.md section 12)
 ├─ scripts/
 │  └─ build-content/        run.ts (CLI), index.ts, parse.ts, tree.ts, math.ts, svg.ts, project.ts, report.ts, tasks.ts and latexExpr.ts (lab tasks)
@@ -111,7 +112,7 @@ app    ->  pages, components, config
 ## 7. Routing
 
 - `HashRouter`, because GitHub Pages cannot rewrite deep links.
-- Routes: `/`, `/chapters` (to `/chapters/mid/1`), `/chapters/mid/:n` (1-5), `/chapters/final` (to `/chapters/final/6`), `/chapters/final/:n` (6-10), `/exam` (to `/exam/mid`), `/exam/mid`, `/exam/mid/:set`, `/exam/final`, `/formulas` (to `/formulas/mid`), `/formulas/mid`, `/formulas/final`, `/lab`, `*` (not found). The chapters of the final are `pages/FinalChapterPage.tsx` (`final/NN`, listed in `FINAL_CHAPTERS` of `config/site.ts`). The exam and the formula sheet of the final have no content yet (`pages/FinalPage.tsx`). `/chapter/:n` and `/exam/:set` of before are redirected (`app/LegacyRedirects.tsx`). The routes are `AppRoutes` in `app/App.tsx`, so that they can be tested.
+- Routes: `/`, `/chapters` (to `/chapters/mid/1`), `/chapters/mid/:n` (1-5), `/chapters/final` (to `/chapters/final/6`), `/chapters/final/:n` (6-10), `/exam` (to `/exam/mid`), `/exam/mid`, `/exam/mid/:set`, `/exam/final` (to `/exam/final/1`), `/exam/final/:n` (1-4, `pages/FinalExamPage.tsx`, `final-exam/NN`), `/formulas` (to `/formulas/mid`), `/formulas/mid`, `/formulas/final`, `/lab`, `*` (not found). The chapters of the final are `pages/FinalChapterPage.tsx` (`final/NN`, listed in `FINAL_CHAPTERS` of `config/site.ts`). The exam and the formula sheet of the final have no content yet (`pages/FinalPage.tsx`). `/chapter/:n` and `/exam/:set` of before are redirected (`app/LegacyRedirects.tsx`). The routes are `AppRoutes` in `app/App.tsx`, so that they can be tested.
 - Each route is code-split with `React.lazy`.
 
 ## 8. Styling and tokens

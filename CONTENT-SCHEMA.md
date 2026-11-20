@@ -9,6 +9,7 @@ Rules for turning the Markdown in `content/` into typed data. This is the contra
 | `summary` | `00-formula-sheet-ch1-5.md`, `01..05-<name>-summary.md` | Home diagram (01-05), Formula sheet page of the midterm (00) |
 | `worked-solutions` | `01..05-<name>.md`, `06-midterm-practice-exam.md` | Chapter pages (01-05), Exam page (06) |
 | `final` | `00-formula-sheet-ch6-10.md`, `06..10-<name>.md` (chapters 6 to 10 of the final exam) | Formula sheet page of the final (00, built like the midterm sheet: sections and topics, no cards), chapter pages of the final (`#/chapters/final/N`). One file holds the explanation, the formulas, the figures, the code and the worked examples of a chapter; it is built like `worked-solutions` (a `##` is a group, a `###` is a card: an explanation, or an example with `Sol` and `Ans`) |
+| `final-exam` | `01..04-<name>.md` (the four big problems of the exam of the final) | Exam pages of the final (`#/exam/final/N`). Built like `worked-solutions`; a problem has choices (`@select`) like chapter 6 |
 | `lab-tasks` | `01..05-<name>.md` (one per kind of task) | Task card of the Lab page, see section 12 |
 
 Chapter keys: 01 number-systems-and-codes, 02 digital-ic-and-logic-gates, 03 boolean-algebra, 04 karnaugh-map, 05 combination-circuit.
@@ -100,6 +101,8 @@ A chapter can let the reader choose what is shown (chapter 6: the code, the way 
 - At the end of a heading: `{key=value}`, several choices separated by `;`, several values of a choice separated by `,`, for example `### หาสมการของ segment a {code=bcd; method=andor,nand}`. The card (the heading and what is under it) is shown only when, for every choice it names, the selected value is one of its values. A heading without it is always shown. The marker is not part of the title and is kept in `ContentNode.when`.
 
 - A line `@choices` alone: where the buttons of the page are shown (a block `{ t: 'choices' }` of the section it is in), for example under the problem that the cards answer. Without it the buttons are under the page heading. The build refuses `@choices` in a chapter that has no `@select`.
+
+- The word `sol` alone in the same braces (`## เฉลย {sol}`, `### ... {code=bcd; sol}`) says that the section is a **solution** : it is shown only when the solutions switch of the page is on (the exam pages of the final). A bare word other than `sol` is refused.
 
 The build refuses a `{...}` that names a choice the page does not have, or a value that is not one of its options. The choices that the reader made are kept in the browser, per chapter, and dropped when they no longer name an option.
 

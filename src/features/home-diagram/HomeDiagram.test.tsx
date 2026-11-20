@@ -69,6 +69,7 @@ const manifest: Manifest = {
     ],
     'worked-solutions': [],
     final: [],
+    'final-exam': [],
   },
 };
 

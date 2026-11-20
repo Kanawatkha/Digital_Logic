@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react';
 import { SelectionContext } from '@/components/content/selectionContext';
+import { useSolutions } from '@/components/content/solutions';
 import { SelectorBar } from '@/components/content/SelectorBar';
 import { PageHeading } from '@/components/layout/PageContainer';
 import type { ContentFile } from '@/content/types';
@@ -26,9 +27,10 @@ export function ExercisesView({ file, badge }: { file: ContentFile; badge?: stri
   const [selection, setSelection] = useState<Selection>(() =>
     selectors ? readSelection(chapterKey, selectors) : {},
   );
+  const { show: showSolutions } = useSolutions();
   const root = useMemo(
-    () => (selectors ? filterTree(file.root, selection) : file.root),
-    [file.root, selectors, selection],
+    () => filterTree(file.root, selection, showSolutions),
+    [file.root, selection, showSolutions],
   );
   const inText = useMemo(() => hasChoicesBlock(file.root), [file.root]);
 

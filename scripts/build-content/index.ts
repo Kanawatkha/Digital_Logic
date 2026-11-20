@@ -14,7 +14,7 @@ export type BuildResult = {
   report: string;
 };
 
-const COLLECTIONS: Collection[] = ['summary', 'worked-solutions', 'final'];
+const COLLECTIONS: Collection[] = ['summary', 'worked-solutions', 'final', 'final-exam'];
 
 function slugOf(fileName: string): { chapter: string; slug: string } {
   const m = /^(\d{2})-(.+)\.md$/.exec(fileName);
@@ -76,7 +76,9 @@ export function buildContent(contentDir: string): BuildResult {
     }
   }
 
-  const manifest: Manifest = { collections: { summary: [], 'worked-solutions': [], final: [] } };
+  const manifest: Manifest = {
+    collections: { summary: [], 'worked-solutions': [], final: [], 'final-exam': [] },
+  };
   for (const f of files) {
     let nodes = 0;
     let examples = 0;

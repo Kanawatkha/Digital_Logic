@@ -108,6 +108,74 @@ describe('the final collection', () => {
     expect(r.files.find((f) => f.chapter === '06')!.root.children[0].kind).toBe('group');
   });
 
+  it('builds the folder final-exam like the worked solutions : a problem is a card with its solution', () => {
+    const problem = [
+      '# ข้อสอบปลายภาค ข้อ 1 ทดสอบ',
+      '',
+      '@select code รหัสอินพุต | bcd=BCD-8421 | xs3=Excess-3',
+      '',
+      '---',
+      '',
+      '## ข้อ 1 ทดสอบ',
+      '',
+      '### โจทย์ BCD {code=bcd}',
+      '',
+      'จงหา $y$',
+      '',
+      '$\\mathbf{Sol}^{n}$',
+      '',
+      '$y=1$',
+      '',
+      '$\\mathbf{Ans}\\quad y=1$',
+      '',
+    ].join('\n');
+    const r = build({ 'final-exam/01-decoder.md': problem });
+    expect(r.errors).toEqual([]);
+    expect(r.files.map((f) => [f.collection, f.chapter, f.slug])).toEqual([
+      ['final-exam', '01', 'decoder'],
+    ]);
+    expect(r.manifest.collections['final-exam']).toHaveLength(1);
+    const [card] = r.files[0].root.children[0].children;
+    expect(card.kind).toBe('exercise');
+    expect(card.when).toEqual({ code: ['bcd'] });
+    expect(card.examples.map((b) => b.t)).toContain('example');
+  });
+
+  it('reads {sol} at the end of a heading as a flag : the section is a solution, with or without choices', () => {
+    const md = [
+      '# ข้อสอบ ทดสอบ',
+      '',
+      '@select code รหัสอินพุต | bcd=BCD-8421 | xs3=Excess-3',
+      '',
+      '---',
+      '',
+      '## โจทย์',
+      '',
+      '### โจทย์ BCD {code=bcd}',
+      '',
+      'ข้อความ',
+      '',
+      '## เฉลย {sol}',
+      '',
+      '### ขั้นตอนของ BCD {code=bcd; sol}',
+      '',
+      'ข้อความ',
+      '',
+    ].join('\n');
+    const r = build({ 'final-exam/01-decoder.md': md });
+    expect(r.errors).toEqual([]);
+    const [problem, solution] = r.files[0].root.children;
+    expect(problem.solution).toBeUndefined();
+    expect(solution.solution).toBe(true);
+    expect(solution.title).toEqual([{ t: 'text', v: 'เฉลย' }]);
+    expect(solution.children[0]).toMatchObject({ solution: true, when: { code: ['bcd'] } });
+  });
+
+  it('refuses a bare word in a heading that is not sol', () => {
+    const md = ['# ข้อสอบ ทดสอบ', '', '## โจทย์ {answer}', '', 'ข้อความ', ''].join('\n');
+    expect(build({ 'final-exam/01-decoder.md': md }).errors[0]).toMatch(/can only be sol/);
+  });
+
   it('keeps explanation, code and an example in one chapter, in order, as a card each', () => {
     const [file] = build({ 'final/06-decoders.md': CHAPTER }).files;
     const [group] = file.root.children;

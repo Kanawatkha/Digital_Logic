@@ -2,12 +2,15 @@ import { describe, expect, it } from 'vitest';
 import {
   EXAM_SETS,
   FINAL_CHAPTERS,
+  FINAL_EXAM_PROBLEMS,
   NAV_ITEMS,
   REPO_NAME,
   TERMS,
   chapterPath,
   finalChapterPath,
+  finalExamPath,
   findFinalChapter,
+  findFinalExamProblem,
   isChapterNumber,
 } from './site';
 
@@ -50,5 +53,13 @@ describe('site config', () => {
     expect(findFinalChapter(9)?.title).toBe('Verilog');
     expect(findFinalChapter(5)).toBeUndefined();
     expect(findFinalChapter(11)).toBeUndefined();
+  });
+
+  it('has the four big problems of the exam of the final, in order, each with its own page', () => {
+    expect(FINAL_EXAM_PROBLEMS.map((p) => p.n)).toEqual([1, 2, 3, 4]);
+    expect(finalExamPath(3)).toBe('/exam/final/3');
+    expect(findFinalExamProblem(4)?.title).toBe('Verilog');
+    expect(findFinalExamProblem(0)).toBeUndefined();
+    expect(findFinalExamProblem(5)).toBeUndefined();
   });
 });

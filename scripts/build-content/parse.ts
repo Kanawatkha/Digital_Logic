@@ -3,7 +3,14 @@ import { renderMath } from './math.ts';
 import { extractSvg } from './svg.ts';
 
 export type Token =
-  | { k: 'heading'; level: number; title: Inline[]; when?: Record<string, string[]>; line: number }
+  | {
+      k: 'heading';
+      level: number;
+      title: Inline[];
+      when?: Record<string, string[]>;
+      solution?: true;
+      line: number;
+    }
   | { k: 'block'; block: Block; line: number };
 
 type Line = { text: string; no: number };
@@ -13,9 +20,13 @@ export class ParseError extends Error {}
 const ESCAPABLE = '\\`*_{}[]()#+-.!|$<>~&';
 const LIST_RE = /^(-|\d+\.)\s+(.*)$/;
 const HEADING_RE = /^(#{1,6})\s+(.*)$/;
-/** `{code=bcd; method=andor,nand}` at the end of a heading: the choices for which the card is shown. */
+/**
+ * `{code=bcd; method=andor,nand}` at the end of a heading: the choices for which the card is shown. The word `sol`
+ * alone in it (`{sol}`, `{code=bcd; sol}`) says that the section is a solution : it is shown only when the
+ * solutions switch of the page is on.
+ */
 const WHEN_RE =
-  /\s*\{\s*([a-z][a-z0-9_]*=[a-z0-9_,]+(?:\s*;\s*[a-z][a-z0-9_]*=[a-z0-9_,]+)*)\s*\}\s*$/;
+  /\s*\{\s*([a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?(?:\s*;\s*[a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?)*)\s*\}\s*$/;
 const ALIGN_ROW_RE = /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/;
 
 /* ---------- inline ---------- */
@@ -299,19 +310,30 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
       if (h[1].length > 3)
         throw new ParseError(`${where}: heading level ${h[1].length} is not supported`);
       const marker = WHEN_RE.exec(h[2]);
-      const when: Record<string, string[]> | undefined = marker
-        ? Object.fromEntries(
-            marker[1].split(';').map((pair) => {
-              const [key, values] = pair.trim().split('=');
-              return [key, values.split(',')];
-            }),
-          )
-        : undefined;
+      const items = marker ? marker[1].split(';').map((p) => p.trim()) : [];
+      const bare = items.filter((p) => !p.includes('='));
+      const badWord = bare.find((p) => p !== 'sol');
+      if (badWord)
+        throw new ParseError(
+          `${where}: {${badWord}} is not known, a bare word in a heading can only be sol`,
+        );
+      const solution = bare.length > 0;
+      const pairs = items.filter((p) => p.includes('='));
+      const when: Record<string, string[]> | undefined =
+        pairs.length > 0
+          ? Object.fromEntries(
+              pairs.map((pair) => {
+                const [key, values] = pair.split('=');
+                return [key, values.split(',')];
+              }),
+            )
+          : undefined;
       tokens.push({
         k: 'heading',
         level: h[1].length,
         title: parseInline((marker ? h[2].slice(0, marker.index) : h[2]).trim(), where),
         ...(when ? { when } : {}),
+        ...(solution ? { solution: true as const } : {}),
         line: no,
       });
       i++;

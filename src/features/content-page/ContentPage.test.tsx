@@ -2,6 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { ContentFile, ContentNode } from '@/content/types';
+import { SolutionsProvider } from '@/components/content/SolutionsProvider';
 import { ContentPage } from './ContentPage';
 
 const loadContentFile = vi.hoisted(() => vi.fn());
@@ -179,6 +180,41 @@ describe('ContentPage', () => {
     expect(section).toContainElement(groups[0]);
     fireEvent.click(screen.getByRole('button', { name: 'Excess-3' }));
     expect(screen.queryByRole('heading', { level: 3, name: 'การ์ด BCD' })).toBeNull();
+  });
+
+  it('hides the sections that are solutions when the solutions switch is off, and shows them when it is on', async () => {
+    const withSolution: ContentFile = {
+      ...file,
+      root: node('worked-solutions/03/chapter', 1, 'บทที่ 3 พีชคณิตบูลีน', {
+        children: [
+          node('worked-solutions/03/h2-1', 2, 'โจทย์'),
+          node('worked-solutions/03/h2-2', 2, 'เฉลย', { solution: true }),
+        ],
+      }),
+    };
+    loadContentFile.mockResolvedValue(withSolution);
+    const view = (stored: string) => {
+      localStorage.setItem('dln:show-solutions', stored);
+      return render(
+        <MemoryRouter>
+          <SolutionsProvider>
+            <ContentPage
+              collection="worked-solutions"
+              chapter="03"
+              variant="exercises"
+              badge="แนวข้อสอบ"
+            />
+          </SolutionsProvider>
+        </MemoryRouter>,
+      );
+    };
+    const off = view('0');
+    await screen.findByRole('heading', { level: 2, name: 'โจทย์' });
+    expect(screen.queryByRole('heading', { level: 2, name: 'เฉลย' })).toBeNull();
+    off.unmount();
+    view('1');
+    expect(await screen.findByRole('heading', { level: 2, name: 'เฉลย' })).toBeInTheDocument();
+    localStorage.clear();
   });
 
   it('shows an error with a retry button and recovers', async () => {

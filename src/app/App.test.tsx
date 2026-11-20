@@ -97,15 +97,24 @@ describe('the addresses of the site', () => {
     ).toBeInTheDocument();
   });
 
-  it('has an empty page for the exam of the final, that says it is being made', async () => {
+  it('opens the exam of the final at its first big problem, and each problem from its own file', async () => {
     open('/exam/final');
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'ข้อสอบปลายภาค' }),
+      await screen.findByRole('heading', { level: 1, name: 'final-exam 01' }),
     ).toBeInTheDocument();
-    expect(screen.getByText('เนื้อหาปลายภาคจะมาเพิ่มที่หน้านี้')).toBeInTheDocument();
-    expect(where()).toBe('/exam/final');
-    // nothing of the content is loaded for it
-    expect(loadContentFile).not.toHaveBeenCalled();
+    expect(where()).toBe('/exam/final/1');
+    expect(loadContentFile).toHaveBeenCalledWith('final-exam', '01');
+  });
+
+  it('opens a big problem of the exam of the final, and sends an unknown one to the first', async () => {
+    const view = open('/exam/final/3');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'final-exam 03' }),
+    ).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('final-exam', '03');
+    view.unmount();
+    open('/exam/final/9');
+    await waitFor(() => expect(where()).toBe('/exam/final/1'));
   });
 
   it('opens the formula sheet of each term from its own file: summary/00 and final/00', async () => {
@@ -128,7 +137,7 @@ describe('the addresses of the site', () => {
   });
 
   it('puts the switch between the terms on the final pages, and the chapter picker on the chapters', async () => {
-    const exam = open('/exam/final');
+    const exam = open('/exam/final/2');
     const terms = await screen.findByRole('navigation', { name: 'ภาคการศึกษา' });
     expect(terms.querySelector('[aria-current="page"]')).toHaveTextContent('ปลายภาค');
     exam.unmount();

@@ -52,6 +52,8 @@ export type ContentNode = {
   children: ContentNode[];
   /** Shown only for these choices of the selectors of the chapter, e.g. { code: ['bcd'] }. Absent: always shown. */
   when?: Record<string, string[]>;
+  /** A solution (`{sol}` in the Markdown): shown only when the solutions switch of the page is on. */
+  solution?: true;
   source: { file: string; line: number };
 };
 
@@ -62,8 +64,11 @@ export type Selector = {
   options: { value: string; label: string }[];
 };
 
-/** `final` holds the chapters of the final exam (6 to 10): explanation and examples in one file. */
-export type Collection = 'summary' | 'worked-solutions' | 'final';
+/**
+ * `final` holds the chapters of the final exam (6 to 10): explanation and examples in one file. `final-exam` holds
+ * the four big problems of the exam of the final, built like the worked solutions.
+ */
+export type Collection = 'summary' | 'worked-solutions' | 'final' | 'final-exam';
 
 export type ContentFile = {
   collection: Collection;

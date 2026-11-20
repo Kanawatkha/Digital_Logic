@@ -38,6 +38,7 @@ Eight pages, all client-side routes (HashRouter):
 | Chapters (one page, a chapter picked in it; chapters 1-5 of the midterm, chapters 6-10 of the final being written) | `#/chapters/mid/1` .. `#/chapters/mid/5`, `#/chapters/final/6` .. `#/chapters/final/10` | `content/worked-solutions/01..05`, `content/final/06..10` |
 | Practice exams, midterm or final | `#/exam/mid`, `#/exam/final` | `content/worked-solutions/06..09` |
 | Formula sheet, midterm or final | `#/formulas/mid`, `#/formulas/final` | `content/summary/00`, `content/final/00` |
+| Exam of the final, four big problems | `#/exam/final/1` to `#/exam/final/4` | `content/final-exam/01..04` |
 
 Navigation: a top navbar only. No footer. Mobile uses a hamburger menu where each row is one page.
 
