@@ -54,7 +54,12 @@ describe('the addresses of the site', () => {
   it('opens a chapter of the midterm at /chapters/mid/:n, and the chapters at the first one', async () => {
     open('/chapters/mid/3');
     expect(
-      await screen.findByRole('heading', { level: 1, name: 'worked-solutions 03' }),
+      // the first lazy page of the file is loaded here, which can take longer than a second
+      await screen.findByRole(
+        'heading',
+        { level: 1, name: 'worked-solutions 03' },
+        { timeout: 5000 },
+      ),
     ).toBeInTheDocument();
     expect(where()).toBe('/chapters/mid/3');
   });

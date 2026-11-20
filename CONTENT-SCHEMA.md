@@ -92,6 +92,17 @@ An **example** is a run of blocks that starts at a problem statement and contain
 - Exercises in `worked-solutions` follow the same rule; their problem usually sits in the `###` heading title (for example `### ข้อ 1  ...`), so the heading is copied into `problem` when no preceding blocks exist.
 - Proof-by-table items without a marker (some in `03-boolean-algebra`) stay as ordinary blocks under their heading. They are not examples.
 
+### 4.1 Choices of a page (`@select` and `{key=value}`)
+
+A chapter can let the reader choose what is shown (the decoders of chapter 6: the code, the way to design, a digit to check). Two additions, both optional:
+
+- Lines under the chapter title: `@select key label | value=label | value=label`. One line is one choice (a row of buttons on the page); the first option is the one that is on at first. A choice needs at least two options, with different `value`s (`[a-z0-9_]`). The lines are taken out of the text of the chapter and kept in `ContentFile.selectors`.
+- At the end of a heading: `{key=value}`, several choices separated by `;`, several values of a choice separated by `,`, for example `### หาสมการของ segment a {code=bcd; method=andor,nand}`. The card (the heading and what is under it) is shown only when, for every choice it names, the selected value is one of its values. A heading without it is always shown. The marker is not part of the title and is kept in `ContentNode.when`.
+
+- A line `@choices` alone: where the buttons of the page are shown (a block `{ t: 'choices' }` of the section it is in), for example under the problem that the cards answer. Without it the buttons are under the page heading. The build refuses `@choices` in a chapter that has no `@select`.
+
+The build refuses a `{...}` that names a choice the page does not have, or a value that is not one of its options. The choices that the reader made are kept in the browser, per chapter, and dropped when they no longer name an option.
+
 ## 5. Node tree rules (uniform across all chapters)
 
 The home diagram needs the same logic for every chapter. The headings differ between chapters, so apply these rules to `summary/01..05`.

@@ -3,6 +3,7 @@ import type { Block } from '@/content/types';
 import { Collapse } from '@/components/content/Collapse';
 import { FigureBlock } from '@/components/content/FigureBlock';
 import { InlineContent } from '@/components/content/InlineContent';
+import { ChoicesBlock } from '@/components/content/SelectorBar';
 import { ScrollArea } from '@/components/content/ScrollArea';
 import { useSolutions } from '@/components/content/solutions';
 import { TableBlock } from '@/components/content/TableBlock';
@@ -71,6 +72,8 @@ export function BlockRenderer({ block }: { block: Block }) {
           </pre>
         </ScrollArea>
       );
+    case 'choices':
+      return <ChoicesBlock />;
     case 'note':
       return (
         <aside className="rounded-md bg-surface-soft p-4">

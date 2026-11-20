@@ -3,7 +3,7 @@ import { renderMath } from './math.ts';
 import { extractSvg } from './svg.ts';
 
 export type Token =
-  | { k: 'heading'; level: number; title: Inline[]; line: number }
+  | { k: 'heading'; level: number; title: Inline[]; when?: Record<string, string[]>; line: number }
   | { k: 'block'; block: Block; line: number };
 
 type Line = { text: string; no: number };
@@ -13,6 +13,9 @@ export class ParseError extends Error {}
 const ESCAPABLE = '\\`*_{}[]()#+-.!|$<>~&';
 const LIST_RE = /^(-|\d+\.)\s+(.*)$/;
 const HEADING_RE = /^(#{1,6})\s+(.*)$/;
+/** `{code=bcd; method=andor,nand}` at the end of a heading: the choices for which the card is shown. */
+const WHEN_RE =
+  /\s*\{\s*([a-z][a-z0-9_]*=[a-z0-9_,]+(?:\s*;\s*[a-z][a-z0-9_]*=[a-z0-9_,]+)*)\s*\}\s*$/;
 const ALIGN_ROW_RE = /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/;
 
 /* ---------- inline ---------- */
@@ -132,6 +135,7 @@ function isBlockStart(text: string): boolean {
     /^---+$/.test(t) ||
     t.startsWith('<div align=') ||
     t.startsWith('```') ||
+    t === '@choices' ||
     HEADING_RE.test(text) ||
     t.startsWith('$$') ||
     t.startsWith('>') ||
@@ -265,6 +269,12 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
       continue;
     }
 
+    if (t === '@choices') {
+      tokens.push({ k: 'block', block: { t: 'choices' }, line: no });
+      i++;
+      continue;
+    }
+
     if (t.startsWith('<div align=')) {
       let j = i;
       const parts: string[] = [];
@@ -288,10 +298,20 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
       if (!allowHeadings) throw new ParseError(`${where}: heading inside a nested block`);
       if (h[1].length > 3)
         throw new ParseError(`${where}: heading level ${h[1].length} is not supported`);
+      const marker = WHEN_RE.exec(h[2]);
+      const when: Record<string, string[]> | undefined = marker
+        ? Object.fromEntries(
+            marker[1].split(';').map((pair) => {
+              const [key, values] = pair.trim().split('=');
+              return [key, values.split(',')];
+            }),
+          )
+        : undefined;
       tokens.push({
         k: 'heading',
         level: h[1].length,
-        title: parseInline(h[2].trim(), where),
+        title: parseInline((marker ? h[2].slice(0, marker.index) : h[2]).trim(), where),
+        ...(when ? { when } : {}),
         line: no,
       });
       i++;

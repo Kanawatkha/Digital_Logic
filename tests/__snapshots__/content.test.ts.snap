@@ -6,10 +6,10 @@ exports[`real content > keeps counts stable (review any change before accepting 
     "final": [
       {
         "chapter": "06",
-        "examples": 25,
-        "figures": 40,
+        "examples": 141,
+        "figures": 226,
         "file": "final/06.json",
-        "nodes": 42,
+        "nodes": 185,
         "slug": "decoders",
         "title": "บทที่ 6 วงจรถอดรหัส (Decoder)",
       },

@@ -1,16 +1,15 @@
 import type { ReactNode } from 'react';
-import { PageContainer, PageHeading } from '@/components/layout/PageContainer';
+import { PageContainer } from '@/components/layout/PageContainer';
 import { Button } from '@/components/ui/Button';
 import { PageSkeleton } from '@/components/ui/Skeleton';
 import { UI_TEXT } from '@/config/site';
-import type { Collection, ContentNode } from '@/content/types';
-import { ExerciseOutline } from './ExerciseOutline';
+import type { Collection } from '@/content/types';
+import { ExercisesView } from './ExercisesView';
 import { FormulaOutline } from './FormulaOutline';
-import { JumpNav, type JumpItem } from './JumpNav';
+import { jumpItems } from './jumpItems';
 import { useContentFile } from './useContentFile';
 import { usePageTitle } from '@/hooks/usePageTitle';
-import { anchorId } from '@/lib/ids';
-import { plainText, truncate } from '@/lib/text';
+import { plainText } from '@/lib/text';
 
 type ContentPageProps = {
   collection: Collection;
@@ -23,13 +22,6 @@ type ContentPageProps = {
   /** Shown above the page heading in every state (for example the exam set switcher). */
   above?: ReactNode;
 };
-
-function jumpItems(root: ContentNode): JumpItem[] {
-  return root.children.map((c) => ({
-    id: anchorId(c.id),
-    label: truncate(plainText(c.title), 26),
-  }));
-}
 
 /** Loads a generated content file and renders it as exercise cards or as the formula sheet. */
 export function ContentPage({
@@ -72,11 +64,7 @@ export function ContentPage({
     <PageContainer className={variant === 'formulas' ? 'lg:pl-14 xl:pl-6' : undefined}>
       {above}
       {variant === 'exercises' ? (
-        <>
-          <PageHeading title={plainText(file.title)} badge={badge} />
-          <JumpNav items={items} label="หัวข้อในหน้านี้" />
-          <ExerciseOutline root={file.root} />
-        </>
+        <ExercisesView file={file} badge={badge} />
       ) : (
         <>
           {/* the sheet starts straight at its content; the title stays for screen readers */}

@@ -5,6 +5,7 @@ import type {
   ContentNode,
   Inline,
   NodeKind,
+  Selector,
 } from '../../src/content/types.ts';
 import type { Token } from './parse.ts';
 
@@ -134,14 +135,28 @@ function splitLeaf(blocks: Block[], where: string, warn: (m: string) => void) {
 
 /* ---------- raw heading tree ---------- */
 
-type Raw = { level: number; title: Inline[]; line: number; blocks: Block[]; children: Raw[] };
+type Raw = {
+  level: number;
+  title: Inline[];
+  when?: Record<string, string[]>;
+  line: number;
+  blocks: Block[];
+  children: Raw[];
+};
 
 export function buildRaw(tokens: Token[], file: string): Raw {
   const root: Raw = { level: 0, title: [], line: 0, blocks: [], children: [] };
   const stack: Raw[] = [root];
   for (const t of tokens) {
     if (t.k === 'heading') {
-      const node: Raw = { level: t.level, title: t.title, line: t.line, blocks: [], children: [] };
+      const node: Raw = {
+        level: t.level,
+        title: t.title,
+        ...(t.when ? { when: t.when } : {}),
+        line: t.line,
+        blocks: [],
+        children: [],
+      };
       while (stack[stack.length - 1].level >= t.level) stack.pop();
       stack[stack.length - 1].children.push(node);
       stack.push(node);
@@ -181,6 +196,7 @@ function make(
     level,
     ...(number ? { number } : {}),
     title: raw.title,
+    ...(raw.when ? { when: raw.when } : {}),
     explain: parts.explain,
     examples: parts.examples,
     ...(parts.examplesTitle ? { examplesTitle: parts.examplesTitle } : {}),
@@ -308,11 +324,78 @@ export function buildContentFile(
 ): ContentFile {
   const ctx: Ctx = { collection: meta.collection, chapter: meta.chapter, file: meta.file, warn };
   const isChapterSummary = meta.collection === 'summary' && meta.chapter !== '00';
+  const selectors = takeSelectors(raw, meta.file);
+  const root = isChapterSummary ? summaryChapter(raw, ctx) : genericChapter(raw, ctx);
+  checkWhen(root, selectors, meta.file);
+  if (selectors.length === 0) {
+    walkNodes(root, (n) => {
+      walkBlocks([...n.explain, ...n.examples], (b) => {
+        if (b.t === 'choices')
+          throw new Error(`${meta.file}:${n.source.line}: @choices but the page has no @select`);
+      });
+    });
+  }
   return {
     collection: meta.collection,
     chapter: meta.chapter,
     slug: meta.slug,
     title: raw.title,
-    root: isChapterSummary ? summaryChapter(raw, ctx) : genericChapter(raw, ctx),
+    ...(selectors.length > 0 ? { selectors } : {}),
+    root,
   };
+}
+
+const SELECT_KEY_RE = /^[a-z][a-z0-9_]*$/;
+
+/**
+ * The `@select key label | value=label | value=label` lines under the chapter title: the choices of
+ * the page. They are taken out of the blocks of the chapter. The first option is the default.
+ */
+function takeSelectors(raw: Raw, file: string): Selector[] {
+  const out: Selector[] = [];
+  raw.blocks = raw.blocks.filter((b) => {
+    if (b.t !== 'p') return true;
+    const lines = inlineText(b.c)
+      .split('\n')
+      .map((l) => l.trim());
+    if (!lines.every((l) => l.startsWith('@select '))) return true;
+    for (const line of lines) {
+      const [head, ...opts] = line.slice('@select '.length).split('|');
+      const m = /^\s*(\S+)\s+(.+?)\s*$/.exec(head);
+      if (!m || !SELECT_KEY_RE.test(m[1]))
+        throw new Error(`${file}: bad @select line (key and label): ${line}`);
+      if (out.some((s) => s.key === m[1])) throw new Error(`${file}: duplicate selector ${m[1]}`);
+      const options = opts.map((o) => {
+        const om = /^\s*([a-z0-9_]+)=(.+?)\s*$/.exec(o);
+        if (!om) throw new Error(`${file}: bad @select option "${o.trim()}" in: ${line}`);
+        return { value: om[1], label: om[2] };
+      });
+      if (options.length < 2)
+        throw new Error(`${file}: selector ${m[1]} needs two options or more`);
+      if (new Set(options.map((o) => o.value)).size !== options.length)
+        throw new Error(`${file}: selector ${m[1]} repeats an option value`);
+      out.push({ key: m[1], label: m[2], options });
+    }
+    return false;
+  });
+  return out;
+}
+
+/** Every `when` of a heading must name a selector of the page and values that it has. */
+function checkWhen(root: ContentNode, selectors: Selector[], file: string): void {
+  walkNodes(root, (n) => {
+    for (const [key, values] of Object.entries(n.when ?? {})) {
+      const sel = selectors.find((s) => s.key === key);
+      if (!sel)
+        throw new Error(
+          `${file}:${n.source.line}: {${key}=...} but the page has no @select ${key}`,
+        );
+      for (const v of values) {
+        if (!sel.options.some((o) => o.value === v))
+          throw new Error(
+            `${file}:${n.source.line}: ${key}=${v} is not an option of @select ${key}`,
+          );
+      }
+    }
+  });
 }

@@ -92,6 +92,95 @@ describe('ContentPage', () => {
     await waitFor(() => expect(document.title).toBe('บทที่ 3 พีชคณิตบูลีน | Digital Logic Notes'));
   });
 
+  it('shows the cards of the choice that is on, and changes them when another button is pressed', async () => {
+    localStorage.clear();
+    const card = (id: string, title: string, when?: ContentNode['when']) =>
+      node(`worked-solutions/03/${id}`, 3, title, {
+        ...(when ? { when } : {}),
+        explain: [{ t: 'p', c: t(`ข้อความของ ${title}`) }],
+      });
+    const chosen: ContentFile = {
+      ...file,
+      selectors: [
+        {
+          key: 'code',
+          label: 'รหัสอินพุต',
+          options: [
+            { value: 'bcd', label: 'BCD-8421' },
+            { value: 'xs3', label: 'Excess-3' },
+          ],
+        },
+      ],
+      root: node('worked-solutions/03/chapter', 1, 'บทที่ 3 พีชคณิตบูลีน', {
+        children: [
+          node('worked-solutions/03/h2-1', 2, 'หัวข้อ', {
+            children: [
+              card('a', 'การ์ด BCD', { code: ['bcd'] }),
+              card('b', 'การ์ด Excess-3', { code: ['xs3'] }),
+              card('c', 'การ์ดของทุกแบบ'),
+            ],
+          }),
+        ],
+      }),
+    };
+    loadContentFile.mockResolvedValue(chosen);
+    renderPage();
+    expect(await screen.findByRole('heading', { level: 3, name: 'การ์ด BCD' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 3, name: 'การ์ด Excess-3' })).toBeNull();
+    expect(screen.getByRole('button', { name: 'BCD-8421' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+
+    fireEvent.click(screen.getByRole('button', { name: 'Excess-3' }));
+    expect(screen.getByRole('heading', { level: 3, name: 'การ์ด Excess-3' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 3, name: 'การ์ด BCD' })).toBeNull();
+    expect(screen.getByRole('heading', { level: 3, name: 'การ์ดของทุกแบบ' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Excess-3' })).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  });
+
+  it('shows the buttons where the chapter puts them, and not under the heading as well', async () => {
+    localStorage.clear();
+    const chosen: ContentFile = {
+      ...file,
+      selectors: [
+        {
+          key: 'code',
+          label: 'รหัสอินพุต',
+          options: [
+            { value: 'bcd', label: 'BCD-8421' },
+            { value: 'xs3', label: 'Excess-3' },
+          ],
+        },
+      ],
+      root: node('worked-solutions/03/chapter', 1, 'บทที่ 3 พีชคณิตบูลีน', {
+        children: [
+          node('worked-solutions/03/h2-1', 2, 'หัวข้อ', {
+            explain: [{ t: 'choices' }],
+            children: [
+              node('worked-solutions/03/h2-1.h3-1', 3, 'การ์ด BCD', {
+                when: { code: ['bcd'] },
+                explain: [{ t: 'p', c: t('ข้อความ BCD') }],
+              }),
+            ],
+          }),
+        ],
+      }),
+    };
+    loadContentFile.mockResolvedValue(chosen);
+    renderPage();
+    await screen.findByRole('heading', { level: 2, name: 'หัวข้อ' });
+    const groups = screen.getAllByRole('group', { name: 'รหัสอินพุต' });
+    expect(groups).toHaveLength(1);
+    const section = screen.getByRole('heading', { level: 2, name: 'หัวข้อ' }).closest('section');
+    expect(section).toContainElement(groups[0]);
+    fireEvent.click(screen.getByRole('button', { name: 'Excess-3' }));
+    expect(screen.queryByRole('heading', { level: 3, name: 'การ์ด BCD' })).toBeNull();
+  });
+
   it('shows an error with a retry button and recovers', async () => {
     loadContentFile.mockRejectedValueOnce(new Error('network')).mockResolvedValue(file);
     renderPage();

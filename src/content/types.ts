@@ -20,6 +20,8 @@ export type Block =
   | { t: 'list'; ordered: boolean; items: ListItem[] }
   | { t: 'table'; align: Align[]; head: Inline[][]; rows: Inline[][][] }
   | { t: 'figure'; svg: string }
+  /** Where the buttons of the choices of the page are shown (the `@choices` line). */
+  | { t: 'choices' }
   /** A fenced block of code (Verilog), shown as written. */
   | { t: 'code'; v: string }
   | { t: 'note'; c: Block[] }
@@ -48,7 +50,16 @@ export type ContentNode = {
   /** Heading of an examples group ("ตัวอย่าง") that was merged into this node's examples. */
   examplesTitle?: Inline[];
   children: ContentNode[];
+  /** Shown only for these choices of the selectors of the chapter, e.g. { code: ['bcd'] }. Absent: always shown. */
+  when?: Record<string, string[]>;
   source: { file: string; line: number };
+};
+
+/** A choice the reader makes on a chapter page (a row of buttons); the first option is the default. */
+export type Selector = {
+  key: string;
+  label: string;
+  options: { value: string; label: string }[];
 };
 
 /** `final` holds the chapters of the final exam (6 to 10): explanation and examples in one file. */
@@ -60,6 +71,8 @@ export type ContentFile = {
   chapter: string;
   slug: string;
   title: Inline[];
+  /** The choices of the page, from the `@select` lines of the Markdown. Absent: none. */
+  selectors?: Selector[];
   root: ContentNode;
 };
 

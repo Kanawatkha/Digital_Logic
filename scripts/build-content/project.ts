@@ -22,6 +22,12 @@ export function projectMarkdown(md: string): Projection {
     code.push(squash(body));
     return `\n«C${code.length - 1}»\n`;
   });
+  // the lines that choose and the marker at the end of a heading are read by the build, not text
+  s = s.replace(/^@select .*$/gm, '').replace(/^@choices\s*$/gm, '');
+  s = s.replace(
+    /^(#{1,6} .*?)\s*\{\s*[a-z][a-z0-9_]*=[a-z0-9_,]+(?:\s*;\s*[a-z][a-z0-9_]*=[a-z0-9_,]+)*\s*\}\s*$/gm,
+    '$1',
+  );
   // inline code is raw too: a pipe, a dollar or a star in it is not Markdown
   const inline: string[] = [];
   s = s.replace(/`([^`\n]+)`/g, (_m, body: string) => {
@@ -90,6 +96,8 @@ function blk(blocks: Block[], p: Projection): string {
           return '«F»';
         case 'code':
           return b.v;
+        case 'choices':
+          return '';
         case 'note':
           return blk(b.c, p);
         case 'example':
