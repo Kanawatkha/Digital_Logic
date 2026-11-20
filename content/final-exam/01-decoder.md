@@ -4045,6 +4045,11 @@ $a = \sum m(0,2,3,5,6,7,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
+- ลูปสีเขียว (ช่อง $5,7,13,15$) : $B=1,\ D=1 \Rightarrow BD$
+- ลูปสีม่วง (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
+
 $a = A+C+BD+\overline{B}\,\overline{D}$
 
 ### K-map ของ segment b (Minterm) {code=bcd; method=andor,nand; digit=0,1,2,3,4,7,8,9}
@@ -4112,6 +4117,10 @@ $b = \sum m(0,1,2,3,4,7,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $0,4,8,12$) : $C=0,\ D=0 \Rightarrow \overline{C}\,\overline{D}$
+- ลูปสีเขียว (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow CD$
+
 $b = \overline{B}+\overline{C}\,\overline{D}+CD$
 
 ### K-map ของ segment c (Minterm) {code=bcd; method=andor,nand; digit=0,1,3,4,5,6,7,8,9}
@@ -4178,6 +4187,10 @@ $c = \sum m(0,1,3,4,5,6,7,8,9) + d(10,11,12,13,14,15)$
 <text x="69" y="121" font-size="14" fill="#2fae5f" font-weight="bold">3</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $4,5,6,7,12,13,14,15$) : $B=1 \Rightarrow B$
+- ลูปสีน้ำเงิน (ช่อง $0,1,4,5,8,9,12,13$) : $C=0 \Rightarrow \overline{C}$
+- ลูปสีเขียว (ช่อง $1,3,5,7,9,11,13,15$) : $D=1 \Rightarrow D$
 
 $c = B+\overline{C}+D$
 
@@ -4252,6 +4265,12 @@ $d = \sum m(0,2,3,5,6,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
+- ลูปสีเขียว (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow \overline{B}C$
+- ลูปสีม่วง (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
+- ลูปสีเหลือง (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow B\overline{C}D$
+
 $d = A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D$
 
 ### K-map ของ segment e (Minterm) {code=bcd; method=andor,nand; digit=0,2,6,8}
@@ -4314,6 +4333,9 @@ $e = \sum m(0,2,6,8) + d(10,11,12,13,14,15)$
 <text x="69" y="229" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
+- ลูปสีน้ำเงิน (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
 
 $e = \overline{B}\,\overline{D}+C\overline{D}$
 
@@ -4381,6 +4403,11 @@ $f = \sum m(0,4,5,6,8,9) + d(10,11,12,13,14,15)$
 <text x="69" y="67" font-size="14" fill="#a855f7" font-weight="bold">4</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
+- ลูปสีน้ำเงิน (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow B\overline{C}$
+- ลูปสีเขียว (ช่อง $4,6,12,14$) : $B=1,\ D=0 \Rightarrow B\overline{D}$
+- ลูปสีม่วง (ช่อง $0,4,8,12$) : $C=0,\ D=0 \Rightarrow \overline{C}\,\overline{D}$
 
 $f = A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}$
 
@@ -4450,6 +4477,11 @@ $g = \sum m(2,3,4,5,6,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow B\overline{C}$
+- ลูปสีน้ำเงิน (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
+- ลูปสีเขียว (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow \overline{B}C$
+- ลูปสีม่วง (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
+
 $g = B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}$
 
 ### K-map ของ segment a (Maxterm) {code=bcd; method=orand,nor; digit=0,2,3,5,6,7,8,9}
@@ -4507,6 +4539,9 @@ $a = \prod M(1,4) \cdot d(10,11,12,13,14,15)$
 <text x="123" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $1$) : $A=0,\ B=0,\ C=0,\ D=1 \Rightarrow (A+B+C+\overline{D})$
+- ลูปสีน้ำเงิน (ช่อง $4,12$) : $B=1,\ C=0,\ D=0 \Rightarrow (\overline{B}+C+D)$
 
 $a = (A+B+C+\overline{D})(\overline{B}+C+D)$
 
@@ -4566,6 +4601,9 @@ $b = \prod M(5,6) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow (\overline{B}+C+\overline{D})$
+- ลูปสีน้ำเงิน (ช่อง $6,14$) : $B=1,\ C=1,\ D=0 \Rightarrow (\overline{B}+\overline{C}+D)$
+
 $b = (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)$
 
 ### K-map ของ segment c (Maxterm) {code=bcd; method=orand,nor; digit=0,1,3,4,5,6,7,8,9}
@@ -4621,6 +4659,8 @@ $c = \prod M(2) \cdot d(10,11,12,13,14,15)$
 <path d="M241.5,218.5 L282,218.5 M282,263.5 L241.5,263.5 M232.5,254.5 L232.5,227.5 M232.5,227.5 A9,9 0 0 1 241.5,218.5 M241.5,263.5 A9,9 0 0 1 232.5,254.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $2,10$) : $B=0,\ C=1,\ D=0 \Rightarrow (B+\overline{C}+D)$
 
 $c = (B+\overline{C}+D)$
 
@@ -4683,6 +4723,10 @@ $d = \prod M(1,4,7) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $1$) : $A=0,\ B=0,\ C=0,\ D=1 \Rightarrow (A+B+C+\overline{D})$
+- ลูปสีน้ำเงิน (ช่อง $4,12$) : $B=1,\ C=0,\ D=0 \Rightarrow (\overline{B}+C+D)$
+- ลูปสีเขียว (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+
 $d = (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})$
 
 ### K-map ของ segment e (Maxterm) {code=bcd; method=orand,nor; digit=0,2,6,8}
@@ -4744,6 +4788,9 @@ $e = \prod M(1,3,4,5,7,9) \cdot d(10,11,12,13,14,15)$
 <text x="123" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $1,3,5,7,9,11,13,15$) : $D=1 \Rightarrow \overline{D}$
+- ลูปสีน้ำเงิน (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow (\overline{B}+C)$
 
 $e = (\overline{D})(\overline{B}+C)$
 
@@ -4808,6 +4855,10 @@ $f = \prod M(1,2,3,7) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ B=0,\ D=1 \Rightarrow (A+B+\overline{D})$
+- ลูปสีน้ำเงิน (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow (B+\overline{C})$
+- ลูปสีเขียว (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow (\overline{C}+\overline{D})$
+
 $f = (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})$
 
 ### K-map ของ segment g (Maxterm) {code=bcd; method=orand,nor; digit=2,3,4,5,6,8,9}
@@ -4866,6 +4917,9 @@ $g = \prod M(0,1,7) \cdot d(10,11,12,13,14,15)$
 <text x="123" y="175" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0,\ C=0 \Rightarrow (A+B+C)$
+- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
 
 $g = (A+B+C)(\overline{B}+\overline{C}+\overline{D})$
 
@@ -12142,6 +12196,11 @@ $a = \sum m(3,5,6,8,9,10,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
+- ลูปสีเขียว (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
+- ลูปสีม่วง (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
+
 $a = \overline{B}+\overline{C}D+C\overline{D}+A$
 
 ### K-map ของ segment b (Minterm) {code=xs3; method=andor,nand; digit=0,1,2,3,4,7,8,9}
@@ -12205,6 +12264,9 @@ $b = \sum m(3,4,5,6,7,10,11,12) + d(0,1,2,13,14,15)$
 <text x="123" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
+- ลูปสีน้ำเงิน (ช่อง $4,5,6,7,12,13,14,15$) : $B=1 \Rightarrow B$
 
 $b = C+B$
 
@@ -12275,6 +12337,10 @@ $c = \sum m(3,4,6,7,8,9,10,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
+- ลูปสีน้ำเงิน (ช่อง $0,2,4,6,8,10,12,14$) : $D=0 \Rightarrow \overline{D}$
+- ลูปสีเขียว (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
+
 $c = \overline{B}+\overline{D}+C$
 
 ### K-map ของ segment d (Minterm) {code=xs3; method=andor,nand; digit=0,2,3,5,6,8,9}
@@ -12343,6 +12409,11 @@ $d = \sum m(3,5,6,8,9,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $1,3,9,11$) : $B=0,\ D=1 \Rightarrow \overline{B}D$
+- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
+- ลูปสีเขียว (ช่อง $2,6$) : $A=0,\ C=1,\ D=0 \Rightarrow \overline{A}C\overline{D}$
+- ลูปสีม่วง (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
+
 $d = \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}$
 
 ### K-map ของ segment e (Minterm) {code=xs3; method=andor,nand; digit=0,2,6,8}
@@ -12403,6 +12474,9 @@ $e = \sum m(3,5,9,11) + d(0,1,2,13,14,15)$
 <text x="79" y="121" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $1,3,9,11$) : $B=0,\ D=1 \Rightarrow \overline{B}D$
+- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
 
 $e = \overline{B}D+\overline{C}D$
 
@@ -12465,6 +12539,9 @@ $f = \sum m(3,7,8,9,11,12) + d(0,1,2,13,14,15)$
 <text x="177" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow CD$
+- ลูปสีน้ำเงิน (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
 
 $f = CD+A\overline{C}$
 
@@ -12533,6 +12610,11 @@ $g = \sum m(5,6,7,8,9,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
+- ลูปสีน้ำเงิน (ช่อง $6,7,14,15$) : $B=1,\ C=1 \Rightarrow BC$
+- ลูปสีเขียว (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
+- ลูปสีม่วง (ช่อง $9,11,13,15$) : $A=1,\ D=1 \Rightarrow AD$
+
 $g = \overline{C}D+BC+A\overline{C}+AD$
 
 ### K-map ของ segment a (Maxterm) {code=xs3; method=orand,nor; digit=0,2,3,5,6,7,8,9}
@@ -12591,6 +12673,9 @@ $a = \prod M(4,7) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
+- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+
 $a = (A+C+D)(\overline{B}+\overline{C}+\overline{D})$
 
 ### K-map ของ segment b (Maxterm) {code=xs3; method=orand,nor; digit=0,1,2,3,4,7,8,9}
@@ -12648,6 +12733,8 @@ $b = \prod M(8,9) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,1,8,9$) : $B=0,\ C=0 \Rightarrow (B+C)$
+
 $b = (B+C)$
 
 ### K-map ของ segment c (Maxterm) {code=xs3; method=orand,nor; digit=0,1,3,4,5,6,7,8,9}
@@ -12702,6 +12789,8 @@ $c = \prod M(5) \cdot d(0,1,2,13,14,15)$
 <text x="123" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow (\overline{B}+C+\overline{D})$
 
 $c = (\overline{B}+C+\overline{D})$
 
@@ -12763,6 +12852,10 @@ $d = \prod M(4,7,10) \cdot d(0,1,2,13,14,15)$
 <text x="177" y="229" font-size="14" fill="#2fae5f" font-weight="bold">3</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
+- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+- ลูปสีเขียว (ช่อง $10,14$) : $A=1,\ C=1,\ D=0 \Rightarrow (\overline{A}+\overline{C}+D)$
 
 $d = (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)$
 
@@ -12827,6 +12920,9 @@ $e = \prod M(4,6,7,8,10,12) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
+- ลูปสีส้ม (ช่อง $0,2,4,6,8,10,12,14$) : $D=0 \Rightarrow D$
+- ลูปสีน้ำเงิน (ช่อง $6,7,14,15$) : $B=1,\ C=1 \Rightarrow (\overline{B}+\overline{C})$
+
 $e = (D)(\overline{B}+\overline{C})$
 
 ### K-map ของ segment f (Maxterm) {code=xs3; method=orand,nor; digit=0,4,5,6,8,9}
@@ -12886,6 +12982,9 @@ $f = \prod M(4,5,6,10) \cdot d(0,1,2,13,14,15)$
 <text x="69" y="229" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $0,1,4,5$) : $A=0,\ C=0 \Rightarrow (A+C)$
+- ลูปสีน้ำเงิน (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow (\overline{C}+D)$
 
 $f = (A+C)(\overline{C}+D)$
 
@@ -12947,6 +13046,10 @@ $g = \prod M(3,4,10) \cdot d(0,1,2,13,14,15)$
 <text x="177" y="229" font-size="14" fill="#2fae5f" font-weight="bold">3</text>
 </svg>
 </div>
+
+- ลูปสีส้ม (ช่อง $0,1,2,3$) : $A=0,\ B=0 \Rightarrow (A+B)$
+- ลูปสีน้ำเงิน (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
+- ลูปสีเขียว (ช่อง $10,14$) : $A=1,\ C=1,\ D=0 \Rightarrow (\overline{A}+\overline{C}+D)$
 
 $g = (A+B)(A+C+D)(\overline{A}+\overline{C}+D)$
 
