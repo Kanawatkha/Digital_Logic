@@ -217,6 +217,64 @@ describe('ContentPage', () => {
     localStorage.clear();
   });
 
+  it('draws the cards of a merged section as one block with the label Sol, without their titles', async () => {
+    const merged: ContentFile = {
+      ...file,
+      root: node('worked-solutions/03/chapter', 1, 'บทที่ 3 พีชคณิตบูลีน', {
+        children: [
+          node('worked-solutions/03/h2-1', 2, 'โจทย์', {
+            children: [
+              node('worked-solutions/03/h2-1.h3-1', 3, 'การ์ดโจทย์', {
+                explain: [{ t: 'p', c: t('ข้อความโจทย์') }],
+              }),
+            ],
+          }),
+          node('worked-solutions/03/h2-2', 2, 'Sol', {
+            solution: true,
+            merge: true,
+            children: [
+              node('worked-solutions/03/h2-2.h3-1', 3, 'ส่วนที่หนึ่ง', {
+                explain: [{ t: 'p', c: t('ขั้นที่หนึ่ง') }],
+              }),
+              node('worked-solutions/03/h2-2.h3-2', 3, 'ส่วนที่สอง', {
+                examples: [
+                  {
+                    t: 'example',
+                    id: 'e',
+                    problem: [],
+                    sol: [{ t: 'p', c: t('ขั้นที่สอง') }],
+                    ans: [{ t: 'p', c: t('คำตอบ') }],
+                  },
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+    };
+    loadContentFile.mockResolvedValue(merged);
+    localStorage.setItem('dln:show-solutions', '1');
+    render(
+      <MemoryRouter>
+        <SolutionsProvider>
+          <ContentPage
+            collection="worked-solutions"
+            chapter="03"
+            variant="exercises"
+            badge="แนวข้อสอบ"
+          />
+        </SolutionsProvider>
+      </MemoryRouter>,
+    );
+    expect(await screen.findByText('ขั้นที่หนึ่ง')).toBeInTheDocument();
+    expect(screen.getByText('ขั้นที่สอง')).toBeInTheDocument();
+    expect(screen.getByText('คำตอบ')).toBeInTheDocument();
+    expect(screen.getAllByText('Sol')).toHaveLength(1);
+    expect(screen.queryByRole('heading', { name: 'ส่วนที่หนึ่ง' })).toBeNull();
+    expect(screen.queryByRole('heading', { name: 'Sol' })).toBeNull();
+    localStorage.clear();
+  });
+
   it('shows an error with a retry button and recovers', async () => {
     loadContentFile.mockRejectedValueOnce(new Error('network')).mockResolvedValue(file);
     renderPage();

@@ -140,6 +140,7 @@ type Raw = {
   title: Inline[];
   when?: Record<string, string[]>;
   solution?: true;
+  merge?: true;
   line: number;
   blocks: Block[];
   children: Raw[];
@@ -155,6 +156,7 @@ export function buildRaw(tokens: Token[], file: string): Raw {
         title: t.title,
         ...(t.when ? { when: t.when } : {}),
         ...(t.solution ? { solution: true as const } : {}),
+        ...(t.merge ? { merge: true as const } : {}),
         line: t.line,
         blocks: [],
         children: [],
@@ -200,6 +202,7 @@ function make(
     title: raw.title,
     ...(raw.when ? { when: raw.when } : {}),
     ...(raw.solution ? { solution: true as const } : {}),
+    ...(raw.merge ? { merge: true as const } : {}),
     explain: parts.explain,
     examples: parts.examples,
     ...(parts.examplesTitle ? { examplesTitle: parts.examplesTitle } : {}),

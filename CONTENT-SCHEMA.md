@@ -102,7 +102,7 @@ A chapter can let the reader choose what is shown (chapter 6: the code, the way 
 
 - A line `@choices` alone: where the buttons of the page are shown (a block `{ t: 'choices' }` of the section it is in), for example under the problem that the cards answer. Without it the buttons are under the page heading. The build refuses `@choices` in a chapter that has no `@select`.
 
-- The word `sol` alone in the same braces (`## เฉลย {sol}`, `### ... {code=bcd; sol}`) says that the section is a **solution** : it is shown only when the solutions switch of the page is on (the exam pages of the final). A bare word other than `sol` is refused.
+- The word `sol` alone in the same braces (`## เฉลย {sol}`, `### ... {code=bcd; sol}`) says that the section is a **solution** : it is shown only when the solutions switch of the page is on (the exam pages of the final). The word `merge` with it (`## Sol {sol; merge}`) draws the cards of the section as one block with the label Sol and no titles, and the section gets no jump chip : the exam of the final uses it for the solution of the decoder, whose cards are shared by many problems. A bare word other than `sol` and `merge` is refused.
 
 The build refuses a `{...}` that names a choice the page does not have, or a value that is not one of its options. The choices that the reader made are kept in the browser, per chapter, and dropped when they no longer name an option.
 

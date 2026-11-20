@@ -9,6 +9,7 @@ export type Token =
       title: Inline[];
       when?: Record<string, string[]>;
       solution?: true;
+      merge?: true;
       line: number;
     }
   | { k: 'block'; block: Block; line: number };
@@ -23,7 +24,8 @@ const HEADING_RE = /^(#{1,6})\s+(.*)$/;
 /**
  * `{code=bcd; method=andor,nand}` at the end of a heading: the choices for which the card is shown. The word `sol`
  * alone in it (`{sol}`, `{code=bcd; sol}`) says that the section is a solution : it is shown only when the
- * solutions switch of the page is on.
+ * solutions switch of the page is on. The word `merge` says that the cards of the section are drawn as one block
+ * with the label Sol (`## Sol {sol; merge}`).
  */
 const WHEN_RE =
   /\s*\{\s*([a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?(?:\s*;\s*[a-z][a-z0-9_]*(?:=[a-z0-9_,]+)?)*)\s*\}\s*$/;
@@ -312,12 +314,13 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
       const marker = WHEN_RE.exec(h[2]);
       const items = marker ? marker[1].split(';').map((p) => p.trim()) : [];
       const bare = items.filter((p) => !p.includes('='));
-      const badWord = bare.find((p) => p !== 'sol');
+      const badWord = bare.find((p) => p !== 'sol' && p !== 'merge');
       if (badWord)
         throw new ParseError(
-          `${where}: {${badWord}} is not known, a bare word in a heading can only be sol`,
+          `${where}: {${badWord}} is not known, a bare word in a heading can only be sol or merge`,
         );
-      const solution = bare.length > 0;
+      const solution = bare.includes('sol');
+      const merge = bare.includes('merge');
       const pairs = items.filter((p) => p.includes('='));
       const when: Record<string, string[]> | undefined =
         pairs.length > 0
@@ -334,6 +337,7 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
         title: parseInline((marker ? h[2].slice(0, marker.index) : h[2]).trim(), where),
         ...(when ? { when } : {}),
         ...(solution ? { solution: true as const } : {}),
+        ...(merge ? { merge: true as const } : {}),
         line: no,
       });
       i++;

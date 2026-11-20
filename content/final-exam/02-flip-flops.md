@@ -8,9 +8,7 @@
 
 ---
 
-## โจทย์
-
-เลือก **ชนิดฟลิป-ฟลอป** **การกระตุ้น** (ขอบ หรือพัลส์ระดับ) **ขา PS และ CLR** **ชุดสัญญาณ** และ **สิ่งที่โจทย์ให้** ด้านล่างนี้ โจทย์จะเปลี่ยนตามที่เลือก ฟลิป-ฟลอปที่กระตุ้นด้วยพัลส์ระดับมีเฉพาะ D และ Clock RS กดสวิตช์ "แสดงเฉลย" เพื่อดูวิธีทำ
+## ข้อ 2 ฟลิป-ฟลอป
 
 @choices
 
@@ -8268,9 +8266,9 @@ PS และ CLR ทำงานเมื่อเป็น $0$ และทำ�
 </svg>
 </div>
 
-## เฉลย {sol}
+## Sol {sol; merge}
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=jk; trig=rise; pins=none; set=a}
+### Sol {ff=jk; trig=rise; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -8312,7 +8310,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=jk; trig=rise; pins=none; set=b}
+### Sol {ff=jk; trig=rise; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -8354,7 +8352,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=jk; trig=rise; pins=none; set=c}
+### Sol {ff=jk; trig=rise; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -8396,7 +8394,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=jk; trig=rise; pins=ps; set=a}
+### Sol {ff=jk; trig=rise; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -8458,7 +8456,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=jk; trig=rise; pins=ps; set=b}
+### Sol {ff=jk; trig=rise; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -8520,7 +8518,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=jk; trig=rise; pins=ps; set=c}
+### Sol {ff=jk; trig=rise; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -8582,7 +8580,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=jk; trig=fall; pins=none; set=a}
+### Sol {ff=jk; trig=fall; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -8624,7 +8622,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=jk; trig=fall; pins=none; set=b}
+### Sol {ff=jk; trig=fall; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -8666,7 +8664,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=jk; trig=fall; pins=none; set=c}
+### Sol {ff=jk; trig=fall; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -8708,7 +8706,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=jk; trig=fall; pins=ps; set=a}
+### Sol {ff=jk; trig=fall; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -8770,7 +8768,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=jk; trig=fall; pins=ps; set=b}
+### Sol {ff=jk; trig=fall; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -8832,7 +8830,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=jk; trig=fall; pins=ps; set=c}
+### Sol {ff=jk; trig=fall; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -8894,7 +8892,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=d; trig=rise; pins=none; set=a}
+### Sol {ff=d; trig=rise; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -8934,7 +8932,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=d; trig=rise; pins=none; set=b}
+### Sol {ff=d; trig=rise; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -8974,7 +8972,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 1,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=d; trig=rise; pins=none; set=c}
+### Sol {ff=d; trig=rise; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9014,7 +9012,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=d; trig=rise; pins=ps; set=a}
+### Sol {ff=d; trig=rise; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9074,7 +9072,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=d; trig=rise; pins=ps; set=b}
+### Sol {ff=d; trig=rise; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -9134,7 +9132,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=d; trig=rise; pins=ps; set=c}
+### Sol {ff=d; trig=rise; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9194,7 +9192,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=d; trig=fall; pins=none; set=a}
+### Sol {ff=d; trig=fall; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9234,7 +9232,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=d; trig=fall; pins=none; set=b}
+### Sol {ff=d; trig=fall; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -9274,7 +9272,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 1,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=d; trig=fall; pins=none; set=c}
+### Sol {ff=d; trig=fall; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9314,7 +9312,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=d; trig=fall; pins=ps; set=a}
+### Sol {ff=d; trig=fall; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9374,7 +9372,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=d; trig=fall; pins=ps; set=b}
+### Sol {ff=d; trig=fall; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -9434,7 +9432,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=d; trig=fall; pins=ps; set=c}
+### Sol {ff=d; trig=fall; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9494,7 +9492,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 1) {ff=d; trig=hi; pins=none; set=a}
+### Sol {ff=d; trig=hi; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9557,7 +9555,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 2) {ff=d; trig=hi; pins=none; set=b}
+### Sol {ff=d; trig=hi; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -9618,7 +9616,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 3) {ff=d; trig=hi; pins=none; set=c}
+### Sol {ff=d; trig=hi; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9679,7 +9677,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 1) {ff=d; trig=hi; pins=ps; set=a}
+### Sol {ff=d; trig=hi; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9754,7 +9752,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 2) {ff=d; trig=hi; pins=ps; set=b}
+### Sol {ff=d; trig=hi; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -9825,7 +9823,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 3) {ff=d; trig=hi; pins=ps; set=c}
+### Sol {ff=d; trig=hi; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -9896,7 +9894,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 1) {ff=d; trig=lo; pins=none; set=a}
+### Sol {ff=d; trig=lo; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -9959,7 +9957,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 2) {ff=d; trig=lo; pins=none; set=b}
+### Sol {ff=d; trig=lo; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10020,7 +10018,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 3) {ff=d; trig=lo; pins=none; set=c}
+### Sol {ff=d; trig=lo; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10081,7 +10079,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 1) {ff=d; trig=lo; pins=ps; set=a}
+### Sol {ff=d; trig=lo; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10156,7 +10154,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 2) {ff=d; trig=lo; pins=ps; set=b}
+### Sol {ff=d; trig=lo; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10227,7 +10225,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 3) {ff=d; trig=lo; pins=ps; set=c}
+### Sol {ff=d; trig=lo; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10298,7 +10296,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=t; trig=rise; pins=none; set=a}
+### Sol {ff=t; trig=rise; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10338,7 +10336,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=t; trig=rise; pins=none; set=b}
+### Sol {ff=t; trig=rise; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10378,7 +10376,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=t; trig=rise; pins=none; set=c}
+### Sol {ff=t; trig=rise; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10418,7 +10416,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=t; trig=rise; pins=ps; set=a}
+### Sol {ff=t; trig=rise; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10478,7 +10476,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=t; trig=rise; pins=ps; set=b}
+### Sol {ff=t; trig=rise; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10538,7 +10536,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=t; trig=rise; pins=ps; set=c}
+### Sol {ff=t; trig=rise; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10598,7 +10596,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=t; trig=fall; pins=none; set=a}
+### Sol {ff=t; trig=fall; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10638,7 +10636,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=t; trig=fall; pins=none; set=b}
+### Sol {ff=t; trig=fall; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10678,7 +10676,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=t; trig=fall; pins=none; set=c}
+### Sol {ff=t; trig=fall; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10718,7 +10716,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=t; trig=fall; pins=ps; set=a}
+### Sol {ff=t; trig=fall; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10778,7 +10776,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=t; trig=fall; pins=ps; set=b}
+### Sol {ff=t; trig=fall; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10838,7 +10836,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=t; trig=fall; pins=ps; set=c}
+### Sol {ff=t; trig=fall; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -10898,7 +10896,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=rs; trig=rise; pins=none; set=a}
+### Sol {ff=rs; trig=rise; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -10940,7 +10938,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=rs; trig=rise; pins=none; set=b}
+### Sol {ff=rs; trig=rise; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -10982,7 +10980,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 1,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=rs; trig=rise; pins=none; set=c}
+### Sol {ff=rs; trig=rise; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11024,7 +11022,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 1) {ff=rs; trig=rise; pins=ps; set=a}
+### Sol {ff=rs; trig=rise; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -11086,7 +11084,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 2) {ff=rs; trig=rise; pins=ps; set=b}
+### Sol {ff=rs; trig=rise; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -11148,7 +11146,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้น (ชุดสัญญาณที่ 3) {ff=rs; trig=rise; pins=ps; set=c}
+### Sol {ff=rs; trig=rise; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11210,7 +11208,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=rs; trig=fall; pins=none; set=a}
+### Sol {ff=rs; trig=fall; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -11252,7 +11250,7 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=rs; trig=fall; pins=none; set=b}
+### Sol {ff=rs; trig=fall; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -11294,7 +11292,7 @@ $\mathbf{Ans}\quad Q = 0,\ 1,\ 1,\ 0,\ 1 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=rs; trig=fall; pins=none; set=c}
+### Sol {ff=rs; trig=fall; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11336,7 +11334,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 1) {ff=rs; trig=fall; pins=ps; set=a}
+### Sol {ff=rs; trig=fall; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -11398,7 +11396,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 2) {ff=rs; trig=fall; pins=ps; set=b}
+### Sol {ff=rs; trig=fall; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -11460,7 +11458,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลง (ชุดสัญญาณที่ 3) {ff=rs; trig=fall; pins=ps; set=c}
+### Sol {ff=rs; trig=fall; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11522,7 +11520,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 1) {ff=rs; trig=hi; pins=none; set=a}
+### Sol {ff=rs; trig=hi; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -11589,7 +11587,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 2) {ff=rs; trig=hi; pins=none; set=b}
+### Sol {ff=rs; trig=hi; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -11660,7 +11658,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 3) {ff=rs; trig=hi; pins=none; set=c}
+### Sol {ff=rs; trig=hi; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11735,7 +11733,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 1) {ff=rs; trig=hi; pins=ps; set=a}
+### Sol {ff=rs; trig=hi; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -11812,7 +11810,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 2) {ff=rs; trig=hi; pins=ps; set=b}
+### Sol {ff=rs; trig=hi; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -11893,7 +11891,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์บวก (ชุดสัญญาณที่ 3) {ff=rs; trig=hi; pins=ps; set=c}
+### Sol {ff=rs; trig=hi; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -11978,7 +11976,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 1) {ff=rs; trig=lo; pins=none; set=a}
+### Sol {ff=rs; trig=lo; pins=none; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -12045,7 +12043,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 2) {ff=rs; trig=lo; pins=none; set=b}
+### Sol {ff=rs; trig=lo; pins=none; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -12116,7 +12114,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 3) {ff=rs; trig=lo; pins=none; set=c}
+### Sol {ff=rs; trig=lo; pins=none; set=c}
 
 $\mathbf{Sol}^{n}$
 
@@ -12191,7 +12189,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 1) {ff=rs; trig=lo; pins=ps; set=a}
+### Sol {ff=rs; trig=lo; pins=ps; set=a}
 
 $\mathbf{Sol}^{n}$
 
@@ -12268,7 +12266,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 2) {ff=rs; trig=lo; pins=ps; set=b}
+### Sol {ff=rs; trig=lo; pins=ps; set=b}
 
 $\mathbf{Sol}^{n}$
 
@@ -12349,7 +12347,7 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 </svg>
 </div>
 
-### เฉลย  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่พัลส์ลบ (ชุดสัญญาณที่ 3) {ff=rs; trig=lo; pins=ps; set=c}
+### Sol {ff=rs; trig=lo; pins=ps; set=c}
 
 $\mathbf{Sol}^{n}$
 

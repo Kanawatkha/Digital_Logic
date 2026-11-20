@@ -39,7 +39,7 @@ export type FinalChapter = (typeof FINAL_CHAPTERS)[number];
  * `content/final-exam/`.
  */
 export const FINAL_EXAM_PROBLEMS = [
-  { n: 1, title: 'วงจรถอดรหัส' },
+  { n: 1, title: 'คอมบิเนชันและถอดรหัส' },
   { n: 2, title: 'ฟลิป-ฟลอป' },
   { n: 3, title: 'วงจรนับ' },
   { n: 4, title: 'Verilog' },

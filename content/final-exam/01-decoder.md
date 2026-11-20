@@ -1,18 +1,252 @@
-# ข้อสอบปลายภาค ข้อ 1 วงจรถอดรหัส (Decoder)
+# ข้อสอบปลายภาค ข้อ 1 วงจรคอมบิเนชันและวงจรถอดรหัส
 
 @select code รหัสอินพุต | bcd=BCD-8421 | xs3=Excess-3
-@select method วิธีออกแบบ | andor_nand=AND/OR และ NAND (Minterm) | orand_nor=OR/AND และ NOR (Maxterm) | andor=AND/OR (Minterm) | nand=NAND อย่างเดียว (Minterm) | orand=OR/AND (Maxterm) | nor=NOR อย่างเดียว (Maxterm)
+@select method วิธีออกแบบ | andor=AND/OR (Minterm) | nand=NAND อย่างเดียว (Minterm) | orand=OR/AND (Maxterm) | nor=NOR อย่างเดียว (Maxterm)
 @select digit แสดงผลเลข | 0=0 | 1=1 | 2=2 | 3=3 | 4=4 | 5=5 | 6=6 | 7=7 | 8=8 | 9=9
 
 ---
 
-## โจทย์
+## ข้อ 1.1 จาก Block Diagram และเงื่อนไขที่กำหนดให้ จงออกแบบ Combination circuit เพื่อแจ้งเตือนภัยจากการเกิดคลื่นยักษ์ "สึนามิ"
 
-เลข 0 ถึง 9 ที่ LED 7 ส่วนต้องแสดงตายตัว เลือก **รหัสอินพุต** **วิธีออกแบบ** และ **เลขที่ต้องแสดง** ด้านล่างนี้ โจทย์จะเปลี่ยนตามที่เลือก (ในสไลด์ BCD-8421 ใช้ AND/OR และ NAND ส่วน Excess-3 ใช้ OR/AND และ NOR) กดสวิตช์ "แสดงเฉลย" เพื่อดูวิธีทำ
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="128" viewBox="0 0 500 150" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="150" y="30" width="200" height="90" rx="6"/>
+<line x1="60" y1="50" x2="150" y2="50"/>
+<line x1="350" y1="50" x2="440" y2="50"/>
+<line x1="60" y1="75" x2="150" y2="75"/>
+<line x1="350" y1="75" x2="440" y2="75"/>
+<line x1="60" y1="100" x2="150" y2="100"/>
+<line x1="350" y1="100" x2="440" y2="100"/></g>
+<text x="48" y="56" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">A</text><text x="48" y="81" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">B</text><text x="48" y="106" font-size="20" font-style="italic" text-anchor="end" fill="currentColor" stroke="none">C</text><text x="452" y="56" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text><text x="452" y="81" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Y</text><text x="452" y="106" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Z</text><text x="250" y="68" font-size="17" text-anchor="middle" fill="currentColor" stroke="none">Logic Diagram</text><text x="250" y="92" font-size="17" text-anchor="middle" fill="currentColor" stroke="none">“ภัยจากสึนามิ”</text>
+</svg>
+</div>
+
+- **a.** จงเขียน Truth Table
+- **b.** จงเขียนสมการบูลีน
+- **c.** จงเขียน Logic Diagram
+
+**เงื่อนไข Input**
+
+- ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป ให้ A ทำงาน  A ทำงาน= "A=1"
+- ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ลงมา ให้ A ไม่ทำงาน  A ไม่ทำงาน= "A=0"
+- ถ้าตำแหน่งที่แผ่นดินไหวมีผลต่อประเทศไทยโดยตรง ให้ B ทำงาน
+- ถ้าตำแหน่งที่เกิดที่แผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม ให้ B ไม่ทำงาน
+- ถ้าอยู่ในช่วงน้ำขึ้น ให้ C ทำงาน   ถ้าอยู่ในช่วงน้ำลง ให้ C ไม่ทำงาน
+
+**เงื่อนไขความรุนแรง**
+
+1. ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป (A=1) และตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยตรง (B=1) ให้ X แจ้งเตือนภัย (X=1)
+2. ถ้าเกิดแผ่นดินไหวรุนแรงตั้งแต่ 8 ริกเตอร์ขึ้นไป (A=1) และตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม (B=0) ให้ Y แจ้งเตือนภัย (Y=1)
+3. ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ (A=0) แต่ตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยตรง (B=1) ให้ Y แจ้งเตือนภัย (Y=1)
+4. ถ้าเกิดแผ่นดินไหวรุนแรงน้อยกว่า 8 ริกเตอร์ (A=0) แต่ตำแหน่งที่เกิดแผ่นดินไหวมีผลต่อประเทศไทยโดยอ้อม (B=0) และอยู่ในช่วงน้ำขึ้น (C=1) ให้ Y แจ้งเตือนภัย (Y=1)
+5. ถ้าไม่ตรงกับเงื่อนไขข้างบนทั้ง 4 ข้อ ให้ Z แจ้งเตือนภัย (A,B,C = 0) ทำให้ Z= 1
+
+### ข้อ 1.1.a  จงเขียน Truth Table
+
+$\mathbf{Sol}^{n}$
+
+อินพุต $A$ คือความแรงของแผ่นดินไหว ($1$ เมื่อ $\ge 8$ ริกเตอร์) $B$ คือผลต่อประเทศไทย ($1$ เมื่อโดยตรง) และ $C$ คือระดับน้ำ ($1$ เมื่อน้ำขึ้น) อ่านเงื่อนไขความรุนแรงแล้วหาว่าแต่ละแถวของ $ABC$ ตรงกับข้อไหน
+
+- $A=1,\ B=1$ ตรงข้อ 1 ได้ $X=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $110$ และ $111$)
+- $A=1,\ B=0$ ตรงข้อ 2 ได้ $Y=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $100$ และ $101$)
+- $A=0,\ B=1$ ตรงข้อ 3 ได้ $Y=1$ ไม่ว่า $C$ จะเป็นอะไร (แถว $010$ และ $011$)
+- $A=0,\ B=0,\ C=1$ ตรงข้อ 4 ได้ $Y=1$ (แถว $001$)
+- แถวที่เหลือคือ $A=0,\ B=0,\ C=0$ ไม่ตรงข้อ 1 ถึง 4 จึงตรงข้อ 5 ได้ $Z=1$ (แถว $000$)
+
+ตรวจ : ทุกแถวมีเอาต์พุตเป็น $1$ เพียงตัวเดียว
+
+| $A$ | $B$ | $C$ | $X$ | $Y$ | $Z$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 |
+
+$\mathbf{Ans}\quad X=1$ ที่ $ABC=110,111$ และ $Y=1$ ที่ $ABC=001,010,011,100,101$ และ $Z=1$ ที่ $ABC=000$ (ตารางดังด้านบน)
+
+---
+
+### ข้อ 1.1.b  จงเขียนสมการบูลีน
+
+$\mathbf{Sol}^{n}$
+
+เขียนเป็นผลรวมของมินเทอม ($A$ เป็น MSB) แล้วลดรูป
+
+$$
+\begin{aligned}
+X &= \sum m(6,7) = AB\overline{C}+ABC \\
+&= AB(\overline{C}+C) &&\text{ดึง $AB$ ออก (กระจาย ข้อ 3(b))} \\
+&= AB\cdot1 &&\text{ข้อ 8(a) $C+\overline{C}=1$} \\
+&= AB &&\text{ข้อ 7(b) $X\cdot1=X$}
+\end{aligned}
+$$
+
+$$
+Z=\sum m(0)=\overline{A}\,\overline{B}\,\overline{C}
+$$
+
+$Y=\sum m(1,2,3,4,5)$ ลดรูปด้วย K-map ใส่ $1$ ที่ช่อง $1,2,3,4,5$ แล้วจับลูป
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">AB</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">C</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text>
+<g><rect x="104" y="118" width="50" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="278" y="118" width="50" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="164" y="62" width="46" height="104" rx="14" stroke="#3b8be8" stroke-width="3" fill="none"/>
+<rect x="282" y="64" width="42" height="100" rx="14" stroke="#2fae5f" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+- ลูปสีส้ม (ช่อง $1,5$) : $B=0,\ C=1$ $\Rightarrow \overline{B}C$
+- ลูปสีน้ำเงิน (ช่อง $2,3$) : $A=0,\ B=1$ $\Rightarrow \overline{A}B$
+- ลูปสีเขียว (ช่อง $4,5$) : $A=1,\ B=0$ $\Rightarrow A\overline{B}$
+
+**Y แบบ POS** : $Y=0$ ที่ช่อง $0,6,7$ ($Y=\prod M(0,6,7)$) จึงจับลูปของ $0$ แทน แล้วอ่านค่าแบบ POS คือตัวแปรที่เป็น $0$ เขียนไม่กลับค่า และตัวแปรที่เป็น $1$ เขียนกลับค่า แล้วต่อกันด้วย $+$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">AB</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">C</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text>
+<g><rect x="220" y="60" width="50" height="108" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/>
+<rect x="106" y="62" width="46" height="46" rx="14" stroke="#3b8be8" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+- ลูปสีส้ม (ช่อง $6,7$) : $A=1,\ B=1$ $\Rightarrow (\overline{A}+\overline{B})$
+- ลูปสีน้ำเงิน (ช่อง $0$ ช่องเดียว เพราะช่องข้างเคียงเป็น $1$ หมด) : $A=0,\ B=0,\ C=0$ $\Rightarrow (A+B+C)$
+
+$$
+Y=(A+B+C)(\overline{A}+\overline{B})
+$$
+
+ตรวจว่าเท่ากับแบบ SOP ด้วยการกระจาย (ใช้ทฤษฎีบทในตารางสรุปบทที่ 3)
+
+$$
+\begin{aligned}
+Y &= (A+B+C)(\overline{A}+\overline{B}) \\
+&= A\overline{A}+A\overline{B}+B\overline{A}+B\overline{B}+C\overline{A}+C\overline{B} &&\text{กระจาย ข้อ 3(b)} \\
+&= 0+A\overline{B}+\overline{A}B+0+\overline{A}C+\overline{B}C &&\text{ข้อ 8(b) $X\cdot\overline{X}=0$} \\
+&= A\overline{B}+\overline{A}B+\overline{A}C+\overline{B}C &&\text{ข้อ 7(a) $0+X=X$}
+\end{aligned}
+$$
+
+แยกพจน์ $\overline{A}C$ ออกเป็นสองพจน์ แล้วดึงกลับด้วยข้อ 6
+
+$$
+\begin{aligned}
+\overline{A}C &= \overline{A}C(B+\overline{B}) &&\text{ข้อ 8(a) และข้อ 7(b)} \\
+&= \overline{A}BC+\overline{A}\,\overline{B}C &&\text{กระจาย ข้อ 3(b)}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+Y &= A\overline{B}+\overline{A}B+\overline{A}BC+\overline{A}\,\overline{B}C+\overline{B}C \\
+&= A\overline{B}+\overline{A}B+\overline{B}C &&\text{ข้อ 6(a) $X+XY=X$ ทั้งคู่ คือ $\overline{A}B+\overline{A}BC=\overline{A}B$ และ $\overline{A}\,\overline{B}C+\overline{B}C=\overline{B}C$}
+\end{aligned}
+$$
+
+จึงได้ผลเท่ากับแบบ SOP ทุกประการ
+
+ตรวจ $X$ และ $Z$ ด้วย K-map ได้เช่นกัน
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">AB</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">C</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text>
+<g><rect x="220" y="60" width="50" height="108" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="172" viewBox="0 0 340 196" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><rect x="100" y="56" width="232" height="116"/>
+<line x1="158" y1="56" x2="158" y2="172"/>
+<line x1="216" y1="56" x2="216" y2="172"/>
+<line x1="274" y1="56" x2="274" y2="172"/>
+<line x1="100" y1="114" x2="332" y2="114"/>
+<line x1="26" y1="12" x2="100" y2="56"/></g>
+<text x="80" y="26" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">AB</text><text x="42" y="50" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">C</text><text x="129" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">00</text><text x="187" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">01</text><text x="245" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">11</text><text x="303" y="48" font-size="18" text-anchor="middle" fill="currentColor" stroke="none">10</text><text x="90" y="91" font-size="18" text-anchor="end" fill="currentColor" stroke="none">0</text><text x="90" y="149" font-size="18" text-anchor="end" fill="currentColor" stroke="none">1</text><text x="110" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">0</text><text x="129" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">1</text><text x="168" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">2</text><text x="187" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">6</text><text x="245" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="77" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">4</text><text x="303" y="93" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="110" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">1</text><text x="129" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="168" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">3</text><text x="187" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="226" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">7</text><text x="245" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text><text x="284" y="135" font-size="11" text-anchor="start" fill="currentColor" fill-opacity="0.6" stroke="none">5</text><text x="303" y="151" font-size="22" text-anchor="middle" fill="currentColor" stroke="none">0</text>
+<g><rect x="104" y="60" width="50" height="50" rx="14" stroke="#e8743b" stroke-width="3" fill="none"/></g>
+</svg>
+</div>
+
+$\mathbf{Ans}\quad X=\mathbf{AB},\quad Y=\mathbf{\overline{A}B+A\overline{B}+\overline{B}C}\ \text{(SOP)}=\mathbf{(A+B+C)(\overline{A}+\overline{B})}\ \text{(POS)},\quad Z=\mathbf{\overline{A}\,\overline{B}\,\overline{C}}$
+
+---
+
+### ข้อ 1.1.c  จงเขียน Logic Diagram
+
+$\mathbf{Sol}^{n}$
+
+ใช้สมการจากข้อ 9.b : $X=AB$ ใช้ AND 1 ตัว, $Y=\overline{A}B+A\overline{B}+\overline{B}C$ ใช้ AND 3 ตัวแล้ว OR รวม และ $Z=\overline{A}\,\overline{B}\,\overline{C}$ ใช้ AND 3 อินพุต 1 ตัว โดยมีตัวกลับค่า (NOT) ของ $A$, $B$, $C$ ไว้ใช้ร่วมกัน
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="468" viewBox="0 0 640 520" font-family="Times New Roman, serif" font-size="20" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.8" fill="none"><path d="M90 20L130 40L90 60Z"/>
+<circle cx="135" cy="40" r="5"/>
+<path d="M90 130L130 150L90 170Z"/>
+<circle cx="135" cy="150" r="5"/>
+<path d="M90 240L130 260L90 280Z"/>
+<circle cx="135" cy="260" r="5"/>
+<path d="M240 70H270A25.0 25.0 0 0 1 270 120H240Z"/>
+<path d="M240 175H270A25.0 25.0 0 0 1 270 225H240Z"/>
+<path d="M240 290H270A25.0 25.0 0 0 1 270 340H240Z"/>
+<path d="M240 360H270A25.0 25.0 0 0 1 270 410H240Z"/>
+<path d="M240 430H270A33.0 33.0 0 0 1 270 496H240Z"/>
+<path d="M400 270Q440 270 460 303.0Q440 336 400 336Q414 303.0 400 270Z"/>
+<polyline points="36,40 90,40"/>
+<polyline points="36,40 50,40 50,82.0 240,82.0"/>
+<polyline points="36,40 56,40 56,302.0 240,302.0"/>
+<polyline points="36,150 40,150 90,150"/>
+<polyline points="36,150 62,150 62,108.0 240,108.0"/>
+<polyline points="36,150 68,150 68,213.0 240,213.0"/>
+<polyline points="36,260 90,260"/>
+<polyline points="36,260 74,260 74,398.0 240,398.0"/>
+<polyline points="140,40 160,40 160,187.0 240,187.0"/>
+<polyline points="140,40 170,40 170,442.0 240,442.0"/>
+<polyline points="140,150 180,150 180,328.0 240,328.0"/>
+<polyline points="140,150 190,150 190,372.0 240,372.0"/>
+<polyline points="140,150 200,150 200,463.0 240,463.0"/>
+<polyline points="140,260 210,260 210,484.0 240,484.0"/>
+<polyline points="295.0,200.0 340,200.0 340,282.0 400,282.0"/>
+<polyline points="295.0,315.0 350,315.0 350,303.0 400,303.0"/>
+<polyline points="295.0,385.0 360,385.0 360,324.0 400,324.0"/>
+<line x1="295.0" y1="95.0" x2="345.0" y2="95.0"/>
+<line x1="460" y1="303.0" x2="510" y2="303.0"/>
+<line x1="303.0" y1="463.0" x2="353.0" y2="463.0"/></g>
+<circle cx="50" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="56" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="62" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="68" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="74" cy="260" r="3" fill="currentColor" stroke="none"/><circle cx="160" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="170" cy="40" r="3" fill="currentColor" stroke="none"/><circle cx="180" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="190" cy="150" r="3" fill="currentColor" stroke="none"/><circle cx="200" cy="150" r="3" fill="currentColor" stroke="none"/>
+<text x="12" y="46" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">A</text><text x="12" y="156" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">B</text><text x="12" y="266" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">C</text><text x="357.0" y="101.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">X</text><text x="522" y="309.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Y</text><text x="365.0" y="469.0" font-size="20" font-style="italic" text-anchor="start" fill="currentColor" stroke="none">Z</text>
+</svg>
+</div>
+
+$\mathbf{Ans}\quad$ วงจรดังรูปด้านบน
+
+## ข้อ 1.2 วงจรถอดรหัส
 
 @choices
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=andor_nand; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=andor; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -53,888 +287,8 @@
 - (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=andor_nand; digit=1}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=andor_nand; digit=2}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=andor_nand; digit=3}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=andor_nand; digit=4}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=andor_nand; digit=5}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=andor_nand; digit=6}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=andor_nand; digit=7}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=andor_nand; digit=8}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=andor_nand; digit=9}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=orand_nor; digit=0}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=orand_nor; digit=1}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=orand_nor; digit=2}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=orand_nor; digit=3}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=orand_nor; digit=4}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=orand_nor; digit=5}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=orand_nor; digit=6}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=orand_nor; digit=7}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=orand_nor; digit=8}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=orand_nor; digit=9}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=andor; digit=0}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">BCD-8421</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ BCD-8421 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=andor; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=andor; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -976,7 +330,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=andor; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=andor; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1018,7 +372,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=andor; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=andor; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1060,7 +414,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=andor; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=andor; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1102,7 +456,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=andor; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=andor; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1144,7 +498,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=andor; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=andor; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1186,7 +540,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=andor; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=andor; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1228,7 +582,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=andor; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=andor; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1270,7 +624,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=andor; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=andor; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1312,7 +666,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=nand; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=nand; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1355,7 +709,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=nand; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=nand; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1398,7 +752,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=nand; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=nand; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1441,7 +795,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=nand; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=nand; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1484,7 +838,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=nand; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=nand; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1527,7 +881,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=nand; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=nand; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1570,7 +924,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=nand; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=nand; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1613,7 +967,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=nand; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=nand; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1656,7 +1010,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=nand; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=nand; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1699,7 +1053,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=nand; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=nand; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1742,7 +1096,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=orand; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=orand; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1784,7 +1138,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=orand; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=orand; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1826,7 +1180,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=orand; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=orand; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1868,7 +1222,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=orand; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=orand; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1910,7 +1264,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=orand; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=orand; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1952,7 +1306,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=orand; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=orand; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1994,7 +1348,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=orand; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=orand; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2036,7 +1390,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=orand; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=orand; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2078,7 +1432,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=orand; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=orand; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2120,7 +1474,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=orand; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=orand; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2162,7 +1516,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=nor; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 0 {code=bcd; method=nor; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2205,7 +1559,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=nor; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 1 {code=bcd; method=nor; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2248,7 +1602,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=nor; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 2 {code=bcd; method=nor; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2291,7 +1645,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=nor; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 3 {code=bcd; method=nor; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2334,7 +1688,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=nor; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 4 {code=bcd; method=nor; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2377,7 +1731,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=nor; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 5 {code=bcd; method=nor; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2420,7 +1774,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=nor; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 6 {code=bcd; method=nor; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2463,7 +1817,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=nor; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 7 {code=bcd; method=nor; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2506,7 +1860,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=nor; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 8 {code=bcd; method=nor; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2549,7 +1903,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=nor; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก BCD-8421 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 9 {code=bcd; method=nor; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2592,887 +1946,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=andor_nand; digit=0}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=andor_nand; digit=1}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=andor_nand; digit=2}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=andor_nand; digit=3}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=andor_nand; digit=4}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=andor_nand; digit=5}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=andor_nand; digit=6}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=andor_nand; digit=7}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=andor_nand; digit=8}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR และ NAND แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=andor_nand; digit=9}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต AND/OR
-- (ง) แปลงสมการให้ใช้ NAND อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NAND อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=orand_nor; digit=0}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=orand_nor; digit=1}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=orand_nor; digit=2}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=orand_nor; digit=3}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=orand_nor; digit=4}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=orand_nor; digit=5}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=orand_nor; digit=6}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=orand_nor; digit=7}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=orand_nor; digit=8}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND และ NOR แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=orand_nor; digit=9}
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="170" y="14" width="190" height="160" rx="2"/>
-<line x1="110" y1="42" x2="170" y2="42"/>
-<line x1="110" y1="78" x2="170" y2="78"/>
-<line x1="110" y1="114" x2="170" y2="114"/>
-<line x1="110" y1="150" x2="170" y2="150"/>
-<line x1="360" y1="30" x2="410" y2="30"/>
-<line x1="360" y1="51" x2="410" y2="51"/>
-<line x1="360" y1="72" x2="410" y2="72"/>
-<line x1="360" y1="93" x2="410" y2="93"/>
-<line x1="360" y1="114" x2="410" y2="114"/>
-<line x1="360" y1="135" x2="410" y2="135"/>
-<line x1="360" y1="156" x2="410" y2="156"/>
-<rect x="410" y="14" width="110" height="160" rx="2"/>
-</g>
-<text x="100" y="48" text-anchor="end">A</text>
-<text x="100" y="84" text-anchor="end">B</text>
-<text x="100" y="120" text-anchor="end">C</text>
-<text x="100" y="156" text-anchor="end">D</text>
-<text x="265" y="68" text-anchor="middle">Excess-3</text><text x="265" y="92" text-anchor="middle">to</text><text x="265" y="116" text-anchor="middle">Decimal</text>
-<text x="265" y="156" text-anchor="middle" font-size="15">7 Segment Display</text>
-<text x="385" y="26" text-anchor="middle" font-size="14">a</text>
-<text x="385" y="47" text-anchor="middle" font-size="14">b</text>
-<text x="385" y="68" text-anchor="middle" font-size="14">c</text>
-<text x="385" y="89" text-anchor="middle" font-size="14">d</text>
-<text x="385" y="110" text-anchor="middle" font-size="14">e</text>
-<text x="385" y="131" text-anchor="middle" font-size="14">f</text>
-<text x="385" y="152" text-anchor="middle" font-size="14">g</text>
-<g transform="translate(438,52) scale(0.9)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-</svg>
-</div>
-
-**จงทำตามขั้นตอนต่อไปนี้**
-
-- (ก) เขียนตารางความจริงของ Excess-3 ไป LED 7 ส่วน (รหัสที่ไม่ใช้เป็น $d$)
-- (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
-- (ค) เขียนวงจรด้วยเกต OR/AND
-- (ง) แปลงสมการให้ใช้ NOR อย่างเดียว
-- (จ) เขียนวงจรด้วยเกต NOR อย่างเดียว
-
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=andor; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=andor; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3514,7 +1988,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=andor; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=andor; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3556,7 +2030,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=andor; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=andor; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3598,7 +2072,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=andor; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=andor; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3640,7 +2114,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=andor; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=andor; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3682,7 +2156,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=andor; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=andor; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3724,7 +2198,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=andor; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=andor; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3766,7 +2240,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=andor; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=andor; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3808,7 +2282,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=andor; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=andor; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3850,7 +2324,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=andor; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด AND/OR แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=andor; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3892,7 +2366,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $1$ (Minterm) อ่านเป็นผลบวกของผลคูณ หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต AND/OR
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=nand; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=nand; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3935,7 +2409,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=nand; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=nand; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3978,7 +2452,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=nand; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=nand; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4021,7 +2495,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=nand; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=nand; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4064,7 +2538,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=nand; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=nand; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4107,7 +2581,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=nand; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=nand; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4150,7 +2624,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=nand; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=nand; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4193,7 +2667,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=nand; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=nand; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4236,7 +2710,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=nand; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=nand; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4279,7 +2753,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=nand; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NAND แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=nand; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4322,7 +2796,7 @@
 - (ค) แปลงสมการให้ใช้ NAND อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NAND อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=orand; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=orand; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4364,7 +2838,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $0$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=orand; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=orand; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4406,7 +2880,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $1$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=orand; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=orand; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4448,7 +2922,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $2$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=orand; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=orand; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4490,7 +2964,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $3$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=orand; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=orand; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4532,7 +3006,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $4$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=orand; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=orand; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4574,7 +3048,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $5$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=orand; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=orand; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4616,7 +3090,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $6$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=orand; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=orand; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4658,7 +3132,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $7$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=orand; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=orand; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4700,7 +3174,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $8$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=orand; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด OR/AND แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=orand; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4742,7 +3216,7 @@
 - (ข) หา segment ที่ต้องติดเมื่อแสดงเลข $9$ แล้วทำ K-map โดยใส่ $0$ (Maxterm) อ่านเป็นผลคูณของผลบวก หาสมการของแต่ละ segment
 - (ค) เขียนวงจรด้วยเกต OR/AND
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=nor; digit=0}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 0 {code=xs3; method=nor; digit=0}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4785,7 +3259,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=nor; digit=1}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 1 {code=xs3; method=nor; digit=1}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4828,7 +3302,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=nor; digit=2}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 2 {code=xs3; method=nor; digit=2}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4871,7 +3345,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=nor; digit=3}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 3 {code=xs3; method=nor; digit=3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4914,7 +3388,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=nor; digit=4}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 4 {code=xs3; method=nor; digit=4}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4957,7 +3431,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=nor; digit=5}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 5 {code=xs3; method=nor; digit=5}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5000,7 +3474,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=nor; digit=6}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 6 {code=xs3; method=nor; digit=6}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5043,7 +3517,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=nor; digit=7}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 7 {code=xs3; method=nor; digit=7}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5086,7 +3560,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=nor; digit=8}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 8 {code=xs3; method=nor; digit=8}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5129,7 +3603,7 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-### ข้อ 1  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=nor; digit=9}
+### ข้อ 1.2  ออกแบบวงจรถอดรหัสจาก Excess-3 4 บิต เป็นรหัส Decimal โดยใช้ Gate ชนิด NOR แสดงผล LED 7 ส่วน เลข 9 {code=xs3; method=nor; digit=9}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="190" viewBox="0 0 560 190" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5172,11 +3646,9 @@
 - (ค) แปลงสมการให้ใช้ NOR อย่างเดียว
 - (ง) เขียนวงจรด้วยเกต NOR อย่างเดียว
 
-## เฉลย {sol}
+## Sol {sol; merge}
 
-### เฉลย ตารางความจริงของ BCD-8421 ไป LED 7 ส่วน {code=bcd}
-
-อินพุตคือรหัส BCD-8421 4 บิต $A, B, C, D$ ($A$ เป็น MSB) เอาต์พุต $a$ ถึง $g$ เป็น $1$ เมื่อ LED ส่วนนั้นสว่าง คอลัมน์ Decimal คือเลขที่ต้องการแสดง รหัส $1010$ ถึง $1111$ ไม่มีใช้ จึงเป็น $d$ (don't care)
+### ตารางความจริง {code=bcd}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="610" height="479" viewBox="0 0 610 479" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5394,9 +3866,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 0 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=0}
+### segment ของเลข 0 {code=bcd; digit=0}
 
-เลข $0$ ในรหัส BCD-8421 คือ $ABCD = 0000$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, e, f$ ส่วน segment $g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, e, f$ เท่านั้น
+เลข $0$ ($ABCD = 0000$) ใช้ segment $a, b, c, d, e, f$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5405,9 +3877,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 1 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=1}
+### segment ของเลข 1 {code=bcd; digit=1}
 
-เลข $1$ ในรหัส BCD-8421 คือ $ABCD = 0001$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $b, c$ ส่วน segment $a, d, e, f, g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $b, c$ เท่านั้น
+เลข $1$ ($ABCD = 0001$) ใช้ segment $b, c$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5416,9 +3888,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 2 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=2}
+### segment ของเลข 2 {code=bcd; digit=2}
 
-เลข $2$ ในรหัส BCD-8421 คือ $ABCD = 0010$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, d, e, g$ ส่วน segment $c, f$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, d, e, g$ เท่านั้น
+เลข $2$ ($ABCD = 0010$) ใช้ segment $a, b, d, e, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5427,9 +3899,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 3 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=3}
+### segment ของเลข 3 {code=bcd; digit=3}
 
-เลข $3$ ในรหัส BCD-8421 คือ $ABCD = 0011$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, g$ ส่วน segment $e, f$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, g$ เท่านั้น
+เลข $3$ ($ABCD = 0011$) ใช้ segment $a, b, c, d, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5438,9 +3910,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 4 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=4}
+### segment ของเลข 4 {code=bcd; digit=4}
 
-เลข $4$ ในรหัส BCD-8421 คือ $ABCD = 0100$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $b, c, f, g$ ส่วน segment $a, d, e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $b, c, f, g$ เท่านั้น
+เลข $4$ ($ABCD = 0100$) ใช้ segment $b, c, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5449,9 +3921,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 5 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=5}
+### segment ของเลข 5 {code=bcd; digit=5}
 
-เลข $5$ ในรหัส BCD-8421 คือ $ABCD = 0101$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, c, d, f, g$ ส่วน segment $b, e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, c, d, f, g$ เท่านั้น
+เลข $5$ ($ABCD = 0101$) ใช้ segment $a, c, d, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5460,9 +3932,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 6 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=6}
+### segment ของเลข 6 {code=bcd; digit=6}
 
-เลข $6$ ในรหัส BCD-8421 คือ $ABCD = 0110$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, c, d, e, f, g$ ส่วน segment $b$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, c, d, e, f, g$ เท่านั้น
+เลข $6$ ($ABCD = 0110$) ใช้ segment $a, c, d, e, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5471,9 +3943,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 7 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=7}
+### segment ของเลข 7 {code=bcd; digit=7}
 
-เลข $7$ ในรหัส BCD-8421 คือ $ABCD = 0111$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c$ ส่วน segment $d, e, f, g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c$ เท่านั้น
+เลข $7$ ($ABCD = 0111$) ใช้ segment $a, b, c$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5482,9 +3954,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 8 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=8}
+### segment ของเลข 8 {code=bcd; digit=8}
 
-เลข $8$ ในรหัส BCD-8421 คือ $ABCD = 1000$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, e, f, g$ ครบทั้ง 7 ส่วน ไม่มี segment ที่ดับ ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, e, f, g$ เท่านั้น
+เลข $8$ ($ABCD = 1000$) ใช้ segment $a, b, c, d, e, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5493,9 +3965,9 @@
 </svg>
 </div>
 
-### เฉลย เลข 9 ใช้ segment อะไรบ้าง (BCD-8421) {code=bcd; digit=9}
+### segment ของเลข 9 {code=bcd; digit=9}
 
-เลข $9$ ในรหัส BCD-8421 คือ $ABCD = 1001$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, f, g$ ส่วน segment $e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, f, g$ เท่านั้น
+เลข $9$ ($ABCD = 1001$) ใช้ segment $a, b, c, d, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5504,11 +3976,7 @@
 </svg>
 </div>
 
-### เฉลย สมการของ segment a (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $a = 1$ คือ เลขรหัส $0,2,3,5,6,7,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment a (Minterm) {code=bcd; method=andor,nand; digit=0,2,3,5,6,7,8,9}
 
 $a = \sum m(0,2,3,5,6,7,8,9) + d(10,11,12,13,14,15)$
 
@@ -5577,18 +4045,9 @@ $a = \sum m(0,2,3,5,6,7,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
-- ลูปสีน้ำเงิน (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
-- ลูปสีเขียว (ช่อง $5,7,13,15$) : $B=1,\ D=1 \Rightarrow BD$
-- ลูปสีม่วง (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
+$a = A+C+BD+\overline{B}\,\overline{D}$
 
-$\mathbf{Ans}\quad a = A+C+BD+\overline{B}\,\overline{D}$
-
-### เฉลย สมการของ segment b (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $b = 1$ คือ เลขรหัส $0,1,2,3,4,7,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment b (Minterm) {code=bcd; method=andor,nand; digit=0,1,2,3,4,7,8,9}
 
 $b = \sum m(0,1,2,3,4,7,8,9) + d(10,11,12,13,14,15)$
 
@@ -5653,17 +4112,9 @@ $b = \sum m(0,1,2,3,4,7,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
-- ลูปสีน้ำเงิน (ช่อง $0,4,8,12$) : $C=0,\ D=0 \Rightarrow \overline{C}\,\overline{D}$
-- ลูปสีเขียว (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow CD$
+$b = \overline{B}+\overline{C}\,\overline{D}+CD$
 
-$\mathbf{Ans}\quad b = \overline{B}+\overline{C}\,\overline{D}+CD$
-
-### เฉลย สมการของ segment c (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $c = 1$ คือ เลขรหัส $0,1,3,4,5,6,7,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment c (Minterm) {code=bcd; method=andor,nand; digit=0,1,3,4,5,6,7,8,9}
 
 $c = \sum m(0,1,3,4,5,6,7,8,9) + d(10,11,12,13,14,15)$
 
@@ -5728,17 +4179,9 @@ $c = \sum m(0,1,3,4,5,6,7,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $4,5,6,7,12,13,14,15$) : $B=1 \Rightarrow B$
-- ลูปสีน้ำเงิน (ช่อง $0,1,4,5,8,9,12,13$) : $C=0 \Rightarrow \overline{C}$
-- ลูปสีเขียว (ช่อง $1,3,5,7,9,11,13,15$) : $D=1 \Rightarrow D$
+$c = B+\overline{C}+D$
 
-$\mathbf{Ans}\quad c = B+\overline{C}+D$
-
-### เฉลย สมการของ segment d (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $d = 1$ คือ เลขรหัส $0,2,3,5,6,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment d (Minterm) {code=bcd; method=andor,nand; digit=0,2,3,5,6,8,9}
 
 $d = \sum m(0,2,3,5,6,8,9) + d(10,11,12,13,14,15)$
 
@@ -5809,19 +4252,9 @@ $d = \sum m(0,2,3,5,6,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
-- ลูปสีน้ำเงิน (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
-- ลูปสีเขียว (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow \overline{B}C$
-- ลูปสีม่วง (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
-- ลูปสีเหลือง (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow B\overline{C}D$
+$d = A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D$
 
-$\mathbf{Ans}\quad d = A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D$
-
-### เฉลย สมการของ segment e (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $e = 1$ คือ เลขรหัส $0,2,6,8$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment e (Minterm) {code=bcd; method=andor,nand; digit=0,2,6,8}
 
 $e = \sum m(0,2,6,8) + d(10,11,12,13,14,15)$
 
@@ -5882,16 +4315,9 @@ $e = \sum m(0,2,6,8) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,2,8,10$) : $B=0,\ D=0 \Rightarrow \overline{B}\,\overline{D}$
-- ลูปสีน้ำเงิน (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
+$e = \overline{B}\,\overline{D}+C\overline{D}$
 
-$\mathbf{Ans}\quad e = \overline{B}\,\overline{D}+C\overline{D}$
-
-### เฉลย สมการของ segment f (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $f = 1$ คือ เลขรหัส $0,4,5,6,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment f (Minterm) {code=bcd; method=andor,nand; digit=0,4,5,6,8,9}
 
 $f = \sum m(0,4,5,6,8,9) + d(10,11,12,13,14,15)$
 
@@ -5956,18 +4382,9 @@ $f = \sum m(0,4,5,6,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
-- ลูปสีน้ำเงิน (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow B\overline{C}$
-- ลูปสีเขียว (ช่อง $4,6,12,14$) : $B=1,\ D=0 \Rightarrow B\overline{D}$
-- ลูปสีม่วง (ช่อง $0,4,8,12$) : $C=0,\ D=0 \Rightarrow \overline{C}\,\overline{D}$
+$f = A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}$
 
-$\mathbf{Ans}\quad f = A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}$
-
-### เฉลย สมการของ segment g (BCD-8421, Minterm) {code=bcd; method=andor_nand,andor,nand; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $g = 1$ คือ เลขรหัส $2,3,4,5,6,8,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment g (Minterm) {code=bcd; method=andor,nand; digit=2,3,4,5,6,8,9}
 
 $g = \sum m(2,3,4,5,6,8,9) + d(10,11,12,13,14,15)$
 
@@ -6033,18 +4450,9 @@ $g = \sum m(2,3,4,5,6,8,9) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow B\overline{C}$
-- ลูปสีน้ำเงิน (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
-- ลูปสีเขียว (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow \overline{B}C$
-- ลูปสีม่วง (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
+$g = B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}$
 
-$\mathbf{Ans}\quad g = B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}$
-
-### เฉลย สมการของ segment a (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $a = 0$ คือ เลขรหัส $1,4$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment a (Maxterm) {code=bcd; method=orand,nor; digit=0,2,3,5,6,7,8,9}
 
 $a = \prod M(1,4) \cdot d(10,11,12,13,14,15)$
 
@@ -6100,16 +4508,9 @@ $a = \prod M(1,4) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1$) : $A=0,\ B=0,\ C=0,\ D=1 \Rightarrow (A+B+C+\overline{D})$
-- ลูปสีน้ำเงิน (ช่อง $4,12$) : $B=1,\ C=0,\ D=0 \Rightarrow (\overline{B}+C+D)$
+$a = (A+B+C+\overline{D})(\overline{B}+C+D)$
 
-$\mathbf{Ans}\quad a = (A+B+C+\overline{D})(\overline{B}+C+D)$
-
-### เฉลย สมการของ segment b (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $b = 0$ คือ เลขรหัส $5,6$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment b (Maxterm) {code=bcd; method=orand,nor; digit=0,1,2,3,4,7,8,9}
 
 $b = \prod M(5,6) \cdot d(10,11,12,13,14,15)$
 
@@ -6165,16 +4566,9 @@ $b = \prod M(5,6) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow (\overline{B}+C+\overline{D})$
-- ลูปสีน้ำเงิน (ช่อง $6,14$) : $B=1,\ C=1,\ D=0 \Rightarrow (\overline{B}+\overline{C}+D)$
+$b = (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)$
 
-$\mathbf{Ans}\quad b = (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)$
-
-### เฉลย สมการของ segment c (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $c = 0$ คือ เลขรหัส $2$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment c (Maxterm) {code=bcd; method=orand,nor; digit=0,1,3,4,5,6,7,8,9}
 
 $c = \prod M(2) \cdot d(10,11,12,13,14,15)$
 
@@ -6228,15 +4622,9 @@ $c = \prod M(2) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $2,10$) : $B=0,\ C=1,\ D=0 \Rightarrow (B+\overline{C}+D)$
+$c = (B+\overline{C}+D)$
 
-$\mathbf{Ans}\quad c = (B+\overline{C}+D)$
-
-### เฉลย สมการของ segment d (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $d = 0$ คือ เลขรหัส $1,4,7$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment d (Maxterm) {code=bcd; method=orand,nor; digit=0,2,3,5,6,8,9}
 
 $d = \prod M(1,4,7) \cdot d(10,11,12,13,14,15)$
 
@@ -6295,17 +4683,9 @@ $d = \prod M(1,4,7) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1$) : $A=0,\ B=0,\ C=0,\ D=1 \Rightarrow (A+B+C+\overline{D})$
-- ลูปสีน้ำเงิน (ช่อง $4,12$) : $B=1,\ C=0,\ D=0 \Rightarrow (\overline{B}+C+D)$
-- ลูปสีเขียว (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+$d = (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})$
 
-$\mathbf{Ans}\quad d = (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})$
-
-### เฉลย สมการของ segment e (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $e = 0$ คือ เลขรหัส $1,3,4,5,7,9$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment e (Maxterm) {code=bcd; method=orand,nor; digit=0,2,6,8}
 
 $e = \prod M(1,3,4,5,7,9) \cdot d(10,11,12,13,14,15)$
 
@@ -6365,16 +4745,9 @@ $e = \prod M(1,3,4,5,7,9) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1,3,5,7,9,11,13,15$) : $D=1 \Rightarrow \overline{D}$
-- ลูปสีน้ำเงิน (ช่อง $4,5,12,13$) : $B=1,\ C=0 \Rightarrow (\overline{B}+C)$
+$e = (\overline{D})(\overline{B}+C)$
 
-$\mathbf{Ans}\quad e = (\overline{D})(\overline{B}+C)$
-
-### เฉลย สมการของ segment f (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $f = 0$ คือ เลขรหัส $1,2,3,7$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment f (Maxterm) {code=bcd; method=orand,nor; digit=0,4,5,6,8,9}
 
 $f = \prod M(1,2,3,7) \cdot d(10,11,12,13,14,15)$
 
@@ -6435,17 +4808,9 @@ $f = \prod M(1,2,3,7) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1,3$) : $A=0,\ B=0,\ D=1 \Rightarrow (A+B+\overline{D})$
-- ลูปสีน้ำเงิน (ช่อง $2,3,10,11$) : $B=0,\ C=1 \Rightarrow (B+\overline{C})$
-- ลูปสีเขียว (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow (\overline{C}+\overline{D})$
+$f = (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})$
 
-$\mathbf{Ans}\quad f = (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})$
-
-### เฉลย สมการของ segment g (BCD-8421, Maxterm) {code=bcd; method=orand_nor,orand,nor; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $g = 0$ คือ เลขรหัส $0,1,7$ และช่องที่เป็น $d$ คือ $10,11,12,13,14,15$
+### K-map ของ segment g (Maxterm) {code=bcd; method=orand,nor; digit=2,3,4,5,6,8,9}
 
 $g = \prod M(0,1,7) \cdot d(10,11,12,13,14,15)$
 
@@ -6502,16 +4867,9 @@ $g = \prod M(0,1,7) \cdot d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1$) : $A=0,\ B=0,\ C=0 \Rightarrow (A+B+C)$
-- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+$g = (A+B+C)(\overline{B}+\overline{C}+\overline{D})$
 
-$\mathbf{Ans}\quad g = (A+B+C)(\overline{B}+\overline{C}+\overline{D})$
-
-### เฉลย แปลงสมการ segment a เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment a ด้วย NAND {code=bcd; method=nand; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= A+C+BD+\overline{B}\,\overline{D} \\
@@ -6519,15 +4877,7 @@ a &= A+C+BD+\overline{B}\,\overline{D} \\
 &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment b เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment b ด้วย NAND {code=bcd; method=nand; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= \overline{B}+\overline{C}\,\overline{D}+CD \\
@@ -6535,15 +4885,7 @@ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\
 &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment c เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment c ด้วย NAND {code=bcd; method=nand; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= B+\overline{C}+D \\
@@ -6551,15 +4893,7 @@ c &= B+\overline{C}+D \\
 &= \overline{\overline{B}\cdot C\cdot \overline{D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}c &= \overline{\overline{B}\cdot C\cdot \overline{D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment d เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment d ด้วย NAND {code=bcd; method=nand; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\
@@ -6567,15 +4901,7 @@ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\
 &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment e เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment e ด้วย NAND {code=bcd; method=nand; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= \overline{B}\,\overline{D}+C\overline{D} \\
@@ -6583,15 +4909,7 @@ e &= \overline{B}\,\overline{D}+C\overline{D} \\
 &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}e &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment f เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment f ด้วย NAND {code=bcd; method=nand; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\
@@ -6599,15 +4917,7 @@ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\
 &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment g เป็น NAND อย่างเดียว (BCD-8421) {code=bcd; method=andor_nand,nand; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment g ด้วย NAND {code=bcd; method=nand; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D} \\
@@ -6615,15 +4925,7 @@ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D} \\
 &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment a เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment a ด้วย NOR {code=bcd; method=nor; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
@@ -6631,15 +4933,7 @@ a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment b เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment b ด้วย NOR {code=bcd; method=nor; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\
@@ -6647,30 +4941,14 @@ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\
 &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment c เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment c ด้วย NOR {code=bcd; method=nor; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= (B+\overline{C}+D) \\
 &= \overline{\overline{B+\overline{C}+D}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}c &= \overline{\overline{B+\overline{C}+D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment d เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment d ด้วย NOR {code=bcd; method=nor; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\
@@ -6678,15 +4956,7 @@ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{
 &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment e เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment e ด้วย NOR {code=bcd; method=nor; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= (\overline{D})(\overline{B}+C) \\
@@ -6694,15 +4964,7 @@ e &= (\overline{D})(\overline{B}+C) \\
 &= \overline{D+\overline{\overline{B}+C}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}e &= \overline{D+\overline{\overline{B}+C}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment f เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment f ด้วย NOR {code=bcd; method=nor; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\
@@ -6710,15 +4972,7 @@ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\
 &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment g เป็น NOR อย่างเดียว (BCD-8421) {code=bcd; method=orand_nor,nor; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment g ด้วย NOR {code=bcd; method=nor; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D}) \\
@@ -6726,15 +4980,9 @@ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D}) \\
 &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
-
-### เฉลย วงจรของเลข 0 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=0}
+### วงจรของเลข 0 {code=bcd; method=andor; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ e &= \overline{B}\,\overline{D}+C\overline{D} \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}\end{aligned}$
 
@@ -6925,18 +5173,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=1}
+### วงจรของเลข 1 {code=bcd; method=andor; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D\end{aligned}$
 
@@ -7007,18 +5246,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=2}
+### วงจรของเลข 2 {code=bcd; method=andor; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ e &= \overline{B}\,\overline{D}+C\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -7200,18 +5430,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=3}
+### วงจรของเลข 3 {code=bcd; method=andor; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -7387,18 +5608,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=4}
+### วงจรของเลข 4 {code=bcd; method=andor; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -7537,18 +5749,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=5}
+### วงจรของเลข 5 {code=bcd; method=andor; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -7732,18 +5935,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=6}
+### วงจรของเลข 6 {code=bcd; method=andor; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ e &= \overline{B}\,\overline{D}+C\overline{D} \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -7946,18 +6140,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=7}
+### วงจรของเลข 7 {code=bcd; method=andor; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D\end{aligned}$
 
@@ -8057,18 +6242,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=8}
+### วงจรของเลข 8 {code=bcd; method=andor; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ e &= \overline{B}\,\overline{D}+C\overline{D} \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -8294,18 +6470,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (BCD-8421, AND/OR) {code=bcd; method=andor_nand,andor; digit=9}
+### วงจรของเลข 9 {code=bcd; method=andor; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &= \overline{B}+\overline{C}\,\overline{D}+CD \\ c &= B+\overline{C}+D \\ d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\ f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\ g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}\end{aligned}$
 
@@ -8512,18 +6679,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=0}
+### วงจรของเลข 0 {code=bcd; method=nand; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ e &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}}\end{aligned}$
 
@@ -8739,18 +6897,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=1}
+### วงจรของเลข 1 {code=bcd; method=nand; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}}\end{aligned}$
 
@@ -8825,18 +6974,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=2}
+### วงจรของเลข 2 {code=bcd; method=nand; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ e &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -9043,18 +7183,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=3}
+### วงจรของเลข 3 {code=bcd; method=nand; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -9253,18 +7384,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=4}
+### วงจรของเลข 4 {code=bcd; method=nand; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -9422,18 +7544,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=5}
+### วงจรของเลข 5 {code=bcd; method=nand; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -9641,18 +7754,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=6}
+### วงจรของเลข 6 {code=bcd; method=nand; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ e &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -9882,18 +7986,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=7}
+### วงจรของเลข 7 {code=bcd; method=nand; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}}\end{aligned}$
 
@@ -10006,18 +8101,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=8}
+### วงจรของเลข 8 {code=bcd; method=nand; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ e &= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -10273,18 +8359,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (BCD-8421, NAND อย่างเดียว) {code=bcd; method=andor_nand,nand; digit=9}
+### วงจรของเลข 9 {code=bcd; method=nand; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} \\ b &= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} \\ c &= \overline{\overline{B}\cdot C\cdot \overline{D}} \\ d &= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} \\ f &= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} \\ g &= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}\end{aligned}$
 
@@ -10518,18 +8595,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=0}
+### วงจรของเลข 0 {code=bcd; method=orand; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ e &= (\overline{D})(\overline{B}+C) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})\end{aligned}$
 
@@ -10702,18 +8770,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=1}
+### วงจรของเลข 1 {code=bcd; method=orand; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D)\end{aligned}$
 
@@ -10780,18 +8839,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=2}
+### วงจรของเลข 2 {code=bcd; method=orand; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ e &= (\overline{D})(\overline{B}+C) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -10949,18 +8999,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=3}
+### วงจรของเลข 3 {code=bcd; method=orand; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -11112,18 +9153,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=4}
+### วงจรของเลข 4 {code=bcd; method=orand; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -11244,18 +9276,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=5}
+### วงจรของเลข 5 {code=bcd; method=orand; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -11413,18 +9436,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=6}
+### วงจรของเลข 6 {code=bcd; method=orand; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ e &= (\overline{D})(\overline{B}+C) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -11597,18 +9611,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=7}
+### วงจรของเลข 7 {code=bcd; method=orand; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D)\end{aligned}$
 
@@ -11702,18 +9707,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=8}
+### วงจรของเลข 8 {code=bcd; method=orand; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ e &= (\overline{D})(\overline{B}+C) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -11909,18 +9905,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (BCD-8421, OR/AND) {code=bcd; method=orand_nor,orand; digit=9}
+### วงจรของเลข 9 {code=bcd; method=orand; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\ b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\ c &= (B+\overline{C}+D) \\ d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\ g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D})\end{aligned}$
 
@@ -12101,18 +10088,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=0}
+### วงจรของเลข 0 {code=bcd; method=nor; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ e &= \overline{D+\overline{\overline{B}+C}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -12305,18 +10283,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=1}
+### วงจรของเลข 1 {code=bcd; method=nor; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}}\end{aligned}$
 
@@ -12390,18 +10359,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=2}
+### วงจรของเลข 2 {code=bcd; method=nor; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ e &= \overline{D+\overline{\overline{B}+C}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -12574,18 +10534,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=3}
+### วงจรของเลข 3 {code=bcd; method=nor; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -12754,18 +10705,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=4}
+### วงจรของเลข 4 {code=bcd; method=nor; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -12900,18 +10842,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=5}
+### วงจรของเลข 5 {code=bcd; method=nor; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -13087,18 +11020,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=6}
+### วงจรของเลข 6 {code=bcd; method=nor; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ e &= \overline{D+\overline{\overline{B}+C}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -13291,18 +11215,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=7}
+### วงจรของเลข 7 {code=bcd; method=nor; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}}\end{aligned}$
 
@@ -13406,18 +11321,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=8}
+### วงจรของเลข 8 {code=bcd; method=nor; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ e &= \overline{D+\overline{\overline{B}+C}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -13636,18 +11542,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (BCD-8421, NOR อย่างเดียว) {code=bcd; method=orand_nor,nor; digit=9}
+### วงจรของเลข 9 {code=bcd; method=nor; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} \\ b &= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} \\ c &= \overline{\overline{B+\overline{C}+D}} \\ d &= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ f &= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} \\ g &= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
 
@@ -13849,16 +11746,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย ตารางความจริงของ Excess-3 ไป LED 7 ส่วน {code=xs3}
-
-อินพุตคือรหัส Excess-3 4 บิต $A, B, C, D$ ($A$ เป็น MSB) เอาต์พุต $a$ ถึง $g$ เป็น $1$ เมื่อ LED ส่วนนั้นสว่าง คอลัมน์ Decimal คือเลขที่ต้องการแสดง รหัส $0000$, $0001$, $0010$, $1101$, $1110$, $1111$ ไม่มีใช้ จึงเป็น $d$ (don't care)
+### ตารางความจริง {code=xs3}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="610" height="479" viewBox="0 0 610 479" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14077,9 +11965,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 0 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=0}
+### segment ของเลข 0 {code=xs3; digit=0}
 
-เลข $0$ ในรหัส Excess-3 คือ $ABCD = 0011$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, e, f$ ส่วน segment $g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, e, f$ เท่านั้น
+เลข $0$ ($ABCD = 0011$) ใช้ segment $a, b, c, d, e, f$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14088,9 +11976,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 1 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=1}
+### segment ของเลข 1 {code=xs3; digit=1}
 
-เลข $1$ ในรหัส Excess-3 คือ $ABCD = 0100$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $b, c$ ส่วน segment $a, d, e, f, g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $b, c$ เท่านั้น
+เลข $1$ ($ABCD = 0100$) ใช้ segment $b, c$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14099,9 +11987,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 2 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=2}
+### segment ของเลข 2 {code=xs3; digit=2}
 
-เลข $2$ ในรหัส Excess-3 คือ $ABCD = 0101$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, d, e, g$ ส่วน segment $c, f$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, d, e, g$ เท่านั้น
+เลข $2$ ($ABCD = 0101$) ใช้ segment $a, b, d, e, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14110,9 +11998,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 3 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=3}
+### segment ของเลข 3 {code=xs3; digit=3}
 
-เลข $3$ ในรหัส Excess-3 คือ $ABCD = 0110$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, g$ ส่วน segment $e, f$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, g$ เท่านั้น
+เลข $3$ ($ABCD = 0110$) ใช้ segment $a, b, c, d, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14121,9 +12009,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 4 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=4}
+### segment ของเลข 4 {code=xs3; digit=4}
 
-เลข $4$ ในรหัส Excess-3 คือ $ABCD = 0111$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $b, c, f, g$ ส่วน segment $a, d, e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $b, c, f, g$ เท่านั้น
+เลข $4$ ($ABCD = 0111$) ใช้ segment $b, c, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14132,9 +12020,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 5 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=5}
+### segment ของเลข 5 {code=xs3; digit=5}
 
-เลข $5$ ในรหัส Excess-3 คือ $ABCD = 1000$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, c, d, f, g$ ส่วน segment $b, e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, c, d, f, g$ เท่านั้น
+เลข $5$ ($ABCD = 1000$) ใช้ segment $a, c, d, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14143,9 +12031,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 6 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=6}
+### segment ของเลข 6 {code=xs3; digit=6}
 
-เลข $6$ ในรหัส Excess-3 คือ $ABCD = 1001$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, c, d, e, f, g$ ส่วน segment $b$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, c, d, e, f, g$ เท่านั้น
+เลข $6$ ($ABCD = 1001$) ใช้ segment $a, c, d, e, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14154,9 +12042,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 7 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=7}
+### segment ของเลข 7 {code=xs3; digit=7}
 
-เลข $7$ ในรหัส Excess-3 คือ $ABCD = 1010$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c$ ส่วน segment $d, e, f, g$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c$ เท่านั้น
+เลข $7$ ($ABCD = 1010$) ใช้ segment $a, b, c$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14165,9 +12053,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 8 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=8}
+### segment ของเลข 8 {code=xs3; digit=8}
 
-เลข $8$ ในรหัส Excess-3 คือ $ABCD = 1011$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, e, f, g$ ครบทั้ง 7 ส่วน ไม่มี segment ที่ดับ ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, e, f, g$ เท่านั้น
+เลข $8$ ($ABCD = 1011$) ใช้ segment $a, b, c, d, e, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14176,9 +12064,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย เลข 9 ใช้ segment อะไรบ้าง (Excess-3) {code=xs3; digit=9}
+### segment ของเลข 9 {code=xs3; digit=9}
 
-เลข $9$ ในรหัส Excess-3 คือ $ABCD = 1100$ ดูแถวนี้ในตารางความจริง : LED ที่สว่าง ($1$) คือ segment $a, b, c, d, f, g$ ส่วน segment $e$ ดับ ($0$) ดังนั้นเลขนี้ต้องออกแบบเฉพาะ segment $a, b, c, d, f, g$ เท่านั้น
+เลข $9$ ($ABCD = 1100$) ใช้ segment $a, b, c, d, f, g$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14187,11 +12075,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 </svg>
 </div>
 
-### เฉลย สมการของ segment a (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $a = 1$ คือ เลขรหัส $3,5,6,8,9,10,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment a (Minterm) {code=xs3; method=andor,nand; digit=0,2,3,5,6,7,8,9}
 
 $a = \sum m(3,5,6,8,9,10,11,12) + d(0,1,2,13,14,15)$
 
@@ -14258,18 +12142,9 @@ $a = \sum m(3,5,6,8,9,10,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
-- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
-- ลูปสีเขียว (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow C\overline{D}$
-- ลูปสีม่วง (ช่อง $8,9,10,11,12,13,14,15$) : $A=1 \Rightarrow A$
+$a = \overline{B}+\overline{C}D+C\overline{D}+A$
 
-$\mathbf{Ans}\quad a = \overline{B}+\overline{C}D+C\overline{D}+A$
-
-### เฉลย สมการของ segment b (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $b = 1$ คือ เลขรหัส $3,4,5,6,7,10,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment b (Minterm) {code=xs3; method=andor,nand; digit=0,1,2,3,4,7,8,9}
 
 $b = \sum m(3,4,5,6,7,10,11,12) + d(0,1,2,13,14,15)$
 
@@ -14331,16 +12206,9 @@ $b = \sum m(3,4,5,6,7,10,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
-- ลูปสีน้ำเงิน (ช่อง $4,5,6,7,12,13,14,15$) : $B=1 \Rightarrow B$
+$b = C+B$
 
-$\mathbf{Ans}\quad b = C+B$
-
-### เฉลย สมการของ segment c (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $c = 1$ คือ เลขรหัส $3,4,6,7,8,9,10,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment c (Minterm) {code=xs3; method=andor,nand; digit=0,1,3,4,5,6,7,8,9}
 
 $c = \sum m(3,4,6,7,8,9,10,11,12) + d(0,1,2,13,14,15)$
 
@@ -14407,17 +12275,9 @@ $c = \sum m(3,4,6,7,8,9,10,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,2,3,8,9,10,11$) : $B=0 \Rightarrow \overline{B}$
-- ลูปสีน้ำเงิน (ช่อง $0,2,4,6,8,10,12,14$) : $D=0 \Rightarrow \overline{D}$
-- ลูปสีเขียว (ช่อง $2,3,6,7,10,11,14,15$) : $C=1 \Rightarrow C$
+$c = \overline{B}+\overline{D}+C$
 
-$\mathbf{Ans}\quad c = \overline{B}+\overline{D}+C$
-
-### เฉลย สมการของ segment d (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $d = 1$ คือ เลขรหัส $3,5,6,8,9,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment d (Minterm) {code=xs3; method=andor,nand; digit=0,2,3,5,6,8,9}
 
 $d = \sum m(3,5,6,8,9,11,12) + d(0,1,2,13,14,15)$
 
@@ -14483,18 +12343,9 @@ $d = \sum m(3,5,6,8,9,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1,3,9,11$) : $B=0,\ D=1 \Rightarrow \overline{B}D$
-- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
-- ลูปสีเขียว (ช่อง $2,6$) : $A=0,\ C=1,\ D=0 \Rightarrow \overline{A}C\overline{D}$
-- ลูปสีม่วง (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
+$d = \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}$
 
-$\mathbf{Ans}\quad d = \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}$
-
-### เฉลย สมการของ segment e (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $e = 1$ คือ เลขรหัส $3,5,9,11$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment e (Minterm) {code=xs3; method=andor,nand; digit=0,2,6,8}
 
 $e = \sum m(3,5,9,11) + d(0,1,2,13,14,15)$
 
@@ -14553,16 +12404,9 @@ $e = \sum m(3,5,9,11) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1,3,9,11$) : $B=0,\ D=1 \Rightarrow \overline{B}D$
-- ลูปสีน้ำเงิน (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
+$e = \overline{B}D+\overline{C}D$
 
-$\mathbf{Ans}\quad e = \overline{B}D+\overline{C}D$
-
-### เฉลย สมการของ segment f (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $f = 1$ คือ เลขรหัส $3,7,8,9,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment f (Minterm) {code=xs3; method=andor,nand; digit=0,4,5,6,8,9}
 
 $f = \sum m(3,7,8,9,11,12) + d(0,1,2,13,14,15)$
 
@@ -14622,16 +12466,9 @@ $f = \sum m(3,7,8,9,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $3,7,11,15$) : $C=1,\ D=1 \Rightarrow CD$
-- ลูปสีน้ำเงิน (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
+$f = CD+A\overline{C}$
 
-$\mathbf{Ans}\quad f = CD+A\overline{C}$
-
-### เฉลย สมการของ segment g (Excess-3, Minterm) {code=xs3; method=andor_nand,andor,nand; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $g = 1$ คือ เลขรหัส $5,6,7,8,9,11,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment g (Minterm) {code=xs3; method=andor,nand; digit=2,3,4,5,6,8,9}
 
 $g = \sum m(5,6,7,8,9,11,12) + d(0,1,2,13,14,15)$
 
@@ -14696,18 +12533,9 @@ $g = \sum m(5,6,7,8,9,11,12) + d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $1,5,9,13$) : $C=0,\ D=1 \Rightarrow \overline{C}D$
-- ลูปสีน้ำเงิน (ช่อง $6,7,14,15$) : $B=1,\ C=1 \Rightarrow BC$
-- ลูปสีเขียว (ช่อง $8,9,12,13$) : $A=1,\ C=0 \Rightarrow A\overline{C}$
-- ลูปสีม่วง (ช่อง $9,11,13,15$) : $A=1,\ D=1 \Rightarrow AD$
+$g = \overline{C}D+BC+A\overline{C}+AD$
 
-$\mathbf{Ans}\quad g = \overline{C}D+BC+A\overline{C}+AD$
-
-### เฉลย สมการของ segment a (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $a = 0$ คือ เลขรหัส $4,7$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment a (Maxterm) {code=xs3; method=orand,nor; digit=0,2,3,5,6,7,8,9}
 
 $a = \prod M(4,7) \cdot d(0,1,2,13,14,15)$
 
@@ -14763,16 +12591,9 @@ $a = \prod M(4,7) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
-- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
+$a = (A+C+D)(\overline{B}+\overline{C}+\overline{D})$
 
-$\mathbf{Ans}\quad a = (A+C+D)(\overline{B}+\overline{C}+\overline{D})$
-
-### เฉลย สมการของ segment b (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $b = 0$ คือ เลขรหัส $8,9$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment b (Maxterm) {code=xs3; method=orand,nor; digit=0,1,2,3,4,7,8,9}
 
 $b = \prod M(8,9) \cdot d(0,1,2,13,14,15)$
 
@@ -14827,15 +12648,9 @@ $b = \prod M(8,9) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,8,9$) : $B=0,\ C=0 \Rightarrow (B+C)$
+$b = (B+C)$
 
-$\mathbf{Ans}\quad b = (B+C)$
-
-### เฉลย สมการของ segment c (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $c = 0$ คือ เลขรหัส $5$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment c (Maxterm) {code=xs3; method=orand,nor; digit=0,1,3,4,5,6,7,8,9}
 
 $c = \prod M(5) \cdot d(0,1,2,13,14,15)$
 
@@ -14888,15 +12703,9 @@ $c = \prod M(5) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $5,13$) : $B=1,\ C=0,\ D=1 \Rightarrow (\overline{B}+C+\overline{D})$
+$c = (\overline{B}+C+\overline{D})$
 
-$\mathbf{Ans}\quad c = (\overline{B}+C+\overline{D})$
-
-### เฉลย สมการของ segment d (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $d = 0$ คือ เลขรหัส $4,7,10$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment d (Maxterm) {code=xs3; method=orand,nor; digit=0,2,3,5,6,8,9}
 
 $d = \prod M(4,7,10) \cdot d(0,1,2,13,14,15)$
 
@@ -14955,17 +12764,9 @@ $d = \prod M(4,7,10) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
-- ลูปสีน้ำเงิน (ช่อง $7,15$) : $B=1,\ C=1,\ D=1 \Rightarrow (\overline{B}+\overline{C}+\overline{D})$
-- ลูปสีเขียว (ช่อง $10,14$) : $A=1,\ C=1,\ D=0 \Rightarrow (\overline{A}+\overline{C}+D)$
+$d = (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)$
 
-$\mathbf{Ans}\quad d = (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)$
-
-### เฉลย สมการของ segment e (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $e = 0$ คือ เลขรหัส $4,6,7,8,10,12$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment e (Maxterm) {code=xs3; method=orand,nor; digit=0,2,6,8}
 
 $e = \prod M(4,6,7,8,10,12) \cdot d(0,1,2,13,14,15)$
 
@@ -15026,16 +12827,9 @@ $e = \prod M(4,6,7,8,10,12) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,2,4,6,8,10,12,14$) : $D=0 \Rightarrow D$
-- ลูปสีน้ำเงิน (ช่อง $6,7,14,15$) : $B=1,\ C=1 \Rightarrow (\overline{B}+\overline{C})$
+$e = (D)(\overline{B}+\overline{C})$
 
-$\mathbf{Ans}\quad e = (D)(\overline{B}+\overline{C})$
-
-### เฉลย สมการของ segment f (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $f = 0$ คือ เลขรหัส $4,5,6,10$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment f (Maxterm) {code=xs3; method=orand,nor; digit=0,4,5,6,8,9}
 
 $f = \prod M(4,5,6,10) \cdot d(0,1,2,13,14,15)$
 
@@ -15093,16 +12887,9 @@ $f = \prod M(4,5,6,10) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,4,5$) : $A=0,\ C=0 \Rightarrow (A+C)$
-- ลูปสีน้ำเงิน (ช่อง $2,6,10,14$) : $C=1,\ D=0 \Rightarrow (\overline{C}+D)$
+$f = (A+C)(\overline{C}+D)$
 
-$\mathbf{Ans}\quad f = (A+C)(\overline{C}+D)$
-
-### เฉลย สมการของ segment g (Excess-3, Maxterm) {code=xs3; method=orand_nor,orand,nor; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากตารางความจริง ช่องที่ $g = 0$ คือ เลขรหัส $3,4,10$ และช่องที่เป็น $d$ คือ $0,1,2,13,14,15$
+### K-map ของ segment g (Maxterm) {code=xs3; method=orand,nor; digit=2,3,4,5,6,8,9}
 
 $g = \prod M(3,4,10) \cdot d(0,1,2,13,14,15)$
 
@@ -15161,17 +12948,9 @@ $g = \prod M(3,4,10) \cdot d(0,1,2,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,1,2,3$) : $A=0,\ B=0 \Rightarrow (A+B)$
-- ลูปสีน้ำเงิน (ช่อง $0,4$) : $A=0,\ C=0,\ D=0 \Rightarrow (A+C+D)$
-- ลูปสีเขียว (ช่อง $10,14$) : $A=1,\ C=1,\ D=0 \Rightarrow (\overline{A}+\overline{C}+D)$
+$g = (A+B)(A+C+D)(\overline{A}+\overline{C}+D)$
 
-$\mathbf{Ans}\quad g = (A+B)(A+C+D)(\overline{A}+\overline{C}+D)$
-
-### เฉลย แปลงสมการ segment a เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment a ด้วย NAND {code=xs3; method=nand; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= \overline{B}+\overline{C}D+C\overline{D}+A \\
@@ -15179,15 +12958,7 @@ a &= \overline{B}+\overline{C}D+C\overline{D}+A \\
 &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment b เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment b ด้วย NAND {code=xs3; method=nand; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= C+B \\
@@ -15195,15 +12966,7 @@ b &= C+B \\
 &= \overline{\overline{C}\cdot \overline{B}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment c เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment c ด้วย NAND {code=xs3; method=nand; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= \overline{B}+\overline{D}+C \\
@@ -15211,15 +12974,7 @@ c &= \overline{B}+\overline{D}+C \\
 &= \overline{B\cdot D\cdot \overline{C}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}c &= \overline{B\cdot D\cdot \overline{C}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment d เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment d ด้วย NAND {code=xs3; method=nand; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\
@@ -15227,15 +12982,7 @@ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\
 &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment e เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment e ด้วย NAND {code=xs3; method=nand; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= \overline{B}D+\overline{C}D \\
@@ -15243,15 +12990,7 @@ e &= \overline{B}D+\overline{C}D \\
 &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}e &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment f เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment f ด้วย NAND {code=xs3; method=nand; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= CD+A\overline{C} \\
@@ -15259,15 +12998,7 @@ f &= CD+A\overline{C} \\
 &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment g เป็น NAND อย่างเดียว (Excess-3) {code=xs3; method=andor_nand,nand; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลบวกของผลคูณ ของ K-map แปลงให้ใช้ NAND อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment g ด้วย NAND {code=xs3; method=nand; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= \overline{C}D+BC+A\overline{C}+AD \\
@@ -15275,15 +13006,7 @@ g &= \overline{C}D+BC+A\overline{C}+AD \\
 &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียว (ไม่มีเกตชั้นใน) ต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย
-
-$\mathbf{Ans}\quad \begin{aligned}g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment a เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,2,3,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment a ด้วย NOR {code=xs3; method=nor; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\
@@ -15291,45 +13014,21 @@ a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\
 &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment b เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,1,2,3,4,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment b ด้วย NOR {code=xs3; method=nor; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= (B+C) \\
 &= \overline{\overline{B+C}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment c เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,1,3,4,5,6,7,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment c ด้วย NOR {code=xs3; method=nor; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= (\overline{B}+C+\overline{D}) \\
 &= \overline{\overline{\overline{B}+C+\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}c &= \overline{\overline{\overline{B}+C+\overline{D}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment d เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,2,3,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment d ด้วย NOR {code=xs3; method=nor; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\
@@ -15337,15 +13036,7 @@ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D
 &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment e เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,2,6,8}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment e ด้วย NOR {code=xs3; method=nor; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= (D)(\overline{B}+\overline{C}) \\
@@ -15353,15 +13044,7 @@ e &= (D)(\overline{B}+\overline{C}) \\
 &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}e &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment f เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=0,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment f ด้วย NOR {code=xs3; method=nor; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= (A+C)(\overline{C}+D) \\
@@ -15369,15 +13052,7 @@ f &= (A+C)(\overline{C}+D) \\
 &= \overline{\overline{A+C}+\overline{\overline{C}+D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}f &= \overline{\overline{A+C}+\overline{\overline{C}+D}}\end{aligned}$
-
-### เฉลย แปลงสมการ segment g เป็น NOR อย่างเดียว (Excess-3) {code=xs3; method=orand_nor,nor; digit=2,3,4,5,6,8,9}
-
-$\mathbf{Sol}^{n}$
-
-จากสมการผลคูณของผลบวก ของ K-map แปลงให้ใช้ NOR อย่างเดียว ด้วยการคอมพลีเมนต์ 2 ครั้ง แล้วใช้ De Morgan
+### แปลง segment g ด้วย NOR {code=xs3; method=nor; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D) \\
@@ -15385,15 +13060,9 @@ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D) \\
 &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}} && \text{(De Morgan)}
 \end{aligned}$$
 
-พจน์ที่มีตัวแปรตัวเดียวต่อตัวแปรที่คอมพลีเมนต์เข้าเกตชั้นนอกได้เลย และสมการที่มีพจน์เดียวใช้ NOR เกตตัวเดียวแล้วต่อ NOT อีกชั้น
-
-$\mathbf{Ans}\quad \begin{aligned}g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
-
-### เฉลย วงจรของเลข 0 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=0}
+### วงจรของเลข 0 {code=xs3; method=andor; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ e &= \overline{B}D+\overline{C}D \\ f &= CD+A\overline{C}\end{aligned}$
 
@@ -15562,18 +13231,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=1}
+### วงจรของเลข 1 {code=xs3; method=andor; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C\end{aligned}$
 
@@ -15626,18 +13286,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C\e
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=2}
+### วงจรของเลข 2 {code=xs3; method=andor; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ e &= \overline{B}D+\overline{C}D \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -15809,18 +13460,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=3}
+### วงจรของเลข 3 {code=xs3; method=andor; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -15986,18 +13628,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=4}
+### วงจรของเลข 4 {code=xs3; method=andor; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C \\ f &= CD+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -16112,18 +13745,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C \
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=5}
+### วงจรของเลข 5 {code=xs3; method=andor; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ f &= CD+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -16297,18 +13921,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=6}
+### วงจรของเลข 6 {code=xs3; method=andor; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ e &= \overline{B}D+\overline{C}D \\ f &= CD+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -16501,18 +14116,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=7}
+### วงจรของเลข 7 {code=xs3; method=andor; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ c &= \overline{B}+\overline{D}+C\end{aligned}$
 
@@ -16600,18 +14206,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=8}
+### วงจรของเลข 8 {code=xs3; method=andor; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ e &= \overline{B}D+\overline{C}D \\ f &= CD+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -16815,18 +14412,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (Excess-3, AND/OR) {code=xs3; method=andor_nand,andor; digit=9}
+### วงจรของเลข 9 {code=xs3; method=andor; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ต้องมีทั้งตัวปกติและตัวคอมพลีเมนต์ของอินพุต จึงใช้เกต NOT ต่อจากอินพุต แต่ละพจน์ผลคูณใช้ AND เกต แล้วนำทุกพจน์เข้า OR เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า OR เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+A \\ b &= C+B \\ c &= \overline{B}+\overline{D}+C \\ d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\ f &= CD+A\overline{C} \\ g &= \overline{C}D+BC+A\overline{C}+AD\end{aligned}$
 
@@ -17011,18 +14599,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=0}
+### วงจรของเลข 0 {code=xs3; method=nand; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ e &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}}\end{aligned}$
 
@@ -17207,18 +14786,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=1}
+### วงจรของเลข 1 {code=xs3; method=nand; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}}\end{aligned}$
 
@@ -17273,18 +14843,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=2}
+### วงจรของเลข 2 {code=xs3; method=nand; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ e &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -17473,18 +15034,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=3}
+### วงจรของเลข 3 {code=xs3; method=nand; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -17665,18 +15217,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=4}
+### วงจรของเลข 4 {code=xs3; method=nand; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -17795,18 +15338,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=5}
+### วงจรของเลข 5 {code=xs3; method=nand; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -17997,18 +15531,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=6}
+### วงจรของเลข 6 {code=xs3; method=nand; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ e &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -18221,18 +15746,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=7}
+### วงจรของเลข 7 {code=xs3; method=nand; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}}\end{aligned}$
 
@@ -18331,18 +15847,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=8}
+### วงจรของเลข 8 {code=xs3; method=nand; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ e &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -18567,18 +16074,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (Excess-3, NAND อย่างเดียว) {code=xs3; method=andor_nand,nand; digit=9}
+### วงจรของเลข 9 {code=xs3; method=nand; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NAND เกตทั้งสองชั้น : แต่ละพจน์ผลคูณเข้า NAND เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NAND เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} \\ b &= \overline{\overline{C}\cdot \overline{B}} \\ c &= \overline{B\cdot D\cdot \overline{C}} \\ d &= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} \\ f &= \overline{\overline{CD}\cdot \overline{A\overline{C}}} \\ g &= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}\end{aligned}$
 
@@ -18781,18 +16279,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=0}
+### วงจรของเลข 0 {code=xs3; method=orand; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ e &= (D)(\overline{B}+\overline{C}) \\ f &= (A+C)(\overline{C}+D)\end{aligned}$
 
@@ -18939,18 +16428,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=1}
+### วงจรของเลข 1 {code=xs3; method=orand; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D})\end{aligned}$
 
@@ -18995,18 +16475,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=2}
+### วงจรของเลข 2 {code=xs3; method=orand; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ e &= (D)(\overline{B}+\overline{C}) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -19156,18 +16627,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=3}
+### วงจรของเลข 3 {code=xs3; method=orand; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -19311,18 +16773,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=4}
+### วงจรของเลข 4 {code=xs3; method=orand; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D}) \\ f &= (A+C)(\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -19431,18 +16884,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=5}
+### วงจรของเลข 5 {code=xs3; method=orand; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ f &= (A+C)(\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -19598,18 +17042,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=6}
+### วงจรของเลข 6 {code=xs3; method=orand; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ e &= (D)(\overline{B}+\overline{C}) \\ f &= (A+C)(\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -19780,18 +17215,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=7}
+### วงจรของเลข 7 {code=xs3; method=orand; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ c &= (\overline{B}+C+\overline{D})\end{aligned}$
 
@@ -19867,18 +17293,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=8}
+### วงจรของเลข 8 {code=xs3; method=orand; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ e &= (D)(\overline{B}+\overline{C}) \\ f &= (A+C)(\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -20056,18 +17473,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (Excess-3, OR/AND) {code=xs3; method=orand_nor,orand; digit=9}
+### วงจรของเลข 9 {code=xs3; method=orand; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : แต่ละพจน์ผลบวกใช้ OR เกต แล้วนำทุกพจน์เข้า AND เกต (พจน์ที่มีตัวแปรตัวเดียวต่อเข้า AND เกตได้เลย)
 
 $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\ b &= (B+C) \\ c &= (\overline{B}+C+\overline{D}) \\ d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\ f &= (A+C)(\overline{C}+D) \\ g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D)\end{aligned}$
 
@@ -20230,18 +17638,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 0 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=0}
+### วงจรของเลข 0 {code=xs3; method=nor; digit=0}
 
 $\mathbf{Sol}^{n}$
-
-เลข $0$ ใช้ segment $a, b, c, d, e, f$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ e &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}}\end{aligned}$
 
@@ -20408,18 +17807,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">0</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 1 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=1}
+### วงจรของเลข 1 {code=xs3; method=nor; digit=1}
 
 $\mathbf{Sol}^{n}$
-
-เลข $1$ ใช้ segment $b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}}\end{aligned}$
 
@@ -20472,18 +17862,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">1</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 2 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=2}
+### วงจรของเลข 2 {code=xs3; method=nor; digit=2}
 
 $\mathbf{Sol}^{n}$
-
-เลข $2$ ใช้ segment $a, b, d, e, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ e &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -20650,18 +18031,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="0.1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">2</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 3 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=3}
+### วงจรของเลข 3 {code=xs3; method=nor; digit=3}
 
 $\mathbf{Sol}^{n}$
-
-เลข $3$ ใช้ segment $a, b, c, d, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -20824,18 +18196,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">3</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 4 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=4}
+### วงจรของเลข 4 {code=xs3; method=nor; digit=4}
 
 $\mathbf{Sol}^{n}$
-
-เลข $4$ ใช้ segment $b, c, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -20959,18 +18322,9 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="0.1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">4</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 5 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=5}
+### วงจรของเลข 5 {code=xs3; method=nor; digit=5}
 
 $\mathbf{Sol}^{n}$
-
-เลข $5$ ใช้ segment $a, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -21144,18 +18498,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">5</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 6 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=6}
+### วงจรของเลข 6 {code=xs3; method=nor; digit=6}
 
 $\mathbf{Sol}^{n}$
-
-เลข $6$ ใช้ segment $a, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ e &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -21346,18 +18691,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="0.1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">6</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 7 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=7}
+### วงจรของเลข 7 {code=xs3; method=nor; digit=7}
 
 $\mathbf{Sol}^{n}$
-
-เลข $7$ ใช้ segment $a, b, c$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}}\end{aligned}$
 
@@ -21444,18 +18780,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="0.1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="0.1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="0.1"/></g>
-<text x="34.2" y="108" text-anchor="middle">7</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 8 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=8}
+### วงจรของเลข 8 {code=xs3; method=nor; digit=8}
 
 $\mathbf{Sol}^{n}$
-
-เลข $8$ ใช้ segment $a, b, c, d, e, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ e &= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -21657,18 +18984,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 </svg>
 </div>
 
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">8</text>
-</svg>
-</div>
-
-### เฉลย วงจรของเลข 9 (Excess-3, NOR อย่างเดียว) {code=xs3; method=orand_nor,nor; digit=9}
+### วงจรของเลข 9 {code=xs3; method=nor; digit=9}
 
 $\mathbf{Sol}^{n}$
-
-เลข $9$ ใช้ segment $a, b, c, d, f, g$ จึงเขียนวงจรเฉพาะ segment เหล่านี้ ต่อเข้าด้วยกันเป็นวงจรเดียว : ใช้ NOR เกตทั้งสองชั้น : แต่ละพจน์ผลบวกเข้า NOR เกตชั้นแรก (พจน์ตัวแปรเดียวใช้ตัวที่คอมพลีเมนต์ต่อตรง) แล้วนำทุกเอาต์พุตเข้า NOR เกตชั้นที่สอง
 
 $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} \\ b &= \overline{\overline{B+C}} \\ c &= \overline{\overline{\overline{B}+C+\overline{D}}} \\ d &= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} \\ f &= \overline{\overline{A+C}+\overline{\overline{C}+D}} \\ g &= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}\end{aligned}$
 
@@ -21850,12 +19168,5 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <text x="112" y="22" text-anchor="middle">B</text>
 <text x="190" y="22" text-anchor="middle">C</text>
 <text x="268" y="22" text-anchor="middle">D</text>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="74" height="118" viewBox="0 0 74 118" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(10,8) scale(1.1)"><path d="M7,4 L37,4 L33,10 L11,10 Z" fill-opacity="1"/><path d="M38,5 L38,35 L32,31 L32,11 Z" fill-opacity="1"/><path d="M38,41 L38,71 L32,65 L32,45 Z" fill-opacity="1"/><path d="M7,72 L37,72 L33,66 L11,66 Z" fill-opacity="1"/><path d="M6,41 L6,71 L12,65 L12,45 Z" fill-opacity="0.1"/><path d="M6,5 L6,35 L12,31 L12,11 Z" fill-opacity="1"/><path d="M7,38 L11,34 L33,34 L37,38 L33,42 L11,42 Z" fill-opacity="1"/></g>
-<text x="34.2" y="108" text-anchor="middle">9</text>
 </svg>
 </div>

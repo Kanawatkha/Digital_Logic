@@ -54,6 +54,8 @@ export type ContentNode = {
   when?: Record<string, string[]>;
   /** A solution (`{sol}` in the Markdown): shown only when the solutions switch of the page is on. */
   solution?: true;
+  /** `{merge}` : the cards of this section are drawn as one block, with the label Sol and no titles. */
+  merge?: true;
   source: { file: string; line: number };
 };
 

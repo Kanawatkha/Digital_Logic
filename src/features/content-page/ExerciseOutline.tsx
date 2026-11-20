@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/Card';
-import type { ContentNode } from '@/content/types';
+import type { Block, ContentNode } from '@/content/types';
 import { BlockList } from '@/components/content/BlockRenderer';
 import { InlineContent } from '@/components/content/InlineContent';
 import { anchorId } from '@/lib/ids';
@@ -39,6 +39,41 @@ function Exercise({ node }: { node: ContentNode }) {
       </Heading>
       <BlockList blocks={node.explain} />
       <BlockList blocks={node.examples} />
+    </Card>
+  );
+}
+
+/**
+ * A section marked `{merge}`: what its cards hold (their text, and the Sol and Ans of their examples) is
+ * drawn as one solution, in one card, with the label Sol and no titles.
+ */
+function mergedSolution(node: ContentNode): Block {
+  const sol: Block[] = [];
+  const ans: Block[] = [];
+  for (const child of node.children) {
+    sol.push(...child.explain);
+    for (const b of child.examples) {
+      if (b.t === 'example') {
+        sol.push(...b.problem, ...b.sol);
+        ans.push(...b.ans);
+      } else {
+        sol.push(b);
+      }
+    }
+  }
+  return { t: 'example', id: node.id, problem: [], sol, ans };
+}
+
+function MergedSolution({ node }: { node: ContentNode }) {
+  return (
+    <Card
+      as="article"
+      id={anchorId(node.id)}
+      data-anchor=""
+      tabIndex={-1}
+      className={`flex flex-col gap-4 ${TARGET}`}
+    >
+      <BlockList blocks={[mergedSolution(node)]} />
     </Card>
   );
 }
@@ -92,7 +127,9 @@ function Group({ node, start, limit }: { node: ContentNode; start: number; limit
 /** Chapter and exam pages: `##` groups containing `###` exercise cards, in source order. */
 export function ExerciseOutline({ root }: { root: ContentNode }) {
   const isGroup = (node: ContentNode) => node.level === 2 && node.children.length > 0;
-  const sizes = root.children.map((child) => (isGroup(child) ? child.children.length : 1));
+  const sizes = root.children.map((child) =>
+    isGroup(child) && !child.merge ? child.children.length : 1,
+  );
   const limit = useCardLimit(sizes.reduce((sum, n) => sum + n, 0));
   const starts = sizes.map((_, i) => sizes.slice(0, i).reduce((sum, n) => sum + n, 0));
   return (
@@ -100,6 +137,8 @@ export function ExerciseOutline({ root }: { root: ContentNode }) {
       <BlockList blocks={root.explain} />
       {root.children.map((child, i) => {
         const first = starts[i];
+        if (child.merge)
+          return child.children.length > 0 ? <MergedSolution key={child.id} node={child} /> : null;
         if (isGroup(child))
           return <Group key={child.id} node={child} start={first} limit={limit} />;
         return first < limit ? (

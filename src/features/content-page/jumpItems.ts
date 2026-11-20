@@ -5,8 +5,10 @@ import type { JumpItem } from './JumpNav';
 
 /** One jump chip for each section of a page. */
 export function jumpItems(root: ContentNode): JumpItem[] {
-  return root.children.map((c) => ({
-    id: anchorId(c.id),
-    label: truncate(plainText(c.title), 26),
-  }));
+  return root.children
+    .filter((c) => !c.merge)
+    .map((c) => ({
+      id: anchorId(c.id),
+      label: truncate(plainText(c.title), 26),
+    }));
 }

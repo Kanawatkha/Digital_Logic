@@ -171,9 +171,32 @@ describe('the final collection', () => {
     expect(solution.children[0]).toMatchObject({ solution: true, when: { code: ['bcd'] } });
   });
 
+  it('reads {sol; merge} as two flags of a section, and no jump chip is made for it', () => {
+    const md = [
+      '# ข้อสอบ ทดสอบ',
+      '',
+      '## ข้อ 1',
+      '',
+      '### โจทย์',
+      '',
+      'ข้อความ',
+      '',
+      '## Sol {sol; merge}',
+      '',
+      '### ส่วนหนึ่ง',
+      '',
+      'ข้อความ',
+      '',
+    ].join('\n');
+    const r = build({ 'final-exam/01-decoder.md': md });
+    expect(r.errors).toEqual([]);
+    const [, solution] = r.files[0].root.children;
+    expect(solution).toMatchObject({ solution: true, merge: true });
+  });
+
   it('refuses a bare word in a heading that is not sol', () => {
     const md = ['# ข้อสอบ ทดสอบ', '', '## โจทย์ {answer}', '', 'ข้อความ', ''].join('\n');
-    expect(build({ 'final-exam/01-decoder.md': md }).errors[0]).toMatch(/can only be sol/);
+    expect(build({ 'final-exam/01-decoder.md': md }).errors[0]).toMatch(/can only be sol or merge/);
   });
 
   it('keeps explanation, code and an example in one chapter, in order, as a card each', () => {
