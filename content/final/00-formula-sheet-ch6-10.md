@@ -547,6 +547,54 @@ Excess-3 คือเลขฐานสิบ $+3$ เขียนเป็น�
 | 3 | พัลส์บวก (Positive-Pulse) | พัลส์ที่เป็น $1$ |
 | 4 | พัลส์ลบ (Negative-Pulse) | พัลส์ที่เป็น $0$ |
 
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="176" viewBox="0 0 700 176" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="100" y1="40" x2="100" y2="132"/>
+<line x1="165" y1="40" x2="165" y2="132"/>
+<line x1="230" y1="40" x2="230" y2="132"/>
+<line x1="295" y1="40" x2="295" y2="132"/>
+<line x1="360" y1="40" x2="360" y2="132"/>
+<line x1="425" y1="40" x2="425" y2="132"/>
+</g>
+<path d="M70,112 L100,112 L100,60 L165,60 L165,112 L230,112 L230,60 L295,60 L295,112 L360,112 L360,60 L425,60 L425,112 L490,112" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linejoin="miter"/>
+<text x="58" y="92" text-anchor="end" font-size="18">Clock</text>
+<polygon points="100,77 94,91 106,91" fill="#e8743b"/>
+<polygon points="165,95 159,81 171,81" fill="#3b8be8"/>
+<polygon points="230,77 224,91 236,91" fill="#e8743b"/>
+<polygon points="295,95 289,81 301,81" fill="#3b8be8"/>
+<polygon points="360,77 354,91 366,91" fill="#e8743b"/>
+<polygon points="425,95 419,81 431,81" fill="#3b8be8"/>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<polyline points="100,50 100,44 165,44 165,50"/>
+<polyline points="165,122 165,128 230,128 230,122"/>
+</g>
+<text x="132.5" y="34" text-anchor="middle" font-size="14">Positive pulse (1)</text>
+<text x="197.5" y="148" text-anchor="middle" font-size="14">Negative pulse (0)</text>
+<text x="100" y="148" text-anchor="middle" font-size="14" fill="#e8743b">Rising edge</text>
+<text x="425" y="148" text-anchor="middle" font-size="14" fill="#3b8be8">Falling edge</text>
+<text x="520" y="64" font-size="14" font-family="Mitr, Tahoma, sans-serif" fill="#e8743b">Positive-edge : ขอบขาขึ้น</text>
+<text x="520" y="90" font-size="14" font-family="Mitr, Tahoma, sans-serif" fill="#3b8be8">Negative-edge : ขอบขาลง</text>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="120" viewBox="0 0 640 120" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="2.2" fill="none">
+<path d="M10,80 L50,80 L50,30 L90,30 L90,80 L120,80"/>
+<path d="M170,80 L210,80 L210,30 L250,30 L250,80 L280,80"/>
+<path d="M330,80 L370,80 L370,30 L410,30 L410,80 L440,80"/>
+<path d="M490,30 L530,30 L530,80 L570,80 L570,30 L600,30"/>
+</g>
+<g fill="currentColor"><polygon points="46,45 50,57 42,57" transform="translate(0,-4)"/>
+<polygon points="244,63 240,51 248,51" transform="translate(0,4)"/></g>
+<text x="60" y="108" text-anchor="middle" font-size="14">Rising edge</text>
+<text x="220" y="108" text-anchor="middle" font-size="14">Falling edge</text>
+<text x="380" y="108" text-anchor="middle" font-size="14">Positive pulse</text>
+<text x="540" y="108" text-anchor="middle" font-size="14">Negative pulse</text>
+</svg>
+</div>
+
 - **Clock (CLK, CP)** คือสัญญาณพัลส์ที่ใช้กระตุ้น $Q$ จะเปลี่ยนก็ต่อเมื่อมีสัญญาณนี้มากระตุ้น (ฟลิป-ฟลอปที่ป้อนพัลส์เข้าตรง ๆ เรียกว่าแล็ทช์ Latch)
 - สามเหลี่ยมที่ขา CLK ($>$) คือทำงานด้วยขอบ ถ้ามีวงกลมเล็กด้วยคือทำงานที่ขอบขาลง ($\downarrow$)
 
@@ -564,111 +612,333 @@ Excess-3 คือเลขฐานสิบ $+3$ เขียนเป็น�
 
 ### 7.4 RS ฟลิป-ฟลอปแบบ NOR
 
-**ตารางการทำงาน** ($RS=11$ ห้ามใช้)
+$RS=11$ ห้ามใช้ (เครื่องหมาย $?$ คือไม่กำหนดค่า)
 
-| $R$ | $S$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | $Q(t)$ | $\overline{Q}(t)$ |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 1 | ? | ? |
-
-**ตารางการกระตุ้น**
-
-| $Q(t)$ | $Q(t+1)$ | $R$ | $S$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | $x$ | $0$ |
-| 0 | 1 | $0$ | $1$ |
-| 1 | 0 | $1$ | $0$ |
-| 1 | 1 | $0$ | $x$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="541" height="193" viewBox="0 0 541 193" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="125" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="218" height="143"/>
+<line x1="16" y1="73" x2="234" y2="73"/>
+<line x1="142" y1="42" x2="142" y2="185"/>
+</g>
+<text x="43.2" y="63" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="43.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="43.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="106.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="165" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="165" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="211" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="211" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="211" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="211" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="211" y="174" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="407.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="290" y="42" width="235" height="143"/>
+<line x1="290" y1="73" x2="525" y2="73"/>
+<line x1="382" y1="42" x2="382" y2="185"/>
+</g>
+<text x="313" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="313" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="313" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="359" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="417.8" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="417.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="417.8" y="174" text-anchor="middle" font-size="16">?</text>
+<text x="489.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="467.5" y1="49" x2="478.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="476" y1="79" x2="487" y2="79" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="489.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="489.2" y="174" text-anchor="middle" font-size="16">?</text>
+</svg>
+</div>
 
 ### 7.5 RS ฟลิป-ฟลอปแบบ NAND
 
-**ตารางการทำงาน** ($RS=00$ ห้ามใช้ ต่างจากแบบ NOR)
+$RS=00$ ห้ามใช้ (ต่างจากแบบ NOR)
 
-| $R$ | $S$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | ? | ? |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 1 | $Q(t)$ | $\overline{Q}(t)$ |
-
-**ตารางการกระตุ้น**
-
-| $Q(t)$ | $Q(t+1)$ | $R$ | $S$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | $1$ | $x$ |
-| 0 | 1 | $0$ | $1$ |
-| 1 | 0 | $1$ | $0$ |
-| 1 | 1 | $x$ | $1$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="541" height="193" viewBox="0 0 541 193" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="125" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="218" height="143"/>
+<line x1="16" y1="73" x2="234" y2="73"/>
+<line x1="142" y1="42" x2="142" y2="185"/>
+</g>
+<text x="43.2" y="63" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="43.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="43.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="106.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="165" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="174" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="211" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="211" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="211" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="211" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="211" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="407.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="290" y="42" width="235" height="143"/>
+<line x1="290" y1="73" x2="525" y2="73"/>
+<line x1="382" y1="42" x2="382" y2="185"/>
+</g>
+<text x="313" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="313" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="313" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="359" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="417.8" y="93" text-anchor="middle" font-size="16">?</text>
+<text x="417.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="417.8" y="174" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="489.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="467.5" y1="49" x2="478.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="93" text-anchor="middle" font-size="16">?</text>
+<text x="489.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="489.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="489.2" y="174" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="476" y1="160" x2="487" y2="160" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
 
 ### 7.6 Clock RS ฟลิป-ฟลอป
 
 ทำงานเหมือน RS แบบ NOR แต่เปลี่ยนสถานะเมื่อมีสัญญาณนาฬิกา CP มากระตุ้นเท่านั้น ($-$ คือไม่มีสัญญาณกระตุ้น) ตารางการกระตุ้นเหมือน RS แบบ NOR
 
-| CP | $R$ | $S$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|:-:|:-:|
-| $-$ | $x$ | $x$ | $Q(t)$ | $\overline{Q}(t)$ |
-| $\uparrow$ | 0 | 0 | $Q(t)$ | $\overline{Q}(t)$ |
-| $\uparrow$ | 0 | 1 | 1 | 0 |
-| $\uparrow$ | 1 | 0 | 0 | 1 |
-| $\uparrow$ | 1 | 1 | ? | ? |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="313" height="220" viewBox="0 0 313 220" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="156.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="281" height="170"/>
+<line x1="16" y1="73" x2="297" y2="73"/>
+<line x1="154" y1="42" x2="154" y2="212"/>
+</g>
+<text x="39" y="63" text-anchor="middle" font-size="16">CP</text>
+<text x="39" y="93" text-anchor="middle" font-size="16">–</text>
+<line x1="39" y1="122" x2="39" y2="109" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="39,108 34.5,115 43.5,115" fill="currentColor"/>
+<line x1="39" y1="149" x2="39" y2="136" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="39,135 34.5,142 43.5,142" fill="currentColor"/>
+<line x1="39" y1="176" x2="39" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="39,162 34.5,169 43.5,169" fill="currentColor"/>
+<line x1="39" y1="203" x2="39" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="39,189 34.5,196 43.5,196" fill="currentColor"/>
+<text x="85" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="85" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="85" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="85" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="85" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="85" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="131" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="131" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="131" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="131" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="131" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="131" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="189.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="189.8" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="189.8" y="120" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="189.8" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="189.8" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="189.8" y="201" text-anchor="middle" font-size="16">?</text>
+<text x="261.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="239.5" y1="49" x2="250.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="261.2" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="248" y1="79" x2="259" y2="79" stroke="currentColor" stroke-width="1.3"/>
+<text x="261.2" y="120" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="248" y1="106" x2="259" y2="106" stroke="currentColor" stroke-width="1.3"/>
+<text x="261.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="261.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="261.2" y="201" text-anchor="middle" font-size="16">?</text>
+</svg>
+</div>
 
 ### 7.7 JK ฟลิป-ฟลอป
 
-**ตารางการทำงาน**
-
-| $J$ | $K$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | $Q(t)$ | $\overline{Q}(t)$ |
-| 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | $\overline{Q}(t)$ | $Q(t)$ |
-
-**ตารางการกระตุ้น**
-
-| $Q(t)$ | $Q(t+1)$ | $J$ | $K$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | $0$ | $x$ |
-| 0 | 1 | $1$ | $x$ |
-| 1 | 0 | $x$ | $1$ |
-| 1 | 1 | $x$ | $0$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="541" height="193" viewBox="0 0 541 193" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="125" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="218" height="143"/>
+<line x1="16" y1="73" x2="234" y2="73"/>
+<line x1="142" y1="42" x2="142" y2="185"/>
+</g>
+<text x="43.2" y="63" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="43.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="43.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="106.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="63" text-anchor="middle" font-size="16">J</text>
+<text x="165" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="165" y="174" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="211" y="63" text-anchor="middle" font-size="16">K</text>
+<text x="211" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="211" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="211" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="211" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="407.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="290" y="42" width="235" height="143"/>
+<line x1="290" y1="73" x2="525" y2="73"/>
+<line x1="382" y1="42" x2="382" y2="185"/>
+</g>
+<text x="313" y="63" text-anchor="middle" font-size="16">J</text>
+<text x="313" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="313" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="313" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="63" text-anchor="middle" font-size="16">K</text>
+<text x="359" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="359" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="359" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="417.8" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="417.8" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="417.8" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="417.8" y="174" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="404.5" y1="160" x2="415.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="467.5" y1="49" x2="478.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="476" y1="79" x2="487" y2="79" stroke="currentColor" stroke-width="1.3"/>
+<text x="489.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="489.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="489.2" y="174" text-anchor="middle" font-size="16">Q(t)</text>
+</svg>
+</div>
 
 ### 7.8 D ฟลิป-ฟลอป
 
-**ตารางการทำงาน**
-
-| $D$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 1 |
-| 1 | 1 | 0 |
-
-**ตารางการกระตุ้น**
-
-| $Q(t)$ | $Q(t+1)$ | $D$ |
-|:-:|:-:|:-:|
-| 0 | 0 | $0$ |
-| 0 | 1 | $1$ |
-| 1 | 0 | $0$ |
-| 1 | 1 | $1$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="449" height="193" viewBox="0 0 449 193" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="102" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="172" height="143"/>
+<line x1="16" y1="73" x2="188" y2="73"/>
+<line x1="142" y1="42" x2="142" y2="185"/>
+</g>
+<text x="43.2" y="63" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="43.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="43.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="106.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="165" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="338.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="244" y="42" width="189" height="89"/>
+<line x1="244" y1="73" x2="433" y2="73"/>
+<line x1="290" y1="42" x2="290" y2="131"/>
+</g>
+<text x="267" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="267" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="267" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="325.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="325.8" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="325.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="397.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="375.5" y1="49" x2="386.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="397.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="397.2" y="120" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
 
 ### 7.9 T ฟลิป-ฟลอป
 
-**ตารางการทำงาน**
-
-| $T$ | $Q(t+1)$ | $\overline{Q}(t+1)$ |
-|:-:|:-:|:-:|
-| 0 | $Q(t)$ | $\overline{Q}(t)$ |
-| 1 | $\overline{Q}(t)$ | $Q(t)$ |
-
-**ตารางการกระตุ้น**
-
-| $Q(t)$ | $Q(t+1)$ | $T$ |
-|:-:|:-:|:-:|
-| 0 | 0 | $0$ |
-| 0 | 1 | $1$ |
-| 1 | 0 | $1$ |
-| 1 | 1 | $0$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="449" height="193" viewBox="0 0 449 193" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="102" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="172" height="143"/>
+<line x1="16" y1="73" x2="188" y2="73"/>
+<line x1="142" y1="42" x2="142" y2="185"/>
+</g>
+<text x="43.2" y="63" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="43.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="43.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="43.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="106.2" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="106.2" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="106.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="63" text-anchor="middle" font-size="16">T</text>
+<text x="165" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="165" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="165" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="338.5" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="244" y="42" width="189" height="89"/>
+<line x1="244" y1="73" x2="433" y2="73"/>
+<line x1="290" y1="42" x2="290" y2="131"/>
+</g>
+<text x="267" y="63" text-anchor="middle" font-size="16">T</text>
+<text x="267" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="267" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="325.8" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="325.8" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="325.8" y="120" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="312.5" y1="106" x2="323.5" y2="106" stroke="currentColor" stroke-width="1.3"/>
+<text x="397.2" y="63" text-anchor="middle" font-size="16">Q(t+1)</text>
+<line x1="375.5" y1="49" x2="386.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="397.2" y="93" text-anchor="middle" font-size="16">Q(t)</text>
+<line x1="384" y1="79" x2="395" y2="79" stroke="currentColor" stroke-width="1.3"/>
+<text x="397.2" y="120" text-anchor="middle" font-size="16">Q(t)</text>
+</svg>
+</div>
 
 ### 7.10 ขา PRESET และ CLEAR
 
@@ -676,16 +946,89 @@ Excess-3 คือเลขฐานสิบ $+3$ เขียนเป็น�
 - PRESET $=0$ ได้ $Q=1$ , CLEAR $=0$ ได้ $Q=0$ ถ้าเป็น $0$ ทั้งคู่ได้ $Q=\overline{Q}=1$ ไม่ควรใช้
 - ปกติให้ PRESET $=$ CLEAR $=1$ แล้วฟลิป-ฟลอปทำงานตาม CLK (ตัวอย่างคือ JK ใน IC 74LS73 ที่ทำงานที่ขอบขาลง)
 
-| PRESET | CLEAR | CLOCK | $J$ | $K$ | $Q$ | $\overline{Q}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | $x$ | $x$ | $x$ | 1 | 1 |
-| 0 | 1 | $x$ | $x$ | $x$ | 1 | 0 |
-| 1 | 0 | $x$ | $x$ | $x$ | 0 | 1 |
-| 1 | 1 | $\downarrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
-| 1 | 1 | $\downarrow$ | 0 | 1 | 0 | 1 |
-| 1 | 1 | $\downarrow$ | 1 | 0 | 1 | 0 |
-| 1 | 1 | $\downarrow$ | 1 | 1 | $\overline{Q_0}$ | $Q_0$ |
-| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="424" height="251"/>
+<line x1="16" y1="73" x2="440" y2="73"/>
+<line x1="345" y1="42" x2="345" y2="293"/>
+<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<line x1="212" y1="217" x2="212" y2="230" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,231 207.5,224 216.5,224" fill="currentColor"/>
+<line x1="212" y1="244" x2="212" y2="257" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,258 207.5,251 216.5,251" fill="currentColor"/>
+<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">J</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="63" text-anchor="middle" font-size="16">K</text>
+<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="368.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="359" y1="241" x2="370" y2="241" stroke="currentColor" stroke-width="1.3"/>
+<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
 
 ### 7.11 สรุปตารางและสมการของบท
 
