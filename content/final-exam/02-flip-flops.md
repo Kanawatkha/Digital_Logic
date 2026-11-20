@@ -1,9 +1,9 @@
 # ข้อสอบปลายภาค ข้อ 2 ฟลิป-ฟลอป (Flip-Flop)
 
+@select set ตัวอย่าง | a=1 | b=2 | c=3
 @select ff ชนิดฟลิป-ฟลอป | jk=JK | d=D | t=T | rs=Clock RS
 @select trig การกระตุ้น | rise=ขอบขาขึ้น (↑) | fall=ขอบขาลง (↓)
 @select pins ขา PS และ CLR | none=ไม่มี | ps=มี PS และ CLR
-@select set ชุดสัญญาณ | a=ชุดที่ 1 | b=ชุดที่ 2 | c=ชุดที่ 3
 @select give สิ่งที่โจทย์ให้ | wave=รูปคลื่นอินพุต | table=รูปคลื่นและตารางการทำงาน
 
 ---

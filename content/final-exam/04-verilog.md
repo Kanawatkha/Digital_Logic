@@ -1,7 +1,7 @@
 # ข้อสอบปลายภาค ข้อ 4 Verilog
 
+@select case ตัวอย่าง | c1=1 | c2=2 | c3=3 | c4=4 | c5=5 | c6=6 | c7=7 | c8=8 | c9=9 | c10=10 | c11=11 | c12=12 | c13=13 | c14=14 | c15=15 | c16=16 | c17=17
 @select part ส่วนของโจทย์ | a=โค้ดไปวงจร (อ่านโค้ด วาดวงจร) | b=วงจรไปโค้ด (ดูวงจร เขียนโค้ด)
-@select case วงจร | c1=AB + C'D | c2=MUX 2-to-1 | c3=MUX 4-to-1 | c4=XOR (Y = A⊕B) | c5=XNOR | c6=Majority 3 ตัว | c7=(A+B)(C+D) | c8=NAND สองชั้น | c9=NOR สองชั้น | c10=Half Adder | c11=Decoder 2-to-4 | c12=DEMUX 1-to-4 | c13=Parity 3 บิต | c14=Comparator 1 บิต | c15=เท่ากัน 2 บิต | c16=(AB)' + C | c17=AOI (AB + CD)'
 @select style สไตล์ของโค้ด | struct=Structural (เกต) | flow=Dataflow (assign)
 
 ---

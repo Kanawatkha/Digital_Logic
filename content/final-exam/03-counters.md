@@ -1,6 +1,6 @@
 # ข้อสอบปลายภาค ข้อ 3 วงจรนับ (Counter)
 
-@select seq ลำดับการนับ | mod4=Mod 4 (0,1,2,3) | jump5=กระโดด 0,3,5,2,1 | s5=ลำดับ 0,1,2,4,6 | s6=ลำดับ 0,1,3,7,6,4 | up8=นับขึ้น 0 ถึง 7 | mod6=Mod 6 (0 ถึง 5) | mod10=Mod 10 (0 ถึง 9) | down8=นับลง 7 ถึง 0 | gray3=Gray code 3 บิต | jump5b=กระโดด 0,1,4,6,3
+@select seq ตัวอย่าง | mod4=1 | jump5=2 | s5=3 | s6=4 | up8=5 | mod6=6 | mod10=7 | down8=8 | gray3=9 | jump5b=10
 @select ff ชนิดฟลิป-ฟลอป | jk=JK | rs=RS (NOR) | d=D | t=T
 
 ---
