@@ -52,6 +52,34 @@ describe('block parser', () => {
     expect(() => blocksOf(bad)).toThrow(/blank line/);
   });
 
+  it('parses a fenced code block as written, and keeps what looks like Markdown inside it', () => {
+    const md = [
+      'ก่อน',
+      '',
+      '```verilog',
+      'module m(input a, output y);',
+      '  // # not a heading, | not a table, $x not math',
+      '  assign y = ~a;',
+      '',
+      '  - not a list',
+      'endmodule',
+      '```',
+      '',
+      'หลัง',
+    ].join('\n');
+    const blocks = blocksOf(md);
+    expect(blocks.map((b) => b.t)).toEqual(['p', 'code', 'p']);
+    expect(blocks[1]).toEqual({
+      t: 'code',
+      v: 'module m(input a, output y);\n  // # not a heading, | not a table, $x not math\n  assign y = ~a;\n\n  - not a list\nendmodule',
+    });
+  });
+
+  it('rejects a code block that is not closed or has nothing in it', () => {
+    expect(() => blocksOf('```\nassign y = a;')).toThrow(/unclosed code block/);
+    expect(() => blocksOf('```\n\n```')).toThrow(/empty code block/);
+  });
+
   it('fails loudly on unknown constructs', () => {
     expect(() => blocksOf('ข้อความ $ไม่ปิด')).toThrow(/unmatched/);
     expect(() => blocksOf('<span>x</span>')).toThrow(/unsupported HTML/);

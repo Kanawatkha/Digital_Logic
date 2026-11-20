@@ -9,7 +9,7 @@ export default function ExamSetPage() {
   const { set } = useParams();
   const item = EXAM_SETS.find((s) => s.set === set && s.set !== '1');
   if (!item) {
-    return <Navigate to="/exam" replace />;
+    return <Navigate to="/exam/mid" replace />;
   }
   return (
     <SolutionsProvider>

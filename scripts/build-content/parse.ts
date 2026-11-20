@@ -131,6 +131,7 @@ function isBlockStart(text: string): boolean {
     t === '' ||
     /^---+$/.test(t) ||
     t.startsWith('<div align=') ||
+    t.startsWith('```') ||
     HEADING_RE.test(text) ||
     t.startsWith('$$') ||
     t.startsWith('>') ||
@@ -248,6 +249,19 @@ export function parseLines(lines: Line[], file: string, allowHeadings: boolean):
 
     if (t === '' || /^---+$/.test(t)) {
       i++;
+      continue;
+    }
+
+    if (t.startsWith('```')) {
+      let j = i + 1;
+      while (j < lines.length && lines[j].text.trim() !== '```') j++;
+      if (j >= lines.length) throw new ParseError(`${where}: unclosed code block`);
+      const body = dedent(lines.slice(i + 1, j)).map((l) => l.text.trimEnd());
+      while (body.length > 0 && body[body.length - 1] === '') body.pop();
+      while (body.length > 0 && body[0] === '') body.shift();
+      if (body.length === 0) throw new ParseError(`${where}: empty code block`);
+      tokens.push({ k: 'block', block: { t: 'code', v: body.join('\n') }, line: no });
+      i = j + 1;
       continue;
     }
 

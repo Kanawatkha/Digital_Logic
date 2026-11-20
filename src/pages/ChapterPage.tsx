@@ -1,15 +1,16 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { SolutionsProvider } from '@/components/content/SolutionsProvider';
+import { ChapterPicker } from '@/components/layout/ChapterPicker';
 import { FloatingSolutionsSwitch } from '@/components/layout/SolutionsSwitch';
-import { isChapterNumber } from '@/config/site';
+import { chapterPath, isChapterNumber } from '@/config/site';
 import { ContentPage } from '@/features/content-page/ContentPage';
 
-/** Chapter exercises: worked-solutions/0N. */
+/** Chapter exercises of the midterm, under the picker of the chapters: worked-solutions/0N. */
 export default function ChapterPage() {
   const { n } = useParams();
   const chapter = Number(n);
   if (!isChapterNumber(chapter)) {
-    return <Navigate to="/" replace />;
+    return <Navigate to={chapterPath(1)} replace />;
   }
   return (
     <SolutionsProvider>
@@ -20,7 +21,12 @@ export default function ChapterPage() {
         variant="exercises"
         badge="แบบฝึกหัด"
         tabTitle={`บทที่ ${chapter}`}
-        above={<FloatingSolutionsSwitch />}
+        above={
+          <>
+            <FloatingSolutionsSwitch reserveRow />
+            <ChapterPicker />
+          </>
+        }
       />
     </SolutionsProvider>
   );

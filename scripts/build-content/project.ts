@@ -16,6 +16,18 @@ export function projectMarkdown(md: string): Projection {
   const math: string[] = [];
   let figures = 0;
   let s = md.replace(/\r\n/g, '\n');
+  // fenced code is taken out first: what is in it is not Markdown
+  const code: string[] = [];
+  s = s.replace(/^[ \t]*```[^\n]*\n([\s\S]*?)^[ \t]*```[ \t]*$/gm, (_m, body: string) => {
+    code.push(squash(body));
+    return `\n«C${code.length - 1}»\n`;
+  });
+  // inline code is raw too: a pipe, a dollar or a star in it is not Markdown
+  const inline: string[] = [];
+  s = s.replace(/`([^`\n]+)`/g, (_m, body: string) => {
+    inline.push(squash(body));
+    return `«K${inline.length - 1}»`;
+  });
   s = s.replace(/<div align="center">[\s\S]*?<\/div>/g, () => {
     figures++;
     return '\n«F»\n';
@@ -39,7 +51,10 @@ export function projectMarkdown(md: string): Projection {
   s = s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
   s = s.replace(/\\([\\`*_{}[\]()#+\-.!|$<>~&])/g, '$1');
   s = s.replace(/\|/g, ' ').replace(/«P»/g, '|');
-  return { text: squash(s), math, figures };
+  s = squash(s)
+    .replace(/«C(\d+)»/g, (_m, k: string) => code[Number(k)])
+    .replace(/«K(\d+)»/g, (_m, k: string) => inline[Number(k)]);
+  return { text: s, math, figures };
 }
 
 /* ---------- data side ---------- */
@@ -73,6 +88,8 @@ function blk(blocks: Block[], p: Projection): string {
         case 'figure':
           p.figures++;
           return '«F»';
+        case 'code':
+          return b.v;
         case 'note':
           return blk(b.c, p);
         case 'example':

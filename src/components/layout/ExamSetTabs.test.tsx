@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { SolutionsProvider } from '@/components/content/SolutionsProvider';
@@ -11,7 +11,7 @@ function Probe() {
 
 const setup = () =>
   render(
-    <MemoryRouter initialEntries={['/exam/3']}>
+    <MemoryRouter initialEntries={['/exam/mid/3']}>
       <SolutionsProvider>
         <ExamSetTabs />
         <Probe />
@@ -27,6 +27,29 @@ describe('ExamSetTabs', () => {
     const nav = screen.getByRole('navigation', { name: 'ชุดข้อสอบ' });
     expect(nav.querySelectorAll('a')).toHaveLength(4);
     expect(screen.getByRole('link', { name: 'ชุดที่ 3' })).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('has the switch between the midterm and the final above the sets, on the midterm', () => {
+    setup();
+    const terms = screen.getByRole('navigation', { name: 'ภาคการศึกษา' });
+    expect(
+      within(terms)
+        .getAllByRole('link')
+        .map((l) => l.textContent),
+    ).toEqual(['กลางภาค', 'ปลายภาค']);
+    expect(within(terms).getByRole('link', { name: 'ปลายภาค' })).toHaveAttribute(
+      'href',
+      '/exam/final',
+    );
+    expect(within(terms).getByRole('link', { name: 'กลางภาค' })).toHaveAttribute(
+      'href',
+      '/exam/mid',
+    );
+    // the one for the page that is open is marked: the sets are the midterm's
+    expect(within(terms).getByRole('link', { name: 'กลางภาค' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    );
   });
 
   it('switches the solutions off and on, and remembers the choice', () => {

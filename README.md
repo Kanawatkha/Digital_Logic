@@ -12,9 +12,9 @@ Live site: https://kanawatkha.github.io/Digital_Logic/
 | Page | Source Markdown | Content |
 |---|---|---|
 | Home | `content/summary/01..05` | Diagram: Midterm, chapters, sections, topics, then formulas, explanation and examples |
-| บทที่ 1-5 | `content/worked-solutions/01..05` | Worked solutions per chapter |
-| ข้อสอบกลางภาค | `content/worked-solutions/06` | Practice exam with solutions, circuits and K-maps |
-| สรุปสูตรรวม | `content/summary/00` | Formula sheet for chapters 1-5 |
+| เนื้อหาตามบท (`#/chapters`) | `content/worked-solutions/01..05` | One page for all the chapters, a chapter picked in it: worked solutions per chapter (midterm; chapters 6-10 of the final in `content/final/`, being written) |
+| ข้อสอบ (`#/exam`) | `content/worked-solutions/06..09` | Practice exams with solutions, circuits and K-maps, a switch between the midterm and the final (being made) |
+| สรุปสูตร (`#/formulas`) | `content/summary/00` | Formula sheet for chapters 1-5, a switch between the midterm and the final (being made) |
 | แล็บ (`#/lab`) | `content/lab-tasks/01..05` | Board simulator and the lab tasks, see below |
 
 ## Lab
@@ -47,7 +47,7 @@ the history and decisions of the page are in `LAB-PLAN.md`.
 
 All text lives in Markdown under `content/`. Never edit generated files.
 
-1. Edit a file in `content/summary/`, `content/worked-solutions/` or `content/lab-tasks/`. Follow
+1. Edit a file in `content/summary/`, `content/worked-solutions/`, `content/final/` or `content/lab-tasks/`. Follow
    `CONTENT-SCHEMA.md` (section 12 for the lab tasks: the `lab` block with `level:`, `@table`,
    `@kmap`, and `@method algebra`, `@method kmap` and `@method all` for the two ways).
 2. Check the result locally:

@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import type { Collection, ContentFile, Manifest, ManifestEntry } from '../../src/content/types.ts';
 import { parseDocument } from './parse.ts';
@@ -14,7 +14,7 @@ export type BuildResult = {
   report: string;
 };
 
-const COLLECTIONS: Collection[] = ['summary', 'worked-solutions'];
+const COLLECTIONS: Collection[] = ['summary', 'worked-solutions', 'final'];
 
 function slugOf(fileName: string): { chapter: string; slug: string } {
   const m = /^(\d{2})-(.+)\.md$/.exec(fileName);
@@ -30,6 +30,7 @@ export function buildContent(contentDir: string): BuildResult {
 
   for (const collection of COLLECTIONS) {
     const dir = join(contentDir, collection);
+    if (!existsSync(dir)) continue;
     const names = readdirSync(dir)
       .filter((f) => f.endsWith('.md'))
       .sort();
@@ -75,7 +76,7 @@ export function buildContent(contentDir: string): BuildResult {
     }
   }
 
-  const manifest: Manifest = { collections: { summary: [], 'worked-solutions': [] } };
+  const manifest: Manifest = { collections: { summary: [], 'worked-solutions': [], final: [] } };
   for (const f of files) {
     let nodes = 0;
     let examples = 0;

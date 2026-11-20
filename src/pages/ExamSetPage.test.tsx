@@ -30,9 +30,9 @@ function renderAt(path: string) {
   return render(
     <MemoryRouter initialEntries={[path]}>
       <Routes>
-        <Route path="/chapter/:n" element={<ChapterPage />} />
-        <Route path="/exam" element={<ExamPage />} />
-        <Route path="/exam/:set" element={<ExamSetPage />} />
+        <Route path="/chapters/mid/:n" element={<ChapterPage />} />
+        <Route path="/exam/mid" element={<ExamPage />} />
+        <Route path="/exam/mid/:set" element={<ExamSetPage />} />
       </Routes>
     </MemoryRouter>,
   );
@@ -47,7 +47,7 @@ describe('exam pages', () => {
   });
 
   it('shows set 2 from worked-solutions/07 with the set switcher', async () => {
-    renderAt('/exam/2');
+    renderAt('/exam/mid/2');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 07' })).toBeInTheDocument();
     expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '07');
     const tabs = screen.getByRole('navigation', { name: 'ชุดข้อสอบ' });
@@ -59,31 +59,45 @@ describe('exam pages', () => {
   });
 
   it('shows set 3 from worked-solutions/08 and set 4 from worked-solutions/09', async () => {
-    renderAt('/exam/3');
+    renderAt('/exam/mid/3');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 08' })).toBeInTheDocument();
     expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '08');
     expect(screen.getByRole('link', { name: 'ชุดที่ 3' })).toHaveAttribute('aria-current', 'page');
     cleanup();
-    renderAt('/exam/4');
+    renderAt('/exam/mid/4');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 09' })).toBeInTheDocument();
     expect(loadContentFile).toHaveBeenCalledWith('worked-solutions', '09');
   });
 
-  it('keeps set 1 on /exam with the same switcher', async () => {
-    renderAt('/exam');
+  it('keeps set 1 on /exam/mid with the same switcher', async () => {
+    renderAt('/exam/mid');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 06' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'ชุดที่ 1' })).toHaveAttribute('aria-current', 'page');
   });
 
   it('gives each chapter page the solutions switch', async () => {
-    renderAt('/chapter/2');
+    renderAt('/chapters/mid/2');
     expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 02' })).toBeInTheDocument();
     expect(screen.getByRole('switch', { name: 'แสดงเฉลย' })).toBeInTheDocument();
   });
 
-  it('sends an unknown set back to the first exam page', () => {
-    renderAt('/exam/9');
+  it('sends an unknown set back to the first exam page', async () => {
+    renderAt('/exam/mid/9');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 06' })).toBeInTheDocument();
     expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '07');
     expect(loadContentFile).not.toHaveBeenCalledWith('worked-solutions', '09');
+  });
+
+  it('puts the chapter picker over a chapter, with the chapter that is open marked', async () => {
+    renderAt('/chapters/mid/2');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 02' })).toBeInTheDocument();
+    const picker = screen.getByRole('navigation', { name: 'เลือกบท' });
+    expect(screen.getByRole('link', { name: 'บทที่ 2' })).toHaveAttribute('aria-current', 'page');
+    expect(picker.querySelectorAll('a[href^="/chapters/mid/"]')).toHaveLength(5);
+  });
+
+  it('sends a chapter that does not exist to the first one', async () => {
+    renderAt('/chapters/mid/7');
+    expect(await screen.findByRole('heading', { level: 1, name: 'เฉลย 01' })).toBeInTheDocument();
   });
 });

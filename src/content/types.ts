@@ -20,6 +20,8 @@ export type Block =
   | { t: 'list'; ordered: boolean; items: ListItem[] }
   | { t: 'table'; align: Align[]; head: Inline[][]; rows: Inline[][][] }
   | { t: 'figure'; svg: string }
+  /** A fenced block of code (Verilog), shown as written. */
+  | { t: 'code'; v: string }
   | { t: 'note'; c: Block[] }
   | { t: 'example'; id: string; problem: Block[]; sol: Block[]; ans: Block[] };
 
@@ -49,7 +51,8 @@ export type ContentNode = {
   source: { file: string; line: number };
 };
 
-export type Collection = 'summary' | 'worked-solutions';
+/** `final` holds the chapters of the final exam (6 to 10): explanation and examples in one file. */
+export type Collection = 'summary' | 'worked-solutions' | 'final';
 
 export type ContentFile = {
   collection: Collection;

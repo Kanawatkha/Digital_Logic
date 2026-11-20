@@ -8,6 +8,7 @@ Rules for turning the Markdown in `content/` into typed data. This is the contra
 |---|---|---|
 | `summary` | `00-formula-sheet-ch1-5.md`, `01..05-<name>-summary.md` | Home diagram (01-05), Formula sheet page (00) |
 | `worked-solutions` | `01..05-<name>.md`, `06-midterm-practice-exam.md` | Chapter pages (01-05), Exam page (06) |
+| `final` | `06..10-<name>.md` (chapters 6 to 10 of the final exam) | Chapter pages of the final (`#/chapters/final/N`). One file holds the explanation, the formulas, the figures, the code and the worked examples of a chapter; it is built like `worked-solutions` (a `##` is a group, a `###` is a card: an explanation, or an example with `Sol` and `Ans`) |
 | `lab-tasks` | `01..05-<name>.md` (one per kind of task) | Task card of the Lab page, see section 12 |
 
 Chapter keys: 01 number-systems-and-codes, 02 digital-ic-and-logic-gates, 03 boolean-algebra, 04 karnaugh-map, 05 combination-circuit.
@@ -26,6 +27,7 @@ Counts are from the current content and show how common each construct is.
 | Display math | `$$ ... $$` (multi-line) | `array`, `aligned`, `cases`, etc. |
 | Bold / emphasis | `**...**` | Also lead-ins such as `**สูตร**`, `**ตัวอย่าง**` |
 | Inline code | `` `...` `` | Rare |
+| Code block | a line of three backticks, the code, a line of three backticks | Verilog of chapter 9. Kept as written (no Markdown, math or HTML inside it); the opening line may name the language, which is not kept; shown in a box that scrolls sideways |
 | Unordered list | `- item` (about 100 lines) | Items may contain indented child blocks: nested lists and display math exist in `01` |
 | Ordered list | `1. item` (about 57 lines) | Same; a blank line between two items of the same kind continues the list |
 | Pipe table | `\| a \| b \|` with alignment row | Cells may contain `$...$` and HTML entities |
@@ -57,6 +59,7 @@ type Block =
   | { t: 'list'; ordered: boolean; items: { c: Inline[]; children: Block[] }[] }
   | { t: 'table'; align: ('n' | 'l' | 'c' | 'r')[]; head: Inline[][]; rows: Inline[][][] }
   | { t: 'figure'; svg: string; title?: string }      // sanitized SVG markup
+  | { t: 'code'; v: string }                           // fenced code, as written
   | { t: 'note'; c: Block[] }                          // blockquote
   | { t: 'example'; id: string; title?: Inline[]; problem: Block[]; sol: Block[]; ans: Block[] };
 
@@ -73,7 +76,7 @@ type ContentNode = {
   source: { file: string; line: number };
 };
 
-type ContentFile = { collection: 'summary' | 'worked-solutions'; chapter: string; title: Inline[]; root: ContentNode };
+type ContentFile = { collection: 'summary' | 'worked-solutions' | 'final'; chapter: string; title: Inline[]; root: ContentNode };
 ```
 
 Every `html` string is produced by `katex.renderToString(tex, { displayMode, throwOnError: true, strict: 'error' })`. A failure fails the build.

@@ -39,7 +39,8 @@ Digital_Logic/
 │  └─ skills/               edit-content/, verify-math/, add-component/
 ├─ content/                 SOURCE OF TRUTH (Markdown only)
 │  ├─ summary/              00-formula-sheet-ch1-5.md, 01..05-*-summary.md
-│  ├─ worked-solutions/     01..05-*.md, 06-midterm-practice-exam.md
+│  ├─ worked-solutions/     01..05-*.md, 06..09 midterm practice exams
+│  ├─ final/                06..10-*.md, the chapters of the final exam
 │  └─ lab-tasks/            01..05-*.md, the tasks of the lab (CONTENT-SCHEMA.md section 12)
 ├─ scripts/
 │  └─ build-content/        run.ts (CLI), index.ts, parse.ts, tree.ts, math.ts, svg.ts, project.ts, report.ts, tasks.ts and latexExpr.ts (lab tasks)
@@ -79,7 +80,7 @@ Notes:
 1. `scripts/build-content` reads every `content/**/*.md`.
 2. It parses Markdown into blocks, builds the node tree (see `CONTENT-SCHEMA.md`), pre-renders every formula with KaTeX in strict mode, keeps SVG verbatim, and writes:
    - `generated/manifest.json` (collections, nodes, titles, slugs, order)
-   - `generated/summary/<NN>.json`, `generated/worked-solutions/<NN>.json` (NN = chapter key), `generated/report.txt`
+   - `generated/summary/<NN>.json`, `generated/worked-solutions/<NN>.json`, `generated/final/<NN>.json` (NN = chapter key), `generated/report.txt`
 3. `src/content/loaders.ts` exposes `loadCollectionPage(kind, slug)` using `import.meta.glob` so each file is its own lazy chunk.
 4. Pages call loaders, show a skeleton while loading, then pass typed data to feature components.
 5. `BlockRenderer` maps `block.type` to a component. Unknown types fail the type-check, not at runtime.
@@ -110,7 +111,7 @@ app    ->  pages, components, config
 ## 7. Routing
 
 - `HashRouter`, because GitHub Pages cannot rewrite deep links.
-- Routes: `/`, `/chapter/:n` (1-5), `/exam`, `/exam/:set`, `/formulas`, `/lab`, `*` (not found).
+- Routes: `/`, `/chapters` (to `/chapters/mid/1`), `/chapters/mid/:n` (1-5), `/chapters/final` (to `/chapters/final/6`), `/chapters/final/:n` (6-10), `/exam` (to `/exam/mid`), `/exam/mid`, `/exam/mid/:set`, `/exam/final`, `/formulas` (to `/formulas/mid`), `/formulas/mid`, `/formulas/final`, `/lab`, `*` (not found). The chapters of the final are `pages/FinalChapterPage.tsx` (`final/NN`, listed in `FINAL_CHAPTERS` of `config/site.ts`). The exam and the formula sheet of the final have no content yet (`pages/FinalPage.tsx`). `/chapter/:n` and `/exam/:set` of before are redirected (`app/LegacyRedirects.tsx`). The routes are `AppRoutes` in `app/App.tsx`, so that they can be tested.
 - Each route is code-split with `React.lazy`.
 
 ## 8. Styling and tokens

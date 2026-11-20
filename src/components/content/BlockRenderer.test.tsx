@@ -57,6 +57,14 @@ describe('BlockRenderer', () => {
     expect(screen.getByText('หมายเหตุ').closest('aside')).not.toBeNull();
   });
 
+  it('renders code as written, in a box that scrolls sideways', () => {
+    const v = 'module m(input a, output y);\n  assign y = ~a;\nendmodule';
+    const { container } = render(<BlockList blocks={[{ t: 'code', v }]} />);
+    const pre = container.querySelector('pre');
+    expect(pre?.textContent).toBe(v);
+    expect(pre?.parentElement?.className).toContain('overflow-x-auto');
+  });
+
   it('renders an example with a Sol label and an answer strip, and omits empty parts', () => {
     const full: Block = {
       t: 'example',

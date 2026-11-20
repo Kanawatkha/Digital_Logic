@@ -8,9 +8,9 @@ const contentDir = join(process.cwd(), 'content');
 const result = buildContent(contentDir);
 
 describe('real content', () => {
-  it('converts all 15 Markdown files with no errors (parse, KaTeX strict, SVG rules, round trip)', () => {
+  it('converts all 20 Markdown files with no errors (parse, KaTeX strict, SVG rules, round trip)', () => {
     expect(result.errors).toEqual([]);
-    expect(result.files).toHaveLength(15);
+    expect(result.files).toHaveLength(20);
   });
 
   it('produces no warnings', () => {

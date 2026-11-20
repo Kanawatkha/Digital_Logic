@@ -11,27 +11,53 @@ export type NavItem = {
   shortLabel?: string;
 };
 
+/** The two exams of the course: what the chapters, the exams and the formula sheets are grouped by. */
+export const TERMS = [
+  { id: 'mid', label: 'กลางภาค' },
+  { id: 'final', label: 'ปลายภาค' },
+] as const;
+export type Term = (typeof TERMS)[number]['id'];
+
+/** The page of a chapter of the midterm (chapters 1 to 5). */
+export const chapterPath = (n: number): string => `/chapters/mid/${n}`;
+
+/**
+ * The chapters of the final (6 to 10), in the order of the course: their Markdown is in `content/final/`.
+ */
+export const FINAL_CHAPTERS = [
+  { n: 6, title: 'วงจรถอดรหัส' },
+  { n: 7, title: 'ฟลิป-ฟลอป' },
+  { n: 8, title: 'วงจรนับ' },
+  { n: 9, title: 'Verilog' },
+  { n: 10, title: 'รีจิสเตอร์ หน่วยความจำ วงจรซีเควนเชียล' },
+] as const;
+
+export type FinalChapter = (typeof FINAL_CHAPTERS)[number];
+
+/** The page of a chapter of the final. */
+export const finalChapterPath = (n: number): string => `/chapters/final/${n}`;
+
+export function findFinalChapter(n: number): FinalChapter | undefined {
+  return FINAL_CHAPTERS.find((c) => c.n === n);
+}
+
 /** Thai labels shown to students, see UI-SPEC.md section 1. */
 export const NAV_ITEMS: readonly NavItem[] = [
-  ...CHAPTER_NUMBERS.map((n) => ({
-    to: `/chapter/${n}`,
-    label: `บทที่ ${n}`,
-    shortLabel: `บท ${n}`,
-  })),
-  { to: '/exam', label: 'ข้อสอบกลางภาค' },
-  { to: '/formulas', label: 'สรุปสูตรรวม' },
+  { to: '/chapters', label: 'เนื้อหาตามบท' },
+  { to: '/exam', label: 'ข้อสอบ' },
+  { to: '/formulas', label: 'สรุปสูตร' },
   { to: '/lab', label: 'แล็บ' },
 ];
 
 /**
- * The practice exams behind the "ข้อสอบกลางภาค" tab, one file each (worked-solutions/06 to /09). Every
- * file holds the questions with their solutions; the exam pages can hide the solutions.
+ * The practice exams of the midterm, one file each (worked-solutions/06 to /09). Every file holds the
+ * questions with their solutions; the exam pages can hide the solutions.
  */
 export const EXAM_SETS = [
-  { set: '1', to: '/exam', label: 'ชุดที่ 1', chapter: '06' },
-  { set: '2', to: '/exam/2', label: 'ชุดที่ 2', chapter: '07' },
-  { set: '3', to: '/exam/3', label: 'ชุดที่ 3', chapter: '08' },
-  { set: '4', to: '/exam/4', label: 'ชุดที่ 4', chapter: '09' },
+  { set: '1', to: '/exam/mid', label: 'ชุดที่ 1', chapter: '06' },
+  { set: '2', to: '/exam/mid/2', label: 'ชุดที่ 2', chapter: '07' },
+  { set: '3', to: '/exam/mid/3', label: 'ชุดที่ 3', chapter: '08' },
+  { set: '4', to: '/exam/mid/4', label: 'ชุดที่ 4', chapter: '09' },
 ] as const;
 
 export const HOME_ITEM: NavItem = { to: '/', label: 'หน้าหลัก' };
@@ -46,6 +72,11 @@ export const UI_TEXT = {
   menuOpen: 'เมนู',
   menuClose: 'ปิดเมนู',
   comingSoon: 'กำลังจัดทำ',
+  finalSoon: 'เนื้อหาปลายภาคจะมาเพิ่มที่หน้านี้',
+  termSwitch: 'ภาคการศึกษา',
+  chapterPick: 'เลือกบท',
+  finalExam: 'ข้อสอบปลายภาค',
+  finalFormulas: 'สรุปสูตรปลายภาค',
   updateReady: 'มีเวอร์ชันใหม่ พร้อมใช้งาน',
   updateAction: 'โหลดใหม่',
   solutions: 'แสดงเฉลย',

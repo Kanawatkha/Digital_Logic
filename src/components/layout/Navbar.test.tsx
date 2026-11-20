@@ -44,7 +44,7 @@ function setup(initial = '/') {
 describe('Navbar and the back gesture', () => {
   function setupWithHistory() {
     return render(
-      <MemoryRouter initialEntries={['/chapter/1', '/']} initialIndex={1}>
+      <MemoryRouter initialEntries={['/chapters/mid/1', '/']} initialIndex={1}>
         <Navbar />
         <Gesture />
       </MemoryRouter>,
@@ -62,7 +62,7 @@ describe('Navbar and the back gesture', () => {
     expect(where()).toBe('/');
     expect(screen.getByRole('button', { name: 'เมนู' })).toHaveFocus();
     back();
-    expect(where()).toBe('/chapter/1');
+    expect(where()).toBe('/chapters/mid/1');
   });
 
   it('lets a row of the menu take the place of the menu, so back goes to the page it was opened on', async () => {
@@ -101,7 +101,7 @@ describe('Navbar and the back gesture', () => {
     await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
     expect(where()).toBe('/');
     back();
-    expect(where()).toBe('/chapter/1');
+    expect(where()).toBe('/chapters/mid/1');
   });
 
   it('leaves nothing in the history when the menu or the card is closed with Escape or the cross', async () => {
@@ -113,20 +113,21 @@ describe('Navbar and the back gesture', () => {
     fireEvent.click(screen.getByRole('button', { name: 'ปิด' }));
     await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
     back();
-    expect(where()).toBe('/chapter/1');
+    expect(where()).toBe('/chapters/mid/1');
   });
 });
 
 describe('Navbar', () => {
   it('lists every page as a link in the tab row', () => {
-    setup('/chapter/3');
+    setup('/chapters/mid/3');
     const nav = screen.getByRole('navigation', { name: 'Main' });
     const links = within(nav).getAllByRole('link');
     // logo link plus one link per nav item (the mobile menu is closed)
     expect(links).toHaveLength(NAV_ITEMS.length + 1);
     const current = links.filter((l) => l.getAttribute('aria-current') === 'page');
     expect(current).toHaveLength(1);
-    expect(current[0]).toHaveAttribute('href', '/chapter/3');
+    // the chapters are one tab, whichever chapter is open
+    expect(current[0]).toHaveAttribute('href', '/chapters');
   });
 
   it('opens the mobile menu with one row per page and closes it with Escape', async () => {
@@ -142,7 +143,7 @@ describe('Navbar', () => {
       'aria-expanded',
       'true',
     );
-    // Home row plus the 8 nav items
+    // Home row plus the 4 nav items
     expect(within(menu as HTMLElement).getAllByRole('link')).toHaveLength(NAV_ITEMS.length + 1);
 
     fireEvent.keyDown(document, { key: 'Escape' });
@@ -223,7 +224,7 @@ describe('Navbar', () => {
   });
 
   it('shows the highlight pill on the current tab only, and hides it on the home page', () => {
-    const { container, unmount } = setup('/chapter/3');
+    const { container, unmount } = setup('/chapters/mid/3');
     const pill = container.querySelector('header ul > span') as HTMLElement;
     expect(pill).toHaveAttribute('aria-hidden', 'true');
     expect(pill.style.opacity).toBe('1');

@@ -63,6 +63,14 @@ export function BlockRenderer({ block }: { block: Block }) {
       return <TableBlock align={block.align} head={block.head} rows={block.rows} />;
     case 'figure':
       return <FigureBlock svg={block.svg} />;
+    case 'code':
+      return (
+        <ScrollArea className="rounded-md bg-surface-soft p-4">
+          <pre className="font-mono text-[0.875rem] leading-relaxed text-ink">
+            <code>{block.v}</code>
+          </pre>
+        </ScrollArea>
+      );
     case 'note':
       return (
         <aside className="rounded-md bg-surface-soft p-4">

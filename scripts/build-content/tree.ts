@@ -274,7 +274,8 @@ function summaryChapter(raw: Raw, ctx: Ctx): ContentNode {
 
 /** Generic mapping for worked-solutions and the formula sheet: one node per heading. */
 function genericChapter(raw: Raw, ctx: Ctx): ContentNode {
-  const worked = ctx.collection === 'worked-solutions';
+  // the chapters of the final are built like the worked solutions: a heading, then its blocks
+  const worked = ctx.collection !== 'summary';
   const build = (r: Raw, level: 1 | 2 | 3, key: string): ContentNode => {
     const kind: NodeKind =
       level === 1

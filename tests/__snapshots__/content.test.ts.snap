@@ -3,6 +3,53 @@
 exports[`real content > keeps counts stable (review any change before accepting the snapshot) 1`] = `
 {
   "collections": {
+    "final": [
+      {
+        "chapter": "06",
+        "examples": 25,
+        "figures": 40,
+        "file": "final/06.json",
+        "nodes": 42,
+        "slug": "decoders",
+        "title": "บทที่ 6 วงจรถอดรหัส (Decoder)",
+      },
+      {
+        "chapter": "07",
+        "examples": 14,
+        "figures": 24,
+        "file": "final/07.json",
+        "nodes": 34,
+        "slug": "flipflops",
+        "title": "บทที่ 7 ฟลิป-ฟลอป (Flip-Flop)",
+      },
+      {
+        "chapter": "08",
+        "examples": 10,
+        "figures": 33,
+        "file": "final/08.json",
+        "nodes": 22,
+        "slug": "counters",
+        "title": "บทที่ 8 วงจรนับ (Counter)",
+      },
+      {
+        "chapter": "09",
+        "examples": 23,
+        "figures": 15,
+        "file": "final/09.json",
+        "nodes": 41,
+        "slug": "verilog",
+        "title": "บทที่ 9 Verilog",
+      },
+      {
+        "chapter": "10",
+        "examples": 28,
+        "figures": 47,
+        "file": "final/10.json",
+        "nodes": 57,
+        "slug": "register-memory-sequential",
+        "title": "บทที่ 10 รีจิสเตอร์ หน่วยความจำ และวงจรซีเควนเชียล",
+      },
+    ],
     "summary": [
       {
         "chapter": "00",

@@ -1,16 +1,20 @@
 import { NavLink } from 'react-router-dom';
 import { FloatingSolutionsSwitch } from '@/components/layout/SolutionsSwitch';
+import { TermSwitch } from '@/components/layout/TermSwitch';
 import { EXAM_SETS } from '@/config/site';
+import { examPath } from '@/components/layout/termPaths';
 import { cn } from '@/lib/cn';
 
 /**
- * Toolbar above every exam page: pills that switch between the practice exam sets, and the floating
- * switch that shows or hides the solutions (see FloatingSolutionsSwitch).
+ * Toolbar above every midterm exam page: the switch to the final, pills that switch between the
+ * practice exam sets, and the floating switch that shows or hides the solutions (see
+ * FloatingSolutionsSwitch).
  */
 export function ExamSetTabs() {
   return (
     <>
       <FloatingSolutionsSwitch reserveRow />
+      <TermSwitch to={examPath} />
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <nav aria-label="ชุดข้อสอบ">
           <ul className="flex flex-wrap gap-2">

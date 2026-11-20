@@ -11,6 +11,7 @@ Content is the only thing authors edit. The site is generated from it. Read `CON
 
 - `content/summary/NN-<name>-summary.md`: theory, formulas, short explanations, and examples. Feeds the home diagram. `00-formula-sheet-ch1-5.md` feeds the Formula sheet page (formulas and brief notes, no worked examples except the few already present).
 - `content/worked-solutions/NN-<name>.md`: problems only (examples and exercises). **No theory or formula summaries here.** Theory belongs in `summary/`. `06-midterm-practice-exam.md` is the practice exam.
+- `content/final/NN-<name>.md` (chapters 6 to 10 of the final exam): one file per chapter holding the explanation, the formulas, the figures, the Verilog code blocks (three backticks) and the worked examples together. A `##` is a group, a `###` is a card: an explanation, or an example with `Sol` and `Ans` (detailed, hand-written steps). Chapters: 06 decoders, 07 flip-flops, 08 counters, 09 Verilog, 10 registers, memory and sequential circuits.
 - Chapters: 01 number-systems-and-codes, 02 digital-ic-and-logic-gates, 03 boolean-algebra, 04 karnaugh-map, 05 combination-circuit (chapter 5 covers basic combination circuits only).
 - Until the Phase 1 migration in `PLAN.md`, the folders are still `summary/` and `worked-solutions/` at the repository root.
 
@@ -47,6 +48,8 @@ Content is the only thing authors edit. The site is generated from it. Read `CON
 ### Figures (SVG)
 
 - Circuits, K-maps, Venn diagrams and timing diagrams are inline `<svg>` inside `<div align="center">`.
+- Verilog goes in fenced code blocks (three backticks). Verilog in a sentence or a bullet is inline code (a pipe or a dollar inside it is safe there), but a pipe in a table cell still splits the cell, so operators with `|` are listed in bullets, not in tables. Every piece of Verilog is run by a program before it is written.
+- A K-map with more than three loops adds purple `#a855f7` (loop 4) and gold `#d4a017` (loop 5). The figures of `content/final/` are written by scripts that are checked against the truth tables, never by hand.
 - Use `currentColor` for strokes and text. K-map loops use the fixed palette: `#e8743b` (loop 1), `#3b8be8` (loop 2), `#2fae5f` (loop 3).
 - **No blank lines anywhere inside `<svg>` or the wrapping HTML.** A blank line breaks Markdown rendering.
 - Never create separate image files or an `images/` folder.
