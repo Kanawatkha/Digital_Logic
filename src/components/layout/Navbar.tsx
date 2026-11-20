@@ -6,6 +6,7 @@ import { Logo } from '@/components/layout/Logo';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ShareDialog } from '@/components/layout/ShareDialog';
 import { NAV_ITEMS, SITE_NAME, UI_TEXT } from '@/config/site';
+import { useSectionNav } from '@/hooks/useSectionNav';
 import { cn } from '@/lib/cn';
 import { useLayer, useRestoreFocus } from '@/lib/layers';
 import { NAVBAR_SLOT_ID } from '@/lib/navbarSlot';
@@ -50,6 +51,7 @@ export function Navbar() {
   const tabsRef = useRef<HTMLUListElement>(null);
   const pillRef = useRef<HTMLSpanElement>(null);
   const { pathname } = useLocation();
+  const sectionNav = useSectionNav();
   const open = menu.open;
 
   // Follows the current page, and keeps up when the tab row changes size (resize, fonts, label length).
@@ -89,6 +91,7 @@ export function Navbar() {
             <li key={item.to}>
               <NavLink
                 to={item.to}
+                onClick={sectionNav(item.to)}
                 className={({ isActive }) =>
                   cn(
                     'type-nav relative block rounded-md px-2.5 py-2 whitespace-nowrap transition-colors duration-300 lg:px-3.5',

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from '@/components/ui/Icon';
 import { HOME_ITEM, NAV_ITEMS } from '@/config/site';
 import { useFocusTrap } from '@/hooks/useFocusTrap';
+import { useSectionNav } from '@/hooks/useSectionNav';
 import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import { cn } from '@/lib/cn';
 import './overlay.css';
@@ -21,6 +22,7 @@ const CLOSE_MS = 220;
 export function MobileMenu({ id, open, onClose }: MobileMenuProps) {
   const [mounted, setMounted] = useState(open);
   const panelRef = useRef<HTMLDivElement>(null);
+  const sectionNav = useSectionNav();
 
   if (open && !mounted) setMounted(true);
 
@@ -65,6 +67,7 @@ export function MobileMenu({ id, open, onClose }: MobileMenuProps) {
                 end={item.to === '/'}
                 // the menu is an entry of the history: the page takes its place, so back skips it
                 replace
+                onClick={sectionNav(item.to, { replace: true })}
                 className={({ isActive }) =>
                   cn(
                     'type-title-sm flex h-14 items-center justify-between px-4',

@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { Navbar } from '@/components/layout/Navbar';
 import { NAV_ITEMS } from '@/config/site';
 import { resetLayers } from '@/lib/layers';
+import { resetPlaces, usePlaceMemory } from '@/lib/placeMemory';
 
 function GoToExam() {
   const navigate = useNavigate();
@@ -28,7 +29,10 @@ function Gesture() {
   );
 }
 
-beforeEach(() => resetLayers());
+beforeEach(() => {
+  resetLayers();
+  resetPlaces();
+});
 
 function setup(initial = '/') {
   return render(
@@ -73,7 +77,7 @@ describe('Navbar and the back gesture', () => {
       .getAllByRole('link')
       .find((link) => link.getAttribute('href') === '/exam') as HTMLElement;
     fireEvent.click(row);
-    expect(where()).toBe('/exam');
+    expect(where()).toBe('/exam/mid');
     back();
     expect(where()).toBe('/');
     // the panel stays for the length of its slide-up animation
@@ -114,6 +118,115 @@ describe('Navbar and the back gesture', () => {
     await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
     back();
     expect(where()).toBe('/chapters/mid/1');
+  });
+});
+
+describe('the tabs that open a section', () => {
+  /** The frame of the site: the navbar, the memory of the place, and where the page is. */
+  function Frame() {
+    usePlaceMemory();
+    const { pathname } = useLocation();
+    return <p data-testid="where">{pathname}</p>;
+  }
+  function open(initial: string, entries = [initial]) {
+    return render(
+      <MemoryRouter initialEntries={entries} initialIndex={entries.length - 1}>
+        <Navbar />
+        <Frame />
+      </MemoryRouter>,
+    );
+  }
+  const where = () => screen.getByTestId('where').textContent;
+  const tab = (name: string) =>
+    within(screen.getByRole('navigation', { name: 'Main' })).getByRole('link', { name });
+  let scrollTo: ReturnType<typeof vi.spyOn>;
+
+  beforeEach(() => {
+    scrollTo = vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
+  });
+
+  it('brings back the page that was last read when the section is entered again', () => {
+    open('/exam/final/3');
+    fireEvent.click(tab('สรุปสูตร'));
+    expect(where()).toBe('/formulas/mid');
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/final/3');
+  });
+
+  it('remembers each section on its own', () => {
+    open('/chapters/final/8');
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/mid');
+    fireEvent.click(tab('เนื้อหาตามบท'));
+    expect(where()).toBe('/chapters/final/8');
+  });
+
+  it('goes to the main page when the tab of the open section is pressed again, and keeps it as the place', () => {
+    open('/exam/final/3');
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/mid');
+    fireEvent.click(tab('สรุปสูตร'));
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/mid');
+  });
+
+  it('goes to the top, without a new entry of the history, when the main page is already open', () => {
+    open('/exam/mid', ['/', '/exam/mid']);
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/mid');
+    expect(scrollTo).toHaveBeenCalledWith(0, 0);
+  });
+
+  it('starts at the main page when what was remembered is not a page any more', () => {
+    window.sessionStorage.setItem('dl-place:exam', '/exam/final/9');
+    open('/formulas/mid');
+    fireEvent.click(tab('ข้อสอบ'));
+    expect(where()).toBe('/exam/mid');
+  });
+
+  it('keeps the address of the tab in the link, so a new tab opens the main page', () => {
+    open('/exam/final/3');
+    expect(tab('ข้อสอบ')).toHaveAttribute('href', '/exam');
+  });
+
+  it('leaves a click with a modifier key to the browser', () => {
+    open('/formulas/mid');
+    const before = where();
+    fireEvent.click(tab('ข้อสอบ'), { ctrlKey: true });
+    expect(where()).toBe(before);
+  });
+
+  it('opens the page of the lab and the home page as they are', () => {
+    open('/exam/final/3');
+    fireEvent.click(tab('แล็บ'));
+    expect(where()).toBe('/lab');
+  });
+
+  it('brings back the place from a row of the mobile menu, in the place of the menu', async () => {
+    open('/exam/final/3', ['/', '/exam/final/3']);
+    fireEvent.click(tab('สรุปสูตร'));
+    expect(where()).toBe('/formulas/mid');
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    const menu = document.getElementById('mobile-menu') as HTMLElement;
+    const row = within(menu)
+      .getAllByRole('link')
+      .find((link) => link.getAttribute('href') === '/exam') as HTMLElement;
+    fireEvent.click(row);
+    expect(where()).toBe('/exam/final/3');
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
+  });
+
+  it('takes the menu row of the open section to the main page and closes the menu', async () => {
+    open('/exam/final/3');
+    fireEvent.click(screen.getByRole('button', { name: 'เมนู' }));
+    const menu = document.getElementById('mobile-menu') as HTMLElement;
+    fireEvent.click(
+      within(menu)
+        .getAllByRole('link')
+        .find((link) => link.getAttribute('href') === '/exam') as HTMLElement,
+    );
+    expect(where()).toBe('/exam/mid');
+    await waitFor(() => expect(document.getElementById('mobile-menu')).toBeNull());
   });
 });
 
