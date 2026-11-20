@@ -79,9 +79,9 @@ $\mathbf{Sol}^{n}$
 $$
 \begin{aligned}
 X &= \sum m(6,7) = AB\overline{C}+ABC \\
-&= AB(\overline{C}+C) &&\text{ดึง $AB$ ออก (กระจาย ข้อ 3(b))} \\
-&= AB\cdot1 &&\text{ข้อ 8(a) $C+\overline{C}=1$} \\
-&= AB &&\text{ข้อ 7(b) $X\cdot1=X$}
+&= AB(\overline{C}+C) &&X(Y+Z)=XY+XZ \\
+&= AB\cdot1 &&X+\overline{X}=1 \\
+&= AB &&X\cdot1=X
 \end{aligned}
 $$
 
@@ -139,9 +139,9 @@ $$
 $$
 \begin{aligned}
 Y &= (A+B+C)(\overline{A}+\overline{B}) \\
-&= A\overline{A}+A\overline{B}+B\overline{A}+B\overline{B}+C\overline{A}+C\overline{B} &&\text{กระจาย ข้อ 3(b)} \\
-&= 0+A\overline{B}+\overline{A}B+0+\overline{A}C+\overline{B}C &&\text{ข้อ 8(b) $X\cdot\overline{X}=0$} \\
-&= A\overline{B}+\overline{A}B+\overline{A}C+\overline{B}C &&\text{ข้อ 7(a) $0+X=X$}
+&= A\overline{A}+A\overline{B}+B\overline{A}+B\overline{B}+C\overline{A}+C\overline{B} &&X(Y+Z)=XY+XZ \\
+&= 0+A\overline{B}+\overline{A}B+0+\overline{A}C+\overline{B}C &&X\cdot\overline{X}=0 \\
+&= A\overline{B}+\overline{A}B+\overline{A}C+\overline{B}C &&0+X=X
 \end{aligned}
 $$
 
@@ -149,15 +149,15 @@ $$
 
 $$
 \begin{aligned}
-\overline{A}C &= \overline{A}C(B+\overline{B}) &&\text{ข้อ 8(a) และข้อ 7(b)} \\
-&= \overline{A}BC+\overline{A}\,\overline{B}C &&\text{กระจาย ข้อ 3(b)}
+\overline{A}C &= \overline{A}C(B+\overline{B}) &&X+\overline{X}=1,\ X\cdot1=X \\
+&= \overline{A}BC+\overline{A}\,\overline{B}C &&X(Y+Z)=XY+XZ
 \end{aligned}
 $$
 
 $$
 \begin{aligned}
 Y &= A\overline{B}+\overline{A}B+\overline{A}BC+\overline{A}\,\overline{B}C+\overline{B}C \\
-&= A\overline{B}+\overline{A}B+\overline{B}C &&\text{ข้อ 6(a) $X+XY=X$ ทั้งคู่ คือ $\overline{A}B+\overline{A}BC=\overline{A}B$ และ $\overline{A}\,\overline{B}C+\overline{B}C=\overline{B}C$}
+&= A\overline{B}+\overline{A}B+\overline{B}C &&X+XY=X
 \end{aligned}
 $$
 
@@ -4927,111 +4927,111 @@ $g = (A+B+C)(\overline{B}+\overline{C}+\overline{D})$
 
 $$\begin{aligned}
 a &= A+C+BD+\overline{B}\,\overline{D} \\
-&= \overline{\overline{A+C+BD+\overline{B}\,\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{A+C+BD+\overline{B}\,\overline{D}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment b ด้วย NAND {code=bcd; method=nand; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= \overline{B}+\overline{C}\,\overline{D}+CD \\
-&= \overline{\overline{\overline{B}+\overline{C}\,\overline{D}+CD}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}+\overline{C}\,\overline{D}+CD}} && \overline{\overline{X}} = X \\
+&= \overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment c ด้วย NAND {code=bcd; method=nand; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= B+\overline{C}+D \\
-&= \overline{\overline{B+\overline{C}+D}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{B}\cdot C\cdot \overline{D}} && \text{(De Morgan)}
+&= \overline{\overline{B+\overline{C}+D}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{B}\cdot C\cdot \overline{D}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment d ด้วย NAND {code=bcd; method=nand; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D \\
-&= \overline{\overline{A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} && \text{(De Morgan)}
+&= \overline{\overline{A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment e ด้วย NAND {code=bcd; method=nand; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= \overline{B}\,\overline{D}+C\overline{D} \\
-&= \overline{\overline{\overline{B}\,\overline{D}+C\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}\,\overline{D}+C\overline{D}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment f ด้วย NAND {code=bcd; method=nand; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D} \\
-&= \overline{\overline{A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment g ด้วย NAND {code=bcd; method=nand; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D} \\
-&= \overline{\overline{B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment a ด้วย NOR {code=bcd; method=nor; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
-&= \overline{\overline{(A+B+C+\overline{D})(\overline{B}+C+D)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} && \text{(De Morgan)}
+&= \overline{\overline{(A+B+C+\overline{D})(\overline{B}+C+D)}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment b ด้วย NOR {code=bcd; method=nor; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= (\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D) \\
-&= \overline{\overline{(\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} && \text{(De Morgan)}
+&= \overline{\overline{(\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment c ด้วย NOR {code=bcd; method=nor; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= (B+\overline{C}+D) \\
-&= \overline{\overline{B+\overline{C}+D}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
+&= \overline{\overline{B+\overline{C}+D}} && \overline{\overline{X}} = X
 \end{aligned}$$
 
 ### แปลง segment d ด้วย NOR {code=bcd; method=nor; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= (A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D}) \\
-&= \overline{\overline{(A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{(A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment e ด้วย NOR {code=bcd; method=nor; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= (\overline{D})(\overline{B}+C) \\
-&= \overline{\overline{(\overline{D})(\overline{B}+C)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{D+\overline{\overline{B}+C}} && \text{(De Morgan)}
+&= \overline{\overline{(\overline{D})(\overline{B}+C)}} && \overline{\overline{X}} = X \\
+&= \overline{D+\overline{\overline{B}+C}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment f ด้วย NOR {code=bcd; method=nor; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= (A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D}) \\
-&= \overline{\overline{(A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{(A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment g ด้วย NOR {code=bcd; method=nor; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= (A+B+C)(\overline{B}+\overline{C}+\overline{D}) \\
-&= \overline{\overline{(A+B+C)(\overline{B}+\overline{C}+\overline{D})}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{(A+B+C)(\overline{B}+\overline{C}+\overline{D})}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### วงจรของเลข 0 {code=bcd; method=andor; digit=0}
@@ -13057,110 +13057,110 @@ $g = (A+B)(A+C+D)(\overline{A}+\overline{C}+D)$
 
 $$\begin{aligned}
 a &= \overline{B}+\overline{C}D+C\overline{D}+A \\
-&= \overline{\overline{\overline{B}+\overline{C}D+C\overline{D}+A}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}+\overline{C}D+C\overline{D}+A}} && \overline{\overline{X}} = X \\
+&= \overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment b ด้วย NAND {code=xs3; method=nand; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= C+B \\
-&= \overline{\overline{C+B}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{C}\cdot \overline{B}} && \text{(De Morgan)}
+&= \overline{\overline{C+B}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{C}\cdot \overline{B}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment c ด้วย NAND {code=xs3; method=nand; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= \overline{B}+\overline{D}+C \\
-&= \overline{\overline{\overline{B}+\overline{D}+C}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{B\cdot D\cdot \overline{C}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}+\overline{D}+C}} && \overline{\overline{X}} = X \\
+&= \overline{B\cdot D\cdot \overline{C}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment d ด้วย NAND {code=xs3; method=nand; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= \overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C} \\
-&= \overline{\overline{\overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment e ด้วย NAND {code=xs3; method=nand; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= \overline{B}D+\overline{C}D \\
-&= \overline{\overline{\overline{B}D+\overline{C}D}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{B}D+\overline{C}D}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment f ด้วย NAND {code=xs3; method=nand; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= CD+A\overline{C} \\
-&= \overline{\overline{CD+A\overline{C}}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{CD}\cdot \overline{A\overline{C}}} && \text{(De Morgan)}
+&= \overline{\overline{CD+A\overline{C}}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{CD}\cdot \overline{A\overline{C}}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment g ด้วย NAND {code=xs3; method=nand; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= \overline{C}D+BC+A\overline{C}+AD \\
-&= \overline{\overline{\overline{C}D+BC+A\overline{C}+AD}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}} && \text{(De Morgan)}
+&= \overline{\overline{\overline{C}D+BC+A\overline{C}+AD}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}} && \overline{X+Y} = \overline{X}\,\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment a ด้วย NOR {code=xs3; method=nor; digit=0,2,3,5,6,7,8,9}
 
 $$\begin{aligned}
 a &= (A+C+D)(\overline{B}+\overline{C}+\overline{D}) \\
-&= \overline{\overline{(A+C+D)(\overline{B}+\overline{C}+\overline{D})}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \text{(De Morgan)}
+&= \overline{\overline{(A+C+D)(\overline{B}+\overline{C}+\overline{D})}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment b ด้วย NOR {code=xs3; method=nor; digit=0,1,2,3,4,7,8,9}
 
 $$\begin{aligned}
 b &= (B+C) \\
-&= \overline{\overline{B+C}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
+&= \overline{\overline{B+C}} && \overline{\overline{X}} = X
 \end{aligned}$$
 
 ### แปลง segment c ด้วย NOR {code=xs3; method=nor; digit=0,1,3,4,5,6,7,8,9}
 
 $$\begin{aligned}
 c &= (\overline{B}+C+\overline{D}) \\
-&= \overline{\overline{\overline{B}+C+\overline{D}}} && \text{(คอมพลีเมนต์ 2 ครั้ง: NOR แล้วต่อ NOT)}
+&= \overline{\overline{\overline{B}+C+\overline{D}}} && \overline{\overline{X}} = X
 \end{aligned}$$
 
 ### แปลง segment d ด้วย NOR {code=xs3; method=nor; digit=0,2,3,5,6,8,9}
 
 $$\begin{aligned}
 d &= (A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D) \\
-&= \overline{\overline{(A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} && \text{(De Morgan)}
+&= \overline{\overline{(A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment e ด้วย NOR {code=xs3; method=nor; digit=0,2,6,8}
 
 $$\begin{aligned}
 e &= (D)(\overline{B}+\overline{C}) \\
-&= \overline{\overline{(D)(\overline{B}+\overline{C})}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} && \text{(De Morgan)}
+&= \overline{\overline{(D)(\overline{B}+\overline{C})}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{D}+\overline{\overline{B}+\overline{C}}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment f ด้วย NOR {code=xs3; method=nor; digit=0,4,5,6,8,9}
 
 $$\begin{aligned}
 f &= (A+C)(\overline{C}+D) \\
-&= \overline{\overline{(A+C)(\overline{C}+D)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+C}+\overline{\overline{C}+D}} && \text{(De Morgan)}
+&= \overline{\overline{(A+C)(\overline{C}+D)}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+C}+\overline{\overline{C}+D}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### แปลง segment g ด้วย NOR {code=xs3; method=nor; digit=2,3,4,5,6,8,9}
 
 $$\begin{aligned}
 g &= (A+B)(A+C+D)(\overline{A}+\overline{C}+D) \\
-&= \overline{\overline{(A+B)(A+C+D)(\overline{A}+\overline{C}+D)}} && \text{(คอมพลีเมนต์ 2 ครั้ง)} \\
-&= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}} && \text{(De Morgan)}
+&= \overline{\overline{(A+B)(A+C+D)(\overline{A}+\overline{C}+D)}} && \overline{\overline{X}} = X \\
+&= \overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}} && \overline{X\,Y} = \overline{X}+\overline{Y}
 \end{aligned}$$
 
 ### วงจรของเลข 0 {code=xs3; method=andor; digit=0}
