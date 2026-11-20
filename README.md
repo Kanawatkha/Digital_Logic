@@ -14,7 +14,7 @@ Live site: https://kanawatkha.github.io/Digital_Logic/
 | Home | `content/summary/01..05` | Diagram: Midterm, chapters, sections, topics, then formulas, explanation and examples |
 | เนื้อหาตามบท (`#/chapters`) | `content/worked-solutions/01..05` | One page for all the chapters, a chapter picked in it: worked solutions per chapter (midterm; chapters 6-10 of the final in `content/final/`, being written) |
 | ข้อสอบ (`#/exam`) | `content/worked-solutions/06..09` | Practice exams with solutions, circuits and K-maps, a switch between the midterm and the final (being made) |
-| สรุปสูตร (`#/formulas`) | `content/summary/00` | Formula sheet for chapters 1-5, a switch between the midterm and the final (being made) |
+| สรุปสูตร (`#/formulas`) | `content/summary/00`, `content/final/00` | Formula sheets for chapters 1-5 and 6-10, a switch between the midterm and the final |
 | แล็บ (`#/lab`) | `content/lab-tasks/01..05` | Board simulator and the lab tasks, see below |
 
 ## Lab

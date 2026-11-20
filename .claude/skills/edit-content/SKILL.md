@@ -48,7 +48,7 @@ Content is the only thing authors edit. The site is generated from it. Read `CON
 ### Figures (SVG)
 
 - Circuits, K-maps, Venn diagrams and timing diagrams are inline `<svg>` inside `<div align="center">`.
-- A page that lets the reader choose (chapter 6): `@select key label | value=label | ...` lines under the title, and `{key=value}` at the end of a heading to show that card only for those values and an `@choices` line where the buttons go (see CONTENT-SCHEMA.md 4.1). Give each card its own title that says what it is, since the cards of the other choices are hidden.
+- A page that lets the reader choose (chapters 6 and 7): `@select key label | value=label | ...` lines under the title, and `{key=value}` at the end of a heading to show that card only for those values and an `@choices` line where the buttons go (see CONTENT-SCHEMA.md 4.1). Give each card its own title that says what it is, since the cards of the other choices are hidden.
 - Verilog goes in fenced code blocks (three backticks). Verilog in a sentence or a bullet is inline code (a pipe or a dollar inside it is safe there), but a pipe in a table cell still splits the cell, so operators with `|` are listed in bullets, not in tables. Every piece of Verilog is run by a program before it is written.
 - A K-map with more than three loops adds purple `#a855f7` (loop 4) and gold `#d4a017` (loop 5). The figures of `content/final/` are written by scripts that are checked against the truth tables, never by hand.
 - Use `currentColor` for strokes and text. K-map loops use the fixed palette: `#e8743b` (loop 1), `#3b8be8` (loop 2), `#2fae5f` (loop 3).

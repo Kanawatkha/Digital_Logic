@@ -6,9 +6,9 @@ Rules for turning the Markdown in `content/` into typed data. This is the contra
 
 | Collection | Files | Used by |
 |---|---|---|
-| `summary` | `00-formula-sheet-ch1-5.md`, `01..05-<name>-summary.md` | Home diagram (01-05), Formula sheet page (00) |
+| `summary` | `00-formula-sheet-ch1-5.md`, `01..05-<name>-summary.md` | Home diagram (01-05), Formula sheet page of the midterm (00) |
 | `worked-solutions` | `01..05-<name>.md`, `06-midterm-practice-exam.md` | Chapter pages (01-05), Exam page (06) |
-| `final` | `06..10-<name>.md` (chapters 6 to 10 of the final exam) | Chapter pages of the final (`#/chapters/final/N`). One file holds the explanation, the formulas, the figures, the code and the worked examples of a chapter; it is built like `worked-solutions` (a `##` is a group, a `###` is a card: an explanation, or an example with `Sol` and `Ans`) |
+| `final` | `00-formula-sheet-ch6-10.md`, `06..10-<name>.md` (chapters 6 to 10 of the final exam) | Formula sheet page of the final (00, built like the midterm sheet: sections and topics, no cards), chapter pages of the final (`#/chapters/final/N`). One file holds the explanation, the formulas, the figures, the code and the worked examples of a chapter; it is built like `worked-solutions` (a `##` is a group, a `###` is a card: an explanation, or an example with `Sol` and `Ans`) |
 | `lab-tasks` | `01..05-<name>.md` (one per kind of task) | Task card of the Lab page, see section 12 |
 
 Chapter keys: 01 number-systems-and-codes, 02 digital-ic-and-logic-gates, 03 boolean-algebra, 04 karnaugh-map, 05 combination-circuit.
@@ -94,7 +94,7 @@ An **example** is a run of blocks that starts at a problem statement and contain
 
 ### 4.1 Choices of a page (`@select` and `{key=value}`)
 
-A chapter can let the reader choose what is shown (the decoders of chapter 6: the code, the way to design, a digit to check). Two additions, both optional:
+A chapter can let the reader choose what is shown (chapter 6: the code, the way to design and the digit; chapter 7: the flip-flop, the active edge and the pins PS and CLR). Two additions, both optional:
 
 - Lines under the chapter title: `@select key label | value=label | value=label`. One line is one choice (a row of buttons on the page); the first option is the one that is on at first. A choice needs at least two options, with different `value`s (`[a-z0-9_]`). The lines are taken out of the text of the chapter and kept in `ContentFile.selectors`.
 - At the end of a heading: `{key=value}`, several choices separated by `;`, several values of a choice separated by `,`, for example `### หาสมการของ segment a {code=bcd; method=andor,nand}`. The card (the heading and what is under it) is shown only when, for every choice it names, the selected value is one of its values. A heading without it is always shown. The marker is not part of the title and is kept in `ContentNode.when`.

@@ -37,10 +37,10 @@ export function AppRoutes() {
           <Route path="exam" element={<Navigate to="/exam/mid" replace />} />
           <Route path="exam/mid" element={<ExamPage />} />
           <Route path="exam/mid/:set" element={<ExamSetPage />} />
-          <Route path="exam/final" element={<FinalPage kind="exam" />} />
+          <Route path="exam/final" element={<FinalPage />} />
           <Route path="formulas" element={<Navigate to="/formulas/mid" replace />} />
-          <Route path="formulas/mid" element={<FormulaSheetPage />} />
-          <Route path="formulas/final" element={<FinalPage kind="formulas" />} />
+          <Route path="formulas/mid" element={<FormulaSheetPage term="mid" />} />
+          <Route path="formulas/final" element={<FormulaSheetPage term="final" />} />
           {/* the addresses from before the chapters and the exams were gathered by term */}
           <Route path="chapter/:n" element={<LegacyChapter />} />
           <Route path="exam/:set" element={<LegacyExamSet />} />

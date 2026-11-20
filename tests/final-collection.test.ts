@@ -86,6 +86,28 @@ describe('the final collection', () => {
     expect(r.manifest.collections.final[0]).toMatchObject({ file: 'final/06.json', examples: 1 });
   });
 
+  it('builds final/00 as the formula sheet : sections and topics, no cards and no examples', () => {
+    const sheet = [
+      '# สรุปสูตร บทที่ 6 ถึง 10',
+      '',
+      '## บทที่ 6 ทดสอบ',
+      '',
+      '### 6.1 หัวข้อ',
+      '',
+      'ข้อความ ตัวอย่างที่ 1 ไม่ใช่โจทย์',
+      '',
+    ].join('\n');
+    const r = build({ 'final/00-formula-sheet-ch6-10.md': sheet, 'final/06-decoders.md': CHAPTER });
+    expect(r.errors).toEqual([]);
+    const file = r.files.find((f) => f.chapter === '00');
+    expect(file).toMatchObject({ collection: 'final', slug: 'formula-sheet-ch6-10' });
+    const [section] = file!.root.children;
+    expect(section.kind).toBe('section');
+    expect(section.children[0].kind).toBe('topic');
+    // the chapter next to it is still built as a chapter with cards
+    expect(r.files.find((f) => f.chapter === '06')!.root.children[0].kind).toBe('group');
+  });
+
   it('keeps explanation, code and an example in one chapter, in order, as a card each', () => {
     const [file] = build({ 'final/06-decoders.md': CHAPTER }).files;
     const [group] = file.root.children;

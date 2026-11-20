@@ -97,19 +97,27 @@ describe('the addresses of the site', () => {
     ).toBeInTheDocument();
   });
 
-  it('has an empty page for the final in each of the places, that says it is being made', async () => {
-    for (const [path, title] of [
-      ['/exam/final', 'ข้อสอบปลายภาค'],
-      ['/formulas/final', 'สรุปสูตรปลายภาค'],
-    ] as const) {
-      const view = open(path);
-      expect(await screen.findByRole('heading', { level: 1, name: title })).toBeInTheDocument();
-      expect(screen.getByText('เนื้อหาปลายภาคจะมาเพิ่มที่หน้านี้')).toBeInTheDocument();
-      expect(where()).toBe(path);
-      view.unmount();
-    }
-    // nothing of the content is loaded for them
+  it('has an empty page for the exam of the final, that says it is being made', async () => {
+    open('/exam/final');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'ข้อสอบปลายภาค' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('เนื้อหาปลายภาคจะมาเพิ่มที่หน้านี้')).toBeInTheDocument();
+    expect(where()).toBe('/exam/final');
+    // nothing of the content is loaded for it
     expect(loadContentFile).not.toHaveBeenCalled();
+  });
+
+  it('opens the formula sheet of each term from its own file: summary/00 and final/00', async () => {
+    const mid = open('/formulas/mid');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: 'summary 00' }),
+    ).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('summary', '00');
+    mid.unmount();
+    open('/formulas/final');
+    expect(await screen.findByRole('heading', { level: 1, name: 'final 00' })).toBeInTheDocument();
+    expect(loadContentFile).toHaveBeenCalledWith('final', '00');
   });
 
   it('opens chapter 6 of the final from the final collection, as it is written', async () => {
@@ -130,10 +138,14 @@ describe('the addresses of the site', () => {
     expect(picker.querySelectorAll('a[href^="/chapters/final/"]')).toHaveLength(5);
   });
 
-  it('puts the switch on the formula sheet of the midterm, on the midterm', async () => {
-    open('/formulas/mid');
+  it('puts the switch on the formula sheet of the midterm, on the midterm, and of the final, on the final', async () => {
+    const mid = open('/formulas/mid');
     const terms = await screen.findByRole('navigation', { name: 'ภาคการศึกษา' });
     expect(terms.querySelector('[aria-current="page"]')).toHaveTextContent('กลางภาค');
+    mid.unmount();
+    open('/formulas/final');
+    const final = await screen.findByRole('navigation', { name: 'ภาคการศึกษา' });
+    expect(final.querySelector('[aria-current="page"]')).toHaveTextContent('ปลายภาค');
   });
 
   it('does not take a path it does not know for a page', async () => {

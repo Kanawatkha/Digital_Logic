@@ -193,72 +193,72 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad \mathit{Sum} = A \oplus B \oplus Cin,\quad \mathit{Cout} = AB + A\,Cin + B\,Cin$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="648" height="478" viewBox="0 0 648 478" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="737" height="704" viewBox="0 0 737 704" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<path d="M196,70 C218,70 244,80.5 256,91 C244,101.5 218,112 196,112 Q210,91 196,70 Z"/>
-<path d="M188,70 Q202,91 188,112"/>
-<line x1="40" y1="84" x2="194.2" y2="84"/>
-<line x1="76" y1="98" x2="194.2" y2="98"/>
-<line x1="256" y1="91" x2="278" y2="91"/>
-<path d="M188,134 H214 A26,21 0 0 1 214,176 H188 Z"/>
-<line x1="40" y1="148" x2="188" y2="148"/>
-<line x1="76" y1="162" x2="188" y2="162"/>
-<line x1="240" y1="155" x2="271" y2="155"/>
-<path d="M188,198 H214 A26,21 0 0 1 214,240 H188 Z"/>
-<line x1="40" y1="212" x2="188" y2="212"/>
-<line x1="112" y1="226" x2="188" y2="226"/>
-<line x1="240" y1="219" x2="280" y2="219"/>
-<path d="M188,262 H214 A26,21 0 0 1 214,304 H188 Z"/>
-<line x1="76" y1="276" x2="188" y2="276"/>
-<line x1="112" y1="290" x2="188" y2="290"/>
-<line x1="240" y1="283" x2="289" y2="283"/>
-<path d="M376,326 C398,326 424,336.5 436,347 C424,357.5 398,368 376,368 Q390,347 376,326 Z"/>
-<path d="M368,326 Q382,347 368,368"/>
-<line x1="278" y1="340" x2="374.2" y2="340"/>
-<line x1="112" y1="354" x2="374.2" y2="354"/>
-<line x1="436" y1="347" x2="458" y2="347"/>
-<path d="M368,390 C390,390 416,404 428,418 C416,432 390,446 368,446 Q382,418 368,390 Z"/>
-<line x1="271" y1="404" x2="373.2" y2="404"/>
-<line x1="280" y1="418" x2="375" y2="418"/>
-<line x1="289" y1="432" x2="373.2" y2="432"/>
-<line x1="428" y1="418" x2="459" y2="418"/>
-<line x1="458" y1="347" x2="558" y2="347"/>
-<line x1="459" y1="418" x2="558" y2="418"/>
-<line x1="40" y1="36" x2="40" y2="212"/>
-<line x1="76" y1="36" x2="76" y2="276"/>
-<line x1="112" y1="36" x2="112" y2="354"/>
-<line x1="278" y1="91" x2="278" y2="340"/>
-<line x1="271" y1="155" x2="271" y2="404"/>
-<line x1="280" y1="219" x2="280" y2="418"/>
-<line x1="289" y1="283" x2="289" y2="432"/>
-<circle cx="40" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="76" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="76" cy="162" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="112" cy="226" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="76" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="112" cy="290" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="278" cy="340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="112" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="271" cy="404" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="280" cy="418" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="289" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="278" cy="91" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="271" cy="155" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="280" cy="219" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="289" cy="283" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M231,74 C253,74 279,90.5 291,107 C279,123.5 253,140 231,140 Q245,107 231,74 Z"/>
+<path d="M223,74 Q237,107 223,140"/>
+<line x1="40" y1="96" x2="229.2" y2="96"/>
+<line x1="89" y1="118" x2="229.2" y2="118"/>
+<path d="M223,174 H249 A26,33 0 0 1 249,240 H223 Z"/>
+<line x1="40" y1="196" x2="223" y2="196"/>
+<line x1="89" y1="218" x2="223" y2="218"/>
+<path d="M223,274 H249 A26,33 0 0 1 249,340 H223 Z"/>
+<line x1="40" y1="296" x2="223" y2="296"/>
+<line x1="138" y1="318" x2="223" y2="318"/>
+<path d="M223,374 H249 A26,33 0 0 1 249,440 H223 Z"/>
+<line x1="89" y1="396" x2="223" y2="396"/>
+<line x1="138" y1="418" x2="223" y2="418"/>
+<line x1="291" y1="107" x2="357.4" y2="107"/>
+<line x1="275" y1="207" x2="377.4" y2="207"/>
+<line x1="275" y1="307" x2="397.4" y2="307"/>
+<line x1="275" y1="407" x2="417.4" y2="407"/>
+<path d="M479.4,474 C501.4,474 527.4,490.5 539.4,507 C527.4,523.5 501.4,540 479.4,540 Q493.4,507 479.4,474 Z"/>
+<path d="M471.4,474 Q485.4,507 471.4,540"/>
+<line x1="357.4" y1="496" x2="477.6" y2="496"/>
+<line x1="138" y1="518" x2="477.6" y2="518"/>
+<path d="M471.4,574 C493.4,574 519.4,596 531.4,618 C519.4,640 493.4,662 471.4,662 Q485.4,618 471.4,574 Z"/>
+<line x1="377.4" y1="596" x2="476.7" y2="596"/>
+<line x1="397.4" y1="618" x2="478.4" y2="618"/>
+<line x1="417.4" y1="640" x2="476.7" y2="640"/>
+<line x1="539.4" y1="507" x2="565.4" y2="507"/>
+<line x1="531.4" y1="618" x2="585.4" y2="618"/>
+<line x1="565.4" y1="507" x2="641.4" y2="507"/>
+<line x1="585.4" y1="618" x2="641.4" y2="618"/>
+<line x1="40" y1="36" x2="40" y2="296"/>
+<line x1="89" y1="36" x2="89" y2="396"/>
+<line x1="138" y1="36" x2="138" y2="518"/>
+<line x1="357.4" y1="107" x2="357.4" y2="496"/>
+<line x1="377.4" y1="207" x2="377.4" y2="596"/>
+<line x1="397.4" y1="307" x2="397.4" y2="618"/>
+<line x1="417.4" y1="407" x2="417.4" y2="640"/>
+<circle cx="40" cy="96" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="89" cy="118" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="196" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="89" cy="218" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="296" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="138" cy="318" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="89" cy="396" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="138" cy="418" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="357.4" cy="496" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="138" cy="518" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="377.4" cy="596" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="397.4" cy="618" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="417.4" cy="640" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="357.4" cy="107" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="377.4" cy="207" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="397.4" cy="307" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="417.4" cy="407" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="260" y="83" text-anchor="start" font-size="12">AxorB</text>
-<text x="244" y="147" text-anchor="start" font-size="12">AandB</text>
-<text x="244" y="211" text-anchor="start" font-size="12">AandCin</text>
-<text x="244" y="275" text-anchor="start" font-size="12">BandCin</text>
-<text x="564" y="353" text-anchor="start">Sum</text>
-<text x="564" y="424" text-anchor="start">Cout</text>
+<text x="299" y="100" text-anchor="start" font-size="13">AxorB</text>
+<text x="283" y="200" text-anchor="start" font-size="13">AandB</text>
+<text x="283" y="300" text-anchor="start" font-size="13">AandCin</text>
+<text x="283" y="400" text-anchor="start" font-size="13">BandCin</text>
+<text x="649.4" y="513" text-anchor="start">Sum</text>
+<text x="649.4" y="624" text-anchor="start">Cout</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">A</text>
-<text x="76" y="28" text-anchor="middle" font-size="16">B</text>
-<text x="112" y="28" text-anchor="middle" font-size="16">Cin</text>
+<text x="89" y="28" text-anchor="middle" font-size="16">B</text>
+<text x="138" y="28" text-anchor="middle" font-size="16">Cin</text>
 </g>
 </svg>
 </div>
@@ -306,94 +306,94 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad Out = In_{(2\,\mathit{Sel1} + \mathit{Sel0})} \text{ ; สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="984" height="584" viewBox="0 0 984 584" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1054" height="838" viewBox="0 0 1054 838" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="344,72 344,96 366,84"/>
-<circle cx="371" cy="84" r="5"/>
-<line x1="216" y1="84" x2="344" y2="84"/>
-<line x1="376" y1="84" x2="398" y2="84"/>
-<polygon points="344,122 344,146 366,134"/>
-<circle cx="371" cy="134" r="5"/>
-<line x1="260" y1="134" x2="344" y2="134"/>
-<line x1="376" y1="134" x2="407" y2="134"/>
-<path d="M344,170 H370 A26,28 0 0 1 370,226 H344 Z"/>
-<line x1="172" y1="184" x2="344" y2="184"/>
-<line x1="260" y1="198" x2="344" y2="198"/>
-<line x1="216" y1="212" x2="344" y2="212"/>
-<line x1="396" y1="198" x2="436" y2="198"/>
-<path d="M524,248 H550 A26,28 0 0 1 550,304 H524 Z"/>
-<line x1="40" y1="262" x2="524" y2="262"/>
-<line x1="407" y1="276" x2="524" y2="276"/>
-<line x1="398" y1="290" x2="524" y2="290"/>
-<line x1="576" y1="276" x2="598" y2="276"/>
-<path d="M524,326 H550 A26,28 0 0 1 550,382 H524 Z"/>
-<line x1="84" y1="340" x2="524" y2="340"/>
-<line x1="407" y1="354" x2="524" y2="354"/>
-<line x1="216" y1="368" x2="524" y2="368"/>
-<line x1="576" y1="354" x2="607" y2="354"/>
-<path d="M524,404 H550 A26,28 0 0 1 550,460 H524 Z"/>
-<line x1="128" y1="418" x2="524" y2="418"/>
-<line x1="260" y1="432" x2="524" y2="432"/>
-<line x1="398" y1="446" x2="524" y2="446"/>
-<line x1="576" y1="432" x2="616" y2="432"/>
-<path d="M704,482 C726,482 752,499.5 764,517 C752,534.5 726,552 704,552 Q718,517 704,482 Z"/>
-<line x1="598" y1="496" x2="708.5" y2="496"/>
-<line x1="607" y1="510" x2="710.7" y2="510"/>
-<line x1="616" y1="524" x2="710.7" y2="524"/>
-<line x1="436" y1="538" x2="708.5" y2="538"/>
-<line x1="764" y1="517" x2="786" y2="517"/>
-<line x1="786" y1="517" x2="894" y2="517"/>
-<line x1="40" y1="36" x2="40" y2="262"/>
-<line x1="84" y1="36" x2="84" y2="340"/>
-<line x1="128" y1="36" x2="128" y2="418"/>
-<line x1="172" y1="36" x2="172" y2="184"/>
-<line x1="216" y1="36" x2="216" y2="368"/>
-<line x1="260" y1="36" x2="260" y2="432"/>
-<line x1="398" y1="84" x2="398" y2="446"/>
-<line x1="407" y1="134" x2="407" y2="354"/>
-<line x1="436" y1="198" x2="436" y2="538"/>
-<line x1="598" y1="276" x2="598" y2="496"/>
-<line x1="607" y1="354" x2="607" y2="510"/>
-<line x1="616" y1="432" x2="616" y2="524"/>
-<circle cx="216" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="172" cy="184" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="290" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="84" cy="340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="368" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="418" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="524" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="538" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="432" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="424,76 424,100 446,88"/>
+<circle cx="451" cy="88" r="5"/>
+<line x1="272" y1="88" x2="424" y2="88"/>
+<polygon points="424,138 424,162 446,150"/>
+<circle cx="451" cy="150" r="5"/>
+<line x1="330" y1="150" x2="424" y2="150"/>
+<path d="M424,198 H450 A26,44 0 0 1 450,286 H424 Z"/>
+<line x1="214" y1="220" x2="424" y2="220"/>
+<line x1="330" y1="242" x2="424" y2="242"/>
+<line x1="272" y1="264" x2="424" y2="264"/>
+<line x1="456" y1="88" x2="536.2" y2="88"/>
+<line x1="456" y1="150" x2="556.2" y2="150"/>
+<line x1="476" y1="242" x2="576.2" y2="242"/>
+<path d="M630.2,320 H656.2 A26,44 0 0 1 656.2,408 H630.2 Z"/>
+<line x1="40" y1="342" x2="630.2" y2="342"/>
+<line x1="556.2" y1="364" x2="630.2" y2="364"/>
+<line x1="536.2" y1="386" x2="630.2" y2="386"/>
+<path d="M630.2,442 H656.2 A26,44 0 0 1 656.2,530 H630.2 Z"/>
+<line x1="98" y1="464" x2="630.2" y2="464"/>
+<line x1="556.2" y1="486" x2="630.2" y2="486"/>
+<line x1="272" y1="508" x2="630.2" y2="508"/>
+<path d="M630.2,564 H656.2 A26,44 0 0 1 656.2,652 H630.2 Z"/>
+<line x1="156" y1="586" x2="630.2" y2="586"/>
+<line x1="330" y1="608" x2="630.2" y2="608"/>
+<line x1="536.2" y1="630" x2="630.2" y2="630"/>
+<line x1="682.2" y1="364" x2="722.1" y2="364"/>
+<line x1="682.2" y1="486" x2="742.1" y2="486"/>
+<line x1="682.2" y1="608" x2="762.1" y2="608"/>
+<path d="M816.1,686 C838.1,686 864.1,713.5 876.1,741 C864.1,768.5 838.1,796 816.1,796 Q830.1,741 816.1,686 Z"/>
+<line x1="722.1" y1="708" x2="820.6" y2="708"/>
+<line x1="742.1" y1="730" x2="822.8" y2="730"/>
+<line x1="762.1" y1="752" x2="822.8" y2="752"/>
+<line x1="576.2" y1="774" x2="820.6" y2="774"/>
+<line x1="876.1" y1="741" x2="902.1" y2="741"/>
+<line x1="902.1" y1="741" x2="958.1" y2="741"/>
+<line x1="40" y1="36" x2="40" y2="342"/>
+<line x1="98" y1="36" x2="98" y2="464"/>
+<line x1="156" y1="36" x2="156" y2="586"/>
+<line x1="214" y1="36" x2="214" y2="220"/>
+<line x1="272" y1="36" x2="272" y2="508"/>
+<line x1="330" y1="36" x2="330" y2="608"/>
+<line x1="536.2" y1="88" x2="536.2" y2="630"/>
+<line x1="556.2" y1="150" x2="556.2" y2="486"/>
+<line x1="576.2" y1="242" x2="576.2" y2="774"/>
+<line x1="722.1" y1="364" x2="722.1" y2="708"/>
+<line x1="742.1" y1="486" x2="742.1" y2="730"/>
+<line x1="762.1" y1="608" x2="762.1" y2="752"/>
+<circle cx="272" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="214" cy="220" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="264" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="342" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="556.2" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="536.2" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="98" cy="464" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="556.2" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="508" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="156" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="608" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="536.2" cy="630" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="722.1" cy="708" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742.1" cy="730" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="762.1" cy="752" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="576.2" cy="774" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="536.2" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="556.2" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="576.2" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="722.1" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742.1" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="762.1" cy="608" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="380" y="76" text-anchor="start" font-size="12">NotSel0</text>
-<text x="380" y="126" text-anchor="start" font-size="12">NotSel1</text>
-<text x="400" y="190" text-anchor="start" font-size="12">Y<tspan dy="4" font-size="9">3</tspan></text>
-<text x="580" y="268" text-anchor="start" font-size="12">Y<tspan dy="4" font-size="9">0</tspan></text>
-<text x="580" y="346" text-anchor="start" font-size="12">Y<tspan dy="4" font-size="9">1</tspan></text>
-<text x="580" y="424" text-anchor="start" font-size="12">Y<tspan dy="4" font-size="9">2</tspan></text>
-<text x="900" y="523" text-anchor="start">Out</text>
+<text x="464" y="81" text-anchor="start" font-size="13">NotSel0</text>
+<text x="464" y="143" text-anchor="start" font-size="13">NotSel1</text>
+<text x="484" y="235" text-anchor="start" font-size="13">Y<tspan dy="4" font-size="9">3</tspan></text>
+<text x="690.2" y="357" text-anchor="start" font-size="13">Y<tspan dy="4" font-size="9">0</tspan></text>
+<text x="690.2" y="479" text-anchor="start" font-size="13">Y<tspan dy="4" font-size="9">1</tspan></text>
+<text x="690.2" y="601" text-anchor="start" font-size="13">Y<tspan dy="4" font-size="9">2</tspan></text>
+<text x="966.1" y="747" text-anchor="start">Out</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">In0</text>
-<text x="84" y="28" text-anchor="middle" font-size="16">In1</text>
-<text x="128" y="28" text-anchor="middle" font-size="16">In2</text>
-<text x="172" y="28" text-anchor="middle" font-size="16">In3</text>
-<text x="216" y="28" text-anchor="middle" font-size="16">Sel0</text>
-<text x="260" y="28" text-anchor="middle" font-size="16">Sel1</text>
+<text x="98" y="28" text-anchor="middle" font-size="16">In1</text>
+<text x="156" y="28" text-anchor="middle" font-size="16">In2</text>
+<text x="214" y="28" text-anchor="middle" font-size="16">In3</text>
+<text x="272" y="28" text-anchor="middle" font-size="16">Sel0</text>
+<text x="330" y="28" text-anchor="middle" font-size="16">Sel1</text>
 </g>
 </svg>
 </div>
@@ -408,52 +408,52 @@ $\mathbf{Ans}\quad Out = In_{(2\,\mathit{Sel1} + \mathit{Sel0})} \text{ ; สล
 ### ตัวอย่างที่ 5  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป (เอาต์พุต $Y = AB + \overline{C}D$)
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="322" viewBox="0 0 800 322" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="742" height="444" viewBox="0 0 742 444" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="160,72 160,96 182,84"/>
-<circle cx="187" cy="84" r="5"/>
-<line x1="80" y1="84" x2="160" y2="84"/>
-<line x1="192" y1="84" x2="214" y2="84"/>
-<path d="M160,120 H186 A26,21 0 0 1 186,162 H160 Z"/>
-<line x1="40" y1="134" x2="160" y2="134"/>
-<line x1="60" y1="148" x2="160" y2="148"/>
-<line x1="212" y1="141" x2="243" y2="141"/>
-<path d="M340,184 H366 A26,21 0 0 1 366,226 H340 Z"/>
-<line x1="214" y1="198" x2="340" y2="198"/>
-<line x1="100" y1="212" x2="340" y2="212"/>
-<line x1="392" y1="205" x2="414" y2="205"/>
-<path d="M520,248 C542,248 568,258.5 580,269 C568,279.5 542,290 520,290 Q534,269 520,248 Z"/>
-<line x1="243" y1="262" x2="526.2" y2="262"/>
-<line x1="414" y1="276" x2="526.2" y2="276"/>
-<line x1="580" y1="269" x2="602" y2="269"/>
-<line x1="602" y1="269" x2="710" y2="269"/>
-<line x1="40" y1="36" x2="40" y2="134"/>
-<line x1="60" y1="36" x2="60" y2="148"/>
-<line x1="80" y1="36" x2="80" y2="84"/>
-<line x1="100" y1="36" x2="100" y2="212"/>
-<line x1="214" y1="84" x2="214" y2="198"/>
-<line x1="243" y1="141" x2="243" y2="262"/>
-<line x1="414" y1="205" x2="414" y2="276"/>
-<circle cx="80" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="60" cy="148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="214" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="100" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="243" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="414" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="214" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="243" cy="141" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="414" cy="205" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="200,76 200,100 222,88"/>
+<circle cx="227" cy="88" r="5"/>
+<line x1="102" y1="88" x2="200" y2="88"/>
+<path d="M200,136 H226 A26,33 0 0 1 226,202 H200 Z"/>
+<line x1="40" y1="158" x2="200" y2="158"/>
+<line x1="71" y1="180" x2="200" y2="180"/>
+<line x1="232" y1="88" x2="290.2" y2="88"/>
+<line x1="252" y1="169" x2="310.2" y2="169"/>
+<path d="M364.2,236 H390.2 A26,33 0 0 1 390.2,302 H364.2 Z"/>
+<line x1="290.2" y1="258" x2="364.2" y2="258"/>
+<line x1="133" y1="280" x2="364.2" y2="280"/>
+<line x1="416.2" y1="269" x2="450.3" y2="269"/>
+<path d="M504.3,336 C526.3,336 552.3,352.5 564.3,369 C552.3,385.5 526.3,402 504.3,402 Q518.3,369 504.3,336 Z"/>
+<line x1="310.2" y1="358" x2="510.5" y2="358"/>
+<line x1="450.3" y1="380" x2="510.5" y2="380"/>
+<line x1="564.3" y1="369" x2="590.3" y2="369"/>
+<line x1="590.3" y1="369" x2="646.3" y2="369"/>
+<line x1="40" y1="36" x2="40" y2="158"/>
+<line x1="71" y1="36" x2="71" y2="180"/>
+<line x1="102" y1="36" x2="102" y2="88"/>
+<line x1="133" y1="36" x2="133" y2="280"/>
+<line x1="290.2" y1="88" x2="290.2" y2="258"/>
+<line x1="310.2" y1="169" x2="310.2" y2="358"/>
+<line x1="450.3" y1="269" x2="450.3" y2="380"/>
+<circle cx="102" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="158" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="71" cy="180" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="290.2" cy="258" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="133" cy="280" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="310.2" cy="358" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="450.3" cy="380" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="290.2" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="310.2" cy="169" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="450.3" cy="269" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="196" y="76" text-anchor="start" font-size="12">NotC</text>
-<text x="216" y="133" text-anchor="start" font-size="12">P</text>
-<text x="396" y="197" text-anchor="start" font-size="12">Q</text>
-<text x="716" y="275" text-anchor="start">Y</text>
+<text x="240" y="81" text-anchor="start" font-size="13">NotC</text>
+<text x="260" y="162" text-anchor="start" font-size="13">P</text>
+<text x="424.2" y="262" text-anchor="start" font-size="13">Q</text>
+<text x="654.3" y="375" text-anchor="start">Y</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">A</text>
-<text x="60" y="28" text-anchor="middle" font-size="16">B</text>
-<text x="80" y="28" text-anchor="middle" font-size="16">C</text>
-<text x="100" y="28" text-anchor="middle" font-size="16">D</text>
+<text x="71" y="28" text-anchor="middle" font-size="16">B</text>
+<text x="102" y="28" text-anchor="middle" font-size="16">C</text>
+<text x="133" y="28" text-anchor="middle" font-size="16">D</text>
 </g>
 </svg>
 </div>
@@ -619,60 +619,60 @@ endmodule
 ```
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="584" height="270" viewBox="0 0 584 270" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="604" height="296" viewBox="0 0 604 296" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(24,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="140" y="20" width="80" height="80" rx="2"/>
-<line x1="116" y1="45" x2="140" y2="45"/>
-<line x1="116" y1="75" x2="140" y2="75"/>
-<line x1="220" y1="60" x2="244" y2="60"/>
-<line x1="180" y1="100" x2="180" y2="120"/>
-<rect x="140" y="150" width="80" height="80" rx="2"/>
-<line x1="116" y1="175" x2="140" y2="175"/>
-<line x1="116" y1="205" x2="140" y2="205"/>
-<line x1="220" y1="190" x2="244" y2="190"/>
-<line x1="180" y1="230" x2="180" y2="250"/>
-<rect x="340" y="85" width="80" height="80" rx="2"/>
-<line x1="316" y1="110" x2="340" y2="110"/>
-<line x1="316" y1="140" x2="340" y2="140"/>
-<line x1="420" y1="125" x2="444" y2="125"/>
-<line x1="380" y1="165" x2="380" y2="185"/>
-<line x1="244" y1="60" x2="262" y2="60"/>
-<line x1="262" y1="60" x2="262" y2="110"/>
-<line x1="262" y1="110" x2="316" y2="110"/>
-<line x1="244" y1="190" x2="270" y2="190"/>
-<line x1="270" y1="190" x2="270" y2="140"/>
-<line x1="270" y1="140" x2="316" y2="140"/>
-<line x1="444" y1="125" x2="490" y2="125"/>
+<rect x="150" y="24" width="84" height="84" rx="2"/>
+<line x1="122" y1="52" x2="150" y2="52"/>
+<line x1="122" y1="86" x2="150" y2="86"/>
+<line x1="234" y1="66" x2="262" y2="66"/>
+<line x1="192" y1="108" x2="192" y2="122"/>
+<rect x="150" y="164" width="84" height="84" rx="2"/>
+<line x1="122" y1="192" x2="150" y2="192"/>
+<line x1="122" y1="226" x2="150" y2="226"/>
+<line x1="234" y1="206" x2="262" y2="206"/>
+<line x1="192" y1="248" x2="192" y2="262"/>
+<rect x="370" y="94" width="84" height="84" rx="2"/>
+<line x1="342" y1="122" x2="370" y2="122"/>
+<line x1="342" y1="156" x2="370" y2="156"/>
+<line x1="454" y1="136" x2="482" y2="136"/>
+<line x1="412" y1="178" x2="412" y2="192"/>
+<line x1="262" y1="66" x2="306" y2="66"/>
+<line x1="306" y1="66" x2="306" y2="122"/>
+<line x1="306" y1="122" x2="370" y2="122"/>
+<line x1="262" y1="206" x2="318" y2="206"/>
+<line x1="318" y1="206" x2="318" y2="156"/>
+<line x1="318" y1="156" x2="370" y2="156"/>
+<line x1="454" y1="136" x2="506" y2="136"/>
 </g>
-<text x="180" y="40" text-anchor="middle" font-size="14">Mux2</text>
-<text x="180" y="56" text-anchor="middle" font-size="12">m<tspan dy="4" font-size="9">0</tspan></text>
-<text x="148" y="50" text-anchor="start" font-size="13">A</text>
-<text x="148" y="80" text-anchor="start" font-size="13">B</text>
-<text x="212" y="65" text-anchor="end" font-size="13">Y</text>
-<text x="180" y="94" text-anchor="middle" font-size="12">S</text>
-<text x="180" y="170" text-anchor="middle" font-size="14">Mux2</text>
-<text x="180" y="186" text-anchor="middle" font-size="12">m<tspan dy="4" font-size="9">1</tspan></text>
-<text x="148" y="180" text-anchor="start" font-size="13">A</text>
-<text x="148" y="210" text-anchor="start" font-size="13">B</text>
-<text x="212" y="195" text-anchor="end" font-size="13">Y</text>
-<text x="180" y="224" text-anchor="middle" font-size="12">S</text>
-<text x="380" y="105" text-anchor="middle" font-size="14">Mux2</text>
-<text x="380" y="121" text-anchor="middle" font-size="12">m<tspan dy="4" font-size="9">2</tspan></text>
-<text x="348" y="115" text-anchor="start" font-size="13">A</text>
-<text x="348" y="145" text-anchor="start" font-size="13">B</text>
-<text x="412" y="130" text-anchor="end" font-size="13">Y</text>
-<text x="380" y="159" text-anchor="middle" font-size="12">S</text>
-<text x="112" y="50" text-anchor="end" font-size="15">In0</text>
-<text x="112" y="80" text-anchor="end" font-size="15">In1</text>
-<text x="112" y="180" text-anchor="end" font-size="15">In2</text>
-<text x="112" y="210" text-anchor="end" font-size="15">In3</text>
-<text x="180" y="122" text-anchor="middle" font-size="14">Sel0</text>
-<text x="180" y="252" text-anchor="middle" font-size="14">Sel0</text>
-<text x="380" y="187" text-anchor="middle" font-size="14">Sel1</text>
-<text x="266" y="55" text-anchor="middle" font-size="13">w<tspan dy="4" font-size="9">0</tspan></text>
-<text x="274" y="185" text-anchor="middle" font-size="13">w<tspan dy="4" font-size="9">1</tspan></text>
-<text x="496" y="130" text-anchor="start" font-size="15">Out</text>
+<text x="192" y="48" text-anchor="middle" font-size="14">Mux2</text>
+<text x="192" y="68" text-anchor="middle" font-size="12">m0</text>
+<text x="158" y="55" text-anchor="start" font-size="13">A</text>
+<text x="158" y="89" text-anchor="start" font-size="13">B</text>
+<text x="226" y="72" text-anchor="end" font-size="13">Y</text>
+<text x="192" y="100" text-anchor="middle" font-size="12">S</text>
+<text x="192" y="188" text-anchor="middle" font-size="14">Mux2</text>
+<text x="192" y="208" text-anchor="middle" font-size="12">m1</text>
+<text x="158" y="195" text-anchor="start" font-size="13">A</text>
+<text x="158" y="229" text-anchor="start" font-size="13">B</text>
+<text x="226" y="212" text-anchor="end" font-size="13">Y</text>
+<text x="192" y="240" text-anchor="middle" font-size="12">S</text>
+<text x="412" y="118" text-anchor="middle" font-size="14">Mux2</text>
+<text x="412" y="138" text-anchor="middle" font-size="12">m2</text>
+<text x="378" y="125" text-anchor="start" font-size="13">A</text>
+<text x="378" y="159" text-anchor="start" font-size="13">B</text>
+<text x="446" y="142" text-anchor="end" font-size="13">Y</text>
+<text x="412" y="170" text-anchor="middle" font-size="12">S</text>
+<text x="116" y="57" text-anchor="end" font-size="15">In0</text>
+<text x="116" y="91" text-anchor="end" font-size="15">In1</text>
+<text x="116" y="197" text-anchor="end" font-size="15">In2</text>
+<text x="116" y="231" text-anchor="end" font-size="15">In3</text>
+<text x="192" y="138" text-anchor="middle" font-size="14">Sel0</text>
+<text x="192" y="278" text-anchor="middle" font-size="14">Sel0</text>
+<text x="412" y="208" text-anchor="middle" font-size="14">Sel1</text>
+<text x="284" y="58" text-anchor="middle" font-size="13">w0</text>
+<text x="290" y="198" text-anchor="middle" font-size="13">w1</text>
+<text x="514" y="141" text-anchor="start" font-size="15">Out</text>
 </g>
 </svg>
 </div>
@@ -708,102 +708,133 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad Q = 0001,\ 0010,\ 0011,\ \dots,\ 1111,\ 0000,\ 0001,\ \dots$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1445" height="258" viewBox="0 0 1445 258" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(0,24)">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="352" viewBox="0 0 1500 352" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="140" y="20" width="80" height="150" rx="2"/>
-<polyline points="140,86 152,95 140,104"/>
-<line x1="140" y1="95" x2="124" y2="95"/>
-<line x1="124" y1="95" x2="124" y2="210"/>
-<line x1="62" y1="95" x2="106" y2="95"/>
-<line x1="106" y1="95" x2="106" y2="58"/>
-<line x1="106" y1="58" x2="140" y2="58"/>
-<line x1="106" y1="95" x2="106" y2="132"/>
-<line x1="106" y1="132" x2="140" y2="132"/>
-<line x1="220" y1="58" x2="260" y2="58"/>
-<rect x="515" y="20" width="80" height="150" rx="2"/>
-<polyline points="515,86 527,95 515,104"/>
-<line x1="515" y1="95" x2="499" y2="95"/>
-<line x1="499" y1="95" x2="499" y2="210"/>
-<path d="M399,74 H425 A26,21 0 0 1 425,116 H399 Z"/>
-<line x1="377" y1="88" x2="399" y2="88"/>
-<line x1="377" y1="102" x2="399" y2="102"/>
-<line x1="451" y1="95" x2="481" y2="95"/>
-<line x1="481" y1="95" x2="481" y2="58"/>
-<line x1="481" y1="58" x2="515" y2="58"/>
-<line x1="481" y1="95" x2="481" y2="132"/>
-<line x1="481" y1="132" x2="515" y2="132"/>
-<line x1="595" y1="58" x2="635" y2="58"/>
-<rect x="890" y="20" width="80" height="150" rx="2"/>
-<polyline points="890,86 902,95 890,104"/>
-<line x1="890" y1="95" x2="874" y2="95"/>
-<line x1="874" y1="95" x2="874" y2="210"/>
-<path d="M774,67 H800 A26,28 0 0 1 800,123 H774 Z"/>
-<line x1="752" y1="81" x2="774" y2="81"/>
-<line x1="752" y1="95" x2="774" y2="95"/>
-<line x1="752" y1="109" x2="774" y2="109"/>
-<line x1="826" y1="95" x2="856" y2="95"/>
-<line x1="856" y1="95" x2="856" y2="58"/>
-<line x1="856" y1="58" x2="890" y2="58"/>
-<line x1="856" y1="95" x2="856" y2="132"/>
-<line x1="856" y1="132" x2="890" y2="132"/>
-<line x1="970" y1="58" x2="1010" y2="58"/>
-<rect x="1265" y="20" width="80" height="150" rx="2"/>
-<polyline points="1265,86 1277,95 1265,104"/>
-<line x1="1265" y1="95" x2="1249" y2="95"/>
-<line x1="1249" y1="95" x2="1249" y2="210"/>
-<path d="M1149,60 H1175 A26,35 0 0 1 1175,130 H1149 Z"/>
-<line x1="1127" y1="74" x2="1149" y2="74"/>
-<line x1="1127" y1="88" x2="1149" y2="88"/>
-<line x1="1127" y1="102" x2="1149" y2="102"/>
-<line x1="1127" y1="116" x2="1149" y2="116"/>
-<line x1="1201" y1="95" x2="1231" y2="95"/>
-<line x1="1231" y1="95" x2="1231" y2="58"/>
-<line x1="1231" y1="58" x2="1265" y2="58"/>
-<line x1="1231" y1="95" x2="1231" y2="132"/>
-<line x1="1231" y1="132" x2="1265" y2="132"/>
-<line x1="1345" y1="58" x2="1385" y2="58"/>
-<line x1="84" y1="210" x2="1249" y2="210"/>
-<circle cx="124" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="106" cy="95" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="499" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="481" cy="95" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="874" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="856" cy="95" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1249" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1231" cy="95" r="3.5" fill="currentColor" stroke="none"/>
+<rect x="174" y="132" width="80" height="150" rx="2"/>
+<polyline points="174,198 186,207 174,216"/>
+<line x1="174" y1="207" x2="158" y2="207"/>
+<line x1="158" y1="207" x2="158" y2="328"/>
+<line x1="140" y1="207" x2="140" y2="170"/>
+<line x1="140" y1="170" x2="174" y2="170"/>
+<line x1="140" y1="207" x2="140" y2="244"/>
+<line x1="140" y1="244" x2="174" y2="244"/>
+<line x1="254" y1="170" x2="290" y2="170"/>
+<line x1="254" y1="244" x2="290" y2="244"/>
+<line x1="237.2" y1="236.4" x2="246" y2="236.4" stroke-width="1.4"/>
+<rect x="542" y="132" width="80" height="150" rx="2"/>
+<polyline points="542,198 554,207 542,216"/>
+<line x1="542" y1="207" x2="526" y2="207"/>
+<line x1="526" y1="207" x2="526" y2="328"/>
+<path d="M426,186 H452 A26,21 0 0 1 452,228 H426 Z"/>
+<line x1="478" y1="207" x2="508" y2="207"/>
+<line x1="508" y1="207" x2="508" y2="170"/>
+<line x1="508" y1="170" x2="542" y2="170"/>
+<line x1="508" y1="207" x2="508" y2="244"/>
+<line x1="508" y1="244" x2="542" y2="244"/>
+<line x1="622" y1="170" x2="658" y2="170"/>
+<line x1="622" y1="244" x2="658" y2="244"/>
+<line x1="605.2" y1="236.4" x2="614" y2="236.4" stroke-width="1.4"/>
+<rect x="932" y="132" width="80" height="150" rx="2"/>
+<polyline points="932,198 944,207 932,216"/>
+<line x1="932" y1="207" x2="916" y2="207"/>
+<line x1="916" y1="207" x2="916" y2="328"/>
+<path d="M816,179 H842 A26,28 0 0 1 842,235 H816 Z"/>
+<line x1="868" y1="207" x2="898" y2="207"/>
+<line x1="898" y1="207" x2="898" y2="170"/>
+<line x1="898" y1="170" x2="932" y2="170"/>
+<line x1="898" y1="207" x2="898" y2="244"/>
+<line x1="898" y1="244" x2="932" y2="244"/>
+<line x1="1012" y1="170" x2="1048" y2="170"/>
+<line x1="1012" y1="244" x2="1048" y2="244"/>
+<line x1="995.2" y1="236.4" x2="1004" y2="236.4" stroke-width="1.4"/>
+<rect x="1344" y="132" width="80" height="150" rx="2"/>
+<polyline points="1344,198 1356,207 1344,216"/>
+<line x1="1344" y1="207" x2="1328" y2="207"/>
+<line x1="1328" y1="207" x2="1328" y2="328"/>
+<path d="M1228,172 H1254 A26,35 0 0 1 1254,242 H1228 Z"/>
+<line x1="1280" y1="207" x2="1310" y2="207"/>
+<line x1="1310" y1="207" x2="1310" y2="170"/>
+<line x1="1310" y1="170" x2="1344" y2="170"/>
+<line x1="1310" y1="207" x2="1310" y2="244"/>
+<line x1="1310" y1="244" x2="1344" y2="244"/>
+<line x1="1424" y1="170" x2="1460" y2="170"/>
+<line x1="1424" y1="244" x2="1460" y2="244"/>
+<line x1="1407.2" y1="236.4" x2="1416" y2="236.4" stroke-width="1.4"/>
+<line x1="128" y1="100" x2="128" y2="207"/>
+<line x1="128" y1="207" x2="140" y2="207"/>
+<line x1="414" y1="82" x2="414" y2="200"/>
+<line x1="414" y1="200" x2="426" y2="200"/>
+<line x1="403" y1="100" x2="403" y2="214"/>
+<line x1="403" y1="214" x2="426" y2="214"/>
+<line x1="804" y1="64" x2="804" y2="193"/>
+<line x1="804" y1="193" x2="816" y2="193"/>
+<line x1="793" y1="82" x2="793" y2="207"/>
+<line x1="793" y1="207" x2="816" y2="207"/>
+<line x1="782" y1="100" x2="782" y2="221"/>
+<line x1="782" y1="221" x2="816" y2="221"/>
+<line x1="1216" y1="46" x2="1216" y2="186"/>
+<line x1="1216" y1="186" x2="1228" y2="186"/>
+<line x1="1205" y1="64" x2="1205" y2="200"/>
+<line x1="1205" y1="200" x2="1228" y2="200"/>
+<line x1="1194" y1="82" x2="1194" y2="214"/>
+<line x1="1194" y1="214" x2="1228" y2="214"/>
+<line x1="1183" y1="100" x2="1183" y2="228"/>
+<line x1="1183" y1="228" x2="1228" y2="228"/>
+<line x1="1048" y1="46" x2="1216" y2="46"/>
+<line x1="658" y1="64" x2="1205" y2="64"/>
+<line x1="290" y1="82" x2="1194" y2="82"/>
+<line x1="34" y1="100" x2="1183" y2="100"/>
+<line x1="34" y1="30" x2="34" y2="100"/>
+<line x1="290" y1="30" x2="290" y2="170"/>
+<line x1="658" y1="30" x2="658" y2="170"/>
+<line x1="1048" y1="30" x2="1048" y2="170"/>
+<line x1="1460" y1="30" x2="1460" y2="170"/>
+<line x1="118" y1="328" x2="1328" y2="328"/>
+<circle cx="158" cy="328" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="140" cy="207" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="526" cy="328" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="508" cy="207" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="916" cy="328" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="898" cy="207" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1328" cy="328" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1310" cy="207" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1048" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="658" cy="64" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="804" cy="64" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="290" cy="82" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="414" cy="82" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="793" cy="82" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="100" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="403" cy="100" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="782" cy="100" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="180" y="103" text-anchor="middle" font-size="26">0</text>
-<text x="148" y="64" text-anchor="start" font-size="14">J</text>
-<text x="148" y="138" text-anchor="start" font-size="14">K</text>
-<text x="58" y="101" text-anchor="end" font-size="14">En</text>
-<text x="264" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">0</tspan></text>
-<text x="212" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="555" y="103" text-anchor="middle" font-size="26">1</text>
-<text x="523" y="64" text-anchor="start" font-size="14">J</text>
-<text x="523" y="138" text-anchor="start" font-size="14">K</text>
-<text x="373" y="94" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">0</tspan></text>
-<text x="373" y="108" text-anchor="end" font-size="13">En</text>
-<text x="639" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">1</tspan></text>
-<text x="587" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="930" y="103" text-anchor="middle" font-size="26">2</text>
-<text x="898" y="64" text-anchor="start" font-size="14">J</text>
-<text x="898" y="138" text-anchor="start" font-size="14">K</text>
-<text x="748" y="87" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">1</tspan></text>
-<text x="748" y="101" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">0</tspan></text>
-<text x="748" y="115" text-anchor="end" font-size="13">En</text>
-<text x="1014" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">2</tspan></text>
-<text x="962" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="1305" y="103" text-anchor="middle" font-size="26">3</text>
-<text x="1273" y="64" text-anchor="start" font-size="14">J</text>
-<text x="1273" y="138" text-anchor="start" font-size="14">K</text>
-<text x="1123" y="80" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">2</tspan></text>
-<text x="1123" y="94" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">1</tspan></text>
-<text x="1123" y="108" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">0</tspan></text>
-<text x="1123" y="122" text-anchor="end" font-size="13">En</text>
-<text x="1389" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">3</tspan></text>
-<text x="1337" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="80" y="216" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="215" text-anchor="middle" font-size="26">0</text>
+<text x="182" y="176" text-anchor="start" font-size="14">J</text>
+<text x="182" y="250" text-anchor="start" font-size="14">K</text>
+<text x="246" y="176" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="250" text-anchor="end" font-size="16">Q</text>
+<text x="582" y="215" text-anchor="middle" font-size="26">1</text>
+<text x="550" y="176" text-anchor="start" font-size="14">J</text>
+<text x="550" y="250" text-anchor="start" font-size="14">K</text>
+<text x="614" y="176" text-anchor="end" font-size="16">Q</text>
+<text x="614" y="250" text-anchor="end" font-size="16">Q</text>
+<text x="972" y="215" text-anchor="middle" font-size="26">2</text>
+<text x="940" y="176" text-anchor="start" font-size="14">J</text>
+<text x="940" y="250" text-anchor="start" font-size="14">K</text>
+<text x="1004" y="176" text-anchor="end" font-size="16">Q</text>
+<text x="1004" y="250" text-anchor="end" font-size="16">Q</text>
+<text x="1384" y="215" text-anchor="middle" font-size="26">3</text>
+<text x="1352" y="176" text-anchor="start" font-size="14">J</text>
+<text x="1352" y="250" text-anchor="start" font-size="14">K</text>
+<text x="1416" y="176" text-anchor="end" font-size="16">Q</text>
+<text x="1416" y="250" text-anchor="end" font-size="16">Q</text>
+<text x="34" y="24" text-anchor="middle" font-size="16">En</text>
+<text x="290" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">0</tspan></text>
+<text x="658" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">1</tspan></text>
+<text x="1048" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">2</tspan></text>
+<text x="1460" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">3</tspan></text>
+<text x="114" y="334" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -871,88 +902,88 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad Out = In_{(2\,\mathit{Sel1} + \mathit{Sel0})}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="984" height="584" viewBox="0 0 984 584" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1006" height="838" viewBox="0 0 1006 838" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="344,72 344,96 366,84"/>
-<circle cx="371" cy="84" r="5"/>
-<line x1="216" y1="84" x2="344" y2="84"/>
-<line x1="376" y1="84" x2="398" y2="84"/>
-<polygon points="344,122 344,146 366,134"/>
-<circle cx="371" cy="134" r="5"/>
-<line x1="260" y1="134" x2="344" y2="134"/>
-<line x1="376" y1="134" x2="407" y2="134"/>
-<path d="M344,170 H370 A26,28 0 0 1 370,226 H344 Z"/>
-<line x1="216" y1="184" x2="344" y2="184"/>
-<line x1="260" y1="198" x2="344" y2="198"/>
-<line x1="172" y1="212" x2="344" y2="212"/>
-<line x1="396" y1="198" x2="436" y2="198"/>
-<path d="M524,248 H550 A26,28 0 0 1 550,304 H524 Z"/>
-<line x1="398" y1="262" x2="524" y2="262"/>
-<line x1="407" y1="276" x2="524" y2="276"/>
-<line x1="40" y1="290" x2="524" y2="290"/>
-<line x1="576" y1="276" x2="598" y2="276"/>
-<path d="M524,326 H550 A26,28 0 0 1 550,382 H524 Z"/>
-<line x1="398" y1="340" x2="524" y2="340"/>
-<line x1="260" y1="354" x2="524" y2="354"/>
-<line x1="84" y1="368" x2="524" y2="368"/>
-<line x1="576" y1="354" x2="607" y2="354"/>
-<path d="M524,404 H550 A26,28 0 0 1 550,460 H524 Z"/>
-<line x1="216" y1="418" x2="524" y2="418"/>
-<line x1="407" y1="432" x2="524" y2="432"/>
-<line x1="128" y1="446" x2="524" y2="446"/>
-<line x1="576" y1="432" x2="616" y2="432"/>
-<path d="M704,482 C726,482 752,499.5 764,517 C752,534.5 726,552 704,552 Q718,517 704,482 Z"/>
-<line x1="598" y1="496" x2="708.5" y2="496"/>
-<line x1="607" y1="510" x2="710.7" y2="510"/>
-<line x1="616" y1="524" x2="710.7" y2="524"/>
-<line x1="436" y1="538" x2="708.5" y2="538"/>
-<line x1="764" y1="517" x2="786" y2="517"/>
-<line x1="786" y1="517" x2="894" y2="517"/>
-<line x1="40" y1="36" x2="40" y2="290"/>
-<line x1="84" y1="36" x2="84" y2="368"/>
-<line x1="128" y1="36" x2="128" y2="446"/>
-<line x1="172" y1="36" x2="172" y2="212"/>
-<line x1="216" y1="36" x2="216" y2="418"/>
-<line x1="260" y1="36" x2="260" y2="354"/>
-<line x1="398" y1="84" x2="398" y2="340"/>
-<line x1="407" y1="134" x2="407" y2="432"/>
-<line x1="436" y1="198" x2="436" y2="538"/>
-<line x1="598" y1="276" x2="598" y2="496"/>
-<line x1="607" y1="354" x2="607" y2="510"/>
-<line x1="616" y1="432" x2="616" y2="524"/>
-<circle cx="216" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="184" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="172" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="290" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="84" cy="368" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="418" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="524" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="538" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="432" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="424,76 424,100 446,88"/>
+<circle cx="451" cy="88" r="5"/>
+<line x1="272" y1="88" x2="424" y2="88"/>
+<polygon points="424,138 424,162 446,150"/>
+<circle cx="451" cy="150" r="5"/>
+<line x1="330" y1="150" x2="424" y2="150"/>
+<path d="M424,198 H450 A26,44 0 0 1 450,286 H424 Z"/>
+<line x1="272" y1="220" x2="424" y2="220"/>
+<line x1="330" y1="242" x2="424" y2="242"/>
+<line x1="214" y1="264" x2="424" y2="264"/>
+<line x1="456" y1="88" x2="502" y2="88"/>
+<line x1="456" y1="150" x2="522" y2="150"/>
+<line x1="476" y1="242" x2="542" y2="242"/>
+<path d="M596,320 H622 A26,44 0 0 1 622,408 H596 Z"/>
+<line x1="502" y1="342" x2="596" y2="342"/>
+<line x1="522" y1="364" x2="596" y2="364"/>
+<line x1="40" y1="386" x2="596" y2="386"/>
+<path d="M596,442 H622 A26,44 0 0 1 622,530 H596 Z"/>
+<line x1="502" y1="464" x2="596" y2="464"/>
+<line x1="330" y1="486" x2="596" y2="486"/>
+<line x1="98" y1="508" x2="596" y2="508"/>
+<path d="M596,564 H622 A26,44 0 0 1 622,652 H596 Z"/>
+<line x1="272" y1="586" x2="596" y2="586"/>
+<line x1="522" y1="608" x2="596" y2="608"/>
+<line x1="156" y1="630" x2="596" y2="630"/>
+<line x1="648" y1="364" x2="674" y2="364"/>
+<line x1="648" y1="486" x2="694" y2="486"/>
+<line x1="648" y1="608" x2="714" y2="608"/>
+<path d="M768,686 C790,686 816,713.5 828,741 C816,768.5 790,796 768,796 Q782,741 768,686 Z"/>
+<line x1="674" y1="708" x2="772.5" y2="708"/>
+<line x1="694" y1="730" x2="774.7" y2="730"/>
+<line x1="714" y1="752" x2="774.7" y2="752"/>
+<line x1="542" y1="774" x2="772.5" y2="774"/>
+<line x1="828" y1="741" x2="854" y2="741"/>
+<line x1="854" y1="741" x2="910" y2="741"/>
+<line x1="40" y1="36" x2="40" y2="386"/>
+<line x1="98" y1="36" x2="98" y2="508"/>
+<line x1="156" y1="36" x2="156" y2="630"/>
+<line x1="214" y1="36" x2="214" y2="264"/>
+<line x1="272" y1="36" x2="272" y2="586"/>
+<line x1="330" y1="36" x2="330" y2="486"/>
+<line x1="502" y1="88" x2="502" y2="464"/>
+<line x1="522" y1="150" x2="522" y2="608"/>
+<line x1="542" y1="242" x2="542" y2="774"/>
+<line x1="674" y1="364" x2="674" y2="708"/>
+<line x1="694" y1="486" x2="694" y2="730"/>
+<line x1="714" y1="608" x2="714" y2="752"/>
+<circle cx="272" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="220" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="214" cy="264" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="342" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="464" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="98" cy="508" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="608" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="156" cy="630" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="674" cy="708" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="694" cy="730" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="714" cy="752" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="542" cy="774" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="542" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="674" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="694" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="714" cy="608" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="900" y="523" text-anchor="start">Out</text>
+<text x="918" y="747" text-anchor="start">Out</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">In0</text>
-<text x="84" y="28" text-anchor="middle" font-size="16">In1</text>
-<text x="128" y="28" text-anchor="middle" font-size="16">In2</text>
-<text x="172" y="28" text-anchor="middle" font-size="16">In3</text>
-<text x="216" y="28" text-anchor="middle" font-size="16">Sel1</text>
-<text x="260" y="28" text-anchor="middle" font-size="16">Sel0</text>
+<text x="98" y="28" text-anchor="middle" font-size="16">In1</text>
+<text x="156" y="28" text-anchor="middle" font-size="16">In2</text>
+<text x="214" y="28" text-anchor="middle" font-size="16">In3</text>
+<text x="272" y="28" text-anchor="middle" font-size="16">Sel1</text>
+<text x="330" y="28" text-anchor="middle" font-size="16">Sel0</text>
 </g>
 </svg>
 </div>
@@ -1007,47 +1038,47 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad Out = Sel\,In1 + \overline{Sel}\,In0$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="828" height="322" viewBox="0 0 828 322" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="745" height="444" viewBox="0 0 745 444" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="188,72 188,96 210,84"/>
-<circle cx="215" cy="84" r="5"/>
-<line x1="112" y1="84" x2="188" y2="84"/>
-<line x1="220" y1="84" x2="242" y2="84"/>
-<path d="M188,120 H214 A26,21 0 0 1 214,162 H188 Z"/>
-<line x1="76" y1="134" x2="188" y2="134"/>
-<line x1="112" y1="148" x2="188" y2="148"/>
-<line x1="240" y1="141" x2="271" y2="141"/>
-<path d="M368,184 H394 A26,21 0 0 1 394,226 H368 Z"/>
-<line x1="40" y1="198" x2="368" y2="198"/>
-<line x1="242" y1="212" x2="368" y2="212"/>
-<line x1="420" y1="205" x2="442" y2="205"/>
-<path d="M548,248 C570,248 596,258.5 608,269 C596,279.5 570,290 548,290 Q562,269 548,248 Z"/>
-<line x1="271" y1="262" x2="554.2" y2="262"/>
-<line x1="442" y1="276" x2="554.2" y2="276"/>
-<line x1="608" y1="269" x2="630" y2="269"/>
-<line x1="630" y1="269" x2="738" y2="269"/>
-<line x1="40" y1="36" x2="40" y2="198"/>
-<line x1="76" y1="36" x2="76" y2="134"/>
-<line x1="112" y1="36" x2="112" y2="148"/>
-<line x1="242" y1="84" x2="242" y2="212"/>
-<line x1="271" y1="141" x2="271" y2="262"/>
-<line x1="442" y1="205" x2="442" y2="276"/>
-<circle cx="112" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="76" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="112" cy="148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="242" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="271" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="442" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="242" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="271" cy="141" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="442" cy="205" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="223,76 223,100 245,88"/>
+<circle cx="250" cy="88" r="5"/>
+<line x1="138" y1="88" x2="223" y2="88"/>
+<path d="M223,136 H249 A26,33 0 0 1 249,202 H223 Z"/>
+<line x1="89" y1="158" x2="223" y2="158"/>
+<line x1="138" y1="180" x2="223" y2="180"/>
+<line x1="255" y1="88" x2="301" y2="88"/>
+<line x1="275" y1="169" x2="321" y2="169"/>
+<path d="M375,236 H401 A26,33 0 0 1 401,302 H375 Z"/>
+<line x1="40" y1="258" x2="375" y2="258"/>
+<line x1="301" y1="280" x2="375" y2="280"/>
+<line x1="427" y1="269" x2="453" y2="269"/>
+<path d="M507,336 C529,336 555,352.5 567,369 C555,385.5 529,402 507,402 Q521,369 507,336 Z"/>
+<line x1="321" y1="358" x2="513.2" y2="358"/>
+<line x1="453" y1="380" x2="513.2" y2="380"/>
+<line x1="567" y1="369" x2="593" y2="369"/>
+<line x1="593" y1="369" x2="649" y2="369"/>
+<line x1="40" y1="36" x2="40" y2="258"/>
+<line x1="89" y1="36" x2="89" y2="158"/>
+<line x1="138" y1="36" x2="138" y2="180"/>
+<line x1="301" y1="88" x2="301" y2="280"/>
+<line x1="321" y1="169" x2="321" y2="358"/>
+<line x1="453" y1="269" x2="453" y2="380"/>
+<circle cx="138" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="89" cy="158" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="138" cy="180" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="258" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="301" cy="280" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="321" cy="358" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="453" cy="380" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="301" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="321" cy="169" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="453" cy="269" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="744" y="275" text-anchor="start">Out</text>
+<text x="657" y="375" text-anchor="start">Out</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">In0</text>
-<text x="76" y="28" text-anchor="middle" font-size="16">In1</text>
-<text x="112" y="28" text-anchor="middle" font-size="16">Sel</text>
+<text x="89" y="28" text-anchor="middle" font-size="16">In1</text>
+<text x="138" y="28" text-anchor="middle" font-size="16">Sel</text>
 </g>
 </svg>
 </div>
@@ -1135,88 +1166,88 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad \text{มัลติเพลกซ์เซอร์ 4-to-1 : } Out = In_{(2\,\mathit{Sel1} + \mathit{Sel0})}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="984" height="584" viewBox="0 0 984 584" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1006" height="838" viewBox="0 0 1006 838" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="344,72 344,96 366,84"/>
-<circle cx="371" cy="84" r="5"/>
-<line x1="216" y1="84" x2="344" y2="84"/>
-<line x1="376" y1="84" x2="398" y2="84"/>
-<polygon points="344,122 344,146 366,134"/>
-<circle cx="371" cy="134" r="5"/>
-<line x1="260" y1="134" x2="344" y2="134"/>
-<line x1="376" y1="134" x2="407" y2="134"/>
-<path d="M344,170 H370 A26,28 0 0 1 370,226 H344 Z"/>
-<line x1="216" y1="184" x2="344" y2="184"/>
-<line x1="260" y1="198" x2="344" y2="198"/>
-<line x1="172" y1="212" x2="344" y2="212"/>
-<line x1="396" y1="198" x2="436" y2="198"/>
-<path d="M524,248 H550 A26,28 0 0 1 550,304 H524 Z"/>
-<line x1="398" y1="262" x2="524" y2="262"/>
-<line x1="407" y1="276" x2="524" y2="276"/>
-<line x1="40" y1="290" x2="524" y2="290"/>
-<line x1="576" y1="276" x2="598" y2="276"/>
-<path d="M524,326 H550 A26,28 0 0 1 550,382 H524 Z"/>
-<line x1="398" y1="340" x2="524" y2="340"/>
-<line x1="260" y1="354" x2="524" y2="354"/>
-<line x1="84" y1="368" x2="524" y2="368"/>
-<line x1="576" y1="354" x2="607" y2="354"/>
-<path d="M524,404 H550 A26,28 0 0 1 550,460 H524 Z"/>
-<line x1="216" y1="418" x2="524" y2="418"/>
-<line x1="407" y1="432" x2="524" y2="432"/>
-<line x1="128" y1="446" x2="524" y2="446"/>
-<line x1="576" y1="432" x2="616" y2="432"/>
-<path d="M704,482 C726,482 752,499.5 764,517 C752,534.5 726,552 704,552 Q718,517 704,482 Z"/>
-<line x1="598" y1="496" x2="708.5" y2="496"/>
-<line x1="607" y1="510" x2="710.7" y2="510"/>
-<line x1="616" y1="524" x2="710.7" y2="524"/>
-<line x1="436" y1="538" x2="708.5" y2="538"/>
-<line x1="764" y1="517" x2="786" y2="517"/>
-<line x1="786" y1="517" x2="894" y2="517"/>
-<line x1="40" y1="36" x2="40" y2="290"/>
-<line x1="84" y1="36" x2="84" y2="368"/>
-<line x1="128" y1="36" x2="128" y2="446"/>
-<line x1="172" y1="36" x2="172" y2="212"/>
-<line x1="216" y1="36" x2="216" y2="418"/>
-<line x1="260" y1="36" x2="260" y2="354"/>
-<line x1="398" y1="84" x2="398" y2="340"/>
-<line x1="407" y1="134" x2="407" y2="432"/>
-<line x1="436" y1="198" x2="436" y2="538"/>
-<line x1="598" y1="276" x2="598" y2="496"/>
-<line x1="607" y1="354" x2="607" y2="510"/>
-<line x1="616" y1="432" x2="616" y2="524"/>
-<circle cx="216" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="184" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="172" cy="212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="290" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="260" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="84" cy="368" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="216" cy="418" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="524" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="538" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="398" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="407" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="436" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="598" cy="276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="607" cy="354" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="432" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="424,76 424,100 446,88"/>
+<circle cx="451" cy="88" r="5"/>
+<line x1="272" y1="88" x2="424" y2="88"/>
+<polygon points="424,138 424,162 446,150"/>
+<circle cx="451" cy="150" r="5"/>
+<line x1="330" y1="150" x2="424" y2="150"/>
+<path d="M424,198 H450 A26,44 0 0 1 450,286 H424 Z"/>
+<line x1="272" y1="220" x2="424" y2="220"/>
+<line x1="330" y1="242" x2="424" y2="242"/>
+<line x1="214" y1="264" x2="424" y2="264"/>
+<line x1="456" y1="88" x2="502" y2="88"/>
+<line x1="456" y1="150" x2="522" y2="150"/>
+<line x1="476" y1="242" x2="542" y2="242"/>
+<path d="M596,320 H622 A26,44 0 0 1 622,408 H596 Z"/>
+<line x1="502" y1="342" x2="596" y2="342"/>
+<line x1="522" y1="364" x2="596" y2="364"/>
+<line x1="40" y1="386" x2="596" y2="386"/>
+<path d="M596,442 H622 A26,44 0 0 1 622,530 H596 Z"/>
+<line x1="502" y1="464" x2="596" y2="464"/>
+<line x1="330" y1="486" x2="596" y2="486"/>
+<line x1="98" y1="508" x2="596" y2="508"/>
+<path d="M596,564 H622 A26,44 0 0 1 622,652 H596 Z"/>
+<line x1="272" y1="586" x2="596" y2="586"/>
+<line x1="522" y1="608" x2="596" y2="608"/>
+<line x1="156" y1="630" x2="596" y2="630"/>
+<line x1="648" y1="364" x2="674" y2="364"/>
+<line x1="648" y1="486" x2="694" y2="486"/>
+<line x1="648" y1="608" x2="714" y2="608"/>
+<path d="M768,686 C790,686 816,713.5 828,741 C816,768.5 790,796 768,796 Q782,741 768,686 Z"/>
+<line x1="674" y1="708" x2="772.5" y2="708"/>
+<line x1="694" y1="730" x2="774.7" y2="730"/>
+<line x1="714" y1="752" x2="774.7" y2="752"/>
+<line x1="542" y1="774" x2="772.5" y2="774"/>
+<line x1="828" y1="741" x2="854" y2="741"/>
+<line x1="854" y1="741" x2="910" y2="741"/>
+<line x1="40" y1="36" x2="40" y2="386"/>
+<line x1="98" y1="36" x2="98" y2="508"/>
+<line x1="156" y1="36" x2="156" y2="630"/>
+<line x1="214" y1="36" x2="214" y2="264"/>
+<line x1="272" y1="36" x2="272" y2="586"/>
+<line x1="330" y1="36" x2="330" y2="486"/>
+<line x1="502" y1="88" x2="502" y2="464"/>
+<line x1="522" y1="150" x2="522" y2="608"/>
+<line x1="542" y1="242" x2="542" y2="774"/>
+<line x1="674" y1="364" x2="674" y2="708"/>
+<line x1="694" y1="486" x2="694" y2="730"/>
+<line x1="714" y1="608" x2="714" y2="752"/>
+<circle cx="272" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="220" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="214" cy="264" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="342" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="464" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="330" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="98" cy="508" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="272" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="608" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="156" cy="630" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="674" cy="708" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="694" cy="730" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="714" cy="752" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="542" cy="774" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="502" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="522" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="542" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="674" cy="364" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="694" cy="486" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="714" cy="608" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="900" y="523" text-anchor="start">Out</text>
+<text x="918" y="747" text-anchor="start">Out</text>
 <text x="40" y="28" text-anchor="middle" font-size="16">In0</text>
-<text x="84" y="28" text-anchor="middle" font-size="16">In1</text>
-<text x="128" y="28" text-anchor="middle" font-size="16">In2</text>
-<text x="172" y="28" text-anchor="middle" font-size="16">In3</text>
-<text x="216" y="28" text-anchor="middle" font-size="16">Sel1</text>
-<text x="260" y="28" text-anchor="middle" font-size="16">Sel0</text>
+<text x="98" y="28" text-anchor="middle" font-size="16">In1</text>
+<text x="156" y="28" text-anchor="middle" font-size="16">In2</text>
+<text x="214" y="28" text-anchor="middle" font-size="16">In3</text>
+<text x="272" y="28" text-anchor="middle" font-size="16">Sel1</text>
+<text x="330" y="28" text-anchor="middle" font-size="16">Sel0</text>
 </g>
 </svg>
 </div>
@@ -1338,9 +1369,9 @@ $\mathbf{Sol}^{n}$
 <text x="192" y="64" text-anchor="end" font-size="16">Q</text>
 <text x="86" y="64" text-anchor="end">in</text>
 <text x="86" y="108" text-anchor="end">clk</text>
-<text x="270" y="48" text-anchor="middle" font-size="15">q<tspan dy="4" font-size="10">1</tspan></text>
-<text x="340" y="48" text-anchor="middle" font-size="15">q<tspan dy="4" font-size="10">2</tspan></text>
-<text x="410" y="48" text-anchor="middle" font-size="15">out</text>
+<text x="270" y="44" text-anchor="middle" font-size="15">q1</text>
+<text x="340" y="44" text-anchor="middle" font-size="15">q2</text>
+<text x="410" y="44" text-anchor="middle" font-size="15">out</text>
 <text x="444" y="64" text-anchor="start">out</text>
 </g>
 </svg>
@@ -1386,13 +1417,13 @@ $\mathbf{Sol}^{n}$
 <text x="108" y="64" text-anchor="start" font-size="16">D</text>
 <text x="172" y="64" text-anchor="end" font-size="16">Q</text>
 <text x="66" y="64" text-anchor="end">in</text>
-<text x="196" y="48" text-anchor="middle" font-size="15">q<tspan dy="4" font-size="10">1</tspan></text>
+<text x="196" y="44" text-anchor="middle" font-size="15">q1</text>
 <text x="278" y="64" text-anchor="start" font-size="16">D</text>
 <text x="342" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="366" y="48" text-anchor="middle" font-size="15">q<tspan dy="4" font-size="10">2</tspan></text>
+<text x="366" y="44" text-anchor="middle" font-size="15">q2</text>
 <text x="448" y="64" text-anchor="start" font-size="16">D</text>
 <text x="512" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="536" y="48" text-anchor="middle" font-size="15">out</text>
+<text x="536" y="44" text-anchor="middle" font-size="15">out</text>
 <text x="36" y="108" text-anchor="end">clk</text>
 <text x="576" y="64" text-anchor="start">out</text>
 </g>
@@ -1652,42 +1683,56 @@ $\mathbf{Sol}^{n}$
 $\mathbf{Ans}\quad Q = 01,\ 10,\ 11,\ 00,\ 01 \text{ ; } D_0 = \overline{Q_0},\ D_1 = Q_1 \oplus Q_0$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="695" height="258" viewBox="0 0 695 258" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(0,24)">
+<svg xmlns="http://www.w3.org/2000/svg" width="639" height="334" viewBox="0 0 639 334" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="225" y="20" width="80" height="150" rx="2"/>
-<polyline points="225,116 237,125 225,134"/>
-<line x1="225" y1="125" x2="209" y2="125"/>
-<line x1="209" y1="125" x2="209" y2="210"/>
-<path d="M135,44 C157,44 183,54.5 195,65 C183,75.5 157,86 135,86 Q149,65 135,44 Z"/>
-<path d="M127,44 Q141,65 127,86"/>
-<line x1="111.2" y1="58" x2="133.2" y2="58"/>
-<line x1="111.2" y1="72" x2="133.2" y2="72"/>
-<line x1="195" y1="65" x2="225" y2="65"/>
-<line x1="305" y1="58" x2="345" y2="58"/>
-<rect x="515" y="20" width="80" height="150" rx="2"/>
-<polyline points="515,116 527,125 515,134"/>
-<line x1="515" y1="125" x2="499" y2="125"/>
-<line x1="499" y1="125" x2="499" y2="210"/>
-<line x1="471" y1="65" x2="515" y2="65"/>
-<line x1="459.3" y1="59.1" x2="467" y2="59.1" stroke-width="1.4"/>
-<line x1="595" y1="58" x2="635" y2="58"/>
-<line x1="169" y1="210" x2="499" y2="210"/>
-<circle cx="209" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="499" cy="210" r="3.5" fill="currentColor" stroke="none"/>
+<rect x="224" y="96" width="80" height="150" rx="2"/>
+<polyline points="224,192 236,201 224,210"/>
+<line x1="224" y1="201" x2="208" y2="201"/>
+<line x1="208" y1="201" x2="208" y2="310"/>
+<path d="M134,113 C156,113 182,123.5 194,134 C182,144.5 156,155 134,155 Q148,134 134,113 Z"/>
+<path d="M126,113 Q140,134 126,155"/>
+<line x1="194" y1="134" x2="224" y2="134"/>
+<line x1="304" y1="134" x2="340" y2="134"/>
+<line x1="304" y1="208" x2="340" y2="208"/>
+<line x1="287.2" y1="200.4" x2="296" y2="200.4" stroke-width="1.4"/>
+<rect x="483" y="96" width="80" height="150" rx="2"/>
+<polyline points="483,192 495,201 483,210"/>
+<line x1="483" y1="201" x2="467" y2="201"/>
+<line x1="467" y1="201" x2="467" y2="310"/>
+<line x1="563" y1="134" x2="599" y2="134"/>
+<line x1="563" y1="208" x2="599" y2="208"/>
+<line x1="546.2" y1="200.4" x2="555" y2="200.4" stroke-width="1.4"/>
+<line x1="120.2" y1="64" x2="120.2" y2="127"/>
+<line x1="120.2" y1="127" x2="132.2" y2="127"/>
+<line x1="109.2" y1="46" x2="109.2" y2="141"/>
+<line x1="109.2" y1="141" x2="132.2" y2="141"/>
+<line x1="460" y1="268" x2="460" y2="134"/>
+<line x1="460" y1="134" x2="483" y2="134"/>
+<line x1="109.2" y1="46" x2="599" y2="46"/>
+<line x1="120.2" y1="64" x2="340" y2="64"/>
+<line x1="460" y1="268" x2="599" y2="268"/>
+<line x1="340" y1="30" x2="340" y2="134"/>
+<line x1="599" y1="30" x2="599" y2="134"/>
+<line x1="599" y1="208" x2="599" y2="268"/>
+<line x1="168" y1="310" x2="467" y2="310"/>
+<circle cx="208" cy="310" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="467" cy="310" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="599" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="340" cy="64" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="599" cy="268" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="265" y="103" text-anchor="middle" font-size="26">1</text>
-<text x="233" y="71" text-anchor="start" font-size="14">D</text>
-<text x="107.2" y="64" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">1</tspan></text>
-<text x="107.2" y="78" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">0</tspan></text>
-<text x="349" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">1</tspan></text>
-<text x="297" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="555" y="103" text-anchor="middle" font-size="26">0</text>
-<text x="523" y="71" text-anchor="start" font-size="14">D</text>
-<text x="467" y="71" text-anchor="end" font-size="14">Q<tspan dy="4" font-size="9">0</tspan></text>
-<text x="639" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">0</tspan></text>
-<text x="587" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="165" y="216" text-anchor="end" font-size="16">Clock</text>
+<text x="264" y="179" text-anchor="middle" font-size="26">1</text>
+<text x="232" y="140" text-anchor="start" font-size="14">D</text>
+<text x="296" y="140" text-anchor="end" font-size="16">Q</text>
+<text x="296" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="523" y="179" text-anchor="middle" font-size="26">0</text>
+<text x="491" y="140" text-anchor="start" font-size="14">D</text>
+<text x="555" y="140" text-anchor="end" font-size="16">Q</text>
+<text x="555" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="340" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">1</tspan></text>
+<text x="599" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">0</tspan></text>
+<text x="164" y="316" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -1704,60 +1749,60 @@ $\mathbf{Ans}\quad Q = 01,\ 10,\ 11,\ 00,\ 01 \text{ ; } D_0 = \overline{Q_0},\ 
 ### ตัวอย่างที่ 22  จากวงจรถอดรหัส 2-to-4 ในรูป จงเขียนโมดูล Verilog แบบ Dataflow และแบบ Behavioral
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="436" viewBox="0 0 580 436" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="606" viewBox="0 0 580 606" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<polygon points="120,72 120,96 142,84"/>
-<circle cx="147" cy="84" r="5"/>
-<line x1="40" y1="84" x2="120" y2="84"/>
-<line x1="152" y1="84" x2="174" y2="84"/>
-<polygon points="120,122 120,146 142,134"/>
-<circle cx="147" cy="134" r="5"/>
-<line x1="60" y1="134" x2="120" y2="134"/>
-<line x1="152" y1="134" x2="183" y2="134"/>
-<path d="M120,170 H146 A26,21 0 0 1 146,212 H120 Z"/>
-<line x1="40" y1="184" x2="120" y2="184"/>
-<line x1="60" y1="198" x2="120" y2="198"/>
-<line x1="172" y1="191" x2="212" y2="191"/>
-<path d="M300,234 H326 A26,21 0 0 1 326,276 H300 Z"/>
-<line x1="174" y1="248" x2="300" y2="248"/>
-<line x1="183" y1="262" x2="300" y2="262"/>
-<line x1="352" y1="255" x2="374" y2="255"/>
-<path d="M300,298 H326 A26,21 0 0 1 326,340 H300 Z"/>
-<line x1="174" y1="312" x2="300" y2="312"/>
-<line x1="60" y1="326" x2="300" y2="326"/>
-<line x1="352" y1="319" x2="383" y2="319"/>
-<path d="M300,362 H326 A26,21 0 0 1 326,404 H300 Z"/>
-<line x1="40" y1="376" x2="300" y2="376"/>
-<line x1="183" y1="390" x2="300" y2="390"/>
-<line x1="352" y1="383" x2="392" y2="383"/>
-<line x1="212" y1="191" x2="490" y2="191"/>
-<line x1="374" y1="255" x2="490" y2="255"/>
-<line x1="383" y1="319" x2="490" y2="319"/>
-<line x1="392" y1="383" x2="490" y2="383"/>
-<line x1="40" y1="36" x2="40" y2="376"/>
-<line x1="60" y1="36" x2="60" y2="326"/>
-<line x1="174" y1="84" x2="174" y2="312"/>
-<line x1="183" y1="134" x2="183" y2="390"/>
-<circle cx="40" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="60" cy="134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="184" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="60" cy="198" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="174" cy="248" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="183" cy="262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="174" cy="312" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="60" cy="326" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="376" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="183" cy="390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="174" cy="84" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="183" cy="134" r="3.5" fill="currentColor" stroke="none"/>
+<polygon points="138,76 138,100 160,88"/>
+<circle cx="165" cy="88" r="5"/>
+<line x1="40" y1="88" x2="138" y2="88"/>
+<polygon points="138,138 138,162 160,150"/>
+<circle cx="165" cy="150" r="5"/>
+<line x1="71" y1="150" x2="138" y2="150"/>
+<path d="M138,198 H164 A26,33 0 0 1 164,264 H138 Z"/>
+<line x1="40" y1="220" x2="138" y2="220"/>
+<line x1="71" y1="242" x2="138" y2="242"/>
+<line x1="170" y1="88" x2="216" y2="88"/>
+<line x1="170" y1="150" x2="236" y2="150"/>
+<line x1="190" y1="231" x2="256" y2="231"/>
+<path d="M310,298 H336 A26,33 0 0 1 336,364 H310 Z"/>
+<line x1="216" y1="320" x2="310" y2="320"/>
+<line x1="236" y1="342" x2="310" y2="342"/>
+<path d="M310,398 H336 A26,33 0 0 1 336,464 H310 Z"/>
+<line x1="216" y1="420" x2="310" y2="420"/>
+<line x1="71" y1="442" x2="310" y2="442"/>
+<path d="M310,498 H336 A26,33 0 0 1 336,564 H310 Z"/>
+<line x1="40" y1="520" x2="310" y2="520"/>
+<line x1="236" y1="542" x2="310" y2="542"/>
+<line x1="362" y1="331" x2="388" y2="331"/>
+<line x1="362" y1="431" x2="408" y2="431"/>
+<line x1="362" y1="531" x2="428" y2="531"/>
+<line x1="256" y1="231" x2="484" y2="231"/>
+<line x1="388" y1="331" x2="484" y2="331"/>
+<line x1="408" y1="431" x2="484" y2="431"/>
+<line x1="428" y1="531" x2="484" y2="531"/>
+<line x1="40" y1="36" x2="40" y2="520"/>
+<line x1="71" y1="36" x2="71" y2="442"/>
+<line x1="216" y1="88" x2="216" y2="420"/>
+<line x1="236" y1="150" x2="236" y2="542"/>
+<circle cx="40" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="71" cy="150" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="220" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="71" cy="242" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="216" cy="320" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="236" cy="342" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="216" cy="420" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="71" cy="442" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="40" cy="520" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="236" cy="542" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="216" cy="88" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="236" cy="150" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="496" y="197" text-anchor="start">Y<tspan dy="4" font-size="12">3</tspan></text>
-<text x="496" y="261" text-anchor="start">Y<tspan dy="4" font-size="12">0</tspan></text>
-<text x="496" y="325" text-anchor="start">Y<tspan dy="4" font-size="12">1</tspan></text>
-<text x="496" y="389" text-anchor="start">Y<tspan dy="4" font-size="12">2</tspan></text>
+<text x="492" y="237" text-anchor="start">Y<tspan dy="4" font-size="12">3</tspan></text>
+<text x="492" y="337" text-anchor="start">Y<tspan dy="4" font-size="12">0</tspan></text>
+<text x="492" y="437" text-anchor="start">Y<tspan dy="4" font-size="12">1</tspan></text>
+<text x="492" y="537" text-anchor="start">Y<tspan dy="4" font-size="12">2</tspan></text>
 <text x="40" y="28" text-anchor="middle" font-size="16">A</text>
-<text x="60" y="28" text-anchor="middle" font-size="16">B</text>
+<text x="71" y="28" text-anchor="middle" font-size="16">B</text>
 </g>
 </svg>
 </div>
@@ -1833,29 +1878,38 @@ endmodule
 ```
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="405" height="258" viewBox="0 0 405 258" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g transform="translate(0,24)">
+<svg xmlns="http://www.w3.org/2000/svg" width="424" height="316" viewBox="0 0 424 316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="225" y="20" width="80" height="150" rx="2"/>
-<polyline points="225,116 237,125 225,134"/>
-<line x1="225" y1="125" x2="209" y2="125"/>
-<line x1="209" y1="125" x2="209" y2="210"/>
-<path d="M135,44 C157,44 183,54.5 195,65 C183,75.5 157,86 135,86 Q149,65 135,44 Z"/>
-<path d="M127,44 Q141,65 127,86"/>
-<line x1="111.2" y1="58" x2="133.2" y2="58"/>
-<line x1="111.2" y1="72" x2="133.2" y2="72"/>
-<line x1="195" y1="65" x2="225" y2="65"/>
-<line x1="305" y1="58" x2="345" y2="58"/>
-<line x1="169" y1="210" x2="209" y2="210"/>
-<circle cx="209" cy="210" r="3.5" fill="currentColor" stroke="none"/>
+<rect x="268" y="96" width="80" height="150" rx="2"/>
+<polyline points="268,192 280,201 268,210"/>
+<line x1="268" y1="201" x2="252" y2="201"/>
+<line x1="252" y1="201" x2="252" y2="292"/>
+<path d="M178,113 C200,113 226,123.5 238,134 C226,144.5 200,155 178,155 Q192,134 178,113 Z"/>
+<path d="M170,113 Q184,134 170,155"/>
+<line x1="238" y1="134" x2="268" y2="134"/>
+<line x1="348" y1="134" x2="384" y2="134"/>
+<line x1="348" y1="208" x2="384" y2="208"/>
+<line x1="331.2" y1="200.4" x2="340" y2="200.4" stroke-width="1.4"/>
+<line x1="164.2" y1="64" x2="164.2" y2="127"/>
+<line x1="164.2" y1="127" x2="176.2" y2="127"/>
+<line x1="153.2" y1="46" x2="153.2" y2="141"/>
+<line x1="153.2" y1="141" x2="176.2" y2="141"/>
+<line x1="153.2" y1="46" x2="384" y2="46"/>
+<line x1="34" y1="64" x2="164.2" y2="64"/>
+<line x1="34" y1="30" x2="34" y2="64"/>
+<line x1="384" y1="30" x2="384" y2="134"/>
+<line x1="212" y1="292" x2="252" y2="292"/>
+<circle cx="252" cy="292" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="384" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="265" y="103" text-anchor="middle" font-size="26">A</text>
-<text x="233" y="71" text-anchor="start" font-size="14">D</text>
-<text x="107.2" y="64" text-anchor="end" font-size="13">T</text>
-<text x="107.2" y="78" text-anchor="end" font-size="13">Q<tspan dy="4" font-size="9">A</tspan></text>
-<text x="349" y="64" text-anchor="start" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
-<text x="297" y="64" text-anchor="end" font-size="16">Q</text>
-<text x="165" y="216" text-anchor="end" font-size="16">Clock</text>
+<text x="308" y="179" text-anchor="middle" font-size="26">A</text>
+<text x="276" y="140" text-anchor="start" font-size="14">D</text>
+<text x="340" y="140" text-anchor="end" font-size="16">Q</text>
+<text x="340" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="34" y="24" text-anchor="middle" font-size="16">T</text>
+<text x="384" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="208" y="298" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>

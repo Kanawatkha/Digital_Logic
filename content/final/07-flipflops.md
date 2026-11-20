@@ -1,5 +1,9 @@
 # บทที่ 7 ฟลิป-ฟลอป (Flip-Flop)
 
+@select ff ชนิดฟลิป-ฟลอป | jk=JK | d=D | t=T | rs=Clock RS
+@select edge ขอบที่ทำงาน | rise=ขอบขาขึ้น (↑) | fall=ขอบขาลง (↓)
+@select pins ขา PS และ CLR | none=ไม่มี | ps=มี PS และ CLR
+
 ---
 
 ## 1. ภาพรวมของฟลิป-ฟลอป
@@ -1350,9 +1354,1455 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 ช่วงที่ $T=1$ ตลอด $Q$ สลับทุกขอบ จึงเปลี่ยนครบหนึ่งรอบ (0 แล้ว 1) ใช้เวลา 2 ช่วงสัญญาณนาฬิกา ความถี่ของ $Q$ เป็นครึ่งหนึ่งของความถี่ CLK
 
-## 6. สรุปตารางและสมการของบท
+## 6. โจทย์รูปคลื่น (Timing Diagram)
 
-### 6.1 สรุปฟลิป-ฟลอป 4 ประเภท
+โจทย์ของเรื่องนี้มักให้รูปคลื่นของอินพุต (CLK, $J$, $K$, $D$ หรือ $T$) หรือให้ตารางการทำงาน แล้วให้วาดรูปคลื่น $Q$ และ $\overline{Q}$ ที่เหลือ เลือก **ชนิดฟลิป-ฟลอป** **ขอบที่ทำงาน** และ **ขา PS และ CLR** ด้านล่างนี้ การ์ดที่อยู่ถัดลงไปจะแสดงโจทย์ ตารางการทำงาน วิธีทำทีละขอบ และรูปคลื่นคำตอบของตัวเลือกนั้น (Clock RS ไม่ใช้อินพุต $R=S=1$)
+
+**วิธีอ่านรูปคลื่น**
+
+1. ทำเครื่องหมายขอบที่ทำงานของ CLK (ขอบขาขึ้น $\uparrow$ หรือขอบขาลง $\downarrow$ ตามที่โจทย์กำหนด) ขอบอีกแบบหนึ่งไม่มีผลกับ $Q$
+2. ถ้ามี PS และ CLR ให้ดูก่อน : ตัวไหนเป็น $0$ จะบังคับ $Q$ ทันที (PS=0 ได้ $Q=1$, CLR=0 ได้ $Q=0$) โดยไม่ต้องดู CLK และอินพุต
+3. ที่ขอบที่ทำงาน (เมื่อ PS และ CLR ไม่ได้บังคับอยู่) อ่านค่าอินพุตที่เป็นอยู่ **ก่อนขอบนั้น** ค่าที่เปลี่ยนหลังขอบไม่มีผลกับขอบนี้
+4. ใช้ตารางการทำงานหา $Q$ ใหม่ แล้วคงค่านั้นไว้จนถึงเหตุการณ์ถัดไป ($Q$ เปลี่ยนที่ขอบเท่านั้น ยกเว้น PS และ CLR)
+5. $\overline{Q}$ เป็นค่าตรงข้ามของ $Q$ เสมอ (ยกเว้นตอน PS=CLR=0 ซึ่งได้ 1 ทั้งคู่)
+
+@choices
+
+### โจทย์รูปคลื่น : JK ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR {ff=jk; edge=rise; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ JK ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $J$ | $K$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| $\uparrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\uparrow$ | 0 | 1 | 0 | 1 |
+| $\uparrow$ | 1 | 0 | 1 | 0 |
+| $\uparrow$ | 1 | 1 | $\overline{Q_0}$ | $Q_0$ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="224" viewBox="0 0 726 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="218"/>
+<line x1="254" y1="26" x2="254" y2="218"/>
+<line x1="382" y1="26" x2="382" y2="218"/>
+<line x1="510" y1="26" x2="510" y2="218"/>
+<line x1="638" y1="26" x2="638" y2="218"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">J</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">K</text>
+<path d="M62,191.2 L174,191.2 L174,164 L414,164 L414,191.2 L574,191.2 L574,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $J$, $K$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $J=1$, $K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $J=0$, $K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ขอบ #3 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #4 : $J=0$, $K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ขอบ #5 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">J</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">K</text>
+<path d="M62,191.2 L174,191.2 L174,164 L414,164 L414,191.2 L574,191.2 L574,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<path d="M62,251.2 L126,251.2 L126,224 L254,224 L254,251.2 L382,251.2 L382,224 L638,224 L638,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<line x1="38" y1="288.6" x2="50" y2="288.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,284 L126,284 L126,311.2 L254,311.2 L254,284 L382,284 L382,311.2 L638,311.2 L638,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : JK ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น มี PS และ CLR {ff=jk; edge=rise; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ JK ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $J$ | $K$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\uparrow$ | 0 | 1 | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 1 | 0 | 1 | 0 |
+| 1 | 1 | $\uparrow$ | 1 | 1 | $\overline{Q_0}$ | $Q_0$ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L174,104 L174,131.2 L222,131.2 L222,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L574,311.2 L574,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $J$, $K$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $J=1$, $K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ระหว่างขอบ #1 กับ #2 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #1 กับ #2 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #2 : $J=0$, $K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ขอบ #4 : $J=0$, $K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $0$ | $1$ |
+| ขอบ #4 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="254" y1="26" x2="254" y2="458"/>
+<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="638" y1="26" x2="638" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L174,104 L174,131.2 L222,131.2 L222,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L574,311.2 L574,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,371.2 L126,371.2 L126,344 L174,344 L174,371.2 L286,371.2 L286,344 L382,344 L382,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L126,404 L126,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L382,431.2 L382,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : JK ฟลิป-ฟลอป ทำงานที่ขอบขาลง ไม่มี PS และ CLR {ff=jk; edge=fall; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ JK ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $J$ | $K$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| $\downarrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\downarrow$ | 0 | 1 | 0 | 1 |
+| $\downarrow$ | 1 | 0 | 1 | 0 |
+| $\downarrow$ | 1 | 1 | $\overline{Q_0}$ | $Q_0$ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="224" viewBox="0 0 726 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="218"/>
+<line x1="254" y1="26" x2="254" y2="218"/>
+<line x1="382" y1="26" x2="382" y2="218"/>
+<line x1="510" y1="26" x2="510" y2="218"/>
+<line x1="638" y1="26" x2="638" y2="218"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">J</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">K</text>
+<path d="M62,191.2 L174,191.2 L174,164 L414,164 L414,191.2 L574,191.2 L574,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $J$, $K$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $J=1$, $K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $J=0$, $K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ขอบ #3 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #4 : $J=0$, $K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ขอบ #5 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">J</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">K</text>
+<path d="M62,191.2 L174,191.2 L174,164 L414,164 L414,191.2 L574,191.2 L574,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<path d="M62,251.2 L126,251.2 L126,224 L254,224 L254,251.2 L382,251.2 L382,224 L638,224 L638,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<line x1="38" y1="288.6" x2="50" y2="288.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,284 L126,284 L126,311.2 L254,311.2 L254,284 L382,284 L382,311.2 L638,311.2 L638,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : JK ฟลิป-ฟลอป ทำงานที่ขอบขาลง มี PS และ CLR {ff=jk; edge=fall; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ JK ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $J$ | $K$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\downarrow$ | 0 | 1 | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 1 | 0 | 1 | 0 |
+| 1 | 1 | $\downarrow$ | 1 | 1 | $\overline{Q_0}$ | $Q_0$ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L174,104 L174,131.2 L222,131.2 L222,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L574,311.2 L574,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $J$, $K$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $J=1$, $K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ระหว่างขอบ #1 กับ #2 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #1 กับ #2 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #2 : $J=0$, $K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $J=1$, $K=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ขอบ #4 : $J=0$, $K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $0$ | $1$ |
+| ขอบ #4 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="254" y1="26" x2="254" y2="458"/>
+<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="638" y1="26" x2="638" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L174,104 L174,131.2 L222,131.2 L222,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L574,311.2 L574,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,371.2 L126,371.2 L126,344 L174,344 L174,371.2 L286,371.2 L286,344 L382,344 L382,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L126,404 L126,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L382,431.2 L382,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : D ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR {ff=d; edge=rise; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ D ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $D$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|
+| $\uparrow$ | 0 | 0 | 1 |
+| $\uparrow$ | 1 | 1 | 0 |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="164" viewBox="0 0 726 164" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="158"/>
+<line x1="254" y1="26" x2="254" y2="158"/>
+<line x1="382" y1="26" x2="382" y2="158"/>
+<line x1="510" y1="26" x2="510" y2="158"/>
+<line x1="638" y1="26" x2="638" y2="158"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">D</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $D$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #2 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+- ขอบ #3 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #4 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #5 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">D</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">Q</text>
+<path d="M62,191.2 L126,191.2 L126,164 L254,164 L254,191.2 L382,191.2 L382,164 L638,164 L638,191.2 L702,191.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<line x1="38" y1="228.6" x2="50" y2="228.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,224 L126,224 L126,251.2 L254,251.2 L254,224 L382,224 L382,251.2 L638,251.2 L638,224 L702,224" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : D ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น มี PS และ CLR {ff=d; edge=rise; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ D ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $D$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 0 | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 1 | 1 | 0 |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $D$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #2 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #4 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| ขอบ #4 | $1$ | $0$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="254" y1="26" x2="254" y2="398"/>
+<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="638" y1="26" x2="638" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L286,311.2 L286,284 L430,284 L430,311.2 L510,311.2 L510,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L286,344 L286,371.2 L430,371.2 L430,344 L510,344 L510,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : D ฟลิป-ฟลอป ทำงานที่ขอบขาลง ไม่มี PS และ CLR {ff=d; edge=fall; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ D ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $D$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|
+| $\downarrow$ | 0 | 0 | 1 |
+| $\downarrow$ | 1 | 1 | 0 |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="164" viewBox="0 0 726 164" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="158"/>
+<line x1="254" y1="26" x2="254" y2="158"/>
+<line x1="382" y1="26" x2="382" y2="158"/>
+<line x1="510" y1="26" x2="510" y2="158"/>
+<line x1="638" y1="26" x2="638" y2="158"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">D</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $D$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #2 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+- ขอบ #3 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #4 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #5 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">D</text>
+<path d="M62,104 L174,104 L174,131.2 L350,131.2 L350,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">Q</text>
+<path d="M62,191.2 L126,191.2 L126,164 L254,164 L254,191.2 L382,191.2 L382,164 L638,164 L638,191.2 L702,191.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<line x1="38" y1="228.6" x2="50" y2="228.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,224 L126,224 L126,251.2 L254,251.2 L254,224 L382,224 L382,251.2 L638,251.2 L638,224 L702,224" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : D ฟลิป-ฟลอป ทำงานที่ขอบขาลง มี PS และ CLR {ff=d; edge=fall; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ D ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $D$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 0 | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 1 | 1 | 0 |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $D$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ขอบ #2 : $D=0$ $\Rightarrow$ ตาม $D$ ($Q=0$) $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #4 : $D=1$ $\Rightarrow$ ตาม $D$ ($Q=1$) $\Rightarrow Q = 1$
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| ขอบ #4 | $1$ | $0$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="254" y1="26" x2="254" y2="398"/>
+<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="638" y1="26" x2="638" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L286,311.2 L286,284 L430,284 L430,311.2 L510,311.2 L510,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L286,344 L286,371.2 L430,371.2 L430,344 L510,344 L510,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : T ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR {ff=t; edge=rise; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ T ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $T$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|
+| $\uparrow$ | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\uparrow$ | 1 | $\overline{Q_0}$ | $Q_0$ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="164" viewBox="0 0 726 164" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="158"/>
+<line x1="254" y1="26" x2="254" y2="158"/>
+<line x1="382" y1="26" x2="382" y2="158"/>
+<line x1="510" y1="26" x2="510" y2="158"/>
+<line x1="638" y1="26" x2="638" y2="158"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">T</text>
+<path d="M62,104 L350,104 L350,131.2 L414,131.2 L414,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $T$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #5 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">T</text>
+<path d="M62,104 L350,104 L350,131.2 L414,131.2 L414,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">Q</text>
+<path d="M62,191.2 L126,191.2 L126,164 L254,164 L254,191.2 L510,191.2 L510,164 L702,164" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<line x1="38" y1="228.6" x2="50" y2="228.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,224 L126,224 L126,251.2 L254,251.2 L254,224 L510,224 L510,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : T ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น มี PS และ CLR {ff=t; edge=rise; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ T ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $T$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\uparrow$ | 1 | $\overline{Q_0}$ | $Q_0$ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $T$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ขอบ #4 : CLR เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 0$ (ไม่เปลี่ยน)
+- ระหว่างขอบ #4 กับ #5 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| ขอบ #4 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="254" y1="26" x2="254" y2="398"/>
+<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="638" y1="26" x2="638" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L286,311.2 L286,284 L478,284 L478,311.2 L606,311.2 L606,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L286,344 L286,371.2 L478,371.2 L478,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : T ฟลิป-ฟลอป ทำงานที่ขอบขาลง ไม่มี PS และ CLR {ff=t; edge=fall; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ T ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $T$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|
+| $\downarrow$ | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\downarrow$ | 1 | $\overline{Q_0}$ | $Q_0$ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="164" viewBox="0 0 726 164" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="158"/>
+<line x1="254" y1="26" x2="254" y2="158"/>
+<line x1="382" y1="26" x2="382" y2="158"/>
+<line x1="510" y1="26" x2="510" y2="158"/>
+<line x1="638" y1="26" x2="638" y2="158"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">T</text>
+<path d="M62,104 L350,104 L350,131.2 L414,131.2 L414,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $T$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #5 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+
+$\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 1 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">T</text>
+<path d="M62,104 L350,104 L350,131.2 L414,131.2 L414,104 L574,104 L574,131.2 L702,131.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">Q</text>
+<path d="M62,191.2 L126,191.2 L126,164 L254,164 L254,191.2 L510,191.2 L510,164 L702,164" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<line x1="38" y1="228.6" x2="50" y2="228.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,224 L126,224 L126,251.2 L254,251.2 L254,224 L510,224 L510,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : T ฟลิป-ฟลอป ทำงานที่ขอบขาลง มี PS และ CLR {ff=t; edge=fall; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ T ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $T$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\downarrow$ | 1 | $\overline{Q_0}$ | $Q_0$ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="284" viewBox="0 0 726 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="278"/>
+<line x1="254" y1="26" x2="254" y2="278"/>
+<line x1="382" y1="26" x2="382" y2="278"/>
+<line x1="510" y1="26" x2="510" y2="278"/>
+<line x1="638" y1="26" x2="638" y2="278"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $T$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 1$
+- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ (Toggle) $\Rightarrow Q = 0$
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ระหว่างขอบ #2 กับ #3 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ระหว่างขอบ #3 กับ #4 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ขอบ #4 : CLR เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 0$ (ไม่เปลี่ยน)
+- ระหว่างขอบ #4 กับ #5 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ระหว่างขอบ #4 กับ #5 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #5 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| ขอบ #4 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #5 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="254" y1="26" x2="254" y2="398"/>
+<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="638" y1="26" x2="638" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L286,44 L286,71.2 L350,71.2 L350,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L286,311.2 L286,284 L478,284 L478,311.2 L606,311.2 L606,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L286,344 L286,371.2 L478,371.2 L478,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR {ff=rs; edge=rise; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ Clock RS ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $R$ | $S$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| $\uparrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\uparrow$ | 0 | 1 | 1 | 0 |
+| $\uparrow$ | 1 | 0 | 0 | 1 |
+| $\uparrow$ | 1 | 1 | ห้ามใช้ | ห้ามใช้ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="224" viewBox="0 0 726 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="218"/>
+<line x1="254" y1="26" x2="254" y2="218"/>
+<line x1="382" y1="26" x2="382" y2="218"/>
+<line x1="510" y1="26" x2="510" y2="218"/>
+<line x1="638" y1="26" x2="638" y2="218"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">R</text>
+<path d="M62,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">S</text>
+<path d="M62,164 L174,164 L174,191.2 L414,191.2 L414,164 L574,164 L574,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $R$, $S$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $R=0$, $S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ขอบ #3 : $R=1$, $S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ขอบ #4 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #5 : $R=1$, $S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,71.2 L126,71.2 L126,44 L190,44 L190,71.2 L254,71.2 L254,44 L318,44 L318,71.2 L382,71.2 L382,44 L446,44 L446,71.2 L510,71.2 L510,44 L574,44 L574,71.2 L638,71.2 L638,44 L702,44 L702,71.2 L702,71.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">R</text>
+<path d="M62,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">S</text>
+<path d="M62,164 L174,164 L174,191.2 L414,191.2 L414,164 L574,164 L574,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<path d="M62,251.2 L126,251.2 L126,224 L382,224 L382,251.2 L510,251.2 L510,224 L638,224 L638,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<line x1="38" y1="288.6" x2="50" y2="288.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,284 L126,284 L126,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L638,311.2 L638,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาขึ้น มี PS และ CLR {ff=rs; edge=rise; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ Clock RS ฟลิป-ฟลอป ที่ทำงานที่ขอบขาขึ้น มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $R$ | $S$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\uparrow$ | 0 | 1 | 1 | 0 |
+| 1 | 1 | $\uparrow$ | 1 | 0 | 0 | 1 |
+| 1 | 1 | $\uparrow$ | 1 | 1 | ห้ามใช้ | ห้ามใช้ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L286,104 L286,131.2 L334,131.2 L334,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L574,284 L574,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาขึ้น มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $R$, $S$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $R=0$, $S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ระหว่างขอบ #2 กับ #3 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #2 กับ #3 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #3 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- ระหว่างขอบ #3 กับ #4 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #4 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ระหว่างขอบ #4 กับ #5 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ขอบ #5 : CLR เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 0$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #4 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| ขอบ #5 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="254" y1="26" x2="254" y2="458"/>
+<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="638" y1="26" x2="638" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L286,104 L286,131.2 L334,131.2 L334,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L574,284 L574,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,371.2 L126,371.2 L126,344 L286,344 L286,371.2 L350,371.2 L350,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L126,404 L126,431.2 L286,431.2 L286,404 L350,404 L350,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาลง ไม่มี PS และ CLR {ff=rs; edge=fall; pins=none}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ Clock RS ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง ไม่มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| CLOCK | $R$ | $S$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| $\downarrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| $\downarrow$ | 0 | 1 | 1 | 0 |
+| $\downarrow$ | 1 | 0 | 0 | 1 |
+| $\downarrow$ | 1 | 1 | ห้ามใช้ | ห้ามใช้ |
+| ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="224" viewBox="0 0 726 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="218"/>
+<line x1="254" y1="26" x2="254" y2="218"/>
+<line x1="382" y1="26" x2="382" y2="218"/>
+<line x1="510" y1="26" x2="510" y2="218"/>
+<line x1="638" y1="26" x2="638" y2="218"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">R</text>
+<path d="M62,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">S</text>
+<path d="M62,164 L174,164 L174,191.2 L414,191.2 L414,164 L574,164 L574,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $R$, $S$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน แล้วหา $Q$ ใหม่
+
+- ขอบ #1 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $R=0$, $S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ขอบ #3 : $R=1$, $S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- ขอบ #4 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #5 : $R=1$, $S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+
+$\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1 ถึง 5 ตามลำดับ}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">CLK</text>
+<path d="M62,44 L126,44 L126,71.2 L190,71.2 L190,44 L254,44 L254,71.2 L318,71.2 L318,44 L382,44 L382,71.2 L446,71.2 L446,44 L510,44 L510,71.2 L574,71.2 L574,44 L638,44 L638,71.2 L702,71.2 L702,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">R</text>
+<path d="M62,131.2 L350,131.2 L350,104 L414,104 L414,131.2 L574,131.2 L574,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">S</text>
+<path d="M62,164 L174,164 L174,191.2 L414,191.2 L414,164 L574,164 L574,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">Q</text>
+<path d="M62,251.2 L126,251.2 L126,224 L382,224 L382,251.2 L510,251.2 L510,224 L638,224 L638,251.2 L702,251.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<line x1="38" y1="288.6" x2="50" y2="288.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,284 L126,284 L126,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L638,311.2 L638,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+### โจทย์รูปคลื่น : Clock RS ฟลิป-ฟลอป ทำงานที่ขอบขาลง มี PS และ CLR {ff=rs; edge=fall; pins=ps}
+
+**จง**วาดรูปคลื่น $Q$ และ $\overline{Q}$ ของ Clock RS ฟลิป-ฟลอป ที่ทำงานที่ขอบขาลง มี PS และ CLR เริ่มต้นที่ $Q=0$ เมื่อสัญญาณเข้าเป็นดังรูป
+
+**ตารางการทำงาน** ($x$ คือค่าอะไรก็ได้, $Q_0$ คือค่า $Q$ ก่อนมีสัญญาณกระตุ้น)
+
+| PRESET | CLEAR | CLOCK | $R$ | $S$ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | $x$ | $x$ | $x$ | 1 | 1 |
+| 0 | 1 | $x$ | $x$ | $x$ | 1 | 0 |
+| 1 | 0 | $x$ | $x$ | $x$ | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 0 | 0 | $Q_0$ | $\overline{Q_0}$ |
+| 1 | 1 | $\downarrow$ | 0 | 1 | 1 | 0 |
+| 1 | 1 | $\downarrow$ | 1 | 0 | 0 | 1 |
+| 1 | 1 | $\downarrow$ | 1 | 1 | ห้ามใช้ | ห้ามใช้ |
+| 1 | 1 | ไม่ใช่ขอบที่ทำงาน | $x$ | $x$ | $Q_0$ | $\overline{Q_0}$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="344" viewBox="0 0 726 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="338"/>
+<line x1="254" y1="26" x2="254" y2="338"/>
+<line x1="382" y1="26" x2="382" y2="338"/>
+<line x1="510" y1="26" x2="510" y2="338"/>
+<line x1="638" y1="26" x2="638" y2="338"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L286,104 L286,131.2 L334,131.2 L334,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L574,284 L574,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+$\mathbf{Sol}^{n}$
+
+ขอบที่ทำงานคือขอบขาลง มี 5 ครั้ง (#1 ถึง #5) อ่านค่า $R$, $S$ ก่อนขอบแต่ละครั้ง แล้วดูตารางการทำงาน PS และ CLR ทำงานทันทีเมื่อเป็น $0$ จึงดูเหตุการณ์ตามลำดับเวลา
+
+- ขอบ #1 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ขอบ #2 : $R=0$, $S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- ระหว่างขอบ #2 กับ #3 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ระหว่างขอบ #2 กับ #3 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ระหว่างขอบ #2 กับ #3 : PS เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 1, \overline{Q} = 0$
+- ขอบ #3 : PS เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 1$ (ไม่เปลี่ยน)
+- ระหว่างขอบ #3 กับ #4 : PS กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 1$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+- ขอบ #4 : $R=0$, $S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- ระหว่างขอบ #4 กับ #5 : CLR เปลี่ยนเป็น $0$ ทำงานทันที ไม่รอ CLK $\Rightarrow Q = 0, \overline{Q} = 1$
+- ขอบ #5 : CLR เป็น $0$ อยู่ จึงไม่ดู CLK และอินพุต $\Rightarrow Q = 0$ (ไม่เปลี่ยน)
+- หลังขอบ #5 : CLR กลับเป็น $1$ $\Rightarrow$ $Q$ คงเดิม ($Q = 0$) จนกว่าจะถึงขอบที่ทำงานถัดไป
+
+$\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
+
+| เหตุการณ์ | $Q$ | $\overline{Q}$ |
+|:-:|:-:|:-:|
+| ขอบ #1 | $1$ | $0$ |
+| ขอบ #2 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+| PS = 0 | $1$ | $0$ |
+| ขอบ #3 | $1$ | $0$ |
+| PS กลับเป็น 1 | $1$ | $0$ |
+| ขอบ #4 | $1$ | $0$ |
+| CLR = 0 | $0$ | $1$ |
+| ขอบ #5 | $0$ | $1$ |
+| CLR กลับเป็น 1 | $0$ | $1$ |
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="254" y1="26" x2="254" y2="458"/>
+<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="638" y1="26" x2="638" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,104 L286,104 L286,131.2 L334,131.2 L334,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L574,251.2 L574,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L574,284 L574,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,371.2 L126,371.2 L126,344 L286,344 L286,371.2 L350,371.2 L350,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L126,404 L126,431.2 L286,431.2 L286,404 L350,404 L350,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
+<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
+<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
+<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
+<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+</svg>
+</div>
+
+## 7. สรุปตารางและสมการของบท
+
+### 7.1 สรุปฟลิป-ฟลอป 4 ประเภท
 
 | ชนิด | อินพุต | สมการแสดงลักษณะ | การทำงาน |
 |:--|:-:|:--|:--|
@@ -1371,7 +2821,7 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 | $1 \to 0$ | $1,\ 0$ | $1,\ 0$ | $x,\ 1$ | $0$ | $1$ |
 | $1 \to 1$ | $0,\ x$ | $x,\ 1$ | $x,\ 0$ | $1$ | $0$ |
 
-### 6.2 ข้อควรระวังในการสอบ
+### 7.2 ข้อควรระวังในการสอบ
 
 - $Q(t)$ คือสถานะปัจจุบัน $Q(t+1)$ คือสถานะถัดไป อ่านตารางให้ถูกว่าเป็นค่าก่อนหรือหลังสัญญาณกระตุ้น
 - RS แบบ NOR ห้ามใช้ $R=S=1$ แต่ RS แบบ NAND ห้ามใช้ $R=S=0$ (สลับกัน) และนิยามของ Set คือ $Q=1$
