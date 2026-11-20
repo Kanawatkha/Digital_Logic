@@ -1,6 +1,6 @@
 # ข้อสอบปลายภาค ข้อ 3 วงจรนับ (Counter)
 
-@select seq ตัวอย่าง | mod4=1 | jump5=2 | s5=3 | s6=4 | up8=5 | mod6=6 | mod10=7 | down8=8 | gray3=9 | jump5b=10
+@select seq ตัวอย่าง | mod4=1 | jump5=2 | s5=3 | s6=4 | up8=5 | mod6=6 | mod10=7 | down8=8 | gray3=9 | jump5b=10 | mod3=11 | mod5=12 | mod7=13 | down6=14 | odd4=15 | even4=16
 @select ff ชนิดฟลิป-ฟลอป | jk=JK | rs=RS (NOR) | d=D | t=T
 
 ---
@@ -228,7 +228,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\e
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="722" height="306" viewBox="0 0 722 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="174" y="86" width="80" height="150" rx="2"/>
 <polyline points="174,152 186,161 174,170"/>
 <circle cx="170" cy="161" r="4"/>
@@ -259,7 +259,6 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\e
 <line x1="112" y1="282" x2="504" y2="282"/>
 <circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="504" cy="282" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="214" y="169" text-anchor="middle" font-size="26">A</text>
@@ -500,7 +499,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="858" height="412" viewBox="0 0 858 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="115" width="80" height="172" rx="2"/>
 <polyline points="308,192 320,201 308,210"/>
 <circle cx="304" cy="201" r="4"/>
@@ -543,13 +542,10 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 <line x1="786" y1="249" x2="786" y2="338"/>
 <line x1="246" y1="388" x2="640" y2="388"/>
 <circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="388" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="786" cy="338" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="432" cy="312" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="348" y="209" text-anchor="middle" font-size="26">A</text>
 <text x="316" y="159" text-anchor="start" font-size="14">S</text>
@@ -717,7 +713,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="361" viewBox="0 0 808 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="280" y="115" width="80" height="150" rx="2"/>
 <polyline points="280,211 292,220 280,229"/>
 <line x1="280" y1="220" x2="258" y2="220"/>
@@ -749,10 +745,8 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <line x1="736" y1="227" x2="736" y2="287"/>
 <line x1="218" y1="337" x2="590" y2="337"/>
 <circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="337" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="736" cy="287" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="320" y="198" text-anchor="middle" font-size="26">A</text>
 <text x="288" y="159" text-anchor="start" font-size="14">D</text>
@@ -915,7 +909,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="306" viewBox="0 0 700 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="152" y="86" width="80" height="150" rx="2"/>
 <polyline points="152,182 164,191 152,200"/>
 <line x1="152" y1="191" x2="130" y2="191"/>
@@ -938,7 +932,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
 <line x1="628" y1="30" x2="628" y2="124"/>
 <line x1="90" y1="282" x2="482" y2="282"/>
 <circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="482" cy="282" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="192" y="169" text-anchor="middle" font-size="26">A</text>
@@ -1320,7 +1313,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1286" height="413" viewBox="0 0 1286 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="264" y="141" width="80" height="150" rx="2"/>
 <polyline points="264,207 276,216 264,225"/>
 <circle cx="260" cy="216" r="4"/>
@@ -1375,12 +1368,9 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= 
 <line x1="202" y1="389" x2="1068" y2="389"/>
 <circle cx="242" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="694" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1068" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1214" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="840" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="388" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1214" cy="339" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="840" cy="313" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="304" y="224" text-anchor="middle" font-size="26">A</text>
 <text x="272" y="185" text-anchor="start" font-size="14">J</text>
@@ -1772,7 +1762,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1632" height="456" viewBox="0 0 1632 456" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="302" y="141" width="80" height="190" rx="2"/>
 <polyline points="302,227 314,236 302,245"/>
 <circle cx="298" cy="236" r="4"/>
@@ -1840,13 +1830,11 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B}
 <line x1="240" y1="432" x2="1414" y2="432"/>
 <circle cx="280" cy="432" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="932" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1414" cy="432" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1560" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1280" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1078" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="910" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1560" cy="382" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1392" cy="382" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1078" cy="356" r="3.5" fill="currentColor" stroke="none"/>
 </g>
@@ -2106,7 +2094,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1526" height="464" viewBox="0 0 1526 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="264" y="192" width="80" height="150" rx="2"/>
 <polyline points="264,288 276,297 264,306"/>
 <line x1="264" y1="297" x2="242" y2="297"/>
@@ -2165,13 +2153,10 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B
 <line x1="202" y1="440" x2="1308" y2="440"/>
 <circle cx="242" cy="440" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="856" cy="440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1308" cy="440" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1454" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1002" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="388" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1454" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1166.2" cy="390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1002" cy="364" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="304" y="275" text-anchor="middle" font-size="26">A</text>
 <text x="272" y="236" text-anchor="start" font-size="14">D</text>
@@ -2432,7 +2417,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overl
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1556" height="464" viewBox="0 0 1556 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="434" y="192" width="80" height="150" rx="2"/>
 <polyline points="434,288 446,297 434,306"/>
 <line x1="434" y1="297" x2="412" y2="297"/>
@@ -2493,14 +2478,11 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overl
 <line x1="372" y1="440" x2="1338" y2="440"/>
 <circle cx="412" cy="440" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="886" cy="440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1338" cy="440" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1484" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1032" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="767" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="558" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1484" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1218.2" cy="390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1032" cy="364" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="474" y="275" text-anchor="middle" font-size="26">A</text>
 <text x="442" y="236" text-anchor="start" font-size="14">T</text>
@@ -2884,7 +2866,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1266" height="413" viewBox="0 0 1266 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="174" y="141" width="80" height="150" rx="2"/>
 <polyline points="174,207 186,216 174,225"/>
 <circle cx="170" cy="216" r="4"/>
@@ -2943,12 +2925,9 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{
 <circle cx="152" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="128" cy="216" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="604" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1048" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1194" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="750" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="750" cy="339" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="298" cy="313" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="214" y="224" text-anchor="middle" font-size="26">A</text>
 <text x="182" y="185" text-anchor="start" font-size="14">J</text>
@@ -3337,7 +3316,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1660" height="493" viewBox="0 0 1660 493" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="152" width="80" height="190" rx="2"/>
 <polyline points="308,238 320,247 308,256"/>
 <circle cx="304" cy="247" r="4"/>
@@ -3413,14 +3392,12 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 <line x1="246" y1="469" x2="1442" y2="469"/>
 <circle cx="286" cy="469" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="938" cy="469" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1442" cy="469" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1588" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1420" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1084" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="916" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1588" cy="419" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1084" cy="393" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="367" r="3.5" fill="currentColor" stroke="none"/>
 </g>
@@ -3679,7 +3656,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1556" height="490" viewBox="0 0 1556 490" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="280" y="192" width="80" height="150" rx="2"/>
 <polyline points="280,288 292,297 280,306"/>
 <line x1="280" y1="297" x2="258" y2="297"/>
@@ -3743,13 +3720,10 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <line x1="218" y1="466" x2="1338" y2="466"/>
 <circle cx="258" cy="466" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="872" cy="466" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1338" cy="466" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1484" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1018" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1484" cy="416" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1018" cy="390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="404" cy="364" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="320" y="275" text-anchor="middle" font-size="26">A</text>
 <text x="288" y="236" text-anchor="start" font-size="14">D</text>
@@ -4003,7 +3977,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1266" height="424" viewBox="0 0 1266 424" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="152" y="152" width="80" height="150" rx="2"/>
 <polyline points="152,248 164,257 152,266"/>
 <line x1="152" y1="257" x2="130" y2="257"/>
@@ -4054,13 +4028,10 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{
 <line x1="90" y1="400" x2="1048" y2="400"/>
 <circle cx="130" cy="400" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="604" cy="400" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1048" cy="400" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1194" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="750" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="441" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="276" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="750" cy="350" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="276" cy="324" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="192" y="235" text-anchor="middle" font-size="26">A</text>
 <text x="160" y="196" text-anchor="start" font-size="14">T</text>
@@ -4454,7 +4425,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1078" height="436" viewBox="0 0 1078 436" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="174" y="138" width="80" height="150" rx="2"/>
 <polyline points="174,204 186,213 174,222"/>
 <circle cx="170" cy="213" r="4"/>
@@ -4506,13 +4477,9 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\
 <line x1="112" y1="412" x2="860" y2="412"/>
 <circle cx="152" cy="412" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="506" cy="412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="860" cy="412" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1006" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="652" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1006" cy="362" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="652" cy="336" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="298" cy="310" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="214" y="221" text-anchor="middle" font-size="26">A</text>
 <text x="182" y="182" text-anchor="start" font-size="14">J</text>
@@ -4909,7 +4876,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1078" height="436" viewBox="0 0 1078 436" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="174" y="138" width="80" height="150" rx="2"/>
 <polyline points="174,204 186,213 174,222"/>
 <circle cx="170" cy="213" r="4"/>
@@ -4961,13 +4928,9 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\
 <line x1="112" y1="412" x2="860" y2="412"/>
 <circle cx="152" cy="412" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="506" cy="412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="860" cy="412" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1006" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="652" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1006" cy="362" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="652" cy="336" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="298" cy="310" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="214" y="221" text-anchor="middle" font-size="26">A</text>
 <text x="182" y="182" text-anchor="start" font-size="14">S</text>
@@ -5227,7 +5190,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1012" height="358" viewBox="0 0 1012 358" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="152" y="112" width="80" height="150" rx="2"/>
 <polyline points="152,208 164,217 152,226"/>
 <line x1="152" y1="217" x2="130" y2="217"/>
@@ -5265,10 +5228,8 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \
 <line x1="90" y1="334" x2="794" y2="334"/>
 <circle cx="130" cy="334" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="462" cy="334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="794" cy="334" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="940" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="608" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="276" cy="284" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="192" y="195" text-anchor="middle" font-size="26">A</text>
 <text x="160" y="156" text-anchor="start" font-size="14">D</text>
@@ -5535,7 +5496,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1570" height="457" viewBox="0 0 1570 457" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="280" y="185" width="80" height="150" rx="2"/>
 <polyline points="280,281 292,290 280,299"/>
 <line x1="280" y1="290" x2="258" y2="290"/>
@@ -5602,14 +5563,11 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 <line x1="218" y1="433" x2="1352" y2="433"/>
 <circle cx="258" cy="433" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="718" cy="433" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1352" cy="433" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1498" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1072" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="864" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1498" cy="383" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="404" cy="357" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="320" y="268" text-anchor="middle" font-size="26">A</text>
 <text x="288" y="229" text-anchor="start" font-size="14">T</text>
@@ -6023,7 +5981,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1210" height="332" viewBox="0 0 1210 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="112" width="80" height="150" rx="2"/>
 <polyline points="308,178 320,187 308,196"/>
 <circle cx="304" cy="187" r="4"/>
@@ -6076,7 +6034,6 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &
 <circle cx="262" cy="187" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="640" cy="308" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="616" cy="187" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="992" cy="308" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1138" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="572" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -6499,7 +6456,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1390" height="508" viewBox="0 0 1390 508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="352" y="152" width="80" height="194" rx="2"/>
 <polyline points="352,240 364,249 352,258"/>
 <circle cx="348" cy="249" r="4"/>
@@ -6571,7 +6528,6 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline
 <line x1="290" y1="484" x2="1172" y2="484"/>
 <circle cx="330" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="818" cy="484" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1172" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1318" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="190" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="700" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -6581,9 +6537,6 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline
 <circle cx="212" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="476" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1318" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="964" cy="408" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="476" cy="382" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="392" y="257" text-anchor="middle" font-size="26">A</text>
 <text x="360" y="196" text-anchor="start" font-size="14">S</text>
@@ -6868,7 +6821,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\ov
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1528" height="599" viewBox="0 0 1528 599" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="540" y="262" width="80" height="150" rx="2"/>
 <polyline points="540,358 552,367 540,376"/>
 <line x1="540" y1="367" x2="518" y2="367"/>
@@ -6941,17 +6894,13 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\ov
 <line x1="478" y1="575" x2="1310" y2="575"/>
 <circle cx="518" cy="575" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="978" cy="575" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1310" cy="575" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1456" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="828.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1124" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="850.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="664" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="196" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1456" cy="525" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1288" cy="525" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1124" cy="499" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="664" cy="473" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="580" y="345" text-anchor="middle" font-size="26">A</text>
 <text x="548" y="306" text-anchor="start" font-size="14">D</text>
@@ -7223,7 +7172,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1144" height="335" viewBox="0 0 1144 335" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="264" y="115" width="80" height="150" rx="2"/>
 <polyline points="264,211 276,220 264,229"/>
 <line x1="264" y1="220" x2="242" y2="220"/>
@@ -7262,7 +7211,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C}
 <line x1="202" y1="311" x2="926" y2="311"/>
 <circle cx="242" cy="311" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="574" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="926" cy="311" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1072" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="552" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="720" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -7659,7 +7607,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1332" height="361" viewBox="0 0 1332 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="302" y="115" width="80" height="150" rx="2"/>
 <polyline points="302,181 314,190 302,199"/>
 <circle cx="298" cy="190" r="4"/>
@@ -7712,13 +7660,11 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B}
 <line x1="240" y1="337" x2="1114" y2="337"/>
 <circle cx="280" cy="337" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="762" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1114" cy="337" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1260" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="258" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="740" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="908" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="287" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="342" y="198" text-anchor="middle" font-size="26">A</text>
 <text x="310" y="159" text-anchor="start" font-size="14">J</text>
@@ -8117,7 +8063,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1368" height="460" viewBox="0 0 1368 460" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="126" width="80" height="183" rx="2"/>
 <polyline points="308,208.5 320,217.5 308,226.5"/>
 <circle cx="304" cy="217.5" r="4"/>
@@ -8186,7 +8132,6 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{
 <line x1="246" y1="436" x2="1150" y2="436"/>
 <circle cx="286" cy="436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="796" cy="436" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1150" cy="436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1296" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -8194,10 +8139,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{
 <circle cx="1128" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="942" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1296" cy="386" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="942" cy="360" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="612" cy="360" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="432" cy="334" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="348" y="225.5" text-anchor="middle" font-size="26">A</text>
 <text x="316" y="170" text-anchor="start" font-size="14">S</text>
@@ -8463,7 +8405,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1638" height="505" viewBox="0 0 1638 505" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="454" y="207" width="80" height="150" rx="2"/>
 <polyline points="454,303 466,312 454,321"/>
 <line x1="454" y1="312" x2="432" y2="312"/>
@@ -8540,17 +8482,13 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\
 <line x1="392" y1="481" x2="1420" y2="481"/>
 <circle cx="432" cy="481" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1088" cy="481" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1420" cy="481" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1566" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="830" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1566" cy="431" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="431" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1398" cy="431" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1234" cy="405" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="578" cy="379" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="494" y="290" text-anchor="middle" font-size="26">A</text>
 <text x="462" y="251" text-anchor="start" font-size="14">D</text>
@@ -8810,7 +8748,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1446" height="431" viewBox="0 0 1446 431" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="454" y="185" width="80" height="150" rx="2"/>
 <polyline points="454,281 466,290 454,299"/>
 <line x1="454" y1="290" x2="432" y2="290"/>
@@ -8868,13 +8806,11 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \
 <line x1="392" y1="407" x2="1228" y2="407"/>
 <circle cx="432" cy="407" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="876" cy="407" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1228" cy="407" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1374" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="152" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="758" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1022" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="578" cy="357" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="494" y="268" text-anchor="middle" font-size="26">A</text>
 <text x="462" y="229" text-anchor="start" font-size="14">T</text>
@@ -9636,7 +9572,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1842" height="398" viewBox="0 0 1842 398" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="324" y="152" width="80" height="150" rx="2"/>
 <polyline points="324,218 336,227 324,236"/>
 <circle cx="320" cy="227" r="4"/>
@@ -9713,7 +9649,6 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ 
 <circle cx="790" cy="374" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="766" cy="227" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1272" cy="374" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1624" cy="374" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1770" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="280" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="604" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -9722,7 +9657,6 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ 
 <circle cx="1418" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="626" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="936" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="448" cy="324" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="364" y="235" text-anchor="middle" font-size="26">A</text>
 <text x="332" y="196" text-anchor="start" font-size="14">J</text>
@@ -10479,7 +10413,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1922" height="534" viewBox="0 0 1922 534" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="330" y="152" width="80" height="194" rx="2"/>
 <polyline points="330,240 342,249 330,258"/>
 <circle cx="326" cy="249" r="4"/>
@@ -10579,7 +10513,6 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{
 <circle cx="308" cy="510" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="840" cy="510" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1350" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1704" cy="510" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1850" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="700" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -10593,11 +10526,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{
 <circle cx="1210" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="986" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1850" cy="460" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1496" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="986" cy="408" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="612" cy="408" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="454" cy="382" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="370" y="257" text-anchor="middle" font-size="26">A</text>
 <text x="338" y="196" text-anchor="start" font-size="14">S</text>
@@ -11072,7 +11001,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="2380" height="651" viewBox="0 0 2380 651" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="476" y="288" width="80" height="150" rx="2"/>
 <polyline points="476,384 488,393 476,402"/>
 <line x1="476" y1="393" x2="454" y2="393"/>
@@ -11190,7 +11119,6 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D
 <circle cx="454" cy="627" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1174" cy="627" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1830" cy="627" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="2162" cy="627" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="2308" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="874" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1572" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -11201,14 +11129,10 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D
 <circle cx="852" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="830" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="600" cy="124" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="2308" cy="577" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="577" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1528" cy="577" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="2140" cy="577" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1976" cy="551" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1506" cy="551" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1320" cy="525" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="600" cy="499" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="516" y="371" text-anchor="middle" font-size="26">A</text>
 <text x="484" y="332" text-anchor="start" font-size="14">D</text>
@@ -11669,7 +11593,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1912" height="479" viewBox="0 0 1912 479" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="476" y="233" width="80" height="150" rx="2"/>
 <polyline points="476,329 488,338 476,347"/>
 <line x1="476" y1="338" x2="454" y2="338"/>
@@ -11745,7 +11669,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B}
 <circle cx="454" cy="455" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="898" cy="455" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1342" cy="455" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1694" cy="455" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1840" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="152" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="758" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -11754,7 +11677,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B}
 <circle cx="780" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1044" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="600" cy="124" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="600" cy="405" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="516" y="316" text-anchor="middle" font-size="26">A</text>
 <text x="484" y="277" text-anchor="start" font-size="14">T</text>
@@ -12176,7 +12098,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1210" height="332" viewBox="0 0 1210 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="60" width="80" height="150" rx="2"/>
 <polyline points="308,126 320,135 308,144"/>
 <circle cx="304" cy="135" r="4"/>
@@ -12231,10 +12153,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{
 <circle cx="262" cy="135" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="640" cy="308" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="616" cy="135" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="992" cy="308" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1138" cy="258" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="572" cy="258" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="786" cy="232" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="348" y="143" text-anchor="middle" font-size="26">A</text>
 <text x="316" y="104" text-anchor="start" font-size="14">J</text>
@@ -12654,7 +12573,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1390" height="508" viewBox="0 0 1390 508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="352" y="152" width="80" height="194" rx="2"/>
 <polyline points="352,240 364,249 352,258"/>
 <circle cx="348" cy="249" r="4"/>
@@ -12726,19 +12645,15 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}}
 <line x1="290" y1="484" x2="1172" y2="484"/>
 <circle cx="330" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="818" cy="484" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1172" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1318" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="964" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="476" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1318" cy="434" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="190" cy="434" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="434" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="434" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1128" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="964" cy="408" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="408" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="408" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="476" cy="382" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="392" y="257" text-anchor="middle" font-size="26">A</text>
 <text x="360" y="196" text-anchor="start" font-size="14">S</text>
@@ -13023,7 +12938,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\over
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1702" height="599" viewBox="0 0 1702 599" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="540" y="262" width="80" height="150" rx="2"/>
 <polyline points="540,358 552,367 540,376"/>
 <line x1="540" y1="367" x2="518" y2="367"/>
@@ -13107,19 +13022,15 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\over
 <line x1="478" y1="575" x2="1484" y2="575"/>
 <circle cx="518" cy="575" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1152" cy="575" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1484" cy="575" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1630" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="872" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1298" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="894" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="664" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="240" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1630" cy="525" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="850" cy="525" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1462" cy="525" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1298" cy="499" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="828" cy="499" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="664" cy="473" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="580" y="345" text-anchor="middle" font-size="26">A</text>
 <text x="548" y="306" text-anchor="start" font-size="14">D</text>
@@ -13392,7 +13303,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1144" height="335" viewBox="0 0 1144 335" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="264" y="63" width="80" height="150" rx="2"/>
 <polyline points="264,159 276,168 264,177"/>
 <line x1="264" y1="168" x2="242" y2="168"/>
@@ -13433,10 +13344,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T
 <line x1="202" y1="311" x2="926" y2="311"/>
 <circle cx="242" cy="311" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="574" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="926" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1072" cy="261" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="552" cy="261" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="720" cy="235" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="304" y="146" text-anchor="middle" font-size="26">A</text>
 <text x="272" y="107" text-anchor="start" font-size="14">T</text>
@@ -13858,7 +13766,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \ov
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1670" height="552" viewBox="0 0 1670 552" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="185" width="80" height="216" rx="2"/>
 <polyline points="308,284 320,293 308,302"/>
 <circle cx="304" cy="293" r="4"/>
@@ -13947,7 +13855,6 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \ov
 <line x1="246" y1="528" x2="1452" y2="528"/>
 <circle cx="286" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="774" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1452" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1598" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -13955,10 +13862,8 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \ov
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1148.2" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1598" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="452" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="432" cy="426" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590" cy="426" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="348" y="301" text-anchor="middle" font-size="26">A</text>
@@ -14383,7 +14288,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1670" height="552" viewBox="0 0 1670 552" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="308" y="185" width="80" height="216" rx="2"/>
 <polyline points="308,284 320,293 308,302"/>
 <circle cx="304" cy="293" r="4"/>
@@ -14472,7 +14377,6 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S
 <line x1="246" y1="528" x2="1452" y2="528"/>
 <circle cx="286" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="774" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1452" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1598" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -14480,10 +14384,8 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1148.2" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1598" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="452" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="432" cy="426" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590" cy="426" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="348" y="301" text-anchor="middle" font-size="26">A</text>
@@ -14768,7 +14670,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1918" height="483" viewBox="0 0 1918 483" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="454" y="185" width="80" height="150" rx="2"/>
 <polyline points="454,281 466,290 454,299"/>
 <line x1="454" y1="290" x2="432" y2="290"/>
@@ -14859,16 +14761,12 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\
 <line x1="392" y1="459" x2="1700" y2="459"/>
 <circle cx="432" cy="459" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1066" cy="459" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1700" cy="459" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1846" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1212" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1846" cy="409" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="764" cy="409" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1212" cy="383" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="578" cy="357" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="742" cy="357" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="494" y="268" text-anchor="middle" font-size="26">A</text>
@@ -15156,7 +15054,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}}
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="2222" height="720" viewBox="0 0 2222 720" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="498" y="317" width="80" height="150" rx="2"/>
 <polyline points="498,413 510,422 498,431"/>
 <line x1="498" y1="422" x2="476" y2="422"/>
@@ -15279,7 +15177,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}}
 <line x1="436" y1="696" x2="2004" y2="696"/>
 <circle cx="476" cy="696" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1154" cy="696" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="2004" cy="696" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="2150" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="896" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1684" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -15290,7 +15187,6 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}}
 <circle cx="622" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="874" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1618" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="2150" cy="646" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="174" cy="646" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1574" cy="646" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1508" cy="646" r="3.5" fill="currentColor" stroke="none"/>
@@ -15684,7 +15580,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1304" height="413" viewBox="0 0 1304 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="302" y="141" width="80" height="150" rx="2"/>
 <polyline points="302,207 314,216 302,225"/>
 <circle cx="298" cy="216" r="4"/>
@@ -15741,12 +15637,9 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{
 <line x1="240" y1="389" x2="1086" y2="389"/>
 <circle cx="280" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1086" cy="389" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1232" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="780" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="780" cy="339" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="313" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590" cy="313" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="342" y="224" text-anchor="middle" font-size="26">A</text>
@@ -16136,7 +16029,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1524" height="516" viewBox="0 0 1524 516" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="302" y="185" width="80" height="183" rx="2"/>
 <polyline points="302,267.5 314,276.5 302,285.5"/>
 <circle cx="298" cy="276.5" r="4"/>
@@ -16208,15 +16101,11 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{
 <line x1="240" y1="492" x2="1306" y2="492"/>
 <circle cx="280" cy="492" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="492" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1306" cy="492" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1452" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1284" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="780" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1452" cy="442" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1010" cy="442" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="780" cy="416" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="342" y="284.5" text-anchor="middle" font-size="26">A</text>
@@ -16475,7 +16364,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overlin
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1616" height="483" viewBox="0 0 1616 483" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="454" y="185" width="80" height="150" rx="2"/>
 <polyline points="454,281 466,290 454,299"/>
 <line x1="454" y1="290" x2="432" y2="290"/>
@@ -16550,15 +16439,11 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overlin
 <line x1="392" y1="459" x2="1398" y2="459"/>
 <circle cx="432" cy="459" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="764" cy="459" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1398" cy="459" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1544" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="910" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1544" cy="409" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1118" cy="409" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="910" cy="383" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="130" cy="383" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="578" cy="357" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="494" y="268" text-anchor="middle" font-size="26">A</text>
 <text x="462" y="229" text-anchor="start" font-size="14">D</text>
@@ -16816,7 +16701,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overlin
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1388" height="387" viewBox="0 0 1388 387" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <rect x="280" y="141" width="80" height="150" rx="2"/>
 <polyline points="280,237 292,246 280,255"/>
 <line x1="280" y1="246" x2="258" y2="246"/>
@@ -16869,12 +16754,10 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overlin
 <line x1="218" y1="363" x2="1170" y2="363"/>
 <circle cx="258" cy="363" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="718" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1170" cy="363" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1316" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="864" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="568.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="404" cy="313" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="320" y="224" text-anchor="middle" font-size="26">A</text>
 <text x="288" y="185" text-anchor="start" font-size="14">T</text>
@@ -16892,6 +16775,8577 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overlin
 <text x="864" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1316" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
 <text x="214" y="369" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับเป็นโมดูโล 3 (นับ $0$ ถึง $2$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($11$) เป็น don't care condition {seq=mod3; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) สถานะที่ไม่ใช้ ($11$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="646" height="224" viewBox="0 0 646 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="352" height="174"/>
+<line x1="16" y1="86" x2="368" y2="86"/>
+<line x1="16" y1="118" x2="368" y2="118"/>
+<line x1="104" y1="40" x2="104" y2="214"/>
+<line x1="192" y1="40" x2="192" y2="214"/>
+</g>
+<text x="60" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="148" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="280" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="280" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="217" y="108" text-anchor="end" font-size="16">J</text>
+<text x="218" y="112" text-anchor="start" font-size="12">A</text>
+<text x="261" y="108" text-anchor="end" font-size="16">K</text>
+<text x="262" y="112" text-anchor="start" font-size="12">A</text>
+<text x="305" y="108" text-anchor="end" font-size="16">J</text>
+<text x="306" y="112" text-anchor="start" font-size="12">B</text>
+<text x="349" y="108" text-anchor="end" font-size="16">K</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="139" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="302" y="169" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="521" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="412" y="40" width="218" height="143"/>
+<line x1="412" y1="71" x2="630" y2="71"/>
+<line x1="538" y1="40" x2="538" y2="183"/>
+<line x1="412" y1="125" x2="630" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="439.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="439.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="439.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="439.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="439.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="502.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="502.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="502.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="502.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="502.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="561" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="561" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="561" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="561" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="561" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="607" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="607" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="607" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="607" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="607" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(1) + d(2,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L168.5,110.5 M177.5,119.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M168.5,110.5 A9,9 0 0 1 177.5,119.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $01,11$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$J_{A} = Q_{B}$
+
+$K_{A} = \sum m(2) + d(0,1,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00,01,10,11$) : $ \Rightarrow 1$
+
+$K_{A} = 1$
+
+$J_{B} = \sum m(0) + d(1,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00,01$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+
+$J_{B} = \overline{Q_{A}}$
+
+$K_{B} = \sum m(1) + d(0,2,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00,01,10,11$) : $ \Rightarrow 1$
+
+$K_{B} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $11 \to 00$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= 1 \\ J_{B} &= \overline{Q_{A}} \\ K_{B} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="764" height="332" viewBox="0 0 764 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="194" y="86" width="80" height="150" rx="2"/>
+<polyline points="194,152 206,161 194,170"/>
+<circle cx="190" cy="161" r="4"/>
+<line x1="186" y1="161" x2="172" y2="161"/>
+<line x1="172" y1="161" x2="172" y2="308"/>
+<path d="M142,198 L167.5,198 A4.5,4.5 0 0 1 176.5,198 L194,198"/>
+<line x1="274" y1="124" x2="318" y2="124"/>
+<line x1="274" y1="198" x2="318" y2="198"/>
+<line x1="257.2" y1="190.4" x2="266" y2="190.4" stroke-width="1.4"/>
+<rect x="568" y="86" width="80" height="150" rx="2"/>
+<polyline points="568,152 580,161 568,170"/>
+<circle cx="564" cy="161" r="4"/>
+<line x1="560" y1="161" x2="546" y2="161"/>
+<line x1="546" y1="161" x2="546" y2="308"/>
+<path d="M516,198 L541.5,198 A4.5,4.5 0 0 1 550.5,198 L568,198"/>
+<line x1="648" y1="124" x2="692" y2="124"/>
+<line x1="648" y1="198" x2="692" y2="198"/>
+<line x1="631.2" y1="190.4" x2="640" y2="190.4" stroke-width="1.4"/>
+<line x1="150" y1="46" x2="150" y2="124"/>
+<line x1="150" y1="124" x2="194" y2="124"/>
+<line x1="480" y1="258" x2="480" y2="124"/>
+<line x1="480" y1="124" x2="568" y2="124"/>
+<path d="M150,46 L313.5,46 A4.5,4.5 0 0 1 322.5,46 L692,46"/>
+<line x1="318" y1="258" x2="480" y2="258"/>
+<line x1="318" y1="30" x2="318" y2="124"/>
+<line x1="318" y1="198" x2="318" y2="258"/>
+<line x1="692" y1="30" x2="692" y2="124"/>
+<line x1="132" y1="308" x2="546" y2="308"/>
+<circle cx="172" cy="308" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="692" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="234" y="169" text-anchor="middle" font-size="26">A</text>
+<text x="202" y="130" text-anchor="start" font-size="14">J</text>
+<text x="202" y="204" text-anchor="start" font-size="14">K</text>
+<text x="138" y="204" text-anchor="end" font-size="16">1</text>
+<text x="266" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="266" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="608" y="169" text-anchor="middle" font-size="26">B</text>
+<text x="576" y="130" text-anchor="start" font-size="14">J</text>
+<text x="576" y="204" text-anchor="start" font-size="14">K</text>
+<text x="512" y="204" text-anchor="end" font-size="16">1</text>
+<text x="640" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="640" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="318" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="692" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="128" y="314" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 3 (นับ $0$ ถึง $2$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($11$) เป็น don't care condition {seq=mod3; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) สถานะที่ไม่ใช้ ($11$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="646" height="224" viewBox="0 0 646 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="352" height="174"/>
+<line x1="16" y1="86" x2="368" y2="86"/>
+<line x1="16" y1="118" x2="368" y2="118"/>
+<line x1="104" y1="40" x2="104" y2="214"/>
+<line x1="192" y1="40" x2="192" y2="214"/>
+</g>
+<text x="60" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="148" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="280" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="280" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="217" y="108" text-anchor="end" font-size="16">R</text>
+<text x="218" y="112" text-anchor="start" font-size="12">A</text>
+<text x="261" y="108" text-anchor="end" font-size="16">S</text>
+<text x="262" y="112" text-anchor="start" font-size="12">A</text>
+<text x="305" y="108" text-anchor="end" font-size="16">R</text>
+<text x="306" y="112" text-anchor="start" font-size="12">B</text>
+<text x="349" y="108" text-anchor="end" font-size="16">S</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="199" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="521" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="412" y="40" width="218" height="143"/>
+<line x1="412" y1="71" x2="630" y2="71"/>
+<line x1="538" y1="40" x2="538" y2="183"/>
+<line x1="412" y1="125" x2="630" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="439.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="439.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="439.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="439.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="439.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="502.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="502.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="502.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="502.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="502.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="561" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="561" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="561" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="561" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="561" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="607" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="607" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="607" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="607" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="607" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(2) + d(0,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00,10$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$R_{A} = \overline{Q_{B}}$
+
+$S_{A} = \sum m(1) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L168.5,110.5 M177.5,119.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M168.5,110.5 A9,9 0 0 1 177.5,119.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $01,11$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$S_{A} = Q_{B}$
+
+$R_{B} = \sum m(1) + d(2,3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L168.5,110.5 M177.5,119.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M168.5,110.5 A9,9 0 0 1 177.5,119.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $01,11$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$R_{B} = Q_{B}$
+
+$S_{B} = \sum m(0) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+
+$S_{B} = \overline{Q_{A}}\overline{Q_{B}}$
+
+ตรวจสถานะที่ไม่ใช้ : $11 \to 10$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="361" viewBox="0 0 852 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="174" y="89" width="80" height="150" rx="2"/>
+<polyline points="174,155 186,164 174,173"/>
+<circle cx="170" cy="164" r="4"/>
+<line x1="166" y1="164" x2="152" y2="164"/>
+<line x1="152" y1="164" x2="152" y2="337"/>
+<line x1="254" y1="127" x2="298" y2="127"/>
+<line x1="254" y1="201" x2="298" y2="201"/>
+<line x1="237.2" y1="193.4" x2="246" y2="193.4" stroke-width="1.4"/>
+<rect x="656" y="89" width="80" height="150" rx="2"/>
+<polyline points="656,155 668,164 656,173"/>
+<circle cx="652" cy="164" r="4"/>
+<line x1="648" y1="164" x2="634" y2="164"/>
+<line x1="634" y1="164" x2="634" y2="337"/>
+<path d="M544,94 H570 A26,33 0 0 1 570,160 H544 Z"/>
+<path d="M596,127 L607.5,127 A4.5,4.5 0 0 1 616.5,127 L656,127"/>
+<line x1="736" y1="127" x2="780" y2="127"/>
+<line x1="736" y1="201" x2="780" y2="201"/>
+<line x1="719.2" y1="193.4" x2="728" y2="193.4" stroke-width="1.4"/>
+<line x1="130" y1="46" x2="130" y2="127"/>
+<line x1="130" y1="127" x2="174" y2="127"/>
+<line x1="108" y1="287" x2="108" y2="201"/>
+<path d="M108,201 L147.5,201 A4.5,4.5 0 0 1 156.5,201 L174,201"/>
+<line x1="612" y1="46" x2="612" y2="201"/>
+<path d="M612,201 L629.5,201 A4.5,4.5 0 0 1 638.5,201 L656,201"/>
+<line x1="500" y1="287" x2="500" y2="138"/>
+<line x1="500" y1="138" x2="544" y2="138"/>
+<line x1="478" y1="261" x2="478" y2="116"/>
+<line x1="478" y1="116" x2="544" y2="116"/>
+<path d="M130,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L780,46"/>
+<path d="M108,287 L147.5,287 A4.5,4.5 0 0 1 156.5,287 L629.5,287 A4.5,4.5 0 0 1 638.5,287 L780,287"/>
+<line x1="298" y1="261" x2="478" y2="261"/>
+<line x1="298" y1="30" x2="298" y2="127"/>
+<line x1="298" y1="201" x2="298" y2="261"/>
+<line x1="780" y1="30" x2="780" y2="127"/>
+<line x1="780" y1="201" x2="780" y2="287"/>
+<line x1="112" y1="337" x2="634" y2="337"/>
+<circle cx="152" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="780" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="612" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="500" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="214" y="172" text-anchor="middle" font-size="26">A</text>
+<text x="182" y="133" text-anchor="start" font-size="14">S</text>
+<text x="182" y="207" text-anchor="start" font-size="14">R</text>
+<text x="246" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="696" y="172" text-anchor="middle" font-size="26">B</text>
+<text x="664" y="133" text-anchor="start" font-size="14">S</text>
+<text x="664" y="207" text-anchor="start" font-size="14">R</text>
+<text x="728" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="728" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="780" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="108" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 3 (นับ $0$ ถึง $2$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($11$) เป็น don't care condition {seq=mod3; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) สถานะที่ไม่ใช้ ($11$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="224" viewBox="0 0 512 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="264" height="174"/>
+<line x1="16" y1="86" x2="280" y2="86"/>
+<line x1="16" y1="118" x2="280" y2="118"/>
+<line x1="104" y1="40" x2="104" y2="214"/>
+<line x1="192" y1="40" x2="192" y2="214"/>
+</g>
+<text x="60" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="148" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="236" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="236" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="217" y="108" text-anchor="end" font-size="16">D</text>
+<text x="218" y="112" text-anchor="start" font-size="12">A</text>
+<text x="261" y="108" text-anchor="end" font-size="16">D</text>
+<text x="262" y="112" text-anchor="start" font-size="12">B</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="410" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="324" y="40" width="172" height="143"/>
+<line x1="324" y1="71" x2="496" y2="71"/>
+<line x1="450" y1="40" x2="450" y2="183"/>
+<line x1="324" y1="125" x2="496" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="351.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="351.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="351.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="351.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="351.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="414.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="414.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="414.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="414.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="414.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="473" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="473" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="473" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="473" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="473" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(1) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L168.5,110.5 M177.5,119.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M168.5,110.5 A9,9 0 0 1 177.5,119.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $01,11$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$D_{A} = Q_{B}$
+
+$D_{B} = \sum m(0) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+
+$D_{B} = \overline{Q_{A}}\overline{Q_{B}}$
+
+ตรวจสถานะที่ไม่ใช้ : $11 \to 10$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="792" height="361" viewBox="0 0 792 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="152" y="89" width="80" height="150" rx="2"/>
+<polyline points="152,185 164,194 152,203"/>
+<line x1="152" y1="194" x2="130" y2="194"/>
+<line x1="130" y1="194" x2="130" y2="337"/>
+<line x1="232" y1="127" x2="276" y2="127"/>
+<line x1="232" y1="201" x2="276" y2="201"/>
+<line x1="215.2" y1="193.4" x2="224" y2="193.4" stroke-width="1.4"/>
+<rect x="596" y="89" width="80" height="150" rx="2"/>
+<polyline points="596,185 608,194 596,203"/>
+<line x1="596" y1="194" x2="574" y2="194"/>
+<line x1="574" y1="194" x2="574" y2="337"/>
+<path d="M500,94 H526 A26,33 0 0 1 526,160 H500 Z"/>
+<line x1="552" y1="127" x2="596" y2="127"/>
+<line x1="676" y1="127" x2="720" y2="127"/>
+<line x1="676" y1="201" x2="720" y2="201"/>
+<line x1="659.2" y1="193.4" x2="668" y2="193.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="127"/>
+<line x1="108" y1="127" x2="152" y2="127"/>
+<line x1="456" y1="287" x2="456" y2="138"/>
+<line x1="456" y1="138" x2="500" y2="138"/>
+<line x1="434" y1="261" x2="434" y2="116"/>
+<line x1="434" y1="116" x2="500" y2="116"/>
+<path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L720,46"/>
+<path d="M456,287 L569.5,287 A4.5,4.5 0 0 1 578.5,287 L720,287"/>
+<line x1="276" y1="261" x2="434" y2="261"/>
+<line x1="276" y1="30" x2="276" y2="127"/>
+<line x1="276" y1="201" x2="276" y2="261"/>
+<line x1="720" y1="30" x2="720" y2="127"/>
+<line x1="720" y1="201" x2="720" y2="287"/>
+<line x1="90" y1="337" x2="574" y2="337"/>
+<circle cx="130" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="720" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="192" y="172" text-anchor="middle" font-size="26">A</text>
+<text x="160" y="133" text-anchor="start" font-size="14">D</text>
+<text x="224" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="636" y="172" text-anchor="middle" font-size="26">B</text>
+<text x="604" y="133" text-anchor="start" font-size="14">D</text>
+<text x="668" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="668" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="720" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="86" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 3 (นับ $0$ ถึง $2$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($11$) เป็น don't care condition {seq=mod3; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) สถานะที่ไม่ใช้ ($11$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="224" viewBox="0 0 512 224" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="264" height="174"/>
+<line x1="16" y1="86" x2="280" y2="86"/>
+<line x1="16" y1="118" x2="280" y2="118"/>
+<line x1="104" y1="40" x2="104" y2="214"/>
+<line x1="192" y1="40" x2="192" y2="214"/>
+</g>
+<text x="60" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="148" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="236" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="236" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="217" y="108" text-anchor="end" font-size="16">T</text>
+<text x="218" y="112" text-anchor="start" font-size="12">A</text>
+<text x="261" y="108" text-anchor="end" font-size="16">T</text>
+<text x="262" y="112" text-anchor="start" font-size="12">B</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="410" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="324" y="40" width="172" height="143"/>
+<line x1="324" y1="71" x2="496" y2="71"/>
+<line x1="450" y1="40" x2="450" y2="183"/>
+<line x1="324" y1="125" x2="496" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="351.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="351.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="351.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="351.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="351.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="414.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="414.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="414.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="414.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="414.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="473" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="473" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="473" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="473" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="473" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(1,2) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L168.5,110.5 M177.5,119.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M168.5,110.5 A9,9 0 0 1 177.5,119.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M145,60 L165,60 M174,69 L174,143 M165,152 L145,152 M136,143 L136,69 M136,69 A9,9 0 0 1 145,60 M165,60 A9,9 0 0 1 174,69 M174,143 A9,9 0 0 1 165,152 M145,152 A9,9 0 0 1 136,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $01,11$) : $Q_B=1 \Rightarrow Q_{B}$
+- ลูปสีน้ำเงิน (สถานะ $10,11$) : $Q_A=1 \Rightarrow Q_{A}$
+
+$T_{A} = Q_{B} + Q_{A}$
+
+$T_{B} = \sum m(0,1) + d(3)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="108" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="74" y1="106" x2="182" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">0</text>
+<text x="155" y="37" text-anchor="middle">1</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">Q<tspan dy="4" font-size="12">A</tspan></text><text x="8" y="44">Q<tspan dy="4" font-size="12">B</tspan></text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $00,01$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+
+$T_{B} = \overline{Q_{A}}$
+
+ตรวจสถานะที่ไม่ใช้ : $11 \to 01$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} + Q_{A} \\ T_{B} &= \overline{Q_{A}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="361" viewBox="0 0 800 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="272" y="115" width="80" height="150" rx="2"/>
+<polyline points="272,211 284,220 272,229"/>
+<line x1="272" y1="220" x2="250" y2="220"/>
+<line x1="250" y1="220" x2="250" y2="337"/>
+<path d="M168,120 C190,120 216,136.5 228,153 C216,169.5 190,186 168,186 Q182,153 168,120 Z"/>
+<line x1="228" y1="153" x2="272" y2="153"/>
+<line x1="352" y1="153" x2="396" y2="153"/>
+<line x1="352" y1="227" x2="396" y2="227"/>
+<line x1="335.2" y1="219.4" x2="344" y2="219.4" stroke-width="1.4"/>
+<rect x="604" y="115" width="80" height="150" rx="2"/>
+<polyline points="604,211 616,220 604,229"/>
+<line x1="604" y1="220" x2="582" y2="220"/>
+<line x1="582" y1="220" x2="582" y2="337"/>
+<line x1="684" y1="153" x2="728" y2="153"/>
+<line x1="684" y1="227" x2="728" y2="227"/>
+<line x1="667.2" y1="219.4" x2="676" y2="219.4" stroke-width="1.4"/>
+<line x1="130.2" y1="46" x2="130.2" y2="142"/>
+<line x1="130.2" y1="142" x2="174.2" y2="142"/>
+<line x1="108.2" y1="72" x2="108.2" y2="164"/>
+<line x1="108.2" y1="164" x2="174.2" y2="164"/>
+<line x1="560" y1="287" x2="560" y2="153"/>
+<line x1="560" y1="153" x2="604" y2="153"/>
+<path d="M130.2,46 L391.5,46 A4.5,4.5 0 0 1 400.5,46 L728,46"/>
+<path d="M108.2,72 L125.7,72 A4.5,4.5 0 0 1 134.7,72 L396,72"/>
+<line x1="396" y1="287" x2="560" y2="287"/>
+<line x1="396" y1="30" x2="396" y2="153"/>
+<line x1="396" y1="227" x2="396" y2="287"/>
+<line x1="728" y1="30" x2="728" y2="153"/>
+<line x1="210" y1="337" x2="582" y2="337"/>
+<circle cx="250" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="728" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="396" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="312" y="198" text-anchor="middle" font-size="26">A</text>
+<text x="280" y="159" text-anchor="start" font-size="14">T</text>
+<text x="344" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="344" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="644" y="198" text-anchor="middle" font-size="26">B</text>
+<text x="612" y="159" text-anchor="start" font-size="14">T</text>
+<text x="676" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="676" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="396" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="728" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="206" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับเป็นโมดูโล 5 (นับ $0$ ถึง $4$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น don't care condition {seq=mod5; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="270" viewBox="0 0 822 270" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="220"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="260"/>
+<line x1="280" y1="40" x2="280" y2="260"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">J</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">K</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">J</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">K</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">J</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">K</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="737" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="783" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(3) + d(4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$J_{A} = Q_{B}Q_{C}$
+
+$K_{A} = \sum m(4) + d(0,1,2,3,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{A} = 1$
+
+$J_{B} = \sum m(1) + d(2,3,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$J_{B} = Q_{C}$
+
+$K_{B} = \sum m(3) + d(0,1,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$K_{B} = Q_{C}$
+
+$J_{C} = \sum m(0,2) + d(1,3,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+
+$J_{C} = \overline{Q_{A}}$
+
+$K_{C} = \sum m(1,3) + d(0,2,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{C} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $101 \to 010$ ; $110 \to 010$ ; $111 \to 000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} = K_{B} &= Q_{C} \\ J_{C} &= \overline{Q_{A}} \\ K_{C} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1188" height="361" viewBox="0 0 1188 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="264" y="115" width="80" height="150" rx="2"/>
+<polyline points="264,181 276,190 264,199"/>
+<circle cx="260" cy="190" r="4"/>
+<line x1="256" y1="190" x2="242" y2="190"/>
+<line x1="242" y1="190" x2="242" y2="337"/>
+<path d="M168,120 H194 A26,33 0 0 1 194,186 H168 Z"/>
+<line x1="220" y1="153" x2="264" y2="153"/>
+<path d="M212,227 L237.5,227 A4.5,4.5 0 0 1 246.5,227 L264,227"/>
+<line x1="344" y1="153" x2="388" y2="153"/>
+<line x1="344" y1="227" x2="388" y2="227"/>
+<line x1="327.2" y1="219.4" x2="336" y2="219.4" stroke-width="1.4"/>
+<rect x="618" y="115" width="80" height="150" rx="2"/>
+<polyline points="618,181 630,190 618,199"/>
+<circle cx="614" cy="190" r="4"/>
+<line x1="610" y1="190" x2="596" y2="190"/>
+<line x1="596" y1="190" x2="596" y2="337"/>
+<line x1="572" y1="190" x2="572" y2="153"/>
+<line x1="572" y1="153" x2="618" y2="153"/>
+<line x1="572" y1="190" x2="572" y2="227"/>
+<path d="M572,227 L591.5,227 A4.5,4.5 0 0 1 600.5,227 L618,227"/>
+<line x1="698" y1="153" x2="742" y2="153"/>
+<line x1="698" y1="227" x2="742" y2="227"/>
+<line x1="681.2" y1="219.4" x2="690" y2="219.4" stroke-width="1.4"/>
+<rect x="992" y="115" width="80" height="150" rx="2"/>
+<polyline points="992,181 1004,190 992,199"/>
+<circle cx="988" cy="190" r="4"/>
+<line x1="984" y1="190" x2="970" y2="190"/>
+<line x1="970" y1="190" x2="970" y2="337"/>
+<path d="M940,227 L965.5,227 A4.5,4.5 0 0 1 974.5,227 L992,227"/>
+<line x1="1072" y1="153" x2="1116" y2="153"/>
+<line x1="1072" y1="227" x2="1116" y2="227"/>
+<line x1="1055.2" y1="219.4" x2="1064" y2="219.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="142"/>
+<line x1="124" y1="142" x2="168" y2="142"/>
+<line x1="102" y1="46" x2="102" y2="164"/>
+<line x1="102" y1="164" x2="168" y2="164"/>
+<line x1="528" y1="46" x2="528" y2="190"/>
+<line x1="528" y1="190" x2="572" y2="190"/>
+<line x1="904" y1="287" x2="904" y2="153"/>
+<line x1="904" y1="153" x2="992" y2="153"/>
+<path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L737.5,46 A4.5,4.5 0 0 1 746.5,46 L1116,46"/>
+<path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L523.5,72 A4.5,4.5 0 0 1 532.5,72 L742,72"/>
+<path d="M388,287 L591.5,287 A4.5,4.5 0 0 1 600.5,287 L904,287"/>
+<line x1="388" y1="30" x2="388" y2="153"/>
+<line x1="388" y1="227" x2="388" y2="287"/>
+<line x1="742" y1="30" x2="742" y2="153"/>
+<line x1="1116" y1="30" x2="1116" y2="153"/>
+<line x1="202" y1="337" x2="970" y2="337"/>
+<circle cx="242" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="596" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="572" cy="190" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1116" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="528" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="304" y="198" text-anchor="middle" font-size="26">A</text>
+<text x="272" y="159" text-anchor="start" font-size="14">J</text>
+<text x="272" y="233" text-anchor="start" font-size="14">K</text>
+<text x="208" y="233" text-anchor="end" font-size="16">1</text>
+<text x="336" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="658" y="198" text-anchor="middle" font-size="26">B</text>
+<text x="626" y="159" text-anchor="start" font-size="14">J</text>
+<text x="626" y="233" text-anchor="start" font-size="14">K</text>
+<text x="690" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="690" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="1032" y="198" text-anchor="middle" font-size="26">C</text>
+<text x="1000" y="159" text-anchor="start" font-size="14">J</text>
+<text x="1000" y="233" text-anchor="start" font-size="14">K</text>
+<text x="936" y="233" text-anchor="end" font-size="16">1</text>
+<text x="1064" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1064" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="742" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1116" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="198" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 5 (นับ $0$ ถึง $4$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น don't care condition {seq=mod5; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="270" viewBox="0 0 822 270" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="220"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="260"/>
+<line x1="280" y1="40" x2="280" y2="260"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">R</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">S</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">R</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">S</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">R</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">S</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="737" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="783" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(4) + d(0,1,2,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$R_{A} = \overline{Q_{B}}$
+
+$S_{A} = \sum m(3) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$S_{A} = Q_{B}Q_{C}$
+
+$R_{B} = \sum m(3) + d(0,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$R_{B} = Q_{B}Q_{C}$
+
+$S_{B} = \sum m(1) + d(2,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,110.5 L114.5,110.5 M123.5,119.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,110.5 A9,9 0 0 1 123.5,119.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,110.5 L290,110.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,119.5 M240.5,119.5 A9,9 0 0 1 249.5,110.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,101$) : $Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{B}}Q_{C}$
+
+$S_{B} = \overline{Q_{B}}Q_{C}$
+
+$R_{C} = \sum m(1,3) + d(4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$R_{C} = Q_{C}$
+
+$S_{C} = \sum m(0,2) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+
+$S_{C} = \overline{Q_{A}}\overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $101 \to 010$ ; $110 \to 110$ (วนอยู่นอกลำดับ) ; $111 \to 100$ $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1468" height="438" viewBox="0 0 1468 438" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="302" y="115" width="80" height="172" rx="2"/>
+<polyline points="302,192 314,201 302,210"/>
+<circle cx="298" cy="201" r="4"/>
+<line x1="294" y1="201" x2="280" y2="201"/>
+<line x1="280" y1="201" x2="280" y2="414"/>
+<path d="M190,120 H216 A26,33 0 0 1 216,186 H190 Z"/>
+<line x1="242" y1="153" x2="302" y2="153"/>
+<line x1="382" y1="153" x2="426" y2="153"/>
+<line x1="382" y1="249" x2="426" y2="249"/>
+<line x1="365.2" y1="241.4" x2="374" y2="241.4" stroke-width="1.4"/>
+<rect x="790" y="115" width="80" height="172" rx="2"/>
+<polyline points="790,192 802,201 790,210"/>
+<circle cx="786" cy="201" r="4"/>
+<line x1="782" y1="201" x2="768" y2="201"/>
+<line x1="768" y1="201" x2="768" y2="414"/>
+<path d="M694,120 H720 A26,33 0 0 1 720,186 H694 Z"/>
+<line x1="746" y1="153" x2="790" y2="153"/>
+<path d="M694,216 H720 A26,33 0 0 1 720,282 H694 Z"/>
+<path d="M746,249 L763.5,249 A4.5,4.5 0 0 1 772.5,249 L790,249"/>
+<line x1="870" y1="153" x2="914" y2="153"/>
+<line x1="870" y1="249" x2="914" y2="249"/>
+<line x1="853.2" y1="241.4" x2="862" y2="241.4" stroke-width="1.4"/>
+<rect x="1272" y="115" width="80" height="172" rx="2"/>
+<polyline points="1272,192 1284,201 1272,210"/>
+<circle cx="1268" cy="201" r="4"/>
+<line x1="1264" y1="201" x2="1250" y2="201"/>
+<line x1="1250" y1="201" x2="1250" y2="414"/>
+<path d="M1160,120 H1186 A26,33 0 0 1 1186,186 H1160 Z"/>
+<path d="M1212,153 L1223.5,153 A4.5,4.5 0 0 1 1232.5,153 L1272,153"/>
+<line x1="1352" y1="153" x2="1396" y2="153"/>
+<line x1="1352" y1="249" x2="1396" y2="249"/>
+<line x1="1335.2" y1="241.4" x2="1344" y2="241.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="142"/>
+<line x1="146" y1="142" x2="190" y2="142"/>
+<line x1="124" y1="46" x2="124" y2="164"/>
+<line x1="124" y1="164" x2="190" y2="164"/>
+<line x1="258" y1="338" x2="258" y2="249"/>
+<path d="M258,249 L275.5,249 A4.5,4.5 0 0 1 284.5,249 L302,249"/>
+<line x1="650" y1="46" x2="650" y2="164"/>
+<line x1="650" y1="164" x2="694" y2="164"/>
+<line x1="628" y1="72" x2="628" y2="238"/>
+<line x1="628" y1="238" x2="694" y2="238"/>
+<line x1="606" y1="46" x2="606" y2="260"/>
+<line x1="606" y1="260" x2="694" y2="260"/>
+<line x1="584" y1="338" x2="584" y2="142"/>
+<path d="M584,142 L601.5,142 A4.5,4.5 0 0 1 610.5,142 L623.5,142 A4.5,4.5 0 0 1 632.5,142 L645.5,142 A4.5,4.5 0 0 1 654.5,142 L694,142"/>
+<line x1="1228" y1="46" x2="1228" y2="249"/>
+<path d="M1228,249 L1245.5,249 A4.5,4.5 0 0 1 1254.5,249 L1272,249"/>
+<line x1="1116" y1="364" x2="1116" y2="164"/>
+<line x1="1116" y1="164" x2="1160" y2="164"/>
+<line x1="1094" y1="312" x2="1094" y2="142"/>
+<line x1="1094" y1="142" x2="1160" y2="142"/>
+<path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L909.5,46 A4.5,4.5 0 0 1 918.5,46 L1396,46"/>
+<path d="M146,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L601.5,72 A4.5,4.5 0 0 1 610.5,72 L645.5,72 A4.5,4.5 0 0 1 654.5,72 L914,72"/>
+<path d="M1116,364 L1245.5,364 A4.5,4.5 0 0 1 1254.5,364 L1396,364"/>
+<path d="M258,338 L275.5,338 A4.5,4.5 0 0 1 284.5,338 L763.5,338 A4.5,4.5 0 0 1 772.5,338 L914,338"/>
+<path d="M426,312 L579.5,312 A4.5,4.5 0 0 1 588.5,312 L763.5,312 A4.5,4.5 0 0 1 772.5,312 L909.5,312 A4.5,4.5 0 0 1 918.5,312 L1094,312"/>
+<line x1="426" y1="30" x2="426" y2="153"/>
+<line x1="426" y1="249" x2="426" y2="312"/>
+<line x1="914" y1="30" x2="914" y2="153"/>
+<line x1="914" y1="249" x2="914" y2="338"/>
+<line x1="1396" y1="30" x2="1396" y2="153"/>
+<line x1="1396" y1="249" x2="1396" y2="364"/>
+<line x1="240" y1="414" x2="1250" y2="414"/>
+<circle cx="280" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="768" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1396" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="606" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1228" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="914" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="628" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="584" cy="338" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="342" y="209" text-anchor="middle" font-size="26">A</text>
+<text x="310" y="159" text-anchor="start" font-size="14">S</text>
+<text x="310" y="255" text-anchor="start" font-size="14">R</text>
+<text x="374" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="830" y="209" text-anchor="middle" font-size="26">B</text>
+<text x="798" y="159" text-anchor="start" font-size="14">S</text>
+<text x="798" y="255" text-anchor="start" font-size="14">R</text>
+<text x="862" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="862" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="1312" y="209" text-anchor="middle" font-size="26">C</text>
+<text x="1280" y="159" text-anchor="start" font-size="14">S</text>
+<text x="1280" y="255" text-anchor="start" font-size="14">R</text>
+<text x="1344" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1344" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="914" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1396" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="236" y="420" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 5 (นับ $0$ ถึง $4$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น don't care condition {seq=mod5; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="284" viewBox="0 0 644 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="234"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="274"/>
+<line x1="280" y1="40" x2="280" y2="274"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">D</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">D</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">D</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(3) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$D_{A} = Q_{B}Q_{C}$
+
+$D_{B} = \sum m(1,2) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,110.5 L114.5,110.5 M123.5,119.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,110.5 A9,9 0 0 1 123.5,119.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,110.5 L290,110.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,119.5 M240.5,119.5 A9,9 0 0 1 249.5,110.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<path d="M145,60 L219,60 M228,69 L228,89 M219,98 L145,98 M136,89 L136,69 M136,69 A9,9 0 0 1 145,60 M219,60 A9,9 0 0 1 228,69 M228,89 A9,9 0 0 1 219,98 M145,98 A9,9 0 0 1 136,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,101$) : $Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{B}}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
+
+$D_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
+
+$D_{C} = \sum m(0,2) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+
+$D_{C} = \overline{Q_{A}}\overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $101 \to 010$ ; $110 \to 010$ ; $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1364" height="387" viewBox="0 0 1364 387" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="264" y="115" width="80" height="150" rx="2"/>
+<polyline points="264,211 276,220 264,229"/>
+<line x1="264" y1="220" x2="242" y2="220"/>
+<line x1="242" y1="220" x2="242" y2="363"/>
+<path d="M168,120 H194 A26,33 0 0 1 194,186 H168 Z"/>
+<line x1="220" y1="153" x2="264" y2="153"/>
+<line x1="344" y1="153" x2="388" y2="153"/>
+<line x1="344" y1="227" x2="388" y2="227"/>
+<line x1="327.2" y1="219.4" x2="336" y2="219.4" stroke-width="1.4"/>
+<rect x="724" y="115" width="80" height="150" rx="2"/>
+<polyline points="724,211 736,220 724,229"/>
+<line x1="724" y1="220" x2="702" y2="220"/>
+<line x1="702" y1="220" x2="702" y2="363"/>
+<path d="M620,120 C642,120 668,136.5 680,153 C668,169.5 642,186 620,186 Q634,153 620,120 Z"/>
+<path d="M612,120 Q626,153 612,186"/>
+<line x1="680" y1="153" x2="724" y2="153"/>
+<line x1="804" y1="153" x2="848" y2="153"/>
+<line x1="804" y1="227" x2="848" y2="227"/>
+<line x1="787.2" y1="219.4" x2="796" y2="219.4" stroke-width="1.4"/>
+<rect x="1168" y="115" width="80" height="150" rx="2"/>
+<polyline points="1168,211 1180,220 1168,229"/>
+<line x1="1168" y1="220" x2="1146" y2="220"/>
+<line x1="1146" y1="220" x2="1146" y2="363"/>
+<path d="M1072,120 H1098 A26,33 0 0 1 1098,186 H1072 Z"/>
+<line x1="1124" y1="153" x2="1168" y2="153"/>
+<line x1="1248" y1="153" x2="1292" y2="153"/>
+<line x1="1248" y1="227" x2="1292" y2="227"/>
+<line x1="1231.2" y1="219.4" x2="1240" y2="219.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="142"/>
+<line x1="124" y1="142" x2="168" y2="142"/>
+<line x1="102" y1="46" x2="102" y2="164"/>
+<line x1="102" y1="164" x2="168" y2="164"/>
+<line x1="574.2" y1="72" x2="574.2" y2="142"/>
+<line x1="574.2" y1="142" x2="618.2" y2="142"/>
+<line x1="552.2" y1="46" x2="552.2" y2="164"/>
+<line x1="552.2" y1="164" x2="618.2" y2="164"/>
+<line x1="1028" y1="313" x2="1028" y2="164"/>
+<line x1="1028" y1="164" x2="1072" y2="164"/>
+<line x1="1006" y1="287" x2="1006" y2="142"/>
+<line x1="1006" y1="142" x2="1072" y2="142"/>
+<path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L843.5,46 A4.5,4.5 0 0 1 852.5,46 L1292,46"/>
+<path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L547.7,72 A4.5,4.5 0 0 1 556.7,72 L848,72"/>
+<path d="M1028,313 L1141.5,313 A4.5,4.5 0 0 1 1150.5,313 L1292,313"/>
+<path d="M388,287 L697.5,287 A4.5,4.5 0 0 1 706.5,287 L1006,287"/>
+<line x1="388" y1="30" x2="388" y2="153"/>
+<line x1="388" y1="227" x2="388" y2="287"/>
+<line x1="848" y1="30" x2="848" y2="153"/>
+<line x1="1292" y1="30" x2="1292" y2="153"/>
+<line x1="1292" y1="227" x2="1292" y2="313"/>
+<line x1="202" y1="363" x2="1146" y2="363"/>
+<circle cx="242" cy="363" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="702" cy="363" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1292" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="552.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="848" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="574.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="304" y="198" text-anchor="middle" font-size="26">A</text>
+<text x="272" y="159" text-anchor="start" font-size="14">D</text>
+<text x="336" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="764" y="198" text-anchor="middle" font-size="26">B</text>
+<text x="732" y="159" text-anchor="start" font-size="14">D</text>
+<text x="796" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="796" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="1208" y="198" text-anchor="middle" font-size="26">C</text>
+<text x="1176" y="159" text-anchor="start" font-size="14">D</text>
+<text x="1240" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1240" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="848" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1292" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="198" y="369" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 5 (นับ $0$ ถึง $4$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น don't care condition {seq=mod5; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($101$, $110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="284" viewBox="0 0 644 284" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="234"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="274"/>
+<line x1="280" y1="40" x2="280" y2="274"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">T</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">T</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">T</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(3,4) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L273,60 M282,69 L282,143 M273,152 L199,152 M190,143 L190,69 M190,69 A9,9 0 0 1 199,60 M273,60 A9,9 0 0 1 282,69 M282,143 A9,9 0 0 1 273,152 M199,152 A9,9 0 0 1 190,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $100,101,110,111$) : $Q_A=1 \Rightarrow Q_{A}$
+
+$T_{A} = Q_{B}Q_{C} + Q_{A}$
+
+$T_{B} = \sum m(1,3) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$T_{B} = Q_{C}$
+
+$T_{C} = \sum m(0,1,2,3) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+
+$T_{C} = \overline{Q_{A}}$
+
+ตรวจสถานะที่ไม่ใช้ : $101 \to 011$ ; $110 \to 010$ ; $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= Q_{C} \\ T_{C} &= \overline{Q_{A}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1294" height="438" viewBox="0 0 1294 438" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="434" y="192" width="80" height="150" rx="2"/>
+<polyline points="434,288 446,297 434,306"/>
+<line x1="434" y1="297" x2="412" y2="297"/>
+<line x1="412" y1="297" x2="412" y2="414"/>
+<path d="M330,197 C352,197 378,213.5 390,230 C378,246.5 352,263 330,263 Q344,230 330,197 Z"/>
+<path d="M196,146 H222 A26,33 0 0 1 222,212 H196 Z"/>
+<path d="M248,179 L265.7,179 A4.5,4.5 0 0 1 274.7,179 L312,179"/>
+<line x1="312" y1="179" x2="312" y2="219"/>
+<line x1="312" y1="219" x2="336.2" y2="219"/>
+<line x1="390" y1="230" x2="434" y2="230"/>
+<line x1="514" y1="230" x2="558" y2="230"/>
+<line x1="514" y1="304" x2="558" y2="304"/>
+<line x1="497.2" y1="296.4" x2="506" y2="296.4" stroke-width="1.4"/>
+<rect x="766" y="192" width="80" height="150" rx="2"/>
+<polyline points="766,288 778,297 766,306"/>
+<line x1="766" y1="297" x2="744" y2="297"/>
+<line x1="744" y1="297" x2="744" y2="414"/>
+<line x1="846" y1="230" x2="890" y2="230"/>
+<line x1="846" y1="304" x2="890" y2="304"/>
+<line x1="829.2" y1="296.4" x2="838" y2="296.4" stroke-width="1.4"/>
+<rect x="1098" y="192" width="80" height="150" rx="2"/>
+<polyline points="1098,288 1110,297 1098,306"/>
+<line x1="1098" y1="297" x2="1076" y2="297"/>
+<line x1="1076" y1="297" x2="1076" y2="414"/>
+<line x1="1178" y1="230" x2="1222" y2="230"/>
+<line x1="1178" y1="304" x2="1222" y2="304"/>
+<line x1="1161.2" y1="296.4" x2="1170" y2="296.4" stroke-width="1.4"/>
+<line x1="152" y1="72" x2="152" y2="168"/>
+<line x1="152" y1="168" x2="196" y2="168"/>
+<line x1="130" y1="46" x2="130" y2="190"/>
+<line x1="130" y1="190" x2="196" y2="190"/>
+<line x1="270.2" y1="98" x2="270.2" y2="241"/>
+<line x1="270.2" y1="241" x2="336.2" y2="241"/>
+<line x1="722" y1="46" x2="722" y2="230"/>
+<line x1="722" y1="230" x2="766" y2="230"/>
+<line x1="1054" y1="364" x2="1054" y2="230"/>
+<line x1="1054" y1="230" x2="1098" y2="230"/>
+<path d="M130,46 L553.5,46 A4.5,4.5 0 0 1 562.5,46 L885.5,46 A4.5,4.5 0 0 1 894.5,46 L1222,46"/>
+<path d="M152,72 L553.5,72 A4.5,4.5 0 0 1 562.5,72 L717.5,72 A4.5,4.5 0 0 1 726.5,72 L890,72"/>
+<line x1="270.2" y1="98" x2="558" y2="98"/>
+<path d="M558,364 L739.5,364 A4.5,4.5 0 0 1 748.5,364 L1054,364"/>
+<line x1="558" y1="30" x2="558" y2="230"/>
+<line x1="558" y1="304" x2="558" y2="364"/>
+<line x1="890" y1="30" x2="890" y2="230"/>
+<line x1="1222" y1="30" x2="1222" y2="230"/>
+<line x1="372" y1="414" x2="1076" y2="414"/>
+<circle cx="412" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="744" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1222" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="722" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="890" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="558" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="474" y="275" text-anchor="middle" font-size="26">A</text>
+<text x="442" y="236" text-anchor="start" font-size="14">T</text>
+<text x="506" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="506" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="806" y="275" text-anchor="middle" font-size="26">B</text>
+<text x="774" y="236" text-anchor="start" font-size="14">T</text>
+<text x="838" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="838" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="1138" y="275" text-anchor="middle" font-size="26">C</text>
+<text x="1106" y="236" text-anchor="start" font-size="14">T</text>
+<text x="1170" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="1170" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="558" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="890" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1222" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="368" y="420" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับเป็นโมดูโล 7 (นับ $0$ ถึง $6$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($111$) เป็น don't care condition {seq=mod7; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="330" viewBox="0 0 822 330" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="280"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="320"/>
+<line x1="280" y1="40" x2="280" y2="320"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">J</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">K</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">J</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">K</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">J</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">K</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="305" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="305" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="305" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="737" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="783" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(3) + d(4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$J_{A} = Q_{B}Q_{C}$
+
+$K_{A} = \sum m(6) + d(0,1,2,3,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$K_{A} = Q_{B}$
+
+$J_{B} = \sum m(1,5) + d(2,3,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$J_{B} = Q_{C}$
+
+$K_{B} = \sum m(3,6) + d(0,1,4,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L273,60 M282,69 L282,143 M273,152 L199,152 M190,143 L190,69 M190,69 A9,9 0 0 1 199,60 M273,60 A9,9 0 0 1 282,69 M282,143 A9,9 0 0 1 273,152 M199,152 A9,9 0 0 1 190,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $100,101,110,111$) : $Q_A=1 \Rightarrow Q_{A}$
+
+$K_{B} = Q_{C} + Q_{A}$
+
+$J_{C} = \sum m(0,2,4) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M74,60 L111,60 M120,69 L120,143 M111,152 L74,152 M111,60 A9,9 0 0 1 120,69 M120,143 A9,9 0 0 1 111,152" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="87" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+<path d="M253,60 L290,60 M290,152 L253,152 M244,143 L244,69 M244,69 A9,9 0 0 1 253,60 M253,152 A9,9 0 0 1 244,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+- ลูปสีน้ำเงิน (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$J_{C} = \overline{Q_{A}} + \overline{Q_{B}}$
+
+$K_{C} = \sum m(1,3,5) + d(0,2,4,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{C} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $111 \to 000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B} &= Q_{C} \\ K_{B} &= Q_{C} + Q_{A} \\ J_{C} &= \overline{Q_{A}} + \overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="416" viewBox="0 0 1440 416" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="302" y="141" width="80" height="150" rx="2"/>
+<polyline points="302,207 314,216 302,225"/>
+<circle cx="298" cy="216" r="4"/>
+<line x1="294" y1="216" x2="280" y2="216"/>
+<line x1="280" y1="216" x2="280" y2="392"/>
+<path d="M190,146 H216 A26,33 0 0 1 216,212 H190 Z"/>
+<path d="M242,179 L253.5,179 A4.5,4.5 0 0 1 262.5,179 L302,179"/>
+<line x1="382" y1="179" x2="426" y2="179"/>
+<line x1="382" y1="253" x2="426" y2="253"/>
+<line x1="365.2" y1="245.4" x2="374" y2="245.4" stroke-width="1.4"/>
+<rect x="792" y="141" width="80" height="150" rx="2"/>
+<polyline points="792,207 804,216 792,225"/>
+<circle cx="788" cy="216" r="4"/>
+<line x1="784" y1="216" x2="770" y2="216"/>
+<line x1="770" y1="216" x2="770" y2="392"/>
+<path d="M672,220 C694,220 720,236.5 732,253 C720,269.5 694,286 672,286 Q686,253 672,220 Z"/>
+<path d="M732,253 L765.5,253 A4.5,4.5 0 0 1 774.5,253 L792,253"/>
+<line x1="872" y1="179" x2="916" y2="179"/>
+<line x1="872" y1="253" x2="916" y2="253"/>
+<line x1="855.2" y1="245.4" x2="864" y2="245.4" stroke-width="1.4"/>
+<rect x="1244" y="141" width="80" height="150" rx="2"/>
+<polyline points="1244,207 1256,216 1244,225"/>
+<circle cx="1240" cy="216" r="4"/>
+<line x1="1236" y1="216" x2="1222" y2="216"/>
+<line x1="1222" y1="216" x2="1222" y2="392"/>
+<path d="M1140,146 C1162,146 1188,162.5 1200,179 C1188,195.5 1162,212 1140,212 Q1154,179 1140,146 Z"/>
+<line x1="1200" y1="179" x2="1244" y2="179"/>
+<path d="M1192,253 L1217.5,253 A4.5,4.5 0 0 1 1226.5,253 L1244,253"/>
+<line x1="1324" y1="179" x2="1368" y2="179"/>
+<line x1="1324" y1="253" x2="1368" y2="253"/>
+<line x1="1307.2" y1="245.4" x2="1316" y2="245.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="168"/>
+<line x1="146" y1="168" x2="190" y2="168"/>
+<line x1="124" y1="46" x2="124" y2="190"/>
+<line x1="124" y1="190" x2="190" y2="190"/>
+<line x1="258" y1="72" x2="258" y2="253"/>
+<path d="M258,253 L275.5,253 A4.5,4.5 0 0 1 284.5,253 L302,253"/>
+<line x1="748" y1="46" x2="748" y2="179"/>
+<line x1="748" y1="179" x2="792" y2="179"/>
+<line x1="634.2" y1="46" x2="634.2" y2="242"/>
+<line x1="634.2" y1="242" x2="678.2" y2="242"/>
+<line x1="612.2" y1="98" x2="612.2" y2="264"/>
+<line x1="612.2" y1="264" x2="678.2" y2="264"/>
+<line x1="1102.2" y1="342" x2="1102.2" y2="190"/>
+<line x1="1102.2" y1="190" x2="1146.2" y2="190"/>
+<line x1="1080.2" y1="316" x2="1080.2" y2="168"/>
+<line x1="1080.2" y1="168" x2="1146.2" y2="168"/>
+<path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L911.5,46 A4.5,4.5 0 0 1 920.5,46 L1368,46"/>
+<path d="M146,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L629.7,72 A4.5,4.5 0 0 1 638.7,72 L743.5,72 A4.5,4.5 0 0 1 752.5,72 L916,72"/>
+<line x1="426" y1="98" x2="612.2" y2="98"/>
+<line x1="916" y1="342" x2="1102.2" y2="342"/>
+<path d="M426,316 L765.5,316 A4.5,4.5 0 0 1 774.5,316 L911.5,316 A4.5,4.5 0 0 1 920.5,316 L1080.2,316"/>
+<line x1="426" y1="30" x2="426" y2="179"/>
+<line x1="426" y1="253" x2="426" y2="316"/>
+<line x1="916" y1="30" x2="916" y2="179"/>
+<line x1="916" y1="253" x2="916" y2="342"/>
+<line x1="1368" y1="30" x2="1368" y2="179"/>
+<line x1="240" y1="392" x2="1222" y2="392"/>
+<circle cx="280" cy="392" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="770" cy="392" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1368" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="748" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="634.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="916" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="258" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="342" y="224" text-anchor="middle" font-size="26">A</text>
+<text x="310" y="185" text-anchor="start" font-size="14">J</text>
+<text x="310" y="259" text-anchor="start" font-size="14">K</text>
+<text x="374" y="185" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="832" y="224" text-anchor="middle" font-size="26">B</text>
+<text x="800" y="185" text-anchor="start" font-size="14">J</text>
+<text x="800" y="259" text-anchor="start" font-size="14">K</text>
+<text x="864" y="185" text-anchor="end" font-size="16">Q</text>
+<text x="864" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="1284" y="224" text-anchor="middle" font-size="26">C</text>
+<text x="1252" y="185" text-anchor="start" font-size="14">J</text>
+<text x="1252" y="259" text-anchor="start" font-size="14">K</text>
+<text x="1188" y="259" text-anchor="end" font-size="16">1</text>
+<text x="1316" y="185" text-anchor="end" font-size="16">Q</text>
+<text x="1316" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="916" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1368" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="236" y="398" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 7 (นับ $0$ ถึง $6$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($111$) เป็น don't care condition {seq=mod7; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="330" viewBox="0 0 822 330" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="280"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="320"/>
+<line x1="280" y1="40" x2="280" y2="320"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">R</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">S</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">R</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">S</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">R</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">S</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="305" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="305" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="305" text-anchor="middle" font-size="16">0</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="737" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="783" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(6) + d(0,1,2,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,92.5 M222.5,101.5 L141.5,101.5 M132.5,92.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,92.5 A9,9 0 0 1 222.5,101.5 M141.5,101.5 A9,9 0 0 1 132.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
+
+$R_{A} = Q_{B}\overline{Q_{C}}$
+
+$S_{A} = \sum m(3) + d(4,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+
+$S_{A} = Q_{B}Q_{C}$
+
+$R_{B} = \sum m(3,6) + d(0,4,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L273,60 M282,69 L282,89 M273,98 L199,98 M190,89 L190,69 M190,69 A9,9 0 0 1 199,60 M273,60 A9,9 0 0 1 282,69 M282,89 A9,9 0 0 1 273,98 M199,98 A9,9 0 0 1 190,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$R_{B} = Q_{B}Q_{C} + Q_{A}\overline{Q_{C}}$
+
+$S_{B} = \sum m(1,5) + d(2,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,110.5 L114.5,110.5 M123.5,119.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,110.5 A9,9 0 0 1 123.5,119.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,110.5 L290,110.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,119.5 M240.5,119.5 A9,9 0 0 1 249.5,110.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,101$) : $Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{B}}Q_{C}$
+
+$S_{B} = \overline{Q_{B}}Q_{C}$
+
+$R_{C} = \sum m(1,3,5) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$R_{C} = Q_{C}$
+
+$S_{C} = \sum m(0,2,4) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M74,60 L111,60 M120,69 L120,89 M111,98 L74,98 M111,60 A9,9 0 0 1 120,69 M120,89 A9,9 0 0 1 111,98" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="87" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+<path d="M253,60 L290,60 M290,98 L253,98 M244,89 L244,69 M244,69 A9,9 0 0 1 253,60 M253,98 A9,9 0 0 1 244,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+
+$S_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B}\overline{Q_{C}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1854" height="596" viewBox="0 0 1854 596" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="308" y="185" width="80" height="216" rx="2"/>
+<polyline points="308,284 320,293 308,302"/>
+<circle cx="304" cy="293" r="4"/>
+<line x1="300" y1="293" x2="286" y2="293"/>
+<line x1="286" y1="293" x2="286" y2="572"/>
+<path d="M212,190 H238 A26,33 0 0 1 238,256 H212 Z"/>
+<line x1="264" y1="223" x2="308" y2="223"/>
+<path d="M212,330 H238 A26,33 0 0 1 238,396 H212 Z"/>
+<path d="M264,363 L281.5,363 A4.5,4.5 0 0 1 290.5,363 L308,363"/>
+<line x1="388" y1="223" x2="432" y2="223"/>
+<line x1="388" y1="363" x2="432" y2="363"/>
+<line x1="371.2" y1="355.4" x2="380" y2="355.4" stroke-width="1.4"/>
+<rect x="986" y="185" width="80" height="216" rx="2"/>
+<polyline points="986,284 998,293 986,302"/>
+<circle cx="982" cy="293" r="4"/>
+<line x1="978" y1="293" x2="964" y2="293"/>
+<line x1="964" y1="293" x2="964" y2="572"/>
+<path d="M890,190 H916 A26,33 0 0 1 916,256 H890 Z"/>
+<line x1="942" y1="223" x2="986" y2="223"/>
+<path d="M882,330 C904,330 930,346.5 942,363 C930,379.5 904,396 882,396 Q896,363 882,330 Z"/>
+<path d="M750,286 H776 A26,33 0 0 1 776,352 H750 Z"/>
+<line x1="802" y1="319" x2="864" y2="319"/>
+<line x1="864" y1="319" x2="864" y2="352"/>
+<line x1="864" y1="352" x2="888.2" y2="352"/>
+<path d="M750,374 H776 A26,33 0 0 1 776,440 H750 Z"/>
+<line x1="802" y1="407" x2="844" y2="407"/>
+<line x1="844" y1="407" x2="844" y2="374"/>
+<line x1="844" y1="374" x2="888.2" y2="374"/>
+<path d="M942,363 L959.5,363 A4.5,4.5 0 0 1 968.5,363 L986,363"/>
+<line x1="1066" y1="223" x2="1110" y2="223"/>
+<line x1="1066" y1="363" x2="1110" y2="363"/>
+<line x1="1049.2" y1="355.4" x2="1058" y2="355.4" stroke-width="1.4"/>
+<rect x="1658" y="185" width="80" height="216" rx="2"/>
+<polyline points="1658,284 1670,293 1658,302"/>
+<circle cx="1654" cy="293" r="4"/>
+<line x1="1650" y1="293" x2="1636" y2="293"/>
+<line x1="1636" y1="293" x2="1636" y2="572"/>
+<path d="M1538,190 C1560,190 1586,206.5 1598,223 C1586,239.5 1560,256 1538,256 Q1552,223 1538,190 Z"/>
+<path d="M1406,146 H1432 A26,33 0 0 1 1432,212 H1406 Z"/>
+<line x1="1458" y1="179" x2="1520" y2="179"/>
+<line x1="1520" y1="179" x2="1520" y2="212"/>
+<line x1="1520" y1="212" x2="1544.2" y2="212"/>
+<path d="M1406,234 H1432 A26,33 0 0 1 1432,300 H1406 Z"/>
+<line x1="1458" y1="267" x2="1500" y2="267"/>
+<line x1="1500" y1="267" x2="1500" y2="234"/>
+<line x1="1500" y1="234" x2="1544.2" y2="234"/>
+<path d="M1598,223 L1609.5,223 A4.5,4.5 0 0 1 1618.5,223 L1658,223"/>
+<line x1="1738" y1="223" x2="1782" y2="223"/>
+<line x1="1738" y1="363" x2="1782" y2="363"/>
+<line x1="1721.2" y1="355.4" x2="1730" y2="355.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="212"/>
+<line x1="168" y1="212" x2="212" y2="212"/>
+<line x1="146" y1="46" x2="146" y2="234"/>
+<line x1="146" y1="234" x2="212" y2="234"/>
+<line x1="124" y1="72" x2="124" y2="352"/>
+<line x1="124" y1="352" x2="212" y2="352"/>
+<line x1="102" y1="522" x2="102" y2="374"/>
+<line x1="102" y1="374" x2="212" y2="374"/>
+<line x1="802" y1="46" x2="802" y2="234"/>
+<line x1="802" y1="234" x2="890" y2="234"/>
+<line x1="706" y1="72" x2="706" y2="308"/>
+<path d="M706,308 L731.5,308 A4.5,4.5 0 0 1 740.5,308 L750,308"/>
+<line x1="684" y1="46" x2="684" y2="330"/>
+<path d="M684,330 L731.5,330 A4.5,4.5 0 0 1 740.5,330 L750,330"/>
+<line x1="662" y1="98" x2="662" y2="396"/>
+<path d="M662,396 L731.5,396 A4.5,4.5 0 0 1 740.5,396 L750,396"/>
+<line x1="640" y1="522" x2="640" y2="418"/>
+<path d="M640,418 L731.5,418 A4.5,4.5 0 0 1 740.5,418 L750,418"/>
+<line x1="736" y1="496" x2="736" y2="212"/>
+<path d="M736,212 L797.5,212 A4.5,4.5 0 0 1 806.5,212 L890,212"/>
+<line x1="1614" y1="46" x2="1614" y2="363"/>
+<path d="M1614,363 L1631.5,363 A4.5,4.5 0 0 1 1640.5,363 L1658,363"/>
+<line x1="1362" y1="522" x2="1362" y2="278"/>
+<line x1="1362" y1="278" x2="1406" y2="278"/>
+<line x1="1340" y1="496" x2="1340" y2="256"/>
+<line x1="1340" y1="256" x2="1406" y2="256"/>
+<line x1="1318" y1="522" x2="1318" y2="190"/>
+<line x1="1318" y1="190" x2="1406" y2="190"/>
+<line x1="1296" y1="470" x2="1296" y2="168"/>
+<line x1="1296" y1="168" x2="1406" y2="168"/>
+<path d="M146,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L1105.5,46 A4.5,4.5 0 0 1 1114.5,46 L1782,46"/>
+<path d="M124,72 L141.5,72 A4.5,4.5 0 0 1 150.5,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L679.5,72 A4.5,4.5 0 0 1 688.5,72 L797.5,72 A4.5,4.5 0 0 1 806.5,72 L1110,72"/>
+<line x1="432" y1="98" x2="662" y2="98"/>
+<path d="M102,522 L281.5,522 A4.5,4.5 0 0 1 290.5,522 L959.5,522 A4.5,4.5 0 0 1 968.5,522 L1631.5,522 A4.5,4.5 0 0 1 1640.5,522 L1782,522"/>
+<path d="M736,496 L959.5,496 A4.5,4.5 0 0 1 968.5,496 L1313.5,496 A4.5,4.5 0 0 1 1322.5,496 L1340,496"/>
+<path d="M432,470 L635.5,470 A4.5,4.5 0 0 1 644.5,470 L731.5,470 A4.5,4.5 0 0 1 740.5,470 L959.5,470 A4.5,4.5 0 0 1 968.5,470 L1105.5,470 A4.5,4.5 0 0 1 1114.5,470 L1296,470"/>
+<line x1="432" y1="30" x2="432" y2="223"/>
+<line x1="432" y1="363" x2="432" y2="470"/>
+<line x1="1110" y1="30" x2="1110" y2="223"/>
+<line x1="1110" y1="363" x2="1110" y2="496"/>
+<line x1="1782" y1="30" x2="1782" y2="223"/>
+<line x1="1782" y1="363" x2="1782" y2="522"/>
+<line x1="246" y1="572" x2="1636" y2="572"/>
+<circle cx="286" cy="572" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="964" cy="572" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1782" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="802" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="684" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1614" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1110" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="706" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="522" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1362" cy="522" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1318" cy="522" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1110" cy="496" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="348" y="301" text-anchor="middle" font-size="26">A</text>
+<text x="316" y="229" text-anchor="start" font-size="14">S</text>
+<text x="316" y="369" text-anchor="start" font-size="14">R</text>
+<text x="380" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="1026" y="301" text-anchor="middle" font-size="26">B</text>
+<text x="994" y="229" text-anchor="start" font-size="14">S</text>
+<text x="994" y="369" text-anchor="start" font-size="14">R</text>
+<text x="1058" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="1058" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="1698" y="301" text-anchor="middle" font-size="26">C</text>
+<text x="1666" y="229" text-anchor="start" font-size="14">S</text>
+<text x="1666" y="369" text-anchor="start" font-size="14">R</text>
+<text x="1730" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="1730" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="1110" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1782" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="242" y="578" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 7 (นับ $0$ ถึง $6$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($111$) เป็น don't care condition {seq=mod7; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="344" viewBox="0 0 644 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="294"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="334"/>
+<line x1="280" y1="40" x2="280" y2="334"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">D</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">D</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">D</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(3,4,5) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M253,60 L273,60 M282,69 L282,143 M273,152 L253,152 M244,143 L244,69 M244,69 A9,9 0 0 1 253,60 M273,60 A9,9 0 0 1 282,69 M282,143 A9,9 0 0 1 273,152 M253,152 A9,9 0 0 1 244,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="239" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $100,101$) : $Q_A=1,\ Q_B=0 \Rightarrow Q_{A}\overline{Q_{B}}$
+
+$D_{A} = Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}$
+
+$D_{B} = \sum m(1,2,5) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,110.5 L114.5,110.5 M123.5,119.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,110.5 A9,9 0 0 1 123.5,119.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,110.5 L290,110.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,119.5 M240.5,119.5 A9,9 0 0 1 249.5,110.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<path d="M145,60 L165,60 M174,69 L174,89 M165,98 L145,98 M136,89 L136,69 M136,69 A9,9 0 0 1 145,60 M165,60 A9,9 0 0 1 174,69 M174,89 A9,9 0 0 1 165,98 M145,98 A9,9 0 0 1 136,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,101$) : $Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{B}}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $010$) : $Q_A=0,\ Q_B=1,\ Q_C=0 \Rightarrow \overline{Q_{A}}Q_{B}\overline{Q_{C}}$
+
+$D_{B} = \overline{Q_{B}}Q_{C} + \overline{Q_{A}}Q_{B}\overline{Q_{C}}$
+
+$D_{C} = \sum m(0,2,4) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M74,60 L111,60 M120,69 L120,89 M111,98 L74,98 M111,60 A9,9 0 0 1 120,69 M120,89 A9,9 0 0 1 111,98" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="87" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+<path d="M253,60 L290,60 M290,98 L253,98 M244,89 L244,69 M244,69 A9,9 0 0 1 253,60 M253,98 A9,9 0 0 1 244,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+
+$D_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + \overline{Q_{A}}Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1940" height="494" viewBox="0 0 1940 494" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="454" y="196" width="80" height="150" rx="2"/>
+<polyline points="454,292 466,301 454,310"/>
+<line x1="454" y1="301" x2="432" y2="301"/>
+<line x1="432" y1="301" x2="432" y2="470"/>
+<path d="M350,201 C372,201 398,217.5 410,234 C398,250.5 372,267 350,267 Q364,234 350,201 Z"/>
+<path d="M218,157 H244 A26,33 0 0 1 244,223 H218 Z"/>
+<line x1="270" y1="190" x2="332" y2="190"/>
+<line x1="332" y1="190" x2="332" y2="223"/>
+<line x1="332" y1="223" x2="356.2" y2="223"/>
+<path d="M218,245 H244 A26,33 0 0 1 244,311 H218 Z"/>
+<line x1="270" y1="278" x2="312" y2="278"/>
+<line x1="312" y1="278" x2="312" y2="245"/>
+<line x1="312" y1="245" x2="356.2" y2="245"/>
+<line x1="410" y1="234" x2="454" y2="234"/>
+<line x1="534" y1="234" x2="578" y2="234"/>
+<line x1="534" y1="308" x2="578" y2="308"/>
+<line x1="517.2" y1="300.4" x2="526" y2="300.4" stroke-width="1.4"/>
+<rect x="1110" y="196" width="80" height="150" rx="2"/>
+<polyline points="1110,292 1122,301 1110,310"/>
+<line x1="1110" y1="301" x2="1088" y2="301"/>
+<line x1="1088" y1="301" x2="1088" y2="470"/>
+<path d="M1006,201 C1028,201 1054,217.5 1066,234 C1054,250.5 1028,267 1006,267 Q1020,234 1006,201 Z"/>
+<path d="M874,146 H900 A26,33 0 0 1 900,212 H874 Z"/>
+<line x1="926" y1="179" x2="988" y2="179"/>
+<line x1="988" y1="179" x2="988" y2="223"/>
+<line x1="988" y1="223" x2="1012.2" y2="223"/>
+<path d="M874,245 H900 A26,44 0 0 1 900,333 H874 Z"/>
+<line x1="926" y1="289" x2="968" y2="289"/>
+<line x1="968" y1="289" x2="968" y2="245"/>
+<line x1="968" y1="245" x2="1012.2" y2="245"/>
+<line x1="1066" y1="234" x2="1110" y2="234"/>
+<line x1="1190" y1="234" x2="1234" y2="234"/>
+<line x1="1190" y1="308" x2="1234" y2="308"/>
+<line x1="1173.2" y1="300.4" x2="1182" y2="300.4" stroke-width="1.4"/>
+<rect x="1744" y="196" width="80" height="150" rx="2"/>
+<polyline points="1744,292 1756,301 1744,310"/>
+<line x1="1744" y1="301" x2="1722" y2="301"/>
+<line x1="1722" y1="301" x2="1722" y2="470"/>
+<path d="M1640,201 C1662,201 1688,217.5 1700,234 C1688,250.5 1662,267 1640,267 Q1654,234 1640,201 Z"/>
+<path d="M1508,157 H1534 A26,33 0 0 1 1534,223 H1508 Z"/>
+<line x1="1560" y1="190" x2="1622" y2="190"/>
+<line x1="1622" y1="190" x2="1622" y2="223"/>
+<line x1="1622" y1="223" x2="1646.2" y2="223"/>
+<path d="M1508,245 H1534 A26,33 0 0 1 1534,311 H1508 Z"/>
+<line x1="1560" y1="278" x2="1602" y2="278"/>
+<line x1="1602" y1="278" x2="1602" y2="245"/>
+<line x1="1602" y1="245" x2="1646.2" y2="245"/>
+<line x1="1700" y1="234" x2="1744" y2="234"/>
+<line x1="1824" y1="234" x2="1868" y2="234"/>
+<line x1="1824" y1="308" x2="1868" y2="308"/>
+<line x1="1807.2" y1="300.4" x2="1816" y2="300.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="179"/>
+<line x1="174" y1="179" x2="218" y2="179"/>
+<line x1="152" y1="46" x2="152" y2="201"/>
+<line x1="152" y1="201" x2="218" y2="201"/>
+<line x1="130" y1="98" x2="130" y2="267"/>
+<line x1="130" y1="267" x2="218" y2="267"/>
+<line x1="108" y1="394" x2="108" y2="289"/>
+<line x1="108" y1="289" x2="218" y2="289"/>
+<line x1="830" y1="46" x2="830" y2="190"/>
+<line x1="830" y1="190" x2="874" y2="190"/>
+<line x1="808" y1="72" x2="808" y2="289"/>
+<line x1="808" y1="289" x2="874" y2="289"/>
+<line x1="786" y1="420" x2="786" y2="311"/>
+<line x1="786" y1="311" x2="874" y2="311"/>
+<line x1="764" y1="368" x2="764" y2="267"/>
+<path d="M764,267 L803.5,267 A4.5,4.5 0 0 1 812.5,267 L874,267"/>
+<line x1="742" y1="394" x2="742" y2="168"/>
+<path d="M742,168 L803.5,168 A4.5,4.5 0 0 1 812.5,168 L825.5,168 A4.5,4.5 0 0 1 834.5,168 L874,168"/>
+<line x1="1464" y1="420" x2="1464" y2="289"/>
+<line x1="1464" y1="289" x2="1508" y2="289"/>
+<line x1="1442" y1="394" x2="1442" y2="267"/>
+<line x1="1442" y1="267" x2="1508" y2="267"/>
+<line x1="1420" y1="420" x2="1420" y2="201"/>
+<line x1="1420" y1="201" x2="1508" y2="201"/>
+<line x1="1398" y1="368" x2="1398" y2="179"/>
+<line x1="1398" y1="179" x2="1508" y2="179"/>
+<path d="M152,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1229.5,46 A4.5,4.5 0 0 1 1238.5,46 L1868,46"/>
+<path d="M174,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L825.5,72 A4.5,4.5 0 0 1 834.5,72 L1234,72"/>
+<path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L578,98"/>
+<path d="M786,420 L1083.5,420 A4.5,4.5 0 0 1 1092.5,420 L1717.5,420 A4.5,4.5 0 0 1 1726.5,420 L1868,420"/>
+<path d="M108,394 L427.5,394 A4.5,4.5 0 0 1 436.5,394 L781.5,394 A4.5,4.5 0 0 1 790.5,394 L1083.5,394 A4.5,4.5 0 0 1 1092.5,394 L1415.5,394 A4.5,4.5 0 0 1 1424.5,394 L1442,394"/>
+<path d="M578,368 L737.5,368 A4.5,4.5 0 0 1 746.5,368 L781.5,368 A4.5,4.5 0 0 1 790.5,368 L1083.5,368 A4.5,4.5 0 0 1 1092.5,368 L1229.5,368 A4.5,4.5 0 0 1 1238.5,368 L1398,368"/>
+<line x1="578" y1="30" x2="578" y2="234"/>
+<line x1="578" y1="308" x2="578" y2="368"/>
+<line x1="1234" y1="30" x2="1234" y2="234"/>
+<line x1="1234" y1="308" x2="1234" y2="394"/>
+<line x1="1868" y1="30" x2="1868" y2="234"/>
+<line x1="1868" y1="308" x2="1868" y2="420"/>
+<line x1="392" y1="470" x2="1722" y2="470"/>
+<circle cx="432" cy="470" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1088" cy="470" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1868" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="830" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="808" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1464" cy="420" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1420" cy="420" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1234" cy="394" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742" cy="394" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="368" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="494" y="279" text-anchor="middle" font-size="26">A</text>
+<text x="462" y="240" text-anchor="start" font-size="14">D</text>
+<text x="526" y="240" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="1150" y="279" text-anchor="middle" font-size="26">B</text>
+<text x="1118" y="240" text-anchor="start" font-size="14">D</text>
+<text x="1182" y="240" text-anchor="end" font-size="16">Q</text>
+<text x="1182" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="1784" y="279" text-anchor="middle" font-size="26">C</text>
+<text x="1752" y="240" text-anchor="start" font-size="14">D</text>
+<text x="1816" y="240" text-anchor="end" font-size="16">Q</text>
+<text x="1816" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="1234" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1868" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="388" y="476" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 7 (นับ $0$ ถึง $6$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($111$) เป็น don't care condition {seq=mod7; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="344" viewBox="0 0 644 344" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="294"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="334"/>
+<line x1="280" y1="40" x2="280" y2="334"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">T</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">T</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">T</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="319" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="319" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(3,6) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L219,60 M228,69 L228,143 M219,152 L199,152 M190,143 L190,69 M190,69 A9,9 0 0 1 199,60 M219,60 A9,9 0 0 1 228,69 M228,143 A9,9 0 0 1 219,152 M199,152 A9,9 0 0 1 190,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
+
+$T_{A} = Q_{B}Q_{C} + Q_{A}Q_{B}$
+
+$T_{B} = \sum m(1,3,5,6) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L219,60 M228,69 L228,143 M219,152 L199,152 M190,143 L190,69 M190,69 A9,9 0 0 1 199,60 M219,60 A9,9 0 0 1 228,69 M228,143 A9,9 0 0 1 219,152 M199,152 A9,9 0 0 1 190,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
+
+$T_{B} = Q_{C} + Q_{A}Q_{B}$
+
+$T_{C} = \sum m(0,1,2,3,4,5) + d(7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M74,60 L111,60 M120,69 L120,143 M111,152 L74,152 M111,60 A9,9 0 0 1 120,69 M120,143 A9,9 0 0 1 111,152" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="87" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+<path d="M253,60 L290,60 M290,152 L253,152 M244,143 L244,69 M244,69 A9,9 0 0 1 253,60 M253,152 A9,9 0 0 1 244,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011$) : $Q_A=0 \Rightarrow \overline{Q_{A}}$
+- ลูปสีน้ำเงิน (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$T_{C} = \overline{Q_{A}} + \overline{Q_{B}}$
+
+ตรวจสถานะที่ไม่ใช้ : $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{B} \\ T_{B} &= Q_{C} + Q_{A}Q_{B} \\ T_{C} &= \overline{Q_{A}} + \overline{Q_{B}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1716" height="457" viewBox="0 0 1716 457" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="454" y="185" width="80" height="150" rx="2"/>
+<polyline points="454,281 466,290 454,299"/>
+<line x1="454" y1="290" x2="432" y2="290"/>
+<line x1="432" y1="290" x2="432" y2="433"/>
+<path d="M350,190 C372,190 398,206.5 410,223 C398,239.5 372,256 350,256 Q364,223 350,190 Z"/>
+<path d="M218,146 H244 A26,33 0 0 1 244,212 H218 Z"/>
+<line x1="270" y1="179" x2="332" y2="179"/>
+<line x1="332" y1="179" x2="332" y2="212"/>
+<line x1="332" y1="212" x2="356.2" y2="212"/>
+<path d="M218,234 H244 A26,33 0 0 1 244,300 H218 Z"/>
+<line x1="270" y1="267" x2="312" y2="267"/>
+<line x1="312" y1="267" x2="312" y2="234"/>
+<line x1="312" y1="234" x2="356.2" y2="234"/>
+<line x1="410" y1="223" x2="454" y2="223"/>
+<line x1="534" y1="223" x2="578" y2="223"/>
+<line x1="534" y1="297" x2="578" y2="297"/>
+<line x1="517.2" y1="289.4" x2="526" y2="289.4" stroke-width="1.4"/>
+<rect x="1068" y="185" width="80" height="150" rx="2"/>
+<polyline points="1068,281 1080,290 1068,299"/>
+<line x1="1068" y1="290" x2="1046" y2="290"/>
+<line x1="1046" y1="290" x2="1046" y2="433"/>
+<path d="M964,190 C986,190 1012,206.5 1024,223 C1012,239.5 986,256 964,256 Q978,223 964,190 Z"/>
+<path d="M830,241 H856 A26,33 0 0 1 856,307 H830 Z"/>
+<line x1="882" y1="274" x2="946" y2="274"/>
+<line x1="946" y1="274" x2="946" y2="234"/>
+<line x1="946" y1="234" x2="970.2" y2="234"/>
+<line x1="1024" y1="223" x2="1068" y2="223"/>
+<line x1="1148" y1="223" x2="1192" y2="223"/>
+<line x1="1148" y1="297" x2="1192" y2="297"/>
+<line x1="1131.2" y1="289.4" x2="1140" y2="289.4" stroke-width="1.4"/>
+<rect x="1520" y="185" width="80" height="150" rx="2"/>
+<polyline points="1520,281 1532,290 1520,299"/>
+<line x1="1520" y1="290" x2="1498" y2="290"/>
+<line x1="1498" y1="290" x2="1498" y2="433"/>
+<path d="M1416,190 C1438,190 1464,206.5 1476,223 C1464,239.5 1438,256 1416,256 Q1430,223 1416,190 Z"/>
+<line x1="1476" y1="223" x2="1520" y2="223"/>
+<line x1="1600" y1="223" x2="1644" y2="223"/>
+<line x1="1600" y1="297" x2="1644" y2="297"/>
+<line x1="1583.2" y1="289.4" x2="1592" y2="289.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="168"/>
+<line x1="174" y1="168" x2="218" y2="168"/>
+<line x1="152" y1="46" x2="152" y2="190"/>
+<line x1="152" y1="190" x2="218" y2="190"/>
+<line x1="130" y1="98" x2="130" y2="256"/>
+<line x1="130" y1="256" x2="218" y2="256"/>
+<line x1="108" y1="72" x2="108" y2="278"/>
+<line x1="108" y1="278" x2="218" y2="278"/>
+<line x1="904.2" y1="46" x2="904.2" y2="212"/>
+<line x1="904.2" y1="212" x2="970.2" y2="212"/>
+<line x1="786" y1="98" x2="786" y2="263"/>
+<line x1="786" y1="263" x2="830" y2="263"/>
+<line x1="764" y1="72" x2="764" y2="285"/>
+<line x1="764" y1="285" x2="830" y2="285"/>
+<line x1="1378.2" y1="383" x2="1378.2" y2="234"/>
+<line x1="1378.2" y1="234" x2="1422.2" y2="234"/>
+<line x1="1356.2" y1="357" x2="1356.2" y2="212"/>
+<line x1="1356.2" y1="212" x2="1422.2" y2="212"/>
+<path d="M152,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1187.5,46 A4.5,4.5 0 0 1 1196.5,46 L1644,46"/>
+<path d="M108,72 L147.5,72 A4.5,4.5 0 0 1 156.5,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L899.7,72 A4.5,4.5 0 0 1 908.7,72 L1192,72"/>
+<path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L759.5,98 A4.5,4.5 0 0 1 768.5,98 L786,98"/>
+<line x1="1192" y1="383" x2="1378.2" y2="383"/>
+<path d="M578,357 L1041.5,357 A4.5,4.5 0 0 1 1050.5,357 L1187.5,357 A4.5,4.5 0 0 1 1196.5,357 L1356.2,357"/>
+<line x1="578" y1="30" x2="578" y2="223"/>
+<line x1="578" y1="297" x2="578" y2="357"/>
+<line x1="1192" y1="30" x2="1192" y2="223"/>
+<line x1="1192" y1="297" x2="1192" y2="383"/>
+<line x1="1644" y1="30" x2="1644" y2="223"/>
+<line x1="392" y1="433" x2="1498" y2="433"/>
+<circle cx="432" cy="433" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1046" cy="433" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1644" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="904.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1192" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="174" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="494" y="268" text-anchor="middle" font-size="26">A</text>
+<text x="462" y="229" text-anchor="start" font-size="14">T</text>
+<text x="526" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="1108" y="268" text-anchor="middle" font-size="26">B</text>
+<text x="1076" y="229" text-anchor="start" font-size="14">T</text>
+<text x="1140" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="1140" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="1560" y="268" text-anchor="middle" font-size="26">C</text>
+<text x="1528" y="229" text-anchor="start" font-size="14">T</text>
+<text x="1592" y="229" text-anchor="end" font-size="16">Q</text>
+<text x="1592" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="1192" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1644" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="388" y="439" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับลงจาก $5$ ถึง $0$ แล้ววนกลับมาที่ $5$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=down6; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="300" viewBox="0 0 822 300" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="250"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="290"/>
+<line x1="280" y1="40" x2="280" y2="290"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">J</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">K</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">J</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">K</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">J</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">K</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="737" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="783" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(0) + d(4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L74,101.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,101.5 L249.5,101.5 M240.5,92.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,101.5 A9,9 0 0 1 240.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+
+$J_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+
+$K_{A} = \sum m(4) + d(0,1,2,3,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010,100,110$) : $Q_C=0 \Rightarrow \overline{Q_{C}}$
+
+$K_{A} = \overline{Q_{C}}$
+
+$J_{B} = \sum m(4) + d(2,3,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M195.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L195.5,101.5 M186.5,92.5 L186.5,65.5 M186.5,65.5 A9,9 0 0 1 195.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M195.5,101.5 A9,9 0 0 1 186.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$J_{B} = Q_{A}\overline{Q_{C}}$
+
+$K_{B} = \sum m(2) + d(0,1,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010,100,110$) : $Q_C=0 \Rightarrow \overline{Q_{C}}$
+
+$K_{B} = \overline{Q_{C}}$
+
+$J_{C} = \sum m(0,2,4) + d(1,3,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$J_{C} = 1$
+
+$K_{C} = \sum m(1,3,5) + d(0,2,4,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{C} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $110 \to 001$ ; $111 \to 110 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{C}} \\ J_{B} &= Q_{A}\overline{Q_{C}} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1332" height="361" viewBox="0 0 1332 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="302" y="89" width="80" height="150" rx="2"/>
+<polyline points="302,155 314,164 302,173"/>
+<circle cx="298" cy="164" r="4"/>
+<line x1="294" y1="164" x2="280" y2="164"/>
+<line x1="280" y1="164" x2="280" y2="337"/>
+<path d="M190,94 H216 A26,33 0 0 1 216,160 H190 Z"/>
+<line x1="242" y1="127" x2="302" y2="127"/>
+<line x1="382" y1="127" x2="426" y2="127"/>
+<line x1="382" y1="201" x2="426" y2="201"/>
+<line x1="365.2" y1="193.4" x2="374" y2="193.4" stroke-width="1.4"/>
+<rect x="784" y="89" width="80" height="150" rx="2"/>
+<polyline points="784,155 796,164 784,173"/>
+<circle cx="780" cy="164" r="4"/>
+<line x1="776" y1="164" x2="762" y2="164"/>
+<line x1="762" y1="164" x2="762" y2="337"/>
+<path d="M672,94 H698 A26,33 0 0 1 698,160 H672 Z"/>
+<line x1="724" y1="127" x2="784" y2="127"/>
+<line x1="864" y1="127" x2="908" y2="127"/>
+<line x1="864" y1="201" x2="908" y2="201"/>
+<line x1="847.2" y1="193.4" x2="856" y2="193.4" stroke-width="1.4"/>
+<rect x="1136" y="89" width="80" height="150" rx="2"/>
+<polyline points="1136,155 1148,164 1136,173"/>
+<circle cx="1132" cy="164" r="4"/>
+<line x1="1128" y1="164" x2="1114" y2="164"/>
+<line x1="1114" y1="164" x2="1114" y2="337"/>
+<line x1="1084" y1="127" x2="1136" y2="127"/>
+<path d="M1084,201 L1109.5,201 A4.5,4.5 0 0 1 1118.5,201 L1136,201"/>
+<line x1="1216" y1="127" x2="1260" y2="127"/>
+<line x1="1216" y1="201" x2="1260" y2="201"/>
+<line x1="1199.2" y1="193.4" x2="1208" y2="193.4" stroke-width="1.4"/>
+<line x1="258" y1="287" x2="258" y2="201"/>
+<path d="M258,201 L275.5,201 A4.5,4.5 0 0 1 284.5,201 L302,201"/>
+<line x1="146" y1="287" x2="146" y2="138"/>
+<line x1="146" y1="138" x2="190" y2="138"/>
+<line x1="124" y1="261" x2="124" y2="116"/>
+<line x1="124" y1="116" x2="190" y2="116"/>
+<line x1="628" y1="46" x2="628" y2="116"/>
+<line x1="628" y1="116" x2="672" y2="116"/>
+<line x1="740" y1="287" x2="740" y2="201"/>
+<path d="M740,201 L757.5,201 A4.5,4.5 0 0 1 766.5,201 L784,201"/>
+<line x1="606" y1="287" x2="606" y2="138"/>
+<line x1="606" y1="138" x2="672" y2="138"/>
+<line x1="426" y1="46" x2="628" y2="46"/>
+<path d="M146,287 L275.5,287 A4.5,4.5 0 0 1 284.5,287 L757.5,287 A4.5,4.5 0 0 1 766.5,287 L1109.5,287 A4.5,4.5 0 0 1 1118.5,287 L1260,287"/>
+<path d="M124,261 L141.5,261 A4.5,4.5 0 0 1 150.5,261 L253.5,261 A4.5,4.5 0 0 1 262.5,261 L275.5,261 A4.5,4.5 0 0 1 284.5,261 L601.5,261 A4.5,4.5 0 0 1 610.5,261 L735.5,261 A4.5,4.5 0 0 1 744.5,261 L757.5,261 A4.5,4.5 0 0 1 766.5,261 L908,261"/>
+<line x1="426" y1="30" x2="426" y2="127"/>
+<line x1="908" y1="30" x2="908" y2="127"/>
+<line x1="908" y1="201" x2="908" y2="261"/>
+<line x1="1260" y1="30" x2="1260" y2="127"/>
+<line x1="1260" y1="201" x2="1260" y2="287"/>
+<line x1="240" y1="337" x2="1114" y2="337"/>
+<circle cx="280" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="762" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="426" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="258" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="740" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="606" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="342" y="172" text-anchor="middle" font-size="26">A</text>
+<text x="310" y="133" text-anchor="start" font-size="14">J</text>
+<text x="310" y="207" text-anchor="start" font-size="14">K</text>
+<text x="374" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="824" y="172" text-anchor="middle" font-size="26">B</text>
+<text x="792" y="133" text-anchor="start" font-size="14">J</text>
+<text x="792" y="207" text-anchor="start" font-size="14">K</text>
+<text x="856" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="856" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="1176" y="172" text-anchor="middle" font-size="26">C</text>
+<text x="1144" y="133" text-anchor="start" font-size="14">J</text>
+<text x="1144" y="207" text-anchor="start" font-size="14">K</text>
+<text x="1080" y="133" text-anchor="end" font-size="16">1</text>
+<text x="1080" y="207" text-anchor="end" font-size="16">1</text>
+<text x="1208" y="133" text-anchor="end" font-size="16">Q</text>
+<text x="1208" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="908" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1260" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="236" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับลงจาก $5$ ถึง $0$ แล้ววนกลับมาที่ $5$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=down6; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="300" viewBox="0 0 822 300" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="250"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="290"/>
+<line x1="280" y1="40" x2="280" y2="290"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">R</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">S</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">R</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">S</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">R</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">S</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="245" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="245" text-anchor="middle" font-size="16">1</text>
+<text x="522" y="245" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="275" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="275" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="275" text-anchor="middle" font-size="16">1</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="737" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="783" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(4) + d(1,2,3,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M195.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L195.5,101.5 M186.5,92.5 L186.5,65.5 M186.5,65.5 A9,9 0 0 1 195.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M195.5,101.5 A9,9 0 0 1 186.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$R_{A} = Q_{A}\overline{Q_{C}}$
+
+$S_{A} = \sum m(0) + d(5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+
+$S_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+
+$R_{B} = \sum m(2) + d(0,1,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,92.5 M168.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,92.5 A9,9 0 0 1 168.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+
+$R_{B} = \overline{Q_{A}}\overline{Q_{C}}$
+
+$S_{B} = \sum m(4) + d(3,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M195.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L195.5,101.5 M186.5,92.5 L186.5,65.5 M186.5,65.5 A9,9 0 0 1 195.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M195.5,101.5 A9,9 0 0 1 186.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$S_{B} = Q_{A}\overline{Q_{C}}$
+
+$R_{C} = \sum m(1,3,5) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,110.5 L276.5,110.5 M285.5,119.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,119.5 M78.5,119.5 A9,9 0 0 1 87.5,110.5 M276.5,110.5 A9,9 0 0 1 285.5,119.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $001,011,101,111$) : $Q_C=1 \Rightarrow Q_{C}$
+
+$R_{C} = Q_{C}$
+
+$S_{C} = \sum m(0,2,4) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010,100,110$) : $Q_C=0 \Rightarrow \overline{Q_{C}}$
+
+$S_{C} = \overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $110 \to 011$ ; $111 \to 110 \to 011$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= \overline{Q_{A}}\overline{Q_{C}} \\ S_{B} &= Q_{A}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="460" viewBox="0 0 1368 460" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="330" y="126" width="80" height="183" rx="2"/>
+<polyline points="330,208.5 342,217.5 330,226.5"/>
+<circle cx="326" cy="217.5" r="4"/>
+<line x1="322" y1="217.5" x2="308" y2="217.5"/>
+<line x1="308" y1="217.5" x2="308" y2="436"/>
+<path d="M234,120 H260 A26,44 0 0 1 260,208 H234 Z"/>
+<line x1="286" y1="164" x2="330" y2="164"/>
+<path d="M234,238 H260 A26,33 0 0 1 260,304 H234 Z"/>
+<path d="M286,271 L303.5,271 A4.5,4.5 0 0 1 312.5,271 L330,271"/>
+<line x1="410" y1="164" x2="454" y2="164"/>
+<line x1="410" y1="271" x2="454" y2="271"/>
+<line x1="393.2" y1="263.4" x2="402" y2="263.4" stroke-width="1.4"/>
+<rect x="818" y="126" width="80" height="183" rx="2"/>
+<polyline points="818,208.5 830,217.5 818,226.5"/>
+<circle cx="814" cy="217.5" r="4"/>
+<line x1="810" y1="217.5" x2="796" y2="217.5"/>
+<line x1="796" y1="217.5" x2="796" y2="436"/>
+<path d="M722,131 H748 A26,33 0 0 1 748,197 H722 Z"/>
+<line x1="774" y1="164" x2="818" y2="164"/>
+<path d="M722,238 H748 A26,33 0 0 1 748,304 H722 Z"/>
+<path d="M774,271 L791.5,271 A4.5,4.5 0 0 1 800.5,271 L818,271"/>
+<line x1="898" y1="164" x2="942" y2="164"/>
+<line x1="898" y1="271" x2="942" y2="271"/>
+<line x1="881.2" y1="263.4" x2="890" y2="263.4" stroke-width="1.4"/>
+<rect x="1172" y="126" width="80" height="183" rx="2"/>
+<polyline points="1172,208.5 1184,217.5 1172,226.5"/>
+<circle cx="1168" cy="217.5" r="4"/>
+<line x1="1164" y1="217.5" x2="1150" y2="217.5"/>
+<line x1="1150" y1="217.5" x2="1150" y2="436"/>
+<line x1="1252" y1="164" x2="1296" y2="164"/>
+<line x1="1252" y1="271" x2="1296" y2="271"/>
+<line x1="1235.2" y1="263.4" x2="1244" y2="263.4" stroke-width="1.4"/>
+<line x1="190" y1="72" x2="190" y2="260"/>
+<line x1="190" y1="260" x2="234" y2="260"/>
+<line x1="168" y1="386" x2="168" y2="282"/>
+<line x1="168" y1="282" x2="234" y2="282"/>
+<line x1="146" y1="386" x2="146" y2="186"/>
+<path d="M146,186 L185.5,186 A4.5,4.5 0 0 1 194.5,186 L234,186"/>
+<line x1="124" y1="360" x2="124" y2="164"/>
+<path d="M124,164 L185.5,164 A4.5,4.5 0 0 1 194.5,164 L234,164"/>
+<line x1="102" y1="334" x2="102" y2="142"/>
+<path d="M102,142 L185.5,142 A4.5,4.5 0 0 1 194.5,142 L234,142"/>
+<line x1="678" y1="72" x2="678" y2="153"/>
+<line x1="678" y1="153" x2="722" y2="153"/>
+<line x1="656" y1="386" x2="656" y2="282"/>
+<line x1="656" y1="282" x2="722" y2="282"/>
+<line x1="634" y1="334" x2="634" y2="260"/>
+<line x1="634" y1="260" x2="722" y2="260"/>
+<line x1="612" y1="386" x2="612" y2="175"/>
+<line x1="612" y1="175" x2="722" y2="175"/>
+<line x1="1128" y1="46" x2="1128" y2="271"/>
+<path d="M1128,271 L1145.5,271 A4.5,4.5 0 0 1 1154.5,271 L1172,271"/>
+<line x1="1106" y1="386" x2="1106" y2="164"/>
+<path d="M1106,164 L1123.5,164 A4.5,4.5 0 0 1 1132.5,164 L1172,164"/>
+<line x1="1128" y1="46" x2="1296" y2="46"/>
+<line x1="190" y1="72" x2="678" y2="72"/>
+<path d="M146,386 L303.5,386 A4.5,4.5 0 0 1 312.5,386 L791.5,386 A4.5,4.5 0 0 1 800.5,386 L1145.5,386 A4.5,4.5 0 0 1 1154.5,386 L1296,386"/>
+<path d="M124,360 L141.5,360 A4.5,4.5 0 0 1 150.5,360 L163.5,360 A4.5,4.5 0 0 1 172.5,360 L303.5,360 A4.5,4.5 0 0 1 312.5,360 L607.5,360 A4.5,4.5 0 0 1 616.5,360 L651.5,360 A4.5,4.5 0 0 1 660.5,360 L791.5,360 A4.5,4.5 0 0 1 800.5,360 L942,360"/>
+<path d="M102,334 L119.5,334 A4.5,4.5 0 0 1 128.5,334 L141.5,334 A4.5,4.5 0 0 1 150.5,334 L163.5,334 A4.5,4.5 0 0 1 172.5,334 L303.5,334 A4.5,4.5 0 0 1 312.5,334 L607.5,334 A4.5,4.5 0 0 1 616.5,334 L634,334"/>
+<line x1="454" y1="30" x2="454" y2="164"/>
+<line x1="454" y1="271" x2="454" y2="334"/>
+<line x1="942" y1="30" x2="942" y2="164"/>
+<line x1="942" y1="271" x2="942" y2="360"/>
+<line x1="1296" y1="30" x2="1296" y2="164"/>
+<line x1="1296" y1="271" x2="1296" y2="386"/>
+<line x1="268" y1="436" x2="1150" y2="436"/>
+<circle cx="308" cy="436" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="796" cy="436" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1296" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="454" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="656" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="612" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1106" cy="386" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="454" cy="334" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="370" y="225.5" text-anchor="middle" font-size="26">A</text>
+<text x="338" y="170" text-anchor="start" font-size="14">S</text>
+<text x="338" y="277" text-anchor="start" font-size="14">R</text>
+<text x="402" y="170" text-anchor="end" font-size="16">Q</text>
+<text x="402" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="858" y="225.5" text-anchor="middle" font-size="26">B</text>
+<text x="826" y="170" text-anchor="start" font-size="14">S</text>
+<text x="826" y="277" text-anchor="start" font-size="14">R</text>
+<text x="890" y="170" text-anchor="end" font-size="16">Q</text>
+<text x="890" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="1212" y="225.5" text-anchor="middle" font-size="26">C</text>
+<text x="1180" y="170" text-anchor="start" font-size="14">S</text>
+<text x="1180" y="277" text-anchor="start" font-size="14">R</text>
+<text x="1244" y="170" text-anchor="end" font-size="16">Q</text>
+<text x="1244" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="454" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="942" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1296" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="264" y="442" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับลงจาก $5$ ถึง $0$ แล้ววนกลับมาที่ $5$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=down6; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="314" viewBox="0 0 644 314" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="264"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="304"/>
+<line x1="280" y1="40" x2="280" y2="304"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">D</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">D</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">D</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(0,5) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,114 L273,114 M282,123 L282,143 M273,152 L199,152 M190,143 L190,123 M190,123 A9,9 0 0 1 199,114 M273,114 A9,9 0 0 1 282,123 M282,143 A9,9 0 0 1 273,152 M199,152 A9,9 0 0 1 190,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="121" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $101,111$) : $Q_A=1,\ Q_C=1 \Rightarrow Q_{A}Q_{C}$
+
+$D_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C}$
+
+$D_{B} = \sum m(3,4) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,110.5 L222.5,110.5 M231.5,119.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,119.5 M132.5,119.5 A9,9 0 0 1 141.5,110.5 M222.5,110.5 A9,9 0 0 1 231.5,119.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="121" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L273,60 M282,69 L282,89 M273,98 L199,98 M190,89 L190,69 M190,69 A9,9 0 0 1 199,60 M273,60 A9,9 0 0 1 282,69 M282,89 A9,9 0 0 1 273,98 M199,98 A9,9 0 0 1 190,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
+- ลูปสีน้ำเงิน (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$D_{B} = Q_{B}Q_{C} + Q_{A}\overline{Q_{C}}$
+
+$D_{C} = \sum m(0,2,4) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,92.5 M276.5,101.5 L87.5,101.5 M78.5,92.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,92.5 A9,9 0 0 1 276.5,101.5 M87.5,101.5 A9,9 0 0 1 78.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,010,100,110$) : $Q_C=0 \Rightarrow \overline{Q_{C}}$
+
+$D_{C} = \overline{Q_{C}}$
+
+ตรวจสถานะที่ไม่ใช้ : $110 \to 011$ ; $111 \to 110 \to 011$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="505" viewBox="0 0 1638 505" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="476" y="207" width="80" height="150" rx="2"/>
+<polyline points="476,303 488,312 476,321"/>
+<line x1="476" y1="312" x2="454" y2="312"/>
+<line x1="454" y1="312" x2="454" y2="481"/>
+<path d="M372,212 C394,212 420,228.5 432,245 C420,261.5 394,278 372,278 Q386,245 372,212 Z"/>
+<path d="M240,146 H266 A26,44 0 0 1 266,234 H240 Z"/>
+<line x1="292" y1="190" x2="354" y2="190"/>
+<line x1="354" y1="190" x2="354" y2="234"/>
+<line x1="354" y1="234" x2="378.2" y2="234"/>
+<path d="M240,267 H266 A26,33 0 0 1 266,333 H240 Z"/>
+<line x1="292" y1="300" x2="334" y2="300"/>
+<line x1="334" y1="300" x2="334" y2="256"/>
+<line x1="334" y1="256" x2="378.2" y2="256"/>
+<line x1="432" y1="245" x2="476" y2="245"/>
+<line x1="556" y1="245" x2="600" y2="245"/>
+<line x1="556" y1="319" x2="600" y2="319"/>
+<line x1="539.2" y1="311.4" x2="548" y2="311.4" stroke-width="1.4"/>
+<rect x="1110" y="207" width="80" height="150" rx="2"/>
+<polyline points="1110,303 1122,312 1110,321"/>
+<line x1="1110" y1="312" x2="1088" y2="312"/>
+<line x1="1088" y1="312" x2="1088" y2="481"/>
+<path d="M1006,212 C1028,212 1054,228.5 1066,245 C1054,261.5 1028,278 1006,278 Q1020,245 1006,212 Z"/>
+<path d="M874,168 H900 A26,33 0 0 1 900,234 H874 Z"/>
+<line x1="926" y1="201" x2="988" y2="201"/>
+<line x1="988" y1="201" x2="988" y2="234"/>
+<line x1="988" y1="234" x2="1012.2" y2="234"/>
+<path d="M874,256 H900 A26,33 0 0 1 900,322 H874 Z"/>
+<line x1="926" y1="289" x2="968" y2="289"/>
+<line x1="968" y1="289" x2="968" y2="256"/>
+<line x1="968" y1="256" x2="1012.2" y2="256"/>
+<line x1="1066" y1="245" x2="1110" y2="245"/>
+<line x1="1190" y1="245" x2="1234" y2="245"/>
+<line x1="1190" y1="319" x2="1234" y2="319"/>
+<line x1="1173.2" y1="311.4" x2="1182" y2="311.4" stroke-width="1.4"/>
+<rect x="1442" y="207" width="80" height="150" rx="2"/>
+<polyline points="1442,303 1454,312 1442,321"/>
+<line x1="1442" y1="312" x2="1420" y2="312"/>
+<line x1="1420" y1="312" x2="1420" y2="481"/>
+<line x1="1522" y1="245" x2="1566" y2="245"/>
+<line x1="1522" y1="319" x2="1566" y2="319"/>
+<line x1="1505.2" y1="311.4" x2="1514" y2="311.4" stroke-width="1.4"/>
+<line x1="196" y1="98" x2="196" y2="289"/>
+<line x1="196" y1="289" x2="240" y2="289"/>
+<line x1="174" y1="46" x2="174" y2="311"/>
+<line x1="174" y1="311" x2="240" y2="311"/>
+<line x1="152" y1="431" x2="152" y2="212"/>
+<path d="M152,212 L169.5,212 A4.5,4.5 0 0 1 178.5,212 L191.5,212 A4.5,4.5 0 0 1 200.5,212 L240,212"/>
+<line x1="130" y1="405" x2="130" y2="190"/>
+<path d="M130,190 L169.5,190 A4.5,4.5 0 0 1 178.5,190 L191.5,190 A4.5,4.5 0 0 1 200.5,190 L240,190"/>
+<line x1="108" y1="379" x2="108" y2="168"/>
+<path d="M108,168 L169.5,168 A4.5,4.5 0 0 1 178.5,168 L191.5,168 A4.5,4.5 0 0 1 200.5,168 L240,168"/>
+<line x1="830" y1="72" x2="830" y2="190"/>
+<line x1="830" y1="190" x2="874" y2="190"/>
+<line x1="808" y1="46" x2="808" y2="212"/>
+<line x1="808" y1="212" x2="874" y2="212"/>
+<line x1="786" y1="98" x2="786" y2="278"/>
+<line x1="786" y1="278" x2="874" y2="278"/>
+<line x1="764" y1="431" x2="764" y2="300"/>
+<line x1="764" y1="300" x2="874" y2="300"/>
+<line x1="1398" y1="431" x2="1398" y2="245"/>
+<line x1="1398" y1="245" x2="1442" y2="245"/>
+<path d="M174,46 L595.5,46 A4.5,4.5 0 0 1 604.5,46 L1229.5,46 A4.5,4.5 0 0 1 1238.5,46 L1566,46"/>
+<line x1="830" y1="72" x2="1234" y2="72"/>
+<line x1="196" y1="98" x2="786" y2="98"/>
+<path d="M152,431 L449.5,431 A4.5,4.5 0 0 1 458.5,431 L1083.5,431 A4.5,4.5 0 0 1 1092.5,431 L1415.5,431 A4.5,4.5 0 0 1 1424.5,431 L1566,431"/>
+<path d="M130,405 L147.5,405 A4.5,4.5 0 0 1 156.5,405 L449.5,405 A4.5,4.5 0 0 1 458.5,405 L759.5,405 A4.5,4.5 0 0 1 768.5,405 L1083.5,405 A4.5,4.5 0 0 1 1092.5,405 L1234,405"/>
+<path d="M108,379 L125.5,379 A4.5,4.5 0 0 1 134.5,379 L147.5,379 A4.5,4.5 0 0 1 156.5,379 L449.5,379 A4.5,4.5 0 0 1 458.5,379 L600,379"/>
+<line x1="600" y1="30" x2="600" y2="245"/>
+<line x1="600" y1="319" x2="600" y2="379"/>
+<line x1="1234" y1="30" x2="1234" y2="245"/>
+<line x1="1234" y1="319" x2="1234" y2="405"/>
+<line x1="1566" y1="30" x2="1566" y2="245"/>
+<line x1="1566" y1="319" x2="1566" y2="431"/>
+<line x1="414" y1="481" x2="1420" y2="481"/>
+<circle cx="454" cy="481" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1088" cy="481" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1566" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="808" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="600" cy="98" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="431" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1398" cy="431" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="516" y="290" text-anchor="middle" font-size="26">A</text>
+<text x="484" y="251" text-anchor="start" font-size="14">D</text>
+<text x="548" y="251" text-anchor="end" font-size="16">Q</text>
+<text x="548" y="325" text-anchor="end" font-size="16">Q</text>
+<text x="1150" y="290" text-anchor="middle" font-size="26">B</text>
+<text x="1118" y="251" text-anchor="start" font-size="14">D</text>
+<text x="1182" y="251" text-anchor="end" font-size="16">Q</text>
+<text x="1182" y="325" text-anchor="end" font-size="16">Q</text>
+<text x="1482" y="290" text-anchor="middle" font-size="26">C</text>
+<text x="1450" y="251" text-anchor="start" font-size="14">D</text>
+<text x="1514" y="251" text-anchor="end" font-size="16">Q</text>
+<text x="1514" y="325" text-anchor="end" font-size="16">Q</text>
+<text x="600" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="1234" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1566" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="410" y="487" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับลงจาก $5$ ถึง $0$ แล้ววนกลับมาที่ $5$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=down6; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="314" viewBox="0 0 644 314" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="264"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="304"/>
+<line x1="280" y1="40" x2="280" y2="304"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">T</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">T</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">T</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="259" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="259" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="289" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="289" text-anchor="middle" font-size="16">1</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(0,4) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,92.5 M114.5,101.5 L74,101.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,92.5 A9,9 0 0 1 114.5,101.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,101.5 L249.5,101.5 M240.5,92.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,101.5 A9,9 0 0 1 240.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+
+$T_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+
+$T_{B} = \sum m(2,4) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,92.5 M222.5,101.5 L141.5,101.5 M132.5,92.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,92.5 A9,9 0 0 1 222.5,101.5 M141.5,101.5 A9,9 0 0 1 132.5,92.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M199,60 L273,60 M282,69 L282,89 M273,98 L199,98 M190,89 L190,69 M190,69 A9,9 0 0 1 199,60 M273,60 A9,9 0 0 1 282,69 M282,89 A9,9 0 0 1 273,98 M199,98 A9,9 0 0 1 190,89" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $100,110$) : $Q_A=1,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{C}}$
+
+$T_{B} = Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{C}}$
+
+$T_{C} = \sum m(0,1,2,3,4,5) + d(6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$T_{C} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $110 \to 101$ ; $111 \to 110 \to 101$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1446" height="431" viewBox="0 0 1446 431" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="264" y="159" width="80" height="150" rx="2"/>
+<polyline points="264,255 276,264 264,273"/>
+<line x1="264" y1="264" x2="242" y2="264"/>
+<line x1="242" y1="264" x2="242" y2="407"/>
+<path d="M168,164 H194 A26,33 0 0 1 194,230 H168 Z"/>
+<line x1="220" y1="197" x2="264" y2="197"/>
+<line x1="344" y1="197" x2="388" y2="197"/>
+<line x1="344" y1="271" x2="388" y2="271"/>
+<line x1="327.2" y1="263.4" x2="336" y2="263.4" stroke-width="1.4"/>
+<rect x="898" y="159" width="80" height="150" rx="2"/>
+<polyline points="898,255 910,264 898,273"/>
+<line x1="898" y1="264" x2="876" y2="264"/>
+<line x1="876" y1="264" x2="876" y2="407"/>
+<path d="M794,164 C816,164 842,180.5 854,197 C842,213.5 816,230 794,230 Q808,197 794,164 Z"/>
+<path d="M662,120 H688 A26,33 0 0 1 688,186 H662 Z"/>
+<line x1="714" y1="153" x2="776" y2="153"/>
+<line x1="776" y1="153" x2="776" y2="186"/>
+<line x1="776" y1="186" x2="800.2" y2="186"/>
+<path d="M662,208 H688 A26,33 0 0 1 688,274 H662 Z"/>
+<line x1="714" y1="241" x2="756" y2="241"/>
+<line x1="756" y1="241" x2="756" y2="208"/>
+<line x1="756" y1="208" x2="800.2" y2="208"/>
+<line x1="854" y1="197" x2="898" y2="197"/>
+<line x1="978" y1="197" x2="1022" y2="197"/>
+<line x1="978" y1="271" x2="1022" y2="271"/>
+<line x1="961.2" y1="263.4" x2="970" y2="263.4" stroke-width="1.4"/>
+<rect x="1250" y="159" width="80" height="150" rx="2"/>
+<polyline points="1250,255 1262,264 1250,273"/>
+<line x1="1250" y1="264" x2="1228" y2="264"/>
+<line x1="1228" y1="264" x2="1228" y2="407"/>
+<line x1="1198" y1="197" x2="1250" y2="197"/>
+<line x1="1330" y1="197" x2="1374" y2="197"/>
+<line x1="1330" y1="271" x2="1374" y2="271"/>
+<line x1="1313.2" y1="263.4" x2="1322" y2="263.4" stroke-width="1.4"/>
+<line x1="124" y1="357" x2="124" y2="208"/>
+<line x1="124" y1="208" x2="168" y2="208"/>
+<line x1="102" y1="331" x2="102" y2="186"/>
+<line x1="102" y1="186" x2="168" y2="186"/>
+<line x1="618" y1="46" x2="618" y2="142"/>
+<line x1="618" y1="142" x2="662" y2="142"/>
+<line x1="596" y1="72" x2="596" y2="230"/>
+<line x1="596" y1="230" x2="662" y2="230"/>
+<line x1="574" y1="357" x2="574" y2="252"/>
+<line x1="574" y1="252" x2="662" y2="252"/>
+<line x1="552" y1="357" x2="552" y2="164"/>
+<path d="M552,164 L591.5,164 A4.5,4.5 0 0 1 600.5,164 L662,164"/>
+<line x1="618" y1="46" x2="1022" y2="46"/>
+<line x1="388" y1="72" x2="596" y2="72"/>
+<path d="M124,357 L237.5,357 A4.5,4.5 0 0 1 246.5,357 L871.5,357 A4.5,4.5 0 0 1 880.5,357 L1223.5,357 A4.5,4.5 0 0 1 1232.5,357 L1374,357"/>
+<path d="M102,331 L119.5,331 A4.5,4.5 0 0 1 128.5,331 L237.5,331 A4.5,4.5 0 0 1 246.5,331 L547.5,331 A4.5,4.5 0 0 1 556.5,331 L569.5,331 A4.5,4.5 0 0 1 578.5,331 L871.5,331 A4.5,4.5 0 0 1 880.5,331 L1022,331"/>
+<line x1="388" y1="30" x2="388" y2="197"/>
+<line x1="1022" y1="30" x2="1022" y2="197"/>
+<line x1="1022" y1="271" x2="1022" y2="331"/>
+<line x1="1374" y1="30" x2="1374" y2="197"/>
+<line x1="1374" y1="271" x2="1374" y2="357"/>
+<line x1="202" y1="407" x2="1228" y2="407"/>
+<circle cx="242" cy="407" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="876" cy="407" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1022" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="388" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="574" cy="357" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="552" cy="357" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="304" y="242" text-anchor="middle" font-size="26">A</text>
+<text x="272" y="203" text-anchor="start" font-size="14">T</text>
+<text x="336" y="203" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="938" y="242" text-anchor="middle" font-size="26">B</text>
+<text x="906" y="203" text-anchor="start" font-size="14">T</text>
+<text x="970" y="203" text-anchor="end" font-size="16">Q</text>
+<text x="970" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="1290" y="242" text-anchor="middle" font-size="26">C</text>
+<text x="1258" y="203" text-anchor="start" font-size="14">T</text>
+<text x="1194" y="203" text-anchor="end" font-size="16">1</text>
+<text x="1322" y="203" text-anchor="end" font-size="16">Q</text>
+<text x="1322" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="1022" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1374" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="198" y="413" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $1, 3, 5, 7$ และวนกลับมาที่ $1$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น don't care condition {seq=odd4; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="240" viewBox="0 0 822 240" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="190"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="230"/>
+<line x1="280" y1="40" x2="280" y2="230"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">J</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">K</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">J</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">K</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">J</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">K</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="737" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="783" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(3) + d(0,2,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$J_{A} = Q_{B}$
+
+$K_{A} = \sum m(7) + d(0,1,2,3,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$K_{A} = Q_{B}$
+
+$J_{B} = \sum m(1,5) + d(0,2,3,4,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$J_{B} = 1$
+
+$K_{B} = \sum m(3,7) + d(0,1,2,4,5,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{B} = 1$
+
+$J_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$J_{C} = 0$
+
+$K_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$K_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $000 \to 010 \to 100 \to 110 \to 000$ (วนอยู่นอกลำดับ) ; $010 \to 100 \to 110 \to 000 \to 010$ (วนอยู่นอกลำดับ) ; $100 \to 110 \to 000 \to 010 \to 100$ (วนอยู่นอกลำดับ) ; $110 \to 000 \to 010 \to 100 \to 110$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $001$
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1 \\ J_{C} = K_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="306" viewBox="0 0 1074 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="174" y="86" width="80" height="150" rx="2"/>
+<polyline points="174,152 186,161 174,170"/>
+<circle cx="170" cy="161" r="4"/>
+<line x1="166" y1="161" x2="152" y2="161"/>
+<line x1="152" y1="161" x2="152" y2="282"/>
+<line x1="128" y1="161" x2="128" y2="124"/>
+<line x1="128" y1="124" x2="174" y2="124"/>
+<line x1="128" y1="161" x2="128" y2="198"/>
+<path d="M128,198 L147.5,198 A4.5,4.5 0 0 1 156.5,198 L174,198"/>
+<line x1="254" y1="124" x2="298" y2="124"/>
+<line x1="254" y1="198" x2="298" y2="198"/>
+<line x1="237.2" y1="190.4" x2="246" y2="190.4" stroke-width="1.4"/>
+<rect x="526" y="86" width="80" height="150" rx="2"/>
+<polyline points="526,152 538,161 526,170"/>
+<circle cx="522" cy="161" r="4"/>
+<line x1="518" y1="161" x2="504" y2="161"/>
+<line x1="504" y1="161" x2="504" y2="282"/>
+<line x1="474" y1="124" x2="526" y2="124"/>
+<path d="M474,198 L499.5,198 A4.5,4.5 0 0 1 508.5,198 L526,198"/>
+<line x1="606" y1="124" x2="650" y2="124"/>
+<line x1="606" y1="198" x2="650" y2="198"/>
+<line x1="589.2" y1="190.4" x2="598" y2="190.4" stroke-width="1.4"/>
+<rect x="878" y="86" width="80" height="150" rx="2"/>
+<polyline points="878,152 890,161 878,170"/>
+<circle cx="874" cy="161" r="4"/>
+<line x1="870" y1="161" x2="856" y2="161"/>
+<line x1="856" y1="161" x2="856" y2="282"/>
+<line x1="826" y1="124" x2="878" y2="124"/>
+<path d="M826,198 L851.5,198 A4.5,4.5 0 0 1 860.5,198 L878,198"/>
+<line x1="958" y1="124" x2="1002" y2="124"/>
+<line x1="958" y1="198" x2="1002" y2="198"/>
+<line x1="941.2" y1="190.4" x2="950" y2="190.4" stroke-width="1.4"/>
+<line x1="84" y1="46" x2="84" y2="161"/>
+<line x1="84" y1="161" x2="128" y2="161"/>
+<path d="M84,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L650,46"/>
+<line x1="298" y1="30" x2="298" y2="124"/>
+<line x1="650" y1="30" x2="650" y2="124"/>
+<line x1="1002" y1="30" x2="1002" y2="124"/>
+<line x1="112" y1="282" x2="856" y2="282"/>
+<circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="504" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="214" y="169" text-anchor="middle" font-size="26">A</text>
+<text x="182" y="130" text-anchor="start" font-size="14">J</text>
+<text x="182" y="204" text-anchor="start" font-size="14">K</text>
+<text x="246" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="566" y="169" text-anchor="middle" font-size="26">B</text>
+<text x="534" y="130" text-anchor="start" font-size="14">J</text>
+<text x="534" y="204" text-anchor="start" font-size="14">K</text>
+<text x="470" y="130" text-anchor="end" font-size="16">1</text>
+<text x="470" y="204" text-anchor="end" font-size="16">1</text>
+<text x="598" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="598" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="918" y="169" text-anchor="middle" font-size="26">C</text>
+<text x="886" y="130" text-anchor="start" font-size="14">J</text>
+<text x="886" y="204" text-anchor="start" font-size="14">K</text>
+<text x="822" y="130" text-anchor="end" font-size="16">0</text>
+<text x="822" y="204" text-anchor="end" font-size="16">0</text>
+<text x="950" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="950" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="650" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1002" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="108" y="288" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ที่มีลำดับการนับเรียงตามนี้ $1, 3, 5, 7$ และวนกลับมาที่ $1$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น don't care condition {seq=odd4; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="240" viewBox="0 0 822 240" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="190"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="230"/>
+<line x1="280" y1="40" x2="280" y2="230"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">R</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">S</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">R</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">S</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">R</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">S</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="737" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="783" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(7) + d(0,1,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M195.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L195.5,155.5 M186.5,146.5 L186.5,65.5 M186.5,65.5 A9,9 0 0 1 195.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M195.5,155.5 A9,9 0 0 1 186.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
+
+$R_{A} = Q_{A}Q_{B}$
+
+$S_{A} = \sum m(3) + d(0,2,4,5,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+<path d="M141.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011$) : $Q_A=0,\ Q_B=1 \Rightarrow \overline{Q_{A}}Q_{B}$
+
+$S_{A} = \overline{Q_{A}}Q_{B}$
+
+$R_{B} = \sum m(3,7) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$R_{B} = Q_{B}$
+
+$S_{B} = \sum m(1,5) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$S_{B} = \overline{Q_{B}}$
+
+$R_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$R_{C} = 0$
+
+$S_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$S_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $000 \to 010 \to 100 \to 110 \to 000$ (วนอยู่นอกลำดับ) ; $010 \to 100 \to 110 \to 000 \to 010$ (วนอยู่นอกลำดับ) ; $100 \to 110 \to 000 \to 010 \to 100$ (วนอยู่นอกลำดับ) ; $110 \to 000 \to 010 \to 100 \to 110$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $001$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}} \\ R_{C} &= 0 \\ S_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="412" viewBox="0 0 1210 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="308" y="115" width="80" height="172" rx="2"/>
+<polyline points="308,192 320,201 308,210"/>
+<circle cx="304" cy="201" r="4"/>
+<line x1="300" y1="201" x2="286" y2="201"/>
+<line x1="286" y1="201" x2="286" y2="388"/>
+<path d="M212,120 H238 A26,33 0 0 1 238,186 H212 Z"/>
+<line x1="264" y1="153" x2="308" y2="153"/>
+<path d="M212,216 H238 A26,33 0 0 1 238,282 H212 Z"/>
+<path d="M264,249 L281.5,249 A4.5,4.5 0 0 1 290.5,249 L308,249"/>
+<line x1="388" y1="153" x2="432" y2="153"/>
+<line x1="388" y1="249" x2="432" y2="249"/>
+<line x1="371.2" y1="241.4" x2="380" y2="241.4" stroke-width="1.4"/>
+<rect x="662" y="115" width="80" height="172" rx="2"/>
+<polyline points="662,192 674,201 662,210"/>
+<circle cx="658" cy="201" r="4"/>
+<line x1="654" y1="201" x2="640" y2="201"/>
+<line x1="640" y1="201" x2="640" y2="388"/>
+<line x1="742" y1="153" x2="786" y2="153"/>
+<line x1="742" y1="249" x2="786" y2="249"/>
+<line x1="725.2" y1="241.4" x2="734" y2="241.4" stroke-width="1.4"/>
+<rect x="1014" y="115" width="80" height="172" rx="2"/>
+<polyline points="1014,192 1026,201 1014,210"/>
+<circle cx="1010" cy="201" r="4"/>
+<line x1="1006" y1="201" x2="992" y2="201"/>
+<line x1="992" y1="201" x2="992" y2="388"/>
+<line x1="962" y1="153" x2="1014" y2="153"/>
+<path d="M962,249 L987.5,249 A4.5,4.5 0 0 1 996.5,249 L1014,249"/>
+<line x1="1094" y1="153" x2="1138" y2="153"/>
+<line x1="1094" y1="249" x2="1138" y2="249"/>
+<line x1="1077.2" y1="241.4" x2="1086" y2="241.4" stroke-width="1.4"/>
+<line x1="168" y1="46" x2="168" y2="164"/>
+<line x1="168" y1="164" x2="212" y2="164"/>
+<line x1="146" y1="72" x2="146" y2="238"/>
+<line x1="146" y1="238" x2="212" y2="238"/>
+<line x1="124" y1="46" x2="124" y2="260"/>
+<line x1="124" y1="260" x2="212" y2="260"/>
+<line x1="102" y1="312" x2="102" y2="142"/>
+<path d="M102,142 L119.5,142 A4.5,4.5 0 0 1 128.5,142 L141.5,142 A4.5,4.5 0 0 1 150.5,142 L163.5,142 A4.5,4.5 0 0 1 172.5,142 L212,142"/>
+<line x1="618" y1="46" x2="618" y2="249"/>
+<path d="M618,249 L635.5,249 A4.5,4.5 0 0 1 644.5,249 L662,249"/>
+<line x1="596" y1="338" x2="596" y2="153"/>
+<path d="M596,153 L613.5,153 A4.5,4.5 0 0 1 622.5,153 L662,153"/>
+<path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L786,46"/>
+<path d="M146,72 L163.5,72 A4.5,4.5 0 0 1 172.5,72 L432,72"/>
+<path d="M596,338 L635.5,338 A4.5,4.5 0 0 1 644.5,338 L786,338"/>
+<path d="M102,312 L281.5,312 A4.5,4.5 0 0 1 290.5,312 L432,312"/>
+<line x1="432" y1="30" x2="432" y2="153"/>
+<line x1="432" y1="249" x2="432" y2="312"/>
+<line x1="786" y1="30" x2="786" y2="153"/>
+<line x1="786" y1="249" x2="786" y2="338"/>
+<line x1="1138" y1="30" x2="1138" y2="153"/>
+<line x1="246" y1="388" x2="992" y2="388"/>
+<circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="348" y="209" text-anchor="middle" font-size="26">A</text>
+<text x="316" y="159" text-anchor="start" font-size="14">S</text>
+<text x="316" y="255" text-anchor="start" font-size="14">R</text>
+<text x="380" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="209" text-anchor="middle" font-size="26">B</text>
+<text x="670" y="159" text-anchor="start" font-size="14">S</text>
+<text x="670" y="255" text-anchor="start" font-size="14">R</text>
+<text x="734" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="209" text-anchor="middle" font-size="26">C</text>
+<text x="1022" y="159" text-anchor="start" font-size="14">S</text>
+<text x="1022" y="255" text-anchor="start" font-size="14">R</text>
+<text x="958" y="159" text-anchor="end" font-size="16">0</text>
+<text x="958" y="255" text-anchor="end" font-size="16">0</text>
+<text x="1086" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="242" y="394" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $1, 3, 5, 7$ และวนกลับมาที่ $1$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น don't care condition {seq=odd4; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="254" viewBox="0 0 644 254" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="204"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="244"/>
+<line x1="280" y1="40" x2="280" y2="244"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">D</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">D</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">D</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(3,5) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+<path d="M141.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M253,60 L273,60 M282,69 L282,143 M273,152 L253,152 M244,143 L244,69 M244,69 A9,9 0 0 1 253,60 M273,60 A9,9 0 0 1 282,69 M282,143 A9,9 0 0 1 273,152 M253,152 A9,9 0 0 1 244,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="239" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011$) : $Q_A=0,\ Q_B=1 \Rightarrow \overline{Q_{A}}Q_{B}$
+- ลูปสีน้ำเงิน (สถานะ $100,101$) : $Q_A=1,\ Q_B=0 \Rightarrow Q_{A}\overline{Q_{B}}$
+
+$D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
+
+$D_{B} = \sum m(1,5) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$D_{B} = \overline{Q_{B}}$
+
+$D_{C} = \sum m(1,3,5,7) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$D_{C} = 1$
+
+ตรวจสถานะที่ไม่ใช้ : $000 \to 011$ ; $010 \to 101$ ; $100 \to 111$ ; $110 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}} \\ D_{C} &= 1\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="361" viewBox="0 0 1160 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="280" y="115" width="80" height="150" rx="2"/>
+<polyline points="280,211 292,220 280,229"/>
+<line x1="280" y1="220" x2="258" y2="220"/>
+<line x1="258" y1="220" x2="258" y2="337"/>
+<path d="M176,120 C198,120 224,136.5 236,153 C224,169.5 198,186 176,186 Q190,153 176,120 Z"/>
+<path d="M168,120 Q182,153 168,186"/>
+<line x1="236" y1="153" x2="280" y2="153"/>
+<line x1="360" y1="153" x2="404" y2="153"/>
+<line x1="360" y1="227" x2="404" y2="227"/>
+<line x1="343.2" y1="219.4" x2="352" y2="219.4" stroke-width="1.4"/>
+<rect x="612" y="115" width="80" height="150" rx="2"/>
+<polyline points="612,211 624,220 612,229"/>
+<line x1="612" y1="220" x2="590" y2="220"/>
+<line x1="590" y1="220" x2="590" y2="337"/>
+<line x1="692" y1="153" x2="736" y2="153"/>
+<line x1="692" y1="227" x2="736" y2="227"/>
+<line x1="675.2" y1="219.4" x2="684" y2="219.4" stroke-width="1.4"/>
+<rect x="964" y="115" width="80" height="150" rx="2"/>
+<polyline points="964,211 976,220 964,229"/>
+<line x1="964" y1="220" x2="942" y2="220"/>
+<line x1="942" y1="220" x2="942" y2="337"/>
+<line x1="912" y1="153" x2="964" y2="153"/>
+<line x1="1044" y1="153" x2="1088" y2="153"/>
+<line x1="1044" y1="227" x2="1088" y2="227"/>
+<line x1="1027.2" y1="219.4" x2="1036" y2="219.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="142"/>
+<line x1="130.2" y1="142" x2="174.2" y2="142"/>
+<line x1="108.2" y1="46" x2="108.2" y2="164"/>
+<line x1="108.2" y1="164" x2="174.2" y2="164"/>
+<line x1="568" y1="287" x2="568" y2="153"/>
+<line x1="568" y1="153" x2="612" y2="153"/>
+<path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L736,46"/>
+<line x1="130.2" y1="72" x2="404" y2="72"/>
+<path d="M568,287 L585.5,287 A4.5,4.5 0 0 1 594.5,287 L736,287"/>
+<line x1="404" y1="30" x2="404" y2="153"/>
+<line x1="736" y1="30" x2="736" y2="153"/>
+<line x1="736" y1="227" x2="736" y2="287"/>
+<line x1="1088" y1="30" x2="1088" y2="153"/>
+<line x1="218" y1="337" x2="942" y2="337"/>
+<circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="320" y="198" text-anchor="middle" font-size="26">A</text>
+<text x="288" y="159" text-anchor="start" font-size="14">D</text>
+<text x="352" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="652" y="198" text-anchor="middle" font-size="26">B</text>
+<text x="620" y="159" text-anchor="start" font-size="14">D</text>
+<text x="684" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="684" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="1004" y="198" text-anchor="middle" font-size="26">C</text>
+<text x="972" y="159" text-anchor="start" font-size="14">D</text>
+<text x="908" y="159" text-anchor="end" font-size="16">1</text>
+<text x="1036" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1036" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="736" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1088" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="214" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $1, 3, 5, 7$ และวนกลับมาที่ $1$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น don't care condition {seq=odd4; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($000$, $010$, $100$, $110$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="254" viewBox="0 0 644 254" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="204"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="244"/>
+<line x1="280" y1="40" x2="280" y2="244"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">T</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">T</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">T</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(3,7) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$T_{A} = Q_{B}$
+
+$T_{B} = \sum m(1,3,5,7) + d(0,2,4,6)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">1</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$T_{B} = 1$
+
+$T_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">0</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$T_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $000 \to 010 \to 100 \to 110 \to 000$ (วนอยู่นอกลำดับ) ; $010 \to 100 \to 110 \to 000 \to 010$ (วนอยู่นอกลำดับ) ; $100 \to 110 \to 000 \to 010 \to 100$ (วนอยู่นอกลำดับ) ; $110 \to 000 \to 010 \to 100 \to 110$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $001$
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1 \\ T_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="306" viewBox="0 0 1052 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="152" y="86" width="80" height="150" rx="2"/>
+<polyline points="152,182 164,191 152,200"/>
+<line x1="152" y1="191" x2="130" y2="191"/>
+<line x1="130" y1="191" x2="130" y2="282"/>
+<line x1="232" y1="124" x2="276" y2="124"/>
+<line x1="232" y1="198" x2="276" y2="198"/>
+<line x1="215.2" y1="190.4" x2="224" y2="190.4" stroke-width="1.4"/>
+<rect x="504" y="86" width="80" height="150" rx="2"/>
+<polyline points="504,182 516,191 504,200"/>
+<line x1="504" y1="191" x2="482" y2="191"/>
+<line x1="482" y1="191" x2="482" y2="282"/>
+<line x1="452" y1="124" x2="504" y2="124"/>
+<line x1="584" y1="124" x2="628" y2="124"/>
+<line x1="584" y1="198" x2="628" y2="198"/>
+<line x1="567.2" y1="190.4" x2="576" y2="190.4" stroke-width="1.4"/>
+<rect x="856" y="86" width="80" height="150" rx="2"/>
+<polyline points="856,182 868,191 856,200"/>
+<line x1="856" y1="191" x2="834" y2="191"/>
+<line x1="834" y1="191" x2="834" y2="282"/>
+<line x1="804" y1="124" x2="856" y2="124"/>
+<line x1="936" y1="124" x2="980" y2="124"/>
+<line x1="936" y1="198" x2="980" y2="198"/>
+<line x1="919.2" y1="190.4" x2="928" y2="190.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="124"/>
+<line x1="108" y1="124" x2="152" y2="124"/>
+<path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L628,46"/>
+<line x1="276" y1="30" x2="276" y2="124"/>
+<line x1="628" y1="30" x2="628" y2="124"/>
+<line x1="980" y1="30" x2="980" y2="124"/>
+<line x1="90" y1="282" x2="834" y2="282"/>
+<circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="482" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="192" y="169" text-anchor="middle" font-size="26">A</text>
+<text x="160" y="130" text-anchor="start" font-size="14">T</text>
+<text x="224" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="544" y="169" text-anchor="middle" font-size="26">B</text>
+<text x="512" y="130" text-anchor="start" font-size="14">T</text>
+<text x="448" y="130" text-anchor="end" font-size="16">1</text>
+<text x="576" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="576" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="896" y="169" text-anchor="middle" font-size="26">C</text>
+<text x="864" y="130" text-anchor="start" font-size="14">T</text>
+<text x="800" y="130" text-anchor="end" font-size="16">0</text>
+<text x="928" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="928" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="628" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="980" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="86" y="288" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น don't care condition {seq=even4; ff=jk}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="240" viewBox="0 0 822 240" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="190"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="230"/>
+<line x1="280" y1="40" x2="280" y2="230"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">J</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">K</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">J</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">K</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">J</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">K</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="478" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="522" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">J</text>
+<text x="737" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="145" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">K</text>
+<text x="783" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="118" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$J_{A} = \sum m(2) + d(1,3,4,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$J_{A} = Q_{B}$
+
+$K_{A} = \sum m(6) + d(0,1,2,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$K_{A} = Q_{B}$
+
+$J_{B} = \sum m(0,4) + d(1,2,3,5,6,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$J_{B} = 1$
+
+$K_{B} = \sum m(2,6) + d(0,1,3,4,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$K_{B} = 1$
+
+$J_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$J_{C} = 0$
+
+$K_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$K_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $001 \to 011 \to 101 \to 111 \to 001$ (วนอยู่นอกลำดับ) ; $011 \to 101 \to 111 \to 001 \to 011$ (วนอยู่นอกลำดับ) ; $101 \to 111 \to 001 \to 011 \to 101$ (วนอยู่นอกลำดับ) ; $111 \to 001 \to 011 \to 101 \to 111$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1 \\ J_{C} = K_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="306" viewBox="0 0 1074 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="174" y="86" width="80" height="150" rx="2"/>
+<polyline points="174,152 186,161 174,170"/>
+<circle cx="170" cy="161" r="4"/>
+<line x1="166" y1="161" x2="152" y2="161"/>
+<line x1="152" y1="161" x2="152" y2="282"/>
+<line x1="128" y1="161" x2="128" y2="124"/>
+<line x1="128" y1="124" x2="174" y2="124"/>
+<line x1="128" y1="161" x2="128" y2="198"/>
+<path d="M128,198 L147.5,198 A4.5,4.5 0 0 1 156.5,198 L174,198"/>
+<line x1="254" y1="124" x2="298" y2="124"/>
+<line x1="254" y1="198" x2="298" y2="198"/>
+<line x1="237.2" y1="190.4" x2="246" y2="190.4" stroke-width="1.4"/>
+<rect x="526" y="86" width="80" height="150" rx="2"/>
+<polyline points="526,152 538,161 526,170"/>
+<circle cx="522" cy="161" r="4"/>
+<line x1="518" y1="161" x2="504" y2="161"/>
+<line x1="504" y1="161" x2="504" y2="282"/>
+<line x1="474" y1="124" x2="526" y2="124"/>
+<path d="M474,198 L499.5,198 A4.5,4.5 0 0 1 508.5,198 L526,198"/>
+<line x1="606" y1="124" x2="650" y2="124"/>
+<line x1="606" y1="198" x2="650" y2="198"/>
+<line x1="589.2" y1="190.4" x2="598" y2="190.4" stroke-width="1.4"/>
+<rect x="878" y="86" width="80" height="150" rx="2"/>
+<polyline points="878,152 890,161 878,170"/>
+<circle cx="874" cy="161" r="4"/>
+<line x1="870" y1="161" x2="856" y2="161"/>
+<line x1="856" y1="161" x2="856" y2="282"/>
+<line x1="826" y1="124" x2="878" y2="124"/>
+<path d="M826,198 L851.5,198 A4.5,4.5 0 0 1 860.5,198 L878,198"/>
+<line x1="958" y1="124" x2="1002" y2="124"/>
+<line x1="958" y1="198" x2="1002" y2="198"/>
+<line x1="941.2" y1="190.4" x2="950" y2="190.4" stroke-width="1.4"/>
+<line x1="84" y1="46" x2="84" y2="161"/>
+<line x1="84" y1="161" x2="128" y2="161"/>
+<path d="M84,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L650,46"/>
+<line x1="298" y1="30" x2="298" y2="124"/>
+<line x1="650" y1="30" x2="650" y2="124"/>
+<line x1="1002" y1="30" x2="1002" y2="124"/>
+<line x1="112" y1="282" x2="856" y2="282"/>
+<circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="504" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="214" y="169" text-anchor="middle" font-size="26">A</text>
+<text x="182" y="130" text-anchor="start" font-size="14">J</text>
+<text x="182" y="204" text-anchor="start" font-size="14">K</text>
+<text x="246" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="566" y="169" text-anchor="middle" font-size="26">B</text>
+<text x="534" y="130" text-anchor="start" font-size="14">J</text>
+<text x="534" y="204" text-anchor="start" font-size="14">K</text>
+<text x="470" y="130" text-anchor="end" font-size="16">1</text>
+<text x="470" y="204" text-anchor="end" font-size="16">1</text>
+<text x="598" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="598" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="918" y="169" text-anchor="middle" font-size="26">C</text>
+<text x="886" y="130" text-anchor="start" font-size="14">J</text>
+<text x="886" y="204" text-anchor="start" font-size="14">K</text>
+<text x="822" y="130" text-anchor="end" font-size="16">0</text>
+<text x="822" y="204" text-anchor="end" font-size="16">0</text>
+<text x="950" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="950" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="650" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1002" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="108" y="288" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ที่มีลำดับการนับเรียงตามนี้ $0, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น don't care condition {seq=even4; ff=rs}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="822" height="240" viewBox="0 0 822 240" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="528" height="190"/>
+<line x1="16" y1="72" x2="544" y2="72"/>
+<line x1="16" y1="104" x2="544" y2="104"/>
+<line x1="148" y1="40" x2="148" y2="230"/>
+<line x1="280" y1="40" x2="280" y2="230"/>
+</g>
+<text x="82" y="63" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="63" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="412" y="63" text-anchor="middle" font-size="17">Input ของ Flip-Flop</text>
+<text x="38" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="94" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="94" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="94" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="94" text-anchor="end" font-size="16">R</text>
+<text x="306" y="98" text-anchor="start" font-size="12">A</text>
+<text x="349" y="94" text-anchor="end" font-size="16">S</text>
+<text x="350" y="98" text-anchor="start" font-size="12">A</text>
+<text x="393" y="94" text-anchor="end" font-size="16">R</text>
+<text x="394" y="98" text-anchor="start" font-size="12">B</text>
+<text x="437" y="94" text-anchor="end" font-size="16">S</text>
+<text x="438" y="98" text-anchor="start" font-size="12">B</text>
+<text x="481" y="94" text-anchor="end" font-size="16">R</text>
+<text x="482" y="98" text-anchor="start" font-size="12">C</text>
+<text x="525" y="94" text-anchor="end" font-size="16">S</text>
+<text x="526" y="98" text-anchor="start" font-size="12">C</text>
+<text x="38" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="346" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="125" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="125" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="125" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="155" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="155" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="155" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="390" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="434" y="185" text-anchor="middle" font-size="16">1</text>
+<text x="478" y="185" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="185" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="215" text-anchor="middle" font-size="16">1</text>
+<text x="434" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="478" y="215" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="522" y="215" text-anchor="middle" font-size="16">0</text>
+<text x="697" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="588" y="40" width="218" height="143"/>
+<line x1="588" y1="71" x2="806" y2="71"/>
+<line x1="714" y1="40" x2="714" y2="183"/>
+<line x1="588" y1="125" x2="806" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="615.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="615.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="615.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="615.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="678.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="678.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="678.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="61" text-anchor="middle" font-size="16">R</text>
+<text x="737" y="91" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="737" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="737" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="737" y="172" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="61" text-anchor="middle" font-size="16">S</text>
+<text x="783" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="783" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="783" y="172" text-anchor="middle" font-size="16" font-style="italic">x</text>
+</svg>
+</div>
+
+$R_{A} = \sum m(6) + d(0,1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M195.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L195.5,155.5 M186.5,146.5 L186.5,65.5 M186.5,65.5 A9,9 0 0 1 195.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M195.5,155.5 A9,9 0 0 1 186.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="185" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
+
+$R_{A} = Q_{A}Q_{B}$
+
+$S_{A} = \sum m(2) + d(1,3,4,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011$) : $Q_A=0,\ Q_B=1 \Rightarrow \overline{Q_{A}}Q_{B}$
+
+$S_{A} = \overline{Q_{A}}Q_{B}$
+
+$R_{B} = \sum m(2,6) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$R_{B} = Q_{B}$
+
+$S_{B} = \sum m(0,4) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$S_{B} = \overline{Q_{B}}$
+
+$R_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$R_{C} = 0$
+
+$S_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$S_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $001 \to 011 \to 101 \to 111 \to 001$ (วนอยู่นอกลำดับ) ; $011 \to 101 \to 111 \to 001 \to 011$ (วนอยู่นอกลำดับ) ; $101 \to 111 \to 001 \to 011 \to 101$ (วนอยู่นอกลำดับ) ; $111 \to 001 \to 011 \to 101 \to 111$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}} \\ R_{C} &= 0 \\ S_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="412" viewBox="0 0 1210 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="308" y="115" width="80" height="172" rx="2"/>
+<polyline points="308,192 320,201 308,210"/>
+<circle cx="304" cy="201" r="4"/>
+<line x1="300" y1="201" x2="286" y2="201"/>
+<line x1="286" y1="201" x2="286" y2="388"/>
+<path d="M212,120 H238 A26,33 0 0 1 238,186 H212 Z"/>
+<line x1="264" y1="153" x2="308" y2="153"/>
+<path d="M212,216 H238 A26,33 0 0 1 238,282 H212 Z"/>
+<path d="M264,249 L281.5,249 A4.5,4.5 0 0 1 290.5,249 L308,249"/>
+<line x1="388" y1="153" x2="432" y2="153"/>
+<line x1="388" y1="249" x2="432" y2="249"/>
+<line x1="371.2" y1="241.4" x2="380" y2="241.4" stroke-width="1.4"/>
+<rect x="662" y="115" width="80" height="172" rx="2"/>
+<polyline points="662,192 674,201 662,210"/>
+<circle cx="658" cy="201" r="4"/>
+<line x1="654" y1="201" x2="640" y2="201"/>
+<line x1="640" y1="201" x2="640" y2="388"/>
+<line x1="742" y1="153" x2="786" y2="153"/>
+<line x1="742" y1="249" x2="786" y2="249"/>
+<line x1="725.2" y1="241.4" x2="734" y2="241.4" stroke-width="1.4"/>
+<rect x="1014" y="115" width="80" height="172" rx="2"/>
+<polyline points="1014,192 1026,201 1014,210"/>
+<circle cx="1010" cy="201" r="4"/>
+<line x1="1006" y1="201" x2="992" y2="201"/>
+<line x1="992" y1="201" x2="992" y2="388"/>
+<line x1="962" y1="153" x2="1014" y2="153"/>
+<path d="M962,249 L987.5,249 A4.5,4.5 0 0 1 996.5,249 L1014,249"/>
+<line x1="1094" y1="153" x2="1138" y2="153"/>
+<line x1="1094" y1="249" x2="1138" y2="249"/>
+<line x1="1077.2" y1="241.4" x2="1086" y2="241.4" stroke-width="1.4"/>
+<line x1="168" y1="46" x2="168" y2="164"/>
+<line x1="168" y1="164" x2="212" y2="164"/>
+<line x1="146" y1="72" x2="146" y2="238"/>
+<line x1="146" y1="238" x2="212" y2="238"/>
+<line x1="124" y1="46" x2="124" y2="260"/>
+<line x1="124" y1="260" x2="212" y2="260"/>
+<line x1="102" y1="312" x2="102" y2="142"/>
+<path d="M102,142 L119.5,142 A4.5,4.5 0 0 1 128.5,142 L141.5,142 A4.5,4.5 0 0 1 150.5,142 L163.5,142 A4.5,4.5 0 0 1 172.5,142 L212,142"/>
+<line x1="618" y1="46" x2="618" y2="249"/>
+<path d="M618,249 L635.5,249 A4.5,4.5 0 0 1 644.5,249 L662,249"/>
+<line x1="596" y1="338" x2="596" y2="153"/>
+<path d="M596,153 L613.5,153 A4.5,4.5 0 0 1 622.5,153 L662,153"/>
+<path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L786,46"/>
+<path d="M146,72 L163.5,72 A4.5,4.5 0 0 1 172.5,72 L432,72"/>
+<path d="M596,338 L635.5,338 A4.5,4.5 0 0 1 644.5,338 L786,338"/>
+<path d="M102,312 L281.5,312 A4.5,4.5 0 0 1 290.5,312 L432,312"/>
+<line x1="432" y1="30" x2="432" y2="153"/>
+<line x1="432" y1="249" x2="432" y2="312"/>
+<line x1="786" y1="30" x2="786" y2="153"/>
+<line x1="786" y1="249" x2="786" y2="338"/>
+<line x1="1138" y1="30" x2="1138" y2="153"/>
+<line x1="246" y1="388" x2="992" y2="388"/>
+<circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="348" y="209" text-anchor="middle" font-size="26">A</text>
+<text x="316" y="159" text-anchor="start" font-size="14">S</text>
+<text x="316" y="255" text-anchor="start" font-size="14">R</text>
+<text x="380" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="209" text-anchor="middle" font-size="26">B</text>
+<text x="670" y="159" text-anchor="start" font-size="14">S</text>
+<text x="670" y="255" text-anchor="start" font-size="14">R</text>
+<text x="734" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="209" text-anchor="middle" font-size="26">C</text>
+<text x="1022" y="159" text-anchor="start" font-size="14">S</text>
+<text x="1022" y="255" text-anchor="start" font-size="14">R</text>
+<text x="958" y="159" text-anchor="end" font-size="16">0</text>
+<text x="958" y="255" text-anchor="end" font-size="16">0</text>
+<text x="1086" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="242" y="394" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น don't care condition {seq=even4; ff=d}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="254" viewBox="0 0 644 254" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="204"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="244"/>
+<line x1="280" y1="40" x2="280" y2="244"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">D</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">D</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">D</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">D</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">1</text>
+</svg>
+</div>
+
+$D_{A} = \sum m(2,4) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L168.5,56.5 M177.5,65.5 L177.5,146.5 M168.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M168.5,56.5 A9,9 0 0 1 177.5,65.5 M177.5,146.5 A9,9 0 0 1 168.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M253,60 L273,60 M282,69 L282,143 M273,152 L253,152 M244,143 L244,69 M244,69 A9,9 0 0 1 253,60 M273,60 A9,9 0 0 1 282,69 M282,143 A9,9 0 0 1 273,152 M253,152 A9,9 0 0 1 244,143" stroke="#3b8be8" stroke-width="2.6" fill="none"/>
+<text x="239" y="67" font-size="14" fill="#3b8be8" font-weight="bold">2</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011$) : $Q_A=0,\ Q_B=1 \Rightarrow \overline{Q_{A}}Q_{B}$
+- ลูปสีน้ำเงิน (สถานะ $100,101$) : $Q_A=1,\ Q_B=0 \Rightarrow Q_{A}\overline{Q_{B}}$
+
+$D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
+
+$D_{B} = \sum m(0,4) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M74,56.5 L114.5,56.5 M123.5,65.5 L123.5,146.5 M114.5,155.5 L74,155.5 M114.5,56.5 A9,9 0 0 1 123.5,65.5 M123.5,146.5 A9,9 0 0 1 114.5,155.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+<path d="M249.5,56.5 L290,56.5 M290,155.5 L249.5,155.5 M240.5,146.5 L240.5,65.5 M240.5,65.5 A9,9 0 0 1 249.5,56.5 M249.5,155.5 A9,9 0 0 1 240.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,100,101$) : $Q_B=0 \Rightarrow \overline{Q_{B}}$
+
+$D_{B} = \overline{Q_{B}}$
+
+$D_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$D_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $001 \to 010$ ; $011 \to 100$ ; $101 \to 110$ ; $111 \to 000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}} \\ D_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="361" viewBox="0 0 1160 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="280" y="115" width="80" height="150" rx="2"/>
+<polyline points="280,211 292,220 280,229"/>
+<line x1="280" y1="220" x2="258" y2="220"/>
+<line x1="258" y1="220" x2="258" y2="337"/>
+<path d="M176,120 C198,120 224,136.5 236,153 C224,169.5 198,186 176,186 Q190,153 176,120 Z"/>
+<path d="M168,120 Q182,153 168,186"/>
+<line x1="236" y1="153" x2="280" y2="153"/>
+<line x1="360" y1="153" x2="404" y2="153"/>
+<line x1="360" y1="227" x2="404" y2="227"/>
+<line x1="343.2" y1="219.4" x2="352" y2="219.4" stroke-width="1.4"/>
+<rect x="612" y="115" width="80" height="150" rx="2"/>
+<polyline points="612,211 624,220 612,229"/>
+<line x1="612" y1="220" x2="590" y2="220"/>
+<line x1="590" y1="220" x2="590" y2="337"/>
+<line x1="692" y1="153" x2="736" y2="153"/>
+<line x1="692" y1="227" x2="736" y2="227"/>
+<line x1="675.2" y1="219.4" x2="684" y2="219.4" stroke-width="1.4"/>
+<rect x="964" y="115" width="80" height="150" rx="2"/>
+<polyline points="964,211 976,220 964,229"/>
+<line x1="964" y1="220" x2="942" y2="220"/>
+<line x1="942" y1="220" x2="942" y2="337"/>
+<line x1="912" y1="153" x2="964" y2="153"/>
+<line x1="1044" y1="153" x2="1088" y2="153"/>
+<line x1="1044" y1="227" x2="1088" y2="227"/>
+<line x1="1027.2" y1="219.4" x2="1036" y2="219.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="142"/>
+<line x1="130.2" y1="142" x2="174.2" y2="142"/>
+<line x1="108.2" y1="46" x2="108.2" y2="164"/>
+<line x1="108.2" y1="164" x2="174.2" y2="164"/>
+<line x1="568" y1="287" x2="568" y2="153"/>
+<line x1="568" y1="153" x2="612" y2="153"/>
+<path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L736,46"/>
+<line x1="130.2" y1="72" x2="404" y2="72"/>
+<path d="M568,287 L585.5,287 A4.5,4.5 0 0 1 594.5,287 L736,287"/>
+<line x1="404" y1="30" x2="404" y2="153"/>
+<line x1="736" y1="30" x2="736" y2="153"/>
+<line x1="736" y1="227" x2="736" y2="287"/>
+<line x1="1088" y1="30" x2="1088" y2="153"/>
+<line x1="218" y1="337" x2="942" y2="337"/>
+<circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="320" y="198" text-anchor="middle" font-size="26">A</text>
+<text x="288" y="159" text-anchor="start" font-size="14">D</text>
+<text x="352" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="652" y="198" text-anchor="middle" font-size="26">B</text>
+<text x="620" y="159" text-anchor="start" font-size="14">D</text>
+<text x="684" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="684" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="1004" y="198" text-anchor="middle" font-size="26">C</text>
+<text x="972" y="159" text-anchor="start" font-size="14">D</text>
+<text x="908" y="159" text-anchor="end" font-size="16">0</text>
+<text x="1036" y="159" text-anchor="end" font-size="16">Q</text>
+<text x="1036" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="736" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="1088" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="214" y="343" text-anchor="end" font-size="16">Clock</text>
+</g>
+</svg>
+</div>
+
+### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น don't care condition {seq=even4; ff=t}
+
+**จงทำตามขั้นตอนต่อไปนี้**
+
+- (ก) เขียนตารางสถานะ (สถานะปัจจุบันไปสถานะถัดไป) และหาค่าอินพุตของฟลิป-ฟลอปแต่ละตัวจากตารางกระตุ้น
+- (ข) ลดรูปอินพุตแต่ละตัวด้วย K-map
+- (ค) เขียนสมการของอินพุตทุกตัว
+- (ง) วาดวงจร (ทุกตัวรับ Clock เดียวกัน)
+- (จ) ตรวจสถานะที่ไม่ใช้ว่ากลับเข้าลำดับการนับได้หรือไม่
+
+$\mathbf{Sol}^{n}$
+
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($001$, $011$, $101$, $111$) เป็น $x$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="644" height="254" viewBox="0 0 644 254" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="16" y="26" font-family="Mitr, Tahoma, sans-serif" font-size="20" font-weight="500">ตารางการเปลี่ยนสถานะ</text>
+<line x1="16" y1="31" x2="212" y2="31" stroke="currentColor" stroke-width="1.4"/>
+<g stroke="currentColor" stroke-width="1.5" fill="none">
+<rect x="16" y="40" width="396" height="204"/>
+<line x1="16" y1="86" x2="412" y2="86"/>
+<line x1="16" y1="118" x2="412" y2="118"/>
+<line x1="148" y1="40" x2="148" y2="244"/>
+<line x1="280" y1="40" x2="280" y2="244"/>
+</g>
+<text x="82" y="70" text-anchor="middle" font-size="17">Q(t)</text>
+<text x="214" y="70" text-anchor="middle" font-size="17">Q(t+1)</text>
+<text x="346" y="59" text-anchor="middle" font-size="16">Input ของ</text>
+<text x="346" y="78" text-anchor="middle" font-size="16">Flip-Flop</text>
+<text x="38" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="170" y="108" text-anchor="middle" font-size="16">A</text>
+<text x="82" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="214" y="108" text-anchor="middle" font-size="16">B</text>
+<text x="126" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="258" y="108" text-anchor="middle" font-size="16">C</text>
+<text x="305" y="108" text-anchor="end" font-size="16">T</text>
+<text x="306" y="112" text-anchor="start" font-size="12">A</text>
+<text x="349" y="108" text-anchor="end" font-size="16">T</text>
+<text x="350" y="112" text-anchor="start" font-size="12">B</text>
+<text x="393" y="108" text-anchor="end" font-size="16">T</text>
+<text x="394" y="112" text-anchor="start" font-size="12">C</text>
+<text x="38" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="139" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="139" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="82" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="169" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="169" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="126" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="214" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="258" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="346" y="199" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="199" text-anchor="middle" font-size="16">0</text>
+<text x="38" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="82" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="126" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="170" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="214" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="258" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="302" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="346" y="229" text-anchor="middle" font-size="16">1</text>
+<text x="390" y="229" text-anchor="middle" font-size="16">0</text>
+<text x="542" y="24" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#3b8be8">ตารางการกระตุ้น</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="456" y="40" width="172" height="143"/>
+<line x1="456" y1="71" x2="628" y2="71"/>
+<line x1="582" y1="40" x2="582" y2="183"/>
+<line x1="456" y1="125" x2="628" y2="125" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="483.2" y="61" text-anchor="middle" font-size="16">Q(t)</text>
+<text x="483.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="118" text-anchor="middle" font-size="16">0</text>
+<text x="483.2" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="483.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="61" text-anchor="middle" font-size="16">Q(t+1)</text>
+<text x="546.2" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="546.2" y="145" text-anchor="middle" font-size="16">0</text>
+<text x="546.2" y="172" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="61" text-anchor="middle" font-size="16">T</text>
+<text x="605" y="91" text-anchor="middle" font-size="16">0</text>
+<text x="605" y="118" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="145" text-anchor="middle" font-size="16">1</text>
+<text x="605" y="172" text-anchor="middle" font-size="16">0</text>
+</svg>
+</div>
+
+$T_{A} = \sum m(2,6) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M141.5,56.5 L222.5,56.5 M231.5,65.5 L231.5,146.5 M222.5,155.5 L141.5,155.5 M132.5,146.5 L132.5,65.5 M132.5,65.5 A9,9 0 0 1 141.5,56.5 M222.5,56.5 A9,9 0 0 1 231.5,65.5 M231.5,146.5 A9,9 0 0 1 222.5,155.5 M141.5,155.5 A9,9 0 0 1 132.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="131" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $010,011,110,111$) : $Q_B=1 \Rightarrow Q_{B}$
+
+$T_{A} = Q_{B}$
+
+$T_{B} = \sum m(0,2,4,6) + d(1,3,5,7)$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">1</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+<path d="M87.5,56.5 L276.5,56.5 M285.5,65.5 L285.5,146.5 M276.5,155.5 L87.5,155.5 M78.5,146.5 L78.5,65.5 M78.5,65.5 A9,9 0 0 1 87.5,56.5 M276.5,56.5 A9,9 0 0 1 285.5,65.5 M285.5,146.5 A9,9 0 0 1 276.5,155.5 M87.5,155.5 A9,9 0 0 1 78.5,146.5" stroke="#e8743b" stroke-width="2.6" fill="none"/>
+<text x="77" y="67" font-size="14" fill="#e8743b" font-weight="bold">1</text>
+</svg>
+</div>
+
+- ลูปสีส้ม (สถานะ $000,001,010,011,100,101,110,111$) : $ \Rightarrow 1$
+
+$T_{B} = 1$
+
+$T_{C} = 0$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.6" fill="none">
+<rect x="74" y="52" width="216" height="108"/>
+<line x1="128" y1="52" x2="128" y2="160"/>
+<line x1="182" y1="52" x2="182" y2="160"/>
+<line x1="236" y1="52" x2="236" y2="160"/>
+<line x1="74" y1="106" x2="290" y2="106"/>
+<line x1="8" y1="8" x2="74" y2="52"/>
+</g>
+<text x="101" y="37" text-anchor="middle">00</text>
+<text x="155" y="37" text-anchor="middle">01</text>
+<text x="209" y="37" text-anchor="middle">11</text>
+<text x="263" y="37" text-anchor="middle">10</text>
+<text x="65" y="85" text-anchor="end">0</text>
+<text x="65" y="139" text-anchor="end">1</text>
+<text x="70" y="18" text-anchor="end">AB</text><text x="8" y="44">C</text>
+<text x="101" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="101" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="155" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="155" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="263" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="263" y="141" text-anchor="middle" font-size="22">x</text>
+<text x="209" y="87" text-anchor="middle" font-size="22">0</text>
+<text x="209" y="141" text-anchor="middle" font-size="22">x</text>
+</svg>
+</div>
+
+- ไม่มีช่อง $1$
+
+$T_{C} = 0$
+
+ตรวจสถานะที่ไม่ใช้ : $001 \to 011 \to 101 \to 111 \to 001$ (วนอยู่นอกลำดับ) ; $011 \to 101 \to 111 \to 001 \to 011$ (วนอยู่นอกลำดับ) ; $101 \to 111 \to 001 \to 011 \to 101$ (วนอยู่นอกลำดับ) ; $111 \to 001 \to 011 \to 101 \to 111$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1 \\ T_{C} &= 0\end{aligned}$
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="306" viewBox="0 0 1052 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
+<rect x="152" y="86" width="80" height="150" rx="2"/>
+<polyline points="152,182 164,191 152,200"/>
+<line x1="152" y1="191" x2="130" y2="191"/>
+<line x1="130" y1="191" x2="130" y2="282"/>
+<line x1="232" y1="124" x2="276" y2="124"/>
+<line x1="232" y1="198" x2="276" y2="198"/>
+<line x1="215.2" y1="190.4" x2="224" y2="190.4" stroke-width="1.4"/>
+<rect x="504" y="86" width="80" height="150" rx="2"/>
+<polyline points="504,182 516,191 504,200"/>
+<line x1="504" y1="191" x2="482" y2="191"/>
+<line x1="482" y1="191" x2="482" y2="282"/>
+<line x1="452" y1="124" x2="504" y2="124"/>
+<line x1="584" y1="124" x2="628" y2="124"/>
+<line x1="584" y1="198" x2="628" y2="198"/>
+<line x1="567.2" y1="190.4" x2="576" y2="190.4" stroke-width="1.4"/>
+<rect x="856" y="86" width="80" height="150" rx="2"/>
+<polyline points="856,182 868,191 856,200"/>
+<line x1="856" y1="191" x2="834" y2="191"/>
+<line x1="834" y1="191" x2="834" y2="282"/>
+<line x1="804" y1="124" x2="856" y2="124"/>
+<line x1="936" y1="124" x2="980" y2="124"/>
+<line x1="936" y1="198" x2="980" y2="198"/>
+<line x1="919.2" y1="190.4" x2="928" y2="190.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="124"/>
+<line x1="108" y1="124" x2="152" y2="124"/>
+<path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L628,46"/>
+<line x1="276" y1="30" x2="276" y2="124"/>
+<line x1="628" y1="30" x2="628" y2="124"/>
+<line x1="980" y1="30" x2="980" y2="124"/>
+<line x1="90" y1="282" x2="834" y2="282"/>
+<circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="482" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
+</g>
+<text x="192" y="169" text-anchor="middle" font-size="26">A</text>
+<text x="160" y="130" text-anchor="start" font-size="14">T</text>
+<text x="224" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="544" y="169" text-anchor="middle" font-size="26">B</text>
+<text x="512" y="130" text-anchor="start" font-size="14">T</text>
+<text x="448" y="130" text-anchor="end" font-size="16">1</text>
+<text x="576" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="576" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="896" y="169" text-anchor="middle" font-size="26">C</text>
+<text x="864" y="130" text-anchor="start" font-size="14">T</text>
+<text x="800" y="130" text-anchor="end" font-size="16">0</text>
+<text x="928" y="130" text-anchor="end" font-size="16">Q</text>
+<text x="928" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
+<text x="628" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
+<text x="980" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
+<text x="86" y="288" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>

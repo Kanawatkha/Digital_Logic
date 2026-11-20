@@ -203,7 +203,7 @@ $\mathbf{Sol}^{n}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="672" height="600" viewBox="0 0 672 600" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="494"/>
 <line x1="40" y1="28" x2="40" y2="304"/>
 <line x1="210" y1="56" x2="210" y2="516"/>
@@ -252,14 +252,8 @@ $\mathbf{Sol}^{n}$
 <circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="136" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="220" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="304" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="326" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="388" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="410" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="494" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="516" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="538" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5075,7 +5069,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1604" viewBox="0 0 754 1604" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1305"/>
 <line x1="148" y1="56" x2="148" y2="1130"/>
 <line x1="86" y1="28" x2="86" y2="1436"/>
@@ -5231,18 +5225,11 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1305" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1352" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1374" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5268,7 +5255,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="672" height="442" viewBox="0 0 672 442" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="99"/>
 <line x1="40" y1="28" x2="40" y2="326"/>
 <line x1="210" y1="56" x2="210" y2="358"/>
@@ -5313,14 +5300,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 <circle cx="187" cy="56" r="5"/>
 <polygon points="268,44 268,68 290,56"/>
 <circle cx="295" cy="56" r="5"/>
-<circle cx="102" cy="99" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="146" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="168" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="230" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="252" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="326" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="358" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5341,7 +5322,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1528" viewBox="0 0 754 1528" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1276"/>
 <line x1="148" y1="56" x2="148" y2="1360"/>
 <line x1="86" y1="28" x2="86" y2="1192"/>
@@ -5488,19 +5469,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="812" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="874" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="896" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="918" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1086" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1108" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1192" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1466" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5525,7 +5499,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1466" viewBox="0 0 754 1466" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1214"/>
 <line x1="148" y1="56" x2="148" y2="1298"/>
 <line x1="86" y1="28" x2="86" y2="1130"/>
@@ -5670,15 +5644,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5703,7 +5670,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="736" height="1106" viewBox="0 0 736 1106" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="854"/>
 <line x1="148" y1="56" x2="148" y2="938"/>
 <line x1="86" y1="28" x2="86" y2="770"/>
@@ -5805,7 +5772,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 <circle cx="302" cy="252" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="326" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="358" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="449" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="518" r="3.5" fill="currentColor" stroke="none"/>
@@ -5813,14 +5779,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B}+\overline{C}\,\overline{D}+C
 <circle cx="364" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="854" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="876" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="938" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="960" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1022" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1044" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -5844,7 +5804,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1550" viewBox="0 0 754 1550" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1298"/>
 <line x1="148" y1="56" x2="148" y2="1382"/>
 <line x1="86" y1="28" x2="86" y2="1214"/>
@@ -5990,7 +5950,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 <circle cx="364" cy="718" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="780" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="802" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="824" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="893" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="962" r="3.5" fill="currentColor" stroke="none"/>
@@ -5998,14 +5957,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 <circle cx="364" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1108" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1466" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1488" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6030,7 +5983,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1740" viewBox="0 0 754 1740" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1488"/>
 <line x1="148" y1="56" x2="148" y2="1572"/>
 <line x1="86" y1="28" x2="86" y2="1404"/>
@@ -6190,7 +6143,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 <circle cx="364" cy="718" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="780" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="802" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="824" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="908" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="930" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="992" r="3.5" fill="currentColor" stroke="none"/>
@@ -6202,14 +6154,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ c &=
 <circle cx="364" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1426" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1488" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1572" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1594" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1656" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1678" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6235,7 +6181,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="736" height="696" viewBox="0 0 736 696" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="99"/>
 <line x1="148" y1="56" x2="148" y2="353"/>
 <line x1="86" y1="28" x2="86" y2="580"/>
@@ -6301,20 +6247,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="233" cy="56" r="5"/>
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
-<circle cx="40" cy="99" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="131" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="178" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="200" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="262" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="284" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="353" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="400" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="506" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="580" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="612" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6337,7 +6276,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1962" viewBox="0 0 754 1962" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1710"/>
 <line x1="148" y1="56" x2="148" y2="1794"/>
 <line x1="86" y1="28" x2="86" y2="1626"/>
@@ -6519,7 +6458,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
@@ -6531,14 +6469,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1648" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1732" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1816" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1878" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1900" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6565,7 +6497,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="754" height="1772" viewBox="0 0 754 1772" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1520"/>
 <line x1="148" y1="56" x2="148" y2="1604"/>
 <line x1="86" y1="28" x2="86" y2="1436"/>
@@ -6733,7 +6665,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1115" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1162" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1184" r="3.5" fill="currentColor" stroke="none"/>
@@ -6741,14 +6672,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= A+C+BD+\overline{B}\,\overline{D} \\ b &=
 <circle cx="364" cy="1268" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1330" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1352" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1688" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6774,7 +6699,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1604" viewBox="0 0 828 1604" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1305"/>
 <line x1="40" y1="28" x2="40" y2="56"/>
 <line x1="210" y1="56" x2="210" y2="1130"/>
@@ -6954,19 +6879,11 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1305" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1352" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1374" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -6992,7 +6909,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="684" height="442" viewBox="0 0 684 442" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="326"/>
 <line x1="40" y1="28" x2="40" y2="99"/>
 <line x1="210" y1="56" x2="210" y2="146"/>
@@ -7041,14 +6958,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 <circle cx="187" cy="56" r="5"/>
 <polygon points="268,44 268,68 290,56"/>
 <circle cx="295" cy="56" r="5"/>
-<circle cx="40" cy="99" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="146" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="168" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="230" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="252" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="326" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="358" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -7069,7 +6980,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1528" viewBox="0 0 828 1528" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="575"/>
 <line x1="40" y1="28" x2="40" y2="1276"/>
 <line x1="210" y1="56" x2="210" y2="1360"/>
@@ -7231,7 +7142,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="422" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="506" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="575" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="622" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="706" r="3.5" fill="currentColor" stroke="none"/>
@@ -7240,19 +7150,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="812" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="874" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="896" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="918" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1086" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1108" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1192" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1466" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -7278,7 +7181,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1466" viewBox="0 0 828 1466" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="703"/>
 <line x1="40" y1="28" x2="40" y2="1214"/>
 <line x1="210" y1="56" x2="210" y2="1298"/>
@@ -7436,7 +7339,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="210" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="612" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="644" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="703" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="750" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="772" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="834" r="3.5" fill="currentColor" stroke="none"/>
@@ -7445,15 +7347,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -7479,7 +7374,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1106" viewBox="0 0 810 1106" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="449"/>
 <line x1="40" y1="28" x2="40" y2="854"/>
 <line x1="210" y1="56" x2="210" y2="938"/>
@@ -7596,25 +7491,17 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{B\cdot \overline{\overline{C}\,
 <circle cx="318" cy="146" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="168" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="230" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="252" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="326" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="358" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="449" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="518" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="854" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="876" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="938" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="960" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1022" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1044" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -7639,7 +7526,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1550" viewBox="0 0 828 1550" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="893"/>
 <line x1="40" y1="28" x2="40" y2="1298"/>
 <line x1="210" y1="56" x2="210" y2="1382"/>
@@ -7808,22 +7695,14 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="718" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="780" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="802" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="824" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="893" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="962" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1108" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1382" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1466" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1488" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -7849,7 +7728,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1740" viewBox="0 0 828 1740" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1083"/>
 <line x1="40" y1="28" x2="40" y2="1488"/>
 <line x1="210" y1="56" x2="210" y2="1572"/>
@@ -8035,26 +7914,18 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="718" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="780" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="802" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="824" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="908" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="930" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="992" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1014" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1083" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1298" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1320" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1404" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1426" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1488" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1572" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1594" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1656" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1678" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8081,7 +7952,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="696" viewBox="0 0 810 696" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="99"/>
 <line x1="40" y1="28" x2="40" y2="56"/>
 <line x1="210" y1="56" x2="210" y2="580"/>
@@ -8159,21 +8030,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="295" cy="56" r="5"/>
 <polygon points="376,44 376,68 398,56"/>
 <circle cx="403" cy="56" r="5"/>
-<circle cx="102" cy="99" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="131" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="178" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="200" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="262" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="284" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="353" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="400" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="422" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="484" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="506" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="580" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="612" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="644" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8196,7 +8059,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1962" viewBox="0 0 828 1962" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1305"/>
 <line x1="40" y1="28" x2="40" y2="1710"/>
 <line x1="210" y1="56" x2="210" y2="1794"/>
@@ -8407,26 +8270,18 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="1130" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1152" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1214" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1236" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1305" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1352" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1374" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1648" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1732" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1816" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1878" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1900" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8454,7 +8309,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="828" height="1772" viewBox="0 0 828 1772" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1115"/>
 <line x1="40" y1="28" x2="40" y2="1520"/>
 <line x1="210" y1="56" x2="210" y2="1604"/>
@@ -8648,22 +8503,14 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A}\cdot \overline{C}\
 <circle cx="426" cy="940" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1002" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1024" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1046" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1115" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1162" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1184" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1246" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1268" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1330" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="1352" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1436" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1458" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1542" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="1604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1688" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="1710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8690,7 +8537,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1506" viewBox="0 0 718 1506" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1232"/>
 <line x1="148" y1="56" x2="148" y2="1126"/>
 <line x1="86" y1="28" x2="86" y2="1338"/>
@@ -8826,20 +8673,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1079" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1232" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1254" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1338" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8865,7 +8705,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="654" height="454" viewBox="0 0 654 454" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="220"/>
 <line x1="40" y1="28" x2="40" y2="348"/>
 <line x1="210" y1="56" x2="210" y2="370"/>
@@ -8906,14 +8746,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 <polygon points="268,44 268,68 290,56"/>
 <circle cx="295" cy="56" r="5"/>
 <circle cx="102" cy="114" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="158" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="348" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="392" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -8934,7 +8768,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1316" viewBox="0 0 718 1316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1104"/>
 <line x1="148" y1="56" x2="148" y2="1210"/>
 <line x1="86" y1="28" x2="86" y2="1126"/>
@@ -9057,19 +8891,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="670" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="754" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="776" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="882" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="951" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="998" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1020" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1104" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1232" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1254" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9094,7 +8921,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1306" viewBox="0 0 718 1306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1094"/>
 <line x1="148" y1="56" x2="148" y2="1200"/>
 <line x1="86" y1="28" x2="86" y2="1116"/>
@@ -9214,16 +9041,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1094" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1116" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1138" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1200" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1222" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1244" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9248,7 +9068,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="984" viewBox="0 0 718 984" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="772"/>
 <line x1="148" y1="56" x2="148" y2="878"/>
 <line x1="86" y1="28" x2="86" y2="794"/>
@@ -9334,7 +9154,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 <circle cx="302" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="392" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="520" r="3.5" fill="currentColor" stroke="none"/>
@@ -9342,12 +9161,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (\overline{B}+C+\overline{D})(\overline{B
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="666" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="688" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="772" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="794" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="816" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="878" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="900" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="922" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9371,7 +9184,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1368" viewBox="0 0 718 1368" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1156"/>
 <line x1="148" y1="56" x2="148" y2="1262"/>
 <line x1="86" y1="28" x2="86" y2="1178"/>
@@ -9490,7 +9303,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="564" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="648" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="670" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="754" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="776" r="3.5" fill="currentColor" stroke="none"/>
@@ -9501,12 +9313,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1050" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1072" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1156" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1178" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1200" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1284" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1306" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9531,7 +9337,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1506" viewBox="0 0 718 1506" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1294"/>
 <line x1="148" y1="56" x2="148" y2="1400"/>
 <line x1="86" y1="28" x2="86" y2="1316"/>
@@ -9661,7 +9467,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="564" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="648" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="670" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="754" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="776" r="3.5" fill="currentColor" stroke="none"/>
@@ -9675,12 +9480,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="256" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1188" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1294" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1316" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1338" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1400" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9706,7 +9505,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="710" viewBox="0 0 700 710" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="56" x2="148" y2="476"/>
 <line x1="86" y1="28" x2="86" y2="604"/>
@@ -9764,7 +9563,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="233" cy="56" r="5"/>
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="136" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="158" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="180" r="3.5" fill="currentColor" stroke="none"/>
@@ -9772,14 +9570,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="194" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="286" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="392" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="414" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="604" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="648" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -9802,7 +9594,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1740" viewBox="0 0 718 1740" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1528"/>
 <line x1="148" y1="56" x2="148" y2="1634"/>
 <line x1="86" y1="28" x2="86" y2="1550"/>
@@ -9954,7 +9746,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
@@ -9968,12 +9759,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="256" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1550" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1572" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1634" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1656" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1678" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10000,7 +9785,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="718" height="1602" viewBox="0 0 718 1602" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1390"/>
 <line x1="148" y1="56" x2="148" y2="1496"/>
 <line x1="86" y1="28" x2="86" y2="1412"/>
@@ -10141,7 +9926,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
@@ -10152,12 +9936,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+B+C+\overline{D})(\overline{B}+C+D) \\
 <circle cx="256" cy="1222" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1284" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1306" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1518" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1540" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10183,7 +9961,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1506" viewBox="0 0 746 1506" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1232"/>
 <line x1="148" y1="56" x2="148" y2="1126"/>
 <line x1="86" y1="28" x2="86" y2="1338"/>
@@ -10343,16 +10121,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1079" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1232" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="1254" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1276" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1338" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10378,7 +10149,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="682" height="454" viewBox="0 0 682 454" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="220"/>
 <line x1="40" y1="28" x2="40" y2="348"/>
 <line x1="210" y1="56" x2="210" y2="370"/>
@@ -10426,14 +10197,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 <polygon points="268,44 268,68 290,56"/>
 <circle cx="295" cy="56" r="5"/>
 <circle cx="102" cy="114" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="158" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="348" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="392" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10454,7 +10219,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1316" viewBox="0 0 746 1316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1104"/>
 <line x1="148" y1="56" x2="148" y2="1210"/>
 <line x1="86" y1="28" x2="86" y2="1126"/>
@@ -10596,15 +10361,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="148" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="951" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="998" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1020" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1104" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1148" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1232" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1254" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10629,7 +10387,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1306" viewBox="0 0 746 1306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1094"/>
 <line x1="148" y1="56" x2="148" y2="1200"/>
 <line x1="86" y1="28" x2="86" y2="1116"/>
@@ -10766,16 +10524,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1094" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1116" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1138" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1200" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1222" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1244" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10800,7 +10551,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="984" viewBox="0 0 746 984" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="772"/>
 <line x1="148" y1="56" x2="148" y2="878"/>
 <line x1="86" y1="28" x2="86" y2="794"/>
@@ -10900,7 +10651,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 <circle cx="302" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="392" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="520" r="3.5" fill="currentColor" stroke="none"/>
@@ -10908,12 +10658,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{\overline{B}+C+\overl
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="666" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="688" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="772" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="794" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="816" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="878" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="900" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="922" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -10937,7 +10681,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1368" viewBox="0 0 746 1368" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1156"/>
 <line x1="148" y1="56" x2="148" y2="1262"/>
 <line x1="86" y1="28" x2="86" y2="1178"/>
@@ -11074,7 +10818,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="364" cy="564" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="648" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="670" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="754" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="776" r="3.5" fill="currentColor" stroke="none"/>
@@ -11085,12 +10828,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1050" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1072" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1156" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1178" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1200" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1262" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1284" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1306" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -11115,7 +10852,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1506" viewBox="0 0 746 1506" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1294"/>
 <line x1="148" y1="56" x2="148" y2="1400"/>
 <line x1="86" y1="28" x2="86" y2="1316"/>
@@ -11269,7 +11006,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="148" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="754" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="776" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="845" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="892" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="914" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="998" r="3.5" fill="currentColor" stroke="none"/>
@@ -11279,12 +11015,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="256" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1188" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1294" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1316" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1338" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1400" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -11310,7 +11040,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="728" height="710" viewBox="0 0 728 710" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="56" x2="148" y2="476"/>
 <line x1="86" y1="28" x2="86" y2="604"/>
@@ -11378,7 +11108,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="233" cy="56" r="5"/>
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="136" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="158" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="180" r="3.5" fill="currentColor" stroke="none"/>
@@ -11386,14 +11115,8 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="194" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="286" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="392" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="414" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="604" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="648" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -11416,7 +11139,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1740" viewBox="0 0 746 1740" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1528"/>
 <line x1="148" y1="56" x2="148" y2="1634"/>
 <line x1="86" y1="28" x2="86" y2="1550"/>
@@ -11595,7 +11318,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="1079" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="1126" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="1148" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1232" r="3.5" fill="currentColor" stroke="none"/>
@@ -11605,12 +11327,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="256" cy="1360" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1422" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1444" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1550" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1572" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1634" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1656" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1678" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -11637,7 +11353,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="746" height="1602" viewBox="0 0 746 1602" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="1390"/>
 <line x1="148" y1="56" x2="148" y2="1496"/>
 <line x1="86" y1="28" x2="86" y2="1412"/>
@@ -11799,7 +11515,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="364" cy="798" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="860" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="882" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="904" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="966" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="988" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1010" r="3.5" fill="currentColor" stroke="none"/>
@@ -11810,12 +11525,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+B+C+\overline{D}}+\
 <circle cx="256" cy="1222" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1284" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1306" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1390" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="1412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="1434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1518" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1540" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -13204,7 +12913,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1340" viewBox="0 0 798 1340" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1256"/>
 <line x1="210" y1="56" x2="210" y2="982"/>
@@ -13328,7 +13037,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="426" cy="252" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="299" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="395" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="528" r="3.5" fill="currentColor" stroke="none"/>
@@ -13336,19 +13044,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1194" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -13375,7 +13076,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C\e
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="534" height="326" viewBox="0 0 534 326" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="210"/>
 <line x1="40" y1="28" x2="40" y2="141"/>
 <line x1="148" y1="28" x2="148" y2="274"/>
@@ -13407,12 +13108,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C\e
 <polygon points="206,44 206,68 228,56"/>
 <circle cx="233" cy="56" r="5"/>
 <circle cx="148" cy="109" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="141" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="274" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="468" y="131">b</text>
 <text x="486" y="248">c</text>
@@ -13430,7 +13126,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1380" viewBox="0 0 798 1380" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="642"/>
 <line x1="40" y1="28" x2="40" y2="1296"/>
 <line x1="210" y1="56" x2="210" y2="854"/>
@@ -13562,23 +13258,15 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="558" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="580" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="642" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="664" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="748" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="770" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="854" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="938" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="960" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1044" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1128" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1296" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1318" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -13604,7 +13292,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1318" viewBox="0 0 798 1318" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1234"/>
 <line x1="210" y1="56" x2="210" y2="602"/>
@@ -13730,23 +13418,15 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="210" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -13772,7 +13452,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C \
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="736" height="874" viewBox="0 0 736 874" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="790"/>
 <line x1="148" y1="56" x2="148" y2="210"/>
 <line x1="86" y1="28" x2="86" y2="622"/>
@@ -13851,8 +13531,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C \
 <circle cx="341" cy="56" r="5"/>
 <circle cx="194" cy="109" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="141" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="274" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="370" r="3.5" fill="currentColor" stroke="none"/>
@@ -13860,12 +13538,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= C+B \\ c &= \overline{B}+\overline{D}+C \
 <circle cx="256" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="538" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="560" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="622" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="706" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="728" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="790" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="812" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -13889,7 +13562,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1402" viewBox="0 0 798 1402" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="664"/>
 <line x1="40" y1="28" x2="40" y2="1318"/>
 <line x1="210" y1="56" x2="210" y2="496"/>
@@ -14019,13 +13692,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="210" cy="358" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="518" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="602" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="708" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="792" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="876" r="3.5" fill="currentColor" stroke="none"/>
@@ -14034,12 +13704,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="318" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1318" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14065,7 +13730,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1592" viewBox="0 0 798 1592" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="664"/>
 <line x1="40" y1="28" x2="40" y2="1508"/>
 <line x1="210" y1="56" x2="210" y2="876"/>
@@ -14213,12 +13878,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="364" cy="518" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="602" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="708" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="960" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="982" r="3.5" fill="currentColor" stroke="none"/>
@@ -14228,12 +13890,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1424" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1508" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1530" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14260,7 +13917,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="736" height="580" viewBox="0 0 736 580" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="299"/>
 <line x1="148" y1="56" x2="148" y2="464"/>
 <line x1="86" y1="28" x2="86" y2="395"/>
@@ -14318,16 +13975,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
 <circle cx="148" cy="99" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="146" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="168" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="230" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="252" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="299" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="395" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="464" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14350,7 +14000,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1698" viewBox="0 0 798 1698" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1614"/>
 <line x1="210" y1="56" x2="210" y2="982"/>
@@ -14508,12 +14158,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
@@ -14523,12 +14170,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="318" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1384" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1468" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1530" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1552" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1614" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1636" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14556,7 +14198,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="798" height="1508" viewBox="0 0 798 1508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1424"/>
 <line x1="210" y1="56" x2="210" y2="602"/>
@@ -14696,13 +14338,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="210" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="982" r="3.5" fill="currentColor" stroke="none"/>
@@ -14711,12 +14350,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B}+\overline{C}D+C\overline{D}+
 <circle cx="318" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1194" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1424" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14743,7 +14377,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1340" viewBox="0 0 810 1340" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1256"/>
 <line x1="210" y1="56" x2="210" y2="982"/>
@@ -14884,26 +14518,18 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="102" cy="299" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="363" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="395" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="528" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1194" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -14930,7 +14556,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="536" height="326" viewBox="0 0 536 326" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="141"/>
 <line x1="40" y1="28" x2="40" y2="210"/>
 <line x1="210" y1="56" x2="210" y2="274"/>
@@ -14964,12 +14590,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 <polygon points="160,44 160,68 182,56"/>
 <circle cx="187" cy="56" r="5"/>
 <circle cx="210" cy="109" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="141" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="210" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="274" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="470" y="131">b</text>
 <text x="488" y="248">c</text>
@@ -14987,7 +14608,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1380" viewBox="0 0 810 1380" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="642"/>
 <line x1="40" y1="28" x2="40" y2="1296"/>
 <line x1="210" y1="56" x2="210" y2="854"/>
@@ -15136,23 +14757,15 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="558" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="580" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="642" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="664" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="748" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="770" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="854" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="938" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="960" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1044" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1128" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1212" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1296" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1318" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -15178,7 +14791,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1318" viewBox="0 0 810 1318" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1234"/>
 <line x1="210" y1="56" x2="210" y2="602"/>
@@ -15319,23 +14932,15 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="148" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -15361,7 +14966,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="686" height="874" viewBox="0 0 686 874" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="790"/>
 <line x1="148" y1="56" x2="148" y2="141"/>
 <line x1="86" y1="28" x2="86" y2="622"/>
@@ -15444,7 +15049,6 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 <polygon points="206,44 206,68 228,56"/>
 <circle cx="233" cy="56" r="5"/>
 <circle cx="256" cy="109" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="141" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="210" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="274" r="3.5" fill="currentColor" stroke="none"/>
@@ -15454,12 +15058,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{C}\cdot \overline{B}}
 <circle cx="256" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="538" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="560" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="622" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="706" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="728" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="790" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="812" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 </g>
@@ -15482,7 +15081,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1402" viewBox="0 0 810 1402" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="664"/>
 <line x1="40" y1="28" x2="40" y2="1318"/>
 <line x1="210" y1="56" x2="210" y2="496"/>
@@ -15629,13 +15228,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="148" cy="358" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="390" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="422" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="518" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="602" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="708" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="792" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="876" r="3.5" fill="currentColor" stroke="none"/>
@@ -15644,12 +15240,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="318" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1150" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1234" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1318" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -15675,7 +15266,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1592" viewBox="0 0 810 1592" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="664"/>
 <line x1="40" y1="28" x2="40" y2="1508"/>
 <line x1="210" y1="56" x2="210" y2="876"/>
@@ -15843,12 +15434,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="364" cy="518" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="580" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="602" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="664" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="686" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="708" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="960" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="982" r="3.5" fill="currentColor" stroke="none"/>
@@ -15858,12 +15446,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1424" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1508" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1530" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -15890,7 +15473,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="580" viewBox="0 0 810 580" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="299"/>
 <line x1="40" y1="28" x2="40" y2="56"/>
 <line x1="210" y1="56" x2="210" y2="395"/>
@@ -15960,15 +15543,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="148" cy="99" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="146" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="168" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="230" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="252" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="299" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="395" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="464" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -15991,7 +15566,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1698" viewBox="0 0 810 1698" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1614"/>
 <line x1="210" y1="56" x2="210" y2="982"/>
@@ -16170,12 +15745,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="982" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1004" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1066" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
@@ -16185,12 +15757,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="318" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1384" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1468" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1530" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1552" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1614" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1636" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -16218,7 +15785,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="810" height="1508" viewBox="0 0 810 1508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="770"/>
 <line x1="40" y1="28" x2="40" y2="1424"/>
 <line x1="210" y1="56" x2="210" y2="602"/>
@@ -16376,13 +15943,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="148" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="602" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="624" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="686" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="708" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="770" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="792" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="814" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="876" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="898" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="982" r="3.5" fill="currentColor" stroke="none"/>
@@ -16391,12 +15955,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{B\cdot \overline{\overline{C}D}
 <circle cx="318" cy="1088" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1172" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1194" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1256" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1278" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1340" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1362" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1424" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1446" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -16423,7 +15982,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1228" viewBox="0 0 780 1228" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="794"/>
 <line x1="40" y1="28" x2="40" y2="1060"/>
 <line x1="210" y1="56" x2="210" y2="954"/>
@@ -16525,7 +16084,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="210" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="476" r="3.5" fill="currentColor" stroke="none"/>
@@ -16535,17 +16093,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="907" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="976" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1082" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -16572,7 +16123,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="466" height="326" viewBox="0 0 466 326" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="220"/>
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="28" x2="148" y2="242"/>
@@ -16595,13 +16146,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 <circle cx="79" cy="56" r="5"/>
 <polygon points="206,44 206,68 228,56"/>
 <circle cx="233" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="220" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="418" y="131">b</text>
 <text x="418" y="248">c</text>
@@ -16619,7 +16165,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1228" viewBox="0 0 780 1228" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1122"/>
 <line x1="40" y1="28" x2="40" y2="1016"/>
 <line x1="210" y1="56" x2="210" y2="826"/>
@@ -16731,21 +16277,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="364" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="560" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="582" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="666" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="779" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="826" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="848" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="932" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="954" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1016" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1038" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1122" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -16771,7 +16309,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1218" viewBox="0 0 780 1218" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1112"/>
 <line x1="40" y1="28" x2="40" y2="1006"/>
 <line x1="210" y1="56" x2="210" y2="688"/>
@@ -16878,20 +16416,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="40" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="922" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="944" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1050" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1156" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -16917,7 +16447,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="834" viewBox="0 0 780 834" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="728"/>
 <line x1="40" y1="28" x2="40" y2="622"/>
 <line x1="210" y1="56" x2="210" y2="220"/>
@@ -16989,21 +16519,13 @@ $\mathbf{Ans}\quad \begin{aligned}b &= (B+C) \\ c &= (\overline{B}+C+\overline{D
 <circle cx="403" cy="56" r="5"/>
 <circle cx="148" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="432" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="538" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="560" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="622" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="666" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="728" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="750" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="772" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17028,7 +16550,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1302" viewBox="0 0 780 1302" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1196"/>
 <line x1="40" y1="28" x2="40" y2="1090"/>
 <line x1="210" y1="56" x2="210" y2="582"/>
@@ -17143,9 +16665,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="40" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="604" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="732" r="3.5" fill="currentColor" stroke="none"/>
@@ -17154,13 +16674,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="318" cy="900" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="922" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1090" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1196" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1218" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1240" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17186,7 +16700,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1440" viewBox="0 0 780 1440" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1334"/>
 <line x1="40" y1="28" x2="40" y2="1228"/>
 <line x1="210" y1="56" x2="210" y2="848"/>
@@ -17314,25 +16828,17 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="364" cy="520" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="604" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="801" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="848" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="870" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="976" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1038" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1228" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1250" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1272" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1356" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1378" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17359,7 +16865,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="560" viewBox="0 0 700 560" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="56" x2="148" y2="454"/>
 <line x1="86" y1="28" x2="86" y2="348"/>
@@ -17404,17 +16910,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="233" cy="56" r="5"/>
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="158" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="220" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="454" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="476" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17437,7 +16936,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1546" viewBox="0 0 780 1546" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1440"/>
 <line x1="40" y1="28" x2="40" y2="1334"/>
 <line x1="210" y1="56" x2="210" y2="954"/>
@@ -17571,25 +17070,17 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="907" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="976" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1082" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1250" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1272" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1356" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1378" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1462" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17617,7 +17108,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="1408" viewBox="0 0 780 1408" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1302"/>
 <line x1="40" y1="28" x2="40" y2="1196"/>
 <line x1="210" y1="56" x2="210" y2="688"/>
@@ -17738,9 +17229,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="40" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
@@ -17749,13 +17238,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= (A+C+D)(\overline{B}+\overline{C}+\overli
 <circle cx="318" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1196" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1218" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1240" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1302" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1324" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17782,7 +17265,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1228" viewBox="0 0 808 1228" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="794"/>
 <line x1="40" y1="28" x2="40" y2="1060"/>
 <line x1="210" y1="56" x2="210" y2="954"/>
@@ -17904,7 +17387,6 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="210" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="210" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="476" r="3.5" fill="currentColor" stroke="none"/>
@@ -17915,16 +17397,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="907" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="976" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1082" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -17951,7 +17426,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="564" height="326" viewBox="0 0 564 326" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="220"/>
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="28" x2="148" y2="242"/>
@@ -17982,13 +17457,8 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 <circle cx="79" cy="56" r="5"/>
 <polygon points="206,44 206,68 228,56"/>
 <circle cx="233" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="220" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 </g>
 <text x="516" y="131">b</text>
 <text x="516" y="248">c</text>
@@ -18006,7 +17476,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1228" viewBox="0 0 808 1228" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1122"/>
 <line x1="40" y1="28" x2="40" y2="1016"/>
 <line x1="210" y1="56" x2="210" y2="826"/>
@@ -18139,17 +17609,9 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="102" cy="666" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="779" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="826" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="848" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="932" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="954" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1016" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1038" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1122" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18175,7 +17637,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1218" viewBox="0 0 808 1218" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1112"/>
 <line x1="40" y1="28" x2="40" y2="1006"/>
 <line x1="210" y1="56" x2="210" y2="688"/>
@@ -18301,20 +17763,12 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="40" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="922" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="944" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1050" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1156" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18340,7 +17794,7 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="834" viewBox="0 0 808 834" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="728"/>
 <line x1="40" y1="28" x2="40" y2="622"/>
 <line x1="210" y1="56" x2="210" y2="220"/>
@@ -18427,21 +17881,13 @@ $\mathbf{Ans}\quad \begin{aligned}b &= \overline{\overline{B+C}} \\ c &= \overli
 <circle cx="403" cy="56" r="5"/>
 <circle cx="148" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="220" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="264" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="370" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="432" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="538" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="560" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="622" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="644" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="666" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="728" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="750" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="772" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18466,7 +17912,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1302" viewBox="0 0 808 1302" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1196"/>
 <line x1="40" y1="28" x2="40" y2="1090"/>
 <line x1="210" y1="56" x2="210" y2="582"/>
@@ -18599,9 +18045,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="40" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="520" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="604" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="626" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="732" r="3.5" fill="currentColor" stroke="none"/>
@@ -18610,13 +18054,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="318" cy="900" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="922" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1090" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1196" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1218" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1240" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18642,7 +18080,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1440" viewBox="0 0 808 1440" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1334"/>
 <line x1="40" y1="28" x2="40" y2="1228"/>
 <line x1="210" y1="56" x2="210" y2="848"/>
@@ -18794,21 +18232,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="102" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="732" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="801" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="848" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="870" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="976" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1038" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1228" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1250" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1272" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1356" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1378" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18835,7 +18265,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="728" height="560" viewBox="0 0 728 560" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="40" y1="28" x2="40" y2="114"/>
 <line x1="148" y1="56" x2="148" y2="454"/>
 <line x1="86" y1="28" x2="86" y2="348"/>
@@ -18891,17 +18321,10 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="233" cy="56" r="5"/>
 <polygon points="314,44 314,68 336,56"/>
 <circle cx="341" cy="56" r="5"/>
-<circle cx="40" cy="114" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="136" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="302" cy="158" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="220" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="242" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="264" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="86" cy="348" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="370" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="454" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="194" cy="476" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="498" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="86" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="194" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="302" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -18924,7 +18347,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1546" viewBox="0 0 808 1546" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1440"/>
 <line x1="40" y1="28" x2="40" y2="1334"/>
 <line x1="210" y1="56" x2="210" y2="954"/>
@@ -19086,21 +18509,13 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="907" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="954" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="976" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1060" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="1082" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="1144" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1166" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1250" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1272" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1356" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1378" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1462" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1484" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
@@ -19128,7 +18543,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="808" height="1408" viewBox="0 0 808 1408" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.8" fill="none">
+<g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
 <line x1="102" y1="56" x2="102" y2="1302"/>
 <line x1="40" y1="28" x2="40" y2="1196"/>
 <line x1="210" y1="56" x2="210" y2="688"/>
@@ -19271,9 +18686,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="40" cy="582" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="604" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="626" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="210" cy="688" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="710" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="426" cy="732" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="102" cy="794" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="318" cy="816" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="838" r="3.5" fill="currentColor" stroke="none"/>
@@ -19282,13 +18695,7 @@ $\mathbf{Ans}\quad \begin{aligned}a &= \overline{\overline{A+C+D}+\overline{\ove
 <circle cx="318" cy="1006" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1028" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="1112" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="148" cy="1134" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="40" cy="1196" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="256" cy="1218" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="364" cy="1240" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="102" cy="1302" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="318" cy="1324" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="364" cy="1346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="40" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="148" cy="56" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="256" cy="56" r="3.5" fill="currentColor" stroke="none"/>
