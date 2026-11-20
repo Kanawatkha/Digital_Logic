@@ -101,7 +101,7 @@
 </svg>
 </div>
 
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=a}
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -190,178 +190,65 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
-<line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">J</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">K</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L430,311.2 M478,311.2 L574,311.2 L574,284 L606,284 M670,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="423.6" text-anchor="end">Q</text>
-<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="424" height="251"/>
-<line x1="16" y1="73" x2="440" y2="73"/>
-<line x1="345" y1="42" x2="345" y2="293"/>
-<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
-<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
-<line x1="212" y1="230" x2="212" y2="217" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,216 207.5,223 216.5,223" fill="currentColor"/>
-<line x1="212" y1="257" x2="212" y2="244" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,243 207.5,250 216.5,250" fill="currentColor"/>
-<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">J</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="63" text-anchor="middle" font-size="16">K</text>
-<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="368.8" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="359" y1="241" x2="370" y2="241" stroke="currentColor" stroke-width="1.3"/>
-<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 M222,284 L462,284 L462,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L328,311.2 L328,284 L538,284 L538,311.2 L678,311.2 L678,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L158,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=c}
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -450,44 +337,208 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="470" y1="26" x2="470" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="534" y1="26" x2="534" y2="458"/>
-<line x1="550" y1="26" x2="550" y2="458"/>
-<line x1="614" y1="26" x2="614" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L470,44 L470,71.2 L534,71.2 L534,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L550,104 L550,131.2 L614,131.2 L614,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="506" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L470,191.2 M614,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="506" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L222,224 L222,251.2 L398,251.2 L398,224 L470,224 M614,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="506" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L470,311.2 M614,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L580,284 L580,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=rise; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="424" height="251"/>
+<line x1="16" y1="73" x2="440" y2="73"/>
+<line x1="345" y1="42" x2="345" y2="293"/>
+<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
+<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
+<line x1="212" y1="230" x2="212" y2="217" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,216 207.5,223 216.5,223" fill="currentColor"/>
+<line x1="212" y1="257" x2="212" y2="244" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,243 207.5,250 216.5,250" fill="currentColor"/>
+<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">J</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="63" text-anchor="middle" font-size="16">K</text>
+<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="368.8" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="359" y1="241" x2="370" y2="241" stroke="currentColor" stroke-width="1.3"/>
+<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L524,251.2 L524,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L692,311.2 L692,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -581,7 +632,7 @@
 </svg>
 </div>
 
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=a}
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -670,178 +721,65 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
-<line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">J</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">K</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L430,311.2 M478,311.2 L574,311.2 L574,284 L606,284 M670,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="423.6" text-anchor="end">Q</text>
-<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="424" height="251"/>
-<line x1="16" y1="73" x2="440" y2="73"/>
-<line x1="345" y1="42" x2="345" y2="293"/>
-<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
-<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
-<line x1="212" y1="217" x2="212" y2="230" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,231 207.5,224 216.5,224" fill="currentColor"/>
-<line x1="212" y1="244" x2="212" y2="257" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,258 207.5,251 216.5,251" fill="currentColor"/>
-<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">J</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="63" text-anchor="middle" font-size="16">K</text>
-<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="368.8" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="359" y1="241" x2="370" y2="241" stroke="currentColor" stroke-width="1.3"/>
-<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 M222,284 L462,284 L462,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L328,311.2 L328,284 L538,284 L538,311.2 L678,311.2 L678,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L158,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=c}
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -930,44 +868,208 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="470" y1="26" x2="470" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="534" y1="26" x2="534" y2="458"/>
-<line x1="550" y1="26" x2="550" y2="458"/>
-<line x1="614" y1="26" x2="614" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L470,44 L470,71.2 L534,71.2 L534,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L550,104 L550,131.2 L614,131.2 L614,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="506" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L470,164 M614,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="506" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L222,224 L222,251.2 L398,251.2 L398,224 L470,224 M614,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="506" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L470,311.2 M614,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L580,284 L580,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  JK ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=jk; trig=fall; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="424" height="251"/>
+<line x1="16" y1="73" x2="440" y2="73"/>
+<line x1="345" y1="42" x2="345" y2="293"/>
+<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<line x1="212" y1="217" x2="212" y2="230" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,231 207.5,224 216.5,224" fill="currentColor"/>
+<line x1="212" y1="244" x2="212" y2="257" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,258 207.5,251 216.5,251" fill="currentColor"/>
+<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">J</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="63" text-anchor="middle" font-size="16">K</text>
+<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="368.8" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="359" y1="241" x2="370" y2="241" stroke="currentColor" stroke-width="1.3"/>
+<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="255" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">J</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L524,251.2 L524,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">K</text>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L692,311.2 L692,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -1055,7 +1157,7 @@
 </svg>
 </div>
 
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=a}
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -1119,242 +1221,290 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="422" y1="26" x2="422" y2="398"/>
-<line x1="438" y1="26" x2="438" y2="398"/>
-<line x1="486" y1="26" x2="486" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L358,44 L358,71.2 L422,71.2 L422,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L438,104 L438,131.2 L486,131.2 L486,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="394" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L358,191.2 M486,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">D</text>
-<text x="394" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L358,224 M486,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
-<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="294" y1="26" x2="294" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L294,104 L294,131.2 L358,131.2 L358,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="326" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L294,164 M358,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">D</text>
-<text x="326" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L190,251.2 L190,224 L294,224 M358,224 L462,224 L462,251.2 L558,251.2 L558,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L158,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=c}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
-<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="166" y1="26" x2="166" y2="398"/>
-<line x1="238" y1="26" x2="238" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="542" y1="26" x2="542" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L478,44 L478,71.2 L542,71.2 L542,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L166,104 L166,131.2 L238,131.2 L238,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L166,164 M238,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L478,191.2 M542,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L166,224 M238,224 L302,224 L302,251.2 L398,251.2 L398,224 L478,224 M542,224 L590,224 L590,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=b}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
+<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L580,224 L580,251.2 L664,251.2 L664,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=rise; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
+<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L440,224 L440,251.2 L524,251.2 L524,224 L692,224 L692,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -1442,7 +1592,7 @@
 </svg>
 </div>
 
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=a}
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -1506,242 +1656,290 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="422" y1="26" x2="422" y2="398"/>
-<line x1="438" y1="26" x2="438" y2="398"/>
-<line x1="486" y1="26" x2="486" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L358,44 L358,71.2 L422,71.2 L422,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L438,104 L438,131.2 L486,131.2 L486,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="394" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L358,164 M486,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">D</text>
-<text x="394" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L358,224 M486,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
-<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="294" y1="26" x2="294" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L294,104 L294,131.2 L358,131.2 L358,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="326" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L294,191.2 M358,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">D</text>
-<text x="326" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L190,251.2 L190,224 L294,224 M358,224 L462,224 L462,251.2 L558,251.2 L558,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L158,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=c}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
-<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="166" y1="26" x2="166" y2="398"/>
-<line x1="238" y1="26" x2="238" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="542" y1="26" x2="542" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L478,44 L478,71.2 L542,71.2 L542,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L166,104 L166,131.2 L238,131.2 L238,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L166,191.2 M238,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L478,164 M542,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L166,224 M238,224 L302,224 L302,251.2 L398,251.2 L398,224 L478,224 M542,224 L590,224 L590,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=b}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L580,224 L580,251.2 L664,251.2 L664,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  D ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=d; trig=fall; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">D</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L440,224 L440,251.2 L524,251.2 L524,224 L692,224 L692,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -1829,7 +2027,7 @@
 </svg>
 </div>
 
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=a}
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -1895,147 +2093,60 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="430" y1="26" x2="430" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">T</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L430,224 M478,224 L574,224 L574,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
-<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">T</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="313" y1="187" x2="324" y2="187" stroke="currentColor" stroke-width="1.3"/>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="160" x2="371.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
 <line x1="174" y1="26" x2="174" y2="398"/>
-<line x1="222" y1="26" x2="222" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L482,224 L482,251.2 L538,251.2 L538,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L158,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=c}
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -2101,40 +2212,175 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="214" y1="26" x2="214" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="278" y1="26" x2="278" y2="398"/>
-<line x1="350" y1="26" x2="350" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="414" y1="26" x2="414" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L214,104 L214,131.2 L278,131.2 L278,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="246" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L214,191.2 M278,164 L318,164 L318,191.2 L350,191.2 M414,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="246" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L214,224 M278,251.2 L302,251.2 L302,224 L350,224 M414,251.2 L590,251.2 L590,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=rise; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
+<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">T</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="313" y1="187" x2="324" y2="187" stroke="currentColor" stroke-width="1.3"/>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="160" x2="371.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L440,251.2 L440,224 L524,224 L524,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -2222,7 +2468,7 @@
 </svg>
 </div>
 
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=a}
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -2288,147 +2534,60 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="430" y1="26" x2="430" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
-<line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">T</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L430,224 M478,224 L574,224 L574,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="378" height="197"/>
-<line x1="16" y1="73" x2="394" y2="73"/>
-<line x1="299" y1="42" x2="299" y2="239"/>
-<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
-<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
-<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">T</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="322.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="322.8" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="313" y1="187" x2="324" y2="187" stroke="currentColor" stroke-width="1.3"/>
-<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="370.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="160" x2="371.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="370.2" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
 <line x1="174" y1="26" x2="174" y2="398"/>
-<line x1="222" y1="26" x2="222" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L482,224 L482,251.2 L538,251.2 L538,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L158,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=c}
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -2494,40 +2653,175 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="214" y1="26" x2="214" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="278" y1="26" x2="278" y2="398"/>
-<line x1="350" y1="26" x2="350" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="414" y1="26" x2="414" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L214,104 L214,131.2 L278,131.2 L278,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="246" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L214,164 M278,191.2 L318,191.2 L318,164 L350,164 M414,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="246" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L214,224 M278,251.2 L302,251.2 L302,224 L350,224 M414,251.2 L590,251.2 L590,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L158,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  T ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=t; trig=fall; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="410" height="247" viewBox="0 0 410 247" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="205" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="378" height="197"/>
+<line x1="16" y1="73" x2="394" y2="73"/>
+<line x1="299" y1="42" x2="299" y2="239"/>
+<line x1="16" y1="154" x2="394" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="208" x2="394" y2="208" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<text x="212" y="228" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">T</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="228" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="322.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="322.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="322.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="322.8" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="313" y1="187" x2="324" y2="187" stroke="currentColor" stroke-width="1.3"/>
+<text x="322.8" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="364.5" y1="49" x2="375.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="370.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="370.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="160" x2="371.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="370.2" y="201" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="370.2" y="228" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="360.5" y1="214" x2="371.5" y2="214" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
+<line x1="510" y1="26" x2="510" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">T</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L440,251.2 L440,224 L524,224 L524,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">Q</text>
+<path d="M62,284 L174,284 L174,311.2 L230,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L230,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -2621,7 +2915,7 @@
 </svg>
 </div>
 
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=a}
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -2709,177 +3003,65 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
-<line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">R</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">S</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L430,284 M478,284 L574,284 L574,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="423.6" text-anchor="end">Q</text>
-<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="424" height="251"/>
-<line x1="16" y1="73" x2="440" y2="73"/>
-<line x1="345" y1="42" x2="345" y2="293"/>
-<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
-<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
-<line x1="212" y1="230" x2="212" y2="217" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,216 207.5,223 216.5,223" fill="currentColor"/>
-<line x1="212" y1="257" x2="212" y2="244" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,243 207.5,250 216.5,250" fill="currentColor"/>
-<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">R</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="63" text-anchor="middle" font-size="16">S</text>
-<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="368.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="255" text-anchor="middle" font-size="16">?</text>
-<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="255" text-anchor="middle" font-size="16">?</text>
-<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="542" y1="26" x2="542" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L478,191.2 M542,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 M222,251.2 L462,251.2 L462,224 L478,224 M542,224 L558,224 L558,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 M222,284 L286,284 L286,311.2 L478,311.2 M542,311.2 L558,311.2 L558,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L328,284 L328,311.2 L538,311.2 L538,284 L678,284 L678,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L158,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=c}
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -2967,44 +3149,207 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="462" y1="26" x2="462" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="526" y1="26" x2="526" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L462,104 L462,131.2 L526,131.2 L526,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="494" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L462,191.2 M526,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="494" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L222,251.2 L222,224 L302,224 L302,251.2 L462,251.2 M526,251.2 L590,251.2 L590,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L342,224 L342,251.2 L580,251.2 L580,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="494" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L462,311.2 M526,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L342,311.2 L342,284 L426,284 L426,311.2 L664,311.2 L664,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาขึ้นของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=rise; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="424" height="251"/>
+<line x1="16" y1="73" x2="440" y2="73"/>
+<line x1="345" y1="42" x2="345" y2="293"/>
+<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="176" x2="212" y2="163" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,162 207.5,169 216.5,169" fill="currentColor"/>
+<line x1="212" y1="203" x2="212" y2="190" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,189 207.5,196 216.5,196" fill="currentColor"/>
+<line x1="212" y1="230" x2="212" y2="217" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,216 207.5,223 216.5,223" fill="currentColor"/>
+<line x1="212" y1="257" x2="212" y2="244" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,243 207.5,250 216.5,250" fill="currentColor"/>
+<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="368.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="255" text-anchor="middle" font-size="16">?</text>
+<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="255" text-anchor="middle" font-size="16">?</text>
+<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L370,251.2 L370,224 L440,224 L440,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -3098,7 +3443,7 @@
 </svg>
 </div>
 
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=a}
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=a}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -3186,177 +3531,65 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
-<line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
-</g>
-<text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="243.6" text-anchor="end">R</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="303.6" text-anchor="end">S</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L430,284 M478,284 L574,284 L574,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="50" y="423.6" text-anchor="end">Q</text>
-<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
-</svg>
-</div>
-
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=b}
-
-**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
-<g stroke="currentColor" stroke-width="1.4" fill="none">
-<rect x="16" y="42" width="424" height="251"/>
-<line x1="16" y1="73" x2="440" y2="73"/>
-<line x1="345" y1="42" x2="345" y2="293"/>
-<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
-<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
-</g>
-<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
-<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
-<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
-<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
-<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
-<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
-<line x1="212" y1="217" x2="212" y2="230" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,231 207.5,224 216.5,224" fill="currentColor"/>
-<line x1="212" y1="244" x2="212" y2="257" stroke="currentColor" stroke-width="1.6"/>
-<polygon points="212,258 207.5,251 216.5,251" fill="currentColor"/>
-<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
-<text x="276" y="63" text-anchor="middle" font-size="16">R</text>
-<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="63" text-anchor="middle" font-size="16">S</text>
-<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
-<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
-<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
-<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="368.8" y="201" text-anchor="middle" font-size="16">1</text>
-<text x="368.8" y="228" text-anchor="middle" font-size="16">0</text>
-<text x="368.8" y="255" text-anchor="middle" font-size="16">?</text>
-<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
-<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
-<text x="416.2" y="201" text-anchor="middle" font-size="16">0</text>
-<text x="416.2" y="228" text-anchor="middle" font-size="16">1</text>
-<text x="416.2" y="255" text-anchor="middle" font-size="16">?</text>
-<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
-<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
-</svg>
-</div>
-
-<div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
-<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="542" y1="26" x2="542" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L478,164 M542,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 M222,251.2 L462,251.2 L462,224 L478,224 M542,224 L558,224 L558,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 M222,284 L286,284 L286,311.2 L478,311.2 M542,311.2 L558,311.2 L558,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L328,284 L328,311.2 L538,311.2 L538,284 L678,284 L678,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L158,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L158,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
-### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา เริ่มต้นที่ $Q=0$ จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=c}
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=b}
 
 **ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
 
@@ -3444,44 +3677,207 @@
 </div>
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="462" y1="26" x2="462" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="526" y1="26" x2="526" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L462,104 L462,131.2 L526,131.2 L526,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="494" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L462,164 M526,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="494" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L222,251.2 L222,224 L302,224 L302,251.2 L462,251.2 M526,251.2 L590,251.2 L590,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L342,224 L342,251.2 L580,251.2 L580,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="494" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L462,311.2 M526,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L342,311.2 L342,284 L426,284 L426,311.2 L664,311.2 L664,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L158,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L158,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
+</svg>
+</div>
+
+### ข้อ 2  Clock RS ฟลิป-ฟลอป ที่มี PS และ CLR ทำงานที่ขอบขาลงของสัญญาณนาฬิกา จงหารูปคลื่น $Q$ และ $\overline{Q}$ เมื่อสัญญาณเข้าเป็นดังรูป {ff=rs; trig=fall; pins=ps; set=c}
+
+**ตารางการทำงาน** ($x$ = อะไรก็ได้, $Q_0$ = $Q$ ก่อนหน้า)
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="456" height="301" viewBox="0 0 456 301" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<text x="228" y="26" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="21" font-weight="500" fill="#e8743b">ตารางการทำงาน</text>
+<g stroke="currentColor" stroke-width="1.4" fill="none">
+<rect x="16" y="42" width="424" height="251"/>
+<line x1="16" y1="73" x2="440" y2="73"/>
+<line x1="345" y1="42" x2="345" y2="293"/>
+<line x1="16" y1="154" x2="440" y2="154" stroke-width="0.9" stroke-opacity="0.55"/>
+<line x1="16" y1="262" x2="440" y2="262" stroke-width="0.9" stroke-opacity="0.55"/>
+</g>
+<text x="57" y="63" text-anchor="middle" font-size="16">PRESET</text>
+<text x="57" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="57" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="57" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="63" text-anchor="middle" font-size="16">CLEAR</text>
+<text x="134.5" y="93" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="134.5" y="174" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="134.5" y="282" text-anchor="middle" font-size="16">1</text>
+<text x="212" y="63" text-anchor="middle" font-size="16">CLOCK</text>
+<text x="212" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="212" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<line x1="212" y1="163" x2="212" y2="176" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,177 207.5,170 216.5,170" fill="currentColor"/>
+<line x1="212" y1="190" x2="212" y2="203" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,204 207.5,197 216.5,197" fill="currentColor"/>
+<line x1="212" y1="217" x2="212" y2="230" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,231 207.5,224 216.5,224" fill="currentColor"/>
+<line x1="212" y1="244" x2="212" y2="257" stroke="currentColor" stroke-width="1.6"/>
+<polygon points="212,258 207.5,251 216.5,251" fill="currentColor"/>
+<text x="212" y="282" text-anchor="middle" font-size="16" font-family="Mitr, Tahoma, sans-serif" font-size="14">ไม่มีขอบ</text>
+<text x="276" y="63" text-anchor="middle" font-size="16">R</text>
+<text x="276" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="276" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="276" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="276" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="63" text-anchor="middle" font-size="16">S</text>
+<text x="322" y="93" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="120" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="147" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="322" y="174" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="322" y="255" text-anchor="middle" font-size="16">1</text>
+<text x="322" y="282" text-anchor="middle" font-size="16" font-style="italic">x</text>
+<text x="368.8" y="63" text-anchor="middle" font-size="16">Q</text>
+<text x="368.8" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="120" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="147" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="368.8" y="201" text-anchor="middle" font-size="16">1</text>
+<text x="368.8" y="228" text-anchor="middle" font-size="16">0</text>
+<text x="368.8" y="255" text-anchor="middle" font-size="16">?</text>
+<text x="368.8" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<text x="416.2" y="63" text-anchor="middle" font-size="16">Q</text>
+<line x1="410.5" y1="49" x2="421.5" y2="49" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="93" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="120" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="147" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="174" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="160" x2="417.5" y2="160" stroke="currentColor" stroke-width="1.3"/>
+<text x="416.2" y="201" text-anchor="middle" font-size="16">0</text>
+<text x="416.2" y="228" text-anchor="middle" font-size="16">1</text>
+<text x="416.2" y="255" text-anchor="middle" font-size="16">?</text>
+<text x="416.2" y="282" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="11">0</tspan></text>
+<line x1="406.5" y1="268" x2="417.5" y2="268" stroke="currentColor" stroke-width="1.3"/>
+</svg>
+</div>
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
+<line x1="510" y1="26" x2="510" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
+</g>
+<text x="50" y="63.6" text-anchor="end">PS</text>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="123.6" text-anchor="end">CLR</text>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="243.6" text-anchor="end">R</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L370,251.2 L370,224 L440,224 L440,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="303.6" text-anchor="end">S</text>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="363.6" text-anchor="end">Q</text>
+<path d="M62,344 L174,344 L174,371.2 L230,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="50" y="423.6" text-anchor="end">Q</text>
+<line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L230,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -3957,57 +4353,74 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ขอบ #3 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #4 : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T8 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T10 (ขอบขาขึ้น) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L430,311.2 M478,311.2 L574,311.2 L574,284 L606,284 M670,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L328,311.2 L328,284 L538,284 L538,311.2 L678,311.2 L678,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L254,344 L254,371.2 L382,371.2 L382,344 L430,344 L430,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L398,344 L398,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L430,431.2 L430,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L398,431.2 L398,404 L510,404 L510,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4015,57 +4428,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #4 : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T6 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 M222,284 L462,284 L462,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L580,284 L580,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L174,371.2 L174,344 L254,344 L254,371.2 L382,371.2 L382,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L398,371.2 L398,344 L510,344 L510,371.2 L622,371.2 L622,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L174,404 L174,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L398,404 L398,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L790,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4073,57 +4503,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #2 : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #3 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #4 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #5 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="470" y1="26" x2="470" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="534" y1="26" x2="534" y2="458"/>
-<line x1="550" y1="26" x2="550" y2="458"/>
-<line x1="614" y1="26" x2="614" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L470,44 L470,71.2 L534,71.2 L534,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L550,104 L550,131.2 L614,131.2 L614,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="506" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L470,191.2 M614,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="506" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L222,224 L222,251.2 L398,251.2 L398,224 L470,224 M614,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L524,251.2 L524,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="506" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L470,311.2 M614,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L692,311.2 L692,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L382,344 L382,371.2 L470,371.2 L470,344 L550,344 L550,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L510,344 L510,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L382,431.2 L382,404 L470,404 L470,431.2 L550,431.2 L550,404 L638,404 L638,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4251,57 +4698,74 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ขอบ #3 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #4 : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T8 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T10 (ขอบขาลง) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L430,104 L430,131.2 L478,131.2 L478,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 L174,284 L414,284 L414,311.2 L430,311.2 M478,311.2 L574,311.2 L574,284 L606,284 M670,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L328,311.2 L328,284 L538,284 L538,311.2 L678,311.2 L678,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L254,344 L254,371.2 L382,371.2 L382,344 L430,344 L430,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L398,344 L398,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L430,431.2 L430,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L398,431.2 L398,404 L510,404 L510,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4309,57 +4773,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #4 : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T6 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 M222,284 L462,284 L462,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L580,284 L580,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L174,371.2 L174,344 L254,344 L254,371.2 L382,371.2 L382,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L398,371.2 L398,344 L510,344 L510,371.2 L622,371.2 L622,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L174,404 L174,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L398,404 L398,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L790,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4367,57 +4848,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #2 : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #3 : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #4 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #5 : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $J=0, K=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $J=0, K=1$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $J=1, K=0$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $J=1, K=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="470" y1="26" x2="470" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="534" y1="26" x2="534" y2="458"/>
-<line x1="550" y1="26" x2="550" y2="458"/>
-<line x1="614" y1="26" x2="614" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L470,44 L470,71.2 L534,71.2 L534,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L550,104 L550,131.2 L614,131.2 L614,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="506" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L470,164 M614,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">J</text>
-<text x="506" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L222,224 L222,251.2 L398,251.2 L398,224 L470,224 M614,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L524,251.2 L524,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">K</text>
-<text x="506" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="578" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L470,311.2 M614,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L692,311.2 L692,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L382,344 L382,371.2 L470,371.2 L470,344 L550,344 L550,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L510,344 L510,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L382,431.2 L382,404 L470,404 L470,431.2 L550,431.2 L550,404 L638,404 L638,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4539,53 +5037,69 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=1 \Rightarrow Q = 1$
-- ขอบ #2 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #2 กับ #3 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #3 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #4 : $D=1 \Rightarrow Q = 1$
-- ขอบ #5 : $D=0 \Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
+- T8 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T10 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="422" y1="26" x2="422" y2="398"/>
-<line x1="438" y1="26" x2="438" y2="398"/>
-<line x1="486" y1="26" x2="486" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L358,44 L358,71.2 L422,71.2 L422,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L438,104 L438,131.2 L486,131.2 L486,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="394" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L358,191.2 M486,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
-<text x="394" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L358,224 M486,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L358,311.2 L358,284 L438,284 L438,311.2 L510,311.2 L510,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L398,284 L398,311.2 L510,311.2 L510,284 L734,284 L734,311.2 L790,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L358,344 L358,371.2 L438,371.2 L438,344 L510,344 L510,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L398,371.2 L398,344 L510,344 L510,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4593,53 +5107,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=0 \Rightarrow Q = 0$
-- ขอบ #2 : $D=1 \Rightarrow Q = 1$
-- ระหว่างขอบ #2 กับ #3 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #2 กับ #3 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #3 : $D=1 \Rightarrow Q = 1$
-- ขอบ #4 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
+- T6 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T10 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
+- T12 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="294" y1="26" x2="294" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L294,104 L294,131.2 L358,131.2 L358,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="326" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L294,164 M358,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
-<text x="326" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L190,251.2 L190,224 L294,224 M358,224 L462,224 L462,251.2 L558,251.2 L558,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L580,224 L580,251.2 L664,251.2 L664,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L254,311.2 L254,284 L294,284 L294,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L606,311.2 L606,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L398,311.2 L398,284 L622,284 L622,311.2 L734,311.2 L734,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L254,344 L254,371.2 L294,371.2 L294,344 L382,344 L382,371.2 L510,371.2 L510,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L398,344 L398,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4647,53 +5177,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=1 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #2 : $D=1 \Rightarrow Q = 1$
-- ขอบ #3 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #4 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #5 : $D=0 \Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $D=1 \Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $D=0 \Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="166" y1="26" x2="166" y2="398"/>
-<line x1="238" y1="26" x2="238" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="542" y1="26" x2="542" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L478,44 L478,71.2 L542,71.2 L542,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L166,104 L166,131.2 L238,131.2 L238,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L166,164 M238,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L478,191.2 M542,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L166,224 M238,224 L302,224 L302,251.2 L398,251.2 L398,224 L478,224 M542,224 L590,224 L590,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,224 L440,224 L440,251.2 L524,251.2 L524,224 L692,224 L692,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L166,284 L166,311.2 L254,311.2 L254,284 L382,284 L382,311.2 L478,311.2 L478,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L510,284 L510,311.2 L622,311.2 L622,284 L734,284 L734,311.2 L790,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L166,371.2 L166,344 L254,344 L254,371.2 L382,371.2 L382,344 L478,344 L478,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L510,371.2 L510,344 L622,344 L622,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4815,53 +5361,69 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=1 \Rightarrow Q = 1$
-- ขอบ #2 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #2 กับ #3 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #3 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #4 : $D=1 \Rightarrow Q = 1$
-- ขอบ #5 : $D=0 \Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
+- T8 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T10 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="422" y1="26" x2="422" y2="398"/>
-<line x1="438" y1="26" x2="438" y2="398"/>
-<line x1="486" y1="26" x2="486" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L358,44 L358,71.2 L422,71.2 L422,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L438,104 L438,131.2 L486,131.2 L486,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="394" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L358,164 M486,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
-<text x="394" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="458" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 L174,251.2 L350,251.2 L350,224 L358,224 M486,224 L574,224 L574,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L328,224 L328,251.2 L482,251.2 L482,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L358,311.2 L358,284 L438,284 L438,311.2 L510,311.2 L510,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L398,284 L398,311.2 L510,311.2 L510,284 L734,284 L734,311.2 L790,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L358,344 L358,371.2 L438,371.2 L438,344 L510,344 L510,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L398,371.2 L398,344 L510,344 L510,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4869,53 +5431,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=0 \Rightarrow Q = 0$
-- ขอบ #2 : $D=1 \Rightarrow Q = 1$
-- ระหว่างขอบ #2 กับ #3 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #2 กับ #3 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #3 : $D=1 \Rightarrow Q = 1$
-- ขอบ #4 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
+- T6 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T10 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
+- T12 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="294" y1="26" x2="294" y2="398"/>
-<line x1="358" y1="26" x2="358" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L294,104 L294,131.2 L358,131.2 L358,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="326" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L294,191.2 M358,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
-<text x="326" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L190,251.2 L190,224 L294,224 M358,224 L462,224 L462,251.2 L558,251.2 L558,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L580,224 L580,251.2 L664,251.2 L664,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L254,311.2 L254,284 L294,284 L294,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L606,311.2 L606,284 L702,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L398,311.2 L398,284 L622,284 L622,311.2 L734,311.2 L734,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L254,344 L254,371.2 L294,371.2 L294,344 L382,344 L382,371.2 L510,371.2 L510,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L398,344 L398,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -4923,53 +5501,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $D=1 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $CLR=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #2 : $D=1 \Rightarrow Q = 1$
-- ขอบ #3 : $D=0 \Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #4 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #5 : $D=0 \Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $D=1 \Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $D=0 \Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="166" y1="26" x2="166" y2="398"/>
-<line x1="238" y1="26" x2="238" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="542" y1="26" x2="542" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L478,44 L478,71.2 L542,71.2 L542,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L166,104 L166,131.2 L238,131.2 L238,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L166,191.2 M238,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L478,164 M542,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">D</text>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
 <text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L166,224 M238,224 L302,224 L302,251.2 L398,251.2 L398,224 L478,224 M542,224 L590,224 L590,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M230,224 L440,224 L440,251.2 L524,251.2 L524,224 L692,224 L692,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L166,284 L166,311.2 L254,311.2 L254,284 L382,284 L382,311.2 L478,311.2 L478,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L510,284 L510,311.2 L622,311.2 L622,284 L734,284 L734,311.2 L790,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L166,371.2 L166,344 L254,344 L254,371.2 L382,371.2 L382,344 L478,344 L478,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L510,371.2 L510,344 L622,344 L622,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5091,53 +5685,69 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 0,\ 1 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T8 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="430" y1="26" x2="430" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L430,224 M478,224 L574,224 L574,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L482,224 L482,251.2 L538,251.2 L538,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L430,311.2 L430,284 L510,284 L510,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L398,284 L398,311.2 L622,311.2 L622,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L430,344 L430,371.2 L510,371.2 L510,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L398,371.2 L398,344 L622,344 L622,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5145,53 +5755,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T6 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
 <line x1="174" y1="26" x2="174" y2="398"/>
-<line x1="222" y1="26" x2="222" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L174,311.2 L174,284 L254,284 L254,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L398,311.2 L398,284 L510,284 L510,311.2 L622,311.2 L622,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L174,344 L174,371.2 L254,371.2 L254,344 L382,344 L382,371.2 L510,371.2 L510,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L398,344 L398,371.2 L510,371.2 L510,344 L622,344 L622,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5199,53 +5825,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #2 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #2 กับ #3 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ระหว่างขอบ #2 กับ #3 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #3 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #5 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T12 (ขอบขาขึ้น) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="214" y1="26" x2="214" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="278" y1="26" x2="278" y2="398"/>
-<line x1="350" y1="26" x2="350" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="414" y1="26" x2="414" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L214,104 L214,131.2 L278,131.2 L278,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="246" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L214,191.2 M278,164 L318,164 L318,191.2 L350,191.2 M414,164 L446,164 L446,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="246" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L214,224 M278,251.2 L302,251.2 L302,224 L350,224 M414,251.2 L590,251.2 L590,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L440,251.2 L440,224 L524,224 L524,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L214,284 L214,311.2 L350,311.2 L350,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L510,284 L510,311.2 L734,311.2 L734,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L214,371.2 L214,344 L350,344 L350,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5367,53 +6009,69 @@ $\mathbf{Ans}\quad Q = 1,\ 1,\ 0,\ 0,\ 1 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T8 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="430" y1="26" x2="430" y2="398"/>
-<line x1="478" y1="26" x2="478" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L350,224 L350,251.2 L414,251.2 L414,224 L430,224 M478,224 L574,224 L574,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L482,224 L482,251.2 L538,251.2 L538,224 L678,224 L678,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L254,284 L254,311.2 L430,311.2 L430,284 L510,284 L510,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L398,284 L398,311.2 L622,311.2 L622,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L254,371.2 L254,344 L430,344 L430,371.2 L510,371.2 L510,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L398,371.2 L398,344 L622,344 L622,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5421,53 +6079,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ขอบ #3 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ขอบ #4 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T6 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
 <line x1="174" y1="26" x2="174" y2="398"/>
-<line x1="222" y1="26" x2="222" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="606" y1="26" x2="606" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
-<line x1="670" y1="26" x2="670" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L174,251.2 M222,224 L558,224 L558,251.2 L606,251.2 M670,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L342,251.2 L342,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L174,311.2 L174,284 L254,284 L254,311.2 L382,311.2 L382,284 L510,284 L510,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L398,311.2 L398,284 L510,284 L510,311.2 L622,311.2 L622,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L174,344 L174,371.2 L254,371.2 L254,344 L382,344 L382,371.2 L510,371.2 L510,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L398,344 L398,371.2 L510,371.2 L510,344 L622,344 L622,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5475,53 +6149,69 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #2 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #2 กับ #3 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ระหว่างขอบ #2 กับ #3 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #3 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #5 : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $T=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 0$
+- T12 (ขอบขาลง) : $T=1$ $\Rightarrow$ สลับ $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="404" viewBox="0 0 726 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="404" viewBox="0 0 814 404" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="398"/>
-<line x1="214" y1="26" x2="214" y2="398"/>
-<line x1="254" y1="26" x2="254" y2="398"/>
-<line x1="278" y1="26" x2="278" y2="398"/>
-<line x1="350" y1="26" x2="350" y2="398"/>
-<line x1="382" y1="26" x2="382" y2="398"/>
-<line x1="414" y1="26" x2="414" y2="398"/>
+<line x1="62" y1="26" x2="62" y2="398"/>
+<line x1="118" y1="26" x2="118" y2="398"/>
+<line x1="174" y1="26" x2="174" y2="398"/>
+<line x1="230" y1="26" x2="230" y2="398"/>
+<line x1="286" y1="26" x2="286" y2="398"/>
+<line x1="342" y1="26" x2="342" y2="398"/>
+<line x1="398" y1="26" x2="398" y2="398"/>
+<line x1="454" y1="26" x2="454" y2="398"/>
 <line x1="510" y1="26" x2="510" y2="398"/>
-<line x1="638" y1="26" x2="638" y2="398"/>
+<line x1="566" y1="26" x2="566" y2="398"/>
+<line x1="622" y1="26" x2="622" y2="398"/>
+<line x1="678" y1="26" x2="678" y2="398"/>
+<line x1="734" y1="26" x2="734" y2="398"/>
+<line x1="790" y1="26" x2="790" y2="398"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L350,44 L350,71.2 L414,71.2 L414,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L214,104 L214,131.2 L278,131.2 L278,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="246" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L214,164 M278,191.2 L318,191.2 L318,164 L350,164 M414,191.2 L446,191.2 L446,164 L510,164 L510,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">T</text>
-<text x="246" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="382" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L214,224 M278,251.2 L302,251.2 L302,224 L350,224 M414,251.2 L590,251.2 L590,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L370,224 L370,251.2 L440,251.2 L440,224 L524,224 L524,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">Q</text>
-<path d="M62,311.2 L126,311.2 L126,284 L214,284 L214,311.2 L350,311.2 L350,284 L638,284 L638,311.2 L702,311.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,284 L174,284 L174,311.2 L286,311.2 L286,284 L510,284 L510,311.2 L734,311.2 L734,284 L790,284" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
 <line x1="38" y1="348.6" x2="50" y2="348.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,344 L126,344 L126,371.2 L214,371.2 L214,344 L350,344 L350,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,344 L118,344 L118,371.2 L174,371.2 L174,344 L286,344 L286,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5649,57 +6339,74 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #3 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T10 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L430,164 M478,191.2 L510,191.2 L510,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L430,284 M478,284 L574,284 L574,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L328,284 L328,311.2 L538,311.2 L538,284 L678,284 L678,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L382,344 L382,371.2 L430,371.2 L430,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L510,344 L510,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L382,431.2 L382,404 L430,404 L430,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5707,57 +6414,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #3 : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #4 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #5 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T6 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T8 (ขอบขาขึ้น) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T10 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T12 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="542" y1="26" x2="542" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L174,164 M222,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L478,191.2 M542,164 L574,164 L574,191.2 L638,191.2 L638,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 M222,251.2 L462,251.2 L462,224 L478,224 M542,224 L558,224 L558,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L342,224 L342,251.2 L580,251.2 L580,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 M222,284 L286,284 L286,311.2 L478,311.2 M542,311.2 L558,311.2 L558,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L342,311.2 L342,284 L426,284 L426,311.2 L664,311.2 L664,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L174,371.2 L174,344 L478,344 L478,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L398,371.2 L398,344 L622,344 L622,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L174,404 L174,431.2 L478,431.2 L478,404 L638,404 L638,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L398,404 L398,431.2 L622,431.2 L622,404 L734,404 L734,431.2 L790,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5765,57 +6489,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ขอบ #3 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #4 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T8 (ขอบขาขึ้น) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T10 (ขอบขาขึ้น) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T12 (ขอบขาขึ้น) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="462" y1="26" x2="462" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="526" y1="26" x2="526" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L462,104 L462,131.2 L526,131.2 L526,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="494" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,191.2 L126,191.2 L126,164 L190,164 L190,191.2 L254,191.2 L254,164 L318,164 L318,191.2 L382,191.2 L382,164 L446,164 L446,191.2 L462,191.2 M526,164 L574,164 L574,191.2 L606,191.2 M670,164 L702,164 L702,191.2 L702,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,191.2 L286,191.2 L286,164 L342,164 L342,191.2 L398,191.2 L398,164 L454,164 L454,191.2 L510,191.2 L510,164 L566,164 L566,191.2 L622,191.2 L622,164 L678,164 L678,191.2 L734,191.2 L734,164 L790,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="494" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L222,251.2 L222,224 L302,224 L302,251.2 L462,251.2 M526,251.2 L590,251.2 L590,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L370,251.2 L370,224 L440,224 L440,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="494" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L462,311.2 M526,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L254,344 L254,371.2 L382,371.2 L382,344 L462,344 L462,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L398,344 L398,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L462,431.2 L462,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L398,431.2 L398,404 L510,404 L510,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -5943,57 +6684,74 @@ $\mathbf{Ans}\quad Q = 1,\ 0,\ 1,\ 1,\ 0 \text{ หลังขอบที่ 1
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ขอบ #3 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #3 กับ #4 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #4 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #4 กับ #5 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #5 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- หลังขอบ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T10 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="430" y1="26" x2="430" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L430,44 L430,71.2 L478,71.2 L478,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L606,104 L606,131.2 L670,131.2 L670,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="454" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L430,191.2 M478,164 L510,164 L510,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="454" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L350,251.2 L350,224 L414,224 L414,251.2 L430,251.2 M478,251.2 L574,251.2 L574,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L482,251.2 L482,224 L538,224 L538,251.2 L678,251.2 L678,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="454" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L174,284 L174,311.2 L414,311.2 L414,284 L430,284 M478,284 L574,284 L574,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L328,284 L328,311.2 L538,311.2 L538,284 L678,284 L678,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L382,344 L382,371.2 L430,371.2 L430,344 L606,344 L606,371.2 L702,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L510,344 L510,371.2 L622,371.2 L622,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L382,431.2 L382,404 L430,404 L430,431.2 L606,431.2 L606,404 L702,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L510,431.2 L510,404 L622,404 L622,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -6001,57 +6759,74 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ระหว่างขอบ #1 กับ #2 : $PS=0 \Rightarrow Q = 1$
-- ระหว่างขอบ #1 กับ #2 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
-- ขอบ #2 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #3 : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #4 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ขอบ #5 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T6 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T8 (ขอบขาลง) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T10 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T12 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
 <line x1="174" y1="26" x2="174" y2="458"/>
-<line x1="222" y1="26" x2="222" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="478" y1="26" x2="478" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="542" y1="26" x2="542" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L174,44 L174,71.2 L222,71.2 L222,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L478,104 L478,131.2 L542,131.2 L542,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="198" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L174,191.2 M222,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L478,164 M542,191.2 L574,191.2 L574,164 L638,164 L638,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="198" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,224 L174,224 M222,251.2 L462,251.2 L462,224 L478,224 M542,224 L558,224 L558,251.2 L702,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,224 L342,224 L342,251.2 L580,251.2 L580,224 L664,224 L664,251.2 L790,251.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="198" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="510" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,311.2 L174,311.2 M222,284 L286,284 L286,311.2 L478,311.2 M542,311.2 L558,311.2 L558,284 L702,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,311.2 L342,311.2 L342,284 L426,284 L426,311.2 L664,311.2 L664,284 L790,284" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L174,371.2 L174,344 L478,344 L478,371.2 L638,371.2 L638,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L398,371.2 L398,344 L622,344 L622,371.2 L734,371.2 L734,344 L790,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L174,404 L174,431.2 L478,431.2 L478,404 L638,404 L638,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L398,404 L398,431.2 L622,431.2 L622,404 L734,404 L734,431.2 L790,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
 
@@ -6059,56 +6834,73 @@ $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overli
 
 $\mathbf{Sol}^{n}$
 
-- ขอบ #1 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ขอบ #2 : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
-- ขอบ #3 : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
-- ระหว่างขอบ #3 กับ #4 : $CLR=0 \Rightarrow Q = 0$
-- ขอบ #4 : $CLR=0 \Rightarrow Q = 0$ (ไม่ดู CLK)
-- ระหว่างขอบ #4 กับ #5 : $CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
-- ระหว่างขอบ #4 กับ #5 : $PS=0 \Rightarrow Q = 1$
-- ขอบ #5 : $PS=0 \Rightarrow Q = 1$ (ไม่ดู CLK)
-- หลังขอบ #5 : $PS=1 \Rightarrow$ $Q$ คงเดิม ($Q = 1$)
+- T0 ถึง T1 : $PS=0,\ CLR=0 \Rightarrow Q = 1,\ \overline{Q} = 1$ (แถว 1)
+- T1 ถึง T2 : $PS=0,\ CLR=1 \Rightarrow Q = 1,\ \overline{Q} = 0$ (แถว 2)
+- T2 ถึง T3 : $PS=1,\ CLR=0 \Rightarrow Q = 0,\ \overline{Q} = 1$ (แถว 3)
+- T3 : $PS=1,\ CLR=1 \Rightarrow$ $Q$ คงเดิม ($Q = 0$)
+- T4 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T6 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
+- T8 (ขอบขาลง) : $R=0, S=1$ $\Rightarrow$ Set $\Rightarrow Q = 1$
+- T10 (ขอบขาลง) : $R=0, S=0$ $\Rightarrow$ คงเดิม $\Rightarrow Q = 1$
+- T12 (ขอบขาลง) : $R=1, S=0$ $\Rightarrow$ Reset $\Rightarrow Q = 0$
 
 $\mathbf{Ans}\quad \text{รูปคลื่น } Q \text{ และ } \overline{Q} \text{ ตามรูป}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="726" height="464" viewBox="0 0 726 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="814" height="464" viewBox="0 0 814 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 4" stroke-opacity="0.45">
-<line x1="126" y1="26" x2="126" y2="458"/>
-<line x1="254" y1="26" x2="254" y2="458"/>
-<line x1="382" y1="26" x2="382" y2="458"/>
-<line x1="462" y1="26" x2="462" y2="458"/>
+<line x1="62" y1="26" x2="62" y2="458"/>
+<line x1="118" y1="26" x2="118" y2="458"/>
+<line x1="174" y1="26" x2="174" y2="458"/>
+<line x1="230" y1="26" x2="230" y2="458"/>
+<line x1="286" y1="26" x2="286" y2="458"/>
+<line x1="342" y1="26" x2="342" y2="458"/>
+<line x1="398" y1="26" x2="398" y2="458"/>
+<line x1="454" y1="26" x2="454" y2="458"/>
 <line x1="510" y1="26" x2="510" y2="458"/>
-<line x1="526" y1="26" x2="526" y2="458"/>
-<line x1="606" y1="26" x2="606" y2="458"/>
-<line x1="638" y1="26" x2="638" y2="458"/>
-<line x1="670" y1="26" x2="670" y2="458"/>
+<line x1="566" y1="26" x2="566" y2="458"/>
+<line x1="622" y1="26" x2="622" y2="458"/>
+<line x1="678" y1="26" x2="678" y2="458"/>
+<line x1="734" y1="26" x2="734" y2="458"/>
+<line x1="790" y1="26" x2="790" y2="458"/>
 </g>
 <text x="50" y="63.6" text-anchor="end">PS</text>
-<path d="M62,44 L606,44 L606,71.2 L670,71.2 L670,44 L702,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,71.2 L174,71.2 L174,44 L790,44" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="123.6" text-anchor="end">CLR</text>
-<path d="M62,104 L462,104 L462,131.2 L526,131.2 L526,104 L702,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,131.2 L118,131.2 L118,104 L174,104 L174,131.2 L230,131.2 L230,104 L790,104" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="183.6" text-anchor="end">CLK</text>
-<text x="494" y="183.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="183.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,164 L126,164 L126,191.2 L190,191.2 L190,164 L254,164 L254,191.2 L318,191.2 L318,164 L382,164 L382,191.2 L446,191.2 L446,164 L462,164 M526,191.2 L574,191.2 L574,164 L606,164 M670,191.2 L702,191.2 L702,164 L702,164" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="183.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="183.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,164 L286,164 L286,191.2 L342,191.2 L342,164 L398,164 L398,191.2 L454,191.2 L454,164 L510,164 L510,191.2 L566,191.2 L566,164 L622,164 L622,191.2 L678,191.2 L678,164 L734,164 L734,191.2 L790,191.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="243.6" text-anchor="end">R</text>
-<text x="494" y="243.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="243.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,251.2 L222,251.2 L222,224 L302,224 L302,251.2 L462,251.2 M526,251.2 L590,251.2 L590,224 L606,224 M670,224 L702,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="243.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="243.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,251.2 L370,251.2 L370,224 L440,224 L440,251.2 L692,251.2 L692,224 L790,224" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="303.6" text-anchor="end">S</text>
-<text x="494" y="303.6" text-anchor="middle" font-size="16">x</text>
-<text x="638" y="303.6" text-anchor="middle" font-size="16">x</text>
-<path d="M62,284 L222,284 L222,311.2 L302,311.2 L302,284 L398,284 L398,311.2 L462,311.2 M526,311.2 L606,311.2 M670,311.2 L702,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="90" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="146" y="303.6" text-anchor="middle" font-size="16">x</text>
+<text x="202" y="303.6" text-anchor="middle" font-size="16">x</text>
+<path d="M230,284 L370,284 L370,311.2 L440,311.2 L440,284 L524,284 L524,311.2 L790,311.2" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="363.6" text-anchor="end">Q</text>
-<path d="M62,371.2 L126,371.2 L126,344 L254,344 L254,371.2 L382,371.2 L382,344 L462,344 L462,371.2 L606,371.2 L606,344 L702,344" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<path d="M62,344 L174,344 L174,371.2 L286,371.2 L286,344 L398,344 L398,371.2 L510,371.2 L510,344 L734,344 L734,371.2 L790,371.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
 <text x="50" y="423.6" text-anchor="end">Q</text>
 <line x1="38" y1="408.6" x2="50" y2="408.6" stroke="currentColor" stroke-width="1.4"/>
-<path d="M62,404 L126,404 L126,431.2 L254,431.2 L254,404 L382,404 L382,431.2 L462,431.2 L462,404 L606,404 L606,431.2 L702,431.2" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
-<text x="126" y="18" text-anchor="middle" font-size="14">#1</text>
-<text x="254" y="18" text-anchor="middle" font-size="14">#2</text>
-<text x="382" y="18" text-anchor="middle" font-size="14">#3</text>
-<text x="510" y="18" text-anchor="middle" font-size="14">#4</text>
-<text x="638" y="18" text-anchor="middle" font-size="14">#5</text>
+<path d="M62,404 L118,404 L118,431.2 L174,431.2 L174,404 L286,404 L286,431.2 L398,431.2 L398,404 L510,404 L510,431.2 L734,431.2 L734,404 L790,404" stroke="#e8743b" stroke-width="2.4" fill="none" stroke-linejoin="miter"/>
+<text x="62" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">0</tspan></text>
+<text x="118" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">1</tspan></text>
+<text x="174" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">2</tspan></text>
+<text x="230" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">3</tspan></text>
+<text x="286" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">4</tspan></text>
+<text x="342" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">5</tspan></text>
+<text x="398" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">6</tspan></text>
+<text x="454" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">7</tspan></text>
+<text x="510" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">8</tspan></text>
+<text x="566" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">9</tspan></text>
+<text x="622" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">10</tspan></text>
+<text x="678" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">11</tspan></text>
+<text x="734" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">12</tspan></text>
+<text x="790" y="18" text-anchor="middle" font-size="14">T<tspan dy="4" font-size="12">13</tspan></text>
 </svg>
 </div>
