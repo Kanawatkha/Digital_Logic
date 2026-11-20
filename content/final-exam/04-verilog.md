@@ -27,14 +27,29 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NotC, C)` : $\mathit{NotC} = \overline{C}$
 - `and (P, A, B)` : $P = A\,B$
 - `and (Q, NotC, D)` : $Q = \mathit{NotC}\,D$
 - `or (Y, P, Q)` : $Y = P + Q$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 
@@ -88,25 +103,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = A\,B + \overline{C}\,D$) {part=b; case=c1; style=struct}
 
@@ -163,10 +159,10 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NotC`, `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NotC} = \overline{C}$
+- $P = A\,B$
+- $Q = \mathit{NotC}\,D$
+- $Y = P + Q$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -195,11 +191,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = (A & B) | (~C & D)` : $Y = A\,B + \overline{C}\,D$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 
@@ -250,25 +261,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = A\,B + \overline{C}\,D$) {part=b; case=c1; style=flow}
 
@@ -325,10 +317,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + \overline{C}\,D\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = A\,B + \overline{C}\,D$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -356,14 +345,21 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NotSel, Sel)` : $\mathit{NotSel} = \overline{\mathit{Sel}}$
 - `and (P, In1, Sel)` : $P = \mathit{In1}\,\mathit{Sel}$
 - `and (Q, In0, NotSel)` : $Q = \mathit{In0}\,\mathit{NotSel}$
 - `or (Out, P, Q)` : $\mathit{Out} = P + Q$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{In0}$ | $\mathit{In1}$ | $\mathit{Sel}$ | $\mathit{Out}$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}\end{aligned}$
 
@@ -415,17 +411,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \
 </g>
 </svg>
 </div>
-
-| $\mathit{In0}$ | $\mathit{In1}$ | $\mathit{Sel}$ | $\mathit{Out}$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Out} = \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}$) {part=b; case=c2; style=struct}
 
@@ -480,10 +465,10 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NotSel`, `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NotSel} = \overline{\mathit{Sel}}$
+- $P = \mathit{In1}\,\mathit{Sel}$
+- $Q = \mathit{In0}\,\mathit{NotSel}$
+- $\mathit{Out} = P + Q$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -512,11 +497,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Out = Sel ? In1 : In0` : $\mathit{Out} = \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{In0}$ | $\mathit{In1}$ | $\mathit{Sel}$ | $\mathit{Out}$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}\end{aligned}$
 
@@ -565,17 +557,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \
 </g>
 </svg>
 </div>
-
-| $\mathit{In0}$ | $\mathit{In1}$ | $\mathit{Sel}$ | $\mathit{Out}$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Out} = \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}$) {part=b; case=c2; style=flow}
 
@@ -630,10 +611,7 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \mathit{Sel}\,\mathit{In1} + \
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Out} = \mathit{Sel}\,\mathit{In1} + \overline{\mathit{Sel}}\,\mathit{In0}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -668,8 +646,6 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NotSel0, Sel0)` : $\mathit{NotSel0} = \overline{\mathit{Sel0}}$
 - `not (NotSel1, Sel1)` : $\mathit{NotSel1} = \overline{\mathit{Sel1}}$
 - `and (Y0, In0, NotSel1, NotSel0)` : $\mathit{Y0} = \mathit{In0}\,\mathit{NotSel1}\,\mathit{NotSel0}$
@@ -678,7 +654,12 @@ $\mathbf{Sol}^{n}$
 - `and (Y3, In3, Sel1, Sel0)` : $\mathit{Y3} = \mathit{In3}\,\mathit{Sel1}\,\mathit{Sel0}$
 - `or (Out, Y0, Y1, Y2, Y3)` : $\mathit{Out} = \mathit{Y0} + \mathit{Y1} + \mathit{Y2} + \mathit{Y3}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{Sel1}$ | $\mathit{Sel0}$ | $\mathit{Out}$ |
+|:-:|:-:|:-:|
+| 0 | 0 | $\mathit{In0}$ |
+| 0 | 1 | $\mathit{In1}$ |
+| 1 | 0 | $\mathit{In2}$ |
+| 1 | 1 | $\mathit{In3}$ |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}\end{aligned}$
 
@@ -774,13 +755,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\ove
 </g>
 </svg>
 </div>
-
-| $\mathit{Sel1}$ | $\mathit{Sel0}$ | $\mathit{Out}$ |
-|:-:|:-:|:-:|
-| 0 | 0 | $\mathit{In0}$ |
-| 0 | 1 | $\mathit{In1}$ |
-| 1 | 0 | $\mathit{In2}$ |
-| 1 | 1 | $\mathit{In3}$ |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Out} = \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}$) {part=b; case=c3; style=struct}
 
@@ -879,10 +853,13 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\ove
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NotSel0`, `NotSel1`, `Y0`, `Y1`, `Y2`, `Y3` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NotSel0} = \overline{\mathit{Sel0}}$
+- $\mathit{NotSel1} = \overline{\mathit{Sel1}}$
+- $\mathit{Y0} = \mathit{In0}\,\mathit{NotSel1}\,\mathit{NotSel0}$
+- $\mathit{Y1} = \mathit{In1}\,\mathit{NotSel1}\,\mathit{Sel0}$
+- $\mathit{Y2} = \mathit{In2}\,\mathit{Sel1}\,\mathit{NotSel0}$
+- $\mathit{Y3} = \mathit{In3}\,\mathit{Sel1}\,\mathit{Sel0}$
+- $\mathit{Out} = \mathit{Y0} + \mathit{Y1} + \mathit{Y2} + \mathit{Y3}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -918,11 +895,14 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Out = (~Sel1 & ~Sel0 & In0) | (~Sel1 & Sel0 & In1)` : $\mathit{Out} = \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{Sel1}$ | $\mathit{Sel0}$ | $\mathit{Out}$ |
+|:-:|:-:|:-:|
+| 0 | 0 | $\mathit{In0}$ |
+| 0 | 1 | $\mathit{In1}$ |
+| 1 | 0 | $\mathit{In2}$ |
+| 1 | 1 | $\mathit{In3}$ |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}\end{aligned}$
 
@@ -1012,13 +992,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\ove
 </g>
 </svg>
 </div>
-
-| $\mathit{Sel1}$ | $\mathit{Sel0}$ | $\mathit{Out}$ |
-|:-:|:-:|:-:|
-| 0 | 0 | $\mathit{In0}$ |
-| 0 | 1 | $\mathit{In1}$ |
-| 1 | 0 | $\mathit{In2}$ |
-| 1 | 1 | $\mathit{In3}$ |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Out} = \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}$) {part=b; case=c3; style=flow}
 
@@ -1117,10 +1090,7 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Out} &= \overline{\mathit{Sel1}}\,\ove
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Out} = \overline{\mathit{Sel1}}\,\overline{\mathit{Sel0}}\,\mathit{In0} + \overline{\mathit{Sel1}}\,\mathit{Sel0}\,\mathit{In1} + \mathit{Sel1}\,\overline{\mathit{Sel0}}\,\mathit{In2} + \mathit{Sel1}\,\mathit{Sel0}\,\mathit{In3}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1151,15 +1121,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NA, A)` : $\mathit{NA} = \overline{A}$
 - `not (NB, B)` : $\mathit{NB} = \overline{B}$
 - `and (P, A, NB)` : $P = A\,\mathit{NB}$
 - `and (Q, NA, B)` : $Q = \mathit{NA}\,B$
 - `or (Y, P, Q)` : $Y = P + Q$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $Y$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{aligned}$
 
@@ -1217,13 +1190,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{ali
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $Y$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = A\,\overline{B} + \overline{A}\,B$) {part=b; case=c4; style=struct}
 
@@ -1284,10 +1250,11 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{ali
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NA`, `NB`, `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NA} = \overline{A}$
+- $\mathit{NB} = \overline{B}$
+- $P = A\,\mathit{NB}$
+- $Q = \mathit{NA}\,B$
+- $Y = P + Q$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1316,11 +1283,14 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = (A & ~B) | (~A & B)` : $Y = A\,\overline{B} + \overline{A}\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $Y$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{aligned}$
 
@@ -1374,13 +1344,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{ali
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $Y$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 0 |
-| 0 | 1 | 1 |
-| 1 | 0 | 1 |
-| 1 | 1 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = A\,\overline{B} + \overline{A}\,B$) {part=b; case=c4; style=flow}
 
@@ -1441,10 +1404,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,\overline{B} + \overline{A}\,B\end{ali
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = A\,\overline{B} + \overline{A}\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1468,11 +1428,14 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `xnor (Y, A, B)` : $Y = \overline{A \oplus B}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $Y$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 
@@ -1498,13 +1461,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $Y$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 1 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{A \oplus B}$) {part=b; case=c5; style=struct}
 
@@ -1533,10 +1489,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : ไม่มี (เกตทุกตัวต่อกับเอาต์พุตของวงจรโดยตรง) แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{A \oplus B}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1560,11 +1513,14 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~(A ^ B)` : $Y = \overline{A \oplus B}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $Y$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 1 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 
@@ -1597,13 +1553,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 </svg>
 </div>
 
-| $A$ | $B$ | $Y$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 1 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{A \oplus B}$) {part=b; case=c5; style=flow}
 
 <div align="center">
@@ -1631,10 +1580,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A \oplus B}\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{A \oplus B}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1662,14 +1608,21 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `and (P, A, B)` : $P = A\,B$
 - `and (Q, B, C)` : $Q = B\,C$
 - `and (R, A, C)` : $R = A\,C$
 - `or (Y, P, Q, R)` : $Y = P + Q + R$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 
@@ -1724,17 +1677,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = A\,B + B\,C + A\,C$) {part=b; case=c6; style=struct}
 
@@ -1792,10 +1734,10 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P`, `Q`, `R` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = A\,B$
+- $Q = B\,C$
+- $R = A\,C$
+- $Y = P + Q + R$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1823,11 +1765,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = (A & B) | (B & C) | (A & C)` : $Y = A\,B + B\,C + A\,C$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 
@@ -1879,17 +1828,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = A\,B + B\,C + A\,C$) {part=b; case=c6; style=flow}
 
@@ -1947,10 +1885,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A\,B + B\,C + A\,C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = A\,B + B\,C + A\,C$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -1977,13 +1912,28 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `or (P, A, B)` : $P = A + B$
 - `or (Q, C, D)` : $Q = C + D$
 - `and (Y, P, Q)` : $Y = P\,Q$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 
@@ -2029,25 +1979,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = (A + B)\,(C + D)$) {part=b; case=c7; style=struct}
 
@@ -2096,10 +2027,9 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = A + B$
+- $Q = C + D$
+- $Y = P\,Q$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2126,11 +2056,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = (A | B) & (C | D)` : $Y = (A + B)\,(C + D)$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 
@@ -2174,25 +2119,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = (A + B)\,(C + D)$) {part=b; case=c7; style=flow}
 
@@ -2241,10 +2167,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= (A + B)\,(C + D)\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = (A + B)\,(C + D)$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2271,13 +2194,28 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `nand (P, A, B)` : $P = \overline{A\,B}$
 - `nand (Q, C, D)` : $Q = \overline{C\,D}$
 - `nand (Y, P, Q)` : $Y = \overline{P\,Q}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D}}\end{aligned}$
 
@@ -2326,25 +2264,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 1 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 0 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{\overline{A\,B}\,\overline{C\,D}}$) {part=b; case=c8; style=struct}
 
@@ -2396,10 +2315,9 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = \overline{A\,B}$
+- $Q = \overline{C\,D}$
+- $Y = \overline{P\,Q}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2426,11 +2344,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~(~(A & B) & ~(C & D))` : $Y = \overline{\overline{A\,B}\,\overline{C\,D}}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 1 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D}}\end{aligned}$
 
@@ -2496,25 +2429,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D
 </svg>
 </div>
 
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 1 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 0 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 1 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{\overline{A\,B}\,\overline{C\,D}}$) {part=b; case=c8; style=flow}
 
 <div align="center">
@@ -2565,10 +2479,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A\,B}\,\overline{C\,D
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{\overline{A\,B}\,\overline{C\,D}}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2595,13 +2506,28 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `nor (P, A, B)` : $P = \overline{A + B}$
 - `nor (Q, C, D)` : $Q = \overline{C + D}$
 - `nor (Y, P, Q)` : $Y = \overline{P + Q}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C + D}}\end{aligned}$
 
@@ -2650,25 +2576,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C 
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{\overline{A + B} + \overline{C + D}}$) {part=b; case=c9; style=struct}
 
@@ -2720,10 +2627,9 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C 
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = \overline{A + B}$
+- $Q = \overline{C + D}$
+- $Y = \overline{P + Q}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2750,11 +2656,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~(~(A | B) | ~(C | D))` : $Y = \overline{\overline{A + B} + \overline{C + D}}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C + D}}\end{aligned}$
 
@@ -2820,25 +2741,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C 
 </svg>
 </div>
 
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 1 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 1 |
-| 1 | 1 | 1 | 0 | 1 |
-| 1 | 1 | 1 | 1 | 1 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{\overline{A + B} + \overline{C + D}}$) {part=b; case=c9; style=flow}
 
 <div align="center">
@@ -2889,10 +2791,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\overline{A + B} + \overline{C 
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{\overline{A + B} + \overline{C + D}}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -2917,12 +2816,15 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `xor (Sum, A, B)` : $\mathit{Sum} = A \oplus B$
 - `and (Cout, A, B)` : $\mathit{Cout} = A\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Sum}$ | $\mathit{Cout}$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &= A\,B\end{aligned}$
 
@@ -2955,13 +2857,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &=
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $\mathit{Sum}$ | $\mathit{Cout}$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Sum} = A \oplus B$, $\mathit{Cout} = A\,B$) {part=b; case=c10; style=struct}
 
@@ -2997,10 +2892,8 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &=
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : ไม่มี (เกตทุกตัวต่อกับเอาต์พุตของวงจรโดยตรง) แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Sum} = A \oplus B$
+- $\mathit{Cout} = A\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3026,12 +2919,15 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Sum = A ^ B` : $\mathit{Sum} = A \oplus B$
 - `assign Cout = A & B` : $\mathit{Cout} = A\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Sum}$ | $\mathit{Cout}$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &= A\,B\end{aligned}$
 
@@ -3064,13 +2960,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &=
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $\mathit{Sum}$ | $\mathit{Cout}$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Sum} = A \oplus B$, $\mathit{Cout} = A\,B$) {part=b; case=c10; style=flow}
 
@@ -3106,10 +2995,8 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Sum} &= A \oplus B \\ \mathit{Cout} &=
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Sum} = A \oplus B$
+- $\mathit{Cout} = A\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3140,8 +3027,6 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NA, A)` : $\mathit{NA} = \overline{A}$
 - `not (NB, B)` : $\mathit{NB} = \overline{B}$
 - `and (Y0, NA, NB)` : $\mathit{Y0} = \mathit{NA}\,\mathit{NB}$
@@ -3149,7 +3034,12 @@ $\mathbf{Sol}^{n}$
 - `and (Y2, A, NB)` : $\mathit{Y2} = A\,\mathit{NB}$
 - `and (Y3, A, B)` : $\mathit{Y3} = A\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \mathit{Y1} &= \overline{A}\,B \\ \mathit{Y2} &= A\,\overline{B} \\ \mathit{Y3} &= A\,B\end{aligned}$
 
@@ -3213,13 +3103,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Y0} = \overline{A}\,\overline{B}$, $\mathit{Y1} = \overline{A}\,B$, $\mathit{Y2} = A\,\overline{B}$, $\mathit{Y3} = A\,B$) {part=b; case=c11; style=struct}
 
@@ -3286,10 +3169,12 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NA`, `NB` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NA} = \overline{A}$
+- $\mathit{NB} = \overline{B}$
+- $\mathit{Y0} = \mathit{NA}\,\mathit{NB}$
+- $\mathit{Y1} = \mathit{NA}\,B$
+- $\mathit{Y2} = A\,\mathit{NB}$
+- $\mathit{Y3} = A\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3322,14 +3207,17 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y0 = ~A & ~B` : $\mathit{Y0} = \overline{A}\,\overline{B}$
 - `assign Y1 = ~A & B` : $\mathit{Y1} = \overline{A}\,B$
 - `assign Y2 = A & ~B` : $\mathit{Y2} = A\,\overline{B}$
 - `assign Y3 = A & B` : $\mathit{Y3} = A\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 | 0 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \mathit{Y1} &= \overline{A}\,B \\ \mathit{Y2} &= A\,\overline{B} \\ \mathit{Y3} &= A\,B\end{aligned}$
 
@@ -3391,13 +3279,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Y0} = \overline{A}\,\overline{B}$, $\mathit{Y1} = \overline{A}\,B$, $\mathit{Y2} = A\,\overline{B}$, $\mathit{Y3} = A\,B$) {part=b; case=c11; style=flow}
 
@@ -3464,10 +3345,10 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= \overline{A}\,\overline{B} \\ \
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Y0} = \overline{A}\,\overline{B}$
+- $\mathit{Y1} = \overline{A}\,B$
+- $\mathit{Y2} = A\,\overline{B}$
+- $\mathit{Y3} = A\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3500,8 +3381,6 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NS1, S1)` : $\mathit{NS1} = \overline{\mathit{S1}}$
 - `not (NS0, S0)` : $\mathit{NS0} = \overline{\mathit{S0}}$
 - `and (Y0, D, NS1, NS0)` : $\mathit{Y0} = D\,\mathit{NS1}\,\mathit{NS0}$
@@ -3509,7 +3388,16 @@ $\mathbf{Sol}^{n}$
 - `and (Y2, D, S1, NS0)` : $\mathit{Y2} = D\,\mathit{S1}\,\mathit{NS0}$
 - `and (Y3, D, S1, S0)` : $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $D$ | $\mathit{S1}$ | $\mathit{S0}$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}} \\ \mathit{Y1} &= D\,\overline{\mathit{S1}}\,\mathit{S0} \\ \mathit{Y2} &= D\,\mathit{S1}\,\overline{\mathit{S0}} \\ \mathit{Y3} &= D\,\mathit{S1}\,\mathit{S0}\end{aligned}$
 
@@ -3583,17 +3471,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\ove
 </g>
 </svg>
 </div>
-
-| $D$ | $\mathit{S1}$ | $\mathit{S0}$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Y0} = D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}}$, $\mathit{Y1} = D\,\overline{\mathit{S1}}\,\mathit{S0}$, $\mathit{Y2} = D\,\mathit{S1}\,\overline{\mathit{S0}}$, $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$) {part=b; case=c12; style=struct}
 
@@ -3670,10 +3547,12 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\ove
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NS1`, `NS0` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NS1} = \overline{\mathit{S1}}$
+- $\mathit{NS0} = \overline{\mathit{S0}}$
+- $\mathit{Y0} = D\,\mathit{NS1}\,\mathit{NS0}$
+- $\mathit{Y1} = D\,\mathit{NS1}\,\mathit{S0}$
+- $\mathit{Y2} = D\,\mathit{S1}\,\mathit{NS0}$
+- $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3706,14 +3585,21 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y0 = D & ~S1 & ~S0` : $\mathit{Y0} = D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}}$
 - `assign Y1 = D & ~S1 & S0` : $\mathit{Y1} = D\,\overline{\mathit{S1}}\,\mathit{S0}$
 - `assign Y2 = D & S1 & ~S0` : $\mathit{Y2} = D\,\mathit{S1}\,\overline{\mathit{S0}}$
 - `assign Y3 = D & S1 & S0` : $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $D$ | $\mathit{S1}$ | $\mathit{S0}$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}} \\ \mathit{Y1} &= D\,\overline{\mathit{S1}}\,\mathit{S0} \\ \mathit{Y2} &= D\,\mathit{S1}\,\overline{\mathit{S0}} \\ \mathit{Y3} &= D\,\mathit{S1}\,\mathit{S0}\end{aligned}$
 
@@ -3785,17 +3671,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\ove
 </g>
 </svg>
 </div>
-
-| $D$ | $\mathit{S1}$ | $\mathit{S0}$ | $\mathit{Y3}$ | $\mathit{Y2}$ | $\mathit{Y1}$ | $\mathit{Y0}$ |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 0 | 0 | 0 | 0 |
-| 0 | 1 | 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 0 | 0 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Y0} = D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}}$, $\mathit{Y1} = D\,\overline{\mathit{S1}}\,\mathit{S0}$, $\mathit{Y2} = D\,\mathit{S1}\,\overline{\mathit{S0}}$, $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$) {part=b; case=c12; style=flow}
 
@@ -3872,10 +3747,10 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Y0} &= D\,\overline{\mathit{S1}}\,\ove
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Y0} = D\,\overline{\mathit{S1}}\,\overline{\mathit{S0}}$
+- $\mathit{Y1} = D\,\overline{\mathit{S1}}\,\mathit{S0}$
+- $\mathit{Y2} = D\,\mathit{S1}\,\overline{\mathit{S0}}$
+- $\mathit{Y3} = D\,\mathit{S1}\,\mathit{S0}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -3904,12 +3779,19 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `xor (P, A, B)` : $P = A \oplus B$
 - `xor (Y, P, C)` : $Y = P \oplus C$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 
@@ -3946,17 +3828,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = A \oplus B \oplus C$) {part=b; case=c13; style=struct}
 
@@ -3996,10 +3867,8 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = A \oplus B$
+- $Y = P \oplus C$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4025,11 +3894,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = A ^ B ^ C` : $Y = A \oplus B \oplus C$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 
@@ -4058,17 +3934,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 |
-| 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = A \oplus B \oplus C$) {part=b; case=c13; style=flow}
 
@@ -4108,10 +3973,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= A \oplus B \oplus C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = A \oplus B \oplus C$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4140,15 +4002,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `not (NA, A)` : $\mathit{NA} = \overline{A}$
 - `not (NB, B)` : $\mathit{NB} = \overline{B}$
 - `and (Gt, A, NB)` : $\mathit{Gt} = A\,\mathit{NB}$
 - `xnor (Eq, A, B)` : $\mathit{Eq} = \overline{A \oplus B}$
 - `and (Lt, NA, B)` : $\mathit{Lt} = \mathit{NA}\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Gt}$ | $\mathit{Eq}$ | $\mathit{Lt}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} &= \overline{A \oplus B} \\ \mathit{Lt} &= \overline{A}\,B\end{aligned}$
 
@@ -4206,13 +4071,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} 
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $\mathit{Gt}$ | $\mathit{Eq}$ | $\mathit{Lt}$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($\mathit{Gt} = A\,\overline{B}$, $\mathit{Eq} = \overline{A \oplus B}$, $\mathit{Lt} = \overline{A}\,B$) {part=b; case=c14; style=struct}
 
@@ -4273,10 +4131,11 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} 
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `NA`, `NB` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{NA} = \overline{A}$
+- $\mathit{NB} = \overline{B}$
+- $\mathit{Gt} = A\,\mathit{NB}$
+- $\mathit{Eq} = \overline{A \oplus B}$
+- $\mathit{Lt} = \mathit{NA}\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4307,13 +4166,16 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Gt = A & ~B` : $\mathit{Gt} = A\,\overline{B}$
 - `assign Eq = ~(A ^ B)` : $\mathit{Eq} = \overline{A \oplus B}$
 - `assign Lt = ~A & B` : $\mathit{Lt} = \overline{A}\,B$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $\mathit{Gt}$ | $\mathit{Eq}$ | $\mathit{Lt}$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} &= \overline{A \oplus B} \\ \mathit{Lt} &= \overline{A}\,B\end{aligned}$
 
@@ -4376,13 +4238,6 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} 
 </svg>
 </div>
 
-| $A$ | $B$ | $\mathit{Gt}$ | $\mathit{Eq}$ | $\mathit{Lt}$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($\mathit{Gt} = A\,\overline{B}$, $\mathit{Eq} = \overline{A \oplus B}$, $\mathit{Lt} = \overline{A}\,B$) {part=b; case=c14; style=flow}
 
 <div align="center">
@@ -4442,10 +4297,9 @@ $\mathbf{Ans}\quad \begin{aligned}\mathit{Gt} &= A\,\overline{B} \\ \mathit{Eq} 
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{Gt} = A\,\overline{B}$
+- $\mathit{Eq} = \overline{A \oplus B}$
+- $\mathit{Lt} = \overline{A}\,B$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4474,13 +4328,28 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `xnor (E1, A1, B1)` : $\mathit{E1} = \overline{\mathit{A1} \oplus \mathit{B1}}$
 - `xnor (E0, A0, B0)` : $\mathit{E0} = \overline{\mathit{A0} \oplus \mathit{B0}}$
 - `and (Y, E1, E0)` : $Y = \mathit{E1}\,\mathit{E0}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{A1}$ | $\mathit{A0}$ | $\mathit{B1}$ | $\mathit{B0}$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}\end{aligned}$
 
@@ -4530,25 +4399,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}
 </g>
 </svg>
 </div>
-
-| $\mathit{A1}$ | $\mathit{A0}$ | $\mathit{B1}$ | $\mathit{B0}$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}$) {part=b; case=c15; style=struct}
 
@@ -4601,10 +4451,9 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `E1`, `E0` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $\mathit{E1} = \overline{\mathit{A1} \oplus \mathit{B1}}$
+- $\mathit{E0} = \overline{\mathit{A0} \oplus \mathit{B0}}$
+- $Y = \mathit{E1}\,\mathit{E0}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4631,11 +4480,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~(A1 ^ B1) & ~(A0 ^ B0)` : $Y = \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $\mathit{A1}$ | $\mathit{A0}$ | $\mathit{B1}$ | $\mathit{B0}$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 1 | 0 |
+| 0 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}\end{aligned}$
 
@@ -4696,25 +4560,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}
 </svg>
 </div>
 
-| $\mathit{A1}$ | $\mathit{A0}$ | $\mathit{B1}$ | $\mathit{B0}$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 0 | 0 | 1 | 0 |
-| 0 | 0 | 1 | 0 | 0 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 0 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 0 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 0 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 1 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}$) {part=b; case=c15; style=flow}
 
 <div align="center">
@@ -4766,10 +4611,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{\mathit{A1} \oplus \mathit{B1}}
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{\mathit{A1} \oplus \mathit{B1}}\,\overline{\mathit{A0} \oplus \mathit{B0}}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4795,12 +4637,19 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `nand (P, A, B)` : $P = \overline{A\,B}$
 - `or (Y, P, C)` : $Y = P + C$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 
@@ -4836,17 +4685,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 1 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{A\,B} + C$) {part=b; case=c16; style=struct}
 
@@ -4885,10 +4723,8 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = \overline{A\,B}$
+- $Y = P + C$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -4914,11 +4750,18 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~(A & B) | C` : $Y = \overline{A\,B} + C$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $Y$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 
@@ -4960,17 +4803,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 </svg>
 </div>
 
-| $A$ | $B$ | $C$ | $Y$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 1 |
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 1 |
-| 1 | 0 | 1 | 1 |
-| 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{A\,B} + C$) {part=b; case=c16; style=flow}
 
 <div align="center">
@@ -5008,10 +4840,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B} + C\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{A\,B} + C$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -5038,13 +4867,28 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละบรรทัดของเกตคือเกต 1 ตัว พอร์ตแรกคือเอาต์พุต เขียนเป็นสมการได้ดังนี้
-
 - `and (P, A, B)` : $P = A\,B$
 - `and (Q, C, D)` : $Q = C\,D$
 - `nor (Y, P, Q)` : $Y = \overline{P + Q}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 
@@ -5091,25 +4935,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 </g>
 </svg>
 </div>
-
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 0 | 0 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 1 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 1 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 0 |
 
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Structural ของวงจรในรูป ($Y = \overline{A\,B + C\,D}$) {part=b; case=c17; style=struct}
 
@@ -5159,10 +4984,9 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- ตั้งชื่อสายภายในที่เป็นเอาต์พุตของเกต : `P`, `Q` แล้วประกาศ `wire`
-- เขียนเกตทีละตัว พอร์ตแรกเป็นเอาต์พุต เกตทุกตัวทำงานพร้อมกัน สลับลำดับบรรทัดแล้ววงจรเหมือนเดิม
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $P = A\,B$
+- $Q = C\,D$
+- $Y = \overline{P + Q}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 
@@ -5189,11 +5013,26 @@ endmodule
 
 $\mathbf{Sol}^{n}$
 
-แต่ละ `assign` คือสมการของเอาต์พุตหนึ่งตัว เขียนเป็นสมการได้ดังนี้
-
 - `assign Y = ~((A & B) | (C & D))` : $Y = \overline{A\,B + C\,D}$
 
-รวมเป็นสมการของเอาต์พุต แล้วเขียนวงจรและตารางความจริง (ตรวจทุกแถวด้วยโปรแกรม)
+| $A$ | $B$ | $C$ | $D$ | $Y$ |
+|:-:|:-:|:-:|:-:|:-:|
+| 0 | 0 | 0 | 0 | 1 |
+| 0 | 0 | 0 | 1 | 1 |
+| 0 | 0 | 1 | 0 | 1 |
+| 0 | 0 | 1 | 1 | 0 |
+| 0 | 1 | 0 | 0 | 1 |
+| 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 0 | 1 |
+| 0 | 1 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 | 1 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 |
+| 1 | 0 | 1 | 1 | 0 |
+| 1 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 0 |
 
 $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 
@@ -5245,25 +5084,6 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 </svg>
 </div>
 
-| $A$ | $B$ | $C$ | $D$ | $Y$ |
-|:-:|:-:|:-:|:-:|:-:|
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 0 | 0 | 1 | 1 |
-| 0 | 0 | 1 | 0 | 1 |
-| 0 | 0 | 1 | 1 | 0 |
-| 0 | 1 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 0 | 1 |
-| 0 | 1 | 1 | 1 | 0 |
-| 1 | 0 | 0 | 0 | 1 |
-| 1 | 0 | 0 | 1 | 1 |
-| 1 | 0 | 1 | 0 | 1 |
-| 1 | 0 | 1 | 1 | 0 |
-| 1 | 1 | 0 | 0 | 0 |
-| 1 | 1 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 0 | 0 |
-| 1 | 1 | 1 | 1 | 0 |
-
 ### ข้อ 4  จงเขียนโมดูล Verilog แบบ Dataflow ของวงจรในรูป ($Y = \overline{A\,B + C\,D}$) {part=b; case=c17; style=flow}
 
 <div align="center">
@@ -5312,10 +5132,7 @@ $\mathbf{Ans}\quad \begin{aligned}Y &= \overline{A\,B + C\,D}\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-- อ่านวงจรเป็นสมการของแต่ละเอาต์พุต
-- เขียน `assign` ให้เอาต์พุตแต่ละตัว ด้วยตัวกระทำ `~` `&` `|` `^` (เกต NOT คือ `~`, AND คือ `&`, OR คือ `|`, XOR คือ `^`)
-
-- ตรวจด้วยตารางความจริง ผลของโมดูลตรงกับวงจรในรูปทุกแถว
+- $Y = \overline{A\,B + C\,D}$
 
 $\mathbf{Ans}\quad \text{โค้ดต่อไปนี้}$
 

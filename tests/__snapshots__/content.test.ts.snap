@@ -72,9 +72,9 @@ exports[`real content > keeps counts stable (review any change before accepting 
       {
         "chapter": "02",
         "examples": 72,
-        "figures": 288,
+        "figures": 312,
         "file": "final-exam/02.json",
-        "nodes": 220,
+        "nodes": 244,
         "slug": "flip-flops",
         "title": "ข้อสอบปลายภาค ข้อ 2 ฟลิป-ฟลอป (Flip-Flop)",
       },

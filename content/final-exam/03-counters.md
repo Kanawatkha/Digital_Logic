@@ -20,9 +20,7 @@
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $3$ ($11_2$) จึงใช้ฟลิป-ฟลอป 2 ตัว (A, B โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}$ | $Q_{A}^+Q_{B}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -31,9 +29,7 @@ $\mathbf{Sol}^{n}$
 | 10 | 11 | $x$ | 0 | 1 | $x$ |
 | 11 | 00 | $x$ | 1 | $x$ | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(1) + d(2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -61,7 +57,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(3) + d(0,1)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -89,7 +85,7 @@ $J_{A} = Q_{B}$
 
 $K_{A} = Q_{B}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(0,2) + d(1,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -117,7 +113,7 @@ $K_{A} = Q_{B}$
 
 $J_{B} = 1$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(1,3) + d(0,2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -145,7 +141,7 @@ $J_{B} = 1$
 
 $K_{B} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="298" viewBox="0 0 560 298" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -203,8 +199,6 @@ $K_{B} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 4 (นับ $0$ ถึง $3$ แล้ววนกลับมาที่ $0$) {seq=mod4; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -216,9 +210,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\e
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $3$ ($11_2$) จึงใช้ฟลิป-ฟลอป 2 ตัว (A, B โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}$ | $Q_{A}^+Q_{B}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -227,9 +219,7 @@ $\mathbf{Sol}^{n}$
 | 10 | 11 | 0 | $x$ | 0 | 1 |
 | 11 | 00 | 1 | 0 | 1 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(3) + d(0)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -257,7 +247,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{A}Q_{B}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(1) + d(2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -285,7 +275,7 @@ $R_{A} = Q_{A}Q_{B}$
 
 $S_{A} = \overline{Q_{A}}Q_{B}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(1,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -313,7 +303,7 @@ $S_{A} = \overline{Q_{A}}Q_{B}$
 
 $R_{B} = Q_{B}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(0,2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -341,7 +331,7 @@ $R_{B} = Q_{B}$
 
 $S_{B} = \overline{Q_{B}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="654" height="352" viewBox="0 0 654 352" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -414,8 +404,6 @@ $S_{B} = \overline{Q_{B}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 4 (นับ $0$ ถึง $3$ แล้ววนกลับมาที่ $0$) {seq=mod4; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -427,9 +415,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $3$ ($11_2$) จึงใช้ฟลิป-ฟลอป 2 ตัว (A, B โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}$ | $Q_{A}^+Q_{B}^+$ | $D_{A}$ | $D_{B}$ |
 |:-:|:-:|:-:|:-:|
@@ -438,9 +424,7 @@ $\mathbf{Sol}^{n}$
 | 10 | 11 | 1 | 1 |
 | 11 | 00 | 0 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(1,2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -471,7 +455,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(0,2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -499,7 +483,7 @@ $D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 $D_{B} = \overline{Q_{B}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="639" height="334" viewBox="0 0 639 334" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -556,8 +540,6 @@ $D_{B} = \overline{Q_{B}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 4 (นับ $0$ ถึง $3$ แล้ววนกลับมาที่ $0$) {seq=mod4; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -569,9 +551,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $3$ ($11_2$) จึงใช้ฟลิป-ฟลอป 2 ตัว (A, B โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 2 ตัว (A, B) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}$ | $Q_{A}^+Q_{B}^+$ | $T_{A}$ | $T_{B}$ |
 |:-:|:-:|:-:|:-:|
@@ -580,9 +560,7 @@ $\mathbf{Sol}^{n}$
 | 10 | 11 | 0 | 1 |
 | 11 | 00 | 1 | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(1,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -610,7 +588,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(0,1,2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="196" height="172" viewBox="0 0 196 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -638,7 +616,7 @@ $T_{A} = Q_{B}$
 
 $T_{B} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="549" height="298" viewBox="0 0 549 298" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -685,8 +663,6 @@ $T_{B} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 3, 5, 2, 1$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น don't care condition {seq=jump5; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -699,9 +675,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -712,9 +686,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | $x$ | 0 | $x$ | $x$ | 1 |
 | 100, 110, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(3) + d(4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -750,7 +722,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}Q_{C}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(5) + d(0,1,2,3,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -786,7 +758,7 @@ $J_{A} = Q_{B}Q_{C}$
 
 $K_{A} = 1$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(0,5) + d(2,3,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -825,7 +797,7 @@ $K_{A} = 1$
 
 $J_{B} = \overline{Q_{C}} + Q_{A}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(2,3) + d(0,1,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -861,7 +833,7 @@ $J_{B} = \overline{Q_{C}} + Q_{A}$
 
 $K_{B} = 1$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,2) + d(1,3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -897,7 +869,7 @@ $K_{B} = 1$
 
 $J_{C} = 1$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1,5) + d(0,2,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -934,7 +906,9 @@ $J_{C} = 1$
 
 $K_{C} = \overline{Q_{B}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $100 \to 011$ ; $110 \to 001$ ; $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= \overline{Q_{C}} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= 1 \\ K_{C} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1003" height="370" viewBox="0 0 1003 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1027,10 +1001,6 @@ $K_{C} = \overline{Q_{B}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $100$ ไปที่ $011$ ; $110$ ไปที่ $001$ ; $111$ ไปที่ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= \overline{Q_{C}} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= 1 \\ K_{C} &= \overline{Q_{B}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับกระโดด จาก $0 \to 3 \to 5 \to 2 \to 1$ และวนกลับมาที่ $0$ ใหม่ โดยใช้ RS ฟลิป-ฟลอป (NOR) {seq=jump5; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -1043,9 +1013,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= 
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -1056,9 +1024,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | $x$ | 0 | $x$ | 0 | 1 | 0 |
 | 100, 110, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(5) + d(0,1,2,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1094,7 +1060,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{A}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(3) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1130,7 +1096,7 @@ $R_{A} = Q_{A}$
 
 $S_{A} = Q_{B}Q_{C}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(2,3) + d(1,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1166,7 +1132,7 @@ $S_{A} = Q_{B}Q_{C}$
 
 $R_{B} = Q_{B}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(0,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1206,7 +1172,7 @@ $R_{B} = Q_{B}$
 
 $S_{B} = Q_{A} + \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1243,7 +1209,7 @@ $S_{B} = Q_{A} + \overline{Q_{B}}\overline{Q_{C}}$
 
 $R_{C} = \overline{Q_{B}}Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,2) + d(3,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1279,7 +1245,9 @@ $R_{C} = \overline{Q_{B}}Q_{C}$
 
 $S_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $100 \to 011$ ; $110$ ได้ $R=S=1$ (B) ; $111$ ได้ $R=S=1$ (A, B) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{A} + \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= \overline{Q_{B}}Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1208" height="370" viewBox="0 0 1208 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1385,10 +1353,6 @@ $S_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $100$ ไปที่ $011$ ; $110$ ทำให้ฟลิป-ฟลอป B ได้ $R=S=1$ ; $111$ ทำให้ฟลิป-ฟลอป A, B ได้ $R=S=1$ ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{A} + \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= \overline{Q_{B}}Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 3, 5, 2, 1$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น don't care condition {seq=jump5; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -1401,9 +1365,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -1414,9 +1376,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | 0 | 0 |
 | 100, 110, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(3) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1452,7 +1412,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = Q_{B}Q_{C}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(0,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1492,7 +1452,7 @@ $D_{A} = Q_{B}Q_{C}$
 
 $D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{A}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,2,3) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1531,7 +1491,9 @@ $D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{A}$
 
 $D_{C} = \overline{Q_{C}} + Q_{B}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $100 \to 011$ ; $110 \to 011$ ; $111 \to 111$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{A} \\ D_{C} &= \overline{Q_{C}} + Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1185" height="396" viewBox="0 0 1185 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1623,10 +1585,6 @@ $D_{C} = \overline{Q_{C}} + Q_{B}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $100$ ไปที่ $011$ ; $110$ ไปที่ $011$ ; $111$ ไปที่ $111$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{A} \\ D_{C} &= \overline{Q_{C}} + Q_{B}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 3, 5, 2, 1$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น don't care condition {seq=jump5; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -1639,9 +1597,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($100$, $110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -1652,9 +1608,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | 0 | 1 |
 | 100, 110, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(3,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1693,7 +1647,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}Q_{C} + Q_{A}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(0,2,3,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1735,7 +1689,7 @@ $T_{A} = Q_{B}Q_{C} + Q_{A}$
 
 $T_{B} = \overline{Q_{C}} + Q_{B} + Q_{A}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1,2,5) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1775,7 +1729,9 @@ $T_{B} = \overline{Q_{C}} + Q_{B} + Q_{A}$
 
 $T_{C} = \overline{Q_{B}} + \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $100 \to 011$ ; $110 \to 001$ ; $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overline{Q_{C}} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{B}} + \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1206" height="396" viewBox="0 0 1206 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1870,10 +1826,6 @@ $T_{C} = \overline{Q_{B}} + \overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $100$ ไปที่ $011$ ; $110$ ไปที่ $001$ ; $111$ ไปที่ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overline{Q_{C}} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{B}} + \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น don't care condition {seq=s5; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -1886,9 +1838,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overl
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -1899,9 +1849,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 000 | $x$ | 1 | $x$ | 1 | 0 | $x$ |
 | 011, 101, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(2) + d(3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1937,7 +1885,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(6) + d(0,1,2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -1973,7 +1921,7 @@ $J_{A} = Q_{B}$
 
 $K_{A} = Q_{B}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(1,4) + d(2,3,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2012,7 +1960,7 @@ $K_{A} = Q_{B}$
 
 $J_{B} = Q_{C} + Q_{A}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(2,6) + d(0,1,3,4,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2048,7 +1996,7 @@ $J_{B} = Q_{C} + Q_{A}$
 
 $K_{B} = 1$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0) + d(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2084,7 +2032,7 @@ $K_{B} = 1$
 
 $J_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1) + d(0,2,3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2120,7 +2068,9 @@ $J_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 
 $K_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $011 \to 100$ ; $101 \to 110$ ; $111 \to 000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="988" height="370" viewBox="0 0 988 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2216,10 +2166,6 @@ $K_{C} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $011$ ไปที่ $100$ ; $101$ ไปที่ $110$ ; $111$ ไปที่ $000$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ที่มีลำดับการนับเรียงตามนี้ $0, 1, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น don't care condition {seq=s5; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -2232,9 +2178,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -2245,9 +2189,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 000 | 1 | 0 | 1 | 0 | $x$ | 0 |
 | 011, 101, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(6) + d(0,1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2283,7 +2225,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{A}Q_{B}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(2) + d(3,4,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2319,7 +2261,7 @@ $R_{A} = Q_{A}Q_{B}$
 
 $S_{A} = \overline{Q_{A}}Q_{B}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(2,6) + d(0,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2355,7 +2297,7 @@ $S_{A} = \overline{Q_{A}}Q_{B}$
 
 $R_{B} = Q_{B}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(1,4) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2394,7 +2336,7 @@ $R_{B} = Q_{B}$
 
 $S_{B} = Q_{C} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1) + d(2,3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2430,7 +2372,7 @@ $S_{B} = Q_{C} + Q_{A}\overline{Q_{B}}$
 
 $R_{C} = Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2466,7 +2408,9 @@ $R_{C} = Q_{C}$
 
 $S_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $011$ ได้ $R=S=1$ (B) ; $101 \to 110$ ; $111$ ได้ $R=S=1$ (B) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{C} + Q_{A}\overline{Q_{B}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1230" height="388" viewBox="0 0 1230 388" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2581,10 +2525,6 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $011$ ทำให้ฟลิป-ฟลอป B ได้ $R=S=1$ ; $101$ ไปที่ $110$ ; $111$ ทำให้ฟลิป-ฟลอป B ได้ $R=S=1$ ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{C} + Q_{A}\overline{Q_{B}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับ (Counter) โดยใช้ D flip-flop ที่มีลำดับการนับเรียงตามนี้ $0, 1, 2, 4, 6$ {seq=s5; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -2597,9 +2537,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -2610,9 +2548,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 000 | 0 | 0 | 0 |
 | 011, 101, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(2,4) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2651,7 +2587,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(1,4) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2690,7 +2626,7 @@ $D_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 $D_{B} = Q_{A}\overline{Q_{B}} + Q_{C}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2726,7 +2662,9 @@ $D_{B} = Q_{A}\overline{Q_{B}} + Q_{C}$
 
 $D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $011 \to 110$ ; $101 \to 110$ ; $111 \to 010$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A}\overline{Q_{B}} + Q_{C} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1204" height="414" viewBox="0 0 1204 414" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2823,10 +2761,6 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $011$ ไปที่ $110$ ; $101$ ไปที่ $110$ ; $111$ ไปที่ $010$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A}\overline{Q_{B}} + Q_{C} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 2, 4, 6$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น don't care condition {seq=s5; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -2839,9 +2773,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($011$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -2852,9 +2784,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 000 | 1 | 1 | 0 |
 | 011, 101, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(2,6) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2890,7 +2820,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(1,2,4,6) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2932,7 +2862,7 @@ $T_{A} = Q_{B}$
 
 $T_{B} = Q_{C} + Q_{B} + Q_{A}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1) + d(3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2968,7 +2898,9 @@ $T_{B} = Q_{C} + Q_{B} + Q_{A}$
 
 $T_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $011 \to 101 \to 111 \to 001$ ; $101 \to 111 \to 001$ ; $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="988" height="370" viewBox="0 0 988 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3052,10 +2984,6 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $011$ ไปที่ $101$ $\to$ $111$ $\to$ $001$ ; $101$ ไปที่ $111$ $\to$ $001$ ; $111$ ไปที่ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 3, 7, 6, 4$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$) เป็น don't care condition {seq=s6; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -3068,9 +2996,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -3082,9 +3008,7 @@ $\mathbf{Sol}^{n}$
 | 100 | 000 | $x$ | 1 | 0 | $x$ | 0 | $x$ |
 | 010, 101 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(3) + d(2,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3120,7 +3044,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(4) + d(0,1,2,3,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3157,7 +3081,7 @@ $J_{A} = Q_{B}$
 
 $K_{A} = \overline{Q_{B}}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(1) + d(2,3,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3193,7 +3117,7 @@ $K_{A} = \overline{Q_{B}}$
 
 $J_{B} = Q_{C}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(6) + d(0,1,2,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3229,7 +3153,7 @@ $J_{B} = Q_{C}$
 
 $K_{B} = \overline{Q_{C}}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0) + d(1,2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3265,7 +3189,7 @@ $K_{B} = \overline{Q_{C}}$
 
 $J_{C} = \overline{Q_{A}}$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(7) + d(0,2,4,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3301,7 +3225,9 @@ $J_{C} = \overline{Q_{A}}$
 
 $K_{C} = Q_{A}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 010$ (วนอยู่นอกลำดับ) ; $101 \to 010 \to 101$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\ J_{B} &= Q_{C} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} &= \overline{Q_{A}} \\ K_{C} &= Q_{A}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="826" height="388" viewBox="0 0 826 388" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3389,10 +3315,6 @@ $K_{C} = Q_{A}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $101$ $\to$ $010$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $101$ ไปที่ $010$ $\to$ $101$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\ J_{B} &= Q_{C} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} &= \overline{Q_{A}} \\ K_{C} &= Q_{A}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ที่มีลำดับการนับเรียงตามนี้ $0, 1, 3, 7, 6, 4$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$) เป็น don't care condition {seq=s6; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -3405,9 +3327,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -3419,9 +3339,7 @@ $\mathbf{Sol}^{n}$
 | 100 | 000 | 1 | 0 | $x$ | 0 | $x$ | 0 |
 | 010, 101 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(4) + d(0,1,2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3458,7 +3376,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = \overline{Q_{B}}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(3) + d(2,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3494,7 +3412,7 @@ $R_{A} = \overline{Q_{B}}$
 
 $S_{A} = Q_{B}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(6) + d(0,2,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3530,7 +3448,7 @@ $S_{A} = Q_{B}$
 
 $R_{B} = \overline{Q_{C}}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(1) + d(2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3566,7 +3484,7 @@ $R_{B} = \overline{Q_{C}}$
 
 $S_{B} = Q_{C}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(7) + d(2,4,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3602,7 +3520,7 @@ $S_{B} = Q_{C}$
 
 $R_{C} = Q_{A}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0) + d(1,2,3,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3638,7 +3556,9 @@ $R_{C} = Q_{A}$
 
 $S_{C} = \overline{Q_{A}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 010$ (วนอยู่นอกลำดับ) ; $101 \to 010 \to 101$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= \overline{Q_{C}} \\ S_{B} &= Q_{C} \\ R_{C} &= Q_{A} \\ S_{C} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="826" height="388" viewBox="0 0 826 388" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3726,10 +3646,6 @@ $S_{C} = \overline{Q_{A}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $101$ $\to$ $010$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $101$ ไปที่ $010$ $\to$ $101$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= \overline{Q_{C}} \\ S_{B} &= Q_{C} \\ R_{C} &= Q_{A} \\ S_{C} &= \overline{Q_{A}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 3, 7, 6, 4$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$) เป็น don't care condition {seq=s6; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -3742,9 +3658,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -3756,9 +3670,7 @@ $\mathbf{Sol}^{n}$
 | 100 | 000 | 0 | 0 | 0 |
 | 010, 101 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(3,6,7) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3794,7 +3706,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = Q_{B}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(1,3,7) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3830,7 +3742,7 @@ $D_{A} = Q_{B}$
 
 $D_{B} = Q_{C}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,1,3) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3866,7 +3778,9 @@ $D_{B} = Q_{C}$
 
 $D_{C} = \overline{Q_{A}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 010$ (วนอยู่นอกลำดับ) ; $101 \to 010 \to 101$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="793" height="334" viewBox="0 0 793 334" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3934,10 +3848,6 @@ $D_{C} = \overline{Q_{A}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $101$ $\to$ $010$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $101$ ไปที่ $010$ $\to$ $101$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \overline{Q_{A}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับ (Counter) โดยใช้ T flip-flop ที่มีลำดับการนับเรียงตามนี้ $0, 1, 3, 7, 6, 4$ โดยกำหนดให้สถานะของฟลิป-ฟลอปค่า $010$ และ $101$ เป็น don't care condition {seq=s6; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -3950,9 +3860,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -3964,9 +3872,7 @@ $\mathbf{Sol}^{n}$
 | 100 | 000 | 1 | 0 | 0 |
 | 010, 101 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(3,4) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4005,7 +3911,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(1,6) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4045,7 +3951,7 @@ $T_{A} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 $T_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,7) + d(2,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4084,7 +3990,9 @@ $T_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 010$ (วนอยู่นอกลำดับ) ; $101 \to 010 \to 101$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1222" height="389" viewBox="0 0 1222 389" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4185,10 +4093,6 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $101$ $\to$ $010$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $101$ ไปที่ $010$ $\to$ $101$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ดังนั้นควรให้วงจรเริ่มที่ $000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับขึ้นจาก $0$ ถึง $7$ แล้ววนกลับมาที่ $0$ ใหม่ {seq=up8; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -4200,9 +4104,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overlin
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -4215,9 +4117,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 111 | $x$ | 0 | $x$ | 0 | 1 | $x$ |
 | 111 | 000 | $x$ | 1 | $x$ | 1 | $x$ | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(3) + d(4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4253,7 +4153,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}Q_{C}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(7) + d(0,1,2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4289,7 +4189,7 @@ $J_{A} = Q_{B}Q_{C}$
 
 $K_{A} = Q_{B}Q_{C}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(1,5) + d(2,3,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4325,7 +4225,7 @@ $K_{A} = Q_{B}Q_{C}$
 
 $J_{B} = Q_{C}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(3,7) + d(0,1,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4361,7 +4261,7 @@ $J_{B} = Q_{C}$
 
 $K_{B} = Q_{C}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,2,4,6) + d(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4397,7 +4297,7 @@ $K_{B} = Q_{C}$
 
 $J_{C} = 1$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1,3,5,7) + d(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4433,7 +4333,7 @@ $J_{C} = 1$
 
 $K_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="928" height="316" viewBox="0 0 928 316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4521,8 +4421,6 @@ $K_{C} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับขึ้นจาก $0$ ถึง $7$ แล้ววนกลับมาที่ $0$ ใหม่ {seq=up8; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -4534,9 +4432,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -4549,9 +4445,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 111 | 0 | $x$ | 0 | $x$ | 0 | 1 |
 | 111 | 000 | 1 | 0 | 1 | 0 | 1 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(7) + d(0,1,2)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4587,7 +4481,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{A}Q_{B}Q_{C}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(3) + d(4,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4623,7 +4517,7 @@ $R_{A} = Q_{A}Q_{B}Q_{C}$
 
 $S_{A} = \overline{Q_{A}}Q_{B}Q_{C}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(3,7) + d(0,4)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4659,7 +4553,7 @@ $S_{A} = \overline{Q_{A}}Q_{B}Q_{C}$
 
 $R_{B} = Q_{B}Q_{C}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(1,5) + d(2,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4696,7 +4590,7 @@ $R_{B} = Q_{B}Q_{C}$
 
 $S_{B} = \overline{Q_{B}}Q_{C}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4732,7 +4626,7 @@ $S_{B} = \overline{Q_{B}}Q_{C}$
 
 $R_{C} = Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4768,7 +4662,7 @@ $R_{C} = Q_{C}$
 
 $S_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline{Q_{A}}Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1044" height="388" viewBox="0 0 1044 388" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4882,8 +4776,6 @@ $S_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline{Q_{A}}Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับขึ้นจาก $0$ ถึง $7$ แล้ววนกลับมาที่ $0$ ใหม่ {seq=up8; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -4895,9 +4787,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -4910,9 +4800,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 111 | 1 | 1 | 1 |
 | 111 | 000 | 0 | 0 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(3,4,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4954,7 +4842,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} + Q_{A}\overline{Q_{C}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(1,2,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4994,7 +4882,7 @@ $D_{A} = \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} + Q_{A}\overline{Q_{
 
 $D_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5030,7 +4918,7 @@ $D_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $D_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1150" height="456" viewBox="0 0 1150 456" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5140,8 +5028,6 @@ $D_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับขึ้นจาก $0$ ถึง $7$ แล้ววนกลับมาที่ $0$ ใหม่ {seq=up8; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -5153,9 +5039,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\ov
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -5168,9 +5052,7 @@ $\mathbf{Sol}^{n}$
 | 110 | 111 | 0 | 0 | 1 |
 | 111 | 000 | 1 | 1 | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(3,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5206,7 +5088,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}Q_{C}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5242,7 +5124,7 @@ $T_{A} = Q_{B}Q_{C}$
 
 $T_{B} = Q_{C}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1,2,3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5278,7 +5160,7 @@ $T_{B} = Q_{C}$
 
 $T_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="895" height="316" viewBox="0 0 895 316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5348,8 +5230,6 @@ $T_{C} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับเป็นโมดูโล 6 (นับ $0$ ถึง $5$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=mod6; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -5362,9 +5242,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -5376,9 +5254,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 000 | $x$ | 1 | 0 | $x$ | $x$ | 1 |
 | 110, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(3) + d(4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5414,7 +5290,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}Q_{C}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(5) + d(0,1,2,3,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5450,7 +5326,7 @@ $J_{A} = Q_{B}Q_{C}$
 
 $K_{A} = Q_{C}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(1) + d(2,3,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5486,7 +5362,7 @@ $K_{A} = Q_{C}$
 
 $J_{B} = \overline{Q_{A}}Q_{C}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(3) + d(0,1,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5522,7 +5398,7 @@ $J_{B} = \overline{Q_{A}}Q_{C}$
 
 $K_{B} = Q_{C}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,2,4) + d(1,3,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5558,7 +5434,7 @@ $K_{B} = Q_{C}$
 
 $J_{C} = 1$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1,3,5) + d(0,2,4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5594,7 +5470,9 @@ $J_{C} = 1$
 
 $K_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $110 \to 111 \to 000$ ; $111 \to 000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1004" height="334" viewBox="0 0 1004 334" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5685,10 +5563,6 @@ $K_{C} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $110$ ไปที่ $111$ $\to$ $000$ ; $111$ ไปที่ $000$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 6 (นับ $0$ ถึง $5$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=mod6; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -5701,9 +5575,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -5715,9 +5587,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 000 | 1 | 0 | $x$ | 0 | 1 | 0 |
 | 110, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(5) + d(0,1,2,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5754,7 +5624,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = \overline{Q_{B}}Q_{C}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(3) + d(4,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5790,7 +5660,7 @@ $R_{A} = \overline{Q_{B}}Q_{C}$
 
 $S_{A} = Q_{B}Q_{C}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(3) + d(0,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5826,7 +5696,7 @@ $S_{A} = Q_{B}Q_{C}$
 
 $R_{B} = Q_{B}Q_{C}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(1) + d(2,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5862,7 +5732,7 @@ $R_{B} = Q_{B}Q_{C}$
 
 $S_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1,3,5) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5898,7 +5768,7 @@ $S_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
 
 $R_{C} = Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,2,4) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5934,7 +5804,9 @@ $R_{C} = Q_{C}$
 
 $S_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $110 \to 111 \to 100$ ; $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1033" height="370" viewBox="0 0 1033 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6044,10 +5916,6 @@ $S_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $110$ ไปที่ $111$ $\to$ $100$ ; $111$ ไปที่ $100$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 6 (นับ $0$ ถึง $5$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=mod6; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -6060,9 +5928,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -6074,9 +5940,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 000 | 0 | 0 | 0 |
 | 110, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(3,4) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6115,7 +5979,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = Q_{B}Q_{C} + Q_{A}\overline{Q_{C}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(1,2) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6154,7 +6018,7 @@ $D_{A} = Q_{B}Q_{C} + Q_{A}\overline{Q_{C}}$
 
 $D_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,2,4) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6190,7 +6054,9 @@ $D_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $D_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $110 \to 111 \to 100$ ; $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1242" height="421" viewBox="0 0 1242 421" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6304,10 +6170,6 @@ $D_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $110$ ไปที่ $111$ $\to$ $100$ ; $111$ ไปที่ $100$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 6 (นับ $0$ ถึง $5$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($110$, $111$) เป็น don't care condition {seq=mod6; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -6320,9 +6182,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $5$ ($101_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($110$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -6334,9 +6194,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 000 | 1 | 0 | 1 |
 | 110, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(3,5) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6375,7 +6233,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}Q_{C} + Q_{A}Q_{C}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(1,3) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6411,7 +6269,7 @@ $T_{A} = Q_{B}Q_{C} + Q_{A}Q_{C}$
 
 $T_{B} = \overline{Q_{A}}Q_{C}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1,2,3,4,5) + d(6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6447,7 +6305,9 @@ $T_{B} = \overline{Q_{A}}Q_{C}$
 
 $T_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $110 \to 111 \to 010$ ; $111 \to 010$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \overline{Q_{A}}Q_{C} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1114" height="371" viewBox="0 0 1114 371" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6539,10 +6399,6 @@ $T_{C} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $110$ ไปที่ $111$ $\to$ $010$ ; $111$ ไปที่ $010$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \overline{Q_{A}}Q_{C} \\ T_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับเป็นโมดูโล 10 (นับ $0$ ถึง $9$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น don't care condition {seq=mod10; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -6555,9 +6411,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $9$ ($1001_2$) จึงใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}Q_{D}$ | $Q_{A}^+Q_{B}^+Q_{C}^+Q_{D}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ | $J_{D}$ | $K_{D}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -6573,9 +6427,7 @@ $\mathbf{Sol}^{n}$
 | 1001 | 0000 | $x$ | 1 | 0 | $x$ | 0 | $x$ | $x$ | 1 |
 | 1010, 1011, 1100, 1101, 1110, 1111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ตัวแปร $Q_A Q_B Q_C Q_D$ ในแผนผังเขียนเป็น $A, B, C, D$ ช่องที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(7) + d(8,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6632,7 +6484,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}Q_{C}Q_{D}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(9) + d(0,1,2,3,4,5,6,7,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6695,7 +6547,7 @@ $J_{A} = Q_{B}Q_{C}Q_{D}$
 
 $K_{A} = Q_{D}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(3) + d(4,5,6,7,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6754,7 +6606,7 @@ $K_{A} = Q_{D}$
 
 $J_{B} = Q_{C}Q_{D}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(7) + d(0,1,2,3,8,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6815,7 +6667,7 @@ $J_{B} = Q_{C}Q_{D}$
 
 $K_{B} = Q_{C}Q_{D}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(1,5) + d(2,3,6,7,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6875,7 +6727,7 @@ $K_{B} = Q_{C}Q_{D}$
 
 $J_{C} = \overline{Q_{A}}Q_{D}$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(3,7) + d(0,1,4,5,8,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -6937,7 +6789,7 @@ $J_{C} = \overline{Q_{A}}Q_{D}$
 
 $K_{C} = Q_{D}$
 
-ลดรูป $J_{D}$
+$J_{D} = \sum m(0,2,4,6,8) + d(1,3,5,7,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7001,7 +6853,7 @@ $K_{C} = Q_{D}$
 
 $J_{D} = 1$
 
-ลดรูป $K_{D}$
+$K_{D} = \sum m(1,3,5,7,9) + d(0,2,4,6,8,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7065,7 +6917,9 @@ $J_{D} = 1$
 
 $K_{D} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $1010 \to 1011 \to 0100$ ; $1011 \to 0100$ ; $1100 \to 1101 \to 0100$ ; $1101 \to 0100$ ; $1110 \to 1111 \to 0000$ ; $1111 \to 0000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ J_{B} = K_{B} &= Q_{C}Q_{D} \\ J_{C} &= \overline{Q_{A}}Q_{D} \\ K_{C} &= Q_{D} \\ J_{D} = K_{D} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1383" height="352" viewBox="0 0 1383 352" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7189,10 +7043,6 @@ $K_{D} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $1010$ ไปที่ $1011$ $\to$ $0100$ ; $1011$ ไปที่ $0100$ ; $1100$ ไปที่ $1101$ $\to$ $0100$ ; $1101$ ไปที่ $0100$ ; $1110$ ไปที่ $1111$ $\to$ $0000$ ; $1111$ ไปที่ $0000$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ J_{B} = K_{B} &= Q_{C}Q_{D} \\ J_{C} &= \overline{Q_{A}}Q_{D} \\ K_{C} &= Q_{D} \\ J_{D} = K_{D} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับเป็นโมดูโล 10 (นับ $0$ ถึง $9$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น don't care condition {seq=mod10; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -7205,9 +7055,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ 
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $9$ ($1001_2$) จึงใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}Q_{D}$ | $Q_{A}^+Q_{B}^+Q_{C}^+Q_{D}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ | $R_{D}$ | $S_{D}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -7223,9 +7071,7 @@ $\mathbf{Sol}^{n}$
 | 1001 | 0000 | 1 | 0 | $x$ | 0 | $x$ | 0 | 1 | 0 |
 | 1010, 1011, 1100, 1101, 1110, 1111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ตัวแปร $Q_A Q_B Q_C Q_D$ ในแผนผังเขียนเป็น $A, B, C, D$ ช่องที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(9) + d(0,1,2,3,4,5,6,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7288,7 +7134,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = \overline{Q_{B}}Q_{D}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(7) + d(8,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7344,7 +7190,7 @@ $R_{A} = \overline{Q_{B}}Q_{D}$
 
 $S_{A} = Q_{B}Q_{C}Q_{D}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(7) + d(0,1,2,8,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7404,7 +7250,7 @@ $S_{A} = Q_{B}Q_{C}Q_{D}$
 
 $R_{B} = Q_{B}Q_{C}Q_{D}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(3) + d(4,5,6,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7463,7 +7309,7 @@ $R_{B} = Q_{B}Q_{C}Q_{D}$
 
 $S_{B} = \overline{Q_{B}}Q_{C}Q_{D}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(3,7) + d(0,4,8,9,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7523,7 +7369,7 @@ $S_{B} = \overline{Q_{B}}Q_{C}Q_{D}$
 
 $R_{C} = Q_{C}Q_{D}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(1,5) + d(2,6,10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7581,7 +7427,7 @@ $R_{C} = Q_{C}Q_{D}$
 
 $S_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D}$
 
-ลดรูป $R_{D}$
+$R_{D} = \sum m(1,3,5,7,9) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7640,7 +7486,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D}$
 
 $R_{D} = Q_{D}$
 
-ลดรูป $S_{D}$
+$S_{D} = \sum m(0,2,4,6,8) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7700,7 +7546,9 @@ $R_{D} = Q_{D}$
 
 $S_{D} = \overline{Q_{D}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $1010 \to 1011 \to 0100$ ; $1011 \to 0100$ ; $1100 \to 1101 \to 1100$ (วนอยู่นอกลำดับ) ; $1101 \to 1100 \to 1101$ (วนอยู่นอกลำดับ) ; $1110 \to 1111 \to 1000$ ; $1111 \to 1000$ $\Rightarrow$ ต้องรีเซ็ตที่ $0000$
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{B}Q_{C}Q_{D} \\ R_{B} &= Q_{B}Q_{C}Q_{D} \\ S_{B} &= \overline{Q_{B}}Q_{C}Q_{D} \\ R_{C} &= Q_{C}Q_{D} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} \\ R_{D} &= Q_{D} \\ S_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1434" height="406" viewBox="0 0 1434 406" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7854,10 +7702,6 @@ $S_{D} = \overline{Q_{D}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $1010$ ไปที่ $1011$ $\to$ $0100$ ; $1011$ ไปที่ $0100$ ; $1100$ ไปที่ $1101$ $\to$ $1100$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $1101$ ไปที่ $1100$ $\to$ $1101$ (วนอยู่นอกลำดับ ไม่กลับเข้าลำดับการนับ) ; $1110$ ไปที่ $1111$ $\to$ $1000$ ; $1111$ ไปที่ $1000$ ดังนั้นควรให้วงจรเริ่มที่ $0000$ (รีเซ็ต) เสมอ
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{B}Q_{C}Q_{D} \\ R_{B} &= Q_{B}Q_{C}Q_{D} \\ S_{B} &= \overline{Q_{B}}Q_{C}Q_{D} \\ R_{C} &= Q_{C}Q_{D} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} \\ R_{D} &= Q_{D} \\ S_{D} &= \overline{Q_{D}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับเป็นโมดูโล 10 (นับ $0$ ถึง $9$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น don't care condition {seq=mod10; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -7870,9 +7714,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $9$ ($1001_2$) จึงใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}Q_{D}$ | $Q_{A}^+Q_{B}^+Q_{C}^+Q_{D}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ | $D_{D}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -7888,9 +7730,7 @@ $\mathbf{Sol}^{n}$
 | 1001 | 0000 | 0 | 0 | 0 | 0 |
 | 1010, 1011, 1100, 1101, 1110, 1111 | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ตัวแปร $Q_A Q_B Q_C Q_D$ ในแผนผังเขียนเป็น $A, B, C, D$ ช่องที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(7,8) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -7950,7 +7790,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(3,4,5,6) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8016,7 +7856,7 @@ $D_{A} = Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}}$
 
 $D_{B} = \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(1,2,5,6) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8077,7 +7917,7 @@ $D_{B} = \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{
 
 $D_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}}$
 
-ลดรูป $D_{D}$
+$D_{D} = \sum m(0,2,4,6,8) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8137,7 +7977,9 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}}$
 
 $D_{D} = \overline{Q_{D}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $1010 \to 1011 \to 0100$ ; $1011 \to 0100$ ; $1100 \to 1101 \to 0100$ ; $1101 \to 0100$ ; $1110 \to 1111 \to 1000$ ; $1111 \to 1000$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}} \\ D_{B} &= \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}} \\ D_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1764" height="492" viewBox="0 0 1764 492" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8305,10 +8147,6 @@ $D_{D} = \overline{Q_{D}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $1010$ ไปที่ $1011$ $\to$ $0100$ ; $1011$ ไปที่ $0100$ ; $1100$ ไปที่ $1101$ $\to$ $0100$ ; $1101$ ไปที่ $0100$ ; $1110$ ไปที่ $1111$ $\to$ $1000$ ; $1111$ ไปที่ $1000$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}} \\ D_{B} &= \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}} \\ D_{D} &= \overline{Q_{D}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับเป็นโมดูโล 10 (นับ $0$ ถึง $9$ แล้ววนกลับมาที่ $0$) โดยกำหนดให้สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น don't care condition {seq=mod10; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -8321,9 +8159,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $9$ ($1001_2$) จึงใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 4 ตัว (A, B, C, D) สถานะที่ไม่ใช้ ($1010$, $1011$, $1100$, $1101$, $1110$, $1111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}Q_{D}$ | $Q_{A}^+Q_{B}^+Q_{C}^+Q_{D}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ | $T_{D}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -8339,9 +8175,7 @@ $\mathbf{Sol}^{n}$
 | 1001 | 0000 | 1 | 0 | 0 | 1 |
 | 1010, 1011, 1100, 1101, 1110, 1111 | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ตัวแปร $Q_A Q_B Q_C Q_D$ ในแผนผังเขียนเป็น $A, B, C, D$ ช่องที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(7,9) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8400,7 +8234,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(3,7) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8456,7 +8290,7 @@ $T_{A} = Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D}$
 
 $T_{B} = Q_{C}Q_{D}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(1,3,5,7) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8514,7 +8348,7 @@ $T_{B} = Q_{C}Q_{D}$
 
 $T_{C} = \overline{Q_{A}}Q_{D}$
 
-ลดรูป $T_{D}$
+$T_{D} = \sum m(0,1,2,3,4,5,6,7,8,9) + d(10,11,12,13,14,15)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="296" height="280" viewBox="0 0 296 280" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8578,7 +8412,9 @@ $T_{C} = \overline{Q_{A}}Q_{D}$
 
 $T_{D} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $1010 \to 1011 \to 0110$ ; $1011 \to 0110$ ; $1100 \to 1101 \to 0100$ ; $1101 \to 0100$ ; $1110 \to 1111 \to 0010$ ; $1111 \to 0010$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B} &= Q_{C}Q_{D} \\ T_{C} &= \overline{Q_{A}}Q_{D} \\ T_{D} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1471" height="403" viewBox="0 0 1471 403" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8696,10 +8532,6 @@ $T_{D} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $1010$ ไปที่ $1011$ $\to$ $0110$ ; $1011$ ไปที่ $0110$ ; $1100$ ไปที่ $1101$ $\to$ $0100$ ; $1101$ ไปที่ $0100$ ; $1110$ ไปที่ $1111$ $\to$ $0010$ ; $1111$ ไปที่ $0010$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B} &= Q_{C}Q_{D} \\ T_{C} &= \overline{Q_{A}}Q_{D} \\ T_{D} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับลงจาก $7$ ถึง $0$ แล้ววนกลับมาที่ $7$ ใหม่ {seq=down8; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -8711,9 +8543,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -8726,9 +8556,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | $x$ | 0 | $x$ | $x$ | 1 |
 | 000 | 111 | 1 | $x$ | 1 | $x$ | 1 | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(0) + d(4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8765,7 +8593,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(4) + d(0,1,2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8802,7 +8630,7 @@ $J_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(0,4) + d(2,3,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8838,7 +8666,7 @@ $K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $J_{B} = \overline{Q_{C}}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(2,6) + d(0,1,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8874,7 +8702,7 @@ $J_{B} = \overline{Q_{C}}$
 
 $K_{B} = \overline{Q_{C}}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,2,4,6) + d(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8910,7 +8738,7 @@ $K_{B} = \overline{Q_{C}}$
 
 $J_{C} = 1$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1,3,5,7) + d(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8946,7 +8774,7 @@ $J_{C} = 1$
 
 $K_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} = K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="928" height="316" viewBox="0 0 928 316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9036,8 +8864,6 @@ $K_{C} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} = K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับลงจาก $7$ ถึง $0$ แล้ววนกลับมาที่ $7$ ใหม่ {seq=down8; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -9049,9 +8875,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -9064,9 +8888,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | $x$ | 0 | $x$ | 0 | 1 | 0 |
 | 000 | 111 | 0 | 1 | 0 | 1 | 0 | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(4) + d(1,2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9102,7 +8924,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(0) + d(5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9138,7 +8960,7 @@ $R_{A} = Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
 
 $S_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(2,6) + d(1,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9174,7 +8996,7 @@ $S_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
 $R_{B} = Q_{B}\overline{Q_{C}}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(0,4) + d(3,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9211,7 +9033,7 @@ $R_{B} = Q_{B}\overline{Q_{C}}$
 
 $S_{B} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9247,7 +9069,7 @@ $S_{B} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $R_{C} = Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9283,7 +9105,7 @@ $R_{C} = Q_{C}$
 
 $S_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= Q_{B}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1044" height="388" viewBox="0 0 1044 388" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9397,8 +9219,6 @@ $S_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= Q_{B}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับลงจาก $7$ ถึง $0$ แล้ววนกลับมาที่ $7$ ใหม่ {seq=down8; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -9410,9 +9230,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -9425,9 +9243,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | 0 | 0 |
 | 000 | 111 | 1 | 1 | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(0,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9469,7 +9285,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(0,3,4,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9509,7 +9325,7 @@ $D_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_
 
 $D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9545,7 +9361,7 @@ $D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C}$
 
 $D_{C} = \overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1264" height="456" viewBox="0 0 1264 456" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9668,8 +9484,6 @@ $D_{C} = \overline{Q_{C}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับลงจาก $7$ ถึง $0$ แล้ววนกลับมาที่ $7$ ใหม่ {seq=down8; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -9681,9 +9495,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\over
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -9696,9 +9508,7 @@ $\mathbf{Sol}^{n}$
 | 001 | 000 | 0 | 0 | 1 |
 | 000 | 111 | 1 | 1 | 1 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(0,4)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9735,7 +9545,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9771,7 +9581,7 @@ $T_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $T_{B} = \overline{Q_{C}}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1,2,3,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9807,7 +9617,7 @@ $T_{B} = \overline{Q_{C}}$
 
 $T_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="895" height="316" viewBox="0 0 895 316" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9879,8 +9689,6 @@ $T_{C} = 1$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ให้นับตามรหัสเกรย์ 3 บิต ($0, 1, 3, 2, 6, 7, 5, 4$) แล้ววนกลับมาที่ $0$ ใหม่ {seq=gray3; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -9892,9 +9700,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -9907,9 +9713,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 100 | $x$ | 0 | 0 | $x$ | $x$ | 1 |
 | 100 | 000 | $x$ | 1 | 0 | $x$ | 0 | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(2) + d(4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9945,7 +9749,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = Q_{B}\overline{Q_{C}}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(4) + d(0,1,2,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9982,7 +9786,7 @@ $J_{A} = Q_{B}\overline{Q_{C}}$
 
 $K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(1) + d(2,3,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10018,7 +9822,7 @@ $K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $J_{B} = \overline{Q_{A}}Q_{C}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(7) + d(0,1,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10054,7 +9858,7 @@ $J_{B} = \overline{Q_{A}}Q_{C}$
 
 $K_{B} = Q_{A}Q_{C}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,6) + d(1,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10093,7 +9897,7 @@ $K_{B} = Q_{A}Q_{C}$
 
 $J_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(3,5) + d(0,2,4,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10132,7 +9936,7 @@ $J_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
 $K_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{A}Q_{C} \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B} \\ K_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1252" height="407" viewBox="0 0 1252 407" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10263,8 +10067,6 @@ $K_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{A}Q_{C} \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B} \\ K_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ให้นับตามรหัสเกรย์ 3 บิต ($0, 1, 3, 2, 6, 7, 5, 4$) แล้ววนกลับมาที่ $0$ ใหม่ {seq=gray3; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -10276,9 +10078,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \ov
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -10291,9 +10091,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 100 | 0 | $x$ | $x$ | 0 | 1 | 0 |
 | 100 | 000 | 1 | 0 | $x$ | 0 | $x$ | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(4) + d(0,1,3)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10330,7 +10128,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(2) + d(5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10366,7 +10164,7 @@ $R_{A} = \overline{Q_{B}}\overline{Q_{C}}$
 
 $S_{A} = Q_{B}\overline{Q_{C}}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(7) + d(0,4,5)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10402,7 +10200,7 @@ $S_{A} = Q_{B}\overline{Q_{C}}$
 
 $R_{B} = Q_{A}Q_{C}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(1) + d(2,3,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10438,7 +10236,7 @@ $R_{B} = Q_{A}Q_{C}$
 
 $S_{B} = \overline{Q_{A}}Q_{C}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(3,5) + d(2,4)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10477,7 +10275,7 @@ $S_{B} = \overline{Q_{A}}Q_{C}$
 
 $R_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,6) + d(1,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10516,7 +10314,7 @@ $R_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 $S_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= Q_{B}\overline{Q_{C}} \\ R_{B} &= Q_{A}Q_{C} \\ S_{B} &= \overline{Q_{A}}Q_{C} \\ R_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1252" height="407" viewBox="0 0 1252 407" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10647,8 +10445,6 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= Q_{B}\overline{Q_{C}} \\ R_{B} &= Q_{A}Q_{C} \\ S_{B} &= \overline{Q_{A}}Q_{C} \\ R_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ให้นับตามรหัสเกรย์ 3 บิต ($0, 1, 3, 2, 6, 7, 5, 4$) แล้ววนกลับมาที่ $0$ ใหม่ {seq=gray3; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -10660,9 +10456,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -10675,9 +10469,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 100 | 1 | 0 | 0 |
 | 100 | 000 | 0 | 0 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(2,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10716,7 +10508,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = Q_{B}\overline{Q_{C}} + Q_{A}Q_{C}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(1,2,3,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10755,7 +10547,7 @@ $D_{A} = Q_{B}\overline{Q_{C}} + Q_{A}Q_{C}$
 
 $D_{B} = \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,1,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10794,7 +10586,7 @@ $D_{B} = \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $D_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1450" height="407" viewBox="0 0 1450 407" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10922,8 +10714,6 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ให้นับตามรหัสเกรย์ 3 บิต ($0, 1, 3, 2, 6, 7, 5, 4$) แล้ววนกลับมาที่ $0$ ใหม่ {seq=gray3; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -10935,9 +10725,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $7$ ($111_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) ไม่มีสถานะที่ไม่ใช้
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) ไม่มีสถานะที่ไม่ใช้
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -10950,9 +10738,7 @@ $\mathbf{Sol}^{n}$
 | 101 | 100 | 0 | 0 | 1 |
 | 100 | 000 | 1 | 0 | 0 |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ไม่มีช่อง $x$ เพราะใช้ครบทุกสถานะ)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(2,4)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -10991,7 +10777,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(1,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11030,7 +10816,7 @@ $T_{A} = \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{
 
 $T_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,3,5,6)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11075,7 +10861,7 @@ $T_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C}$
 
 $T_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1582" height="520" viewBox="0 0 1582 520" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11245,8 +11031,6 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B
 </svg>
 </div>
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ JK ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 4, 6, 3$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น don't care condition {seq=jump5b; ff=jk}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -11259,9 +11043,7 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}}
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ JK ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $J_{A}$ | $K_{A}$ | $J_{B}$ | $K_{B}$ | $J_{C}$ | $K_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -11272,9 +11054,7 @@ $\mathbf{Sol}^{n}$
 | 011 | 000 | 0 | $x$ | $x$ | 1 | $x$ | 1 |
 | 010, 101, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $J_{A}$
+$J_{A} = \sum m(1) + d(2,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11311,7 +11091,7 @@ $\mathbf{Sol}^{n}$
 
 $J_{A} = \overline{Q_{B}}Q_{C}$
 
-ลดรูป $K_{A}$
+$K_{A} = \sum m(6) + d(0,1,2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11347,7 +11127,7 @@ $J_{A} = \overline{Q_{B}}Q_{C}$
 
 $K_{A} = Q_{B}$
 
-ลดรูป $J_{B}$
+$J_{B} = \sum m(4) + d(2,3,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11383,7 +11163,7 @@ $K_{A} = Q_{B}$
 
 $J_{B} = Q_{A}$
 
-ลดรูป $K_{B}$
+$K_{B} = \sum m(3) + d(0,1,2,4,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11419,7 +11199,7 @@ $J_{B} = Q_{A}$
 
 $K_{B} = \overline{Q_{A}}$
 
-ลดรูป $J_{C}$
+$J_{C} = \sum m(0,6) + d(1,2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11458,7 +11238,7 @@ $K_{B} = \overline{Q_{A}}$
 
 $J_{C} = \overline{Q_{A}} + Q_{B}$
 
-ลดรูป $K_{C}$
+$K_{C} = \sum m(1,3) + d(0,2,4,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11494,7 +11274,9 @@ $J_{C} = \overline{Q_{A}} + Q_{B}$
 
 $K_{C} = 1$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 001$ ; $101 \to 110$ ; $111 \to 010 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B} &= Q_{A} \\ K_{B} &= \overline{Q_{A}} \\ J_{C} &= \overline{Q_{A}} + Q_{B} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="999" height="370" viewBox="0 0 999 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11588,10 +11370,6 @@ $K_{C} = 1$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $001$ ; $101$ ไปที่ $110$ ; $111$ ไปที่ $010$ $\to$ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B} &= Q_{A} \\ K_{B} &= \overline{Q_{A}} \\ J_{C} &= \overline{Q_{A}} + Q_{B} \\ K_{C} &= 1\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ RS ฟลิป-ฟลอป (NOR) ที่มีลำดับการนับเรียงตามนี้ $0, 1, 4, 6, 3$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น don't care condition {seq=jump5b; ff=rs}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -11604,9 +11382,7 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ RS ฟลิป-ฟลอป (NOR) หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $R_{A}$ | $S_{A}$ | $R_{B}$ | $S_{B}$ | $R_{C}$ | $S_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -11617,9 +11393,7 @@ $\mathbf{Sol}^{n}$
 | 011 | 000 | $x$ | 0 | 1 | 0 | 1 | 0 |
 | 010, 101, 111 | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $R_{A}$
+$R_{A} = \sum m(6) + d(0,2,3,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11655,7 +11429,7 @@ $\mathbf{Sol}^{n}$
 
 $R_{A} = Q_{B}$
 
-ลดรูป $S_{A}$
+$S_{A} = \sum m(1) + d(2,4,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11692,7 +11466,7 @@ $R_{A} = Q_{B}$
 
 $S_{A} = \overline{Q_{B}}Q_{C}$
 
-ลดรูป $R_{B}$
+$R_{B} = \sum m(3) + d(0,1,2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11728,7 +11502,7 @@ $S_{A} = \overline{Q_{B}}Q_{C}$
 
 $R_{B} = \overline{Q_{A}}$
 
-ลดรูป $S_{B}$
+$S_{B} = \sum m(4) + d(2,5,6,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11764,7 +11538,7 @@ $R_{B} = \overline{Q_{A}}$
 
 $S_{B} = Q_{A}$
 
-ลดรูป $R_{C}$
+$R_{C} = \sum m(1,3) + d(2,4,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11800,7 +11574,7 @@ $S_{B} = Q_{A}$
 
 $R_{C} = Q_{C}$
 
-ลดรูป $S_{C}$
+$S_{C} = \sum m(0,6) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11839,7 +11613,9 @@ $R_{C} = Q_{C}$
 
 $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 001$ ; $101 \to 110$ ; $111 \to 010 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{C} \\ R_{B} &= \overline{Q_{A}} \\ S_{B} &= Q_{A} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1132" height="407" viewBox="0 0 1132 407" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11950,10 +11726,6 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $001$ ; $101$ ไปที่ $110$ ; $111$ ไปที่ $010$ $\to$ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{C} \\ R_{B} &= \overline{Q_{A}} \\ S_{B} &= Q_{A} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ D ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 4, 6, 3$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น don't care condition {seq=jump5b; ff=d}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -11966,9 +11738,7 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ D ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $D_{A}$ | $D_{B}$ | $D_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -11979,9 +11749,7 @@ $\mathbf{Sol}^{n}$
 | 011 | 000 | 0 | 0 | 0 |
 | 010, 101, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $D_{A}$
+$D_{A} = \sum m(1,4) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12021,7 +11789,7 @@ $\mathbf{Sol}^{n}$
 
 $D_{A} = \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $D_{B}$
+$D_{B} = \sum m(4,6) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12057,7 +11825,7 @@ $D_{A} = \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}}$
 
 $D_{B} = Q_{A}$
 
-ลดรูป $D_{C}$
+$D_{C} = \sum m(0,6) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12096,7 +11864,9 @@ $D_{B} = Q_{A}$
 
 $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 001$ ; $101 \to 110$ ; $111 \to 010 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1231" height="407" viewBox="0 0 1231 407" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12206,10 +11976,6 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 </svg>
 </div>
 
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $001$ ; $101$ ไปที่ $110$ ; $111$ ไปที่ $010$ $\to$ $001$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
-
 ### ข้อ 3  จงออกแบบวงจรนับชนิดได้จังหวะกัน (Synchronous Counter) โดยใช้ T ฟลิป-ฟลอป ที่มีลำดับการนับเรียงตามนี้ $0, 1, 4, 6, 3$ และวนกลับมาที่ $0$ ใหม่ โดยกำหนดให้สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น don't care condition {seq=jump5b; ff=t}
 
 **จงทำตามขั้นตอนต่อไปนี้**
@@ -12222,9 +11988,7 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overlin
 
 $\mathbf{Sol}^{n}$
 
-**ขั้นที่ 1** ค่าสูงสุดคือ $6$ ($110_2$) จึงใช้ฟลิป-ฟลอป 3 ตัว (A, B, C โดย A เป็นบิตสูงสุด) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
-
-**ขั้นที่ 2** ตารางสถานะ ใช้ตารางกระตุ้นของ T ฟลิป-ฟลอป หาอินพุตจากคู่ $Q(t) \to Q(t+1)$ ของฟลิป-ฟลอปแต่ละตัว ($x$ คืออะไรก็ได้)
+ใช้ฟลิป-ฟลอป 3 ตัว (A, B, C) สถานะที่ไม่ใช้ ($010$, $101$, $111$) เป็น $x$
 
 | $Q_{A}Q_{B}Q_{C}$ | $Q_{A}^+Q_{B}^+Q_{C}^+$ | $T_{A}$ | $T_{B}$ | $T_{C}$ |
 |:-:|:-:|:-:|:-:|:-:|
@@ -12235,9 +11999,7 @@ $\mathbf{Sol}^{n}$
 | 011 | 000 | 0 | 1 | 1 |
 | 010, 101, 111 | $x$ | $x$ | $x$ | $x$ |
 
-**ขั้นที่ 3** ลดรูปด้วย K-map (ช่องของสถานะที่ไม่ใช้เป็น $x$)
-
-ลดรูป $T_{A}$
+$T_{A} = \sum m(1,6) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12277,7 +12039,7 @@ $\mathbf{Sol}^{n}$
 
 $T_{A} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
-ลดรูป $T_{B}$
+$T_{B} = \sum m(3,4) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12316,7 +12078,7 @@ $T_{A} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $T_{B} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
-ลดรูป $T_{C}$
+$T_{C} = \sum m(0,1,3,6) + d(2,5,7)$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="304" height="172" viewBox="0 0 304 172" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12355,7 +12117,9 @@ $T_{B} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 $T_{C} = \overline{Q_{A}} + Q_{B}$
 
-**ขั้นที่ 4** นำสมการมาสร้างวงจร
+ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 011$ ; $101 \to 011$ ; $111 \to 110$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
+
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{C} &= \overline{Q_{A}} + Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="352" viewBox="0 0 1100 352" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12439,7 +12203,3 @@ $T_{C} = \overline{Q_{A}} + Q_{B}$
 </g>
 </svg>
 </div>
-
-**ตรวจสถานะที่ไม่ใช้** $010$ ไปที่ $101$ $\to$ $011$ ; $101$ ไปที่ $011$ ; $111$ ไปที่ $110$ ดังนั้นทุกสถานะที่ไม่ใช้กลับเข้าลำดับการนับได้เอง
-
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{C} &= \overline{Q_{A}} + Q_{B}\end{aligned}$
