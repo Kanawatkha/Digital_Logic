@@ -1821,9 +1821,9 @@ $S_{B} = \sum m(0,5) + d(4,6,7)$
 </div>
 
 - ลูปสีส้ม (สถานะ $100,101,110,111$) : $Q_A=1 \Rightarrow Q_{A}$
-- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{B} = Q_{A} + \overline{Q_{B}}\overline{Q_{C}}$
+$S_{B} = Q_{A} + \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $R_{C} = \sum m(1,5) + d(4,6,7)$
 
@@ -1911,7 +1911,7 @@ $S_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{A} + \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= \overline{Q_{B}}Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{A} + \overline{Q_{B}}\,\overline{Q_{C}} \\ R_{C} &= \overline{Q_{B}}Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1632" height="520" viewBox="0 0 1632 520" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -2221,10 +2221,10 @@ $D_{B} = \sum m(0,5) + d(4,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $100,101,110,111$) : $Q_A=1 \Rightarrow Q_{A}$
 
-$D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{A}$
+$D_{B} = \overline{Q_{B}}\,\overline{Q_{C}} + Q_{A}$
 
 $D_{C} = \sum m(0,2,3) + d(4,6,7)$
 
@@ -2278,7 +2278,7 @@ $D_{C} = \overline{Q_{C}} + Q_{B}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{A} \\ D_{C} &= \overline{Q_{C}} + Q_{B}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}\,\overline{Q_{C}} + Q_{A} \\ D_{C} &= \overline{Q_{C}} + Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1526" height="528" viewBox="0 0 1526 528" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3067,9 +3067,9 @@ $J_{C} = \sum m(0) + d(1,3,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 
-$J_{C} = \overline{Q_{A}}\overline{Q_{B}}$
+$J_{C} = \overline{Q_{A}}\,\overline{Q_{B}}$
 
 $K_{C} = \sum m(1) + d(0,2,3,4,5,6,7)$
 
@@ -3120,7 +3120,7 @@ $K_{C} = 1$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= \overline{Q_{A}}\,\overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1266" height="477" viewBox="0 0 1266 477" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3588,9 +3588,9 @@ $S_{C} = \sum m(0) + d(3,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $011$ ได้ $R=S=1$ (B) ; $101 \to 110$ ; $111$ ได้ $R=S=1$ (B) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
 
@@ -3605,7 +3605,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{C} + Q_{A}\overline{Q_{B}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{C} + Q_{A}\overline{Q_{B}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1660" height="557" viewBox="0 0 1660 557" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -3963,9 +3963,9 @@ $D_{C} = \sum m(0) + d(3,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $011 \to 110$ ; $101 \to 110$ ; $111 \to 010$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -3980,7 +3980,7 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A}\overline{Q_{B}} + Q_{C} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A}\overline{Q_{B}} + Q_{C} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1556" height="554" viewBox="0 0 1556 554" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -4319,9 +4319,9 @@ $T_{C} = \sum m(0,1) + d(3,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 
-$T_{C} = \overline{Q_{A}}\overline{Q_{B}}$
+$T_{C} = \overline{Q_{A}}\,\overline{Q_{B}}$
 
 ตรวจสถานะที่ไม่ใช้ : $011 \to 101 \to 111 \to 001$ ; $101 \to 111 \to 001$ ; $111 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -4336,7 +4336,7 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{A}}\,\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1266" height="488" viewBox="0 0 1266 488" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -5977,10 +5977,10 @@ $T_{C} = \sum m(0,7) + d(2,5)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $101,111$) : $Q_A=1,\ Q_C=1 \Rightarrow Q_{A}Q_{C}$
 
-$T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
+$T_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + Q_{A}Q_{C}$
 
 ตรวจสถานะที่ไม่ใช้ : $010 \to 101 \to 010$ (วนอยู่นอกลำดับ) ; $101 \to 010 \to 101$ (วนอยู่นอกลำดับ) $\Rightarrow$ ต้องรีเซ็ตที่ $000$
 
@@ -5995,7 +5995,7 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{C} &= \overline{Q_{A}}\,\overline{Q_{C}} + Q_{A}Q_{C}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1570" height="521" viewBox="0 0 1570 521" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -8683,9 +8683,9 @@ $S_{B} = \sum m(1) + d(2,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
+- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}Q_{C}$
 
-$S_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
+$S_{B} = \overline{Q_{A}}\,\overline{Q_{B}}Q_{C}$
 
 $R_{C} = \sum m(1,3,5) + d(6,7)$
 
@@ -8772,7 +8772,7 @@ $S_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{A}}\,\overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1368" height="524" viewBox="0 0 1368 524" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -9095,10 +9095,10 @@ $D_{B} = \sum m(1,2) + d(6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
+- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}Q_{C}$
 - ลูปสีน้ำเงิน (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
 
-$D_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
+$D_{B} = \overline{Q_{A}}\,\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 
 $D_{C} = \sum m(0,2,4) + d(6,7)$
 
@@ -9149,7 +9149,7 @@ $D_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{A}}\,\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1638" height="569" viewBox="0 0 1638 569" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11134,9 +11134,9 @@ $S_{C} = \sum m(1,5) + d(2,6,10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $0001,0101$) : $Q_A=0,\ Q_C=0,\ Q_D=1 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}Q_{D}$
+- ลูปสีส้ม (สถานะ $0001,0101$) : $Q_A=0,\ Q_C=0,\ Q_D=1 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}Q_{D}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{C}}Q_{D}$
 
 $R_{D} = \sum m(1,3,5,7,9) + d(10,11,12,13,14,15)$
 
@@ -11270,7 +11270,7 @@ $S_{D} = \overline{Q_{D}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{B}Q_{C}Q_{D} \\ R_{B} &= Q_{B}Q_{C}Q_{D} \\ S_{B} &= \overline{Q_{B}}Q_{C}Q_{D} \\ R_{C} &= Q_{C}Q_{D} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} \\ R_{D} &= Q_{D} \\ S_{D} &= \overline{Q_{D}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{B}Q_{C}Q_{D} \\ R_{B} &= Q_{B}Q_{C}Q_{D} \\ S_{B} &= \overline{Q_{B}}Q_{C}Q_{D} \\ R_{C} &= Q_{C}Q_{D} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{C}}Q_{D} \\ R_{D} &= Q_{D} \\ S_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1922" height="598" viewBox="0 0 1922 598" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -11823,10 +11823,10 @@ $D_{C} = \sum m(1,2,5,6) + d(10,11,12,13,14,15)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $0001,0101$) : $Q_A=0,\ Q_C=0,\ Q_D=1 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}Q_{D}$
+- ลูปสีส้ม (สถานะ $0001,0101$) : $Q_A=0,\ Q_C=0,\ Q_D=1 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}Q_{D}$
 - ลูปสีน้ำเงิน (สถานะ $0010,0110,1010,1110$) : $Q_C=1,\ Q_D=0 \Rightarrow Q_{C}\overline{Q_{D}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}}$
 
 $D_{D} = \sum m(0,2,4,6,8) + d(10,11,12,13,14,15)$
 
@@ -11901,7 +11901,7 @@ $D_{D} = \overline{Q_{D}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}} \\ D_{B} &= \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}} \\ D_{D} &= \overline{Q_{D}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}} \\ D_{B} &= \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}} \\ D_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="2380" height="715" viewBox="0 0 2380 715" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -12888,9 +12888,9 @@ $J_{A} = \sum m(0) + d(4,5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$J_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$J_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $K_{A} = \sum m(4) + d(0,1,2,3)$
 
@@ -12925,9 +12925,9 @@ $K_{A} = \sum m(4) + d(0,1,2,3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$K_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $J_{B} = \sum m(0,4) + d(2,3,6,7)$
 
@@ -13084,7 +13084,7 @@ $K_{C} = 1$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} = K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ J_{B} = K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1210" height="396" viewBox="0 0 1210 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -13398,9 +13398,9 @@ $R_{A} = \sum m(4) + d(1,2,3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $100$) : $Q_A=1,\ Q_B=0,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $100$) : $Q_A=1,\ Q_B=0,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$R_{A} = Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
+$R_{A} = Q_{A}\overline{Q_{B}}\,\overline{Q_{C}}$
 
 $S_{A} = \sum m(0) + d(5,6,7)$
 
@@ -13434,9 +13434,9 @@ $S_{A} = \sum m(0) + d(5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+$S_{A} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
 $R_{B} = \sum m(2,6) + d(1,5)$
 
@@ -13507,9 +13507,9 @@ $S_{B} = \sum m(0,4) + d(3,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{B} = \overline{Q_{B}}\overline{Q_{C}}$
+$S_{B} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $R_{C} = \sum m(1,3,5,7)$
 
@@ -13594,7 +13594,7 @@ $S_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= Q_{B}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\,\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} \\ R_{B} &= Q_{B}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1390" height="572" viewBox="0 0 1390 572" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -13901,11 +13901,11 @@ $D_{A} = \sum m(0,5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $101,111$) : $Q_A=1,\ Q_C=1 \Rightarrow Q_{A}Q_{C}$
 - ลูปสีเขียว (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
 
-$D_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B}$
+$D_{A} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B}$
 
 $D_{B} = \sum m(0,3,4,7)$
 
@@ -13942,10 +13942,10 @@ $D_{B} = \sum m(0,3,4,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $011,111$) : $Q_B=1,\ Q_C=1 \Rightarrow Q_{B}Q_{C}$
 
-$D_{B} = \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C}$
+$D_{B} = \overline{Q_{B}}\,\overline{Q_{C}} + Q_{B}Q_{C}$
 
 $D_{C} = \sum m(0,2,4,6)$
 
@@ -13994,7 +13994,7 @@ $D_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B} \\ D_{B} &= \overline{Q_{B}}\,\overline{Q_{C}} + Q_{B}Q_{C} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1702" height="663" viewBox="0 0 1702 663" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14307,9 +14307,9 @@ $T_{A} = \sum m(0,4)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$T_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$T_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $T_{B} = \sum m(0,2,4,6)$
 
@@ -14394,7 +14394,7 @@ $T_{C} = 1$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ T_{B} &= \overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1144" height="399" viewBox="0 0 1144 399" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -14727,9 +14727,9 @@ $K_{A} = \sum m(4) + d(0,1,2,3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$K_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$K_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $J_{B} = \sum m(1) + d(2,3,6,7)$
 
@@ -14837,10 +14837,10 @@ $J_{C} = \sum m(0,6) + d(1,3,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 - ลูปสีน้ำเงิน (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
 
-$J_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
+$J_{C} = \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B}$
 
 $K_{C} = \sum m(3,5) + d(0,2,4,6)$
 
@@ -14892,7 +14892,7 @@ $K_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{A}Q_{C} \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B} \\ K_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{A}Q_{C} \\ J_{C} &= \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B} \\ K_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1670" height="616" viewBox="0 0 1670 616" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -15248,9 +15248,9 @@ $R_{A} = \sum m(4) + d(0,1,3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$R_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$R_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $S_{A} = \sum m(2) + d(5,6,7)$
 
@@ -15433,10 +15433,10 @@ $S_{C} = \sum m(0,6) + d(1,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 - ลูปสีน้ำเงิน (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B}$
 
 **เลือกขอบของ CLK ตอนวาดวงจร** (ขอบไม่เปลี่ยนสมการ เปลี่ยนแค่สัญลักษณ์ที่ขา CLK)
 
@@ -15449,7 +15449,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= Q_{B}\overline{Q_{C}} \\ R_{B} &= Q_{A}Q_{C} \\ S_{B} &= \overline{Q_{A}}Q_{C} \\ R_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ S_{A} &= Q_{B}\overline{Q_{C}} \\ R_{B} &= Q_{A}Q_{C} \\ S_{B} &= \overline{Q_{A}}Q_{C} \\ R_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1670" height="616" viewBox="0 0 1670 616" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -15850,10 +15850,10 @@ $D_{C} = \sum m(0,1,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $000,001$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 - ลูปสีน้ำเงิน (สถานะ $110,111$) : $Q_A=1,\ Q_B=1 \Rightarrow Q_{A}Q_{B}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B}$
 
 **เลือกขอบของ CLK ตอนวาดวงจร** (ขอบไม่เปลี่ยนสมการ เปลี่ยนแค่สัญลักษณ์ที่ขา CLK)
 
@@ -15866,7 +15866,7 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1918" height="547" viewBox="0 0 1918 547" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -16186,9 +16186,9 @@ $T_{A} = \sum m(2,4)$
 </div>
 
 - ลูปสีส้ม (สถานะ $010$) : $Q_A=0,\ Q_B=1,\ Q_C=0 \Rightarrow \overline{Q_{A}}Q_{B}\overline{Q_{C}}$
-- ลูปสีน้ำเงิน (สถานะ $100$) : $Q_A=1,\ Q_B=0,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $100$) : $Q_A=1,\ Q_B=0,\ Q_C=0 \Rightarrow Q_{A}\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$T_{A} = \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}}$
+$T_{A} = \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\,\overline{Q_{C}}$
 
 $T_{B} = \sum m(1,7)$
 
@@ -16224,10 +16224,10 @@ $T_{B} = \sum m(1,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}Q_{C}$
+- ลูปสีส้ม (สถานะ $001$) : $Q_A=0,\ Q_B=0,\ Q_C=1 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}Q_{C}$
 - ลูปสีน้ำเงิน (สถานะ $111$) : $Q_A=1,\ Q_B=1,\ Q_C=1 \Rightarrow Q_{A}Q_{B}Q_{C}$
 
-$T_{B} = \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C}$
+$T_{B} = \overline{Q_{A}}\,\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C}$
 
 $T_{C} = \sum m(0,3,5,6)$
 
@@ -16267,12 +16267,12 @@ $T_{C} = \sum m(0,3,5,6)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $011$) : $Q_A=0,\ Q_B=1,\ Q_C=1 \Rightarrow \overline{Q_{A}}Q_{B}Q_{C}$
 - ลูปสีเขียว (สถานะ $101$) : $Q_A=1,\ Q_B=0,\ Q_C=1 \Rightarrow Q_{A}\overline{Q_{B}}Q_{C}$
 - ลูปสีม่วง (สถานะ $110$) : $Q_A=1,\ Q_B=1,\ Q_C=0 \Rightarrow Q_{A}Q_{B}\overline{Q_{C}}$
 
-$T_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}$
+$T_{C} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}$
 
 **เลือกขอบของ CLK ตอนวาดวงจร** (ขอบไม่เปลี่ยนสมการ เปลี่ยนแค่สัญลักษณ์ที่ขา CLK)
 
@@ -16285,7 +16285,7 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\,\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}\,\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C} \\ T_{C} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="2222" height="784" viewBox="0 0 2222 784" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -17312,10 +17312,10 @@ $S_{C} = \sum m(0,6) + d(2,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $010 \to 001$ ; $101 \to 110$ ; $111 \to 010 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -17330,7 +17330,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{C} \\ R_{B} &= \overline{Q_{A}} \\ S_{B} &= Q_{A} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{C} \\ R_{B} &= \overline{Q_{A}} \\ S_{B} &= Q_{A} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1524" height="580" viewBox="0 0 1524 580" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -17682,10 +17682,10 @@ $D_{C} = \sum m(0,6) + d(2,5,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $010,110$) : $Q_B=1,\ Q_C=0 \Rightarrow Q_{B}\overline{Q_{C}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $010 \to 001$ ; $101 \to 110$ ; $111 \to 010 \to 001$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -17700,7 +17700,7 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1616" height="547" viewBox="0 0 1616 547" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -18674,9 +18674,9 @@ $S_{B} = \sum m(0) + d(3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 
-$S_{B} = \overline{Q_{A}}\overline{Q_{B}}$
+$S_{B} = \overline{Q_{A}}\,\overline{Q_{B}}$
 
 ตรวจสถานะที่ไม่ใช้ : $11 \to 10$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -18691,7 +18691,7 @@ $S_{B} = \overline{Q_{A}}\overline{Q_{B}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{A}}\,\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="852" height="425" viewBox="0 0 852 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -18903,9 +18903,9 @@ $D_{B} = \sum m(0) + d(3)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}$
+- ลูปสีส้ม (สถานะ $00$) : $Q_A=0,\ Q_B=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}$
 
-$D_{B} = \overline{Q_{A}}\overline{Q_{B}}$
+$D_{B} = \overline{Q_{A}}\,\overline{Q_{B}}$
 
 ตรวจสถานะที่ไม่ใช้ : $11 \to 10$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -18920,7 +18920,7 @@ $D_{B} = \overline{Q_{A}}\overline{Q_{B}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= \overline{Q_{A}}\,\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="792" height="425" viewBox="0 0 792 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -20037,9 +20037,9 @@ $S_{C} = \sum m(0,2) + d(5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{C}}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $101 \to 010$ ; $110 \to 110$ (วนอยู่นอกลำดับ) ; $111 \to 100$ $\Rightarrow$ ต้องรีเซ็ตที่ $000$
 
@@ -20054,7 +20054,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1468" height="502" viewBox="0 0 1468 502" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -20400,9 +20400,9 @@ $D_{C} = \sum m(0,2) + d(5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{C}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $101 \to 010$ ; $110 \to 010$ ; $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -20417,7 +20417,7 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1364" height="451" viewBox="0 0 1364 451" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -21758,10 +21758,10 @@ $S_{C} = \sum m(0,2,4) + d(7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
-- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
+$S_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + \overline{Q_{B}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -21776,7 +21776,7 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B}\overline{Q_{C}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B}\overline{Q_{C}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\,\overline{Q_{C}} + \overline{Q_{B}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1854" height="660" viewBox="0 0 1854 660" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -22180,10 +22180,10 @@ $D_{C} = \sum m(0,2,4) + d(7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
-- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + \overline{Q_{B}}\,\overline{Q_{C}}$
 
 ตรวจสถานะที่ไม่ใช้ : $111 \to 100$ $\Rightarrow$ กลับเข้าลำดับได้ทุกสถานะ
 
@@ -22198,7 +22198,7 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + \overline{Q_{A}}Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + \overline{Q_{A}}Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\,\overline{Q_{C}} + \overline{Q_{B}}\,\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1940" height="558" viewBox="0 0 1940 558" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -22919,9 +22919,9 @@ $J_{A} = \sum m(0) + d(4,5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$J_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$J_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $K_{A} = \sum m(4) + d(0,1,2,3,6,7)$
 
@@ -23116,7 +23116,7 @@ $K_{C} = 1$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{C}} \\ J_{B} &= Q_{A}\overline{Q_{C}} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ K_{A} &= \overline{Q_{C}} \\ J_{B} &= Q_{A}\overline{Q_{C}} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1332" height="425" viewBox="0 0 1332 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -23445,9 +23445,9 @@ $S_{A} = \sum m(0) + d(5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+$S_{A} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
 $R_{B} = \sum m(2) + d(0,1,5,6,7)$
 
@@ -23481,9 +23481,9 @@ $R_{B} = \sum m(2) + d(0,1,5,6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 
-$R_{B} = \overline{Q_{A}}\overline{Q_{C}}$
+$R_{B} = \overline{Q_{A}}\,\overline{Q_{C}}$
 
 $S_{B} = \sum m(4) + d(3,6,7)$
 
@@ -23606,7 +23606,7 @@ $S_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= \overline{Q_{A}}\overline{Q_{C}} \\ S_{B} &= Q_{A}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} \\ R_{B} &= \overline{Q_{A}}\,\overline{Q_{C}} \\ S_{B} &= Q_{A}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1368" height="524" viewBox="0 0 1368 524" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -23889,10 +23889,10 @@ $D_{A} = \sum m(0,5) + d(6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $101,111$) : $Q_A=1,\ Q_C=1 \Rightarrow Q_{A}Q_{C}$
 
-$D_{A} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C}$
+$D_{A} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + Q_{A}Q_{C}$
 
 $D_{B} = \sum m(3,4) + d(6,7)$
 
@@ -23982,7 +23982,7 @@ $D_{C} = \overline{Q_{C}}$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1638" height="569" viewBox="0 0 1638 569" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
@@ -24268,9 +24268,9 @@ $T_{A} = \sum m(0,4) + d(6,7)$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$T_{A} = \overline{Q_{B}}\overline{Q_{C}}$
+$T_{A} = \overline{Q_{B}}\,\overline{Q_{C}}$
 
 $T_{B} = \sum m(2,4) + d(6,7)$
 
@@ -24360,7 +24360,7 @@ $T_{C} = 1$
 
 **ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
 
-$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
+$\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\,\overline{Q_{C}} \\ T_{B} &= Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
 <svg xmlns="http://www.w3.org/2000/svg" width="1446" height="495" viewBox="0 0 1446 495" font-family="Times New Roman, serif" font-size="18" fill="currentColor">

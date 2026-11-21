@@ -219,7 +219,7 @@ m_7=111 &\Rightarrow ABC
 \end{aligned}
 $$
 
-$\mathbf{Ans}\quad F=\overline{A}\overline{B}\overline{C} + \overline{A}B\overline{C} + \overline{A}BC + ABC$
+$\mathbf{Ans}\quad F=\overline{A}\,\overline{B}\,\overline{C} + \overline{A}B\overline{C} + \overline{A}BC + ABC$
 
 ---
 
@@ -311,13 +311,13 @@ $\mathbf{Sol}^{n}$
 </svg>
 </div>
 
-- ลูปสีส้ม (ช่อง $0,2,4,6$) : $\overline{A}\overline{D}$
+- ลูปสีส้ม (ช่อง $0,2,4,6$) : $\overline{A}\,\overline{D}$
 
 - ลูปสีน้ำเงิน (ช่อง $4,5,12,13$) : $B\overline{C}$
 
 ช่อง $X$ ที่ไม่ได้อยู่ในลูปไม่ต้องครอบ
 
-$\mathbf{Ans}\quad f=\overline{A}\overline{D} + B\overline{C}$
+$\mathbf{Ans}\quad f=\overline{A}\,\overline{D} + B\overline{C}$
 
 ---
 

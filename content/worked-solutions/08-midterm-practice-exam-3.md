@@ -443,11 +443,11 @@ $\mathbf{Sol}^{n}$
 
 - ลูปสีส้ม (ช่อง $8,9,10,11,12,13,14,15$) : $A$
 - ลูปสีน้ำเงิน (ช่อง $3,11$) : $\overline{B}CD$
-- ลูปสีเขียว (ช่อง $0,4,8,12$) : $\overline{C}\overline{D}$
+- ลูปสีเขียว (ช่อง $0,4,8,12$) : $\overline{C}\,\overline{D}$
 
 ช่อง $X$ ที่ไม่ได้อยู่ในลูปไม่ต้องครอบ
 
-$\mathbf{Ans}\quad f=A + \overline{B}CD + \overline{C}\overline{D}$
+$\mathbf{Ans}\quad f=A + \overline{B}CD + \overline{C}\,\overline{D}$
 
 ---
 

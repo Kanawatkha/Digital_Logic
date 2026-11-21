@@ -1279,9 +1279,9 @@ $R_{B} = Q_{B}$
 </div>
 
 - ลูปสีส้ม (สถานะ $100,101,110,111$) : $Q_A=1 \Rightarrow Q_{A}$
-- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีน้ำเงิน (สถานะ $000,100$) : $Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{B}}\,\overline{Q_{C}}$
 
-$S_{B} = Q_{A} + \overline{Q_{B}}\overline{Q_{C}}$
+$S_{B} = Q_{A} + \overline{Q_{B}}\,\overline{Q_{C}}$
 
 ลดรูป $R_{C}$
 
@@ -1619,9 +1619,9 @@ $D_{B} = Q_{A}\overline{Q_{B}} + Q_{C}$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000$) : $Q_A=0,\ Q_B=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
-$D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
+$D_{C} = \overline{Q_{A}}\,\overline{Q_{B}}\,\overline{Q_{C}}$
 
 $D_A = \overline{Q_A}Q_B + Q_A\overline{Q_B} = Q_A \oplus Q_B$ (เอกซ์คลูซีฟออร์)
 
@@ -1885,10 +1885,10 @@ $T_{B} = \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}}$
 </svg>
 </div>
 
-- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\overline{Q_{C}}$
+- ลูปสีส้ม (สถานะ $000,010$) : $Q_A=0,\ Q_C=0 \Rightarrow \overline{Q_{A}}\,\overline{Q_{C}}$
 - ลูปสีน้ำเงิน (สถานะ $101,111$) : $Q_A=1,\ Q_C=1 \Rightarrow Q_{A}Q_{C}$
 
-$T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
+$T_{C} = \overline{Q_{A}}\,\overline{Q_{C}} + Q_{A}Q_{C}$
 
 **ขั้นที่ 4** นำสมการมาสร้างวงจร
 
