@@ -525,6 +525,34 @@ Excess-3 คือเลขฐานสิบ $+3$ เขียนเป็น�
 </svg>
 </div>
 
+### 6.5 คำตอบจาก K-map ของ BCD-8421 ทั้ง 4 วิธี
+
+สมการของ segment $a$ ถึง $g$ หลังทำ K-map และลูปแล้ว (รหัสที่ไม่ใช้เป็น $d$) AND/OR และ NAND ใช้ Minterm (ลูปของ $1$) OR/AND และ NOR ใช้ Maxterm (ลูปของ $0$) อินพุต $A$ เป็น MSB
+
+| Segment | AND/OR (SOP) | NAND อย่างเดียว | OR/AND (POS) | NOR อย่างเดียว |
+|:-:|:--|:--|:--|:--|
+| $a$ | $A+C+BD+\overline{B}\,\overline{D}$ | $\overline{\overline{A}\cdot \overline{C}\cdot \overline{BD}\cdot \overline{\overline{B}\,\overline{D}}}$ | $(A+B+C+\overline{D})(\overline{B}+C+D)$ | $\overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}}$ |
+| $b$ | $\overline{B}+\overline{C}\,\overline{D}+CD$ | $\overline{B\cdot \overline{\overline{C}\,\overline{D}}\cdot \overline{CD}}$ | $(\overline{B}+C+\overline{D})(\overline{B}+\overline{C}+D)$ | $\overline{\overline{\overline{B}+C+\overline{D}}+\overline{\overline{B}+\overline{C}+D}}$ |
+| $c$ | $B+\overline{C}+D$ | $\overline{\overline{B}\cdot C\cdot \overline{D}}$ | $(B+\overline{C}+D)$ | $\overline{\overline{B+\overline{C}+D}}$ |
+| $d$ | $A+\overline{B}\,\overline{D}+\overline{B}C+C\overline{D}+B\overline{C}D$ | $\overline{\overline{A}\cdot \overline{\overline{B}\,\overline{D}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}\cdot \overline{B\overline{C}D}}$ | $(A+B+C+\overline{D})(\overline{B}+C+D)(\overline{B}+\overline{C}+\overline{D})$ | $\overline{\overline{A+B+C+\overline{D}}+\overline{\overline{B}+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}}$ |
+| $e$ | $\overline{B}\,\overline{D}+C\overline{D}$ | $\overline{\overline{\overline{B}\,\overline{D}}\cdot \overline{C\overline{D}}}$ | $(\overline{D})(\overline{B}+C)$ | $\overline{D+\overline{\overline{B}+C}}$ |
+| $f$ | $A+B\overline{C}+B\overline{D}+\overline{C}\,\overline{D}$ | $\overline{\overline{A}\cdot \overline{B\overline{C}}\cdot \overline{B\overline{D}}\cdot \overline{\overline{C}\,\overline{D}}}$ | $(A+B+\overline{D})(B+\overline{C})(\overline{C}+\overline{D})$ | $\overline{\overline{A+B+\overline{D}}+\overline{B+\overline{C}}+\overline{\overline{C}+\overline{D}}}$ |
+| $g$ | $B\overline{C}+A\overline{C}+\overline{B}C+C\overline{D}$ | $\overline{\overline{B\overline{C}}\cdot \overline{A\overline{C}}\cdot \overline{\overline{B}C}\cdot \overline{C\overline{D}}}$ | $(A+B+C)(\overline{B}+\overline{C}+\overline{D})$ | $\overline{\overline{A+B+C}+\overline{\overline{B}+\overline{C}+\overline{D}}}$ |
+
+### 6.6 คำตอบจาก K-map ของ Excess-3 ทั้ง 4 วิธี
+
+สมการของ segment $a$ ถึง $g$ หลังทำ K-map และลูปแล้ว (รหัสที่ไม่ใช้เป็น $d$) AND/OR และ NAND ใช้ Minterm (ลูปของ $1$) OR/AND และ NOR ใช้ Maxterm (ลูปของ $0$) อินพุต $A$ เป็น MSB
+
+| Segment | AND/OR (SOP) | NAND อย่างเดียว | OR/AND (POS) | NOR อย่างเดียว |
+|:-:|:--|:--|:--|:--|
+| $a$ | $\overline{B}+\overline{C}D+C\overline{D}+A$ | $\overline{B\cdot \overline{\overline{C}D}\cdot \overline{C\overline{D}}\cdot \overline{A}}$ | $(A+C+D)(\overline{B}+\overline{C}+\overline{D})$ | $\overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}}$ |
+| $b$ | $C+B$ | $\overline{\overline{C}\cdot \overline{B}}$ | $(B+C)$ | $\overline{\overline{B+C}}$ |
+| $c$ | $\overline{B}+\overline{D}+C$ | $\overline{B\cdot D\cdot \overline{C}}$ | $(\overline{B}+C+\overline{D})$ | $\overline{\overline{\overline{B}+C+\overline{D}}}$ |
+| $d$ | $\overline{B}D+\overline{C}D+\overline{A}C\overline{D}+A\overline{C}$ | $\overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}\cdot \overline{\overline{A}C\overline{D}}\cdot \overline{A\overline{C}}}$ | $(A+C+D)(\overline{B}+\overline{C}+\overline{D})(\overline{A}+\overline{C}+D)$ | $\overline{\overline{A+C+D}+\overline{\overline{B}+\overline{C}+\overline{D}}+\overline{\overline{A}+\overline{C}+D}}$ |
+| $e$ | $\overline{B}D+\overline{C}D$ | $\overline{\overline{\overline{B}D}\cdot \overline{\overline{C}D}}$ | $(D)(\overline{B}+\overline{C})$ | $\overline{\overline{D}+\overline{\overline{B}+\overline{C}}}$ |
+| $f$ | $CD+A\overline{C}$ | $\overline{\overline{CD}\cdot \overline{A\overline{C}}}$ | $(A+C)(\overline{C}+D)$ | $\overline{\overline{A+C}+\overline{\overline{C}+D}}$ |
+| $g$ | $\overline{C}D+BC+A\overline{C}+AD$ | $\overline{\overline{\overline{C}D}\cdot \overline{BC}\cdot \overline{A\overline{C}}\cdot \overline{AD}}$ | $(A+B)(A+C+D)(\overline{A}+\overline{C}+D)$ | $\overline{\overline{A+B}+\overline{A+C+D}+\overline{\overline{A}+\overline{C}+D}}$ |
+
 ## บทที่ 7 ฟลิป-ฟลอป (Flip-Flop)
 
 ### 7.1 สถานะของฟลิป-ฟลอป
