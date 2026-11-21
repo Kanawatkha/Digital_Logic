@@ -718,6 +718,46 @@ $\mathbf{Ans}\quad Q(t+1) = \overline{R} + S\,Q(t)$
 </svg>
 </div>
 
+**สัญลักษณ์ของ Clock RS ฟลิป-ฟลอป** ขา CLK มีเครื่องหมาย $>$ ถ้ามีวงกลมที่ขา CLK แสดงว่าทำงานที่ขอบขาลง ถ้าไม่มีวงกลมทำงานที่ขอบขาขึ้น
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none">
+<rect x="52" y="14" width="80" height="150" rx="2"/>
+<line x1="16" y1="52" x2="52" y2="52"/>
+<line x1="16" y1="126" x2="52" y2="126"/>
+<polyline points="52,80 64,89 52,98"/>
+<line x1="16" y1="89" x2="52" y2="89"/>
+<line x1="132" y1="52" x2="168" y2="52"/>
+<line x1="132" y1="126" x2="168" y2="126"/>
+<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
+<rect x="332" y="14" width="80" height="150" rx="2"/>
+<line x1="296" y1="52" x2="332" y2="52"/>
+<line x1="296" y1="126" x2="332" y2="126"/>
+<polyline points="332,80 344,89 332,98"/>
+<circle cx="328" cy="89" r="4"/>
+<line x1="296" y1="89" x2="324" y2="89"/>
+<line x1="412" y1="52" x2="448" y2="52"/>
+<line x1="412" y1="126" x2="448" y2="126"/>
+<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+</g>
+<text x="92" y="98" text-anchor="middle" font-size="26">RS</text>
+<text x="60" y="58" text-anchor="start" font-size="14">S</text>
+<text x="60" y="132" text-anchor="start" font-size="14">R</text>
+<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="98" text-anchor="middle" font-size="26">RS</text>
+<text x="340" y="58" text-anchor="start" font-size="14">S</text>
+<text x="340" y="132" text-anchor="start" font-size="14">R</text>
+<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+</g>
+</svg>
+</div>
+
 ### ตัวอย่างที่ 7  Clock RS ฟลิป-ฟลอปเริ่มต้นที่ $Q=0$ ป้อน $(CP, S, R)$ ตามลำดับ $(-,1,0), (\uparrow,0,0), (\uparrow,1,0), (-,0,1), (\uparrow,0,1), (\uparrow,0,0)$ จงหา $Q$ หลังป้อนแต่ละครั้ง
 
 $\mathbf{Sol}^{n}$
@@ -886,6 +926,46 @@ JK ฟลิป-ฟลอปเป็นฟลิป-ฟลอปที่นิ
 **สมการแสดงลักษณะ**
 
 $$Q(t+1) = J\,\overline{Q}(t) + \overline{K}\,Q(t)$$
+
+**สัญลักษณ์ของ JK ฟลิป-ฟลอป**
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none">
+<rect x="52" y="14" width="80" height="150" rx="2"/>
+<line x1="16" y1="52" x2="52" y2="52"/>
+<line x1="16" y1="126" x2="52" y2="126"/>
+<polyline points="52,80 64,89 52,98"/>
+<line x1="16" y1="89" x2="52" y2="89"/>
+<line x1="132" y1="52" x2="168" y2="52"/>
+<line x1="132" y1="126" x2="168" y2="126"/>
+<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
+<rect x="332" y="14" width="80" height="150" rx="2"/>
+<line x1="296" y1="52" x2="332" y2="52"/>
+<line x1="296" y1="126" x2="332" y2="126"/>
+<polyline points="332,80 344,89 332,98"/>
+<circle cx="328" cy="89" r="4"/>
+<line x1="296" y1="89" x2="324" y2="89"/>
+<line x1="412" y1="52" x2="448" y2="52"/>
+<line x1="412" y1="126" x2="448" y2="126"/>
+<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+</g>
+<text x="92" y="98" text-anchor="middle" font-size="26">JK</text>
+<text x="60" y="58" text-anchor="start" font-size="14">J</text>
+<text x="60" y="132" text-anchor="start" font-size="14">K</text>
+<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="98" text-anchor="middle" font-size="26">JK</text>
+<text x="340" y="58" text-anchor="start" font-size="14">J</text>
+<text x="340" y="132" text-anchor="start" font-size="14">K</text>
+<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+</g>
+</svg>
+</div>
 
 ### ตัวอย่างที่ 8  จงหาสมการแสดงลักษณะ $Q(t+1)$ ของ JK ฟลิป-ฟลอปจากตารางความจริง
 
@@ -1432,6 +1512,42 @@ D ฟลิป-ฟลอปเป็นวงจรฟลิป-ฟลอปท�
 
 $$Q(t+1) = D$$
 
+**สัญลักษณ์ของ D ฟลิป-ฟลอป**
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none">
+<rect x="52" y="14" width="80" height="150" rx="2"/>
+<line x1="16" y1="52" x2="52" y2="52"/>
+<polyline points="52,110 64,119 52,128"/>
+<line x1="16" y1="119" x2="52" y2="119"/>
+<line x1="132" y1="52" x2="168" y2="52"/>
+<line x1="132" y1="126" x2="168" y2="126"/>
+<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
+<rect x="332" y="14" width="80" height="150" rx="2"/>
+<line x1="296" y1="52" x2="332" y2="52"/>
+<polyline points="332,110 344,119 332,128"/>
+<circle cx="328" cy="119" r="4"/>
+<line x1="296" y1="119" x2="324" y2="119"/>
+<line x1="412" y1="52" x2="448" y2="52"/>
+<line x1="412" y1="126" x2="448" y2="126"/>
+<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+</g>
+<text x="92" y="98" text-anchor="middle" font-size="26">D</text>
+<text x="60" y="58" text-anchor="start" font-size="14">D</text>
+<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="98" text-anchor="middle" font-size="26">D</text>
+<text x="340" y="58" text-anchor="start" font-size="14">D</text>
+<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+</g>
+</svg>
+</div>
+
 ### ตัวอย่างที่ 11  จงหาสมการแสดงลักษณะ $Q(t+1)$ ของ D ฟลิป-ฟลอปจากตารางความจริง
 
 $\mathbf{Sol}^{n}$
@@ -1611,6 +1727,42 @@ T ฟลิป-ฟลอปเป็นวงจรฟลิป-ฟลอปท�
 **สมการแสดงลักษณะ**
 
 $$Q(t+1) = \overline{T}\,Q(t) + T\,\overline{Q}(t)$$
+
+**สัญลักษณ์ของ T ฟลิป-ฟลอป**
+
+<div align="center">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<g transform="translate(0,0)">
+<g stroke="currentColor" stroke-width="1.8" fill="none">
+<rect x="52" y="14" width="80" height="150" rx="2"/>
+<line x1="16" y1="52" x2="52" y2="52"/>
+<polyline points="52,110 64,119 52,128"/>
+<line x1="16" y1="119" x2="52" y2="119"/>
+<line x1="132" y1="52" x2="168" y2="52"/>
+<line x1="132" y1="126" x2="168" y2="126"/>
+<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
+<rect x="332" y="14" width="80" height="150" rx="2"/>
+<line x1="296" y1="52" x2="332" y2="52"/>
+<polyline points="332,110 344,119 332,128"/>
+<circle cx="328" cy="119" r="4"/>
+<line x1="296" y1="119" x2="324" y2="119"/>
+<line x1="412" y1="52" x2="448" y2="52"/>
+<line x1="412" y1="126" x2="448" y2="126"/>
+<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+</g>
+<text x="92" y="98" text-anchor="middle" font-size="26">T</text>
+<text x="60" y="58" text-anchor="start" font-size="14">T</text>
+<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="98" text-anchor="middle" font-size="26">T</text>
+<text x="340" y="58" text-anchor="start" font-size="14">T</text>
+<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+</g>
+</svg>
+</div>
 
 ### ตัวอย่างที่ 13  จงหาสมการแสดงลักษณะ $Q(t+1)$ ของ T ฟลิป-ฟลอปจากตารางความจริง
 
