@@ -232,59 +232,77 @@ $K_{B} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="722" height="306" viewBox="0 0 722 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="722" height="370" viewBox="0 0 722 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="86" width="80" height="150" rx="2"/>
-<polyline points="174,152 186,161 174,170"/>
-<circle cx="170" cy="161" r="4"/>
-<line x1="166" y1="161" x2="152" y2="161"/>
-<line x1="152" y1="161" x2="152" y2="282"/>
-<line x1="128" y1="161" x2="128" y2="124"/>
-<line x1="128" y1="124" x2="174" y2="124"/>
-<line x1="128" y1="161" x2="128" y2="198"/>
-<path d="M128,198 L147.5,198 A4.5,4.5 0 0 1 156.5,198 L174,198"/>
-<line x1="254" y1="124" x2="298" y2="124"/>
-<line x1="254" y1="198" x2="298" y2="198"/>
-<line x1="237.2" y1="190.4" x2="246" y2="190.4" stroke-width="1.4"/>
-<rect x="526" y="86" width="80" height="150" rx="2"/>
-<polyline points="526,152 538,161 526,170"/>
-<circle cx="522" cy="161" r="4"/>
-<line x1="518" y1="161" x2="504" y2="161"/>
-<line x1="504" y1="161" x2="504" y2="282"/>
-<line x1="474" y1="124" x2="526" y2="124"/>
-<path d="M474,198 L499.5,198 A4.5,4.5 0 0 1 508.5,198 L526,198"/>
-<line x1="606" y1="124" x2="650" y2="124"/>
-<line x1="606" y1="198" x2="650" y2="198"/>
-<line x1="589.2" y1="190.4" x2="598" y2="190.4" stroke-width="1.4"/>
-<line x1="84" y1="46" x2="84" y2="161"/>
-<line x1="84" y1="161" x2="128" y2="161"/>
+<rect x="174" y="118" width="80" height="150" rx="2"/>
+<circle cx="214" cy="114" r="4"/>
+<line x1="214" y1="110" x2="214" y2="94"/>
+<circle cx="214" cy="272" r="4"/>
+<line x1="214" y1="276" x2="214" y2="292"/>
+<polyline points="174,184 186,193 174,202"/>
+<circle cx="170" cy="193" r="4"/>
+<line x1="166" y1="193" x2="152" y2="193"/>
+<line x1="152" y1="193" x2="152" y2="346"/>
+<line x1="128" y1="193" x2="128" y2="156"/>
+<line x1="128" y1="156" x2="174" y2="156"/>
+<line x1="128" y1="193" x2="128" y2="230"/>
+<path d="M128,230 L147.5,230 A4.5,4.5 0 0 1 156.5,230 L174,230"/>
+<line x1="254" y1="156" x2="298" y2="156"/>
+<line x1="254" y1="230" x2="298" y2="230"/>
+<line x1="237.2" y1="222.4" x2="246" y2="222.4" stroke-width="1.4"/>
+<rect x="526" y="118" width="80" height="150" rx="2"/>
+<circle cx="566" cy="114" r="4"/>
+<line x1="566" y1="110" x2="566" y2="94"/>
+<circle cx="566" cy="272" r="4"/>
+<line x1="566" y1="276" x2="566" y2="292"/>
+<polyline points="526,184 538,193 526,202"/>
+<circle cx="522" cy="193" r="4"/>
+<line x1="518" y1="193" x2="504" y2="193"/>
+<line x1="504" y1="193" x2="504" y2="346"/>
+<line x1="474" y1="156" x2="526" y2="156"/>
+<path d="M474,230 L499.5,230 A4.5,4.5 0 0 1 508.5,230 L526,230"/>
+<line x1="606" y1="156" x2="650" y2="156"/>
+<line x1="606" y1="230" x2="650" y2="230"/>
+<line x1="589.2" y1="222.4" x2="598" y2="222.4" stroke-width="1.4"/>
+<line x1="84" y1="46" x2="84" y2="193"/>
+<line x1="84" y1="193" x2="128" y2="193"/>
 <path d="M84,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L650,46"/>
-<line x1="298" y1="30" x2="298" y2="124"/>
-<line x1="650" y1="30" x2="650" y2="124"/>
-<line x1="112" y1="282" x2="504" y2="282"/>
-<circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="298" y1="30" x2="298" y2="156"/>
+<line x1="650" y1="30" x2="650" y2="156"/>
+<line x1="112" y1="346" x2="504" y2="346"/>
+<circle cx="152" cy="346" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="193" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="130" text-anchor="start" font-size="14">J</text>
-<text x="182" y="204" text-anchor="start" font-size="14">K</text>
-<text x="246" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="566" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="534" y="130" text-anchor="start" font-size="14">J</text>
-<text x="534" y="204" text-anchor="start" font-size="14">K</text>
-<text x="470" y="130" text-anchor="end" font-size="16">1</text>
-<text x="470" y="204" text-anchor="end" font-size="16">1</text>
-<text x="598" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="598" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="162" text-anchor="start" font-size="14">J</text>
+<text x="182" y="236" text-anchor="start" font-size="14">K</text>
+<text x="246" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="566" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="566" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="566" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="534" y="162" text-anchor="start" font-size="14">J</text>
+<text x="534" y="236" text-anchor="start" font-size="14">K</text>
+<text x="470" y="162" text-anchor="end" font-size="16">1</text>
+<text x="470" y="236" text-anchor="end" font-size="16">1</text>
+<text x="598" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="598" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="650" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="108" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -512,72 +530,90 @@ $S_{B} = \overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="858" height="412" viewBox="0 0 858 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="858" height="476" viewBox="0 0 858 476" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="115" width="80" height="172" rx="2"/>
-<polyline points="308,192 320,201 308,210"/>
-<circle cx="304" cy="201" r="4"/>
-<line x1="300" y1="201" x2="286" y2="201"/>
-<line x1="286" y1="201" x2="286" y2="388"/>
-<path d="M212,120 H238 A26,33 0 0 1 238,186 H212 Z"/>
-<line x1="264" y1="153" x2="308" y2="153"/>
-<path d="M212,216 H238 A26,33 0 0 1 238,282 H212 Z"/>
-<path d="M264,249 L281.5,249 A4.5,4.5 0 0 1 290.5,249 L308,249"/>
-<line x1="388" y1="153" x2="432" y2="153"/>
-<line x1="388" y1="249" x2="432" y2="249"/>
-<line x1="371.2" y1="241.4" x2="380" y2="241.4" stroke-width="1.4"/>
-<rect x="662" y="115" width="80" height="172" rx="2"/>
-<polyline points="662,192 674,201 662,210"/>
-<circle cx="658" cy="201" r="4"/>
-<line x1="654" y1="201" x2="640" y2="201"/>
-<line x1="640" y1="201" x2="640" y2="388"/>
-<line x1="742" y1="153" x2="786" y2="153"/>
-<line x1="742" y1="249" x2="786" y2="249"/>
-<line x1="725.2" y1="241.4" x2="734" y2="241.4" stroke-width="1.4"/>
-<line x1="168" y1="46" x2="168" y2="164"/>
-<line x1="168" y1="164" x2="212" y2="164"/>
-<line x1="146" y1="72" x2="146" y2="238"/>
-<line x1="146" y1="238" x2="212" y2="238"/>
-<line x1="124" y1="46" x2="124" y2="260"/>
-<line x1="124" y1="260" x2="212" y2="260"/>
-<line x1="102" y1="312" x2="102" y2="142"/>
-<path d="M102,142 L119.5,142 A4.5,4.5 0 0 1 128.5,142 L141.5,142 A4.5,4.5 0 0 1 150.5,142 L163.5,142 A4.5,4.5 0 0 1 172.5,142 L212,142"/>
-<line x1="618" y1="46" x2="618" y2="249"/>
-<path d="M618,249 L635.5,249 A4.5,4.5 0 0 1 644.5,249 L662,249"/>
-<line x1="596" y1="338" x2="596" y2="153"/>
-<path d="M596,153 L613.5,153 A4.5,4.5 0 0 1 622.5,153 L662,153"/>
+<rect x="308" y="147" width="80" height="172" rx="2"/>
+<circle cx="348" cy="143" r="4"/>
+<line x1="348" y1="139" x2="348" y2="123"/>
+<circle cx="348" cy="323" r="4"/>
+<line x1="348" y1="327" x2="348" y2="343"/>
+<polyline points="308,224 320,233 308,242"/>
+<circle cx="304" cy="233" r="4"/>
+<line x1="300" y1="233" x2="286" y2="233"/>
+<line x1="286" y1="233" x2="286" y2="452"/>
+<path d="M212,152 H238 A26,33 0 0 1 238,218 H212 Z"/>
+<line x1="264" y1="185" x2="308" y2="185"/>
+<path d="M212,248 H238 A26,33 0 0 1 238,314 H212 Z"/>
+<path d="M264,281 L281.5,281 A4.5,4.5 0 0 1 290.5,281 L308,281"/>
+<line x1="388" y1="185" x2="432" y2="185"/>
+<line x1="388" y1="281" x2="432" y2="281"/>
+<line x1="371.2" y1="273.4" x2="380" y2="273.4" stroke-width="1.4"/>
+<rect x="662" y="147" width="80" height="172" rx="2"/>
+<circle cx="702" cy="143" r="4"/>
+<line x1="702" y1="139" x2="702" y2="123"/>
+<circle cx="702" cy="323" r="4"/>
+<line x1="702" y1="327" x2="702" y2="343"/>
+<polyline points="662,224 674,233 662,242"/>
+<circle cx="658" cy="233" r="4"/>
+<line x1="654" y1="233" x2="640" y2="233"/>
+<line x1="640" y1="233" x2="640" y2="452"/>
+<line x1="742" y1="185" x2="786" y2="185"/>
+<line x1="742" y1="281" x2="786" y2="281"/>
+<line x1="725.2" y1="273.4" x2="734" y2="273.4" stroke-width="1.4"/>
+<line x1="168" y1="46" x2="168" y2="196"/>
+<line x1="168" y1="196" x2="212" y2="196"/>
+<line x1="146" y1="72" x2="146" y2="270"/>
+<line x1="146" y1="270" x2="212" y2="270"/>
+<line x1="124" y1="46" x2="124" y2="292"/>
+<line x1="124" y1="292" x2="212" y2="292"/>
+<line x1="102" y1="376" x2="102" y2="174"/>
+<path d="M102,174 L119.5,174 A4.5,4.5 0 0 1 128.5,174 L141.5,174 A4.5,4.5 0 0 1 150.5,174 L163.5,174 A4.5,4.5 0 0 1 172.5,174 L212,174"/>
+<line x1="618" y1="46" x2="618" y2="281"/>
+<path d="M618,281 L635.5,281 A4.5,4.5 0 0 1 644.5,281 L662,281"/>
+<line x1="596" y1="402" x2="596" y2="185"/>
+<path d="M596,185 L613.5,185 A4.5,4.5 0 0 1 622.5,185 L662,185"/>
 <path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L786,46"/>
 <path d="M146,72 L163.5,72 A4.5,4.5 0 0 1 172.5,72 L432,72"/>
-<path d="M596,338 L635.5,338 A4.5,4.5 0 0 1 644.5,338 L786,338"/>
-<path d="M102,312 L281.5,312 A4.5,4.5 0 0 1 290.5,312 L432,312"/>
-<line x1="432" y1="30" x2="432" y2="153"/>
-<line x1="432" y1="249" x2="432" y2="312"/>
-<line x1="786" y1="30" x2="786" y2="153"/>
-<line x1="786" y1="249" x2="786" y2="338"/>
-<line x1="246" y1="388" x2="640" y2="388"/>
-<circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M596,402 L635.5,402 A4.5,4.5 0 0 1 644.5,402 L786,402"/>
+<path d="M102,376 L281.5,376 A4.5,4.5 0 0 1 290.5,376 L432,376"/>
+<line x1="432" y1="30" x2="432" y2="185"/>
+<line x1="432" y1="281" x2="432" y2="376"/>
+<line x1="786" y1="30" x2="786" y2="185"/>
+<line x1="786" y1="281" x2="786" y2="402"/>
+<line x1="246" y1="452" x2="640" y2="452"/>
+<circle cx="286" cy="452" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="209" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="159" text-anchor="start" font-size="14">S</text>
-<text x="316" y="255" text-anchor="start" font-size="14">R</text>
-<text x="380" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="702" y="209" text-anchor="middle" font-size="26">B</text>
-<text x="670" y="159" text-anchor="start" font-size="14">S</text>
-<text x="670" y="255" text-anchor="start" font-size="14">R</text>
-<text x="734" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="734" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="241" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="191" text-anchor="start" font-size="14">S</text>
+<text x="316" y="287" text-anchor="start" font-size="14">R</text>
+<text x="380" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="241" text-anchor="middle" font-size="26">B</text>
+<text x="702" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="702" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="670" y="191" text-anchor="start" font-size="14">S</text>
+<text x="670" y="287" text-anchor="start" font-size="14">R</text>
+<text x="734" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="287" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="242" y="394" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="458" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -735,57 +771,75 @@ $D_{B} = \overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="808" height="361" viewBox="0 0 808 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="808" height="425" viewBox="0 0 808 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="115" width="80" height="150" rx="2"/>
-<polyline points="280,211 292,220 280,229"/>
-<line x1="280" y1="220" x2="258" y2="220"/>
-<line x1="258" y1="220" x2="258" y2="337"/>
-<path d="M176,120 C198,120 224,136.5 236,153 C224,169.5 198,186 176,186 Q190,153 176,120 Z"/>
-<path d="M168,120 Q182,153 168,186"/>
-<line x1="236" y1="153" x2="280" y2="153"/>
-<line x1="360" y1="153" x2="404" y2="153"/>
-<line x1="360" y1="227" x2="404" y2="227"/>
-<line x1="343.2" y1="219.4" x2="352" y2="219.4" stroke-width="1.4"/>
-<rect x="612" y="115" width="80" height="150" rx="2"/>
-<polyline points="612,211 624,220 612,229"/>
-<line x1="612" y1="220" x2="590" y2="220"/>
-<line x1="590" y1="220" x2="590" y2="337"/>
-<line x1="692" y1="153" x2="736" y2="153"/>
-<line x1="692" y1="227" x2="736" y2="227"/>
-<line x1="675.2" y1="219.4" x2="684" y2="219.4" stroke-width="1.4"/>
-<line x1="130.2" y1="72" x2="130.2" y2="142"/>
-<line x1="130.2" y1="142" x2="174.2" y2="142"/>
-<line x1="108.2" y1="46" x2="108.2" y2="164"/>
-<line x1="108.2" y1="164" x2="174.2" y2="164"/>
-<line x1="568" y1="287" x2="568" y2="153"/>
-<line x1="568" y1="153" x2="612" y2="153"/>
+<rect x="280" y="147" width="80" height="150" rx="2"/>
+<circle cx="320" cy="143" r="4"/>
+<line x1="320" y1="139" x2="320" y2="123"/>
+<circle cx="320" cy="301" r="4"/>
+<line x1="320" y1="305" x2="320" y2="321"/>
+<polyline points="280,243 292,252 280,261"/>
+<line x1="280" y1="252" x2="258" y2="252"/>
+<line x1="258" y1="252" x2="258" y2="401"/>
+<path d="M176,152 C198,152 224,168.5 236,185 C224,201.5 198,218 176,218 Q190,185 176,152 Z"/>
+<path d="M168,152 Q182,185 168,218"/>
+<line x1="236" y1="185" x2="280" y2="185"/>
+<line x1="360" y1="185" x2="404" y2="185"/>
+<line x1="360" y1="259" x2="404" y2="259"/>
+<line x1="343.2" y1="251.4" x2="352" y2="251.4" stroke-width="1.4"/>
+<rect x="612" y="147" width="80" height="150" rx="2"/>
+<circle cx="652" cy="143" r="4"/>
+<line x1="652" y1="139" x2="652" y2="123"/>
+<circle cx="652" cy="301" r="4"/>
+<line x1="652" y1="305" x2="652" y2="321"/>
+<polyline points="612,243 624,252 612,261"/>
+<line x1="612" y1="252" x2="590" y2="252"/>
+<line x1="590" y1="252" x2="590" y2="401"/>
+<line x1="692" y1="185" x2="736" y2="185"/>
+<line x1="692" y1="259" x2="736" y2="259"/>
+<line x1="675.2" y1="251.4" x2="684" y2="251.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="174"/>
+<line x1="130.2" y1="174" x2="174.2" y2="174"/>
+<line x1="108.2" y1="46" x2="108.2" y2="196"/>
+<line x1="108.2" y1="196" x2="174.2" y2="196"/>
+<line x1="568" y1="351" x2="568" y2="185"/>
+<line x1="568" y1="185" x2="612" y2="185"/>
 <path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L736,46"/>
 <line x1="130.2" y1="72" x2="404" y2="72"/>
-<path d="M568,287 L585.5,287 A4.5,4.5 0 0 1 594.5,287 L736,287"/>
-<line x1="404" y1="30" x2="404" y2="153"/>
-<line x1="736" y1="30" x2="736" y2="153"/>
-<line x1="736" y1="227" x2="736" y2="287"/>
-<line x1="218" y1="337" x2="590" y2="337"/>
-<circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M568,351 L585.5,351 A4.5,4.5 0 0 1 594.5,351 L736,351"/>
+<line x1="404" y1="30" x2="404" y2="185"/>
+<line x1="736" y1="30" x2="736" y2="185"/>
+<line x1="736" y1="259" x2="736" y2="351"/>
+<line x1="218" y1="401" x2="590" y2="401"/>
+<circle cx="258" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="159" text-anchor="start" font-size="14">D</text>
-<text x="352" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="652" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="620" y="159" text-anchor="start" font-size="14">D</text>
-<text x="684" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="684" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="191" text-anchor="start" font-size="14">D</text>
+<text x="352" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="652" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="652" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="652" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="620" y="191" text-anchor="start" font-size="14">D</text>
+<text x="684" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="684" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="736" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="214" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -940,48 +994,66 @@ $T_{B} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="306" viewBox="0 0 700 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="370" viewBox="0 0 700 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="86" width="80" height="150" rx="2"/>
-<polyline points="152,182 164,191 152,200"/>
-<line x1="152" y1="191" x2="130" y2="191"/>
-<line x1="130" y1="191" x2="130" y2="282"/>
-<line x1="232" y1="124" x2="276" y2="124"/>
-<line x1="232" y1="198" x2="276" y2="198"/>
-<line x1="215.2" y1="190.4" x2="224" y2="190.4" stroke-width="1.4"/>
-<rect x="504" y="86" width="80" height="150" rx="2"/>
-<polyline points="504,182 516,191 504,200"/>
-<line x1="504" y1="191" x2="482" y2="191"/>
-<line x1="482" y1="191" x2="482" y2="282"/>
-<line x1="452" y1="124" x2="504" y2="124"/>
-<line x1="584" y1="124" x2="628" y2="124"/>
-<line x1="584" y1="198" x2="628" y2="198"/>
-<line x1="567.2" y1="190.4" x2="576" y2="190.4" stroke-width="1.4"/>
-<line x1="108" y1="46" x2="108" y2="124"/>
-<line x1="108" y1="124" x2="152" y2="124"/>
+<rect x="152" y="118" width="80" height="150" rx="2"/>
+<circle cx="192" cy="114" r="4"/>
+<line x1="192" y1="110" x2="192" y2="94"/>
+<circle cx="192" cy="272" r="4"/>
+<line x1="192" y1="276" x2="192" y2="292"/>
+<polyline points="152,214 164,223 152,232"/>
+<line x1="152" y1="223" x2="130" y2="223"/>
+<line x1="130" y1="223" x2="130" y2="346"/>
+<line x1="232" y1="156" x2="276" y2="156"/>
+<line x1="232" y1="230" x2="276" y2="230"/>
+<line x1="215.2" y1="222.4" x2="224" y2="222.4" stroke-width="1.4"/>
+<rect x="504" y="118" width="80" height="150" rx="2"/>
+<circle cx="544" cy="114" r="4"/>
+<line x1="544" y1="110" x2="544" y2="94"/>
+<circle cx="544" cy="272" r="4"/>
+<line x1="544" y1="276" x2="544" y2="292"/>
+<polyline points="504,214 516,223 504,232"/>
+<line x1="504" y1="223" x2="482" y2="223"/>
+<line x1="482" y1="223" x2="482" y2="346"/>
+<line x1="452" y1="156" x2="504" y2="156"/>
+<line x1="584" y1="156" x2="628" y2="156"/>
+<line x1="584" y1="230" x2="628" y2="230"/>
+<line x1="567.2" y1="222.4" x2="576" y2="222.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="156"/>
+<line x1="108" y1="156" x2="152" y2="156"/>
 <path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L628,46"/>
-<line x1="276" y1="30" x2="276" y2="124"/>
-<line x1="628" y1="30" x2="628" y2="124"/>
-<line x1="90" y1="282" x2="482" y2="282"/>
-<circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="276" y1="30" x2="276" y2="156"/>
+<line x1="628" y1="30" x2="628" y2="156"/>
+<line x1="90" y1="346" x2="482" y2="346"/>
+<circle cx="130" cy="346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="130" text-anchor="start" font-size="14">T</text>
-<text x="224" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="544" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="512" y="130" text-anchor="start" font-size="14">T</text>
-<text x="448" y="130" text-anchor="end" font-size="16">1</text>
-<text x="576" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="576" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="162" text-anchor="start" font-size="14">T</text>
+<text x="224" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="544" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="544" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="544" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="512" y="162" text-anchor="start" font-size="14">T</text>
+<text x="448" y="162" text-anchor="end" font-size="16">1</text>
+<text x="576" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="576" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="628" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="86" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -1353,92 +1425,118 @@ $K_{C} = \overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} &= \overline{Q_{C}} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= 1 \\ K_{C} &= \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1286" height="413" viewBox="0 0 1286 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1286" height="477" viewBox="0 0 1286 477" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="141" width="80" height="150" rx="2"/>
-<polyline points="264,207 276,216 264,225"/>
-<circle cx="260" cy="216" r="4"/>
-<line x1="256" y1="216" x2="242" y2="216"/>
-<line x1="242" y1="216" x2="242" y2="389"/>
-<path d="M168,146 H194 A26,33 0 0 1 194,212 H168 Z"/>
-<line x1="220" y1="179" x2="264" y2="179"/>
-<path d="M212,253 L237.5,253 A4.5,4.5 0 0 1 246.5,253 L264,253"/>
-<line x1="344" y1="179" x2="388" y2="179"/>
-<line x1="344" y1="253" x2="388" y2="253"/>
-<line x1="327.2" y1="245.4" x2="336" y2="245.4" stroke-width="1.4"/>
-<rect x="716" y="141" width="80" height="150" rx="2"/>
-<polyline points="716,207 728,216 716,225"/>
-<circle cx="712" cy="216" r="4"/>
-<line x1="708" y1="216" x2="694" y2="216"/>
-<line x1="694" y1="216" x2="694" y2="389"/>
-<path d="M612,146 C634,146 660,162.5 672,179 C660,195.5 634,212 612,212 Q626,179 612,146 Z"/>
-<line x1="672" y1="179" x2="716" y2="179"/>
-<path d="M664,253 L689.5,253 A4.5,4.5 0 0 1 698.5,253 L716,253"/>
-<line x1="796" y1="179" x2="840" y2="179"/>
-<line x1="796" y1="253" x2="840" y2="253"/>
-<line x1="779.2" y1="245.4" x2="788" y2="245.4" stroke-width="1.4"/>
-<rect x="1090" y="141" width="80" height="150" rx="2"/>
-<polyline points="1090,207 1102,216 1090,225"/>
-<circle cx="1086" cy="216" r="4"/>
-<line x1="1082" y1="216" x2="1068" y2="216"/>
-<line x1="1068" y1="216" x2="1068" y2="389"/>
-<line x1="1038" y1="179" x2="1090" y2="179"/>
-<line x1="1170" y1="179" x2="1214" y2="179"/>
-<line x1="1170" y1="253" x2="1214" y2="253"/>
-<line x1="1153.2" y1="245.4" x2="1162" y2="245.4" stroke-width="1.4"/>
-<line x1="124" y1="72" x2="124" y2="168"/>
-<line x1="124" y1="168" x2="168" y2="168"/>
-<line x1="102" y1="46" x2="102" y2="190"/>
-<line x1="102" y1="190" x2="168" y2="190"/>
-<line x1="574.2" y1="98" x2="574.2" y2="190"/>
-<line x1="574.2" y1="190" x2="618.2" y2="190"/>
-<line x1="552.2" y1="339" x2="552.2" y2="168"/>
-<path d="M552.2,168 L569.7,168 A4.5,4.5 0 0 1 578.7,168 L618.2,168"/>
-<line x1="1046" y1="313" x2="1046" y2="253"/>
-<path d="M1046,253 L1063.5,253 A4.5,4.5 0 0 1 1072.5,253 L1090,253"/>
+<rect x="264" y="173" width="80" height="150" rx="2"/>
+<circle cx="304" cy="169" r="4"/>
+<line x1="304" y1="165" x2="304" y2="149"/>
+<circle cx="304" cy="327" r="4"/>
+<line x1="304" y1="331" x2="304" y2="347"/>
+<polyline points="264,239 276,248 264,257"/>
+<circle cx="260" cy="248" r="4"/>
+<line x1="256" y1="248" x2="242" y2="248"/>
+<line x1="242" y1="248" x2="242" y2="453"/>
+<path d="M168,178 H194 A26,33 0 0 1 194,244 H168 Z"/>
+<line x1="220" y1="211" x2="264" y2="211"/>
+<path d="M212,285 L237.5,285 A4.5,4.5 0 0 1 246.5,285 L264,285"/>
+<line x1="344" y1="211" x2="388" y2="211"/>
+<line x1="344" y1="285" x2="388" y2="285"/>
+<line x1="327.2" y1="277.4" x2="336" y2="277.4" stroke-width="1.4"/>
+<rect x="716" y="173" width="80" height="150" rx="2"/>
+<circle cx="756" cy="169" r="4"/>
+<line x1="756" y1="165" x2="756" y2="149"/>
+<circle cx="756" cy="327" r="4"/>
+<line x1="756" y1="331" x2="756" y2="347"/>
+<polyline points="716,239 728,248 716,257"/>
+<circle cx="712" cy="248" r="4"/>
+<line x1="708" y1="248" x2="694" y2="248"/>
+<line x1="694" y1="248" x2="694" y2="453"/>
+<path d="M612,178 C634,178 660,194.5 672,211 C660,227.5 634,244 612,244 Q626,211 612,178 Z"/>
+<line x1="672" y1="211" x2="716" y2="211"/>
+<path d="M664,285 L689.5,285 A4.5,4.5 0 0 1 698.5,285 L716,285"/>
+<line x1="796" y1="211" x2="840" y2="211"/>
+<line x1="796" y1="285" x2="840" y2="285"/>
+<line x1="779.2" y1="277.4" x2="788" y2="277.4" stroke-width="1.4"/>
+<rect x="1090" y="173" width="80" height="150" rx="2"/>
+<circle cx="1130" cy="169" r="4"/>
+<line x1="1130" y1="165" x2="1130" y2="149"/>
+<circle cx="1130" cy="327" r="4"/>
+<line x1="1130" y1="331" x2="1130" y2="347"/>
+<polyline points="1090,239 1102,248 1090,257"/>
+<circle cx="1086" cy="248" r="4"/>
+<line x1="1082" y1="248" x2="1068" y2="248"/>
+<line x1="1068" y1="248" x2="1068" y2="453"/>
+<line x1="1038" y1="211" x2="1090" y2="211"/>
+<line x1="1170" y1="211" x2="1214" y2="211"/>
+<line x1="1170" y1="285" x2="1214" y2="285"/>
+<line x1="1153.2" y1="277.4" x2="1162" y2="277.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="200"/>
+<line x1="124" y1="200" x2="168" y2="200"/>
+<line x1="102" y1="46" x2="102" y2="222"/>
+<line x1="102" y1="222" x2="168" y2="222"/>
+<line x1="574.2" y1="98" x2="574.2" y2="222"/>
+<line x1="574.2" y1="222" x2="618.2" y2="222"/>
+<line x1="552.2" y1="403" x2="552.2" y2="200"/>
+<path d="M552.2,200 L569.7,200 A4.5,4.5 0 0 1 578.7,200 L618.2,200"/>
+<line x1="1046" y1="377" x2="1046" y2="285"/>
+<path d="M1046,285 L1063.5,285 A4.5,4.5 0 0 1 1072.5,285 L1090,285"/>
 <path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L835.5,46 A4.5,4.5 0 0 1 844.5,46 L1214,46"/>
 <path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L840,72"/>
 <line x1="388" y1="98" x2="574.2" y2="98"/>
-<path d="M552.2,339 L689.5,339 A4.5,4.5 0 0 1 698.5,339 L1063.5,339 A4.5,4.5 0 0 1 1072.5,339 L1214,339"/>
-<line x1="840" y1="313" x2="1046" y2="313"/>
-<line x1="388" y1="30" x2="388" y2="179"/>
-<line x1="840" y1="30" x2="840" y2="179"/>
-<line x1="840" y1="253" x2="840" y2="313"/>
-<line x1="1214" y1="30" x2="1214" y2="179"/>
-<line x1="1214" y1="253" x2="1214" y2="339"/>
-<line x1="202" y1="389" x2="1068" y2="389"/>
-<circle cx="242" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="694" cy="389" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M552.2,403 L689.5,403 A4.5,4.5 0 0 1 698.5,403 L1063.5,403 A4.5,4.5 0 0 1 1072.5,403 L1214,403"/>
+<line x1="840" y1="377" x2="1046" y2="377"/>
+<line x1="388" y1="30" x2="388" y2="211"/>
+<line x1="840" y1="30" x2="840" y2="211"/>
+<line x1="840" y1="285" x2="840" y2="377"/>
+<line x1="1214" y1="30" x2="1214" y2="211"/>
+<line x1="1214" y1="285" x2="1214" y2="403"/>
+<line x1="202" y1="453" x2="1068" y2="453"/>
+<circle cx="242" cy="453" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="694" cy="453" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1214" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="840" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="388" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="224" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="185" text-anchor="start" font-size="14">J</text>
-<text x="272" y="259" text-anchor="start" font-size="14">K</text>
-<text x="208" y="259" text-anchor="end" font-size="16">1</text>
-<text x="336" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="756" y="224" text-anchor="middle" font-size="26">B</text>
-<text x="724" y="185" text-anchor="start" font-size="14">J</text>
-<text x="724" y="259" text-anchor="start" font-size="14">K</text>
-<text x="660" y="259" text-anchor="end" font-size="16">1</text>
-<text x="788" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="788" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="1130" y="224" text-anchor="middle" font-size="26">C</text>
-<text x="1098" y="185" text-anchor="start" font-size="14">J</text>
-<text x="1098" y="259" text-anchor="start" font-size="14">K</text>
-<text x="1034" y="185" text-anchor="end" font-size="16">1</text>
-<text x="1162" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1162" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="256" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="217" text-anchor="start" font-size="14">J</text>
+<text x="272" y="291" text-anchor="start" font-size="14">K</text>
+<text x="208" y="291" text-anchor="end" font-size="16">1</text>
+<text x="336" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="756" y="256" text-anchor="middle" font-size="26">B</text>
+<text x="756" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="756" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="756" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="756" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="724" y="217" text-anchor="start" font-size="14">J</text>
+<text x="724" y="291" text-anchor="start" font-size="14">K</text>
+<text x="660" y="291" text-anchor="end" font-size="16">1</text>
+<text x="788" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="788" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="1130" y="256" text-anchor="middle" font-size="26">C</text>
+<text x="1130" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1130" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="1130" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1130" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="1098" y="217" text-anchor="start" font-size="14">J</text>
+<text x="1098" y="291" text-anchor="start" font-size="14">K</text>
+<text x="1034" y="217" text-anchor="end" font-size="16">1</text>
+<text x="1162" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1162" y="291" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="840" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1214" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="395" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="459" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -1811,106 +1909,132 @@ $S_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{A} + \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= \overline{Q_{B}}Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1632" height="456" viewBox="0 0 1632 456" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1632" height="520" viewBox="0 0 1632 520" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="141" width="80" height="190" rx="2"/>
-<polyline points="302,227 314,236 302,245"/>
-<circle cx="298" cy="236" r="4"/>
-<line x1="294" y1="236" x2="280" y2="236"/>
-<line x1="280" y1="236" x2="280" y2="432"/>
-<path d="M190,146 H216 A26,33 0 0 1 216,212 H190 Z"/>
-<path d="M242,179 L253.5,179 A4.5,4.5 0 0 1 262.5,179 L302,179"/>
-<line x1="382" y1="179" x2="426" y2="179"/>
-<line x1="382" y1="293" x2="426" y2="293"/>
-<line x1="365.2" y1="285.4" x2="374" y2="285.4" stroke-width="1.4"/>
-<rect x="954" y="141" width="80" height="190" rx="2"/>
-<polyline points="954,227 966,236 954,245"/>
-<circle cx="950" cy="236" r="4"/>
-<line x1="946" y1="236" x2="932" y2="236"/>
-<line x1="932" y1="236" x2="932" y2="432"/>
-<path d="M834,146 C856,146 882,162.5 894,179 C882,195.5 856,212 834,212 Q848,179 834,146 Z"/>
-<path d="M700,197 H726 A26,33 0 0 1 726,263 H700 Z"/>
-<line x1="752" y1="230" x2="816" y2="230"/>
-<line x1="816" y1="230" x2="816" y2="190"/>
-<line x1="816" y1="190" x2="840.2" y2="190"/>
-<path d="M894,179 L905.5,179 A4.5,4.5 0 0 1 914.5,179 L954,179"/>
-<line x1="1034" y1="179" x2="1078" y2="179"/>
-<line x1="1034" y1="293" x2="1078" y2="293"/>
-<line x1="1017.2" y1="285.4" x2="1026" y2="285.4" stroke-width="1.4"/>
-<rect x="1436" y="141" width="80" height="190" rx="2"/>
-<polyline points="1436,227 1448,236 1436,245"/>
-<circle cx="1432" cy="236" r="4"/>
-<line x1="1428" y1="236" x2="1414" y2="236"/>
-<line x1="1414" y1="236" x2="1414" y2="432"/>
-<path d="M1324,260 H1350 A26,33 0 0 1 1350,326 H1324 Z"/>
-<path d="M1376,293 L1387.5,293 A4.5,4.5 0 0 1 1396.5,293 L1409.5,293 A4.5,4.5 0 0 1 1418.5,293 L1436,293"/>
-<line x1="1516" y1="179" x2="1560" y2="179"/>
-<line x1="1516" y1="293" x2="1560" y2="293"/>
-<line x1="1499.2" y1="285.4" x2="1508" y2="285.4" stroke-width="1.4"/>
-<line x1="146" y1="72" x2="146" y2="168"/>
-<line x1="146" y1="168" x2="190" y2="168"/>
-<line x1="124" y1="46" x2="124" y2="190"/>
-<line x1="124" y1="190" x2="190" y2="190"/>
-<line x1="258" y1="98" x2="258" y2="293"/>
-<path d="M258,293 L275.5,293 A4.5,4.5 0 0 1 284.5,293 L302,293"/>
-<line x1="774.2" y1="98" x2="774.2" y2="168"/>
-<line x1="774.2" y1="168" x2="840.2" y2="168"/>
-<line x1="910" y1="72" x2="910" y2="293"/>
-<path d="M910,293 L927.5,293 A4.5,4.5 0 0 1 936.5,293 L954,293"/>
-<line x1="656" y1="382" x2="656" y2="241"/>
-<line x1="656" y1="241" x2="700" y2="241"/>
-<line x1="634" y1="356" x2="634" y2="219"/>
-<line x1="634" y1="219" x2="700" y2="219"/>
-<line x1="1280" y1="46" x2="1280" y2="304"/>
-<line x1="1280" y1="304" x2="1324" y2="304"/>
-<line x1="1258" y1="356" x2="1258" y2="282"/>
-<path d="M1258,282 L1275.5,282 A4.5,4.5 0 0 1 1284.5,282 L1324,282"/>
-<line x1="1392" y1="382" x2="1392" y2="179"/>
-<line x1="1392" y1="179" x2="1436" y2="179"/>
+<rect x="302" y="173" width="80" height="190" rx="2"/>
+<circle cx="342" cy="169" r="4"/>
+<line x1="342" y1="165" x2="342" y2="149"/>
+<circle cx="342" cy="367" r="4"/>
+<line x1="342" y1="371" x2="342" y2="387"/>
+<polyline points="302,259 314,268 302,277"/>
+<circle cx="298" cy="268" r="4"/>
+<line x1="294" y1="268" x2="280" y2="268"/>
+<line x1="280" y1="268" x2="280" y2="496"/>
+<path d="M190,178 H216 A26,33 0 0 1 216,244 H190 Z"/>
+<path d="M242,211 L253.5,211 A4.5,4.5 0 0 1 262.5,211 L302,211"/>
+<line x1="382" y1="211" x2="426" y2="211"/>
+<line x1="382" y1="325" x2="426" y2="325"/>
+<line x1="365.2" y1="317.4" x2="374" y2="317.4" stroke-width="1.4"/>
+<rect x="954" y="173" width="80" height="190" rx="2"/>
+<circle cx="994" cy="169" r="4"/>
+<line x1="994" y1="165" x2="994" y2="149"/>
+<circle cx="994" cy="367" r="4"/>
+<line x1="994" y1="371" x2="994" y2="387"/>
+<polyline points="954,259 966,268 954,277"/>
+<circle cx="950" cy="268" r="4"/>
+<line x1="946" y1="268" x2="932" y2="268"/>
+<line x1="932" y1="268" x2="932" y2="496"/>
+<path d="M834,178 C856,178 882,194.5 894,211 C882,227.5 856,244 834,244 Q848,211 834,178 Z"/>
+<path d="M700,229 H726 A26,33 0 0 1 726,295 H700 Z"/>
+<line x1="752" y1="262" x2="816" y2="262"/>
+<line x1="816" y1="262" x2="816" y2="222"/>
+<line x1="816" y1="222" x2="840.2" y2="222"/>
+<path d="M894,211 L905.5,211 A4.5,4.5 0 0 1 914.5,211 L954,211"/>
+<line x1="1034" y1="211" x2="1078" y2="211"/>
+<line x1="1034" y1="325" x2="1078" y2="325"/>
+<line x1="1017.2" y1="317.4" x2="1026" y2="317.4" stroke-width="1.4"/>
+<rect x="1436" y="173" width="80" height="190" rx="2"/>
+<circle cx="1476" cy="169" r="4"/>
+<line x1="1476" y1="165" x2="1476" y2="149"/>
+<circle cx="1476" cy="367" r="4"/>
+<line x1="1476" y1="371" x2="1476" y2="387"/>
+<polyline points="1436,259 1448,268 1436,277"/>
+<circle cx="1432" cy="268" r="4"/>
+<line x1="1428" y1="268" x2="1414" y2="268"/>
+<line x1="1414" y1="268" x2="1414" y2="496"/>
+<path d="M1324,292 H1350 A26,33 0 0 1 1350,358 H1324 Z"/>
+<path d="M1376,325 L1387.5,325 A4.5,4.5 0 0 1 1396.5,325 L1409.5,325 A4.5,4.5 0 0 1 1418.5,325 L1436,325"/>
+<line x1="1516" y1="211" x2="1560" y2="211"/>
+<line x1="1516" y1="325" x2="1560" y2="325"/>
+<line x1="1499.2" y1="317.4" x2="1508" y2="317.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="200"/>
+<line x1="146" y1="200" x2="190" y2="200"/>
+<line x1="124" y1="46" x2="124" y2="222"/>
+<line x1="124" y1="222" x2="190" y2="222"/>
+<line x1="258" y1="98" x2="258" y2="325"/>
+<path d="M258,325 L275.5,325 A4.5,4.5 0 0 1 284.5,325 L302,325"/>
+<line x1="774.2" y1="98" x2="774.2" y2="200"/>
+<line x1="774.2" y1="200" x2="840.2" y2="200"/>
+<line x1="910" y1="72" x2="910" y2="325"/>
+<path d="M910,325 L927.5,325 A4.5,4.5 0 0 1 936.5,325 L954,325"/>
+<line x1="656" y1="446" x2="656" y2="273"/>
+<line x1="656" y1="273" x2="700" y2="273"/>
+<line x1="634" y1="420" x2="634" y2="251"/>
+<line x1="634" y1="251" x2="700" y2="251"/>
+<line x1="1280" y1="46" x2="1280" y2="336"/>
+<line x1="1280" y1="336" x2="1324" y2="336"/>
+<line x1="1258" y1="420" x2="1258" y2="314"/>
+<path d="M1258,314 L1275.5,314 A4.5,4.5 0 0 1 1284.5,314 L1324,314"/>
+<line x1="1392" y1="446" x2="1392" y2="211"/>
+<line x1="1392" y1="211" x2="1436" y2="211"/>
 <path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L1073.5,46 A4.5,4.5 0 0 1 1082.5,46 L1560,46"/>
 <path d="M146,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L1078,72"/>
 <line x1="258" y1="98" x2="774.2" y2="98"/>
-<path d="M656,382 L927.5,382 A4.5,4.5 0 0 1 936.5,382 L1409.5,382 A4.5,4.5 0 0 1 1418.5,382 L1560,382"/>
-<path d="M634,356 L651.5,356 A4.5,4.5 0 0 1 660.5,356 L927.5,356 A4.5,4.5 0 0 1 936.5,356 L1258,356"/>
-<line x1="426" y1="30" x2="426" y2="179"/>
-<line x1="1078" y1="30" x2="1078" y2="179"/>
-<line x1="1078" y1="293" x2="1078" y2="356"/>
-<line x1="1560" y1="30" x2="1560" y2="179"/>
-<line x1="1560" y1="293" x2="1560" y2="382"/>
-<line x1="240" y1="432" x2="1414" y2="432"/>
-<circle cx="280" cy="432" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="932" cy="432" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M656,446 L927.5,446 A4.5,4.5 0 0 1 936.5,446 L1409.5,446 A4.5,4.5 0 0 1 1418.5,446 L1560,446"/>
+<path d="M634,420 L651.5,420 A4.5,4.5 0 0 1 660.5,420 L927.5,420 A4.5,4.5 0 0 1 936.5,420 L1258,420"/>
+<line x1="426" y1="30" x2="426" y2="211"/>
+<line x1="1078" y1="30" x2="1078" y2="211"/>
+<line x1="1078" y1="325" x2="1078" y2="420"/>
+<line x1="1560" y1="30" x2="1560" y2="211"/>
+<line x1="1560" y1="325" x2="1560" y2="446"/>
+<line x1="240" y1="496" x2="1414" y2="496"/>
+<circle cx="280" cy="496" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="932" cy="496" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1560" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1280" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1078" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="910" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1392" cy="382" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1078" cy="356" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1392" cy="446" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1078" cy="420" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="244" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="185" text-anchor="start" font-size="14">S</text>
-<text x="310" y="299" text-anchor="start" font-size="14">R</text>
-<text x="374" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="299" text-anchor="end" font-size="16">Q</text>
-<text x="994" y="244" text-anchor="middle" font-size="26">B</text>
-<text x="962" y="185" text-anchor="start" font-size="14">S</text>
-<text x="962" y="299" text-anchor="start" font-size="14">R</text>
-<text x="1026" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1026" y="299" text-anchor="end" font-size="16">Q</text>
-<text x="1476" y="244" text-anchor="middle" font-size="26">C</text>
-<text x="1444" y="185" text-anchor="start" font-size="14">S</text>
-<text x="1444" y="299" text-anchor="start" font-size="14">R</text>
-<text x="1508" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1508" y="299" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="276" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="405" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="355" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="217" text-anchor="start" font-size="14">S</text>
+<text x="310" y="331" text-anchor="start" font-size="14">R</text>
+<text x="374" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="331" text-anchor="end" font-size="16">Q</text>
+<text x="994" y="276" text-anchor="middle" font-size="26">B</text>
+<text x="994" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="994" y="405" text-anchor="middle" font-size="14">1</text>
+<text x="994" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="994" y="355" text-anchor="middle" font-size="12">CLR</text>
+<text x="962" y="217" text-anchor="start" font-size="14">S</text>
+<text x="962" y="331" text-anchor="start" font-size="14">R</text>
+<text x="1026" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1026" y="331" text-anchor="end" font-size="16">Q</text>
+<text x="1476" y="276" text-anchor="middle" font-size="26">C</text>
+<text x="1476" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1476" y="405" text-anchor="middle" font-size="14">1</text>
+<text x="1476" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1476" y="355" text-anchor="middle" font-size="12">CLR</text>
+<text x="1444" y="217" text-anchor="start" font-size="14">S</text>
+<text x="1444" y="331" text-anchor="start" font-size="14">R</text>
+<text x="1508" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1508" y="331" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1078" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1560" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="438" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="502" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -2152,91 +2276,117 @@ $D_{C} = \overline{Q_{C}} + Q_{B}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{A} \\ D_{C} &= \overline{Q_{C}} + Q_{B}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1526" height="464" viewBox="0 0 1526 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1526" height="528" viewBox="0 0 1526 528" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="192" width="80" height="150" rx="2"/>
-<polyline points="264,288 276,297 264,306"/>
-<line x1="264" y1="297" x2="242" y2="297"/>
-<line x1="242" y1="297" x2="242" y2="440"/>
-<path d="M168,197 H194 A26,33 0 0 1 194,263 H168 Z"/>
-<line x1="220" y1="230" x2="264" y2="230"/>
-<line x1="344" y1="230" x2="388" y2="230"/>
-<line x1="344" y1="304" x2="388" y2="304"/>
-<line x1="327.2" y1="296.4" x2="336" y2="296.4" stroke-width="1.4"/>
-<rect x="878" y="192" width="80" height="150" rx="2"/>
-<polyline points="878,288 890,297 878,306"/>
-<line x1="878" y1="297" x2="856" y2="297"/>
-<line x1="856" y1="297" x2="856" y2="440"/>
-<path d="M774,197 C796,197 822,213.5 834,230 C822,246.5 796,263 774,263 Q788,230 774,197 Z"/>
-<path d="M640,146 H666 A26,33 0 0 1 666,212 H640 Z"/>
-<path d="M692,179 L709.7,179 A4.5,4.5 0 0 1 718.7,179 L756,179"/>
-<line x1="756" y1="179" x2="756" y2="219"/>
-<line x1="756" y1="219" x2="780.2" y2="219"/>
-<line x1="834" y1="230" x2="878" y2="230"/>
-<line x1="958" y1="230" x2="1002" y2="230"/>
-<line x1="958" y1="304" x2="1002" y2="304"/>
-<line x1="941.2" y1="296.4" x2="950" y2="296.4" stroke-width="1.4"/>
-<rect x="1330" y="192" width="80" height="150" rx="2"/>
-<polyline points="1330,288 1342,297 1330,306"/>
-<line x1="1330" y1="297" x2="1308" y2="297"/>
-<line x1="1308" y1="297" x2="1308" y2="440"/>
-<path d="M1226,197 C1248,197 1274,213.5 1286,230 C1274,246.5 1248,263 1226,263 Q1240,230 1226,197 Z"/>
-<line x1="1286" y1="230" x2="1330" y2="230"/>
-<line x1="1410" y1="230" x2="1454" y2="230"/>
-<line x1="1410" y1="304" x2="1454" y2="304"/>
-<line x1="1393.2" y1="296.4" x2="1402" y2="296.4" stroke-width="1.4"/>
-<line x1="124" y1="72" x2="124" y2="219"/>
-<line x1="124" y1="219" x2="168" y2="219"/>
-<line x1="102" y1="46" x2="102" y2="241"/>
-<line x1="102" y1="241" x2="168" y2="241"/>
-<line x1="714.2" y1="98" x2="714.2" y2="241"/>
-<line x1="714.2" y1="241" x2="780.2" y2="241"/>
-<line x1="596" y1="390" x2="596" y2="190"/>
-<line x1="596" y1="190" x2="640" y2="190"/>
-<line x1="574" y1="364" x2="574" y2="168"/>
-<line x1="574" y1="168" x2="640" y2="168"/>
-<line x1="1188.2" y1="72" x2="1188.2" y2="241"/>
-<line x1="1188.2" y1="241" x2="1232.2" y2="241"/>
-<line x1="1166.2" y1="390" x2="1166.2" y2="219"/>
-<path d="M1166.2,219 L1183.7,219 A4.5,4.5 0 0 1 1192.7,219 L1232.2,219"/>
+<rect x="264" y="224" width="80" height="150" rx="2"/>
+<circle cx="304" cy="220" r="4"/>
+<line x1="304" y1="216" x2="304" y2="200"/>
+<circle cx="304" cy="378" r="4"/>
+<line x1="304" y1="382" x2="304" y2="398"/>
+<polyline points="264,320 276,329 264,338"/>
+<line x1="264" y1="329" x2="242" y2="329"/>
+<line x1="242" y1="329" x2="242" y2="504"/>
+<path d="M168,229 H194 A26,33 0 0 1 194,295 H168 Z"/>
+<line x1="220" y1="262" x2="264" y2="262"/>
+<line x1="344" y1="262" x2="388" y2="262"/>
+<line x1="344" y1="336" x2="388" y2="336"/>
+<line x1="327.2" y1="328.4" x2="336" y2="328.4" stroke-width="1.4"/>
+<rect x="878" y="224" width="80" height="150" rx="2"/>
+<circle cx="918" cy="220" r="4"/>
+<line x1="918" y1="216" x2="918" y2="200"/>
+<circle cx="918" cy="378" r="4"/>
+<line x1="918" y1="382" x2="918" y2="398"/>
+<polyline points="878,320 890,329 878,338"/>
+<line x1="878" y1="329" x2="856" y2="329"/>
+<line x1="856" y1="329" x2="856" y2="504"/>
+<path d="M774,229 C796,229 822,245.5 834,262 C822,278.5 796,295 774,295 Q788,262 774,229 Z"/>
+<path d="M640,178 H666 A26,33 0 0 1 666,244 H640 Z"/>
+<path d="M692,211 L709.7,211 A4.5,4.5 0 0 1 718.7,211 L756,211"/>
+<line x1="756" y1="211" x2="756" y2="251"/>
+<line x1="756" y1="251" x2="780.2" y2="251"/>
+<line x1="834" y1="262" x2="878" y2="262"/>
+<line x1="958" y1="262" x2="1002" y2="262"/>
+<line x1="958" y1="336" x2="1002" y2="336"/>
+<line x1="941.2" y1="328.4" x2="950" y2="328.4" stroke-width="1.4"/>
+<rect x="1330" y="224" width="80" height="150" rx="2"/>
+<circle cx="1370" cy="220" r="4"/>
+<line x1="1370" y1="216" x2="1370" y2="200"/>
+<circle cx="1370" cy="378" r="4"/>
+<line x1="1370" y1="382" x2="1370" y2="398"/>
+<polyline points="1330,320 1342,329 1330,338"/>
+<line x1="1330" y1="329" x2="1308" y2="329"/>
+<line x1="1308" y1="329" x2="1308" y2="504"/>
+<path d="M1226,229 C1248,229 1274,245.5 1286,262 C1274,278.5 1248,295 1226,295 Q1240,262 1226,229 Z"/>
+<line x1="1286" y1="262" x2="1330" y2="262"/>
+<line x1="1410" y1="262" x2="1454" y2="262"/>
+<line x1="1410" y1="336" x2="1454" y2="336"/>
+<line x1="1393.2" y1="328.4" x2="1402" y2="328.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="251"/>
+<line x1="124" y1="251" x2="168" y2="251"/>
+<line x1="102" y1="46" x2="102" y2="273"/>
+<line x1="102" y1="273" x2="168" y2="273"/>
+<line x1="714.2" y1="98" x2="714.2" y2="273"/>
+<line x1="714.2" y1="273" x2="780.2" y2="273"/>
+<line x1="596" y1="454" x2="596" y2="222"/>
+<line x1="596" y1="222" x2="640" y2="222"/>
+<line x1="574" y1="428" x2="574" y2="200"/>
+<line x1="574" y1="200" x2="640" y2="200"/>
+<line x1="1188.2" y1="72" x2="1188.2" y2="273"/>
+<line x1="1188.2" y1="273" x2="1232.2" y2="273"/>
+<line x1="1166.2" y1="454" x2="1166.2" y2="251"/>
+<path d="M1166.2,251 L1183.7,251 A4.5,4.5 0 0 1 1192.7,251 L1232.2,251"/>
 <path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L997.5,46 A4.5,4.5 0 0 1 1006.5,46 L1454,46"/>
 <path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L1188.2,72"/>
 <line x1="388" y1="98" x2="714.2" y2="98"/>
-<path d="M596,390 L851.5,390 A4.5,4.5 0 0 1 860.5,390 L1303.5,390 A4.5,4.5 0 0 1 1312.5,390 L1454,390"/>
-<path d="M574,364 L591.5,364 A4.5,4.5 0 0 1 600.5,364 L851.5,364 A4.5,4.5 0 0 1 860.5,364 L1002,364"/>
-<line x1="388" y1="30" x2="388" y2="230"/>
-<line x1="1002" y1="30" x2="1002" y2="230"/>
-<line x1="1002" y1="304" x2="1002" y2="364"/>
-<line x1="1454" y1="30" x2="1454" y2="230"/>
-<line x1="1454" y1="304" x2="1454" y2="390"/>
-<line x1="202" y1="440" x2="1308" y2="440"/>
-<circle cx="242" cy="440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="856" cy="440" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M596,454 L851.5,454 A4.5,4.5 0 0 1 860.5,454 L1303.5,454 A4.5,4.5 0 0 1 1312.5,454 L1454,454"/>
+<path d="M574,428 L591.5,428 A4.5,4.5 0 0 1 600.5,428 L851.5,428 A4.5,4.5 0 0 1 860.5,428 L1002,428"/>
+<line x1="388" y1="30" x2="388" y2="262"/>
+<line x1="1002" y1="30" x2="1002" y2="262"/>
+<line x1="1002" y1="336" x2="1002" y2="428"/>
+<line x1="1454" y1="30" x2="1454" y2="262"/>
+<line x1="1454" y1="336" x2="1454" y2="454"/>
+<line x1="202" y1="504" x2="1308" y2="504"/>
+<circle cx="242" cy="504" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="856" cy="504" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1454" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1002" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="388" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1166.2" cy="390" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1166.2" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="275" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="236" text-anchor="start" font-size="14">D</text>
-<text x="336" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="918" y="275" text-anchor="middle" font-size="26">B</text>
-<text x="886" y="236" text-anchor="start" font-size="14">D</text>
-<text x="950" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="950" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1370" y="275" text-anchor="middle" font-size="26">C</text>
-<text x="1338" y="236" text-anchor="start" font-size="14">D</text>
-<text x="1402" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="1402" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="307" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="268" text-anchor="start" font-size="14">D</text>
+<text x="336" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="918" y="307" text-anchor="middle" font-size="26">B</text>
+<text x="918" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="918" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="886" y="268" text-anchor="start" font-size="14">D</text>
+<text x="950" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="950" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1370" y="307" text-anchor="middle" font-size="26">C</text>
+<text x="1370" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="1370" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1370" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="1370" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="1338" y="268" text-anchor="start" font-size="14">D</text>
+<text x="1402" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="1402" y="342" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1002" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1454" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="446" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="510" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -2484,94 +2634,120 @@ $T_{C} = \overline{Q_{B}} + \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= \overline{Q_{C}} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{B}} + \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1556" height="464" viewBox="0 0 1556 464" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1556" height="528" viewBox="0 0 1556 528" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="434" y="192" width="80" height="150" rx="2"/>
-<polyline points="434,288 446,297 434,306"/>
-<line x1="434" y1="297" x2="412" y2="297"/>
-<line x1="412" y1="297" x2="412" y2="440"/>
-<path d="M330,197 C352,197 378,213.5 390,230 C378,246.5 352,263 330,263 Q344,230 330,197 Z"/>
-<path d="M196,146 H222 A26,33 0 0 1 222,212 H196 Z"/>
-<path d="M248,179 L265.7,179 A4.5,4.5 0 0 1 274.7,179 L312,179"/>
-<line x1="312" y1="179" x2="312" y2="219"/>
-<line x1="312" y1="219" x2="336.2" y2="219"/>
-<line x1="390" y1="230" x2="434" y2="230"/>
-<line x1="514" y1="230" x2="558" y2="230"/>
-<line x1="514" y1="304" x2="558" y2="304"/>
-<line x1="497.2" y1="296.4" x2="506" y2="296.4" stroke-width="1.4"/>
-<rect x="908" y="192" width="80" height="150" rx="2"/>
-<polyline points="908,288 920,297 908,306"/>
-<line x1="908" y1="297" x2="886" y2="297"/>
-<line x1="886" y1="297" x2="886" y2="440"/>
-<path d="M804,186 C826,186 852,208 864,230 C852,252 826,274 804,274 Q818,230 804,186 Z"/>
-<line x1="864" y1="230" x2="908" y2="230"/>
-<line x1="988" y1="230" x2="1032" y2="230"/>
-<line x1="988" y1="304" x2="1032" y2="304"/>
-<line x1="971.2" y1="296.4" x2="980" y2="296.4" stroke-width="1.4"/>
-<rect x="1360" y="192" width="80" height="150" rx="2"/>
-<polyline points="1360,288 1372,297 1360,306"/>
-<line x1="1360" y1="297" x2="1338" y2="297"/>
-<line x1="1338" y1="297" x2="1338" y2="440"/>
-<path d="M1256,197 C1278,197 1304,213.5 1316,230 C1304,246.5 1278,263 1256,263 Q1270,230 1256,197 Z"/>
-<line x1="1316" y1="230" x2="1360" y2="230"/>
-<line x1="1440" y1="230" x2="1484" y2="230"/>
-<line x1="1440" y1="304" x2="1484" y2="304"/>
-<line x1="1423.2" y1="296.4" x2="1432" y2="296.4" stroke-width="1.4"/>
-<line x1="152" y1="72" x2="152" y2="168"/>
-<line x1="152" y1="168" x2="196" y2="168"/>
-<line x1="130" y1="46" x2="130" y2="190"/>
-<line x1="130" y1="190" x2="196" y2="190"/>
-<line x1="270.2" y1="98" x2="270.2" y2="241"/>
-<line x1="270.2" y1="241" x2="336.2" y2="241"/>
-<line x1="767" y1="72" x2="767" y2="230"/>
-<line x1="767" y1="230" x2="811" y2="230"/>
-<line x1="743.2" y1="98" x2="743.2" y2="252"/>
-<line x1="743.2" y1="252" x2="809.2" y2="252"/>
-<line x1="721.2" y1="390" x2="721.2" y2="208"/>
-<path d="M721.2,208 L738.7,208 A4.5,4.5 0 0 1 747.7,208 L762.5,208 A4.5,4.5 0 0 1 771.5,208 L809.2,208"/>
-<line x1="1218.2" y1="390" x2="1218.2" y2="241"/>
-<line x1="1218.2" y1="241" x2="1262.2" y2="241"/>
-<line x1="1196.2" y1="364" x2="1196.2" y2="219"/>
-<line x1="1196.2" y1="219" x2="1262.2" y2="219"/>
+<rect x="434" y="224" width="80" height="150" rx="2"/>
+<circle cx="474" cy="220" r="4"/>
+<line x1="474" y1="216" x2="474" y2="200"/>
+<circle cx="474" cy="378" r="4"/>
+<line x1="474" y1="382" x2="474" y2="398"/>
+<polyline points="434,320 446,329 434,338"/>
+<line x1="434" y1="329" x2="412" y2="329"/>
+<line x1="412" y1="329" x2="412" y2="504"/>
+<path d="M330,229 C352,229 378,245.5 390,262 C378,278.5 352,295 330,295 Q344,262 330,229 Z"/>
+<path d="M196,178 H222 A26,33 0 0 1 222,244 H196 Z"/>
+<path d="M248,211 L265.7,211 A4.5,4.5 0 0 1 274.7,211 L312,211"/>
+<line x1="312" y1="211" x2="312" y2="251"/>
+<line x1="312" y1="251" x2="336.2" y2="251"/>
+<line x1="390" y1="262" x2="434" y2="262"/>
+<line x1="514" y1="262" x2="558" y2="262"/>
+<line x1="514" y1="336" x2="558" y2="336"/>
+<line x1="497.2" y1="328.4" x2="506" y2="328.4" stroke-width="1.4"/>
+<rect x="908" y="224" width="80" height="150" rx="2"/>
+<circle cx="948" cy="220" r="4"/>
+<line x1="948" y1="216" x2="948" y2="200"/>
+<circle cx="948" cy="378" r="4"/>
+<line x1="948" y1="382" x2="948" y2="398"/>
+<polyline points="908,320 920,329 908,338"/>
+<line x1="908" y1="329" x2="886" y2="329"/>
+<line x1="886" y1="329" x2="886" y2="504"/>
+<path d="M804,218 C826,218 852,240 864,262 C852,284 826,306 804,306 Q818,262 804,218 Z"/>
+<line x1="864" y1="262" x2="908" y2="262"/>
+<line x1="988" y1="262" x2="1032" y2="262"/>
+<line x1="988" y1="336" x2="1032" y2="336"/>
+<line x1="971.2" y1="328.4" x2="980" y2="328.4" stroke-width="1.4"/>
+<rect x="1360" y="224" width="80" height="150" rx="2"/>
+<circle cx="1400" cy="220" r="4"/>
+<line x1="1400" y1="216" x2="1400" y2="200"/>
+<circle cx="1400" cy="378" r="4"/>
+<line x1="1400" y1="382" x2="1400" y2="398"/>
+<polyline points="1360,320 1372,329 1360,338"/>
+<line x1="1360" y1="329" x2="1338" y2="329"/>
+<line x1="1338" y1="329" x2="1338" y2="504"/>
+<path d="M1256,229 C1278,229 1304,245.5 1316,262 C1304,278.5 1278,295 1256,295 Q1270,262 1256,229 Z"/>
+<line x1="1316" y1="262" x2="1360" y2="262"/>
+<line x1="1440" y1="262" x2="1484" y2="262"/>
+<line x1="1440" y1="336" x2="1484" y2="336"/>
+<line x1="1423.2" y1="328.4" x2="1432" y2="328.4" stroke-width="1.4"/>
+<line x1="152" y1="72" x2="152" y2="200"/>
+<line x1="152" y1="200" x2="196" y2="200"/>
+<line x1="130" y1="46" x2="130" y2="222"/>
+<line x1="130" y1="222" x2="196" y2="222"/>
+<line x1="270.2" y1="98" x2="270.2" y2="273"/>
+<line x1="270.2" y1="273" x2="336.2" y2="273"/>
+<line x1="767" y1="72" x2="767" y2="262"/>
+<line x1="767" y1="262" x2="811" y2="262"/>
+<line x1="743.2" y1="98" x2="743.2" y2="284"/>
+<line x1="743.2" y1="284" x2="809.2" y2="284"/>
+<line x1="721.2" y1="454" x2="721.2" y2="240"/>
+<path d="M721.2,240 L738.7,240 A4.5,4.5 0 0 1 747.7,240 L762.5,240 A4.5,4.5 0 0 1 771.5,240 L809.2,240"/>
+<line x1="1218.2" y1="454" x2="1218.2" y2="273"/>
+<line x1="1218.2" y1="273" x2="1262.2" y2="273"/>
+<line x1="1196.2" y1="428" x2="1196.2" y2="251"/>
+<line x1="1196.2" y1="251" x2="1262.2" y2="251"/>
 <path d="M130,46 L553.5,46 A4.5,4.5 0 0 1 562.5,46 L1027.5,46 A4.5,4.5 0 0 1 1036.5,46 L1484,46"/>
 <path d="M152,72 L553.5,72 A4.5,4.5 0 0 1 562.5,72 L1032,72"/>
 <line x1="270.2" y1="98" x2="743.2" y2="98"/>
-<path d="M721.2,390 L881.5,390 A4.5,4.5 0 0 1 890.5,390 L1333.5,390 A4.5,4.5 0 0 1 1342.5,390 L1484,390"/>
-<line x1="1032" y1="364" x2="1196.2" y2="364"/>
-<line x1="558" y1="30" x2="558" y2="230"/>
-<line x1="1032" y1="30" x2="1032" y2="230"/>
-<line x1="1032" y1="304" x2="1032" y2="364"/>
-<line x1="1484" y1="30" x2="1484" y2="230"/>
-<line x1="1484" y1="304" x2="1484" y2="390"/>
-<line x1="372" y1="440" x2="1338" y2="440"/>
-<circle cx="412" cy="440" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="886" cy="440" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M721.2,454 L881.5,454 A4.5,4.5 0 0 1 890.5,454 L1333.5,454 A4.5,4.5 0 0 1 1342.5,454 L1484,454"/>
+<line x1="1032" y1="428" x2="1196.2" y2="428"/>
+<line x1="558" y1="30" x2="558" y2="262"/>
+<line x1="1032" y1="30" x2="1032" y2="262"/>
+<line x1="1032" y1="336" x2="1032" y2="428"/>
+<line x1="1484" y1="30" x2="1484" y2="262"/>
+<line x1="1484" y1="336" x2="1484" y2="454"/>
+<line x1="372" y1="504" x2="1338" y2="504"/>
+<circle cx="412" cy="504" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="886" cy="504" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1484" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1032" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="767" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="558" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1218.2" cy="390" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1218.2" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="474" y="275" text-anchor="middle" font-size="26">A</text>
-<text x="442" y="236" text-anchor="start" font-size="14">T</text>
-<text x="506" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="506" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="948" y="275" text-anchor="middle" font-size="26">B</text>
-<text x="916" y="236" text-anchor="start" font-size="14">T</text>
-<text x="980" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="980" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1400" y="275" text-anchor="middle" font-size="26">C</text>
-<text x="1368" y="236" text-anchor="start" font-size="14">T</text>
-<text x="1432" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="1432" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="474" y="307" text-anchor="middle" font-size="26">A</text>
+<text x="474" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="474" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="474" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="474" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="442" y="268" text-anchor="start" font-size="14">T</text>
+<text x="506" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="506" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="948" y="307" text-anchor="middle" font-size="26">B</text>
+<text x="948" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="948" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="948" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="948" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="916" y="268" text-anchor="start" font-size="14">T</text>
+<text x="980" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="980" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1400" y="307" text-anchor="middle" font-size="26">C</text>
+<text x="1400" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="1400" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1400" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="1400" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="1368" y="268" text-anchor="start" font-size="14">T</text>
+<text x="1432" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="1432" y="342" text-anchor="end" font-size="16">Q</text>
 <text x="558" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1032" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1484" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="368" y="446" text-anchor="end" font-size="16">Clock</text>
+<text x="368" y="510" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -2942,95 +3118,121 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} &= Q_{C} + Q_{A} \\ K_{B} &= 1 \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1266" height="413" viewBox="0 0 1266 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1266" height="477" viewBox="0 0 1266 477" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="141" width="80" height="150" rx="2"/>
-<polyline points="174,207 186,216 174,225"/>
-<circle cx="170" cy="216" r="4"/>
-<line x1="166" y1="216" x2="152" y2="216"/>
-<line x1="152" y1="216" x2="152" y2="389"/>
-<line x1="128" y1="216" x2="128" y2="179"/>
-<line x1="128" y1="179" x2="174" y2="179"/>
-<line x1="128" y1="216" x2="128" y2="253"/>
-<path d="M128,253 L147.5,253 A4.5,4.5 0 0 1 156.5,253 L174,253"/>
-<line x1="254" y1="179" x2="298" y2="179"/>
-<line x1="254" y1="253" x2="298" y2="253"/>
-<line x1="237.2" y1="245.4" x2="246" y2="245.4" stroke-width="1.4"/>
-<rect x="626" y="141" width="80" height="150" rx="2"/>
-<polyline points="626,207 638,216 626,225"/>
-<circle cx="622" cy="216" r="4"/>
-<line x1="618" y1="216" x2="604" y2="216"/>
-<line x1="604" y1="216" x2="604" y2="389"/>
-<path d="M522,146 C544,146 570,162.5 582,179 C570,195.5 544,212 522,212 Q536,179 522,146 Z"/>
-<line x1="582" y1="179" x2="626" y2="179"/>
-<path d="M574,253 L599.5,253 A4.5,4.5 0 0 1 608.5,253 L626,253"/>
-<line x1="706" y1="179" x2="750" y2="179"/>
-<line x1="706" y1="253" x2="750" y2="253"/>
-<line x1="689.2" y1="245.4" x2="698" y2="245.4" stroke-width="1.4"/>
-<rect x="1070" y="141" width="80" height="150" rx="2"/>
-<polyline points="1070,207 1082,216 1070,225"/>
-<circle cx="1066" cy="216" r="4"/>
-<line x1="1062" y1="216" x2="1048" y2="216"/>
-<line x1="1048" y1="216" x2="1048" y2="389"/>
-<path d="M974,146 H1000 A26,33 0 0 1 1000,212 H974 Z"/>
-<line x1="1026" y1="179" x2="1070" y2="179"/>
-<path d="M1018,253 L1043.5,253 A4.5,4.5 0 0 1 1052.5,253 L1070,253"/>
-<line x1="1150" y1="179" x2="1194" y2="179"/>
-<line x1="1150" y1="253" x2="1194" y2="253"/>
-<line x1="1133.2" y1="245.4" x2="1142" y2="245.4" stroke-width="1.4"/>
-<line x1="84" y1="72" x2="84" y2="216"/>
-<line x1="84" y1="216" x2="128" y2="216"/>
-<line x1="484.2" y1="46" x2="484.2" y2="168"/>
-<line x1="484.2" y1="168" x2="528.2" y2="168"/>
-<line x1="462.2" y1="98" x2="462.2" y2="190"/>
-<line x1="462.2" y1="190" x2="528.2" y2="190"/>
-<line x1="930" y1="339" x2="930" y2="190"/>
-<line x1="930" y1="190" x2="974" y2="190"/>
-<line x1="908" y1="313" x2="908" y2="168"/>
-<line x1="908" y1="168" x2="974" y2="168"/>
+<rect x="174" y="173" width="80" height="150" rx="2"/>
+<circle cx="214" cy="169" r="4"/>
+<line x1="214" y1="165" x2="214" y2="149"/>
+<circle cx="214" cy="327" r="4"/>
+<line x1="214" y1="331" x2="214" y2="347"/>
+<polyline points="174,239 186,248 174,257"/>
+<circle cx="170" cy="248" r="4"/>
+<line x1="166" y1="248" x2="152" y2="248"/>
+<line x1="152" y1="248" x2="152" y2="453"/>
+<line x1="128" y1="248" x2="128" y2="211"/>
+<line x1="128" y1="211" x2="174" y2="211"/>
+<line x1="128" y1="248" x2="128" y2="285"/>
+<path d="M128,285 L147.5,285 A4.5,4.5 0 0 1 156.5,285 L174,285"/>
+<line x1="254" y1="211" x2="298" y2="211"/>
+<line x1="254" y1="285" x2="298" y2="285"/>
+<line x1="237.2" y1="277.4" x2="246" y2="277.4" stroke-width="1.4"/>
+<rect x="626" y="173" width="80" height="150" rx="2"/>
+<circle cx="666" cy="169" r="4"/>
+<line x1="666" y1="165" x2="666" y2="149"/>
+<circle cx="666" cy="327" r="4"/>
+<line x1="666" y1="331" x2="666" y2="347"/>
+<polyline points="626,239 638,248 626,257"/>
+<circle cx="622" cy="248" r="4"/>
+<line x1="618" y1="248" x2="604" y2="248"/>
+<line x1="604" y1="248" x2="604" y2="453"/>
+<path d="M522,178 C544,178 570,194.5 582,211 C570,227.5 544,244 522,244 Q536,211 522,178 Z"/>
+<line x1="582" y1="211" x2="626" y2="211"/>
+<path d="M574,285 L599.5,285 A4.5,4.5 0 0 1 608.5,285 L626,285"/>
+<line x1="706" y1="211" x2="750" y2="211"/>
+<line x1="706" y1="285" x2="750" y2="285"/>
+<line x1="689.2" y1="277.4" x2="698" y2="277.4" stroke-width="1.4"/>
+<rect x="1070" y="173" width="80" height="150" rx="2"/>
+<circle cx="1110" cy="169" r="4"/>
+<line x1="1110" y1="165" x2="1110" y2="149"/>
+<circle cx="1110" cy="327" r="4"/>
+<line x1="1110" y1="331" x2="1110" y2="347"/>
+<polyline points="1070,239 1082,248 1070,257"/>
+<circle cx="1066" cy="248" r="4"/>
+<line x1="1062" y1="248" x2="1048" y2="248"/>
+<line x1="1048" y1="248" x2="1048" y2="453"/>
+<path d="M974,178 H1000 A26,33 0 0 1 1000,244 H974 Z"/>
+<line x1="1026" y1="211" x2="1070" y2="211"/>
+<path d="M1018,285 L1043.5,285 A4.5,4.5 0 0 1 1052.5,285 L1070,285"/>
+<line x1="1150" y1="211" x2="1194" y2="211"/>
+<line x1="1150" y1="285" x2="1194" y2="285"/>
+<line x1="1133.2" y1="277.4" x2="1142" y2="277.4" stroke-width="1.4"/>
+<line x1="84" y1="72" x2="84" y2="248"/>
+<line x1="84" y1="248" x2="128" y2="248"/>
+<line x1="484.2" y1="46" x2="484.2" y2="200"/>
+<line x1="484.2" y1="200" x2="528.2" y2="200"/>
+<line x1="462.2" y1="98" x2="462.2" y2="222"/>
+<line x1="462.2" y1="222" x2="528.2" y2="222"/>
+<line x1="930" y1="403" x2="930" y2="222"/>
+<line x1="930" y1="222" x2="974" y2="222"/>
+<line x1="908" y1="377" x2="908" y2="200"/>
+<line x1="908" y1="200" x2="974" y2="200"/>
 <path d="M484.2,46 L745.5,46 A4.5,4.5 0 0 1 754.5,46 L1194,46"/>
 <path d="M84,72 L293.5,72 A4.5,4.5 0 0 1 302.5,72 L479.7,72 A4.5,4.5 0 0 1 488.7,72 L750,72"/>
 <line x1="298" y1="98" x2="462.2" y2="98"/>
-<line x1="750" y1="339" x2="930" y2="339"/>
-<path d="M298,313 L599.5,313 A4.5,4.5 0 0 1 608.5,313 L745.5,313 A4.5,4.5 0 0 1 754.5,313 L908,313"/>
-<line x1="298" y1="30" x2="298" y2="179"/>
-<line x1="298" y1="253" x2="298" y2="313"/>
-<line x1="750" y1="30" x2="750" y2="179"/>
-<line x1="750" y1="253" x2="750" y2="339"/>
-<line x1="1194" y1="30" x2="1194" y2="179"/>
-<line x1="112" y1="389" x2="1048" y2="389"/>
-<circle cx="152" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="216" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="604" cy="389" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="750" y1="403" x2="930" y2="403"/>
+<path d="M298,377 L599.5,377 A4.5,4.5 0 0 1 608.5,377 L745.5,377 A4.5,4.5 0 0 1 754.5,377 L908,377"/>
+<line x1="298" y1="30" x2="298" y2="211"/>
+<line x1="298" y1="285" x2="298" y2="377"/>
+<line x1="750" y1="30" x2="750" y2="211"/>
+<line x1="750" y1="285" x2="750" y2="403"/>
+<line x1="1194" y1="30" x2="1194" y2="211"/>
+<line x1="112" y1="453" x2="1048" y2="453"/>
+<circle cx="152" cy="453" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="248" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="604" cy="453" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1194" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="750" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="224" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="185" text-anchor="start" font-size="14">J</text>
-<text x="182" y="259" text-anchor="start" font-size="14">K</text>
-<text x="246" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="666" y="224" text-anchor="middle" font-size="26">B</text>
-<text x="634" y="185" text-anchor="start" font-size="14">J</text>
-<text x="634" y="259" text-anchor="start" font-size="14">K</text>
-<text x="570" y="259" text-anchor="end" font-size="16">1</text>
-<text x="698" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="698" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="1110" y="224" text-anchor="middle" font-size="26">C</text>
-<text x="1078" y="185" text-anchor="start" font-size="14">J</text>
-<text x="1078" y="259" text-anchor="start" font-size="14">K</text>
-<text x="1014" y="259" text-anchor="end" font-size="16">1</text>
-<text x="1142" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1142" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="256" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="217" text-anchor="start" font-size="14">J</text>
+<text x="182" y="291" text-anchor="start" font-size="14">K</text>
+<text x="246" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="666" y="256" text-anchor="middle" font-size="26">B</text>
+<text x="666" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="666" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="666" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="666" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="634" y="217" text-anchor="start" font-size="14">J</text>
+<text x="634" y="291" text-anchor="start" font-size="14">K</text>
+<text x="570" y="291" text-anchor="end" font-size="16">1</text>
+<text x="698" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="698" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="1110" y="256" text-anchor="middle" font-size="26">C</text>
+<text x="1110" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1110" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="1110" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1110" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="1078" y="217" text-anchor="start" font-size="14">J</text>
+<text x="1078" y="291" text-anchor="start" font-size="14">K</text>
+<text x="1014" y="291" text-anchor="end" font-size="16">1</text>
+<text x="1142" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1142" y="291" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="750" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1194" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="108" y="395" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="459" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -3401,115 +3603,141 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= Q_{C} + Q_{A}\overline{Q_{B}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="493" viewBox="0 0 1660 493" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="557" viewBox="0 0 1660 557" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="152" width="80" height="190" rx="2"/>
-<polyline points="308,238 320,247 308,256"/>
-<circle cx="304" cy="247" r="4"/>
-<line x1="300" y1="247" x2="286" y2="247"/>
-<line x1="286" y1="247" x2="286" y2="469"/>
-<path d="M212,157 H238 A26,33 0 0 1 238,223 H212 Z"/>
-<line x1="264" y1="190" x2="308" y2="190"/>
-<path d="M212,271 H238 A26,33 0 0 1 238,337 H212 Z"/>
-<path d="M264,304 L281.5,304 A4.5,4.5 0 0 1 290.5,304 L308,304"/>
-<line x1="388" y1="190" x2="432" y2="190"/>
-<line x1="388" y1="304" x2="432" y2="304"/>
-<line x1="371.2" y1="296.4" x2="380" y2="296.4" stroke-width="1.4"/>
-<rect x="960" y="152" width="80" height="190" rx="2"/>
-<polyline points="960,238 972,247 960,256"/>
-<circle cx="956" cy="247" r="4"/>
-<line x1="952" y1="247" x2="938" y2="247"/>
-<line x1="938" y1="247" x2="938" y2="469"/>
-<path d="M840,157 C862,157 888,173.5 900,190 C888,206.5 862,223 840,223 Q854,190 840,157 Z"/>
-<path d="M706,208 H732 A26,33 0 0 1 732,274 H706 Z"/>
-<line x1="758" y1="241" x2="822" y2="241"/>
-<line x1="822" y1="241" x2="822" y2="201"/>
-<line x1="822" y1="201" x2="846.2" y2="201"/>
-<path d="M900,190 L911.5,190 A4.5,4.5 0 0 1 920.5,190 L960,190"/>
-<line x1="1040" y1="190" x2="1084" y2="190"/>
-<line x1="1040" y1="304" x2="1084" y2="304"/>
-<line x1="1023.2" y1="296.4" x2="1032" y2="296.4" stroke-width="1.4"/>
-<rect x="1464" y="152" width="80" height="190" rx="2"/>
-<polyline points="1464,238 1476,247 1464,256"/>
-<circle cx="1460" cy="247" r="4"/>
-<line x1="1456" y1="247" x2="1442" y2="247"/>
-<line x1="1442" y1="247" x2="1442" y2="469"/>
-<path d="M1352,146 H1378 A26,44 0 0 1 1378,234 H1352 Z"/>
-<path d="M1404,190 L1415.5,190 A4.5,4.5 0 0 1 1424.5,190 L1464,190"/>
-<line x1="1544" y1="190" x2="1588" y2="190"/>
-<line x1="1544" y1="304" x2="1588" y2="304"/>
-<line x1="1527.2" y1="296.4" x2="1536" y2="296.4" stroke-width="1.4"/>
-<line x1="168" y1="72" x2="168" y2="201"/>
-<line x1="168" y1="201" x2="212" y2="201"/>
-<line x1="146" y1="98" x2="146" y2="293"/>
-<line x1="146" y1="293" x2="212" y2="293"/>
-<line x1="124" y1="72" x2="124" y2="315"/>
-<line x1="124" y1="315" x2="212" y2="315"/>
-<line x1="102" y1="367" x2="102" y2="179"/>
-<path d="M102,179 L119.5,179 A4.5,4.5 0 0 1 128.5,179 L141.5,179 A4.5,4.5 0 0 1 150.5,179 L163.5,179 A4.5,4.5 0 0 1 172.5,179 L212,179"/>
-<line x1="780.2" y1="46" x2="780.2" y2="179"/>
-<line x1="780.2" y1="179" x2="846.2" y2="179"/>
-<line x1="662" y1="98" x2="662" y2="230"/>
-<line x1="662" y1="230" x2="706" y2="230"/>
-<line x1="916" y1="72" x2="916" y2="304"/>
-<path d="M916,304 L933.5,304 A4.5,4.5 0 0 1 942.5,304 L960,304"/>
-<line x1="640" y1="393" x2="640" y2="252"/>
-<line x1="640" y1="252" x2="706" y2="252"/>
-<line x1="1420" y1="46" x2="1420" y2="304"/>
-<path d="M1420,304 L1437.5,304 A4.5,4.5 0 0 1 1446.5,304 L1464,304"/>
-<line x1="1308" y1="419" x2="1308" y2="212"/>
-<line x1="1308" y1="212" x2="1352" y2="212"/>
-<line x1="1286" y1="393" x2="1286" y2="190"/>
-<line x1="1286" y1="190" x2="1352" y2="190"/>
-<line x1="1264" y1="367" x2="1264" y2="168"/>
-<line x1="1264" y1="168" x2="1352" y2="168"/>
+<rect x="308" y="184" width="80" height="190" rx="2"/>
+<circle cx="348" cy="180" r="4"/>
+<line x1="348" y1="176" x2="348" y2="160"/>
+<circle cx="348" cy="378" r="4"/>
+<line x1="348" y1="382" x2="348" y2="398"/>
+<polyline points="308,270 320,279 308,288"/>
+<circle cx="304" cy="279" r="4"/>
+<line x1="300" y1="279" x2="286" y2="279"/>
+<line x1="286" y1="279" x2="286" y2="533"/>
+<path d="M212,189 H238 A26,33 0 0 1 238,255 H212 Z"/>
+<line x1="264" y1="222" x2="308" y2="222"/>
+<path d="M212,303 H238 A26,33 0 0 1 238,369 H212 Z"/>
+<path d="M264,336 L281.5,336 A4.5,4.5 0 0 1 290.5,336 L308,336"/>
+<line x1="388" y1="222" x2="432" y2="222"/>
+<line x1="388" y1="336" x2="432" y2="336"/>
+<line x1="371.2" y1="328.4" x2="380" y2="328.4" stroke-width="1.4"/>
+<rect x="960" y="184" width="80" height="190" rx="2"/>
+<circle cx="1000" cy="180" r="4"/>
+<line x1="1000" y1="176" x2="1000" y2="160"/>
+<circle cx="1000" cy="378" r="4"/>
+<line x1="1000" y1="382" x2="1000" y2="398"/>
+<polyline points="960,270 972,279 960,288"/>
+<circle cx="956" cy="279" r="4"/>
+<line x1="952" y1="279" x2="938" y2="279"/>
+<line x1="938" y1="279" x2="938" y2="533"/>
+<path d="M840,189 C862,189 888,205.5 900,222 C888,238.5 862,255 840,255 Q854,222 840,189 Z"/>
+<path d="M706,240 H732 A26,33 0 0 1 732,306 H706 Z"/>
+<line x1="758" y1="273" x2="822" y2="273"/>
+<line x1="822" y1="273" x2="822" y2="233"/>
+<line x1="822" y1="233" x2="846.2" y2="233"/>
+<path d="M900,222 L911.5,222 A4.5,4.5 0 0 1 920.5,222 L960,222"/>
+<line x1="1040" y1="222" x2="1084" y2="222"/>
+<line x1="1040" y1="336" x2="1084" y2="336"/>
+<line x1="1023.2" y1="328.4" x2="1032" y2="328.4" stroke-width="1.4"/>
+<rect x="1464" y="184" width="80" height="190" rx="2"/>
+<circle cx="1504" cy="180" r="4"/>
+<line x1="1504" y1="176" x2="1504" y2="160"/>
+<circle cx="1504" cy="378" r="4"/>
+<line x1="1504" y1="382" x2="1504" y2="398"/>
+<polyline points="1464,270 1476,279 1464,288"/>
+<circle cx="1460" cy="279" r="4"/>
+<line x1="1456" y1="279" x2="1442" y2="279"/>
+<line x1="1442" y1="279" x2="1442" y2="533"/>
+<path d="M1352,178 H1378 A26,44 0 0 1 1378,266 H1352 Z"/>
+<path d="M1404,222 L1415.5,222 A4.5,4.5 0 0 1 1424.5,222 L1464,222"/>
+<line x1="1544" y1="222" x2="1588" y2="222"/>
+<line x1="1544" y1="336" x2="1588" y2="336"/>
+<line x1="1527.2" y1="328.4" x2="1536" y2="328.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="233"/>
+<line x1="168" y1="233" x2="212" y2="233"/>
+<line x1="146" y1="98" x2="146" y2="325"/>
+<line x1="146" y1="325" x2="212" y2="325"/>
+<line x1="124" y1="72" x2="124" y2="347"/>
+<line x1="124" y1="347" x2="212" y2="347"/>
+<line x1="102" y1="431" x2="102" y2="211"/>
+<path d="M102,211 L119.5,211 A4.5,4.5 0 0 1 128.5,211 L141.5,211 A4.5,4.5 0 0 1 150.5,211 L163.5,211 A4.5,4.5 0 0 1 172.5,211 L212,211"/>
+<line x1="780.2" y1="46" x2="780.2" y2="211"/>
+<line x1="780.2" y1="211" x2="846.2" y2="211"/>
+<line x1="662" y1="98" x2="662" y2="262"/>
+<line x1="662" y1="262" x2="706" y2="262"/>
+<line x1="916" y1="72" x2="916" y2="336"/>
+<path d="M916,336 L933.5,336 A4.5,4.5 0 0 1 942.5,336 L960,336"/>
+<line x1="640" y1="457" x2="640" y2="284"/>
+<line x1="640" y1="284" x2="706" y2="284"/>
+<line x1="1420" y1="46" x2="1420" y2="336"/>
+<path d="M1420,336 L1437.5,336 A4.5,4.5 0 0 1 1446.5,336 L1464,336"/>
+<line x1="1308" y1="483" x2="1308" y2="244"/>
+<line x1="1308" y1="244" x2="1352" y2="244"/>
+<line x1="1286" y1="457" x2="1286" y2="222"/>
+<line x1="1286" y1="222" x2="1352" y2="222"/>
+<line x1="1264" y1="431" x2="1264" y2="200"/>
+<line x1="1264" y1="200" x2="1352" y2="200"/>
 <path d="M780.2,46 L1079.5,46 A4.5,4.5 0 0 1 1088.5,46 L1588,46"/>
 <path d="M124,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L775.7,72 A4.5,4.5 0 0 1 784.7,72 L1084,72"/>
 <path d="M146,98 L163.5,98 A4.5,4.5 0 0 1 172.5,98 L662,98"/>
-<path d="M1308,419 L1437.5,419 A4.5,4.5 0 0 1 1446.5,419 L1588,419"/>
-<path d="M640,393 L933.5,393 A4.5,4.5 0 0 1 942.5,393 L1286,393"/>
-<path d="M102,367 L281.5,367 A4.5,4.5 0 0 1 290.5,367 L635.5,367 A4.5,4.5 0 0 1 644.5,367 L933.5,367 A4.5,4.5 0 0 1 942.5,367 L1079.5,367 A4.5,4.5 0 0 1 1088.5,367 L1264,367"/>
-<line x1="432" y1="30" x2="432" y2="190"/>
-<line x1="432" y1="304" x2="432" y2="367"/>
-<line x1="1084" y1="30" x2="1084" y2="190"/>
-<line x1="1084" y1="304" x2="1084" y2="393"/>
-<line x1="1588" y1="30" x2="1588" y2="190"/>
-<line x1="1588" y1="304" x2="1588" y2="419"/>
-<line x1="246" y1="469" x2="1442" y2="469"/>
-<circle cx="286" cy="469" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="938" cy="469" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1308,483 L1437.5,483 A4.5,4.5 0 0 1 1446.5,483 L1588,483"/>
+<path d="M640,457 L933.5,457 A4.5,4.5 0 0 1 942.5,457 L1286,457"/>
+<path d="M102,431 L281.5,431 A4.5,4.5 0 0 1 290.5,431 L635.5,431 A4.5,4.5 0 0 1 644.5,431 L933.5,431 A4.5,4.5 0 0 1 942.5,431 L1079.5,431 A4.5,4.5 0 0 1 1088.5,431 L1264,431"/>
+<line x1="432" y1="30" x2="432" y2="222"/>
+<line x1="432" y1="336" x2="432" y2="431"/>
+<line x1="1084" y1="30" x2="1084" y2="222"/>
+<line x1="1084" y1="336" x2="1084" y2="457"/>
+<line x1="1588" y1="30" x2="1588" y2="222"/>
+<line x1="1588" y1="336" x2="1588" y2="483"/>
+<line x1="246" y1="533" x2="1442" y2="533"/>
+<circle cx="286" cy="533" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="938" cy="533" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1588" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1420" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1084" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="916" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1084" cy="393" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="432" cy="367" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1084" cy="457" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="432" cy="431" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="255" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="196" text-anchor="start" font-size="14">S</text>
-<text x="316" y="310" text-anchor="start" font-size="14">R</text>
-<text x="380" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1000" y="255" text-anchor="middle" font-size="26">B</text>
-<text x="968" y="196" text-anchor="start" font-size="14">S</text>
-<text x="968" y="310" text-anchor="start" font-size="14">R</text>
-<text x="1032" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1032" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1504" y="255" text-anchor="middle" font-size="26">C</text>
-<text x="1472" y="196" text-anchor="start" font-size="14">S</text>
-<text x="1472" y="310" text-anchor="start" font-size="14">R</text>
-<text x="1536" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1536" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="287" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="228" text-anchor="start" font-size="14">S</text>
+<text x="316" y="342" text-anchor="start" font-size="14">R</text>
+<text x="380" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1000" y="287" text-anchor="middle" font-size="26">B</text>
+<text x="1000" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1000" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1000" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1000" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="968" y="228" text-anchor="start" font-size="14">S</text>
+<text x="968" y="342" text-anchor="start" font-size="14">R</text>
+<text x="1032" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1032" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1504" y="287" text-anchor="middle" font-size="26">C</text>
+<text x="1504" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1504" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1504" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1504" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="1472" y="228" text-anchor="start" font-size="14">S</text>
+<text x="1472" y="342" text-anchor="start" font-size="14">R</text>
+<text x="1536" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1536" y="342" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1084" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1588" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="475" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="539" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -3750,96 +3978,122 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A}\overline{Q_{B}} + Q_{C} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1556" height="490" viewBox="0 0 1556 490" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1556" height="554" viewBox="0 0 1556 554" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="192" width="80" height="150" rx="2"/>
-<polyline points="280,288 292,297 280,306"/>
-<line x1="280" y1="297" x2="258" y2="297"/>
-<line x1="258" y1="297" x2="258" y2="466"/>
-<path d="M176,197 C198,197 224,213.5 236,230 C224,246.5 198,263 176,263 Q190,230 176,197 Z"/>
-<path d="M168,197 Q182,230 168,263"/>
-<line x1="236" y1="230" x2="280" y2="230"/>
-<line x1="360" y1="230" x2="404" y2="230"/>
-<line x1="360" y1="304" x2="404" y2="304"/>
-<line x1="343.2" y1="296.4" x2="352" y2="296.4" stroke-width="1.4"/>
-<rect x="894" y="192" width="80" height="150" rx="2"/>
-<polyline points="894,288 906,297 894,306"/>
-<line x1="894" y1="297" x2="872" y2="297"/>
-<line x1="872" y1="297" x2="872" y2="466"/>
-<path d="M790,197 C812,197 838,213.5 850,230 C838,246.5 812,263 790,263 Q804,230 790,197 Z"/>
-<path d="M656,146 H682 A26,33 0 0 1 682,212 H656 Z"/>
-<path d="M708,179 L725.7,179 A4.5,4.5 0 0 1 734.7,179 L772,179"/>
-<line x1="772" y1="179" x2="772" y2="219"/>
-<line x1="772" y1="219" x2="796.2" y2="219"/>
-<line x1="850" y1="230" x2="894" y2="230"/>
-<line x1="974" y1="230" x2="1018" y2="230"/>
-<line x1="974" y1="304" x2="1018" y2="304"/>
-<line x1="957.2" y1="296.4" x2="966" y2="296.4" stroke-width="1.4"/>
-<rect x="1360" y="192" width="80" height="150" rx="2"/>
-<polyline points="1360,288 1372,297 1360,306"/>
-<line x1="1360" y1="297" x2="1338" y2="297"/>
-<line x1="1338" y1="297" x2="1338" y2="466"/>
-<path d="M1264,186 H1290 A26,44 0 0 1 1290,274 H1264 Z"/>
-<line x1="1316" y1="230" x2="1360" y2="230"/>
-<line x1="1440" y1="230" x2="1484" y2="230"/>
-<line x1="1440" y1="304" x2="1484" y2="304"/>
-<line x1="1423.2" y1="296.4" x2="1432" y2="296.4" stroke-width="1.4"/>
-<line x1="130.2" y1="98" x2="130.2" y2="219"/>
-<line x1="130.2" y1="219" x2="174.2" y2="219"/>
-<line x1="108.2" y1="72" x2="108.2" y2="241"/>
-<line x1="108.2" y1="241" x2="174.2" y2="241"/>
-<line x1="612" y1="98" x2="612" y2="168"/>
-<line x1="612" y1="168" x2="656" y2="168"/>
-<line x1="730.2" y1="46" x2="730.2" y2="241"/>
-<line x1="730.2" y1="241" x2="796.2" y2="241"/>
-<line x1="590" y1="390" x2="590" y2="190"/>
-<line x1="590" y1="190" x2="656" y2="190"/>
-<line x1="1220" y1="416" x2="1220" y2="252"/>
-<line x1="1220" y1="252" x2="1264" y2="252"/>
-<line x1="1198" y1="390" x2="1198" y2="230"/>
-<line x1="1198" y1="230" x2="1264" y2="230"/>
-<line x1="1176" y1="364" x2="1176" y2="208"/>
-<line x1="1176" y1="208" x2="1264" y2="208"/>
+<rect x="280" y="224" width="80" height="150" rx="2"/>
+<circle cx="320" cy="220" r="4"/>
+<line x1="320" y1="216" x2="320" y2="200"/>
+<circle cx="320" cy="378" r="4"/>
+<line x1="320" y1="382" x2="320" y2="398"/>
+<polyline points="280,320 292,329 280,338"/>
+<line x1="280" y1="329" x2="258" y2="329"/>
+<line x1="258" y1="329" x2="258" y2="530"/>
+<path d="M176,229 C198,229 224,245.5 236,262 C224,278.5 198,295 176,295 Q190,262 176,229 Z"/>
+<path d="M168,229 Q182,262 168,295"/>
+<line x1="236" y1="262" x2="280" y2="262"/>
+<line x1="360" y1="262" x2="404" y2="262"/>
+<line x1="360" y1="336" x2="404" y2="336"/>
+<line x1="343.2" y1="328.4" x2="352" y2="328.4" stroke-width="1.4"/>
+<rect x="894" y="224" width="80" height="150" rx="2"/>
+<circle cx="934" cy="220" r="4"/>
+<line x1="934" y1="216" x2="934" y2="200"/>
+<circle cx="934" cy="378" r="4"/>
+<line x1="934" y1="382" x2="934" y2="398"/>
+<polyline points="894,320 906,329 894,338"/>
+<line x1="894" y1="329" x2="872" y2="329"/>
+<line x1="872" y1="329" x2="872" y2="530"/>
+<path d="M790,229 C812,229 838,245.5 850,262 C838,278.5 812,295 790,295 Q804,262 790,229 Z"/>
+<path d="M656,178 H682 A26,33 0 0 1 682,244 H656 Z"/>
+<path d="M708,211 L725.7,211 A4.5,4.5 0 0 1 734.7,211 L772,211"/>
+<line x1="772" y1="211" x2="772" y2="251"/>
+<line x1="772" y1="251" x2="796.2" y2="251"/>
+<line x1="850" y1="262" x2="894" y2="262"/>
+<line x1="974" y1="262" x2="1018" y2="262"/>
+<line x1="974" y1="336" x2="1018" y2="336"/>
+<line x1="957.2" y1="328.4" x2="966" y2="328.4" stroke-width="1.4"/>
+<rect x="1360" y="224" width="80" height="150" rx="2"/>
+<circle cx="1400" cy="220" r="4"/>
+<line x1="1400" y1="216" x2="1400" y2="200"/>
+<circle cx="1400" cy="378" r="4"/>
+<line x1="1400" y1="382" x2="1400" y2="398"/>
+<polyline points="1360,320 1372,329 1360,338"/>
+<line x1="1360" y1="329" x2="1338" y2="329"/>
+<line x1="1338" y1="329" x2="1338" y2="530"/>
+<path d="M1264,218 H1290 A26,44 0 0 1 1290,306 H1264 Z"/>
+<line x1="1316" y1="262" x2="1360" y2="262"/>
+<line x1="1440" y1="262" x2="1484" y2="262"/>
+<line x1="1440" y1="336" x2="1484" y2="336"/>
+<line x1="1423.2" y1="328.4" x2="1432" y2="328.4" stroke-width="1.4"/>
+<line x1="130.2" y1="98" x2="130.2" y2="251"/>
+<line x1="130.2" y1="251" x2="174.2" y2="251"/>
+<line x1="108.2" y1="72" x2="108.2" y2="273"/>
+<line x1="108.2" y1="273" x2="174.2" y2="273"/>
+<line x1="612" y1="98" x2="612" y2="200"/>
+<line x1="612" y1="200" x2="656" y2="200"/>
+<line x1="730.2" y1="46" x2="730.2" y2="273"/>
+<line x1="730.2" y1="273" x2="796.2" y2="273"/>
+<line x1="590" y1="454" x2="590" y2="222"/>
+<line x1="590" y1="222" x2="656" y2="222"/>
+<line x1="1220" y1="480" x2="1220" y2="284"/>
+<line x1="1220" y1="284" x2="1264" y2="284"/>
+<line x1="1198" y1="454" x2="1198" y2="262"/>
+<line x1="1198" y1="262" x2="1264" y2="262"/>
+<line x1="1176" y1="428" x2="1176" y2="240"/>
+<line x1="1176" y1="240" x2="1264" y2="240"/>
 <path d="M730.2,46 L1013.5,46 A4.5,4.5 0 0 1 1022.5,46 L1484,46"/>
 <path d="M108.2,72 L399.5,72 A4.5,4.5 0 0 1 408.5,72 L725.7,72 A4.5,4.5 0 0 1 734.7,72 L1018,72"/>
 <line x1="130.2" y1="98" x2="612" y2="98"/>
-<path d="M1220,416 L1333.5,416 A4.5,4.5 0 0 1 1342.5,416 L1484,416"/>
-<path d="M590,390 L867.5,390 A4.5,4.5 0 0 1 876.5,390 L1198,390"/>
-<path d="M404,364 L585.5,364 A4.5,4.5 0 0 1 594.5,364 L867.5,364 A4.5,4.5 0 0 1 876.5,364 L1013.5,364 A4.5,4.5 0 0 1 1022.5,364 L1176,364"/>
-<line x1="404" y1="30" x2="404" y2="230"/>
-<line x1="404" y1="304" x2="404" y2="364"/>
-<line x1="1018" y1="30" x2="1018" y2="230"/>
-<line x1="1018" y1="304" x2="1018" y2="390"/>
-<line x1="1484" y1="30" x2="1484" y2="230"/>
-<line x1="1484" y1="304" x2="1484" y2="416"/>
-<line x1="218" y1="466" x2="1338" y2="466"/>
-<circle cx="258" cy="466" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="872" cy="466" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1220,480 L1333.5,480 A4.5,4.5 0 0 1 1342.5,480 L1484,480"/>
+<path d="M590,454 L867.5,454 A4.5,4.5 0 0 1 876.5,454 L1198,454"/>
+<path d="M404,428 L585.5,428 A4.5,4.5 0 0 1 594.5,428 L867.5,428 A4.5,4.5 0 0 1 876.5,428 L1013.5,428 A4.5,4.5 0 0 1 1022.5,428 L1176,428"/>
+<line x1="404" y1="30" x2="404" y2="262"/>
+<line x1="404" y1="336" x2="404" y2="428"/>
+<line x1="1018" y1="30" x2="1018" y2="262"/>
+<line x1="1018" y1="336" x2="1018" y2="454"/>
+<line x1="1484" y1="30" x2="1484" y2="262"/>
+<line x1="1484" y1="336" x2="1484" y2="480"/>
+<line x1="218" y1="530" x2="1338" y2="530"/>
+<circle cx="258" cy="530" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="872" cy="530" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1484" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1018" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1018" cy="390" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1018" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="275" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="236" text-anchor="start" font-size="14">D</text>
-<text x="352" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="934" y="275" text-anchor="middle" font-size="26">B</text>
-<text x="902" y="236" text-anchor="start" font-size="14">D</text>
-<text x="966" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="966" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1400" y="275" text-anchor="middle" font-size="26">C</text>
-<text x="1368" y="236" text-anchor="start" font-size="14">D</text>
-<text x="1432" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="1432" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="307" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="268" text-anchor="start" font-size="14">D</text>
+<text x="352" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="934" y="307" text-anchor="middle" font-size="26">B</text>
+<text x="934" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="934" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="934" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="934" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="902" y="268" text-anchor="start" font-size="14">D</text>
+<text x="966" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="966" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1400" y="307" text-anchor="middle" font-size="26">C</text>
+<text x="1400" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="1400" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1400" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="1400" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="1368" y="268" text-anchor="start" font-size="14">D</text>
+<text x="1432" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="1432" y="342" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1018" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1484" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="214" y="472" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="536" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -4080,83 +4334,109 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= Q_{C} + Q_{B} + Q_{A} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1266" height="424" viewBox="0 0 1266 424" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1266" height="488" viewBox="0 0 1266 488" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="152" width="80" height="150" rx="2"/>
-<polyline points="152,248 164,257 152,266"/>
-<line x1="152" y1="257" x2="130" y2="257"/>
-<line x1="130" y1="257" x2="130" y2="400"/>
-<line x1="232" y1="190" x2="276" y2="190"/>
-<line x1="232" y1="264" x2="276" y2="264"/>
-<line x1="215.2" y1="256.4" x2="224" y2="256.4" stroke-width="1.4"/>
-<rect x="626" y="152" width="80" height="150" rx="2"/>
-<polyline points="626,248 638,257 626,266"/>
-<line x1="626" y1="257" x2="604" y2="257"/>
-<line x1="604" y1="257" x2="604" y2="400"/>
-<path d="M522,146 C544,146 570,168 582,190 C570,212 544,234 522,234 Q536,190 522,146 Z"/>
-<line x1="582" y1="190" x2="626" y2="190"/>
-<line x1="706" y1="190" x2="750" y2="190"/>
-<line x1="706" y1="264" x2="750" y2="264"/>
-<line x1="689.2" y1="256.4" x2="698" y2="256.4" stroke-width="1.4"/>
-<rect x="1070" y="152" width="80" height="150" rx="2"/>
-<polyline points="1070,248 1082,257 1070,266"/>
-<line x1="1070" y1="257" x2="1048" y2="257"/>
-<line x1="1048" y1="257" x2="1048" y2="400"/>
-<path d="M974,157 H1000 A26,33 0 0 1 1000,223 H974 Z"/>
-<line x1="1026" y1="190" x2="1070" y2="190"/>
-<line x1="1150" y1="190" x2="1194" y2="190"/>
-<line x1="1150" y1="264" x2="1194" y2="264"/>
-<line x1="1133.2" y1="256.4" x2="1142" y2="256.4" stroke-width="1.4"/>
-<line x1="108" y1="72" x2="108" y2="190"/>
-<line x1="108" y1="190" x2="152" y2="190"/>
-<line x1="483.2" y1="46" x2="483.2" y2="168"/>
-<line x1="483.2" y1="168" x2="527.2" y2="168"/>
-<line x1="441" y1="72" x2="441" y2="190"/>
-<line x1="441" y1="190" x2="529" y2="190"/>
-<line x1="417.2" y1="98" x2="417.2" y2="212"/>
-<line x1="417.2" y1="212" x2="527.2" y2="212"/>
-<line x1="930" y1="350" x2="930" y2="201"/>
-<line x1="930" y1="201" x2="974" y2="201"/>
-<line x1="908" y1="324" x2="908" y2="179"/>
-<line x1="908" y1="179" x2="974" y2="179"/>
+<rect x="152" y="184" width="80" height="150" rx="2"/>
+<circle cx="192" cy="180" r="4"/>
+<line x1="192" y1="176" x2="192" y2="160"/>
+<circle cx="192" cy="338" r="4"/>
+<line x1="192" y1="342" x2="192" y2="358"/>
+<polyline points="152,280 164,289 152,298"/>
+<line x1="152" y1="289" x2="130" y2="289"/>
+<line x1="130" y1="289" x2="130" y2="464"/>
+<line x1="232" y1="222" x2="276" y2="222"/>
+<line x1="232" y1="296" x2="276" y2="296"/>
+<line x1="215.2" y1="288.4" x2="224" y2="288.4" stroke-width="1.4"/>
+<rect x="626" y="184" width="80" height="150" rx="2"/>
+<circle cx="666" cy="180" r="4"/>
+<line x1="666" y1="176" x2="666" y2="160"/>
+<circle cx="666" cy="338" r="4"/>
+<line x1="666" y1="342" x2="666" y2="358"/>
+<polyline points="626,280 638,289 626,298"/>
+<line x1="626" y1="289" x2="604" y2="289"/>
+<line x1="604" y1="289" x2="604" y2="464"/>
+<path d="M522,178 C544,178 570,200 582,222 C570,244 544,266 522,266 Q536,222 522,178 Z"/>
+<line x1="582" y1="222" x2="626" y2="222"/>
+<line x1="706" y1="222" x2="750" y2="222"/>
+<line x1="706" y1="296" x2="750" y2="296"/>
+<line x1="689.2" y1="288.4" x2="698" y2="288.4" stroke-width="1.4"/>
+<rect x="1070" y="184" width="80" height="150" rx="2"/>
+<circle cx="1110" cy="180" r="4"/>
+<line x1="1110" y1="176" x2="1110" y2="160"/>
+<circle cx="1110" cy="338" r="4"/>
+<line x1="1110" y1="342" x2="1110" y2="358"/>
+<polyline points="1070,280 1082,289 1070,298"/>
+<line x1="1070" y1="289" x2="1048" y2="289"/>
+<line x1="1048" y1="289" x2="1048" y2="464"/>
+<path d="M974,189 H1000 A26,33 0 0 1 1000,255 H974 Z"/>
+<line x1="1026" y1="222" x2="1070" y2="222"/>
+<line x1="1150" y1="222" x2="1194" y2="222"/>
+<line x1="1150" y1="296" x2="1194" y2="296"/>
+<line x1="1133.2" y1="288.4" x2="1142" y2="288.4" stroke-width="1.4"/>
+<line x1="108" y1="72" x2="108" y2="222"/>
+<line x1="108" y1="222" x2="152" y2="222"/>
+<line x1="483.2" y1="46" x2="483.2" y2="200"/>
+<line x1="483.2" y1="200" x2="527.2" y2="200"/>
+<line x1="441" y1="72" x2="441" y2="222"/>
+<line x1="441" y1="222" x2="529" y2="222"/>
+<line x1="417.2" y1="98" x2="417.2" y2="244"/>
+<line x1="417.2" y1="244" x2="527.2" y2="244"/>
+<line x1="930" y1="414" x2="930" y2="233"/>
+<line x1="930" y1="233" x2="974" y2="233"/>
+<line x1="908" y1="388" x2="908" y2="211"/>
+<line x1="908" y1="211" x2="974" y2="211"/>
 <path d="M483.2,46 L745.5,46 A4.5,4.5 0 0 1 754.5,46 L1194,46"/>
 <path d="M108,72 L271.5,72 A4.5,4.5 0 0 1 280.5,72 L478.7,72 A4.5,4.5 0 0 1 487.7,72 L750,72"/>
 <line x1="276" y1="98" x2="417.2" y2="98"/>
-<line x1="750" y1="350" x2="930" y2="350"/>
-<path d="M276,324 L599.5,324 A4.5,4.5 0 0 1 608.5,324 L745.5,324 A4.5,4.5 0 0 1 754.5,324 L908,324"/>
-<line x1="276" y1="30" x2="276" y2="190"/>
-<line x1="276" y1="264" x2="276" y2="324"/>
-<line x1="750" y1="30" x2="750" y2="190"/>
-<line x1="750" y1="264" x2="750" y2="350"/>
-<line x1="1194" y1="30" x2="1194" y2="190"/>
-<line x1="90" y1="400" x2="1048" y2="400"/>
-<circle cx="130" cy="400" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="604" cy="400" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="750" y1="414" x2="930" y2="414"/>
+<path d="M276,388 L599.5,388 A4.5,4.5 0 0 1 608.5,388 L745.5,388 A4.5,4.5 0 0 1 754.5,388 L908,388"/>
+<line x1="276" y1="30" x2="276" y2="222"/>
+<line x1="276" y1="296" x2="276" y2="388"/>
+<line x1="750" y1="30" x2="750" y2="222"/>
+<line x1="750" y1="296" x2="750" y2="414"/>
+<line x1="1194" y1="30" x2="1194" y2="222"/>
+<line x1="90" y1="464" x2="1048" y2="464"/>
+<circle cx="130" cy="464" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="604" cy="464" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1194" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="750" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="441" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="276" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="235" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="196" text-anchor="start" font-size="14">T</text>
-<text x="224" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="270" text-anchor="end" font-size="16">Q</text>
-<text x="666" y="235" text-anchor="middle" font-size="26">B</text>
-<text x="634" y="196" text-anchor="start" font-size="14">T</text>
-<text x="698" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="698" y="270" text-anchor="end" font-size="16">Q</text>
-<text x="1110" y="235" text-anchor="middle" font-size="26">C</text>
-<text x="1078" y="196" text-anchor="start" font-size="14">T</text>
-<text x="1142" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1142" y="270" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="267" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="228" text-anchor="start" font-size="14">T</text>
+<text x="224" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="302" text-anchor="end" font-size="16">Q</text>
+<text x="666" y="267" text-anchor="middle" font-size="26">B</text>
+<text x="666" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="666" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="666" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="666" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="634" y="228" text-anchor="start" font-size="14">T</text>
+<text x="698" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="698" y="302" text-anchor="end" font-size="16">Q</text>
+<text x="1110" y="267" text-anchor="middle" font-size="26">C</text>
+<text x="1110" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1110" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="1110" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1110" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="1078" y="228" text-anchor="start" font-size="14">T</text>
+<text x="1142" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1142" y="302" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="750" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1194" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="86" y="406" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="470" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -4537,86 +4817,112 @@ $K_{C} = Q_{A}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= \overline{Q_{B}} \\ J_{B} &= Q_{C} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} &= \overline{Q_{A}} \\ K_{C} &= Q_{A}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1078" height="436" viewBox="0 0 1078 436" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1078" height="500" viewBox="0 0 1078 500" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="138" width="80" height="150" rx="2"/>
-<polyline points="174,204 186,213 174,222"/>
-<circle cx="170" cy="213" r="4"/>
-<line x1="166" y1="213" x2="152" y2="213"/>
-<line x1="152" y1="213" x2="152" y2="412"/>
-<line x1="254" y1="176" x2="298" y2="176"/>
-<line x1="254" y1="250" x2="298" y2="250"/>
-<line x1="237.2" y1="242.4" x2="246" y2="242.4" stroke-width="1.4"/>
-<rect x="528" y="138" width="80" height="150" rx="2"/>
-<polyline points="528,204 540,213 528,222"/>
-<circle cx="524" cy="213" r="4"/>
-<line x1="520" y1="213" x2="506" y2="213"/>
-<line x1="506" y1="213" x2="506" y2="412"/>
-<line x1="608" y1="176" x2="652" y2="176"/>
-<line x1="608" y1="250" x2="652" y2="250"/>
-<line x1="591.2" y1="242.4" x2="600" y2="242.4" stroke-width="1.4"/>
-<rect x="882" y="138" width="80" height="150" rx="2"/>
-<polyline points="882,204 894,213 882,222"/>
-<circle cx="878" cy="213" r="4"/>
-<line x1="874" y1="213" x2="860" y2="213"/>
-<line x1="860" y1="213" x2="860" y2="412"/>
-<line x1="962" y1="176" x2="1006" y2="176"/>
-<line x1="962" y1="250" x2="1006" y2="250"/>
-<line x1="945.2" y1="242.4" x2="954" y2="242.4" stroke-width="1.4"/>
-<line x1="130" y1="72" x2="130" y2="176"/>
-<line x1="130" y1="176" x2="174" y2="176"/>
-<line x1="108" y1="336" x2="108" y2="250"/>
-<path d="M108,250 L147.5,250 A4.5,4.5 0 0 1 156.5,250 L174,250"/>
-<line x1="484" y1="46" x2="484" y2="176"/>
-<line x1="484" y1="176" x2="528" y2="176"/>
-<line x1="462" y1="362" x2="462" y2="250"/>
-<path d="M462,250 L501.5,250 A4.5,4.5 0 0 1 510.5,250 L528,250"/>
-<line x1="838" y1="98" x2="838" y2="250"/>
-<path d="M838,250 L855.5,250 A4.5,4.5 0 0 1 864.5,250 L882,250"/>
-<line x1="816" y1="310" x2="816" y2="176"/>
-<path d="M816,176 L833.5,176 A4.5,4.5 0 0 1 842.5,176 L882,176"/>
+<rect x="174" y="170" width="80" height="150" rx="2"/>
+<circle cx="214" cy="166" r="4"/>
+<line x1="214" y1="162" x2="214" y2="146"/>
+<circle cx="214" cy="324" r="4"/>
+<line x1="214" y1="328" x2="214" y2="344"/>
+<polyline points="174,236 186,245 174,254"/>
+<circle cx="170" cy="245" r="4"/>
+<line x1="166" y1="245" x2="152" y2="245"/>
+<line x1="152" y1="245" x2="152" y2="476"/>
+<line x1="254" y1="208" x2="298" y2="208"/>
+<line x1="254" y1="282" x2="298" y2="282"/>
+<line x1="237.2" y1="274.4" x2="246" y2="274.4" stroke-width="1.4"/>
+<rect x="528" y="170" width="80" height="150" rx="2"/>
+<circle cx="568" cy="166" r="4"/>
+<line x1="568" y1="162" x2="568" y2="146"/>
+<circle cx="568" cy="324" r="4"/>
+<line x1="568" y1="328" x2="568" y2="344"/>
+<polyline points="528,236 540,245 528,254"/>
+<circle cx="524" cy="245" r="4"/>
+<line x1="520" y1="245" x2="506" y2="245"/>
+<line x1="506" y1="245" x2="506" y2="476"/>
+<line x1="608" y1="208" x2="652" y2="208"/>
+<line x1="608" y1="282" x2="652" y2="282"/>
+<line x1="591.2" y1="274.4" x2="600" y2="274.4" stroke-width="1.4"/>
+<rect x="882" y="170" width="80" height="150" rx="2"/>
+<circle cx="922" cy="166" r="4"/>
+<line x1="922" y1="162" x2="922" y2="146"/>
+<circle cx="922" cy="324" r="4"/>
+<line x1="922" y1="328" x2="922" y2="344"/>
+<polyline points="882,236 894,245 882,254"/>
+<circle cx="878" cy="245" r="4"/>
+<line x1="874" y1="245" x2="860" y2="245"/>
+<line x1="860" y1="245" x2="860" y2="476"/>
+<line x1="962" y1="208" x2="1006" y2="208"/>
+<line x1="962" y1="282" x2="1006" y2="282"/>
+<line x1="945.2" y1="274.4" x2="954" y2="274.4" stroke-width="1.4"/>
+<line x1="130" y1="72" x2="130" y2="208"/>
+<line x1="130" y1="208" x2="174" y2="208"/>
+<line x1="108" y1="400" x2="108" y2="282"/>
+<path d="M108,282 L147.5,282 A4.5,4.5 0 0 1 156.5,282 L174,282"/>
+<line x1="484" y1="46" x2="484" y2="208"/>
+<line x1="484" y1="208" x2="528" y2="208"/>
+<line x1="462" y1="426" x2="462" y2="282"/>
+<path d="M462,282 L501.5,282 A4.5,4.5 0 0 1 510.5,282 L528,282"/>
+<line x1="838" y1="98" x2="838" y2="282"/>
+<path d="M838,282 L855.5,282 A4.5,4.5 0 0 1 864.5,282 L882,282"/>
+<line x1="816" y1="374" x2="816" y2="208"/>
+<path d="M816,208 L833.5,208 A4.5,4.5 0 0 1 842.5,208 L882,208"/>
 <path d="M484,46 L647.5,46 A4.5,4.5 0 0 1 656.5,46 L1006,46"/>
 <path d="M130,72 L293.5,72 A4.5,4.5 0 0 1 302.5,72 L479.5,72 A4.5,4.5 0 0 1 488.5,72 L652,72"/>
 <path d="M298,98 L479.5,98 A4.5,4.5 0 0 1 488.5,98 L647.5,98 A4.5,4.5 0 0 1 656.5,98 L838,98"/>
-<path d="M462,362 L501.5,362 A4.5,4.5 0 0 1 510.5,362 L855.5,362 A4.5,4.5 0 0 1 864.5,362 L1006,362"/>
-<path d="M108,336 L147.5,336 A4.5,4.5 0 0 1 156.5,336 L457.5,336 A4.5,4.5 0 0 1 466.5,336 L501.5,336 A4.5,4.5 0 0 1 510.5,336 L652,336"/>
-<path d="M298,310 L457.5,310 A4.5,4.5 0 0 1 466.5,310 L501.5,310 A4.5,4.5 0 0 1 510.5,310 L647.5,310 A4.5,4.5 0 0 1 656.5,310 L816,310"/>
-<line x1="298" y1="30" x2="298" y2="176"/>
-<line x1="298" y1="250" x2="298" y2="310"/>
-<line x1="652" y1="30" x2="652" y2="176"/>
-<line x1="652" y1="250" x2="652" y2="336"/>
-<line x1="1006" y1="30" x2="1006" y2="176"/>
-<line x1="1006" y1="250" x2="1006" y2="362"/>
-<line x1="112" y1="412" x2="860" y2="412"/>
-<circle cx="152" cy="412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="506" cy="412" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M462,426 L501.5,426 A4.5,4.5 0 0 1 510.5,426 L855.5,426 A4.5,4.5 0 0 1 864.5,426 L1006,426"/>
+<path d="M108,400 L147.5,400 A4.5,4.5 0 0 1 156.5,400 L457.5,400 A4.5,4.5 0 0 1 466.5,400 L501.5,400 A4.5,4.5 0 0 1 510.5,400 L652,400"/>
+<path d="M298,374 L457.5,374 A4.5,4.5 0 0 1 466.5,374 L501.5,374 A4.5,4.5 0 0 1 510.5,374 L647.5,374 A4.5,4.5 0 0 1 656.5,374 L816,374"/>
+<line x1="298" y1="30" x2="298" y2="208"/>
+<line x1="298" y1="282" x2="298" y2="374"/>
+<line x1="652" y1="30" x2="652" y2="208"/>
+<line x1="652" y1="282" x2="652" y2="400"/>
+<line x1="1006" y1="30" x2="1006" y2="208"/>
+<line x1="1006" y1="282" x2="1006" y2="426"/>
+<line x1="112" y1="476" x2="860" y2="476"/>
+<circle cx="152" cy="476" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="506" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1006" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="652" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="221" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="182" text-anchor="start" font-size="14">J</text>
-<text x="182" y="256" text-anchor="start" font-size="14">K</text>
-<text x="246" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="256" text-anchor="end" font-size="16">Q</text>
-<text x="568" y="221" text-anchor="middle" font-size="26">B</text>
-<text x="536" y="182" text-anchor="start" font-size="14">J</text>
-<text x="536" y="256" text-anchor="start" font-size="14">K</text>
-<text x="600" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="600" y="256" text-anchor="end" font-size="16">Q</text>
-<text x="922" y="221" text-anchor="middle" font-size="26">C</text>
-<text x="890" y="182" text-anchor="start" font-size="14">J</text>
-<text x="890" y="256" text-anchor="start" font-size="14">K</text>
-<text x="954" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="954" y="256" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="253" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="214" text-anchor="start" font-size="14">J</text>
+<text x="182" y="288" text-anchor="start" font-size="14">K</text>
+<text x="246" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="288" text-anchor="end" font-size="16">Q</text>
+<text x="568" y="253" text-anchor="middle" font-size="26">B</text>
+<text x="568" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="568" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="568" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="568" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="536" y="214" text-anchor="start" font-size="14">J</text>
+<text x="536" y="288" text-anchor="start" font-size="14">K</text>
+<text x="600" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="600" y="288" text-anchor="end" font-size="16">Q</text>
+<text x="922" y="253" text-anchor="middle" font-size="26">C</text>
+<text x="922" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="922" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="922" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="922" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="890" y="214" text-anchor="start" font-size="14">J</text>
+<text x="890" y="288" text-anchor="start" font-size="14">K</text>
+<text x="954" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="954" y="288" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="652" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1006" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="108" y="418" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="482" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -4997,86 +5303,112 @@ $S_{C} = \overline{Q_{A}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= \overline{Q_{C}} \\ S_{B} &= Q_{C} \\ R_{C} &= Q_{A} \\ S_{C} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1078" height="436" viewBox="0 0 1078 436" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1078" height="500" viewBox="0 0 1078 500" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="138" width="80" height="150" rx="2"/>
-<polyline points="174,204 186,213 174,222"/>
-<circle cx="170" cy="213" r="4"/>
-<line x1="166" y1="213" x2="152" y2="213"/>
-<line x1="152" y1="213" x2="152" y2="412"/>
-<line x1="254" y1="176" x2="298" y2="176"/>
-<line x1="254" y1="250" x2="298" y2="250"/>
-<line x1="237.2" y1="242.4" x2="246" y2="242.4" stroke-width="1.4"/>
-<rect x="528" y="138" width="80" height="150" rx="2"/>
-<polyline points="528,204 540,213 528,222"/>
-<circle cx="524" cy="213" r="4"/>
-<line x1="520" y1="213" x2="506" y2="213"/>
-<line x1="506" y1="213" x2="506" y2="412"/>
-<line x1="608" y1="176" x2="652" y2="176"/>
-<line x1="608" y1="250" x2="652" y2="250"/>
-<line x1="591.2" y1="242.4" x2="600" y2="242.4" stroke-width="1.4"/>
-<rect x="882" y="138" width="80" height="150" rx="2"/>
-<polyline points="882,204 894,213 882,222"/>
-<circle cx="878" cy="213" r="4"/>
-<line x1="874" y1="213" x2="860" y2="213"/>
-<line x1="860" y1="213" x2="860" y2="412"/>
-<line x1="962" y1="176" x2="1006" y2="176"/>
-<line x1="962" y1="250" x2="1006" y2="250"/>
-<line x1="945.2" y1="242.4" x2="954" y2="242.4" stroke-width="1.4"/>
-<line x1="130" y1="72" x2="130" y2="176"/>
-<line x1="130" y1="176" x2="174" y2="176"/>
-<line x1="108" y1="336" x2="108" y2="250"/>
-<path d="M108,250 L147.5,250 A4.5,4.5 0 0 1 156.5,250 L174,250"/>
-<line x1="484" y1="46" x2="484" y2="176"/>
-<line x1="484" y1="176" x2="528" y2="176"/>
-<line x1="462" y1="362" x2="462" y2="250"/>
-<path d="M462,250 L501.5,250 A4.5,4.5 0 0 1 510.5,250 L528,250"/>
-<line x1="838" y1="98" x2="838" y2="250"/>
-<path d="M838,250 L855.5,250 A4.5,4.5 0 0 1 864.5,250 L882,250"/>
-<line x1="816" y1="310" x2="816" y2="176"/>
-<path d="M816,176 L833.5,176 A4.5,4.5 0 0 1 842.5,176 L882,176"/>
+<rect x="174" y="170" width="80" height="150" rx="2"/>
+<circle cx="214" cy="166" r="4"/>
+<line x1="214" y1="162" x2="214" y2="146"/>
+<circle cx="214" cy="324" r="4"/>
+<line x1="214" y1="328" x2="214" y2="344"/>
+<polyline points="174,236 186,245 174,254"/>
+<circle cx="170" cy="245" r="4"/>
+<line x1="166" y1="245" x2="152" y2="245"/>
+<line x1="152" y1="245" x2="152" y2="476"/>
+<line x1="254" y1="208" x2="298" y2="208"/>
+<line x1="254" y1="282" x2="298" y2="282"/>
+<line x1="237.2" y1="274.4" x2="246" y2="274.4" stroke-width="1.4"/>
+<rect x="528" y="170" width="80" height="150" rx="2"/>
+<circle cx="568" cy="166" r="4"/>
+<line x1="568" y1="162" x2="568" y2="146"/>
+<circle cx="568" cy="324" r="4"/>
+<line x1="568" y1="328" x2="568" y2="344"/>
+<polyline points="528,236 540,245 528,254"/>
+<circle cx="524" cy="245" r="4"/>
+<line x1="520" y1="245" x2="506" y2="245"/>
+<line x1="506" y1="245" x2="506" y2="476"/>
+<line x1="608" y1="208" x2="652" y2="208"/>
+<line x1="608" y1="282" x2="652" y2="282"/>
+<line x1="591.2" y1="274.4" x2="600" y2="274.4" stroke-width="1.4"/>
+<rect x="882" y="170" width="80" height="150" rx="2"/>
+<circle cx="922" cy="166" r="4"/>
+<line x1="922" y1="162" x2="922" y2="146"/>
+<circle cx="922" cy="324" r="4"/>
+<line x1="922" y1="328" x2="922" y2="344"/>
+<polyline points="882,236 894,245 882,254"/>
+<circle cx="878" cy="245" r="4"/>
+<line x1="874" y1="245" x2="860" y2="245"/>
+<line x1="860" y1="245" x2="860" y2="476"/>
+<line x1="962" y1="208" x2="1006" y2="208"/>
+<line x1="962" y1="282" x2="1006" y2="282"/>
+<line x1="945.2" y1="274.4" x2="954" y2="274.4" stroke-width="1.4"/>
+<line x1="130" y1="72" x2="130" y2="208"/>
+<line x1="130" y1="208" x2="174" y2="208"/>
+<line x1="108" y1="400" x2="108" y2="282"/>
+<path d="M108,282 L147.5,282 A4.5,4.5 0 0 1 156.5,282 L174,282"/>
+<line x1="484" y1="46" x2="484" y2="208"/>
+<line x1="484" y1="208" x2="528" y2="208"/>
+<line x1="462" y1="426" x2="462" y2="282"/>
+<path d="M462,282 L501.5,282 A4.5,4.5 0 0 1 510.5,282 L528,282"/>
+<line x1="838" y1="98" x2="838" y2="282"/>
+<path d="M838,282 L855.5,282 A4.5,4.5 0 0 1 864.5,282 L882,282"/>
+<line x1="816" y1="374" x2="816" y2="208"/>
+<path d="M816,208 L833.5,208 A4.5,4.5 0 0 1 842.5,208 L882,208"/>
 <path d="M484,46 L647.5,46 A4.5,4.5 0 0 1 656.5,46 L1006,46"/>
 <path d="M130,72 L293.5,72 A4.5,4.5 0 0 1 302.5,72 L479.5,72 A4.5,4.5 0 0 1 488.5,72 L652,72"/>
 <path d="M298,98 L479.5,98 A4.5,4.5 0 0 1 488.5,98 L647.5,98 A4.5,4.5 0 0 1 656.5,98 L838,98"/>
-<path d="M462,362 L501.5,362 A4.5,4.5 0 0 1 510.5,362 L855.5,362 A4.5,4.5 0 0 1 864.5,362 L1006,362"/>
-<path d="M108,336 L147.5,336 A4.5,4.5 0 0 1 156.5,336 L457.5,336 A4.5,4.5 0 0 1 466.5,336 L501.5,336 A4.5,4.5 0 0 1 510.5,336 L652,336"/>
-<path d="M298,310 L457.5,310 A4.5,4.5 0 0 1 466.5,310 L501.5,310 A4.5,4.5 0 0 1 510.5,310 L647.5,310 A4.5,4.5 0 0 1 656.5,310 L816,310"/>
-<line x1="298" y1="30" x2="298" y2="176"/>
-<line x1="298" y1="250" x2="298" y2="310"/>
-<line x1="652" y1="30" x2="652" y2="176"/>
-<line x1="652" y1="250" x2="652" y2="336"/>
-<line x1="1006" y1="30" x2="1006" y2="176"/>
-<line x1="1006" y1="250" x2="1006" y2="362"/>
-<line x1="112" y1="412" x2="860" y2="412"/>
-<circle cx="152" cy="412" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="506" cy="412" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M462,426 L501.5,426 A4.5,4.5 0 0 1 510.5,426 L855.5,426 A4.5,4.5 0 0 1 864.5,426 L1006,426"/>
+<path d="M108,400 L147.5,400 A4.5,4.5 0 0 1 156.5,400 L457.5,400 A4.5,4.5 0 0 1 466.5,400 L501.5,400 A4.5,4.5 0 0 1 510.5,400 L652,400"/>
+<path d="M298,374 L457.5,374 A4.5,4.5 0 0 1 466.5,374 L501.5,374 A4.5,4.5 0 0 1 510.5,374 L647.5,374 A4.5,4.5 0 0 1 656.5,374 L816,374"/>
+<line x1="298" y1="30" x2="298" y2="208"/>
+<line x1="298" y1="282" x2="298" y2="374"/>
+<line x1="652" y1="30" x2="652" y2="208"/>
+<line x1="652" y1="282" x2="652" y2="400"/>
+<line x1="1006" y1="30" x2="1006" y2="208"/>
+<line x1="1006" y1="282" x2="1006" y2="426"/>
+<line x1="112" y1="476" x2="860" y2="476"/>
+<circle cx="152" cy="476" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="506" cy="476" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1006" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="652" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="298" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="221" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="182" text-anchor="start" font-size="14">S</text>
-<text x="182" y="256" text-anchor="start" font-size="14">R</text>
-<text x="246" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="256" text-anchor="end" font-size="16">Q</text>
-<text x="568" y="221" text-anchor="middle" font-size="26">B</text>
-<text x="536" y="182" text-anchor="start" font-size="14">S</text>
-<text x="536" y="256" text-anchor="start" font-size="14">R</text>
-<text x="600" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="600" y="256" text-anchor="end" font-size="16">Q</text>
-<text x="922" y="221" text-anchor="middle" font-size="26">C</text>
-<text x="890" y="182" text-anchor="start" font-size="14">S</text>
-<text x="890" y="256" text-anchor="start" font-size="14">R</text>
-<text x="954" y="182" text-anchor="end" font-size="16">Q</text>
-<text x="954" y="256" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="253" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="214" text-anchor="start" font-size="14">S</text>
+<text x="182" y="288" text-anchor="start" font-size="14">R</text>
+<text x="246" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="288" text-anchor="end" font-size="16">Q</text>
+<text x="568" y="253" text-anchor="middle" font-size="26">B</text>
+<text x="568" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="568" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="568" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="568" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="536" y="214" text-anchor="start" font-size="14">S</text>
+<text x="536" y="288" text-anchor="start" font-size="14">R</text>
+<text x="600" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="600" y="288" text-anchor="end" font-size="16">Q</text>
+<text x="922" y="253" text-anchor="middle" font-size="26">C</text>
+<text x="922" y="140" text-anchor="middle" font-size="14">1</text>
+<text x="922" y="362" text-anchor="middle" font-size="14">1</text>
+<text x="922" y="187" text-anchor="middle" font-size="12">PR</text>
+<text x="922" y="312" text-anchor="middle" font-size="12">CLR</text>
+<text x="890" y="214" text-anchor="start" font-size="14">S</text>
+<text x="890" y="288" text-anchor="start" font-size="14">R</text>
+<text x="954" y="214" text-anchor="end" font-size="16">Q</text>
+<text x="954" y="288" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="652" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1006" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="108" y="418" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="482" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -5320,68 +5652,94 @@ $D_{C} = \overline{Q_{A}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= Q_{C} \\ D_{C} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="358" viewBox="0 0 1012 358" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="422" viewBox="0 0 1012 422" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="112" width="80" height="150" rx="2"/>
-<polyline points="152,208 164,217 152,226"/>
-<line x1="152" y1="217" x2="130" y2="217"/>
-<line x1="130" y1="217" x2="130" y2="334"/>
-<line x1="232" y1="150" x2="276" y2="150"/>
-<line x1="232" y1="224" x2="276" y2="224"/>
-<line x1="215.2" y1="216.4" x2="224" y2="216.4" stroke-width="1.4"/>
-<rect x="484" y="112" width="80" height="150" rx="2"/>
-<polyline points="484,208 496,217 484,226"/>
-<line x1="484" y1="217" x2="462" y2="217"/>
-<line x1="462" y1="217" x2="462" y2="334"/>
-<line x1="564" y1="150" x2="608" y2="150"/>
-<line x1="564" y1="224" x2="608" y2="224"/>
-<line x1="547.2" y1="216.4" x2="556" y2="216.4" stroke-width="1.4"/>
-<rect x="816" y="112" width="80" height="150" rx="2"/>
-<polyline points="816,208 828,217 816,226"/>
-<line x1="816" y1="217" x2="794" y2="217"/>
-<line x1="794" y1="217" x2="794" y2="334"/>
-<line x1="896" y1="150" x2="940" y2="150"/>
-<line x1="896" y1="224" x2="940" y2="224"/>
-<line x1="879.2" y1="216.4" x2="888" y2="216.4" stroke-width="1.4"/>
-<line x1="108" y1="72" x2="108" y2="150"/>
-<line x1="108" y1="150" x2="152" y2="150"/>
-<line x1="440" y1="46" x2="440" y2="150"/>
-<line x1="440" y1="150" x2="484" y2="150"/>
-<line x1="772" y1="284" x2="772" y2="150"/>
-<line x1="772" y1="150" x2="816" y2="150"/>
+<rect x="152" y="144" width="80" height="150" rx="2"/>
+<circle cx="192" cy="140" r="4"/>
+<line x1="192" y1="136" x2="192" y2="120"/>
+<circle cx="192" cy="298" r="4"/>
+<line x1="192" y1="302" x2="192" y2="318"/>
+<polyline points="152,240 164,249 152,258"/>
+<line x1="152" y1="249" x2="130" y2="249"/>
+<line x1="130" y1="249" x2="130" y2="398"/>
+<line x1="232" y1="182" x2="276" y2="182"/>
+<line x1="232" y1="256" x2="276" y2="256"/>
+<line x1="215.2" y1="248.4" x2="224" y2="248.4" stroke-width="1.4"/>
+<rect x="484" y="144" width="80" height="150" rx="2"/>
+<circle cx="524" cy="140" r="4"/>
+<line x1="524" y1="136" x2="524" y2="120"/>
+<circle cx="524" cy="298" r="4"/>
+<line x1="524" y1="302" x2="524" y2="318"/>
+<polyline points="484,240 496,249 484,258"/>
+<line x1="484" y1="249" x2="462" y2="249"/>
+<line x1="462" y1="249" x2="462" y2="398"/>
+<line x1="564" y1="182" x2="608" y2="182"/>
+<line x1="564" y1="256" x2="608" y2="256"/>
+<line x1="547.2" y1="248.4" x2="556" y2="248.4" stroke-width="1.4"/>
+<rect x="816" y="144" width="80" height="150" rx="2"/>
+<circle cx="856" cy="140" r="4"/>
+<line x1="856" y1="136" x2="856" y2="120"/>
+<circle cx="856" cy="298" r="4"/>
+<line x1="856" y1="302" x2="856" y2="318"/>
+<polyline points="816,240 828,249 816,258"/>
+<line x1="816" y1="249" x2="794" y2="249"/>
+<line x1="794" y1="249" x2="794" y2="398"/>
+<line x1="896" y1="182" x2="940" y2="182"/>
+<line x1="896" y1="256" x2="940" y2="256"/>
+<line x1="879.2" y1="248.4" x2="888" y2="248.4" stroke-width="1.4"/>
+<line x1="108" y1="72" x2="108" y2="182"/>
+<line x1="108" y1="182" x2="152" y2="182"/>
+<line x1="440" y1="46" x2="440" y2="182"/>
+<line x1="440" y1="182" x2="484" y2="182"/>
+<line x1="772" y1="348" x2="772" y2="182"/>
+<line x1="772" y1="182" x2="816" y2="182"/>
 <path d="M440,46 L603.5,46 A4.5,4.5 0 0 1 612.5,46 L940,46"/>
 <path d="M108,72 L271.5,72 A4.5,4.5 0 0 1 280.5,72 L435.5,72 A4.5,4.5 0 0 1 444.5,72 L608,72"/>
-<path d="M276,284 L457.5,284 A4.5,4.5 0 0 1 466.5,284 L772,284"/>
-<line x1="276" y1="30" x2="276" y2="150"/>
-<line x1="276" y1="224" x2="276" y2="284"/>
-<line x1="608" y1="30" x2="608" y2="150"/>
-<line x1="940" y1="30" x2="940" y2="150"/>
-<line x1="90" y1="334" x2="794" y2="334"/>
-<circle cx="130" cy="334" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="462" cy="334" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M276,348 L457.5,348 A4.5,4.5 0 0 1 466.5,348 L772,348"/>
+<line x1="276" y1="30" x2="276" y2="182"/>
+<line x1="276" y1="256" x2="276" y2="348"/>
+<line x1="608" y1="30" x2="608" y2="182"/>
+<line x1="940" y1="30" x2="940" y2="182"/>
+<line x1="90" y1="398" x2="794" y2="398"/>
+<circle cx="130" cy="398" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="462" cy="398" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="940" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="608" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="195" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="156" text-anchor="start" font-size="14">D</text>
-<text x="224" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="230" text-anchor="end" font-size="16">Q</text>
-<text x="524" y="195" text-anchor="middle" font-size="26">B</text>
-<text x="492" y="156" text-anchor="start" font-size="14">D</text>
-<text x="556" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="556" y="230" text-anchor="end" font-size="16">Q</text>
-<text x="856" y="195" text-anchor="middle" font-size="26">C</text>
-<text x="824" y="156" text-anchor="start" font-size="14">D</text>
-<text x="888" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="888" y="230" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="227" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="188" text-anchor="start" font-size="14">D</text>
+<text x="224" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="262" text-anchor="end" font-size="16">Q</text>
+<text x="524" y="227" text-anchor="middle" font-size="26">B</text>
+<text x="524" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="524" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="524" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="524" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="492" y="188" text-anchor="start" font-size="14">D</text>
+<text x="556" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="556" y="262" text-anchor="end" font-size="16">Q</text>
+<text x="856" y="227" text-anchor="middle" font-size="26">C</text>
+<text x="856" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="856" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="856" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="856" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="824" y="188" text-anchor="start" font-size="14">D</text>
+<text x="888" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="888" y="262" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="608" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="940" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="86" y="340" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="404" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -5635,100 +5993,126 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{A}Q_{C}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1570" height="457" viewBox="0 0 1570 457" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1570" height="521" viewBox="0 0 1570 521" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="185" width="80" height="150" rx="2"/>
-<polyline points="280,281 292,290 280,299"/>
-<line x1="280" y1="290" x2="258" y2="290"/>
-<line x1="258" y1="290" x2="258" y2="433"/>
-<path d="M176,190 C198,190 224,206.5 236,223 C224,239.5 198,256 176,256 Q190,223 176,190 Z"/>
-<path d="M168,190 Q182,223 168,256"/>
-<line x1="236" y1="223" x2="280" y2="223"/>
-<line x1="360" y1="223" x2="404" y2="223"/>
-<line x1="360" y1="297" x2="404" y2="297"/>
-<line x1="343.2" y1="289.4" x2="352" y2="289.4" stroke-width="1.4"/>
-<rect x="740" y="185" width="80" height="150" rx="2"/>
-<polyline points="740,281 752,290 740,299"/>
-<line x1="740" y1="290" x2="718" y2="290"/>
-<line x1="718" y1="290" x2="718" y2="433"/>
-<path d="M636,190 C658,190 684,206.5 696,223 C684,239.5 658,256 636,256 Q650,223 636,190 Z"/>
-<path d="M628,190 Q642,223 628,256"/>
-<line x1="696" y1="223" x2="740" y2="223"/>
-<line x1="820" y1="223" x2="864" y2="223"/>
-<line x1="820" y1="297" x2="864" y2="297"/>
-<line x1="803.2" y1="289.4" x2="812" y2="289.4" stroke-width="1.4"/>
-<rect x="1374" y="185" width="80" height="150" rx="2"/>
-<polyline points="1374,281 1386,290 1374,299"/>
-<line x1="1374" y1="290" x2="1352" y2="290"/>
-<line x1="1352" y1="290" x2="1352" y2="433"/>
-<path d="M1270,190 C1292,190 1318,206.5 1330,223 C1318,239.5 1292,256 1270,256 Q1284,223 1270,190 Z"/>
-<path d="M1138,146 H1164 A26,33 0 0 1 1164,212 H1138 Z"/>
-<line x1="1190" y1="179" x2="1252" y2="179"/>
-<line x1="1252" y1="179" x2="1252" y2="212"/>
-<line x1="1252" y1="212" x2="1276.2" y2="212"/>
-<path d="M1138,234 H1164 A26,33 0 0 1 1164,300 H1138 Z"/>
-<line x1="1190" y1="267" x2="1232" y2="267"/>
-<line x1="1232" y1="267" x2="1232" y2="234"/>
-<line x1="1232" y1="234" x2="1276.2" y2="234"/>
-<line x1="1330" y1="223" x2="1374" y2="223"/>
-<line x1="1454" y1="223" x2="1498" y2="223"/>
-<line x1="1454" y1="297" x2="1498" y2="297"/>
-<line x1="1437.2" y1="289.4" x2="1446" y2="289.4" stroke-width="1.4"/>
-<line x1="130.2" y1="98" x2="130.2" y2="212"/>
-<line x1="130.2" y1="212" x2="174.2" y2="212"/>
-<line x1="108.2" y1="72" x2="108.2" y2="234"/>
-<line x1="108.2" y1="234" x2="174.2" y2="234"/>
-<line x1="590.2" y1="72" x2="590.2" y2="212"/>
-<line x1="590.2" y1="212" x2="634.2" y2="212"/>
-<line x1="568.2" y1="46" x2="568.2" y2="234"/>
-<line x1="568.2" y1="234" x2="634.2" y2="234"/>
-<line x1="1094" y1="98" x2="1094" y2="256"/>
-<line x1="1094" y1="256" x2="1138" y2="256"/>
-<line x1="1072" y1="46" x2="1072" y2="278"/>
-<line x1="1072" y1="278" x2="1138" y2="278"/>
-<line x1="1050" y1="383" x2="1050" y2="190"/>
-<path d="M1050,190 L1067.5,190 A4.5,4.5 0 0 1 1076.5,190 L1089.5,190 A4.5,4.5 0 0 1 1098.5,190 L1138,190"/>
-<line x1="1028" y1="357" x2="1028" y2="168"/>
-<path d="M1028,168 L1067.5,168 A4.5,4.5 0 0 1 1076.5,168 L1089.5,168 A4.5,4.5 0 0 1 1098.5,168 L1138,168"/>
+<rect x="280" y="217" width="80" height="150" rx="2"/>
+<circle cx="320" cy="213" r="4"/>
+<line x1="320" y1="209" x2="320" y2="193"/>
+<circle cx="320" cy="371" r="4"/>
+<line x1="320" y1="375" x2="320" y2="391"/>
+<polyline points="280,313 292,322 280,331"/>
+<line x1="280" y1="322" x2="258" y2="322"/>
+<line x1="258" y1="322" x2="258" y2="497"/>
+<path d="M176,222 C198,222 224,238.5 236,255 C224,271.5 198,288 176,288 Q190,255 176,222 Z"/>
+<path d="M168,222 Q182,255 168,288"/>
+<line x1="236" y1="255" x2="280" y2="255"/>
+<line x1="360" y1="255" x2="404" y2="255"/>
+<line x1="360" y1="329" x2="404" y2="329"/>
+<line x1="343.2" y1="321.4" x2="352" y2="321.4" stroke-width="1.4"/>
+<rect x="740" y="217" width="80" height="150" rx="2"/>
+<circle cx="780" cy="213" r="4"/>
+<line x1="780" y1="209" x2="780" y2="193"/>
+<circle cx="780" cy="371" r="4"/>
+<line x1="780" y1="375" x2="780" y2="391"/>
+<polyline points="740,313 752,322 740,331"/>
+<line x1="740" y1="322" x2="718" y2="322"/>
+<line x1="718" y1="322" x2="718" y2="497"/>
+<path d="M636,222 C658,222 684,238.5 696,255 C684,271.5 658,288 636,288 Q650,255 636,222 Z"/>
+<path d="M628,222 Q642,255 628,288"/>
+<line x1="696" y1="255" x2="740" y2="255"/>
+<line x1="820" y1="255" x2="864" y2="255"/>
+<line x1="820" y1="329" x2="864" y2="329"/>
+<line x1="803.2" y1="321.4" x2="812" y2="321.4" stroke-width="1.4"/>
+<rect x="1374" y="217" width="80" height="150" rx="2"/>
+<circle cx="1414" cy="213" r="4"/>
+<line x1="1414" y1="209" x2="1414" y2="193"/>
+<circle cx="1414" cy="371" r="4"/>
+<line x1="1414" y1="375" x2="1414" y2="391"/>
+<polyline points="1374,313 1386,322 1374,331"/>
+<line x1="1374" y1="322" x2="1352" y2="322"/>
+<line x1="1352" y1="322" x2="1352" y2="497"/>
+<path d="M1270,222 C1292,222 1318,238.5 1330,255 C1318,271.5 1292,288 1270,288 Q1284,255 1270,222 Z"/>
+<path d="M1138,178 H1164 A26,33 0 0 1 1164,244 H1138 Z"/>
+<line x1="1190" y1="211" x2="1252" y2="211"/>
+<line x1="1252" y1="211" x2="1252" y2="244"/>
+<line x1="1252" y1="244" x2="1276.2" y2="244"/>
+<path d="M1138,266 H1164 A26,33 0 0 1 1164,332 H1138 Z"/>
+<line x1="1190" y1="299" x2="1232" y2="299"/>
+<line x1="1232" y1="299" x2="1232" y2="266"/>
+<line x1="1232" y1="266" x2="1276.2" y2="266"/>
+<line x1="1330" y1="255" x2="1374" y2="255"/>
+<line x1="1454" y1="255" x2="1498" y2="255"/>
+<line x1="1454" y1="329" x2="1498" y2="329"/>
+<line x1="1437.2" y1="321.4" x2="1446" y2="321.4" stroke-width="1.4"/>
+<line x1="130.2" y1="98" x2="130.2" y2="244"/>
+<line x1="130.2" y1="244" x2="174.2" y2="244"/>
+<line x1="108.2" y1="72" x2="108.2" y2="266"/>
+<line x1="108.2" y1="266" x2="174.2" y2="266"/>
+<line x1="590.2" y1="72" x2="590.2" y2="244"/>
+<line x1="590.2" y1="244" x2="634.2" y2="244"/>
+<line x1="568.2" y1="46" x2="568.2" y2="266"/>
+<line x1="568.2" y1="266" x2="634.2" y2="266"/>
+<line x1="1094" y1="98" x2="1094" y2="288"/>
+<line x1="1094" y1="288" x2="1138" y2="288"/>
+<line x1="1072" y1="46" x2="1072" y2="310"/>
+<line x1="1072" y1="310" x2="1138" y2="310"/>
+<line x1="1050" y1="447" x2="1050" y2="222"/>
+<path d="M1050,222 L1067.5,222 A4.5,4.5 0 0 1 1076.5,222 L1089.5,222 A4.5,4.5 0 0 1 1098.5,222 L1138,222"/>
+<line x1="1028" y1="421" x2="1028" y2="200"/>
+<path d="M1028,200 L1067.5,200 A4.5,4.5 0 0 1 1076.5,200 L1089.5,200 A4.5,4.5 0 0 1 1098.5,200 L1138,200"/>
 <path d="M568.2,46 L859.5,46 A4.5,4.5 0 0 1 868.5,46 L1498,46"/>
 <path d="M108.2,72 L399.5,72 A4.5,4.5 0 0 1 408.5,72 L563.7,72 A4.5,4.5 0 0 1 572.7,72 L864,72"/>
 <path d="M130.2,98 L563.7,98 A4.5,4.5 0 0 1 572.7,98 L585.7,98 A4.5,4.5 0 0 1 594.7,98 L859.5,98 A4.5,4.5 0 0 1 868.5,98 L1067.5,98 A4.5,4.5 0 0 1 1076.5,98 L1094,98"/>
-<path d="M1050,383 L1347.5,383 A4.5,4.5 0 0 1 1356.5,383 L1498,383"/>
-<path d="M404,357 L713.5,357 A4.5,4.5 0 0 1 722.5,357 L1028,357"/>
-<line x1="404" y1="30" x2="404" y2="223"/>
-<line x1="404" y1="297" x2="404" y2="357"/>
-<line x1="864" y1="30" x2="864" y2="223"/>
-<line x1="1498" y1="30" x2="1498" y2="223"/>
-<line x1="1498" y1="297" x2="1498" y2="383"/>
-<line x1="218" y1="433" x2="1352" y2="433"/>
-<circle cx="258" cy="433" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="718" cy="433" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1050,447 L1347.5,447 A4.5,4.5 0 0 1 1356.5,447 L1498,447"/>
+<path d="M404,421 L713.5,421 A4.5,4.5 0 0 1 722.5,421 L1028,421"/>
+<line x1="404" y1="30" x2="404" y2="255"/>
+<line x1="404" y1="329" x2="404" y2="421"/>
+<line x1="864" y1="30" x2="864" y2="255"/>
+<line x1="1498" y1="30" x2="1498" y2="255"/>
+<line x1="1498" y1="329" x2="1498" y2="447"/>
+<line x1="218" y1="497" x2="1352" y2="497"/>
+<circle cx="258" cy="497" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="718" cy="497" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1498" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1072" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="864" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="590.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="268" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="229" text-anchor="start" font-size="14">T</text>
-<text x="352" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="780" y="268" text-anchor="middle" font-size="26">B</text>
-<text x="748" y="229" text-anchor="start" font-size="14">T</text>
-<text x="812" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="812" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1414" y="268" text-anchor="middle" font-size="26">C</text>
-<text x="1382" y="229" text-anchor="start" font-size="14">T</text>
-<text x="1446" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1446" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="300" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="261" text-anchor="start" font-size="14">T</text>
+<text x="352" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="780" y="300" text-anchor="middle" font-size="26">B</text>
+<text x="780" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="780" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="780" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="780" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="748" y="261" text-anchor="start" font-size="14">T</text>
+<text x="812" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="812" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1414" y="300" text-anchor="middle" font-size="26">C</text>
+<text x="1414" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1414" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1414" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1414" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1382" y="261" text-anchor="start" font-size="14">T</text>
+<text x="1446" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1446" y="335" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="864" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1498" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="214" y="439" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="503" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -6129,89 +6513,115 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B}Q_{C} \\ J_{B} = K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="332" viewBox="0 0 1210 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="396" viewBox="0 0 1210 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="112" width="80" height="150" rx="2"/>
-<polyline points="308,178 320,187 308,196"/>
-<circle cx="304" cy="187" r="4"/>
-<line x1="300" y1="187" x2="286" y2="187"/>
-<line x1="286" y1="187" x2="286" y2="308"/>
-<path d="M166,154 H192 A26,33 0 0 1 192,220 H166 Z"/>
-<line x1="218" y1="187" x2="262" y2="187"/>
-<line x1="262" y1="187" x2="262" y2="150"/>
-<line x1="262" y1="150" x2="308" y2="150"/>
-<line x1="262" y1="187" x2="262" y2="224"/>
-<path d="M262,224 L281.5,224 A4.5,4.5 0 0 1 290.5,224 L308,224"/>
-<line x1="388" y1="150" x2="432" y2="150"/>
-<line x1="388" y1="224" x2="432" y2="224"/>
-<line x1="371.2" y1="216.4" x2="380" y2="216.4" stroke-width="1.4"/>
-<rect x="662" y="112" width="80" height="150" rx="2"/>
-<polyline points="662,178 674,187 662,196"/>
-<circle cx="658" cy="187" r="4"/>
-<line x1="654" y1="187" x2="640" y2="187"/>
-<line x1="640" y1="187" x2="640" y2="308"/>
-<line x1="616" y1="187" x2="616" y2="150"/>
-<line x1="616" y1="150" x2="662" y2="150"/>
-<line x1="616" y1="187" x2="616" y2="224"/>
-<path d="M616,224 L635.5,224 A4.5,4.5 0 0 1 644.5,224 L662,224"/>
-<line x1="742" y1="150" x2="786" y2="150"/>
-<line x1="742" y1="224" x2="786" y2="224"/>
-<line x1="725.2" y1="216.4" x2="734" y2="216.4" stroke-width="1.4"/>
-<rect x="1014" y="112" width="80" height="150" rx="2"/>
-<polyline points="1014,178 1026,187 1014,196"/>
-<circle cx="1010" cy="187" r="4"/>
-<line x1="1006" y1="187" x2="992" y2="187"/>
-<line x1="992" y1="187" x2="992" y2="308"/>
-<line x1="962" y1="150" x2="1014" y2="150"/>
-<path d="M962,224 L987.5,224 A4.5,4.5 0 0 1 996.5,224 L1014,224"/>
-<line x1="1094" y1="150" x2="1138" y2="150"/>
-<line x1="1094" y1="224" x2="1138" y2="224"/>
-<line x1="1077.2" y1="216.4" x2="1086" y2="216.4" stroke-width="1.4"/>
-<line x1="122" y1="72" x2="122" y2="176"/>
-<line x1="122" y1="176" x2="166" y2="176"/>
-<line x1="100" y1="46" x2="100" y2="198"/>
-<line x1="100" y1="198" x2="166" y2="198"/>
-<line x1="572" y1="46" x2="572" y2="187"/>
-<line x1="572" y1="187" x2="616" y2="187"/>
+<rect x="308" y="144" width="80" height="150" rx="2"/>
+<circle cx="348" cy="140" r="4"/>
+<line x1="348" y1="136" x2="348" y2="120"/>
+<circle cx="348" cy="298" r="4"/>
+<line x1="348" y1="302" x2="348" y2="318"/>
+<polyline points="308,210 320,219 308,228"/>
+<circle cx="304" cy="219" r="4"/>
+<line x1="300" y1="219" x2="286" y2="219"/>
+<line x1="286" y1="219" x2="286" y2="372"/>
+<path d="M166,186 H192 A26,33 0 0 1 192,252 H166 Z"/>
+<line x1="218" y1="219" x2="262" y2="219"/>
+<line x1="262" y1="219" x2="262" y2="182"/>
+<line x1="262" y1="182" x2="308" y2="182"/>
+<line x1="262" y1="219" x2="262" y2="256"/>
+<path d="M262,256 L281.5,256 A4.5,4.5 0 0 1 290.5,256 L308,256"/>
+<line x1="388" y1="182" x2="432" y2="182"/>
+<line x1="388" y1="256" x2="432" y2="256"/>
+<line x1="371.2" y1="248.4" x2="380" y2="248.4" stroke-width="1.4"/>
+<rect x="662" y="144" width="80" height="150" rx="2"/>
+<circle cx="702" cy="140" r="4"/>
+<line x1="702" y1="136" x2="702" y2="120"/>
+<circle cx="702" cy="298" r="4"/>
+<line x1="702" y1="302" x2="702" y2="318"/>
+<polyline points="662,210 674,219 662,228"/>
+<circle cx="658" cy="219" r="4"/>
+<line x1="654" y1="219" x2="640" y2="219"/>
+<line x1="640" y1="219" x2="640" y2="372"/>
+<line x1="616" y1="219" x2="616" y2="182"/>
+<line x1="616" y1="182" x2="662" y2="182"/>
+<line x1="616" y1="219" x2="616" y2="256"/>
+<path d="M616,256 L635.5,256 A4.5,4.5 0 0 1 644.5,256 L662,256"/>
+<line x1="742" y1="182" x2="786" y2="182"/>
+<line x1="742" y1="256" x2="786" y2="256"/>
+<line x1="725.2" y1="248.4" x2="734" y2="248.4" stroke-width="1.4"/>
+<rect x="1014" y="144" width="80" height="150" rx="2"/>
+<circle cx="1054" cy="140" r="4"/>
+<line x1="1054" y1="136" x2="1054" y2="120"/>
+<circle cx="1054" cy="298" r="4"/>
+<line x1="1054" y1="302" x2="1054" y2="318"/>
+<polyline points="1014,210 1026,219 1014,228"/>
+<circle cx="1010" cy="219" r="4"/>
+<line x1="1006" y1="219" x2="992" y2="219"/>
+<line x1="992" y1="219" x2="992" y2="372"/>
+<line x1="962" y1="182" x2="1014" y2="182"/>
+<path d="M962,256 L987.5,256 A4.5,4.5 0 0 1 996.5,256 L1014,256"/>
+<line x1="1094" y1="182" x2="1138" y2="182"/>
+<line x1="1094" y1="256" x2="1138" y2="256"/>
+<line x1="1077.2" y1="248.4" x2="1086" y2="248.4" stroke-width="1.4"/>
+<line x1="122" y1="72" x2="122" y2="208"/>
+<line x1="122" y1="208" x2="166" y2="208"/>
+<line x1="100" y1="46" x2="100" y2="230"/>
+<line x1="100" y1="230" x2="166" y2="230"/>
+<line x1="572" y1="46" x2="572" y2="219"/>
+<line x1="572" y1="219" x2="616" y2="219"/>
 <path d="M100,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L781.5,46 A4.5,4.5 0 0 1 790.5,46 L1138,46"/>
 <path d="M122,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L567.5,72 A4.5,4.5 0 0 1 576.5,72 L786,72"/>
-<line x1="432" y1="30" x2="432" y2="150"/>
-<line x1="786" y1="30" x2="786" y2="150"/>
-<line x1="1138" y1="30" x2="1138" y2="150"/>
-<line x1="246" y1="308" x2="992" y2="308"/>
-<circle cx="286" cy="308" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="262" cy="187" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="308" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="187" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="432" y1="30" x2="432" y2="182"/>
+<line x1="786" y1="30" x2="786" y2="182"/>
+<line x1="1138" y1="30" x2="1138" y2="182"/>
+<line x1="246" y1="372" x2="992" y2="372"/>
+<circle cx="286" cy="372" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="262" cy="219" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="372" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="616" cy="219" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1138" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="572" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="195" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="156" text-anchor="start" font-size="14">J</text>
-<text x="316" y="230" text-anchor="start" font-size="14">K</text>
-<text x="380" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="230" text-anchor="end" font-size="16">Q</text>
-<text x="702" y="195" text-anchor="middle" font-size="26">B</text>
-<text x="670" y="156" text-anchor="start" font-size="14">J</text>
-<text x="670" y="230" text-anchor="start" font-size="14">K</text>
-<text x="734" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="734" y="230" text-anchor="end" font-size="16">Q</text>
-<text x="1054" y="195" text-anchor="middle" font-size="26">C</text>
-<text x="1022" y="156" text-anchor="start" font-size="14">J</text>
-<text x="1022" y="230" text-anchor="start" font-size="14">K</text>
-<text x="958" y="156" text-anchor="end" font-size="16">1</text>
-<text x="958" y="230" text-anchor="end" font-size="16">1</text>
-<text x="1086" y="156" text-anchor="end" font-size="16">Q</text>
-<text x="1086" y="230" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="227" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="188" text-anchor="start" font-size="14">J</text>
+<text x="316" y="262" text-anchor="start" font-size="14">K</text>
+<text x="380" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="262" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="227" text-anchor="middle" font-size="26">B</text>
+<text x="702" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="702" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="670" y="188" text-anchor="start" font-size="14">J</text>
+<text x="670" y="262" text-anchor="start" font-size="14">K</text>
+<text x="734" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="262" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="227" text-anchor="middle" font-size="26">C</text>
+<text x="1054" y="114" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="336" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="161" text-anchor="middle" font-size="12">PR</text>
+<text x="1054" y="286" text-anchor="middle" font-size="12">CLR</text>
+<text x="1022" y="188" text-anchor="start" font-size="14">J</text>
+<text x="1022" y="262" text-anchor="start" font-size="14">K</text>
+<text x="958" y="188" text-anchor="end" font-size="16">1</text>
+<text x="958" y="262" text-anchor="end" font-size="16">1</text>
+<text x="1086" y="188" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="262" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="314" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="378" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -6613,83 +7023,97 @@ $S_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline{Q_{A}}Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="508" viewBox="0 0 1390 508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="572" viewBox="0 0 1390 572" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="352" y="152" width="80" height="194" rx="2"/>
-<polyline points="352,240 364,249 352,258"/>
-<circle cx="348" cy="249" r="4"/>
-<line x1="344" y1="249" x2="330" y2="249"/>
-<line x1="330" y1="249" x2="330" y2="484"/>
-<path d="M256,146 H282 A26,44 0 0 1 282,234 H256 Z"/>
-<line x1="308" y1="190" x2="352" y2="190"/>
-<path d="M256,264 H282 A26,44 0 0 1 282,352 H256 Z"/>
-<path d="M308,308 L325.5,308 A4.5,4.5 0 0 1 334.5,308 L352,308"/>
-<line x1="432" y1="190" x2="476" y2="190"/>
-<line x1="432" y1="308" x2="476" y2="308"/>
-<line x1="415.2" y1="300.4" x2="424" y2="300.4" stroke-width="1.4"/>
-<rect x="840" y="152" width="80" height="194" rx="2"/>
-<polyline points="840,240 852,249 840,258"/>
-<circle cx="836" cy="249" r="4"/>
-<line x1="832" y1="249" x2="818" y2="249"/>
-<line x1="818" y1="249" x2="818" y2="484"/>
-<path d="M744,157 H770 A26,33 0 0 1 770,223 H744 Z"/>
-<line x1="796" y1="190" x2="840" y2="190"/>
-<path d="M744,275 H770 A26,33 0 0 1 770,341 H744 Z"/>
-<path d="M796,308 L813.5,308 A4.5,4.5 0 0 1 822.5,308 L840,308"/>
-<line x1="920" y1="190" x2="964" y2="190"/>
-<line x1="920" y1="308" x2="964" y2="308"/>
-<line x1="903.2" y1="300.4" x2="912" y2="300.4" stroke-width="1.4"/>
-<rect x="1194" y="152" width="80" height="194" rx="2"/>
-<polyline points="1194,240 1206,249 1194,258"/>
-<circle cx="1190" cy="249" r="4"/>
-<line x1="1186" y1="249" x2="1172" y2="249"/>
-<line x1="1172" y1="249" x2="1172" y2="484"/>
-<line x1="1274" y1="190" x2="1318" y2="190"/>
-<line x1="1274" y1="308" x2="1318" y2="308"/>
-<line x1="1257.2" y1="300.4" x2="1266" y2="300.4" stroke-width="1.4"/>
-<line x1="212" y1="72" x2="212" y2="190"/>
-<line x1="212" y1="190" x2="256" y2="190"/>
-<line x1="190" y1="46" x2="190" y2="212"/>
-<line x1="190" y1="212" x2="256" y2="212"/>
-<line x1="168" y1="98" x2="168" y2="286"/>
-<line x1="168" y1="286" x2="256" y2="286"/>
-<line x1="146" y1="72" x2="146" y2="308"/>
-<line x1="146" y1="308" x2="256" y2="308"/>
-<line x1="124" y1="46" x2="124" y2="330"/>
-<line x1="124" y1="330" x2="256" y2="330"/>
-<line x1="102" y1="382" x2="102" y2="168"/>
-<path d="M102,168 L119.5,168 A4.5,4.5 0 0 1 128.5,168 L141.5,168 A4.5,4.5 0 0 1 150.5,168 L163.5,168 A4.5,4.5 0 0 1 172.5,168 L185.5,168 A4.5,4.5 0 0 1 194.5,168 L207.5,168 A4.5,4.5 0 0 1 216.5,168 L256,168"/>
-<line x1="700" y1="46" x2="700" y2="201"/>
-<line x1="700" y1="201" x2="744" y2="201"/>
-<line x1="678" y1="72" x2="678" y2="297"/>
-<line x1="678" y1="297" x2="744" y2="297"/>
-<line x1="656" y1="46" x2="656" y2="319"/>
-<line x1="656" y1="319" x2="744" y2="319"/>
-<line x1="634" y1="408" x2="634" y2="179"/>
-<path d="M634,179 L651.5,179 A4.5,4.5 0 0 1 660.5,179 L673.5,179 A4.5,4.5 0 0 1 682.5,179 L695.5,179 A4.5,4.5 0 0 1 704.5,179 L744,179"/>
-<line x1="1150" y1="46" x2="1150" y2="308"/>
-<path d="M1150,308 L1167.5,308 A4.5,4.5 0 0 1 1176.5,308 L1194,308"/>
-<line x1="1128" y1="434" x2="1128" y2="190"/>
-<path d="M1128,190 L1145.5,190 A4.5,4.5 0 0 1 1154.5,190 L1194,190"/>
+<rect x="352" y="184" width="80" height="194" rx="2"/>
+<circle cx="392" cy="180" r="4"/>
+<line x1="392" y1="176" x2="392" y2="160"/>
+<circle cx="392" cy="382" r="4"/>
+<line x1="392" y1="386" x2="392" y2="402"/>
+<polyline points="352,272 364,281 352,290"/>
+<circle cx="348" cy="281" r="4"/>
+<line x1="344" y1="281" x2="330" y2="281"/>
+<line x1="330" y1="281" x2="330" y2="548"/>
+<path d="M256,178 H282 A26,44 0 0 1 282,266 H256 Z"/>
+<line x1="308" y1="222" x2="352" y2="222"/>
+<path d="M256,296 H282 A26,44 0 0 1 282,384 H256 Z"/>
+<path d="M308,340 L325.5,340 A4.5,4.5 0 0 1 334.5,340 L352,340"/>
+<line x1="432" y1="222" x2="476" y2="222"/>
+<line x1="432" y1="340" x2="476" y2="340"/>
+<line x1="415.2" y1="332.4" x2="424" y2="332.4" stroke-width="1.4"/>
+<rect x="840" y="184" width="80" height="194" rx="2"/>
+<circle cx="880" cy="180" r="4"/>
+<line x1="880" y1="176" x2="880" y2="160"/>
+<circle cx="880" cy="382" r="4"/>
+<line x1="880" y1="386" x2="880" y2="402"/>
+<polyline points="840,272 852,281 840,290"/>
+<circle cx="836" cy="281" r="4"/>
+<line x1="832" y1="281" x2="818" y2="281"/>
+<line x1="818" y1="281" x2="818" y2="548"/>
+<path d="M744,189 H770 A26,33 0 0 1 770,255 H744 Z"/>
+<line x1="796" y1="222" x2="840" y2="222"/>
+<path d="M744,307 H770 A26,33 0 0 1 770,373 H744 Z"/>
+<path d="M796,340 L813.5,340 A4.5,4.5 0 0 1 822.5,340 L840,340"/>
+<line x1="920" y1="222" x2="964" y2="222"/>
+<line x1="920" y1="340" x2="964" y2="340"/>
+<line x1="903.2" y1="332.4" x2="912" y2="332.4" stroke-width="1.4"/>
+<rect x="1194" y="184" width="80" height="194" rx="2"/>
+<circle cx="1234" cy="180" r="4"/>
+<line x1="1234" y1="176" x2="1234" y2="160"/>
+<circle cx="1234" cy="382" r="4"/>
+<line x1="1234" y1="386" x2="1234" y2="402"/>
+<polyline points="1194,272 1206,281 1194,290"/>
+<circle cx="1190" cy="281" r="4"/>
+<line x1="1186" y1="281" x2="1172" y2="281"/>
+<line x1="1172" y1="281" x2="1172" y2="548"/>
+<line x1="1274" y1="222" x2="1318" y2="222"/>
+<line x1="1274" y1="340" x2="1318" y2="340"/>
+<line x1="1257.2" y1="332.4" x2="1266" y2="332.4" stroke-width="1.4"/>
+<line x1="212" y1="72" x2="212" y2="222"/>
+<line x1="212" y1="222" x2="256" y2="222"/>
+<line x1="190" y1="46" x2="190" y2="244"/>
+<line x1="190" y1="244" x2="256" y2="244"/>
+<line x1="168" y1="98" x2="168" y2="318"/>
+<line x1="168" y1="318" x2="256" y2="318"/>
+<line x1="146" y1="72" x2="146" y2="340"/>
+<line x1="146" y1="340" x2="256" y2="340"/>
+<line x1="124" y1="46" x2="124" y2="362"/>
+<line x1="124" y1="362" x2="256" y2="362"/>
+<line x1="102" y1="446" x2="102" y2="200"/>
+<path d="M102,200 L119.5,200 A4.5,4.5 0 0 1 128.5,200 L141.5,200 A4.5,4.5 0 0 1 150.5,200 L163.5,200 A4.5,4.5 0 0 1 172.5,200 L185.5,200 A4.5,4.5 0 0 1 194.5,200 L207.5,200 A4.5,4.5 0 0 1 216.5,200 L256,200"/>
+<line x1="700" y1="46" x2="700" y2="233"/>
+<line x1="700" y1="233" x2="744" y2="233"/>
+<line x1="678" y1="72" x2="678" y2="329"/>
+<line x1="678" y1="329" x2="744" y2="329"/>
+<line x1="656" y1="46" x2="656" y2="351"/>
+<line x1="656" y1="351" x2="744" y2="351"/>
+<line x1="634" y1="472" x2="634" y2="211"/>
+<path d="M634,211 L651.5,211 A4.5,4.5 0 0 1 660.5,211 L673.5,211 A4.5,4.5 0 0 1 682.5,211 L695.5,211 A4.5,4.5 0 0 1 704.5,211 L744,211"/>
+<line x1="1150" y1="46" x2="1150" y2="340"/>
+<path d="M1150,340 L1167.5,340 A4.5,4.5 0 0 1 1176.5,340 L1194,340"/>
+<line x1="1128" y1="498" x2="1128" y2="222"/>
+<path d="M1128,222 L1145.5,222 A4.5,4.5 0 0 1 1154.5,222 L1194,222"/>
 <path d="M124,46 L471.5,46 A4.5,4.5 0 0 1 480.5,46 L959.5,46 A4.5,4.5 0 0 1 968.5,46 L1318,46"/>
 <path d="M146,72 L185.5,72 A4.5,4.5 0 0 1 194.5,72 L471.5,72 A4.5,4.5 0 0 1 480.5,72 L651.5,72 A4.5,4.5 0 0 1 660.5,72 L695.5,72 A4.5,4.5 0 0 1 704.5,72 L964,72"/>
 <path d="M168,98 L185.5,98 A4.5,4.5 0 0 1 194.5,98 L207.5,98 A4.5,4.5 0 0 1 216.5,98 L476,98"/>
-<path d="M1128,434 L1167.5,434 A4.5,4.5 0 0 1 1176.5,434 L1318,434"/>
-<path d="M634,408 L813.5,408 A4.5,4.5 0 0 1 822.5,408 L964,408"/>
-<path d="M102,382 L325.5,382 A4.5,4.5 0 0 1 334.5,382 L476,382"/>
-<line x1="476" y1="30" x2="476" y2="190"/>
-<line x1="476" y1="308" x2="476" y2="382"/>
-<line x1="964" y1="30" x2="964" y2="190"/>
-<line x1="964" y1="308" x2="964" y2="408"/>
-<line x1="1318" y1="30" x2="1318" y2="190"/>
-<line x1="1318" y1="308" x2="1318" y2="434"/>
-<line x1="290" y1="484" x2="1172" y2="484"/>
-<circle cx="330" cy="484" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="818" cy="484" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1128,498 L1167.5,498 A4.5,4.5 0 0 1 1176.5,498 L1318,498"/>
+<path d="M634,472 L813.5,472 A4.5,4.5 0 0 1 822.5,472 L964,472"/>
+<path d="M102,446 L325.5,446 A4.5,4.5 0 0 1 334.5,446 L476,446"/>
+<line x1="476" y1="30" x2="476" y2="222"/>
+<line x1="476" y1="340" x2="476" y2="446"/>
+<line x1="964" y1="30" x2="964" y2="222"/>
+<line x1="964" y1="340" x2="964" y2="472"/>
+<line x1="1318" y1="30" x2="1318" y2="222"/>
+<line x1="1318" y1="340" x2="1318" y2="498"/>
+<line x1="290" y1="548" x2="1172" y2="548"/>
+<circle cx="330" cy="548" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="818" cy="548" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1318" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="190" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="700" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -6700,25 +7124,37 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B}Q_{C} \\ S_{A} &= \overline
 <circle cx="678" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="476" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="392" y="257" text-anchor="middle" font-size="26">A</text>
-<text x="360" y="196" text-anchor="start" font-size="14">S</text>
-<text x="360" y="314" text-anchor="start" font-size="14">R</text>
-<text x="424" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="424" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="880" y="257" text-anchor="middle" font-size="26">B</text>
-<text x="848" y="196" text-anchor="start" font-size="14">S</text>
-<text x="848" y="314" text-anchor="start" font-size="14">R</text>
-<text x="912" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="912" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1234" y="257" text-anchor="middle" font-size="26">C</text>
-<text x="1202" y="196" text-anchor="start" font-size="14">S</text>
-<text x="1202" y="314" text-anchor="start" font-size="14">R</text>
-<text x="1266" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1266" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="392" y="289" text-anchor="middle" font-size="26">A</text>
+<text x="392" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="392" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="392" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="392" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="360" y="228" text-anchor="start" font-size="14">S</text>
+<text x="360" y="346" text-anchor="start" font-size="14">R</text>
+<text x="424" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="424" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="880" y="289" text-anchor="middle" font-size="26">B</text>
+<text x="880" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="880" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="880" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="880" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="848" y="228" text-anchor="start" font-size="14">S</text>
+<text x="848" y="346" text-anchor="start" font-size="14">R</text>
+<text x="912" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="912" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1234" y="289" text-anchor="middle" font-size="26">C</text>
+<text x="1234" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1234" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1234" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1234" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1202" y="228" text-anchor="start" font-size="14">S</text>
+<text x="1202" y="346" text-anchor="start" font-size="14">R</text>
+<text x="1266" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1266" y="346" text-anchor="end" font-size="16">Q</text>
 <text x="476" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="964" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1318" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="286" y="490" text-anchor="end" font-size="16">Clock</text>
+<text x="286" y="554" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -6987,108 +7423,134 @@ $D_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1528" height="599" viewBox="0 0 1528 599" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1528" height="663" viewBox="0 0 1528 663" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="540" y="262" width="80" height="150" rx="2"/>
-<polyline points="540,358 552,367 540,376"/>
-<line x1="540" y1="367" x2="518" y2="367"/>
-<line x1="518" y1="367" x2="518" y2="575"/>
-<path d="M436,256 C458,256 484,278 496,300 C484,322 458,344 436,344 Q450,300 436,256 Z"/>
-<path d="M284,146 H310 A26,44 0 0 1 310,234 H284 Z"/>
-<line x1="336" y1="190" x2="418" y2="190"/>
-<line x1="418" y1="190" x2="418" y2="278"/>
-<line x1="418" y1="278" x2="441.2" y2="278"/>
-<path d="M284,267 H310 A26,33 0 0 1 310,333 H284 Z"/>
-<line x1="336" y1="300" x2="398" y2="300"/>
-<line x1="398" y1="300" x2="443" y2="300"/>
-<path d="M284,377 H310 A26,33 0 0 1 310,443 H284 Z"/>
-<line x1="336" y1="410" x2="378" y2="410"/>
-<line x1="378" y1="410" x2="378" y2="322"/>
-<line x1="378" y1="322" x2="441.2" y2="322"/>
-<line x1="496" y1="300" x2="540" y2="300"/>
-<line x1="620" y1="300" x2="664" y2="300"/>
-<line x1="620" y1="374" x2="664" y2="374"/>
-<line x1="603.2" y1="366.4" x2="612" y2="366.4" stroke-width="1.4"/>
-<rect x="1000" y="262" width="80" height="150" rx="2"/>
-<polyline points="1000,358 1012,367 1000,376"/>
-<line x1="1000" y1="367" x2="978" y2="367"/>
-<line x1="978" y1="367" x2="978" y2="575"/>
-<path d="M896,267 C918,267 944,283.5 956,300 C944,316.5 918,333 896,333 Q910,300 896,267 Z"/>
-<path d="M888,267 Q902,300 888,333"/>
-<line x1="956" y1="300" x2="1000" y2="300"/>
-<line x1="1080" y1="300" x2="1124" y2="300"/>
-<line x1="1080" y1="374" x2="1124" y2="374"/>
-<line x1="1063.2" y1="366.4" x2="1072" y2="366.4" stroke-width="1.4"/>
-<rect x="1332" y="262" width="80" height="150" rx="2"/>
-<polyline points="1332,358 1344,367 1332,376"/>
-<line x1="1332" y1="367" x2="1310" y2="367"/>
-<line x1="1310" y1="367" x2="1310" y2="575"/>
-<line x1="1412" y1="300" x2="1456" y2="300"/>
-<line x1="1412" y1="374" x2="1456" y2="374"/>
-<line x1="1395.2" y1="366.4" x2="1404" y2="366.4" stroke-width="1.4"/>
-<line x1="240" y1="72" x2="240" y2="190"/>
-<line x1="240" y1="190" x2="284" y2="190"/>
-<line x1="218" y1="46" x2="218" y2="212"/>
-<line x1="218" y1="212" x2="284" y2="212"/>
-<line x1="196" y1="98" x2="196" y2="289"/>
-<line x1="196" y1="289" x2="284" y2="289"/>
-<line x1="174" y1="98" x2="174" y2="399"/>
-<line x1="174" y1="399" x2="284" y2="399"/>
-<line x1="152" y1="525" x2="152" y2="421"/>
-<line x1="152" y1="421" x2="284" y2="421"/>
-<line x1="130" y1="499" x2="130" y2="311"/>
-<path d="M130,311 L169.5,311 A4.5,4.5 0 0 1 178.5,311 L284,311"/>
-<line x1="108" y1="473" x2="108" y2="168"/>
-<path d="M108,168 L169.5,168 A4.5,4.5 0 0 1 178.5,168 L191.5,168 A4.5,4.5 0 0 1 200.5,168 L213.5,168 A4.5,4.5 0 0 1 222.5,168 L235.5,168 A4.5,4.5 0 0 1 244.5,168 L284,168"/>
-<line x1="850.2" y1="72" x2="850.2" y2="289"/>
-<line x1="850.2" y1="289" x2="894.2" y2="289"/>
-<line x1="828.2" y1="46" x2="828.2" y2="311"/>
-<line x1="828.2" y1="311" x2="894.2" y2="311"/>
-<line x1="1288" y1="525" x2="1288" y2="300"/>
-<line x1="1288" y1="300" x2="1332" y2="300"/>
+<rect x="540" y="294" width="80" height="150" rx="2"/>
+<circle cx="580" cy="290" r="4"/>
+<line x1="580" y1="286" x2="580" y2="270"/>
+<circle cx="580" cy="448" r="4"/>
+<line x1="580" y1="452" x2="580" y2="468"/>
+<polyline points="540,390 552,399 540,408"/>
+<line x1="540" y1="399" x2="518" y2="399"/>
+<line x1="518" y1="399" x2="518" y2="639"/>
+<path d="M436,288 C458,288 484,310 496,332 C484,354 458,376 436,376 Q450,332 436,288 Z"/>
+<path d="M284,178 H310 A26,44 0 0 1 310,266 H284 Z"/>
+<line x1="336" y1="222" x2="418" y2="222"/>
+<line x1="418" y1="222" x2="418" y2="310"/>
+<line x1="418" y1="310" x2="441.2" y2="310"/>
+<path d="M284,299 H310 A26,33 0 0 1 310,365 H284 Z"/>
+<line x1="336" y1="332" x2="398" y2="332"/>
+<line x1="398" y1="332" x2="443" y2="332"/>
+<path d="M284,409 H310 A26,33 0 0 1 310,475 H284 Z"/>
+<line x1="336" y1="442" x2="378" y2="442"/>
+<line x1="378" y1="442" x2="378" y2="354"/>
+<line x1="378" y1="354" x2="441.2" y2="354"/>
+<line x1="496" y1="332" x2="540" y2="332"/>
+<line x1="620" y1="332" x2="664" y2="332"/>
+<line x1="620" y1="406" x2="664" y2="406"/>
+<line x1="603.2" y1="398.4" x2="612" y2="398.4" stroke-width="1.4"/>
+<rect x="1000" y="294" width="80" height="150" rx="2"/>
+<circle cx="1040" cy="290" r="4"/>
+<line x1="1040" y1="286" x2="1040" y2="270"/>
+<circle cx="1040" cy="448" r="4"/>
+<line x1="1040" y1="452" x2="1040" y2="468"/>
+<polyline points="1000,390 1012,399 1000,408"/>
+<line x1="1000" y1="399" x2="978" y2="399"/>
+<line x1="978" y1="399" x2="978" y2="639"/>
+<path d="M896,299 C918,299 944,315.5 956,332 C944,348.5 918,365 896,365 Q910,332 896,299 Z"/>
+<path d="M888,299 Q902,332 888,365"/>
+<line x1="956" y1="332" x2="1000" y2="332"/>
+<line x1="1080" y1="332" x2="1124" y2="332"/>
+<line x1="1080" y1="406" x2="1124" y2="406"/>
+<line x1="1063.2" y1="398.4" x2="1072" y2="398.4" stroke-width="1.4"/>
+<rect x="1332" y="294" width="80" height="150" rx="2"/>
+<circle cx="1372" cy="290" r="4"/>
+<line x1="1372" y1="286" x2="1372" y2="270"/>
+<circle cx="1372" cy="448" r="4"/>
+<line x1="1372" y1="452" x2="1372" y2="468"/>
+<polyline points="1332,390 1344,399 1332,408"/>
+<line x1="1332" y1="399" x2="1310" y2="399"/>
+<line x1="1310" y1="399" x2="1310" y2="639"/>
+<line x1="1412" y1="332" x2="1456" y2="332"/>
+<line x1="1412" y1="406" x2="1456" y2="406"/>
+<line x1="1395.2" y1="398.4" x2="1404" y2="398.4" stroke-width="1.4"/>
+<line x1="240" y1="72" x2="240" y2="222"/>
+<line x1="240" y1="222" x2="284" y2="222"/>
+<line x1="218" y1="46" x2="218" y2="244"/>
+<line x1="218" y1="244" x2="284" y2="244"/>
+<line x1="196" y1="98" x2="196" y2="321"/>
+<line x1="196" y1="321" x2="284" y2="321"/>
+<line x1="174" y1="98" x2="174" y2="431"/>
+<line x1="174" y1="431" x2="284" y2="431"/>
+<line x1="152" y1="589" x2="152" y2="453"/>
+<line x1="152" y1="453" x2="284" y2="453"/>
+<line x1="130" y1="563" x2="130" y2="343"/>
+<path d="M130,343 L169.5,343 A4.5,4.5 0 0 1 178.5,343 L284,343"/>
+<line x1="108" y1="537" x2="108" y2="200"/>
+<path d="M108,200 L169.5,200 A4.5,4.5 0 0 1 178.5,200 L191.5,200 A4.5,4.5 0 0 1 200.5,200 L213.5,200 A4.5,4.5 0 0 1 222.5,200 L235.5,200 A4.5,4.5 0 0 1 244.5,200 L284,200"/>
+<line x1="850.2" y1="72" x2="850.2" y2="321"/>
+<line x1="850.2" y1="321" x2="894.2" y2="321"/>
+<line x1="828.2" y1="46" x2="828.2" y2="343"/>
+<line x1="828.2" y1="343" x2="894.2" y2="343"/>
+<line x1="1288" y1="589" x2="1288" y2="332"/>
+<line x1="1288" y1="332" x2="1332" y2="332"/>
 <path d="M218,46 L659.5,46 A4.5,4.5 0 0 1 668.5,46 L1119.5,46 A4.5,4.5 0 0 1 1128.5,46 L1456,46"/>
 <path d="M240,72 L659.5,72 A4.5,4.5 0 0 1 668.5,72 L823.7,72 A4.5,4.5 0 0 1 832.7,72 L1124,72"/>
 <path d="M174,98 L213.5,98 A4.5,4.5 0 0 1 222.5,98 L235.5,98 A4.5,4.5 0 0 1 244.5,98 L664,98"/>
-<path d="M152,525 L513.5,525 A4.5,4.5 0 0 1 522.5,525 L973.5,525 A4.5,4.5 0 0 1 982.5,525 L1305.5,525 A4.5,4.5 0 0 1 1314.5,525 L1456,525"/>
-<path d="M130,499 L147.5,499 A4.5,4.5 0 0 1 156.5,499 L513.5,499 A4.5,4.5 0 0 1 522.5,499 L973.5,499 A4.5,4.5 0 0 1 982.5,499 L1124,499"/>
-<path d="M108,473 L125.5,473 A4.5,4.5 0 0 1 134.5,473 L147.5,473 A4.5,4.5 0 0 1 156.5,473 L513.5,473 A4.5,4.5 0 0 1 522.5,473 L664,473"/>
-<line x1="664" y1="30" x2="664" y2="300"/>
-<line x1="664" y1="374" x2="664" y2="473"/>
-<line x1="1124" y1="30" x2="1124" y2="300"/>
-<line x1="1124" y1="374" x2="1124" y2="499"/>
-<line x1="1456" y1="30" x2="1456" y2="300"/>
-<line x1="1456" y1="374" x2="1456" y2="525"/>
-<line x1="478" y1="575" x2="1310" y2="575"/>
-<circle cx="518" cy="575" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="978" cy="575" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M152,589 L513.5,589 A4.5,4.5 0 0 1 522.5,589 L973.5,589 A4.5,4.5 0 0 1 982.5,589 L1305.5,589 A4.5,4.5 0 0 1 1314.5,589 L1456,589"/>
+<path d="M130,563 L147.5,563 A4.5,4.5 0 0 1 156.5,563 L513.5,563 A4.5,4.5 0 0 1 522.5,563 L973.5,563 A4.5,4.5 0 0 1 982.5,563 L1124,563"/>
+<path d="M108,537 L125.5,537 A4.5,4.5 0 0 1 134.5,537 L147.5,537 A4.5,4.5 0 0 1 156.5,537 L513.5,537 A4.5,4.5 0 0 1 522.5,537 L664,537"/>
+<line x1="664" y1="30" x2="664" y2="332"/>
+<line x1="664" y1="406" x2="664" y2="537"/>
+<line x1="1124" y1="30" x2="1124" y2="332"/>
+<line x1="1124" y1="406" x2="1124" y2="563"/>
+<line x1="1456" y1="30" x2="1456" y2="332"/>
+<line x1="1456" y1="406" x2="1456" y2="589"/>
+<line x1="478" y1="639" x2="1310" y2="639"/>
+<circle cx="518" cy="639" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="978" cy="639" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1456" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="828.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1124" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="850.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="664" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="196" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1288" cy="525" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1288" cy="589" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="580" y="345" text-anchor="middle" font-size="26">A</text>
-<text x="548" y="306" text-anchor="start" font-size="14">D</text>
-<text x="612" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="612" y="380" text-anchor="end" font-size="16">Q</text>
-<text x="1040" y="345" text-anchor="middle" font-size="26">B</text>
-<text x="1008" y="306" text-anchor="start" font-size="14">D</text>
-<text x="1072" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="1072" y="380" text-anchor="end" font-size="16">Q</text>
-<text x="1372" y="345" text-anchor="middle" font-size="26">C</text>
-<text x="1340" y="306" text-anchor="start" font-size="14">D</text>
-<text x="1404" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="1404" y="380" text-anchor="end" font-size="16">Q</text>
+<text x="580" y="377" text-anchor="middle" font-size="26">A</text>
+<text x="580" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="580" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="580" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="580" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="548" y="338" text-anchor="start" font-size="14">D</text>
+<text x="612" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="612" y="412" text-anchor="end" font-size="16">Q</text>
+<text x="1040" y="377" text-anchor="middle" font-size="26">B</text>
+<text x="1040" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="1040" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="1040" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="1040" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="1008" y="338" text-anchor="start" font-size="14">D</text>
+<text x="1072" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="1072" y="412" text-anchor="end" font-size="16">Q</text>
+<text x="1372" y="377" text-anchor="middle" font-size="26">C</text>
+<text x="1372" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="1372" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="1372" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="1372" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="1340" y="338" text-anchor="start" font-size="14">D</text>
+<text x="1404" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="1404" y="412" text-anchor="end" font-size="16">Q</text>
 <text x="664" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1124" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1456" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="474" y="581" text-anchor="end" font-size="16">Clock</text>
+<text x="474" y="645" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -7347,71 +7809,97 @@ $T_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} \\ T_{B} &= Q_{C} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1144" height="335" viewBox="0 0 1144 335" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1144" height="399" viewBox="0 0 1144 399" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="115" width="80" height="150" rx="2"/>
-<polyline points="264,211 276,220 264,229"/>
-<line x1="264" y1="220" x2="242" y2="220"/>
-<line x1="242" y1="220" x2="242" y2="311"/>
-<path d="M168,120 H194 A26,33 0 0 1 194,186 H168 Z"/>
-<line x1="220" y1="153" x2="264" y2="153"/>
-<line x1="344" y1="153" x2="388" y2="153"/>
-<line x1="344" y1="227" x2="388" y2="227"/>
-<line x1="327.2" y1="219.4" x2="336" y2="219.4" stroke-width="1.4"/>
-<rect x="596" y="115" width="80" height="150" rx="2"/>
-<polyline points="596,211 608,220 596,229"/>
-<line x1="596" y1="220" x2="574" y2="220"/>
-<line x1="574" y1="220" x2="574" y2="311"/>
-<line x1="676" y1="153" x2="720" y2="153"/>
-<line x1="676" y1="227" x2="720" y2="227"/>
-<line x1="659.2" y1="219.4" x2="668" y2="219.4" stroke-width="1.4"/>
-<rect x="948" y="115" width="80" height="150" rx="2"/>
-<polyline points="948,211 960,220 948,229"/>
-<line x1="948" y1="220" x2="926" y2="220"/>
-<line x1="926" y1="220" x2="926" y2="311"/>
-<line x1="896" y1="153" x2="948" y2="153"/>
-<line x1="1028" y1="153" x2="1072" y2="153"/>
-<line x1="1028" y1="227" x2="1072" y2="227"/>
-<line x1="1011.2" y1="219.4" x2="1020" y2="219.4" stroke-width="1.4"/>
-<line x1="124" y1="72" x2="124" y2="142"/>
-<line x1="124" y1="142" x2="168" y2="142"/>
-<line x1="102" y1="46" x2="102" y2="164"/>
-<line x1="102" y1="164" x2="168" y2="164"/>
-<line x1="552" y1="46" x2="552" y2="153"/>
-<line x1="552" y1="153" x2="596" y2="153"/>
+<rect x="264" y="147" width="80" height="150" rx="2"/>
+<circle cx="304" cy="143" r="4"/>
+<line x1="304" y1="139" x2="304" y2="123"/>
+<circle cx="304" cy="301" r="4"/>
+<line x1="304" y1="305" x2="304" y2="321"/>
+<polyline points="264,243 276,252 264,261"/>
+<line x1="264" y1="252" x2="242" y2="252"/>
+<line x1="242" y1="252" x2="242" y2="375"/>
+<path d="M168,152 H194 A26,33 0 0 1 194,218 H168 Z"/>
+<line x1="220" y1="185" x2="264" y2="185"/>
+<line x1="344" y1="185" x2="388" y2="185"/>
+<line x1="344" y1="259" x2="388" y2="259"/>
+<line x1="327.2" y1="251.4" x2="336" y2="251.4" stroke-width="1.4"/>
+<rect x="596" y="147" width="80" height="150" rx="2"/>
+<circle cx="636" cy="143" r="4"/>
+<line x1="636" y1="139" x2="636" y2="123"/>
+<circle cx="636" cy="301" r="4"/>
+<line x1="636" y1="305" x2="636" y2="321"/>
+<polyline points="596,243 608,252 596,261"/>
+<line x1="596" y1="252" x2="574" y2="252"/>
+<line x1="574" y1="252" x2="574" y2="375"/>
+<line x1="676" y1="185" x2="720" y2="185"/>
+<line x1="676" y1="259" x2="720" y2="259"/>
+<line x1="659.2" y1="251.4" x2="668" y2="251.4" stroke-width="1.4"/>
+<rect x="948" y="147" width="80" height="150" rx="2"/>
+<circle cx="988" cy="143" r="4"/>
+<line x1="988" y1="139" x2="988" y2="123"/>
+<circle cx="988" cy="301" r="4"/>
+<line x1="988" y1="305" x2="988" y2="321"/>
+<polyline points="948,243 960,252 948,261"/>
+<line x1="948" y1="252" x2="926" y2="252"/>
+<line x1="926" y1="252" x2="926" y2="375"/>
+<line x1="896" y1="185" x2="948" y2="185"/>
+<line x1="1028" y1="185" x2="1072" y2="185"/>
+<line x1="1028" y1="259" x2="1072" y2="259"/>
+<line x1="1011.2" y1="251.4" x2="1020" y2="251.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="174"/>
+<line x1="124" y1="174" x2="168" y2="174"/>
+<line x1="102" y1="46" x2="102" y2="196"/>
+<line x1="102" y1="196" x2="168" y2="196"/>
+<line x1="552" y1="46" x2="552" y2="185"/>
+<line x1="552" y1="185" x2="596" y2="185"/>
 <path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L715.5,46 A4.5,4.5 0 0 1 724.5,46 L1072,46"/>
 <path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L547.5,72 A4.5,4.5 0 0 1 556.5,72 L720,72"/>
-<line x1="388" y1="30" x2="388" y2="153"/>
-<line x1="720" y1="30" x2="720" y2="153"/>
-<line x1="1072" y1="30" x2="1072" y2="153"/>
-<line x1="202" y1="311" x2="926" y2="311"/>
-<circle cx="242" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="574" cy="311" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="388" y1="30" x2="388" y2="185"/>
+<line x1="720" y1="30" x2="720" y2="185"/>
+<line x1="1072" y1="30" x2="1072" y2="185"/>
+<line x1="202" y1="375" x2="926" y2="375"/>
+<circle cx="242" cy="375" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="574" cy="375" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1072" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="552" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="720" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="159" text-anchor="start" font-size="14">T</text>
-<text x="336" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="636" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="604" y="159" text-anchor="start" font-size="14">T</text>
-<text x="668" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="668" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="988" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="956" y="159" text-anchor="start" font-size="14">T</text>
-<text x="892" y="159" text-anchor="end" font-size="16">1</text>
-<text x="1020" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1020" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="191" text-anchor="start" font-size="14">T</text>
+<text x="336" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="636" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="636" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="636" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="604" y="191" text-anchor="start" font-size="14">T</text>
+<text x="668" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="668" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="988" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="988" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="988" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="988" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="988" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="956" y="191" text-anchor="start" font-size="14">T</text>
+<text x="892" y="191" text-anchor="end" font-size="16">1</text>
+<text x="1020" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1020" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="720" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1072" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="317" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="381" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -7791,91 +8279,117 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{C} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{C} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1332" height="361" viewBox="0 0 1332 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1332" height="425" viewBox="0 0 1332 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="115" width="80" height="150" rx="2"/>
-<polyline points="302,181 314,190 302,199"/>
-<circle cx="298" cy="190" r="4"/>
-<line x1="294" y1="190" x2="280" y2="190"/>
-<line x1="280" y1="190" x2="280" y2="337"/>
-<path d="M190,120 H216 A26,33 0 0 1 216,186 H190 Z"/>
-<path d="M242,153 L253.5,153 A4.5,4.5 0 0 1 262.5,153 L302,153"/>
-<line x1="382" y1="153" x2="426" y2="153"/>
-<line x1="382" y1="227" x2="426" y2="227"/>
-<line x1="365.2" y1="219.4" x2="374" y2="219.4" stroke-width="1.4"/>
-<rect x="784" y="115" width="80" height="150" rx="2"/>
-<polyline points="784,181 796,190 784,199"/>
-<circle cx="780" cy="190" r="4"/>
-<line x1="776" y1="190" x2="762" y2="190"/>
-<line x1="762" y1="190" x2="762" y2="337"/>
-<path d="M672,120 H698 A26,33 0 0 1 698,186 H672 Z"/>
-<path d="M724,153 L735.5,153 A4.5,4.5 0 0 1 744.5,153 L784,153"/>
-<line x1="864" y1="153" x2="908" y2="153"/>
-<line x1="864" y1="227" x2="908" y2="227"/>
-<line x1="847.2" y1="219.4" x2="856" y2="219.4" stroke-width="1.4"/>
-<rect x="1136" y="115" width="80" height="150" rx="2"/>
-<polyline points="1136,181 1148,190 1136,199"/>
-<circle cx="1132" cy="190" r="4"/>
-<line x1="1128" y1="190" x2="1114" y2="190"/>
-<line x1="1114" y1="190" x2="1114" y2="337"/>
-<line x1="1084" y1="153" x2="1136" y2="153"/>
-<path d="M1084,227 L1109.5,227 A4.5,4.5 0 0 1 1118.5,227 L1136,227"/>
-<line x1="1216" y1="153" x2="1260" y2="153"/>
-<line x1="1216" y1="227" x2="1260" y2="227"/>
-<line x1="1199.2" y1="219.4" x2="1208" y2="219.4" stroke-width="1.4"/>
-<line x1="146" y1="72" x2="146" y2="142"/>
-<line x1="146" y1="142" x2="190" y2="142"/>
-<line x1="124" y1="46" x2="124" y2="164"/>
-<line x1="124" y1="164" x2="190" y2="164"/>
-<line x1="258" y1="46" x2="258" y2="227"/>
-<path d="M258,227 L275.5,227 A4.5,4.5 0 0 1 284.5,227 L302,227"/>
-<line x1="628" y1="46" x2="628" y2="164"/>
-<line x1="628" y1="164" x2="672" y2="164"/>
-<line x1="740" y1="46" x2="740" y2="227"/>
-<path d="M740,227 L757.5,227 A4.5,4.5 0 0 1 766.5,227 L784,227"/>
-<line x1="606" y1="287" x2="606" y2="142"/>
-<path d="M606,142 L623.5,142 A4.5,4.5 0 0 1 632.5,142 L672,142"/>
+<rect x="302" y="147" width="80" height="150" rx="2"/>
+<circle cx="342" cy="143" r="4"/>
+<line x1="342" y1="139" x2="342" y2="123"/>
+<circle cx="342" cy="301" r="4"/>
+<line x1="342" y1="305" x2="342" y2="321"/>
+<polyline points="302,213 314,222 302,231"/>
+<circle cx="298" cy="222" r="4"/>
+<line x1="294" y1="222" x2="280" y2="222"/>
+<line x1="280" y1="222" x2="280" y2="401"/>
+<path d="M190,152 H216 A26,33 0 0 1 216,218 H190 Z"/>
+<path d="M242,185 L253.5,185 A4.5,4.5 0 0 1 262.5,185 L302,185"/>
+<line x1="382" y1="185" x2="426" y2="185"/>
+<line x1="382" y1="259" x2="426" y2="259"/>
+<line x1="365.2" y1="251.4" x2="374" y2="251.4" stroke-width="1.4"/>
+<rect x="784" y="147" width="80" height="150" rx="2"/>
+<circle cx="824" cy="143" r="4"/>
+<line x1="824" y1="139" x2="824" y2="123"/>
+<circle cx="824" cy="301" r="4"/>
+<line x1="824" y1="305" x2="824" y2="321"/>
+<polyline points="784,213 796,222 784,231"/>
+<circle cx="780" cy="222" r="4"/>
+<line x1="776" y1="222" x2="762" y2="222"/>
+<line x1="762" y1="222" x2="762" y2="401"/>
+<path d="M672,152 H698 A26,33 0 0 1 698,218 H672 Z"/>
+<path d="M724,185 L735.5,185 A4.5,4.5 0 0 1 744.5,185 L784,185"/>
+<line x1="864" y1="185" x2="908" y2="185"/>
+<line x1="864" y1="259" x2="908" y2="259"/>
+<line x1="847.2" y1="251.4" x2="856" y2="251.4" stroke-width="1.4"/>
+<rect x="1136" y="147" width="80" height="150" rx="2"/>
+<circle cx="1176" cy="143" r="4"/>
+<line x1="1176" y1="139" x2="1176" y2="123"/>
+<circle cx="1176" cy="301" r="4"/>
+<line x1="1176" y1="305" x2="1176" y2="321"/>
+<polyline points="1136,213 1148,222 1136,231"/>
+<circle cx="1132" cy="222" r="4"/>
+<line x1="1128" y1="222" x2="1114" y2="222"/>
+<line x1="1114" y1="222" x2="1114" y2="401"/>
+<line x1="1084" y1="185" x2="1136" y2="185"/>
+<path d="M1084,259 L1109.5,259 A4.5,4.5 0 0 1 1118.5,259 L1136,259"/>
+<line x1="1216" y1="185" x2="1260" y2="185"/>
+<line x1="1216" y1="259" x2="1260" y2="259"/>
+<line x1="1199.2" y1="251.4" x2="1208" y2="251.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="174"/>
+<line x1="146" y1="174" x2="190" y2="174"/>
+<line x1="124" y1="46" x2="124" y2="196"/>
+<line x1="124" y1="196" x2="190" y2="196"/>
+<line x1="258" y1="46" x2="258" y2="259"/>
+<path d="M258,259 L275.5,259 A4.5,4.5 0 0 1 284.5,259 L302,259"/>
+<line x1="628" y1="46" x2="628" y2="196"/>
+<line x1="628" y1="196" x2="672" y2="196"/>
+<line x1="740" y1="46" x2="740" y2="259"/>
+<path d="M740,259 L757.5,259 A4.5,4.5 0 0 1 766.5,259 L784,259"/>
+<line x1="606" y1="351" x2="606" y2="174"/>
+<path d="M606,174 L623.5,174 A4.5,4.5 0 0 1 632.5,174 L672,174"/>
 <path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L903.5,46 A4.5,4.5 0 0 1 912.5,46 L1260,46"/>
 <path d="M146,72 L253.5,72 A4.5,4.5 0 0 1 262.5,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L623.5,72 A4.5,4.5 0 0 1 632.5,72 L735.5,72 A4.5,4.5 0 0 1 744.5,72 L908,72"/>
-<line x1="426" y1="287" x2="606" y2="287"/>
-<line x1="426" y1="30" x2="426" y2="153"/>
-<line x1="426" y1="227" x2="426" y2="287"/>
-<line x1="908" y1="30" x2="908" y2="153"/>
-<line x1="1260" y1="30" x2="1260" y2="153"/>
-<line x1="240" y1="337" x2="1114" y2="337"/>
-<circle cx="280" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="762" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="426" y1="351" x2="606" y2="351"/>
+<line x1="426" y1="30" x2="426" y2="185"/>
+<line x1="426" y1="259" x2="426" y2="351"/>
+<line x1="908" y1="30" x2="908" y2="185"/>
+<line x1="1260" y1="30" x2="1260" y2="185"/>
+<line x1="240" y1="401" x2="1114" y2="401"/>
+<circle cx="280" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="762" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1260" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="258" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="740" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="908" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="159" text-anchor="start" font-size="14">J</text>
-<text x="310" y="233" text-anchor="start" font-size="14">K</text>
-<text x="374" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="824" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="792" y="159" text-anchor="start" font-size="14">J</text>
-<text x="792" y="233" text-anchor="start" font-size="14">K</text>
-<text x="856" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="856" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="1176" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="1144" y="159" text-anchor="start" font-size="14">J</text>
-<text x="1144" y="233" text-anchor="start" font-size="14">K</text>
-<text x="1080" y="159" text-anchor="end" font-size="16">1</text>
-<text x="1080" y="233" text-anchor="end" font-size="16">1</text>
-<text x="1208" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1208" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="191" text-anchor="start" font-size="14">J</text>
+<text x="310" y="265" text-anchor="start" font-size="14">K</text>
+<text x="374" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="824" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="824" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="824" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="824" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="824" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="792" y="191" text-anchor="start" font-size="14">J</text>
+<text x="792" y="265" text-anchor="start" font-size="14">K</text>
+<text x="856" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="856" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="1176" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="1176" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1176" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="1176" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1176" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="1144" y="191" text-anchor="start" font-size="14">J</text>
+<text x="1144" y="265" text-anchor="start" font-size="14">K</text>
+<text x="1080" y="191" text-anchor="end" font-size="16">1</text>
+<text x="1080" y="265" text-anchor="end" font-size="16">1</text>
+<text x="1208" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1208" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="908" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1260" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -8256,80 +8770,94 @@ $S_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="460" viewBox="0 0 1368 460" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="524" viewBox="0 0 1368 524" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="126" width="80" height="183" rx="2"/>
-<polyline points="308,208.5 320,217.5 308,226.5"/>
-<circle cx="304" cy="217.5" r="4"/>
-<line x1="300" y1="217.5" x2="286" y2="217.5"/>
-<line x1="286" y1="217.5" x2="286" y2="436"/>
-<path d="M212,131 H238 A26,33 0 0 1 238,197 H212 Z"/>
-<line x1="264" y1="164" x2="308" y2="164"/>
-<path d="M212,238 H238 A26,33 0 0 1 238,304 H212 Z"/>
-<path d="M264,271 L281.5,271 A4.5,4.5 0 0 1 290.5,271 L308,271"/>
-<line x1="388" y1="164" x2="432" y2="164"/>
-<line x1="388" y1="271" x2="432" y2="271"/>
-<line x1="371.2" y1="263.4" x2="380" y2="263.4" stroke-width="1.4"/>
-<rect x="818" y="126" width="80" height="183" rx="2"/>
-<polyline points="818,208.5 830,217.5 818,226.5"/>
-<circle cx="814" cy="217.5" r="4"/>
-<line x1="810" y1="217.5" x2="796" y2="217.5"/>
-<line x1="796" y1="217.5" x2="796" y2="436"/>
-<path d="M722,120 H748 A26,44 0 0 1 748,208 H722 Z"/>
-<line x1="774" y1="164" x2="818" y2="164"/>
-<path d="M722,238 H748 A26,33 0 0 1 748,304 H722 Z"/>
-<path d="M774,271 L791.5,271 A4.5,4.5 0 0 1 800.5,271 L818,271"/>
-<line x1="898" y1="164" x2="942" y2="164"/>
-<line x1="898" y1="271" x2="942" y2="271"/>
-<line x1="881.2" y1="263.4" x2="890" y2="263.4" stroke-width="1.4"/>
-<rect x="1172" y="126" width="80" height="183" rx="2"/>
-<polyline points="1172,208.5 1184,217.5 1172,226.5"/>
-<circle cx="1168" cy="217.5" r="4"/>
-<line x1="1164" y1="217.5" x2="1150" y2="217.5"/>
-<line x1="1150" y1="217.5" x2="1150" y2="436"/>
-<line x1="1252" y1="164" x2="1296" y2="164"/>
-<line x1="1252" y1="271" x2="1296" y2="271"/>
-<line x1="1235.2" y1="263.4" x2="1244" y2="263.4" stroke-width="1.4"/>
-<line x1="168" y1="72" x2="168" y2="153"/>
-<line x1="168" y1="153" x2="212" y2="153"/>
-<line x1="146" y1="46" x2="146" y2="175"/>
-<line x1="146" y1="175" x2="212" y2="175"/>
-<line x1="124" y1="46" x2="124" y2="282"/>
-<line x1="124" y1="282" x2="212" y2="282"/>
-<line x1="102" y1="360" x2="102" y2="260"/>
-<path d="M102,260 L119.5,260 A4.5,4.5 0 0 1 128.5,260 L212,260"/>
-<line x1="678" y1="46" x2="678" y2="186"/>
-<line x1="678" y1="186" x2="722" y2="186"/>
-<line x1="656" y1="72" x2="656" y2="260"/>
-<line x1="656" y1="260" x2="722" y2="260"/>
-<line x1="634" y1="46" x2="634" y2="282"/>
-<line x1="634" y1="282" x2="722" y2="282"/>
-<line x1="612" y1="360" x2="612" y2="164"/>
-<path d="M612,164 L629.5,164 A4.5,4.5 0 0 1 638.5,164 L651.5,164 A4.5,4.5 0 0 1 660.5,164 L673.5,164 A4.5,4.5 0 0 1 682.5,164 L722,164"/>
-<line x1="590" y1="334" x2="590" y2="142"/>
-<path d="M590,142 L629.5,142 A4.5,4.5 0 0 1 638.5,142 L651.5,142 A4.5,4.5 0 0 1 660.5,142 L673.5,142 A4.5,4.5 0 0 1 682.5,142 L722,142"/>
-<line x1="1128" y1="46" x2="1128" y2="271"/>
-<path d="M1128,271 L1145.5,271 A4.5,4.5 0 0 1 1154.5,271 L1172,271"/>
-<line x1="1106" y1="386" x2="1106" y2="164"/>
-<path d="M1106,164 L1123.5,164 A4.5,4.5 0 0 1 1132.5,164 L1172,164"/>
+<rect x="308" y="158" width="80" height="183" rx="2"/>
+<circle cx="348" cy="154" r="4"/>
+<line x1="348" y1="150" x2="348" y2="134"/>
+<circle cx="348" cy="345" r="4"/>
+<line x1="348" y1="349" x2="348" y2="365"/>
+<polyline points="308,240.5 320,249.5 308,258.5"/>
+<circle cx="304" cy="249.5" r="4"/>
+<line x1="300" y1="249.5" x2="286" y2="249.5"/>
+<line x1="286" y1="249.5" x2="286" y2="500"/>
+<path d="M212,163 H238 A26,33 0 0 1 238,229 H212 Z"/>
+<line x1="264" y1="196" x2="308" y2="196"/>
+<path d="M212,270 H238 A26,33 0 0 1 238,336 H212 Z"/>
+<path d="M264,303 L281.5,303 A4.5,4.5 0 0 1 290.5,303 L308,303"/>
+<line x1="388" y1="196" x2="432" y2="196"/>
+<line x1="388" y1="303" x2="432" y2="303"/>
+<line x1="371.2" y1="295.4" x2="380" y2="295.4" stroke-width="1.4"/>
+<rect x="818" y="158" width="80" height="183" rx="2"/>
+<circle cx="858" cy="154" r="4"/>
+<line x1="858" y1="150" x2="858" y2="134"/>
+<circle cx="858" cy="345" r="4"/>
+<line x1="858" y1="349" x2="858" y2="365"/>
+<polyline points="818,240.5 830,249.5 818,258.5"/>
+<circle cx="814" cy="249.5" r="4"/>
+<line x1="810" y1="249.5" x2="796" y2="249.5"/>
+<line x1="796" y1="249.5" x2="796" y2="500"/>
+<path d="M722,152 H748 A26,44 0 0 1 748,240 H722 Z"/>
+<line x1="774" y1="196" x2="818" y2="196"/>
+<path d="M722,270 H748 A26,33 0 0 1 748,336 H722 Z"/>
+<path d="M774,303 L791.5,303 A4.5,4.5 0 0 1 800.5,303 L818,303"/>
+<line x1="898" y1="196" x2="942" y2="196"/>
+<line x1="898" y1="303" x2="942" y2="303"/>
+<line x1="881.2" y1="295.4" x2="890" y2="295.4" stroke-width="1.4"/>
+<rect x="1172" y="158" width="80" height="183" rx="2"/>
+<circle cx="1212" cy="154" r="4"/>
+<line x1="1212" y1="150" x2="1212" y2="134"/>
+<circle cx="1212" cy="345" r="4"/>
+<line x1="1212" y1="349" x2="1212" y2="365"/>
+<polyline points="1172,240.5 1184,249.5 1172,258.5"/>
+<circle cx="1168" cy="249.5" r="4"/>
+<line x1="1164" y1="249.5" x2="1150" y2="249.5"/>
+<line x1="1150" y1="249.5" x2="1150" y2="500"/>
+<line x1="1252" y1="196" x2="1296" y2="196"/>
+<line x1="1252" y1="303" x2="1296" y2="303"/>
+<line x1="1235.2" y1="295.4" x2="1244" y2="295.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="185"/>
+<line x1="168" y1="185" x2="212" y2="185"/>
+<line x1="146" y1="46" x2="146" y2="207"/>
+<line x1="146" y1="207" x2="212" y2="207"/>
+<line x1="124" y1="46" x2="124" y2="314"/>
+<line x1="124" y1="314" x2="212" y2="314"/>
+<line x1="102" y1="424" x2="102" y2="292"/>
+<path d="M102,292 L119.5,292 A4.5,4.5 0 0 1 128.5,292 L212,292"/>
+<line x1="678" y1="46" x2="678" y2="218"/>
+<line x1="678" y1="218" x2="722" y2="218"/>
+<line x1="656" y1="72" x2="656" y2="292"/>
+<line x1="656" y1="292" x2="722" y2="292"/>
+<line x1="634" y1="46" x2="634" y2="314"/>
+<line x1="634" y1="314" x2="722" y2="314"/>
+<line x1="612" y1="424" x2="612" y2="196"/>
+<path d="M612,196 L629.5,196 A4.5,4.5 0 0 1 638.5,196 L651.5,196 A4.5,4.5 0 0 1 660.5,196 L673.5,196 A4.5,4.5 0 0 1 682.5,196 L722,196"/>
+<line x1="590" y1="398" x2="590" y2="174"/>
+<path d="M590,174 L629.5,174 A4.5,4.5 0 0 1 638.5,174 L651.5,174 A4.5,4.5 0 0 1 660.5,174 L673.5,174 A4.5,4.5 0 0 1 682.5,174 L722,174"/>
+<line x1="1128" y1="46" x2="1128" y2="303"/>
+<path d="M1128,303 L1145.5,303 A4.5,4.5 0 0 1 1154.5,303 L1172,303"/>
+<line x1="1106" y1="450" x2="1106" y2="196"/>
+<path d="M1106,196 L1123.5,196 A4.5,4.5 0 0 1 1132.5,196 L1172,196"/>
 <path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L937.5,46 A4.5,4.5 0 0 1 946.5,46 L1296,46"/>
 <path d="M168,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L629.5,72 A4.5,4.5 0 0 1 638.5,72 L673.5,72 A4.5,4.5 0 0 1 682.5,72 L942,72"/>
-<path d="M1106,386 L1145.5,386 A4.5,4.5 0 0 1 1154.5,386 L1296,386"/>
-<path d="M102,360 L281.5,360 A4.5,4.5 0 0 1 290.5,360 L791.5,360 A4.5,4.5 0 0 1 800.5,360 L942,360"/>
-<line x1="432" y1="334" x2="590" y2="334"/>
-<line x1="432" y1="30" x2="432" y2="164"/>
-<line x1="432" y1="271" x2="432" y2="334"/>
-<line x1="942" y1="30" x2="942" y2="164"/>
-<line x1="942" y1="271" x2="942" y2="360"/>
-<line x1="1296" y1="30" x2="1296" y2="164"/>
-<line x1="1296" y1="271" x2="1296" y2="386"/>
-<line x1="246" y1="436" x2="1150" y2="436"/>
-<circle cx="286" cy="436" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="796" cy="436" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1106,450 L1145.5,450 A4.5,4.5 0 0 1 1154.5,450 L1296,450"/>
+<path d="M102,424 L281.5,424 A4.5,4.5 0 0 1 290.5,424 L791.5,424 A4.5,4.5 0 0 1 800.5,424 L942,424"/>
+<line x1="432" y1="398" x2="590" y2="398"/>
+<line x1="432" y1="30" x2="432" y2="196"/>
+<line x1="432" y1="303" x2="432" y2="398"/>
+<line x1="942" y1="30" x2="942" y2="196"/>
+<line x1="942" y1="303" x2="942" y2="424"/>
+<line x1="1296" y1="30" x2="1296" y2="196"/>
+<line x1="1296" y1="303" x2="1296" y2="450"/>
+<line x1="246" y1="500" x2="1150" y2="500"/>
+<circle cx="286" cy="500" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="796" cy="500" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1296" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -8337,27 +8865,39 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{C} \\ S_{A} &= Q_{
 <circle cx="1128" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="942" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="612" cy="360" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="612" cy="424" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="225.5" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="170" text-anchor="start" font-size="14">S</text>
-<text x="316" y="277" text-anchor="start" font-size="14">R</text>
-<text x="380" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="858" y="225.5" text-anchor="middle" font-size="26">B</text>
-<text x="826" y="170" text-anchor="start" font-size="14">S</text>
-<text x="826" y="277" text-anchor="start" font-size="14">R</text>
-<text x="890" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="890" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="1212" y="225.5" text-anchor="middle" font-size="26">C</text>
-<text x="1180" y="170" text-anchor="start" font-size="14">S</text>
-<text x="1180" y="277" text-anchor="start" font-size="14">R</text>
-<text x="1244" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="1244" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="257.5" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="202" text-anchor="start" font-size="14">S</text>
+<text x="316" y="309" text-anchor="start" font-size="14">R</text>
+<text x="380" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="858" y="257.5" text-anchor="middle" font-size="26">B</text>
+<text x="858" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="858" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="858" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="858" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="826" y="202" text-anchor="start" font-size="14">S</text>
+<text x="826" y="309" text-anchor="start" font-size="14">R</text>
+<text x="890" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="890" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="1212" y="257.5" text-anchor="middle" font-size="26">C</text>
+<text x="1212" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="1212" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="1212" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="1212" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="1180" y="202" text-anchor="start" font-size="14">S</text>
+<text x="1180" y="309" text-anchor="start" font-size="14">R</text>
+<text x="1244" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="1244" y="309" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="942" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1296" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="442" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="506" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -8607,112 +9147,138 @@ $D_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="505" viewBox="0 0 1638 505" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="569" viewBox="0 0 1638 569" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="207" width="80" height="150" rx="2"/>
-<polyline points="454,303 466,312 454,321"/>
-<line x1="454" y1="312" x2="432" y2="312"/>
-<line x1="432" y1="312" x2="432" y2="481"/>
-<path d="M350,212 C372,212 398,228.5 410,245 C398,261.5 372,278 350,278 Q364,245 350,212 Z"/>
-<path d="M218,168 H244 A26,33 0 0 1 244,234 H218 Z"/>
-<line x1="270" y1="201" x2="332" y2="201"/>
-<line x1="332" y1="201" x2="332" y2="234"/>
-<line x1="332" y1="234" x2="356.2" y2="234"/>
-<path d="M218,256 H244 A26,33 0 0 1 244,322 H218 Z"/>
-<line x1="270" y1="289" x2="312" y2="289"/>
-<line x1="312" y1="289" x2="312" y2="256"/>
-<line x1="312" y1="256" x2="356.2" y2="256"/>
-<line x1="410" y1="245" x2="454" y2="245"/>
-<line x1="534" y1="245" x2="578" y2="245"/>
-<line x1="534" y1="319" x2="578" y2="319"/>
-<line x1="517.2" y1="311.4" x2="526" y2="311.4" stroke-width="1.4"/>
-<rect x="1110" y="207" width="80" height="150" rx="2"/>
-<polyline points="1110,303 1122,312 1110,321"/>
-<line x1="1110" y1="312" x2="1088" y2="312"/>
-<line x1="1088" y1="312" x2="1088" y2="481"/>
-<path d="M1006,212 C1028,212 1054,228.5 1066,245 C1054,261.5 1028,278 1006,278 Q1020,245 1006,212 Z"/>
-<path d="M874,146 H900 A26,44 0 0 1 900,234 H874 Z"/>
-<line x1="926" y1="190" x2="988" y2="190"/>
-<line x1="988" y1="190" x2="988" y2="234"/>
-<line x1="988" y1="234" x2="1012.2" y2="234"/>
-<path d="M874,267 H900 A26,33 0 0 1 900,333 H874 Z"/>
-<line x1="926" y1="300" x2="968" y2="300"/>
-<line x1="968" y1="300" x2="968" y2="256"/>
-<line x1="968" y1="256" x2="1012.2" y2="256"/>
-<line x1="1066" y1="245" x2="1110" y2="245"/>
-<line x1="1190" y1="245" x2="1234" y2="245"/>
-<line x1="1190" y1="319" x2="1234" y2="319"/>
-<line x1="1173.2" y1="311.4" x2="1182" y2="311.4" stroke-width="1.4"/>
-<rect x="1442" y="207" width="80" height="150" rx="2"/>
-<polyline points="1442,303 1454,312 1442,321"/>
-<line x1="1442" y1="312" x2="1420" y2="312"/>
-<line x1="1420" y1="312" x2="1420" y2="481"/>
-<line x1="1522" y1="245" x2="1566" y2="245"/>
-<line x1="1522" y1="319" x2="1566" y2="319"/>
-<line x1="1505.2" y1="311.4" x2="1514" y2="311.4" stroke-width="1.4"/>
-<line x1="174" y1="72" x2="174" y2="190"/>
-<line x1="174" y1="190" x2="218" y2="190"/>
-<line x1="152" y1="46" x2="152" y2="212"/>
-<line x1="152" y1="212" x2="218" y2="212"/>
-<line x1="130" y1="98" x2="130" y2="278"/>
-<line x1="130" y1="278" x2="218" y2="278"/>
-<line x1="108" y1="431" x2="108" y2="300"/>
-<line x1="108" y1="300" x2="218" y2="300"/>
-<line x1="830" y1="46" x2="830" y2="212"/>
-<line x1="830" y1="212" x2="874" y2="212"/>
-<line x1="808" y1="72" x2="808" y2="289"/>
-<line x1="808" y1="289" x2="874" y2="289"/>
-<line x1="786" y1="431" x2="786" y2="311"/>
-<line x1="786" y1="311" x2="874" y2="311"/>
-<line x1="764" y1="405" x2="764" y2="190"/>
-<path d="M764,190 L803.5,190 A4.5,4.5 0 0 1 812.5,190 L825.5,190 A4.5,4.5 0 0 1 834.5,190 L874,190"/>
-<line x1="742" y1="379" x2="742" y2="168"/>
-<path d="M742,168 L803.5,168 A4.5,4.5 0 0 1 812.5,168 L825.5,168 A4.5,4.5 0 0 1 834.5,168 L874,168"/>
-<line x1="1398" y1="431" x2="1398" y2="245"/>
-<line x1="1398" y1="245" x2="1442" y2="245"/>
+<rect x="454" y="239" width="80" height="150" rx="2"/>
+<circle cx="494" cy="235" r="4"/>
+<line x1="494" y1="231" x2="494" y2="215"/>
+<circle cx="494" cy="393" r="4"/>
+<line x1="494" y1="397" x2="494" y2="413"/>
+<polyline points="454,335 466,344 454,353"/>
+<line x1="454" y1="344" x2="432" y2="344"/>
+<line x1="432" y1="344" x2="432" y2="545"/>
+<path d="M350,244 C372,244 398,260.5 410,277 C398,293.5 372,310 350,310 Q364,277 350,244 Z"/>
+<path d="M218,200 H244 A26,33 0 0 1 244,266 H218 Z"/>
+<line x1="270" y1="233" x2="332" y2="233"/>
+<line x1="332" y1="233" x2="332" y2="266"/>
+<line x1="332" y1="266" x2="356.2" y2="266"/>
+<path d="M218,288 H244 A26,33 0 0 1 244,354 H218 Z"/>
+<line x1="270" y1="321" x2="312" y2="321"/>
+<line x1="312" y1="321" x2="312" y2="288"/>
+<line x1="312" y1="288" x2="356.2" y2="288"/>
+<line x1="410" y1="277" x2="454" y2="277"/>
+<line x1="534" y1="277" x2="578" y2="277"/>
+<line x1="534" y1="351" x2="578" y2="351"/>
+<line x1="517.2" y1="343.4" x2="526" y2="343.4" stroke-width="1.4"/>
+<rect x="1110" y="239" width="80" height="150" rx="2"/>
+<circle cx="1150" cy="235" r="4"/>
+<line x1="1150" y1="231" x2="1150" y2="215"/>
+<circle cx="1150" cy="393" r="4"/>
+<line x1="1150" y1="397" x2="1150" y2="413"/>
+<polyline points="1110,335 1122,344 1110,353"/>
+<line x1="1110" y1="344" x2="1088" y2="344"/>
+<line x1="1088" y1="344" x2="1088" y2="545"/>
+<path d="M1006,244 C1028,244 1054,260.5 1066,277 C1054,293.5 1028,310 1006,310 Q1020,277 1006,244 Z"/>
+<path d="M874,178 H900 A26,44 0 0 1 900,266 H874 Z"/>
+<line x1="926" y1="222" x2="988" y2="222"/>
+<line x1="988" y1="222" x2="988" y2="266"/>
+<line x1="988" y1="266" x2="1012.2" y2="266"/>
+<path d="M874,299 H900 A26,33 0 0 1 900,365 H874 Z"/>
+<line x1="926" y1="332" x2="968" y2="332"/>
+<line x1="968" y1="332" x2="968" y2="288"/>
+<line x1="968" y1="288" x2="1012.2" y2="288"/>
+<line x1="1066" y1="277" x2="1110" y2="277"/>
+<line x1="1190" y1="277" x2="1234" y2="277"/>
+<line x1="1190" y1="351" x2="1234" y2="351"/>
+<line x1="1173.2" y1="343.4" x2="1182" y2="343.4" stroke-width="1.4"/>
+<rect x="1442" y="239" width="80" height="150" rx="2"/>
+<circle cx="1482" cy="235" r="4"/>
+<line x1="1482" y1="231" x2="1482" y2="215"/>
+<circle cx="1482" cy="393" r="4"/>
+<line x1="1482" y1="397" x2="1482" y2="413"/>
+<polyline points="1442,335 1454,344 1442,353"/>
+<line x1="1442" y1="344" x2="1420" y2="344"/>
+<line x1="1420" y1="344" x2="1420" y2="545"/>
+<line x1="1522" y1="277" x2="1566" y2="277"/>
+<line x1="1522" y1="351" x2="1566" y2="351"/>
+<line x1="1505.2" y1="343.4" x2="1514" y2="343.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="222"/>
+<line x1="174" y1="222" x2="218" y2="222"/>
+<line x1="152" y1="46" x2="152" y2="244"/>
+<line x1="152" y1="244" x2="218" y2="244"/>
+<line x1="130" y1="98" x2="130" y2="310"/>
+<line x1="130" y1="310" x2="218" y2="310"/>
+<line x1="108" y1="495" x2="108" y2="332"/>
+<line x1="108" y1="332" x2="218" y2="332"/>
+<line x1="830" y1="46" x2="830" y2="244"/>
+<line x1="830" y1="244" x2="874" y2="244"/>
+<line x1="808" y1="72" x2="808" y2="321"/>
+<line x1="808" y1="321" x2="874" y2="321"/>
+<line x1="786" y1="495" x2="786" y2="343"/>
+<line x1="786" y1="343" x2="874" y2="343"/>
+<line x1="764" y1="469" x2="764" y2="222"/>
+<path d="M764,222 L803.5,222 A4.5,4.5 0 0 1 812.5,222 L825.5,222 A4.5,4.5 0 0 1 834.5,222 L874,222"/>
+<line x1="742" y1="443" x2="742" y2="200"/>
+<path d="M742,200 L803.5,200 A4.5,4.5 0 0 1 812.5,200 L825.5,200 A4.5,4.5 0 0 1 834.5,200 L874,200"/>
+<line x1="1398" y1="495" x2="1398" y2="277"/>
+<line x1="1398" y1="277" x2="1442" y2="277"/>
 <path d="M152,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1229.5,46 A4.5,4.5 0 0 1 1238.5,46 L1566,46"/>
 <path d="M174,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L825.5,72 A4.5,4.5 0 0 1 834.5,72 L1234,72"/>
 <path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L578,98"/>
-<path d="M108,431 L427.5,431 A4.5,4.5 0 0 1 436.5,431 L1083.5,431 A4.5,4.5 0 0 1 1092.5,431 L1415.5,431 A4.5,4.5 0 0 1 1424.5,431 L1566,431"/>
-<path d="M764,405 L781.5,405 A4.5,4.5 0 0 1 790.5,405 L1083.5,405 A4.5,4.5 0 0 1 1092.5,405 L1234,405"/>
-<line x1="578" y1="379" x2="742" y2="379"/>
-<line x1="578" y1="30" x2="578" y2="245"/>
-<line x1="578" y1="319" x2="578" y2="379"/>
-<line x1="1234" y1="30" x2="1234" y2="245"/>
-<line x1="1234" y1="319" x2="1234" y2="405"/>
-<line x1="1566" y1="30" x2="1566" y2="245"/>
-<line x1="1566" y1="319" x2="1566" y2="431"/>
-<line x1="392" y1="481" x2="1420" y2="481"/>
-<circle cx="432" cy="481" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1088" cy="481" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M108,495 L427.5,495 A4.5,4.5 0 0 1 436.5,495 L1083.5,495 A4.5,4.5 0 0 1 1092.5,495 L1415.5,495 A4.5,4.5 0 0 1 1424.5,495 L1566,495"/>
+<path d="M764,469 L781.5,469 A4.5,4.5 0 0 1 790.5,469 L1083.5,469 A4.5,4.5 0 0 1 1092.5,469 L1234,469"/>
+<line x1="578" y1="443" x2="742" y2="443"/>
+<line x1="578" y1="30" x2="578" y2="277"/>
+<line x1="578" y1="351" x2="578" y2="443"/>
+<line x1="1234" y1="30" x2="1234" y2="277"/>
+<line x1="1234" y1="351" x2="1234" y2="469"/>
+<line x1="1566" y1="30" x2="1566" y2="277"/>
+<line x1="1566" y1="351" x2="1566" y2="495"/>
+<line x1="392" y1="545" x2="1420" y2="545"/>
+<circle cx="432" cy="545" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1088" cy="545" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1566" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="830" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="786" cy="431" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1398" cy="431" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="786" cy="495" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1398" cy="495" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="290" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="251" text-anchor="start" font-size="14">D</text>
-<text x="526" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="325" text-anchor="end" font-size="16">Q</text>
-<text x="1150" y="290" text-anchor="middle" font-size="26">B</text>
-<text x="1118" y="251" text-anchor="start" font-size="14">D</text>
-<text x="1182" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="1182" y="325" text-anchor="end" font-size="16">Q</text>
-<text x="1482" y="290" text-anchor="middle" font-size="26">C</text>
-<text x="1450" y="251" text-anchor="start" font-size="14">D</text>
-<text x="1514" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="1514" y="325" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="322" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="283" text-anchor="start" font-size="14">D</text>
+<text x="526" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="357" text-anchor="end" font-size="16">Q</text>
+<text x="1150" y="322" text-anchor="middle" font-size="26">B</text>
+<text x="1150" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="1150" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="1118" y="283" text-anchor="start" font-size="14">D</text>
+<text x="1182" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="1182" y="357" text-anchor="end" font-size="16">Q</text>
+<text x="1482" y="322" text-anchor="middle" font-size="26">C</text>
+<text x="1482" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="1482" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="1482" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="1482" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="1450" y="283" text-anchor="start" font-size="14">D</text>
+<text x="1514" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="1514" y="357" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1234" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1566" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="487" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="551" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -8959,92 +9525,118 @@ $T_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{C} \\ T_{B} &= \overline{Q_{A}}Q_{C} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1446" height="431" viewBox="0 0 1446 431" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1446" height="495" viewBox="0 0 1446 495" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="185" width="80" height="150" rx="2"/>
-<polyline points="454,281 466,290 454,299"/>
-<line x1="454" y1="290" x2="432" y2="290"/>
-<line x1="432" y1="290" x2="432" y2="407"/>
-<path d="M350,190 C372,190 398,206.5 410,223 C398,239.5 372,256 350,256 Q364,223 350,190 Z"/>
-<path d="M218,146 H244 A26,33 0 0 1 244,212 H218 Z"/>
-<line x1="270" y1="179" x2="332" y2="179"/>
-<line x1="332" y1="179" x2="332" y2="212"/>
-<line x1="332" y1="212" x2="356.2" y2="212"/>
-<path d="M218,234 H244 A26,33 0 0 1 244,300 H218 Z"/>
-<line x1="270" y1="267" x2="312" y2="267"/>
-<line x1="312" y1="267" x2="312" y2="234"/>
-<line x1="312" y1="234" x2="356.2" y2="234"/>
-<line x1="410" y1="223" x2="454" y2="223"/>
-<line x1="534" y1="223" x2="578" y2="223"/>
-<line x1="534" y1="297" x2="578" y2="297"/>
-<line x1="517.2" y1="289.4" x2="526" y2="289.4" stroke-width="1.4"/>
-<rect x="898" y="185" width="80" height="150" rx="2"/>
-<polyline points="898,281 910,290 898,299"/>
-<line x1="898" y1="290" x2="876" y2="290"/>
-<line x1="876" y1="290" x2="876" y2="407"/>
-<path d="M802,190 H828 A26,33 0 0 1 828,256 H802 Z"/>
-<line x1="854" y1="223" x2="898" y2="223"/>
-<line x1="978" y1="223" x2="1022" y2="223"/>
-<line x1="978" y1="297" x2="1022" y2="297"/>
-<line x1="961.2" y1="289.4" x2="970" y2="289.4" stroke-width="1.4"/>
-<rect x="1250" y="185" width="80" height="150" rx="2"/>
-<polyline points="1250,281 1262,290 1250,299"/>
-<line x1="1250" y1="290" x2="1228" y2="290"/>
-<line x1="1228" y1="290" x2="1228" y2="407"/>
-<line x1="1198" y1="223" x2="1250" y2="223"/>
-<line x1="1330" y1="223" x2="1374" y2="223"/>
-<line x1="1330" y1="297" x2="1374" y2="297"/>
-<line x1="1313.2" y1="289.4" x2="1322" y2="289.4" stroke-width="1.4"/>
-<line x1="174" y1="72" x2="174" y2="168"/>
-<line x1="174" y1="168" x2="218" y2="168"/>
-<line x1="152" y1="46" x2="152" y2="190"/>
-<line x1="152" y1="190" x2="218" y2="190"/>
-<line x1="130" y1="98" x2="130" y2="256"/>
-<line x1="130" y1="256" x2="218" y2="256"/>
-<line x1="108" y1="46" x2="108" y2="278"/>
-<line x1="108" y1="278" x2="218" y2="278"/>
-<line x1="758" y1="46" x2="758" y2="234"/>
-<line x1="758" y1="234" x2="802" y2="234"/>
-<line x1="736" y1="357" x2="736" y2="212"/>
-<path d="M736,212 L753.5,212 A4.5,4.5 0 0 1 762.5,212 L802,212"/>
+<rect x="454" y="217" width="80" height="150" rx="2"/>
+<circle cx="494" cy="213" r="4"/>
+<line x1="494" y1="209" x2="494" y2="193"/>
+<circle cx="494" cy="371" r="4"/>
+<line x1="494" y1="375" x2="494" y2="391"/>
+<polyline points="454,313 466,322 454,331"/>
+<line x1="454" y1="322" x2="432" y2="322"/>
+<line x1="432" y1="322" x2="432" y2="471"/>
+<path d="M350,222 C372,222 398,238.5 410,255 C398,271.5 372,288 350,288 Q364,255 350,222 Z"/>
+<path d="M218,178 H244 A26,33 0 0 1 244,244 H218 Z"/>
+<line x1="270" y1="211" x2="332" y2="211"/>
+<line x1="332" y1="211" x2="332" y2="244"/>
+<line x1="332" y1="244" x2="356.2" y2="244"/>
+<path d="M218,266 H244 A26,33 0 0 1 244,332 H218 Z"/>
+<line x1="270" y1="299" x2="312" y2="299"/>
+<line x1="312" y1="299" x2="312" y2="266"/>
+<line x1="312" y1="266" x2="356.2" y2="266"/>
+<line x1="410" y1="255" x2="454" y2="255"/>
+<line x1="534" y1="255" x2="578" y2="255"/>
+<line x1="534" y1="329" x2="578" y2="329"/>
+<line x1="517.2" y1="321.4" x2="526" y2="321.4" stroke-width="1.4"/>
+<rect x="898" y="217" width="80" height="150" rx="2"/>
+<circle cx="938" cy="213" r="4"/>
+<line x1="938" y1="209" x2="938" y2="193"/>
+<circle cx="938" cy="371" r="4"/>
+<line x1="938" y1="375" x2="938" y2="391"/>
+<polyline points="898,313 910,322 898,331"/>
+<line x1="898" y1="322" x2="876" y2="322"/>
+<line x1="876" y1="322" x2="876" y2="471"/>
+<path d="M802,222 H828 A26,33 0 0 1 828,288 H802 Z"/>
+<line x1="854" y1="255" x2="898" y2="255"/>
+<line x1="978" y1="255" x2="1022" y2="255"/>
+<line x1="978" y1="329" x2="1022" y2="329"/>
+<line x1="961.2" y1="321.4" x2="970" y2="321.4" stroke-width="1.4"/>
+<rect x="1250" y="217" width="80" height="150" rx="2"/>
+<circle cx="1290" cy="213" r="4"/>
+<line x1="1290" y1="209" x2="1290" y2="193"/>
+<circle cx="1290" cy="371" r="4"/>
+<line x1="1290" y1="375" x2="1290" y2="391"/>
+<polyline points="1250,313 1262,322 1250,331"/>
+<line x1="1250" y1="322" x2="1228" y2="322"/>
+<line x1="1228" y1="322" x2="1228" y2="471"/>
+<line x1="1198" y1="255" x2="1250" y2="255"/>
+<line x1="1330" y1="255" x2="1374" y2="255"/>
+<line x1="1330" y1="329" x2="1374" y2="329"/>
+<line x1="1313.2" y1="321.4" x2="1322" y2="321.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="200"/>
+<line x1="174" y1="200" x2="218" y2="200"/>
+<line x1="152" y1="46" x2="152" y2="222"/>
+<line x1="152" y1="222" x2="218" y2="222"/>
+<line x1="130" y1="98" x2="130" y2="288"/>
+<line x1="130" y1="288" x2="218" y2="288"/>
+<line x1="108" y1="46" x2="108" y2="310"/>
+<line x1="108" y1="310" x2="218" y2="310"/>
+<line x1="758" y1="46" x2="758" y2="266"/>
+<line x1="758" y1="266" x2="802" y2="266"/>
+<line x1="736" y1="421" x2="736" y2="244"/>
+<path d="M736,244 L753.5,244 A4.5,4.5 0 0 1 762.5,244 L802,244"/>
 <path d="M108,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1017.5,46 A4.5,4.5 0 0 1 1026.5,46 L1374,46"/>
 <path d="M174,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L753.5,72 A4.5,4.5 0 0 1 762.5,72 L1022,72"/>
 <path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L578,98"/>
-<line x1="578" y1="357" x2="736" y2="357"/>
-<line x1="578" y1="30" x2="578" y2="223"/>
-<line x1="578" y1="297" x2="578" y2="357"/>
-<line x1="1022" y1="30" x2="1022" y2="223"/>
-<line x1="1374" y1="30" x2="1374" y2="223"/>
-<line x1="392" y1="407" x2="1228" y2="407"/>
-<circle cx="432" cy="407" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="876" cy="407" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="578" y1="421" x2="736" y2="421"/>
+<line x1="578" y1="30" x2="578" y2="255"/>
+<line x1="578" y1="329" x2="578" y2="421"/>
+<line x1="1022" y1="30" x2="1022" y2="255"/>
+<line x1="1374" y1="30" x2="1374" y2="255"/>
+<line x1="392" y1="471" x2="1228" y2="471"/>
+<circle cx="432" cy="471" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="876" cy="471" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1374" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="152" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="758" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1022" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="268" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="229" text-anchor="start" font-size="14">T</text>
-<text x="526" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="938" y="268" text-anchor="middle" font-size="26">B</text>
-<text x="906" y="229" text-anchor="start" font-size="14">T</text>
-<text x="970" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="970" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1290" y="268" text-anchor="middle" font-size="26">C</text>
-<text x="1258" y="229" text-anchor="start" font-size="14">T</text>
-<text x="1194" y="229" text-anchor="end" font-size="16">1</text>
-<text x="1322" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1322" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="300" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="261" text-anchor="start" font-size="14">T</text>
+<text x="526" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="938" y="300" text-anchor="middle" font-size="26">B</text>
+<text x="938" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="938" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="938" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="938" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="906" y="261" text-anchor="start" font-size="14">T</text>
+<text x="970" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="970" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1290" y="300" text-anchor="middle" font-size="26">C</text>
+<text x="1290" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1290" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1290" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1290" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1258" y="261" text-anchor="start" font-size="14">T</text>
+<text x="1194" y="261" text-anchor="end" font-size="16">1</text>
+<text x="1322" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1322" y="335" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1022" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1374" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="413" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="477" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -9792,88 +10384,106 @@ $K_{D} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ J_{B} = K_{B} &= Q_{C}Q_{D} \\ J_{C} &= \overline{Q_{A}}Q_{D} \\ K_{C} &= Q_{D} \\ J_{D} = K_{D} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1842" height="398" viewBox="0 0 1842 398" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1842" height="462" viewBox="0 0 1842 462" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="324" y="152" width="80" height="150" rx="2"/>
-<polyline points="324,218 336,227 324,236"/>
-<circle cx="320" cy="227" r="4"/>
-<line x1="316" y1="227" x2="302" y2="227"/>
-<line x1="302" y1="227" x2="302" y2="374"/>
-<path d="M212,146 H238 A26,44 0 0 1 238,234 H212 Z"/>
-<path d="M264,190 L275.5,190 A4.5,4.5 0 0 1 284.5,190 L324,190"/>
-<line x1="404" y1="190" x2="448" y2="190"/>
-<line x1="404" y1="264" x2="448" y2="264"/>
-<line x1="387.2" y1="256.4" x2="396" y2="256.4" stroke-width="1.4"/>
-<rect x="812" y="152" width="80" height="150" rx="2"/>
-<polyline points="812,218 824,227 812,236"/>
-<circle cx="808" cy="227" r="4"/>
-<line x1="804" y1="227" x2="790" y2="227"/>
-<line x1="790" y1="227" x2="790" y2="374"/>
-<path d="M670,194 H696 A26,33 0 0 1 696,260 H670 Z"/>
-<line x1="722" y1="227" x2="766" y2="227"/>
-<line x1="766" y1="227" x2="766" y2="190"/>
-<line x1="766" y1="190" x2="812" y2="190"/>
-<line x1="766" y1="227" x2="766" y2="264"/>
-<path d="M766,264 L785.5,264 A4.5,4.5 0 0 1 794.5,264 L812,264"/>
-<line x1="892" y1="190" x2="936" y2="190"/>
-<line x1="892" y1="264" x2="936" y2="264"/>
-<line x1="875.2" y1="256.4" x2="884" y2="256.4" stroke-width="1.4"/>
-<rect x="1294" y="152" width="80" height="150" rx="2"/>
-<polyline points="1294,218 1306,227 1294,236"/>
-<circle cx="1290" cy="227" r="4"/>
-<line x1="1286" y1="227" x2="1272" y2="227"/>
-<line x1="1272" y1="227" x2="1272" y2="374"/>
-<path d="M1182,157 H1208 A26,33 0 0 1 1208,223 H1182 Z"/>
-<path d="M1234,190 L1245.5,190 A4.5,4.5 0 0 1 1254.5,190 L1294,190"/>
-<line x1="1374" y1="190" x2="1418" y2="190"/>
-<line x1="1374" y1="264" x2="1418" y2="264"/>
-<line x1="1357.2" y1="256.4" x2="1366" y2="256.4" stroke-width="1.4"/>
-<rect x="1646" y="152" width="80" height="150" rx="2"/>
-<polyline points="1646,218 1658,227 1646,236"/>
-<circle cx="1642" cy="227" r="4"/>
-<line x1="1638" y1="227" x2="1624" y2="227"/>
-<line x1="1624" y1="227" x2="1624" y2="374"/>
-<line x1="1594" y1="190" x2="1646" y2="190"/>
-<path d="M1594,264 L1619.5,264 A4.5,4.5 0 0 1 1628.5,264 L1646,264"/>
-<line x1="1726" y1="190" x2="1770" y2="190"/>
-<line x1="1726" y1="264" x2="1770" y2="264"/>
-<line x1="1709.2" y1="256.4" x2="1718" y2="256.4" stroke-width="1.4"/>
-<line x1="168" y1="98" x2="168" y2="168"/>
-<line x1="168" y1="168" x2="212" y2="168"/>
-<line x1="146" y1="72" x2="146" y2="190"/>
-<line x1="146" y1="190" x2="212" y2="190"/>
-<line x1="124" y1="46" x2="124" y2="212"/>
-<line x1="124" y1="212" x2="212" y2="212"/>
-<line x1="280" y1="46" x2="280" y2="264"/>
-<path d="M280,264 L297.5,264 A4.5,4.5 0 0 1 306.5,264 L324,264"/>
-<line x1="626" y1="72" x2="626" y2="216"/>
-<line x1="626" y1="216" x2="670" y2="216"/>
-<line x1="604" y1="46" x2="604" y2="238"/>
-<line x1="604" y1="238" x2="670" y2="238"/>
-<line x1="1138" y1="46" x2="1138" y2="201"/>
-<line x1="1138" y1="201" x2="1182" y2="201"/>
-<line x1="1250" y1="46" x2="1250" y2="264"/>
-<path d="M1250,264 L1267.5,264 A4.5,4.5 0 0 1 1276.5,264 L1294,264"/>
-<line x1="1116" y1="324" x2="1116" y2="179"/>
-<path d="M1116,179 L1133.5,179 A4.5,4.5 0 0 1 1142.5,179 L1182,179"/>
+<rect x="324" y="184" width="80" height="150" rx="2"/>
+<circle cx="364" cy="180" r="4"/>
+<line x1="364" y1="176" x2="364" y2="160"/>
+<circle cx="364" cy="338" r="4"/>
+<line x1="364" y1="342" x2="364" y2="358"/>
+<polyline points="324,250 336,259 324,268"/>
+<circle cx="320" cy="259" r="4"/>
+<line x1="316" y1="259" x2="302" y2="259"/>
+<line x1="302" y1="259" x2="302" y2="438"/>
+<path d="M212,178 H238 A26,44 0 0 1 238,266 H212 Z"/>
+<path d="M264,222 L275.5,222 A4.5,4.5 0 0 1 284.5,222 L324,222"/>
+<line x1="404" y1="222" x2="448" y2="222"/>
+<line x1="404" y1="296" x2="448" y2="296"/>
+<line x1="387.2" y1="288.4" x2="396" y2="288.4" stroke-width="1.4"/>
+<rect x="812" y="184" width="80" height="150" rx="2"/>
+<circle cx="852" cy="180" r="4"/>
+<line x1="852" y1="176" x2="852" y2="160"/>
+<circle cx="852" cy="338" r="4"/>
+<line x1="852" y1="342" x2="852" y2="358"/>
+<polyline points="812,250 824,259 812,268"/>
+<circle cx="808" cy="259" r="4"/>
+<line x1="804" y1="259" x2="790" y2="259"/>
+<line x1="790" y1="259" x2="790" y2="438"/>
+<path d="M670,226 H696 A26,33 0 0 1 696,292 H670 Z"/>
+<line x1="722" y1="259" x2="766" y2="259"/>
+<line x1="766" y1="259" x2="766" y2="222"/>
+<line x1="766" y1="222" x2="812" y2="222"/>
+<line x1="766" y1="259" x2="766" y2="296"/>
+<path d="M766,296 L785.5,296 A4.5,4.5 0 0 1 794.5,296 L812,296"/>
+<line x1="892" y1="222" x2="936" y2="222"/>
+<line x1="892" y1="296" x2="936" y2="296"/>
+<line x1="875.2" y1="288.4" x2="884" y2="288.4" stroke-width="1.4"/>
+<rect x="1294" y="184" width="80" height="150" rx="2"/>
+<circle cx="1334" cy="180" r="4"/>
+<line x1="1334" y1="176" x2="1334" y2="160"/>
+<circle cx="1334" cy="338" r="4"/>
+<line x1="1334" y1="342" x2="1334" y2="358"/>
+<polyline points="1294,250 1306,259 1294,268"/>
+<circle cx="1290" cy="259" r="4"/>
+<line x1="1286" y1="259" x2="1272" y2="259"/>
+<line x1="1272" y1="259" x2="1272" y2="438"/>
+<path d="M1182,189 H1208 A26,33 0 0 1 1208,255 H1182 Z"/>
+<path d="M1234,222 L1245.5,222 A4.5,4.5 0 0 1 1254.5,222 L1294,222"/>
+<line x1="1374" y1="222" x2="1418" y2="222"/>
+<line x1="1374" y1="296" x2="1418" y2="296"/>
+<line x1="1357.2" y1="288.4" x2="1366" y2="288.4" stroke-width="1.4"/>
+<rect x="1646" y="184" width="80" height="150" rx="2"/>
+<circle cx="1686" cy="180" r="4"/>
+<line x1="1686" y1="176" x2="1686" y2="160"/>
+<circle cx="1686" cy="338" r="4"/>
+<line x1="1686" y1="342" x2="1686" y2="358"/>
+<polyline points="1646,250 1658,259 1646,268"/>
+<circle cx="1642" cy="259" r="4"/>
+<line x1="1638" y1="259" x2="1624" y2="259"/>
+<line x1="1624" y1="259" x2="1624" y2="438"/>
+<line x1="1594" y1="222" x2="1646" y2="222"/>
+<path d="M1594,296 L1619.5,296 A4.5,4.5 0 0 1 1628.5,296 L1646,296"/>
+<line x1="1726" y1="222" x2="1770" y2="222"/>
+<line x1="1726" y1="296" x2="1770" y2="296"/>
+<line x1="1709.2" y1="288.4" x2="1718" y2="288.4" stroke-width="1.4"/>
+<line x1="168" y1="98" x2="168" y2="200"/>
+<line x1="168" y1="200" x2="212" y2="200"/>
+<line x1="146" y1="72" x2="146" y2="222"/>
+<line x1="146" y1="222" x2="212" y2="222"/>
+<line x1="124" y1="46" x2="124" y2="244"/>
+<line x1="124" y1="244" x2="212" y2="244"/>
+<line x1="280" y1="46" x2="280" y2="296"/>
+<path d="M280,296 L297.5,296 A4.5,4.5 0 0 1 306.5,296 L324,296"/>
+<line x1="626" y1="72" x2="626" y2="248"/>
+<line x1="626" y1="248" x2="670" y2="248"/>
+<line x1="604" y1="46" x2="604" y2="270"/>
+<line x1="604" y1="270" x2="670" y2="270"/>
+<line x1="1138" y1="46" x2="1138" y2="233"/>
+<line x1="1138" y1="233" x2="1182" y2="233"/>
+<line x1="1250" y1="46" x2="1250" y2="296"/>
+<path d="M1250,296 L1267.5,296 A4.5,4.5 0 0 1 1276.5,296 L1294,296"/>
+<line x1="1116" y1="388" x2="1116" y2="211"/>
+<path d="M1116,211 L1133.5,211 A4.5,4.5 0 0 1 1142.5,211 L1182,211"/>
 <path d="M124,46 L443.5,46 A4.5,4.5 0 0 1 452.5,46 L931.5,46 A4.5,4.5 0 0 1 940.5,46 L1413.5,46 A4.5,4.5 0 0 1 1422.5,46 L1770,46"/>
 <path d="M146,72 L275.5,72 A4.5,4.5 0 0 1 284.5,72 L443.5,72 A4.5,4.5 0 0 1 452.5,72 L599.5,72 A4.5,4.5 0 0 1 608.5,72 L931.5,72 A4.5,4.5 0 0 1 940.5,72 L1133.5,72 A4.5,4.5 0 0 1 1142.5,72 L1245.5,72 A4.5,4.5 0 0 1 1254.5,72 L1418,72"/>
 <path d="M168,98 L275.5,98 A4.5,4.5 0 0 1 284.5,98 L443.5,98 A4.5,4.5 0 0 1 452.5,98 L599.5,98 A4.5,4.5 0 0 1 608.5,98 L621.5,98 A4.5,4.5 0 0 1 630.5,98 L936,98"/>
-<path d="M448,324 L785.5,324 A4.5,4.5 0 0 1 794.5,324 L1116,324"/>
-<line x1="448" y1="30" x2="448" y2="190"/>
-<line x1="448" y1="264" x2="448" y2="324"/>
-<line x1="936" y1="30" x2="936" y2="190"/>
-<line x1="1418" y1="30" x2="1418" y2="190"/>
-<line x1="1770" y1="30" x2="1770" y2="190"/>
-<line x1="262" y1="374" x2="1624" y2="374"/>
-<circle cx="302" cy="374" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="790" cy="374" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="766" cy="227" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1272" cy="374" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M448,388 L785.5,388 A4.5,4.5 0 0 1 794.5,388 L1116,388"/>
+<line x1="448" y1="30" x2="448" y2="222"/>
+<line x1="448" y1="296" x2="448" y2="388"/>
+<line x1="936" y1="30" x2="936" y2="222"/>
+<line x1="1418" y1="30" x2="1418" y2="222"/>
+<line x1="1770" y1="30" x2="1770" y2="222"/>
+<line x1="262" y1="438" x2="1624" y2="438"/>
+<circle cx="302" cy="438" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="790" cy="438" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="766" cy="259" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1272" cy="438" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1770" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="280" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="604" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -9883,33 +10493,49 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C}Q_{D} \\ K_{A} &= Q_{D} \\ 
 <circle cx="626" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="936" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="364" y="235" text-anchor="middle" font-size="26">A</text>
-<text x="332" y="196" text-anchor="start" font-size="14">J</text>
-<text x="332" y="270" text-anchor="start" font-size="14">K</text>
-<text x="396" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="396" y="270" text-anchor="end" font-size="16">Q</text>
-<text x="852" y="235" text-anchor="middle" font-size="26">B</text>
-<text x="820" y="196" text-anchor="start" font-size="14">J</text>
-<text x="820" y="270" text-anchor="start" font-size="14">K</text>
-<text x="884" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="884" y="270" text-anchor="end" font-size="16">Q</text>
-<text x="1334" y="235" text-anchor="middle" font-size="26">C</text>
-<text x="1302" y="196" text-anchor="start" font-size="14">J</text>
-<text x="1302" y="270" text-anchor="start" font-size="14">K</text>
-<text x="1366" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1366" y="270" text-anchor="end" font-size="16">Q</text>
-<text x="1686" y="235" text-anchor="middle" font-size="26">D</text>
-<text x="1654" y="196" text-anchor="start" font-size="14">J</text>
-<text x="1654" y="270" text-anchor="start" font-size="14">K</text>
-<text x="1590" y="196" text-anchor="end" font-size="16">1</text>
-<text x="1590" y="270" text-anchor="end" font-size="16">1</text>
-<text x="1718" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1718" y="270" text-anchor="end" font-size="16">Q</text>
+<text x="364" y="267" text-anchor="middle" font-size="26">A</text>
+<text x="364" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="364" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="364" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="364" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="332" y="228" text-anchor="start" font-size="14">J</text>
+<text x="332" y="302" text-anchor="start" font-size="14">K</text>
+<text x="396" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="396" y="302" text-anchor="end" font-size="16">Q</text>
+<text x="852" y="267" text-anchor="middle" font-size="26">B</text>
+<text x="852" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="852" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="852" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="852" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="820" y="228" text-anchor="start" font-size="14">J</text>
+<text x="820" y="302" text-anchor="start" font-size="14">K</text>
+<text x="884" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="884" y="302" text-anchor="end" font-size="16">Q</text>
+<text x="1334" y="267" text-anchor="middle" font-size="26">C</text>
+<text x="1334" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1334" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="1334" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1334" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="1302" y="228" text-anchor="start" font-size="14">J</text>
+<text x="1302" y="302" text-anchor="start" font-size="14">K</text>
+<text x="1366" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1366" y="302" text-anchor="end" font-size="16">Q</text>
+<text x="1686" y="267" text-anchor="middle" font-size="26">D</text>
+<text x="1686" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1686" y="376" text-anchor="middle" font-size="14">1</text>
+<text x="1686" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1686" y="326" text-anchor="middle" font-size="12">CLR</text>
+<text x="1654" y="228" text-anchor="start" font-size="14">J</text>
+<text x="1654" y="302" text-anchor="start" font-size="14">K</text>
+<text x="1590" y="228" text-anchor="end" font-size="16">1</text>
+<text x="1590" y="302" text-anchor="end" font-size="16">1</text>
+<text x="1718" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1718" y="302" text-anchor="end" font-size="16">Q</text>
 <text x="448" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="936" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1418" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
 <text x="1770" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">D</tspan></text>
-<text x="258" y="380" text-anchor="end" font-size="16">Clock</text>
+<text x="258" y="444" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -10642,111 +11268,129 @@ $S_{D} = \overline{Q_{D}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{B}Q_{C}Q_{D} \\ R_{B} &= Q_{B}Q_{C}Q_{D} \\ S_{B} &= \overline{Q_{B}}Q_{C}Q_{D} \\ R_{C} &= Q_{C}Q_{D} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} \\ R_{D} &= Q_{D} \\ S_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1922" height="534" viewBox="0 0 1922 534" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1922" height="598" viewBox="0 0 1922 598" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="330" y="152" width="80" height="194" rx="2"/>
-<polyline points="330,240 342,249 330,258"/>
-<circle cx="326" cy="249" r="4"/>
-<line x1="322" y1="249" x2="308" y2="249"/>
-<line x1="308" y1="249" x2="308" y2="510"/>
-<path d="M234,146 H260 A26,44 0 0 1 260,234 H234 Z"/>
-<line x1="286" y1="190" x2="330" y2="190"/>
-<path d="M234,275 H260 A26,33 0 0 1 260,341 H234 Z"/>
-<path d="M286,308 L303.5,308 A4.5,4.5 0 0 1 312.5,308 L330,308"/>
-<line x1="410" y1="190" x2="454" y2="190"/>
-<line x1="410" y1="308" x2="454" y2="308"/>
-<line x1="393.2" y1="300.4" x2="402" y2="300.4" stroke-width="1.4"/>
-<rect x="862" y="152" width="80" height="194" rx="2"/>
-<polyline points="862,240 874,249 862,258"/>
-<circle cx="858" cy="249" r="4"/>
-<line x1="854" y1="249" x2="840" y2="249"/>
-<line x1="840" y1="249" x2="840" y2="510"/>
-<path d="M766,146 H792 A26,44 0 0 1 792,234 H766 Z"/>
-<line x1="818" y1="190" x2="862" y2="190"/>
-<path d="M766,264 H792 A26,44 0 0 1 792,352 H766 Z"/>
-<path d="M818,308 L835.5,308 A4.5,4.5 0 0 1 844.5,308 L862,308"/>
-<line x1="942" y1="190" x2="986" y2="190"/>
-<line x1="942" y1="308" x2="986" y2="308"/>
-<line x1="925.2" y1="300.4" x2="934" y2="300.4" stroke-width="1.4"/>
-<rect x="1372" y="152" width="80" height="194" rx="2"/>
-<polyline points="1372,240 1384,249 1372,258"/>
-<circle cx="1368" cy="249" r="4"/>
-<line x1="1364" y1="249" x2="1350" y2="249"/>
-<line x1="1350" y1="249" x2="1350" y2="510"/>
-<path d="M1276,146 H1302 A26,44 0 0 1 1302,234 H1276 Z"/>
-<line x1="1328" y1="190" x2="1372" y2="190"/>
-<path d="M1276,275 H1302 A26,33 0 0 1 1302,341 H1276 Z"/>
-<path d="M1328,308 L1345.5,308 A4.5,4.5 0 0 1 1354.5,308 L1372,308"/>
-<line x1="1452" y1="190" x2="1496" y2="190"/>
-<line x1="1452" y1="308" x2="1496" y2="308"/>
-<line x1="1435.2" y1="300.4" x2="1444" y2="300.4" stroke-width="1.4"/>
-<rect x="1726" y="152" width="80" height="194" rx="2"/>
-<polyline points="1726,240 1738,249 1726,258"/>
-<circle cx="1722" cy="249" r="4"/>
-<line x1="1718" y1="249" x2="1704" y2="249"/>
-<line x1="1704" y1="249" x2="1704" y2="510"/>
-<line x1="1806" y1="190" x2="1850" y2="190"/>
-<line x1="1806" y1="308" x2="1850" y2="308"/>
-<line x1="1789.2" y1="300.4" x2="1798" y2="300.4" stroke-width="1.4"/>
-<line x1="190" y1="98" x2="190" y2="168"/>
-<line x1="190" y1="168" x2="234" y2="168"/>
-<line x1="168" y1="72" x2="168" y2="190"/>
-<line x1="168" y1="190" x2="234" y2="190"/>
-<line x1="146" y1="46" x2="146" y2="212"/>
-<line x1="146" y1="212" x2="234" y2="212"/>
-<line x1="124" y1="46" x2="124" y2="319"/>
-<line x1="124" y1="319" x2="234" y2="319"/>
-<line x1="102" y1="408" x2="102" y2="297"/>
-<path d="M102,297 L119.5,297 A4.5,4.5 0 0 1 128.5,297 L234,297"/>
-<line x1="722" y1="72" x2="722" y2="190"/>
-<line x1="722" y1="190" x2="766" y2="190"/>
-<line x1="700" y1="46" x2="700" y2="212"/>
-<line x1="700" y1="212" x2="766" y2="212"/>
-<line x1="678" y1="98" x2="678" y2="286"/>
-<line x1="678" y1="286" x2="766" y2="286"/>
-<line x1="656" y1="72" x2="656" y2="308"/>
-<line x1="656" y1="308" x2="766" y2="308"/>
-<line x1="634" y1="46" x2="634" y2="330"/>
-<line x1="634" y1="330" x2="766" y2="330"/>
-<line x1="612" y1="408" x2="612" y2="168"/>
-<path d="M612,168 L629.5,168 A4.5,4.5 0 0 1 638.5,168 L651.5,168 A4.5,4.5 0 0 1 660.5,168 L673.5,168 A4.5,4.5 0 0 1 682.5,168 L695.5,168 A4.5,4.5 0 0 1 704.5,168 L717.5,168 A4.5,4.5 0 0 1 726.5,168 L766,168"/>
-<line x1="1232" y1="46" x2="1232" y2="212"/>
-<line x1="1232" y1="212" x2="1276" y2="212"/>
-<line x1="1210" y1="72" x2="1210" y2="297"/>
-<line x1="1210" y1="297" x2="1276" y2="297"/>
-<line x1="1188" y1="46" x2="1188" y2="319"/>
-<line x1="1188" y1="319" x2="1276" y2="319"/>
-<line x1="1166" y1="434" x2="1166" y2="190"/>
-<path d="M1166,190 L1183.5,190 A4.5,4.5 0 0 1 1192.5,190 L1205.5,190 A4.5,4.5 0 0 1 1214.5,190 L1227.5,190 A4.5,4.5 0 0 1 1236.5,190 L1276,190"/>
-<line x1="1144" y1="382" x2="1144" y2="168"/>
-<path d="M1144,168 L1183.5,168 A4.5,4.5 0 0 1 1192.5,168 L1205.5,168 A4.5,4.5 0 0 1 1214.5,168 L1227.5,168 A4.5,4.5 0 0 1 1236.5,168 L1276,168"/>
-<line x1="1682" y1="46" x2="1682" y2="308"/>
-<path d="M1682,308 L1699.5,308 A4.5,4.5 0 0 1 1708.5,308 L1726,308"/>
-<line x1="1660" y1="460" x2="1660" y2="190"/>
-<path d="M1660,190 L1677.5,190 A4.5,4.5 0 0 1 1686.5,190 L1726,190"/>
+<rect x="330" y="184" width="80" height="194" rx="2"/>
+<circle cx="370" cy="180" r="4"/>
+<line x1="370" y1="176" x2="370" y2="160"/>
+<circle cx="370" cy="382" r="4"/>
+<line x1="370" y1="386" x2="370" y2="402"/>
+<polyline points="330,272 342,281 330,290"/>
+<circle cx="326" cy="281" r="4"/>
+<line x1="322" y1="281" x2="308" y2="281"/>
+<line x1="308" y1="281" x2="308" y2="574"/>
+<path d="M234,178 H260 A26,44 0 0 1 260,266 H234 Z"/>
+<line x1="286" y1="222" x2="330" y2="222"/>
+<path d="M234,307 H260 A26,33 0 0 1 260,373 H234 Z"/>
+<path d="M286,340 L303.5,340 A4.5,4.5 0 0 1 312.5,340 L330,340"/>
+<line x1="410" y1="222" x2="454" y2="222"/>
+<line x1="410" y1="340" x2="454" y2="340"/>
+<line x1="393.2" y1="332.4" x2="402" y2="332.4" stroke-width="1.4"/>
+<rect x="862" y="184" width="80" height="194" rx="2"/>
+<circle cx="902" cy="180" r="4"/>
+<line x1="902" y1="176" x2="902" y2="160"/>
+<circle cx="902" cy="382" r="4"/>
+<line x1="902" y1="386" x2="902" y2="402"/>
+<polyline points="862,272 874,281 862,290"/>
+<circle cx="858" cy="281" r="4"/>
+<line x1="854" y1="281" x2="840" y2="281"/>
+<line x1="840" y1="281" x2="840" y2="574"/>
+<path d="M766,178 H792 A26,44 0 0 1 792,266 H766 Z"/>
+<line x1="818" y1="222" x2="862" y2="222"/>
+<path d="M766,296 H792 A26,44 0 0 1 792,384 H766 Z"/>
+<path d="M818,340 L835.5,340 A4.5,4.5 0 0 1 844.5,340 L862,340"/>
+<line x1="942" y1="222" x2="986" y2="222"/>
+<line x1="942" y1="340" x2="986" y2="340"/>
+<line x1="925.2" y1="332.4" x2="934" y2="332.4" stroke-width="1.4"/>
+<rect x="1372" y="184" width="80" height="194" rx="2"/>
+<circle cx="1412" cy="180" r="4"/>
+<line x1="1412" y1="176" x2="1412" y2="160"/>
+<circle cx="1412" cy="382" r="4"/>
+<line x1="1412" y1="386" x2="1412" y2="402"/>
+<polyline points="1372,272 1384,281 1372,290"/>
+<circle cx="1368" cy="281" r="4"/>
+<line x1="1364" y1="281" x2="1350" y2="281"/>
+<line x1="1350" y1="281" x2="1350" y2="574"/>
+<path d="M1276,178 H1302 A26,44 0 0 1 1302,266 H1276 Z"/>
+<line x1="1328" y1="222" x2="1372" y2="222"/>
+<path d="M1276,307 H1302 A26,33 0 0 1 1302,373 H1276 Z"/>
+<path d="M1328,340 L1345.5,340 A4.5,4.5 0 0 1 1354.5,340 L1372,340"/>
+<line x1="1452" y1="222" x2="1496" y2="222"/>
+<line x1="1452" y1="340" x2="1496" y2="340"/>
+<line x1="1435.2" y1="332.4" x2="1444" y2="332.4" stroke-width="1.4"/>
+<rect x="1726" y="184" width="80" height="194" rx="2"/>
+<circle cx="1766" cy="180" r="4"/>
+<line x1="1766" y1="176" x2="1766" y2="160"/>
+<circle cx="1766" cy="382" r="4"/>
+<line x1="1766" y1="386" x2="1766" y2="402"/>
+<polyline points="1726,272 1738,281 1726,290"/>
+<circle cx="1722" cy="281" r="4"/>
+<line x1="1718" y1="281" x2="1704" y2="281"/>
+<line x1="1704" y1="281" x2="1704" y2="574"/>
+<line x1="1806" y1="222" x2="1850" y2="222"/>
+<line x1="1806" y1="340" x2="1850" y2="340"/>
+<line x1="1789.2" y1="332.4" x2="1798" y2="332.4" stroke-width="1.4"/>
+<line x1="190" y1="98" x2="190" y2="200"/>
+<line x1="190" y1="200" x2="234" y2="200"/>
+<line x1="168" y1="72" x2="168" y2="222"/>
+<line x1="168" y1="222" x2="234" y2="222"/>
+<line x1="146" y1="46" x2="146" y2="244"/>
+<line x1="146" y1="244" x2="234" y2="244"/>
+<line x1="124" y1="46" x2="124" y2="351"/>
+<line x1="124" y1="351" x2="234" y2="351"/>
+<line x1="102" y1="472" x2="102" y2="329"/>
+<path d="M102,329 L119.5,329 A4.5,4.5 0 0 1 128.5,329 L234,329"/>
+<line x1="722" y1="72" x2="722" y2="222"/>
+<line x1="722" y1="222" x2="766" y2="222"/>
+<line x1="700" y1="46" x2="700" y2="244"/>
+<line x1="700" y1="244" x2="766" y2="244"/>
+<line x1="678" y1="98" x2="678" y2="318"/>
+<line x1="678" y1="318" x2="766" y2="318"/>
+<line x1="656" y1="72" x2="656" y2="340"/>
+<line x1="656" y1="340" x2="766" y2="340"/>
+<line x1="634" y1="46" x2="634" y2="362"/>
+<line x1="634" y1="362" x2="766" y2="362"/>
+<line x1="612" y1="472" x2="612" y2="200"/>
+<path d="M612,200 L629.5,200 A4.5,4.5 0 0 1 638.5,200 L651.5,200 A4.5,4.5 0 0 1 660.5,200 L673.5,200 A4.5,4.5 0 0 1 682.5,200 L695.5,200 A4.5,4.5 0 0 1 704.5,200 L717.5,200 A4.5,4.5 0 0 1 726.5,200 L766,200"/>
+<line x1="1232" y1="46" x2="1232" y2="244"/>
+<line x1="1232" y1="244" x2="1276" y2="244"/>
+<line x1="1210" y1="72" x2="1210" y2="329"/>
+<line x1="1210" y1="329" x2="1276" y2="329"/>
+<line x1="1188" y1="46" x2="1188" y2="351"/>
+<line x1="1188" y1="351" x2="1276" y2="351"/>
+<line x1="1166" y1="498" x2="1166" y2="222"/>
+<path d="M1166,222 L1183.5,222 A4.5,4.5 0 0 1 1192.5,222 L1205.5,222 A4.5,4.5 0 0 1 1214.5,222 L1227.5,222 A4.5,4.5 0 0 1 1236.5,222 L1276,222"/>
+<line x1="1144" y1="446" x2="1144" y2="200"/>
+<path d="M1144,200 L1183.5,200 A4.5,4.5 0 0 1 1192.5,200 L1205.5,200 A4.5,4.5 0 0 1 1214.5,200 L1227.5,200 A4.5,4.5 0 0 1 1236.5,200 L1276,200"/>
+<line x1="1682" y1="46" x2="1682" y2="340"/>
+<path d="M1682,340 L1699.5,340 A4.5,4.5 0 0 1 1708.5,340 L1726,340"/>
+<line x1="1660" y1="524" x2="1660" y2="222"/>
+<path d="M1660,222 L1677.5,222 A4.5,4.5 0 0 1 1686.5,222 L1726,222"/>
 <path d="M124,46 L449.5,46 A4.5,4.5 0 0 1 458.5,46 L981.5,46 A4.5,4.5 0 0 1 990.5,46 L1491.5,46 A4.5,4.5 0 0 1 1500.5,46 L1850,46"/>
 <path d="M168,72 L449.5,72 A4.5,4.5 0 0 1 458.5,72 L629.5,72 A4.5,4.5 0 0 1 638.5,72 L695.5,72 A4.5,4.5 0 0 1 704.5,72 L981.5,72 A4.5,4.5 0 0 1 990.5,72 L1183.5,72 A4.5,4.5 0 0 1 1192.5,72 L1227.5,72 A4.5,4.5 0 0 1 1236.5,72 L1496,72"/>
 <path d="M190,98 L449.5,98 A4.5,4.5 0 0 1 458.5,98 L629.5,98 A4.5,4.5 0 0 1 638.5,98 L651.5,98 A4.5,4.5 0 0 1 660.5,98 L695.5,98 A4.5,4.5 0 0 1 704.5,98 L717.5,98 A4.5,4.5 0 0 1 726.5,98 L986,98"/>
-<path d="M1660,460 L1699.5,460 A4.5,4.5 0 0 1 1708.5,460 L1850,460"/>
-<path d="M1166,434 L1345.5,434 A4.5,4.5 0 0 1 1354.5,434 L1496,434"/>
-<path d="M102,408 L303.5,408 A4.5,4.5 0 0 1 312.5,408 L835.5,408 A4.5,4.5 0 0 1 844.5,408 L986,408"/>
-<path d="M454,382 L607.5,382 A4.5,4.5 0 0 1 616.5,382 L835.5,382 A4.5,4.5 0 0 1 844.5,382 L981.5,382 A4.5,4.5 0 0 1 990.5,382 L1144,382"/>
-<line x1="454" y1="30" x2="454" y2="190"/>
-<line x1="454" y1="308" x2="454" y2="382"/>
-<line x1="986" y1="30" x2="986" y2="190"/>
-<line x1="986" y1="308" x2="986" y2="408"/>
-<line x1="1496" y1="30" x2="1496" y2="190"/>
-<line x1="1496" y1="308" x2="1496" y2="434"/>
-<line x1="1850" y1="30" x2="1850" y2="190"/>
-<line x1="1850" y1="308" x2="1850" y2="460"/>
-<line x1="268" y1="510" x2="1704" y2="510"/>
-<circle cx="308" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="840" cy="510" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1350" cy="510" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1660,524 L1699.5,524 A4.5,4.5 0 0 1 1708.5,524 L1850,524"/>
+<path d="M1166,498 L1345.5,498 A4.5,4.5 0 0 1 1354.5,498 L1496,498"/>
+<path d="M102,472 L303.5,472 A4.5,4.5 0 0 1 312.5,472 L835.5,472 A4.5,4.5 0 0 1 844.5,472 L986,472"/>
+<path d="M454,446 L607.5,446 A4.5,4.5 0 0 1 616.5,446 L835.5,446 A4.5,4.5 0 0 1 844.5,446 L981.5,446 A4.5,4.5 0 0 1 990.5,446 L1144,446"/>
+<line x1="454" y1="30" x2="454" y2="222"/>
+<line x1="454" y1="340" x2="454" y2="446"/>
+<line x1="986" y1="30" x2="986" y2="222"/>
+<line x1="986" y1="340" x2="986" y2="472"/>
+<line x1="1496" y1="30" x2="1496" y2="222"/>
+<line x1="1496" y1="340" x2="1496" y2="498"/>
+<line x1="1850" y1="30" x2="1850" y2="222"/>
+<line x1="1850" y1="340" x2="1850" y2="524"/>
+<line x1="268" y1="574" x2="1704" y2="574"/>
+<circle cx="308" cy="574" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="840" cy="574" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1350" cy="574" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1850" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="146" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="700" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -10760,33 +11404,49 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}Q_{D} \\ S_{A} &= Q_{
 <circle cx="1210" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="986" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="678" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="612" cy="408" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="612" cy="472" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="370" y="257" text-anchor="middle" font-size="26">A</text>
-<text x="338" y="196" text-anchor="start" font-size="14">S</text>
-<text x="338" y="314" text-anchor="start" font-size="14">R</text>
-<text x="402" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="402" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="902" y="257" text-anchor="middle" font-size="26">B</text>
-<text x="870" y="196" text-anchor="start" font-size="14">S</text>
-<text x="870" y="314" text-anchor="start" font-size="14">R</text>
-<text x="934" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="934" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1412" y="257" text-anchor="middle" font-size="26">C</text>
-<text x="1380" y="196" text-anchor="start" font-size="14">S</text>
-<text x="1380" y="314" text-anchor="start" font-size="14">R</text>
-<text x="1444" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1444" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1766" y="257" text-anchor="middle" font-size="26">D</text>
-<text x="1734" y="196" text-anchor="start" font-size="14">S</text>
-<text x="1734" y="314" text-anchor="start" font-size="14">R</text>
-<text x="1798" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1798" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="370" y="289" text-anchor="middle" font-size="26">A</text>
+<text x="370" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="370" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="370" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="370" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="338" y="228" text-anchor="start" font-size="14">S</text>
+<text x="338" y="346" text-anchor="start" font-size="14">R</text>
+<text x="402" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="402" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="902" y="289" text-anchor="middle" font-size="26">B</text>
+<text x="902" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="902" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="902" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="902" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="870" y="228" text-anchor="start" font-size="14">S</text>
+<text x="870" y="346" text-anchor="start" font-size="14">R</text>
+<text x="934" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="934" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1412" y="289" text-anchor="middle" font-size="26">C</text>
+<text x="1412" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1412" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1412" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1412" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1380" y="228" text-anchor="start" font-size="14">S</text>
+<text x="1380" y="346" text-anchor="start" font-size="14">R</text>
+<text x="1444" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1444" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1766" y="289" text-anchor="middle" font-size="26">D</text>
+<text x="1766" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1766" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1766" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1766" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1734" y="228" text-anchor="start" font-size="14">S</text>
+<text x="1734" y="346" text-anchor="start" font-size="14">R</text>
+<text x="1798" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1798" y="346" text-anchor="end" font-size="16">Q</text>
 <text x="454" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="986" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1496" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
 <text x="1850" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">D</tspan></text>
-<text x="264" y="516" text-anchor="end" font-size="16">Clock</text>
+<text x="264" y="580" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -11239,129 +11899,147 @@ $D_{D} = \overline{Q_{D}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D}} \\ D_{B} &= \overline{Q_{B}}Q_{C}Q_{D} + Q_{B}\overline{Q_{C}} + Q_{B}\overline{Q_{D}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}Q_{D} + Q_{C}\overline{Q_{D}} \\ D_{D} &= \overline{Q_{D}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="2380" height="651" viewBox="0 0 2380 651" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="2380" height="715" viewBox="0 0 2380 715" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="476" y="288" width="80" height="150" rx="2"/>
-<polyline points="476,384 488,393 476,402"/>
-<line x1="476" y1="393" x2="454" y2="393"/>
-<line x1="454" y1="393" x2="454" y2="627"/>
-<path d="M372,293 C394,293 420,309.5 432,326 C420,342.5 394,359 372,359 Q386,326 372,293 Z"/>
-<path d="M240,227 H266 A26,44 0 0 1 266,315 H240 Z"/>
-<line x1="292" y1="271" x2="354" y2="271"/>
-<line x1="354" y1="271" x2="354" y2="315"/>
-<line x1="354" y1="315" x2="378.2" y2="315"/>
-<path d="M240,348 H266 A26,33 0 0 1 266,414 H240 Z"/>
-<line x1="292" y1="381" x2="334" y2="381"/>
-<line x1="334" y1="381" x2="334" y2="337"/>
-<line x1="334" y1="337" x2="378.2" y2="337"/>
-<line x1="432" y1="326" x2="476" y2="326"/>
-<line x1="556" y1="326" x2="600" y2="326"/>
-<line x1="556" y1="400" x2="600" y2="400"/>
-<line x1="539.2" y1="392.4" x2="548" y2="392.4" stroke-width="1.4"/>
-<rect x="1196" y="288" width="80" height="150" rx="2"/>
-<polyline points="1196,384 1208,393 1196,402"/>
-<line x1="1196" y1="393" x2="1174" y2="393"/>
-<line x1="1174" y1="393" x2="1174" y2="627"/>
-<path d="M1092,282 C1114,282 1140,304 1152,326 C1140,348 1114,370 1092,370 Q1106,326 1092,282 Z"/>
-<path d="M940,172 H966 A26,44 0 0 1 966,260 H940 Z"/>
-<line x1="992" y1="216" x2="1074" y2="216"/>
-<line x1="1074" y1="216" x2="1074" y2="304"/>
-<line x1="1074" y1="304" x2="1097.2" y2="304"/>
-<path d="M940,293 H966 A26,33 0 0 1 966,359 H940 Z"/>
-<line x1="992" y1="326" x2="1054" y2="326"/>
-<line x1="1054" y1="326" x2="1099" y2="326"/>
-<path d="M940,403 H966 A26,33 0 0 1 966,469 H940 Z"/>
-<line x1="992" y1="436" x2="1034" y2="436"/>
-<line x1="1034" y1="436" x2="1034" y2="348"/>
-<line x1="1034" y1="348" x2="1097.2" y2="348"/>
-<line x1="1152" y1="326" x2="1196" y2="326"/>
-<line x1="1276" y1="326" x2="1320" y2="326"/>
-<line x1="1276" y1="400" x2="1320" y2="400"/>
-<line x1="1259.2" y1="392.4" x2="1268" y2="392.4" stroke-width="1.4"/>
-<rect x="1852" y="288" width="80" height="150" rx="2"/>
-<polyline points="1852,384 1864,393 1852,402"/>
-<line x1="1852" y1="393" x2="1830" y2="393"/>
-<line x1="1830" y1="393" x2="1830" y2="627"/>
-<path d="M1748,293 C1770,293 1796,309.5 1808,326 C1796,342.5 1770,359 1748,359 Q1762,326 1748,293 Z"/>
-<path d="M1616,227 H1642 A26,44 0 0 1 1642,315 H1616 Z"/>
-<line x1="1668" y1="271" x2="1730" y2="271"/>
-<line x1="1730" y1="271" x2="1730" y2="315"/>
-<line x1="1730" y1="315" x2="1754.2" y2="315"/>
-<path d="M1616,348 H1642 A26,33 0 0 1 1642,414 H1616 Z"/>
-<line x1="1668" y1="381" x2="1710" y2="381"/>
-<line x1="1710" y1="381" x2="1710" y2="337"/>
-<line x1="1710" y1="337" x2="1754.2" y2="337"/>
-<line x1="1808" y1="326" x2="1852" y2="326"/>
-<line x1="1932" y1="326" x2="1976" y2="326"/>
-<line x1="1932" y1="400" x2="1976" y2="400"/>
-<line x1="1915.2" y1="392.4" x2="1924" y2="392.4" stroke-width="1.4"/>
-<rect x="2184" y="288" width="80" height="150" rx="2"/>
-<polyline points="2184,384 2196,393 2184,402"/>
-<line x1="2184" y1="393" x2="2162" y2="393"/>
-<line x1="2162" y1="393" x2="2162" y2="627"/>
-<line x1="2264" y1="326" x2="2308" y2="326"/>
-<line x1="2264" y1="400" x2="2308" y2="400"/>
-<line x1="2247.2" y1="392.4" x2="2256" y2="392.4" stroke-width="1.4"/>
-<line x1="196" y1="98" x2="196" y2="249"/>
-<line x1="196" y1="249" x2="240" y2="249"/>
-<line x1="174" y1="72" x2="174" y2="271"/>
-<line x1="174" y1="271" x2="240" y2="271"/>
-<line x1="152" y1="46" x2="152" y2="293"/>
-<line x1="152" y1="293" x2="240" y2="293"/>
-<line x1="130" y1="124" x2="130" y2="370"/>
-<line x1="130" y1="370" x2="240" y2="370"/>
-<line x1="108" y1="577" x2="108" y2="392"/>
-<line x1="108" y1="392" x2="240" y2="392"/>
-<line x1="896" y1="72" x2="896" y2="216"/>
-<line x1="896" y1="216" x2="940" y2="216"/>
-<line x1="874" y1="46" x2="874" y2="238"/>
-<line x1="874" y1="238" x2="940" y2="238"/>
-<line x1="852" y1="98" x2="852" y2="315"/>
-<line x1="852" y1="315" x2="940" y2="315"/>
-<line x1="830" y1="98" x2="830" y2="425"/>
-<line x1="830" y1="425" x2="940" y2="425"/>
-<line x1="808" y1="577" x2="808" y2="447"/>
-<line x1="808" y1="447" x2="940" y2="447"/>
-<line x1="786" y1="551" x2="786" y2="337"/>
-<path d="M786,337 L825.5,337 A4.5,4.5 0 0 1 834.5,337 L940,337"/>
-<line x1="764" y1="525" x2="764" y2="194"/>
-<path d="M764,194 L825.5,194 A4.5,4.5 0 0 1 834.5,194 L847.5,194 A4.5,4.5 0 0 1 856.5,194 L869.5,194 A4.5,4.5 0 0 1 878.5,194 L891.5,194 A4.5,4.5 0 0 1 900.5,194 L940,194"/>
-<line x1="1572" y1="46" x2="1572" y2="293"/>
-<line x1="1572" y1="293" x2="1616" y2="293"/>
-<line x1="1550" y1="72" x2="1550" y2="370"/>
-<line x1="1550" y1="370" x2="1616" y2="370"/>
-<line x1="1528" y1="577" x2="1528" y2="392"/>
-<line x1="1528" y1="392" x2="1616" y2="392"/>
-<line x1="1506" y1="551" x2="1506" y2="271"/>
-<path d="M1506,271 L1545.5,271 A4.5,4.5 0 0 1 1554.5,271 L1567.5,271 A4.5,4.5 0 0 1 1576.5,271 L1616,271"/>
-<line x1="1484" y1="499" x2="1484" y2="249"/>
-<path d="M1484,249 L1545.5,249 A4.5,4.5 0 0 1 1554.5,249 L1567.5,249 A4.5,4.5 0 0 1 1576.5,249 L1616,249"/>
-<line x1="2140" y1="577" x2="2140" y2="326"/>
-<line x1="2140" y1="326" x2="2184" y2="326"/>
+<rect x="476" y="320" width="80" height="150" rx="2"/>
+<circle cx="516" cy="316" r="4"/>
+<line x1="516" y1="312" x2="516" y2="296"/>
+<circle cx="516" cy="474" r="4"/>
+<line x1="516" y1="478" x2="516" y2="494"/>
+<polyline points="476,416 488,425 476,434"/>
+<line x1="476" y1="425" x2="454" y2="425"/>
+<line x1="454" y1="425" x2="454" y2="691"/>
+<path d="M372,325 C394,325 420,341.5 432,358 C420,374.5 394,391 372,391 Q386,358 372,325 Z"/>
+<path d="M240,259 H266 A26,44 0 0 1 266,347 H240 Z"/>
+<line x1="292" y1="303" x2="354" y2="303"/>
+<line x1="354" y1="303" x2="354" y2="347"/>
+<line x1="354" y1="347" x2="378.2" y2="347"/>
+<path d="M240,380 H266 A26,33 0 0 1 266,446 H240 Z"/>
+<line x1="292" y1="413" x2="334" y2="413"/>
+<line x1="334" y1="413" x2="334" y2="369"/>
+<line x1="334" y1="369" x2="378.2" y2="369"/>
+<line x1="432" y1="358" x2="476" y2="358"/>
+<line x1="556" y1="358" x2="600" y2="358"/>
+<line x1="556" y1="432" x2="600" y2="432"/>
+<line x1="539.2" y1="424.4" x2="548" y2="424.4" stroke-width="1.4"/>
+<rect x="1196" y="320" width="80" height="150" rx="2"/>
+<circle cx="1236" cy="316" r="4"/>
+<line x1="1236" y1="312" x2="1236" y2="296"/>
+<circle cx="1236" cy="474" r="4"/>
+<line x1="1236" y1="478" x2="1236" y2="494"/>
+<polyline points="1196,416 1208,425 1196,434"/>
+<line x1="1196" y1="425" x2="1174" y2="425"/>
+<line x1="1174" y1="425" x2="1174" y2="691"/>
+<path d="M1092,314 C1114,314 1140,336 1152,358 C1140,380 1114,402 1092,402 Q1106,358 1092,314 Z"/>
+<path d="M940,204 H966 A26,44 0 0 1 966,292 H940 Z"/>
+<line x1="992" y1="248" x2="1074" y2="248"/>
+<line x1="1074" y1="248" x2="1074" y2="336"/>
+<line x1="1074" y1="336" x2="1097.2" y2="336"/>
+<path d="M940,325 H966 A26,33 0 0 1 966,391 H940 Z"/>
+<line x1="992" y1="358" x2="1054" y2="358"/>
+<line x1="1054" y1="358" x2="1099" y2="358"/>
+<path d="M940,435 H966 A26,33 0 0 1 966,501 H940 Z"/>
+<line x1="992" y1="468" x2="1034" y2="468"/>
+<line x1="1034" y1="468" x2="1034" y2="380"/>
+<line x1="1034" y1="380" x2="1097.2" y2="380"/>
+<line x1="1152" y1="358" x2="1196" y2="358"/>
+<line x1="1276" y1="358" x2="1320" y2="358"/>
+<line x1="1276" y1="432" x2="1320" y2="432"/>
+<line x1="1259.2" y1="424.4" x2="1268" y2="424.4" stroke-width="1.4"/>
+<rect x="1852" y="320" width="80" height="150" rx="2"/>
+<circle cx="1892" cy="316" r="4"/>
+<line x1="1892" y1="312" x2="1892" y2="296"/>
+<circle cx="1892" cy="474" r="4"/>
+<line x1="1892" y1="478" x2="1892" y2="494"/>
+<polyline points="1852,416 1864,425 1852,434"/>
+<line x1="1852" y1="425" x2="1830" y2="425"/>
+<line x1="1830" y1="425" x2="1830" y2="691"/>
+<path d="M1748,325 C1770,325 1796,341.5 1808,358 C1796,374.5 1770,391 1748,391 Q1762,358 1748,325 Z"/>
+<path d="M1616,259 H1642 A26,44 0 0 1 1642,347 H1616 Z"/>
+<line x1="1668" y1="303" x2="1730" y2="303"/>
+<line x1="1730" y1="303" x2="1730" y2="347"/>
+<line x1="1730" y1="347" x2="1754.2" y2="347"/>
+<path d="M1616,380 H1642 A26,33 0 0 1 1642,446 H1616 Z"/>
+<line x1="1668" y1="413" x2="1710" y2="413"/>
+<line x1="1710" y1="413" x2="1710" y2="369"/>
+<line x1="1710" y1="369" x2="1754.2" y2="369"/>
+<line x1="1808" y1="358" x2="1852" y2="358"/>
+<line x1="1932" y1="358" x2="1976" y2="358"/>
+<line x1="1932" y1="432" x2="1976" y2="432"/>
+<line x1="1915.2" y1="424.4" x2="1924" y2="424.4" stroke-width="1.4"/>
+<rect x="2184" y="320" width="80" height="150" rx="2"/>
+<circle cx="2224" cy="316" r="4"/>
+<line x1="2224" y1="312" x2="2224" y2="296"/>
+<circle cx="2224" cy="474" r="4"/>
+<line x1="2224" y1="478" x2="2224" y2="494"/>
+<polyline points="2184,416 2196,425 2184,434"/>
+<line x1="2184" y1="425" x2="2162" y2="425"/>
+<line x1="2162" y1="425" x2="2162" y2="691"/>
+<line x1="2264" y1="358" x2="2308" y2="358"/>
+<line x1="2264" y1="432" x2="2308" y2="432"/>
+<line x1="2247.2" y1="424.4" x2="2256" y2="424.4" stroke-width="1.4"/>
+<line x1="196" y1="98" x2="196" y2="281"/>
+<line x1="196" y1="281" x2="240" y2="281"/>
+<line x1="174" y1="72" x2="174" y2="303"/>
+<line x1="174" y1="303" x2="240" y2="303"/>
+<line x1="152" y1="46" x2="152" y2="325"/>
+<line x1="152" y1="325" x2="240" y2="325"/>
+<line x1="130" y1="124" x2="130" y2="402"/>
+<line x1="130" y1="402" x2="240" y2="402"/>
+<line x1="108" y1="641" x2="108" y2="424"/>
+<line x1="108" y1="424" x2="240" y2="424"/>
+<line x1="896" y1="72" x2="896" y2="248"/>
+<line x1="896" y1="248" x2="940" y2="248"/>
+<line x1="874" y1="46" x2="874" y2="270"/>
+<line x1="874" y1="270" x2="940" y2="270"/>
+<line x1="852" y1="98" x2="852" y2="347"/>
+<line x1="852" y1="347" x2="940" y2="347"/>
+<line x1="830" y1="98" x2="830" y2="457"/>
+<line x1="830" y1="457" x2="940" y2="457"/>
+<line x1="808" y1="641" x2="808" y2="479"/>
+<line x1="808" y1="479" x2="940" y2="479"/>
+<line x1="786" y1="615" x2="786" y2="369"/>
+<path d="M786,369 L825.5,369 A4.5,4.5 0 0 1 834.5,369 L940,369"/>
+<line x1="764" y1="589" x2="764" y2="226"/>
+<path d="M764,226 L825.5,226 A4.5,4.5 0 0 1 834.5,226 L847.5,226 A4.5,4.5 0 0 1 856.5,226 L869.5,226 A4.5,4.5 0 0 1 878.5,226 L891.5,226 A4.5,4.5 0 0 1 900.5,226 L940,226"/>
+<line x1="1572" y1="46" x2="1572" y2="325"/>
+<line x1="1572" y1="325" x2="1616" y2="325"/>
+<line x1="1550" y1="72" x2="1550" y2="402"/>
+<line x1="1550" y1="402" x2="1616" y2="402"/>
+<line x1="1528" y1="641" x2="1528" y2="424"/>
+<line x1="1528" y1="424" x2="1616" y2="424"/>
+<line x1="1506" y1="615" x2="1506" y2="303"/>
+<path d="M1506,303 L1545.5,303 A4.5,4.5 0 0 1 1554.5,303 L1567.5,303 A4.5,4.5 0 0 1 1576.5,303 L1616,303"/>
+<line x1="1484" y1="563" x2="1484" y2="281"/>
+<path d="M1484,281 L1545.5,281 A4.5,4.5 0 0 1 1554.5,281 L1567.5,281 A4.5,4.5 0 0 1 1576.5,281 L1616,281"/>
+<line x1="2140" y1="641" x2="2140" y2="358"/>
+<line x1="2140" y1="358" x2="2184" y2="358"/>
 <path d="M152,46 L595.5,46 A4.5,4.5 0 0 1 604.5,46 L1315.5,46 A4.5,4.5 0 0 1 1324.5,46 L1971.5,46 A4.5,4.5 0 0 1 1980.5,46 L2308,46"/>
 <path d="M174,72 L595.5,72 A4.5,4.5 0 0 1 604.5,72 L869.5,72 A4.5,4.5 0 0 1 878.5,72 L1315.5,72 A4.5,4.5 0 0 1 1324.5,72 L1567.5,72 A4.5,4.5 0 0 1 1576.5,72 L1976,72"/>
 <path d="M196,98 L595.5,98 A4.5,4.5 0 0 1 604.5,98 L869.5,98 A4.5,4.5 0 0 1 878.5,98 L891.5,98 A4.5,4.5 0 0 1 900.5,98 L1320,98"/>
 <path d="M130,124 L147.5,124 A4.5,4.5 0 0 1 156.5,124 L169.5,124 A4.5,4.5 0 0 1 178.5,124 L191.5,124 A4.5,4.5 0 0 1 200.5,124 L600,124"/>
-<path d="M108,577 L449.5,577 A4.5,4.5 0 0 1 458.5,577 L1169.5,577 A4.5,4.5 0 0 1 1178.5,577 L1825.5,577 A4.5,4.5 0 0 1 1834.5,577 L2157.5,577 A4.5,4.5 0 0 1 2166.5,577 L2308,577"/>
-<path d="M786,551 L803.5,551 A4.5,4.5 0 0 1 812.5,551 L1169.5,551 A4.5,4.5 0 0 1 1178.5,551 L1523.5,551 A4.5,4.5 0 0 1 1532.5,551 L1825.5,551 A4.5,4.5 0 0 1 1834.5,551 L1976,551"/>
-<path d="M764,525 L781.5,525 A4.5,4.5 0 0 1 790.5,525 L803.5,525 A4.5,4.5 0 0 1 812.5,525 L1169.5,525 A4.5,4.5 0 0 1 1178.5,525 L1320,525"/>
-<path d="M600,499 L759.5,499 A4.5,4.5 0 0 1 768.5,499 L781.5,499 A4.5,4.5 0 0 1 790.5,499 L803.5,499 A4.5,4.5 0 0 1 812.5,499 L1169.5,499 A4.5,4.5 0 0 1 1178.5,499 L1315.5,499 A4.5,4.5 0 0 1 1324.5,499 L1484,499"/>
-<line x1="600" y1="30" x2="600" y2="326"/>
-<line x1="600" y1="400" x2="600" y2="499"/>
-<line x1="1320" y1="30" x2="1320" y2="326"/>
-<line x1="1320" y1="400" x2="1320" y2="525"/>
-<line x1="1976" y1="30" x2="1976" y2="326"/>
-<line x1="1976" y1="400" x2="1976" y2="551"/>
-<line x1="2308" y1="30" x2="2308" y2="326"/>
-<line x1="2308" y1="400" x2="2308" y2="577"/>
-<line x1="414" y1="627" x2="2162" y2="627"/>
-<circle cx="454" cy="627" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1174" cy="627" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1830" cy="627" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M108,641 L449.5,641 A4.5,4.5 0 0 1 458.5,641 L1169.5,641 A4.5,4.5 0 0 1 1178.5,641 L1825.5,641 A4.5,4.5 0 0 1 1834.5,641 L2157.5,641 A4.5,4.5 0 0 1 2166.5,641 L2308,641"/>
+<path d="M786,615 L803.5,615 A4.5,4.5 0 0 1 812.5,615 L1169.5,615 A4.5,4.5 0 0 1 1178.5,615 L1523.5,615 A4.5,4.5 0 0 1 1532.5,615 L1825.5,615 A4.5,4.5 0 0 1 1834.5,615 L1976,615"/>
+<path d="M764,589 L781.5,589 A4.5,4.5 0 0 1 790.5,589 L803.5,589 A4.5,4.5 0 0 1 812.5,589 L1169.5,589 A4.5,4.5 0 0 1 1178.5,589 L1320,589"/>
+<path d="M600,563 L759.5,563 A4.5,4.5 0 0 1 768.5,563 L781.5,563 A4.5,4.5 0 0 1 790.5,563 L803.5,563 A4.5,4.5 0 0 1 812.5,563 L1169.5,563 A4.5,4.5 0 0 1 1178.5,563 L1315.5,563 A4.5,4.5 0 0 1 1324.5,563 L1484,563"/>
+<line x1="600" y1="30" x2="600" y2="358"/>
+<line x1="600" y1="432" x2="600" y2="563"/>
+<line x1="1320" y1="30" x2="1320" y2="358"/>
+<line x1="1320" y1="432" x2="1320" y2="589"/>
+<line x1="1976" y1="30" x2="1976" y2="358"/>
+<line x1="1976" y1="432" x2="1976" y2="615"/>
+<line x1="2308" y1="30" x2="2308" y2="358"/>
+<line x1="2308" y1="432" x2="2308" y2="641"/>
+<line x1="414" y1="691" x2="2162" y2="691"/>
+<circle cx="454" cy="691" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1174" cy="691" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1830" cy="691" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="2308" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="874" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1572" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -11372,32 +12050,48 @@ $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}\overline{Q_{D
 <circle cx="852" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="830" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="600" cy="124" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="808" cy="577" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1528" cy="577" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="2140" cy="577" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1506" cy="551" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="808" cy="641" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1528" cy="641" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="2140" cy="641" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1506" cy="615" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="516" y="371" text-anchor="middle" font-size="26">A</text>
-<text x="484" y="332" text-anchor="start" font-size="14">D</text>
-<text x="548" y="332" text-anchor="end" font-size="16">Q</text>
-<text x="548" y="406" text-anchor="end" font-size="16">Q</text>
-<text x="1236" y="371" text-anchor="middle" font-size="26">B</text>
-<text x="1204" y="332" text-anchor="start" font-size="14">D</text>
-<text x="1268" y="332" text-anchor="end" font-size="16">Q</text>
-<text x="1268" y="406" text-anchor="end" font-size="16">Q</text>
-<text x="1892" y="371" text-anchor="middle" font-size="26">C</text>
-<text x="1860" y="332" text-anchor="start" font-size="14">D</text>
-<text x="1924" y="332" text-anchor="end" font-size="16">Q</text>
-<text x="1924" y="406" text-anchor="end" font-size="16">Q</text>
-<text x="2224" y="371" text-anchor="middle" font-size="26">D</text>
-<text x="2192" y="332" text-anchor="start" font-size="14">D</text>
-<text x="2256" y="332" text-anchor="end" font-size="16">Q</text>
-<text x="2256" y="406" text-anchor="end" font-size="16">Q</text>
+<text x="516" y="403" text-anchor="middle" font-size="26">A</text>
+<text x="516" y="290" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="512" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="337" text-anchor="middle" font-size="12">PR</text>
+<text x="516" y="462" text-anchor="middle" font-size="12">CLR</text>
+<text x="484" y="364" text-anchor="start" font-size="14">D</text>
+<text x="548" y="364" text-anchor="end" font-size="16">Q</text>
+<text x="548" y="438" text-anchor="end" font-size="16">Q</text>
+<text x="1236" y="403" text-anchor="middle" font-size="26">B</text>
+<text x="1236" y="290" text-anchor="middle" font-size="14">1</text>
+<text x="1236" y="512" text-anchor="middle" font-size="14">1</text>
+<text x="1236" y="337" text-anchor="middle" font-size="12">PR</text>
+<text x="1236" y="462" text-anchor="middle" font-size="12">CLR</text>
+<text x="1204" y="364" text-anchor="start" font-size="14">D</text>
+<text x="1268" y="364" text-anchor="end" font-size="16">Q</text>
+<text x="1268" y="438" text-anchor="end" font-size="16">Q</text>
+<text x="1892" y="403" text-anchor="middle" font-size="26">C</text>
+<text x="1892" y="290" text-anchor="middle" font-size="14">1</text>
+<text x="1892" y="512" text-anchor="middle" font-size="14">1</text>
+<text x="1892" y="337" text-anchor="middle" font-size="12">PR</text>
+<text x="1892" y="462" text-anchor="middle" font-size="12">CLR</text>
+<text x="1860" y="364" text-anchor="start" font-size="14">D</text>
+<text x="1924" y="364" text-anchor="end" font-size="16">Q</text>
+<text x="1924" y="438" text-anchor="end" font-size="16">Q</text>
+<text x="2224" y="403" text-anchor="middle" font-size="26">D</text>
+<text x="2224" y="290" text-anchor="middle" font-size="14">1</text>
+<text x="2224" y="512" text-anchor="middle" font-size="14">1</text>
+<text x="2224" y="337" text-anchor="middle" font-size="12">PR</text>
+<text x="2224" y="462" text-anchor="middle" font-size="12">CLR</text>
+<text x="2192" y="364" text-anchor="start" font-size="14">D</text>
+<text x="2256" y="364" text-anchor="end" font-size="16">Q</text>
+<text x="2256" y="438" text-anchor="end" font-size="16">Q</text>
 <text x="600" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1320" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1976" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
 <text x="2308" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">D</tspan></text>
-<text x="410" y="633" text-anchor="end" font-size="16">Clock</text>
+<text x="410" y="697" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -11840,87 +12534,105 @@ $T_{D} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B} &= Q_{C}Q_{D} \\ T_{C} &= \overline{Q_{A}}Q_{D} \\ T_{D} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1912" height="479" viewBox="0 0 1912 479" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1912" height="543" viewBox="0 0 1912 543" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="476" y="233" width="80" height="150" rx="2"/>
-<polyline points="476,329 488,338 476,347"/>
-<line x1="476" y1="338" x2="454" y2="338"/>
-<line x1="454" y1="338" x2="454" y2="455"/>
-<path d="M372,238 C394,238 420,254.5 432,271 C420,287.5 394,304 372,304 Q386,271 372,238 Z"/>
-<path d="M240,172 H266 A26,44 0 0 1 266,260 H240 Z"/>
-<line x1="292" y1="216" x2="354" y2="216"/>
-<line x1="354" y1="216" x2="354" y2="260"/>
-<line x1="354" y1="260" x2="378.2" y2="260"/>
-<path d="M240,293 H266 A26,33 0 0 1 266,359 H240 Z"/>
-<line x1="292" y1="326" x2="334" y2="326"/>
-<line x1="334" y1="326" x2="334" y2="282"/>
-<line x1="334" y1="282" x2="378.2" y2="282"/>
-<line x1="432" y1="271" x2="476" y2="271"/>
-<line x1="556" y1="271" x2="600" y2="271"/>
-<line x1="556" y1="345" x2="600" y2="345"/>
-<line x1="539.2" y1="337.4" x2="548" y2="337.4" stroke-width="1.4"/>
-<rect x="920" y="233" width="80" height="150" rx="2"/>
-<polyline points="920,329 932,338 920,347"/>
-<line x1="920" y1="338" x2="898" y2="338"/>
-<line x1="898" y1="338" x2="898" y2="455"/>
-<path d="M824,238 H850 A26,33 0 0 1 850,304 H824 Z"/>
-<line x1="876" y1="271" x2="920" y2="271"/>
-<line x1="1000" y1="271" x2="1044" y2="271"/>
-<line x1="1000" y1="345" x2="1044" y2="345"/>
-<line x1="983.2" y1="337.4" x2="992" y2="337.4" stroke-width="1.4"/>
-<rect x="1364" y="233" width="80" height="150" rx="2"/>
-<polyline points="1364,329 1376,338 1364,347"/>
-<line x1="1364" y1="338" x2="1342" y2="338"/>
-<line x1="1342" y1="338" x2="1342" y2="455"/>
-<path d="M1268,238 H1294 A26,33 0 0 1 1294,304 H1268 Z"/>
-<line x1="1320" y1="271" x2="1364" y2="271"/>
-<line x1="1444" y1="271" x2="1488" y2="271"/>
-<line x1="1444" y1="345" x2="1488" y2="345"/>
-<line x1="1427.2" y1="337.4" x2="1436" y2="337.4" stroke-width="1.4"/>
-<rect x="1716" y="233" width="80" height="150" rx="2"/>
-<polyline points="1716,329 1728,338 1716,347"/>
-<line x1="1716" y1="338" x2="1694" y2="338"/>
-<line x1="1694" y1="338" x2="1694" y2="455"/>
-<line x1="1664" y1="271" x2="1716" y2="271"/>
-<line x1="1796" y1="271" x2="1840" y2="271"/>
-<line x1="1796" y1="345" x2="1840" y2="345"/>
-<line x1="1779.2" y1="337.4" x2="1788" y2="337.4" stroke-width="1.4"/>
-<line x1="196" y1="98" x2="196" y2="194"/>
-<line x1="196" y1="194" x2="240" y2="194"/>
-<line x1="174" y1="72" x2="174" y2="216"/>
-<line x1="174" y1="216" x2="240" y2="216"/>
-<line x1="152" y1="46" x2="152" y2="238"/>
-<line x1="152" y1="238" x2="240" y2="238"/>
-<line x1="130" y1="124" x2="130" y2="315"/>
-<line x1="130" y1="315" x2="240" y2="315"/>
-<line x1="108" y1="46" x2="108" y2="337"/>
-<line x1="108" y1="337" x2="240" y2="337"/>
-<line x1="780" y1="72" x2="780" y2="260"/>
-<line x1="780" y1="260" x2="824" y2="260"/>
-<line x1="758" y1="46" x2="758" y2="282"/>
-<line x1="758" y1="282" x2="824" y2="282"/>
-<line x1="1224" y1="46" x2="1224" y2="282"/>
-<line x1="1224" y1="282" x2="1268" y2="282"/>
-<line x1="1202" y1="405" x2="1202" y2="260"/>
-<path d="M1202,260 L1219.5,260 A4.5,4.5 0 0 1 1228.5,260 L1268,260"/>
+<rect x="476" y="265" width="80" height="150" rx="2"/>
+<circle cx="516" cy="261" r="4"/>
+<line x1="516" y1="257" x2="516" y2="241"/>
+<circle cx="516" cy="419" r="4"/>
+<line x1="516" y1="423" x2="516" y2="439"/>
+<polyline points="476,361 488,370 476,379"/>
+<line x1="476" y1="370" x2="454" y2="370"/>
+<line x1="454" y1="370" x2="454" y2="519"/>
+<path d="M372,270 C394,270 420,286.5 432,303 C420,319.5 394,336 372,336 Q386,303 372,270 Z"/>
+<path d="M240,204 H266 A26,44 0 0 1 266,292 H240 Z"/>
+<line x1="292" y1="248" x2="354" y2="248"/>
+<line x1="354" y1="248" x2="354" y2="292"/>
+<line x1="354" y1="292" x2="378.2" y2="292"/>
+<path d="M240,325 H266 A26,33 0 0 1 266,391 H240 Z"/>
+<line x1="292" y1="358" x2="334" y2="358"/>
+<line x1="334" y1="358" x2="334" y2="314"/>
+<line x1="334" y1="314" x2="378.2" y2="314"/>
+<line x1="432" y1="303" x2="476" y2="303"/>
+<line x1="556" y1="303" x2="600" y2="303"/>
+<line x1="556" y1="377" x2="600" y2="377"/>
+<line x1="539.2" y1="369.4" x2="548" y2="369.4" stroke-width="1.4"/>
+<rect x="920" y="265" width="80" height="150" rx="2"/>
+<circle cx="960" cy="261" r="4"/>
+<line x1="960" y1="257" x2="960" y2="241"/>
+<circle cx="960" cy="419" r="4"/>
+<line x1="960" y1="423" x2="960" y2="439"/>
+<polyline points="920,361 932,370 920,379"/>
+<line x1="920" y1="370" x2="898" y2="370"/>
+<line x1="898" y1="370" x2="898" y2="519"/>
+<path d="M824,270 H850 A26,33 0 0 1 850,336 H824 Z"/>
+<line x1="876" y1="303" x2="920" y2="303"/>
+<line x1="1000" y1="303" x2="1044" y2="303"/>
+<line x1="1000" y1="377" x2="1044" y2="377"/>
+<line x1="983.2" y1="369.4" x2="992" y2="369.4" stroke-width="1.4"/>
+<rect x="1364" y="265" width="80" height="150" rx="2"/>
+<circle cx="1404" cy="261" r="4"/>
+<line x1="1404" y1="257" x2="1404" y2="241"/>
+<circle cx="1404" cy="419" r="4"/>
+<line x1="1404" y1="423" x2="1404" y2="439"/>
+<polyline points="1364,361 1376,370 1364,379"/>
+<line x1="1364" y1="370" x2="1342" y2="370"/>
+<line x1="1342" y1="370" x2="1342" y2="519"/>
+<path d="M1268,270 H1294 A26,33 0 0 1 1294,336 H1268 Z"/>
+<line x1="1320" y1="303" x2="1364" y2="303"/>
+<line x1="1444" y1="303" x2="1488" y2="303"/>
+<line x1="1444" y1="377" x2="1488" y2="377"/>
+<line x1="1427.2" y1="369.4" x2="1436" y2="369.4" stroke-width="1.4"/>
+<rect x="1716" y="265" width="80" height="150" rx="2"/>
+<circle cx="1756" cy="261" r="4"/>
+<line x1="1756" y1="257" x2="1756" y2="241"/>
+<circle cx="1756" cy="419" r="4"/>
+<line x1="1756" y1="423" x2="1756" y2="439"/>
+<polyline points="1716,361 1728,370 1716,379"/>
+<line x1="1716" y1="370" x2="1694" y2="370"/>
+<line x1="1694" y1="370" x2="1694" y2="519"/>
+<line x1="1664" y1="303" x2="1716" y2="303"/>
+<line x1="1796" y1="303" x2="1840" y2="303"/>
+<line x1="1796" y1="377" x2="1840" y2="377"/>
+<line x1="1779.2" y1="369.4" x2="1788" y2="369.4" stroke-width="1.4"/>
+<line x1="196" y1="98" x2="196" y2="226"/>
+<line x1="196" y1="226" x2="240" y2="226"/>
+<line x1="174" y1="72" x2="174" y2="248"/>
+<line x1="174" y1="248" x2="240" y2="248"/>
+<line x1="152" y1="46" x2="152" y2="270"/>
+<line x1="152" y1="270" x2="240" y2="270"/>
+<line x1="130" y1="124" x2="130" y2="347"/>
+<line x1="130" y1="347" x2="240" y2="347"/>
+<line x1="108" y1="46" x2="108" y2="369"/>
+<line x1="108" y1="369" x2="240" y2="369"/>
+<line x1="780" y1="72" x2="780" y2="292"/>
+<line x1="780" y1="292" x2="824" y2="292"/>
+<line x1="758" y1="46" x2="758" y2="314"/>
+<line x1="758" y1="314" x2="824" y2="314"/>
+<line x1="1224" y1="46" x2="1224" y2="314"/>
+<line x1="1224" y1="314" x2="1268" y2="314"/>
+<line x1="1202" y1="469" x2="1202" y2="292"/>
+<path d="M1202,292 L1219.5,292 A4.5,4.5 0 0 1 1228.5,292 L1268,292"/>
 <path d="M108,46 L595.5,46 A4.5,4.5 0 0 1 604.5,46 L1039.5,46 A4.5,4.5 0 0 1 1048.5,46 L1483.5,46 A4.5,4.5 0 0 1 1492.5,46 L1840,46"/>
 <path d="M174,72 L595.5,72 A4.5,4.5 0 0 1 604.5,72 L753.5,72 A4.5,4.5 0 0 1 762.5,72 L1039.5,72 A4.5,4.5 0 0 1 1048.5,72 L1219.5,72 A4.5,4.5 0 0 1 1228.5,72 L1488,72"/>
 <path d="M196,98 L595.5,98 A4.5,4.5 0 0 1 604.5,98 L753.5,98 A4.5,4.5 0 0 1 762.5,98 L775.5,98 A4.5,4.5 0 0 1 784.5,98 L1044,98"/>
 <path d="M130,124 L147.5,124 A4.5,4.5 0 0 1 156.5,124 L169.5,124 A4.5,4.5 0 0 1 178.5,124 L191.5,124 A4.5,4.5 0 0 1 200.5,124 L600,124"/>
-<path d="M600,405 L893.5,405 A4.5,4.5 0 0 1 902.5,405 L1202,405"/>
-<line x1="600" y1="30" x2="600" y2="271"/>
-<line x1="600" y1="345" x2="600" y2="405"/>
-<line x1="1044" y1="30" x2="1044" y2="271"/>
-<line x1="1488" y1="30" x2="1488" y2="271"/>
-<line x1="1840" y1="30" x2="1840" y2="271"/>
-<line x1="414" y1="455" x2="1694" y2="455"/>
-<circle cx="454" cy="455" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="898" cy="455" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1342" cy="455" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M600,469 L893.5,469 A4.5,4.5 0 0 1 902.5,469 L1202,469"/>
+<line x1="600" y1="30" x2="600" y2="303"/>
+<line x1="600" y1="377" x2="600" y2="469"/>
+<line x1="1044" y1="30" x2="1044" y2="303"/>
+<line x1="1488" y1="30" x2="1488" y2="303"/>
+<line x1="1840" y1="30" x2="1840" y2="303"/>
+<line x1="414" y1="519" x2="1694" y2="519"/>
+<circle cx="454" cy="519" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="898" cy="519" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1342" cy="519" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1840" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="152" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="758" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -11930,28 +12642,44 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C}Q_{D} + Q_{A}Q_{D} \\ T_{B}
 <circle cx="1044" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="600" cy="124" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="516" y="316" text-anchor="middle" font-size="26">A</text>
-<text x="484" y="277" text-anchor="start" font-size="14">T</text>
-<text x="548" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="548" y="351" text-anchor="end" font-size="16">Q</text>
-<text x="960" y="316" text-anchor="middle" font-size="26">B</text>
-<text x="928" y="277" text-anchor="start" font-size="14">T</text>
-<text x="992" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="992" y="351" text-anchor="end" font-size="16">Q</text>
-<text x="1404" y="316" text-anchor="middle" font-size="26">C</text>
-<text x="1372" y="277" text-anchor="start" font-size="14">T</text>
-<text x="1436" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="1436" y="351" text-anchor="end" font-size="16">Q</text>
-<text x="1756" y="316" text-anchor="middle" font-size="26">D</text>
-<text x="1724" y="277" text-anchor="start" font-size="14">T</text>
-<text x="1660" y="277" text-anchor="end" font-size="16">1</text>
-<text x="1788" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="1788" y="351" text-anchor="end" font-size="16">Q</text>
+<text x="516" y="348" text-anchor="middle" font-size="26">A</text>
+<text x="516" y="235" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="457" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="282" text-anchor="middle" font-size="12">PR</text>
+<text x="516" y="407" text-anchor="middle" font-size="12">CLR</text>
+<text x="484" y="309" text-anchor="start" font-size="14">T</text>
+<text x="548" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="548" y="383" text-anchor="end" font-size="16">Q</text>
+<text x="960" y="348" text-anchor="middle" font-size="26">B</text>
+<text x="960" y="235" text-anchor="middle" font-size="14">1</text>
+<text x="960" y="457" text-anchor="middle" font-size="14">1</text>
+<text x="960" y="282" text-anchor="middle" font-size="12">PR</text>
+<text x="960" y="407" text-anchor="middle" font-size="12">CLR</text>
+<text x="928" y="309" text-anchor="start" font-size="14">T</text>
+<text x="992" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="992" y="383" text-anchor="end" font-size="16">Q</text>
+<text x="1404" y="348" text-anchor="middle" font-size="26">C</text>
+<text x="1404" y="235" text-anchor="middle" font-size="14">1</text>
+<text x="1404" y="457" text-anchor="middle" font-size="14">1</text>
+<text x="1404" y="282" text-anchor="middle" font-size="12">PR</text>
+<text x="1404" y="407" text-anchor="middle" font-size="12">CLR</text>
+<text x="1372" y="309" text-anchor="start" font-size="14">T</text>
+<text x="1436" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="1436" y="383" text-anchor="end" font-size="16">Q</text>
+<text x="1756" y="348" text-anchor="middle" font-size="26">D</text>
+<text x="1756" y="235" text-anchor="middle" font-size="14">1</text>
+<text x="1756" y="457" text-anchor="middle" font-size="14">1</text>
+<text x="1756" y="282" text-anchor="middle" font-size="12">PR</text>
+<text x="1756" y="407" text-anchor="middle" font-size="12">CLR</text>
+<text x="1724" y="309" text-anchor="start" font-size="14">T</text>
+<text x="1660" y="309" text-anchor="end" font-size="16">1</text>
+<text x="1788" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="1788" y="383" text-anchor="end" font-size="16">Q</text>
 <text x="600" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1044" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1488" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
 <text x="1840" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">D</tspan></text>
-<text x="410" y="461" text-anchor="end" font-size="16">Clock</text>
+<text x="410" y="525" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -12354,89 +13082,115 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} = K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="332" viewBox="0 0 1210 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="396" viewBox="0 0 1210 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="60" width="80" height="150" rx="2"/>
-<polyline points="308,126 320,135 308,144"/>
-<circle cx="304" cy="135" r="4"/>
-<line x1="300" y1="135" x2="286" y2="135"/>
-<line x1="286" y1="135" x2="286" y2="308"/>
-<path d="M166,102 H192 A26,33 0 0 1 192,168 H166 Z"/>
-<line x1="218" y1="135" x2="262" y2="135"/>
-<line x1="262" y1="135" x2="262" y2="98"/>
-<line x1="262" y1="98" x2="308" y2="98"/>
-<line x1="262" y1="135" x2="262" y2="172"/>
-<path d="M262,172 L281.5,172 A4.5,4.5 0 0 1 290.5,172 L308,172"/>
-<line x1="388" y1="98" x2="432" y2="98"/>
-<line x1="388" y1="172" x2="432" y2="172"/>
-<line x1="371.2" y1="164.4" x2="380" y2="164.4" stroke-width="1.4"/>
-<rect x="662" y="60" width="80" height="150" rx="2"/>
-<polyline points="662,126 674,135 662,144"/>
-<circle cx="658" cy="135" r="4"/>
-<line x1="654" y1="135" x2="640" y2="135"/>
-<line x1="640" y1="135" x2="640" y2="308"/>
-<line x1="616" y1="135" x2="616" y2="98"/>
-<line x1="616" y1="98" x2="662" y2="98"/>
-<line x1="616" y1="135" x2="616" y2="172"/>
-<path d="M616,172 L635.5,172 A4.5,4.5 0 0 1 644.5,172 L662,172"/>
-<line x1="742" y1="98" x2="786" y2="98"/>
-<line x1="742" y1="172" x2="786" y2="172"/>
-<line x1="725.2" y1="164.4" x2="734" y2="164.4" stroke-width="1.4"/>
-<rect x="1014" y="60" width="80" height="150" rx="2"/>
-<polyline points="1014,126 1026,135 1014,144"/>
-<circle cx="1010" cy="135" r="4"/>
-<line x1="1006" y1="135" x2="992" y2="135"/>
-<line x1="992" y1="135" x2="992" y2="308"/>
-<line x1="962" y1="98" x2="1014" y2="98"/>
-<path d="M962,172 L987.5,172 A4.5,4.5 0 0 1 996.5,172 L1014,172"/>
-<line x1="1094" y1="98" x2="1138" y2="98"/>
-<line x1="1094" y1="172" x2="1138" y2="172"/>
-<line x1="1077.2" y1="164.4" x2="1086" y2="164.4" stroke-width="1.4"/>
-<line x1="122" y1="258" x2="122" y2="146"/>
-<line x1="122" y1="146" x2="166" y2="146"/>
-<line x1="100" y1="232" x2="100" y2="124"/>
-<line x1="100" y1="124" x2="166" y2="124"/>
-<line x1="572" y1="258" x2="572" y2="135"/>
-<line x1="572" y1="135" x2="616" y2="135"/>
-<path d="M122,258 L281.5,258 A4.5,4.5 0 0 1 290.5,258 L635.5,258 A4.5,4.5 0 0 1 644.5,258 L987.5,258 A4.5,4.5 0 0 1 996.5,258 L1138,258"/>
-<path d="M100,232 L117.5,232 A4.5,4.5 0 0 1 126.5,232 L281.5,232 A4.5,4.5 0 0 1 290.5,232 L567.5,232 A4.5,4.5 0 0 1 576.5,232 L635.5,232 A4.5,4.5 0 0 1 644.5,232 L786,232"/>
-<line x1="432" y1="30" x2="432" y2="98"/>
-<line x1="786" y1="30" x2="786" y2="98"/>
-<line x1="786" y1="172" x2="786" y2="232"/>
-<line x1="1138" y1="30" x2="1138" y2="98"/>
-<line x1="1138" y1="172" x2="1138" y2="258"/>
-<line x1="246" y1="308" x2="992" y2="308"/>
-<circle cx="286" cy="308" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="262" cy="135" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="308" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="616" cy="135" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="572" cy="258" r="3.5" fill="currentColor" stroke="none"/>
+<rect x="308" y="92" width="80" height="150" rx="2"/>
+<circle cx="348" cy="88" r="4"/>
+<line x1="348" y1="84" x2="348" y2="68"/>
+<circle cx="348" cy="246" r="4"/>
+<line x1="348" y1="250" x2="348" y2="266"/>
+<polyline points="308,158 320,167 308,176"/>
+<circle cx="304" cy="167" r="4"/>
+<line x1="300" y1="167" x2="286" y2="167"/>
+<line x1="286" y1="167" x2="286" y2="372"/>
+<path d="M166,134 H192 A26,33 0 0 1 192,200 H166 Z"/>
+<line x1="218" y1="167" x2="262" y2="167"/>
+<line x1="262" y1="167" x2="262" y2="130"/>
+<line x1="262" y1="130" x2="308" y2="130"/>
+<line x1="262" y1="167" x2="262" y2="204"/>
+<path d="M262,204 L281.5,204 A4.5,4.5 0 0 1 290.5,204 L308,204"/>
+<line x1="388" y1="130" x2="432" y2="130"/>
+<line x1="388" y1="204" x2="432" y2="204"/>
+<line x1="371.2" y1="196.4" x2="380" y2="196.4" stroke-width="1.4"/>
+<rect x="662" y="92" width="80" height="150" rx="2"/>
+<circle cx="702" cy="88" r="4"/>
+<line x1="702" y1="84" x2="702" y2="68"/>
+<circle cx="702" cy="246" r="4"/>
+<line x1="702" y1="250" x2="702" y2="266"/>
+<polyline points="662,158 674,167 662,176"/>
+<circle cx="658" cy="167" r="4"/>
+<line x1="654" y1="167" x2="640" y2="167"/>
+<line x1="640" y1="167" x2="640" y2="372"/>
+<line x1="616" y1="167" x2="616" y2="130"/>
+<line x1="616" y1="130" x2="662" y2="130"/>
+<line x1="616" y1="167" x2="616" y2="204"/>
+<path d="M616,204 L635.5,204 A4.5,4.5 0 0 1 644.5,204 L662,204"/>
+<line x1="742" y1="130" x2="786" y2="130"/>
+<line x1="742" y1="204" x2="786" y2="204"/>
+<line x1="725.2" y1="196.4" x2="734" y2="196.4" stroke-width="1.4"/>
+<rect x="1014" y="92" width="80" height="150" rx="2"/>
+<circle cx="1054" cy="88" r="4"/>
+<line x1="1054" y1="84" x2="1054" y2="68"/>
+<circle cx="1054" cy="246" r="4"/>
+<line x1="1054" y1="250" x2="1054" y2="266"/>
+<polyline points="1014,158 1026,167 1014,176"/>
+<circle cx="1010" cy="167" r="4"/>
+<line x1="1006" y1="167" x2="992" y2="167"/>
+<line x1="992" y1="167" x2="992" y2="372"/>
+<line x1="962" y1="130" x2="1014" y2="130"/>
+<path d="M962,204 L987.5,204 A4.5,4.5 0 0 1 996.5,204 L1014,204"/>
+<line x1="1094" y1="130" x2="1138" y2="130"/>
+<line x1="1094" y1="204" x2="1138" y2="204"/>
+<line x1="1077.2" y1="196.4" x2="1086" y2="196.4" stroke-width="1.4"/>
+<line x1="122" y1="322" x2="122" y2="178"/>
+<line x1="122" y1="178" x2="166" y2="178"/>
+<line x1="100" y1="296" x2="100" y2="156"/>
+<line x1="100" y1="156" x2="166" y2="156"/>
+<line x1="572" y1="322" x2="572" y2="167"/>
+<line x1="572" y1="167" x2="616" y2="167"/>
+<path d="M122,322 L281.5,322 A4.5,4.5 0 0 1 290.5,322 L635.5,322 A4.5,4.5 0 0 1 644.5,322 L987.5,322 A4.5,4.5 0 0 1 996.5,322 L1138,322"/>
+<path d="M100,296 L117.5,296 A4.5,4.5 0 0 1 126.5,296 L281.5,296 A4.5,4.5 0 0 1 290.5,296 L567.5,296 A4.5,4.5 0 0 1 576.5,296 L635.5,296 A4.5,4.5 0 0 1 644.5,296 L786,296"/>
+<line x1="432" y1="30" x2="432" y2="130"/>
+<line x1="786" y1="30" x2="786" y2="130"/>
+<line x1="786" y1="204" x2="786" y2="296"/>
+<line x1="1138" y1="30" x2="1138" y2="130"/>
+<line x1="1138" y1="204" x2="1138" y2="322"/>
+<line x1="246" y1="372" x2="992" y2="372"/>
+<circle cx="286" cy="372" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="262" cy="167" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="372" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="616" cy="167" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="572" cy="322" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="143" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="104" text-anchor="start" font-size="14">J</text>
-<text x="316" y="178" text-anchor="start" font-size="14">K</text>
-<text x="380" y="104" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="178" text-anchor="end" font-size="16">Q</text>
-<text x="702" y="143" text-anchor="middle" font-size="26">B</text>
-<text x="670" y="104" text-anchor="start" font-size="14">J</text>
-<text x="670" y="178" text-anchor="start" font-size="14">K</text>
-<text x="734" y="104" text-anchor="end" font-size="16">Q</text>
-<text x="734" y="178" text-anchor="end" font-size="16">Q</text>
-<text x="1054" y="143" text-anchor="middle" font-size="26">C</text>
-<text x="1022" y="104" text-anchor="start" font-size="14">J</text>
-<text x="1022" y="178" text-anchor="start" font-size="14">K</text>
-<text x="958" y="104" text-anchor="end" font-size="16">1</text>
-<text x="958" y="178" text-anchor="end" font-size="16">1</text>
-<text x="1086" y="104" text-anchor="end" font-size="16">Q</text>
-<text x="1086" y="178" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="175" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="62" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="284" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="109" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="234" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="136" text-anchor="start" font-size="14">J</text>
+<text x="316" y="210" text-anchor="start" font-size="14">K</text>
+<text x="380" y="136" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="210" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="175" text-anchor="middle" font-size="26">B</text>
+<text x="702" y="62" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="284" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="109" text-anchor="middle" font-size="12">PR</text>
+<text x="702" y="234" text-anchor="middle" font-size="12">CLR</text>
+<text x="670" y="136" text-anchor="start" font-size="14">J</text>
+<text x="670" y="210" text-anchor="start" font-size="14">K</text>
+<text x="734" y="136" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="210" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="175" text-anchor="middle" font-size="26">C</text>
+<text x="1054" y="62" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="284" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="109" text-anchor="middle" font-size="12">PR</text>
+<text x="1054" y="234" text-anchor="middle" font-size="12">CLR</text>
+<text x="1022" y="136" text-anchor="start" font-size="14">J</text>
+<text x="1022" y="210" text-anchor="start" font-size="14">K</text>
+<text x="958" y="136" text-anchor="end" font-size="16">1</text>
+<text x="958" y="210" text-anchor="end" font-size="16">1</text>
+<text x="1086" y="136" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="210" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="314" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="378" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -12838,112 +13592,138 @@ $S_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= Q_{B}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="508" viewBox="0 0 1390 508" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1390" height="572" viewBox="0 0 1390 572" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="352" y="152" width="80" height="194" rx="2"/>
-<polyline points="352,240 364,249 352,258"/>
-<circle cx="348" cy="249" r="4"/>
-<line x1="344" y1="249" x2="330" y2="249"/>
-<line x1="330" y1="249" x2="330" y2="484"/>
-<path d="M256,146 H282 A26,44 0 0 1 282,234 H256 Z"/>
-<line x1="308" y1="190" x2="352" y2="190"/>
-<path d="M256,264 H282 A26,44 0 0 1 282,352 H256 Z"/>
-<path d="M308,308 L325.5,308 A4.5,4.5 0 0 1 334.5,308 L352,308"/>
-<line x1="432" y1="190" x2="476" y2="190"/>
-<line x1="432" y1="308" x2="476" y2="308"/>
-<line x1="415.2" y1="300.4" x2="424" y2="300.4" stroke-width="1.4"/>
-<rect x="840" y="152" width="80" height="194" rx="2"/>
-<polyline points="840,240 852,249 840,258"/>
-<circle cx="836" cy="249" r="4"/>
-<line x1="832" y1="249" x2="818" y2="249"/>
-<line x1="818" y1="249" x2="818" y2="484"/>
-<path d="M744,157 H770 A26,33 0 0 1 770,223 H744 Z"/>
-<line x1="796" y1="190" x2="840" y2="190"/>
-<path d="M744,275 H770 A26,33 0 0 1 770,341 H744 Z"/>
-<path d="M796,308 L813.5,308 A4.5,4.5 0 0 1 822.5,308 L840,308"/>
-<line x1="920" y1="190" x2="964" y2="190"/>
-<line x1="920" y1="308" x2="964" y2="308"/>
-<line x1="903.2" y1="300.4" x2="912" y2="300.4" stroke-width="1.4"/>
-<rect x="1194" y="152" width="80" height="194" rx="2"/>
-<polyline points="1194,240 1206,249 1194,258"/>
-<circle cx="1190" cy="249" r="4"/>
-<line x1="1186" y1="249" x2="1172" y2="249"/>
-<line x1="1172" y1="249" x2="1172" y2="484"/>
-<line x1="1274" y1="190" x2="1318" y2="190"/>
-<line x1="1274" y1="308" x2="1318" y2="308"/>
-<line x1="1257.2" y1="300.4" x2="1266" y2="300.4" stroke-width="1.4"/>
-<line x1="212" y1="98" x2="212" y2="286"/>
-<line x1="212" y1="286" x2="256" y2="286"/>
-<line x1="190" y1="434" x2="190" y2="330"/>
-<line x1="190" y1="330" x2="256" y2="330"/>
-<line x1="168" y1="408" x2="168" y2="308"/>
-<line x1="168" y1="308" x2="256" y2="308"/>
-<line x1="146" y1="434" x2="146" y2="212"/>
-<path d="M146,212 L207.5,212 A4.5,4.5 0 0 1 216.5,212 L256,212"/>
-<line x1="124" y1="408" x2="124" y2="190"/>
-<path d="M124,190 L207.5,190 A4.5,4.5 0 0 1 216.5,190 L256,190"/>
-<line x1="102" y1="382" x2="102" y2="168"/>
-<path d="M102,168 L207.5,168 A4.5,4.5 0 0 1 216.5,168 L256,168"/>
-<line x1="700" y1="72" x2="700" y2="297"/>
-<line x1="700" y1="297" x2="744" y2="297"/>
-<line x1="678" y1="434" x2="678" y2="319"/>
-<line x1="678" y1="319" x2="744" y2="319"/>
-<line x1="656" y1="434" x2="656" y2="201"/>
-<path d="M656,201 L695.5,201 A4.5,4.5 0 0 1 704.5,201 L744,201"/>
-<line x1="634" y1="408" x2="634" y2="179"/>
-<path d="M634,179 L695.5,179 A4.5,4.5 0 0 1 704.5,179 L744,179"/>
-<line x1="1150" y1="46" x2="1150" y2="308"/>
-<path d="M1150,308 L1167.5,308 A4.5,4.5 0 0 1 1176.5,308 L1194,308"/>
-<line x1="1128" y1="434" x2="1128" y2="190"/>
-<path d="M1128,190 L1145.5,190 A4.5,4.5 0 0 1 1154.5,190 L1194,190"/>
+<rect x="352" y="184" width="80" height="194" rx="2"/>
+<circle cx="392" cy="180" r="4"/>
+<line x1="392" y1="176" x2="392" y2="160"/>
+<circle cx="392" cy="382" r="4"/>
+<line x1="392" y1="386" x2="392" y2="402"/>
+<polyline points="352,272 364,281 352,290"/>
+<circle cx="348" cy="281" r="4"/>
+<line x1="344" y1="281" x2="330" y2="281"/>
+<line x1="330" y1="281" x2="330" y2="548"/>
+<path d="M256,178 H282 A26,44 0 0 1 282,266 H256 Z"/>
+<line x1="308" y1="222" x2="352" y2="222"/>
+<path d="M256,296 H282 A26,44 0 0 1 282,384 H256 Z"/>
+<path d="M308,340 L325.5,340 A4.5,4.5 0 0 1 334.5,340 L352,340"/>
+<line x1="432" y1="222" x2="476" y2="222"/>
+<line x1="432" y1="340" x2="476" y2="340"/>
+<line x1="415.2" y1="332.4" x2="424" y2="332.4" stroke-width="1.4"/>
+<rect x="840" y="184" width="80" height="194" rx="2"/>
+<circle cx="880" cy="180" r="4"/>
+<line x1="880" y1="176" x2="880" y2="160"/>
+<circle cx="880" cy="382" r="4"/>
+<line x1="880" y1="386" x2="880" y2="402"/>
+<polyline points="840,272 852,281 840,290"/>
+<circle cx="836" cy="281" r="4"/>
+<line x1="832" y1="281" x2="818" y2="281"/>
+<line x1="818" y1="281" x2="818" y2="548"/>
+<path d="M744,189 H770 A26,33 0 0 1 770,255 H744 Z"/>
+<line x1="796" y1="222" x2="840" y2="222"/>
+<path d="M744,307 H770 A26,33 0 0 1 770,373 H744 Z"/>
+<path d="M796,340 L813.5,340 A4.5,4.5 0 0 1 822.5,340 L840,340"/>
+<line x1="920" y1="222" x2="964" y2="222"/>
+<line x1="920" y1="340" x2="964" y2="340"/>
+<line x1="903.2" y1="332.4" x2="912" y2="332.4" stroke-width="1.4"/>
+<rect x="1194" y="184" width="80" height="194" rx="2"/>
+<circle cx="1234" cy="180" r="4"/>
+<line x1="1234" y1="176" x2="1234" y2="160"/>
+<circle cx="1234" cy="382" r="4"/>
+<line x1="1234" y1="386" x2="1234" y2="402"/>
+<polyline points="1194,272 1206,281 1194,290"/>
+<circle cx="1190" cy="281" r="4"/>
+<line x1="1186" y1="281" x2="1172" y2="281"/>
+<line x1="1172" y1="281" x2="1172" y2="548"/>
+<line x1="1274" y1="222" x2="1318" y2="222"/>
+<line x1="1274" y1="340" x2="1318" y2="340"/>
+<line x1="1257.2" y1="332.4" x2="1266" y2="332.4" stroke-width="1.4"/>
+<line x1="212" y1="98" x2="212" y2="318"/>
+<line x1="212" y1="318" x2="256" y2="318"/>
+<line x1="190" y1="498" x2="190" y2="362"/>
+<line x1="190" y1="362" x2="256" y2="362"/>
+<line x1="168" y1="472" x2="168" y2="340"/>
+<line x1="168" y1="340" x2="256" y2="340"/>
+<line x1="146" y1="498" x2="146" y2="244"/>
+<path d="M146,244 L207.5,244 A4.5,4.5 0 0 1 216.5,244 L256,244"/>
+<line x1="124" y1="472" x2="124" y2="222"/>
+<path d="M124,222 L207.5,222 A4.5,4.5 0 0 1 216.5,222 L256,222"/>
+<line x1="102" y1="446" x2="102" y2="200"/>
+<path d="M102,200 L207.5,200 A4.5,4.5 0 0 1 216.5,200 L256,200"/>
+<line x1="700" y1="72" x2="700" y2="329"/>
+<line x1="700" y1="329" x2="744" y2="329"/>
+<line x1="678" y1="498" x2="678" y2="351"/>
+<line x1="678" y1="351" x2="744" y2="351"/>
+<line x1="656" y1="498" x2="656" y2="233"/>
+<path d="M656,233 L695.5,233 A4.5,4.5 0 0 1 704.5,233 L744,233"/>
+<line x1="634" y1="472" x2="634" y2="211"/>
+<path d="M634,211 L695.5,211 A4.5,4.5 0 0 1 704.5,211 L744,211"/>
+<line x1="1150" y1="46" x2="1150" y2="340"/>
+<path d="M1150,340 L1167.5,340 A4.5,4.5 0 0 1 1176.5,340 L1194,340"/>
+<line x1="1128" y1="498" x2="1128" y2="222"/>
+<path d="M1128,222 L1145.5,222 A4.5,4.5 0 0 1 1154.5,222 L1194,222"/>
 <line x1="1150" y1="46" x2="1318" y2="46"/>
 <line x1="700" y1="72" x2="964" y2="72"/>
 <line x1="212" y1="98" x2="476" y2="98"/>
-<path d="M146,434 L325.5,434 A4.5,4.5 0 0 1 334.5,434 L813.5,434 A4.5,4.5 0 0 1 822.5,434 L1167.5,434 A4.5,4.5 0 0 1 1176.5,434 L1318,434"/>
-<path d="M124,408 L141.5,408 A4.5,4.5 0 0 1 150.5,408 L185.5,408 A4.5,4.5 0 0 1 194.5,408 L325.5,408 A4.5,4.5 0 0 1 334.5,408 L651.5,408 A4.5,4.5 0 0 1 660.5,408 L673.5,408 A4.5,4.5 0 0 1 682.5,408 L813.5,408 A4.5,4.5 0 0 1 822.5,408 L964,408"/>
-<path d="M102,382 L119.5,382 A4.5,4.5 0 0 1 128.5,382 L141.5,382 A4.5,4.5 0 0 1 150.5,382 L163.5,382 A4.5,4.5 0 0 1 172.5,382 L185.5,382 A4.5,4.5 0 0 1 194.5,382 L325.5,382 A4.5,4.5 0 0 1 334.5,382 L476,382"/>
-<line x1="476" y1="30" x2="476" y2="190"/>
-<line x1="476" y1="308" x2="476" y2="382"/>
-<line x1="964" y1="30" x2="964" y2="190"/>
-<line x1="964" y1="308" x2="964" y2="408"/>
-<line x1="1318" y1="30" x2="1318" y2="190"/>
-<line x1="1318" y1="308" x2="1318" y2="434"/>
-<line x1="290" y1="484" x2="1172" y2="484"/>
-<circle cx="330" cy="484" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="818" cy="484" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M146,498 L325.5,498 A4.5,4.5 0 0 1 334.5,498 L813.5,498 A4.5,4.5 0 0 1 822.5,498 L1167.5,498 A4.5,4.5 0 0 1 1176.5,498 L1318,498"/>
+<path d="M124,472 L141.5,472 A4.5,4.5 0 0 1 150.5,472 L185.5,472 A4.5,4.5 0 0 1 194.5,472 L325.5,472 A4.5,4.5 0 0 1 334.5,472 L651.5,472 A4.5,4.5 0 0 1 660.5,472 L673.5,472 A4.5,4.5 0 0 1 682.5,472 L813.5,472 A4.5,4.5 0 0 1 822.5,472 L964,472"/>
+<path d="M102,446 L119.5,446 A4.5,4.5 0 0 1 128.5,446 L141.5,446 A4.5,4.5 0 0 1 150.5,446 L163.5,446 A4.5,4.5 0 0 1 172.5,446 L185.5,446 A4.5,4.5 0 0 1 194.5,446 L325.5,446 A4.5,4.5 0 0 1 334.5,446 L476,446"/>
+<line x1="476" y1="30" x2="476" y2="222"/>
+<line x1="476" y1="340" x2="476" y2="446"/>
+<line x1="964" y1="30" x2="964" y2="222"/>
+<line x1="964" y1="340" x2="964" y2="472"/>
+<line x1="1318" y1="30" x2="1318" y2="222"/>
+<line x1="1318" y1="340" x2="1318" y2="498"/>
+<line x1="290" y1="548" x2="1172" y2="548"/>
+<circle cx="330" cy="548" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="818" cy="548" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1318" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="964" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="476" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="190" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="678" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="656" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1128" cy="434" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="168" cy="408" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="634" cy="408" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="190" cy="498" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="678" cy="498" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="656" cy="498" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1128" cy="498" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="472" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="634" cy="472" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="392" y="257" text-anchor="middle" font-size="26">A</text>
-<text x="360" y="196" text-anchor="start" font-size="14">S</text>
-<text x="360" y="314" text-anchor="start" font-size="14">R</text>
-<text x="424" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="424" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="880" y="257" text-anchor="middle" font-size="26">B</text>
-<text x="848" y="196" text-anchor="start" font-size="14">S</text>
-<text x="848" y="314" text-anchor="start" font-size="14">R</text>
-<text x="912" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="912" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1234" y="257" text-anchor="middle" font-size="26">C</text>
-<text x="1202" y="196" text-anchor="start" font-size="14">S</text>
-<text x="1202" y="314" text-anchor="start" font-size="14">R</text>
-<text x="1266" y="196" text-anchor="end" font-size="16">Q</text>
-<text x="1266" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="392" y="289" text-anchor="middle" font-size="26">A</text>
+<text x="392" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="392" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="392" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="392" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="360" y="228" text-anchor="start" font-size="14">S</text>
+<text x="360" y="346" text-anchor="start" font-size="14">R</text>
+<text x="424" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="424" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="880" y="289" text-anchor="middle" font-size="26">B</text>
+<text x="880" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="880" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="880" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="880" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="848" y="228" text-anchor="start" font-size="14">S</text>
+<text x="848" y="346" text-anchor="start" font-size="14">R</text>
+<text x="912" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="912" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1234" y="289" text-anchor="middle" font-size="26">C</text>
+<text x="1234" y="154" text-anchor="middle" font-size="14">1</text>
+<text x="1234" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1234" y="201" text-anchor="middle" font-size="12">PR</text>
+<text x="1234" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1202" y="228" text-anchor="start" font-size="14">S</text>
+<text x="1202" y="346" text-anchor="start" font-size="14">R</text>
+<text x="1266" y="228" text-anchor="end" font-size="16">Q</text>
+<text x="1266" y="346" text-anchor="end" font-size="16">Q</text>
 <text x="476" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="964" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1318" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="286" y="490" text-anchor="end" font-size="16">Clock</text>
+<text x="286" y="554" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -13212,121 +13992,147 @@ $D_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} + Q_{A}Q_{B} \\ D_{B} &= \overline{Q_{B}}\overline{Q_{C}} + Q_{B}Q_{C} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1702" height="599" viewBox="0 0 1702 599" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1702" height="663" viewBox="0 0 1702 663" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="540" y="262" width="80" height="150" rx="2"/>
-<polyline points="540,358 552,367 540,376"/>
-<line x1="540" y1="367" x2="518" y2="367"/>
-<line x1="518" y1="367" x2="518" y2="575"/>
-<path d="M436,256 C458,256 484,278 496,300 C484,322 458,344 436,344 Q450,300 436,256 Z"/>
-<path d="M284,146 H310 A26,44 0 0 1 310,234 H284 Z"/>
-<line x1="336" y1="190" x2="418" y2="190"/>
-<line x1="418" y1="190" x2="418" y2="278"/>
-<line x1="418" y1="278" x2="441.2" y2="278"/>
-<path d="M284,267 H310 A26,33 0 0 1 310,333 H284 Z"/>
-<line x1="336" y1="300" x2="398" y2="300"/>
-<line x1="398" y1="300" x2="443" y2="300"/>
-<path d="M284,377 H310 A26,33 0 0 1 310,443 H284 Z"/>
-<line x1="336" y1="410" x2="378" y2="410"/>
-<line x1="378" y1="410" x2="378" y2="322"/>
-<line x1="378" y1="322" x2="441.2" y2="322"/>
-<line x1="496" y1="300" x2="540" y2="300"/>
-<line x1="620" y1="300" x2="664" y2="300"/>
-<line x1="620" y1="374" x2="664" y2="374"/>
-<line x1="603.2" y1="366.4" x2="612" y2="366.4" stroke-width="1.4"/>
-<rect x="1174" y="262" width="80" height="150" rx="2"/>
-<polyline points="1174,358 1186,367 1174,376"/>
-<line x1="1174" y1="367" x2="1152" y2="367"/>
-<line x1="1152" y1="367" x2="1152" y2="575"/>
-<path d="M1070,267 C1092,267 1118,283.5 1130,300 C1118,316.5 1092,333 1070,333 Q1084,300 1070,267 Z"/>
-<path d="M938,223 H964 A26,33 0 0 1 964,289 H938 Z"/>
-<line x1="990" y1="256" x2="1052" y2="256"/>
-<line x1="1052" y1="256" x2="1052" y2="289"/>
-<line x1="1052" y1="289" x2="1076.2" y2="289"/>
-<path d="M938,311 H964 A26,33 0 0 1 964,377 H938 Z"/>
-<line x1="990" y1="344" x2="1032" y2="344"/>
-<line x1="1032" y1="344" x2="1032" y2="311"/>
-<line x1="1032" y1="311" x2="1076.2" y2="311"/>
-<line x1="1130" y1="300" x2="1174" y2="300"/>
-<line x1="1254" y1="300" x2="1298" y2="300"/>
-<line x1="1254" y1="374" x2="1298" y2="374"/>
-<line x1="1237.2" y1="366.4" x2="1246" y2="366.4" stroke-width="1.4"/>
-<rect x="1506" y="262" width="80" height="150" rx="2"/>
-<polyline points="1506,358 1518,367 1506,376"/>
-<line x1="1506" y1="367" x2="1484" y2="367"/>
-<line x1="1484" y1="367" x2="1484" y2="575"/>
-<line x1="1586" y1="300" x2="1630" y2="300"/>
-<line x1="1586" y1="374" x2="1630" y2="374"/>
-<line x1="1569.2" y1="366.4" x2="1578" y2="366.4" stroke-width="1.4"/>
-<line x1="240" y1="98" x2="240" y2="289"/>
-<line x1="240" y1="289" x2="284" y2="289"/>
-<line x1="218" y1="46" x2="218" y2="311"/>
-<line x1="218" y1="311" x2="284" y2="311"/>
-<line x1="196" y1="98" x2="196" y2="399"/>
-<line x1="196" y1="399" x2="284" y2="399"/>
-<line x1="174" y1="72" x2="174" y2="421"/>
-<line x1="174" y1="421" x2="284" y2="421"/>
-<line x1="152" y1="525" x2="152" y2="212"/>
-<path d="M152,212 L169.5,212 A4.5,4.5 0 0 1 178.5,212 L191.5,212 A4.5,4.5 0 0 1 200.5,212 L213.5,212 A4.5,4.5 0 0 1 222.5,212 L235.5,212 A4.5,4.5 0 0 1 244.5,212 L284,212"/>
-<line x1="130" y1="499" x2="130" y2="190"/>
-<path d="M130,190 L169.5,190 A4.5,4.5 0 0 1 178.5,190 L191.5,190 A4.5,4.5 0 0 1 200.5,190 L213.5,190 A4.5,4.5 0 0 1 222.5,190 L235.5,190 A4.5,4.5 0 0 1 244.5,190 L284,190"/>
-<line x1="108" y1="473" x2="108" y2="168"/>
-<path d="M108,168 L169.5,168 A4.5,4.5 0 0 1 178.5,168 L191.5,168 A4.5,4.5 0 0 1 200.5,168 L213.5,168 A4.5,4.5 0 0 1 222.5,168 L235.5,168 A4.5,4.5 0 0 1 244.5,168 L284,168"/>
-<line x1="894" y1="72" x2="894" y2="333"/>
-<line x1="894" y1="333" x2="938" y2="333"/>
-<line x1="872" y1="46" x2="872" y2="355"/>
-<line x1="872" y1="355" x2="938" y2="355"/>
-<line x1="850" y1="525" x2="850" y2="267"/>
-<path d="M850,267 L867.5,267 A4.5,4.5 0 0 1 876.5,267 L889.5,267 A4.5,4.5 0 0 1 898.5,267 L938,267"/>
-<line x1="828" y1="499" x2="828" y2="245"/>
-<path d="M828,245 L867.5,245 A4.5,4.5 0 0 1 876.5,245 L889.5,245 A4.5,4.5 0 0 1 898.5,245 L938,245"/>
-<line x1="1462" y1="525" x2="1462" y2="300"/>
-<line x1="1462" y1="300" x2="1506" y2="300"/>
+<rect x="540" y="294" width="80" height="150" rx="2"/>
+<circle cx="580" cy="290" r="4"/>
+<line x1="580" y1="286" x2="580" y2="270"/>
+<circle cx="580" cy="448" r="4"/>
+<line x1="580" y1="452" x2="580" y2="468"/>
+<polyline points="540,390 552,399 540,408"/>
+<line x1="540" y1="399" x2="518" y2="399"/>
+<line x1="518" y1="399" x2="518" y2="639"/>
+<path d="M436,288 C458,288 484,310 496,332 C484,354 458,376 436,376 Q450,332 436,288 Z"/>
+<path d="M284,178 H310 A26,44 0 0 1 310,266 H284 Z"/>
+<line x1="336" y1="222" x2="418" y2="222"/>
+<line x1="418" y1="222" x2="418" y2="310"/>
+<line x1="418" y1="310" x2="441.2" y2="310"/>
+<path d="M284,299 H310 A26,33 0 0 1 310,365 H284 Z"/>
+<line x1="336" y1="332" x2="398" y2="332"/>
+<line x1="398" y1="332" x2="443" y2="332"/>
+<path d="M284,409 H310 A26,33 0 0 1 310,475 H284 Z"/>
+<line x1="336" y1="442" x2="378" y2="442"/>
+<line x1="378" y1="442" x2="378" y2="354"/>
+<line x1="378" y1="354" x2="441.2" y2="354"/>
+<line x1="496" y1="332" x2="540" y2="332"/>
+<line x1="620" y1="332" x2="664" y2="332"/>
+<line x1="620" y1="406" x2="664" y2="406"/>
+<line x1="603.2" y1="398.4" x2="612" y2="398.4" stroke-width="1.4"/>
+<rect x="1174" y="294" width="80" height="150" rx="2"/>
+<circle cx="1214" cy="290" r="4"/>
+<line x1="1214" y1="286" x2="1214" y2="270"/>
+<circle cx="1214" cy="448" r="4"/>
+<line x1="1214" y1="452" x2="1214" y2="468"/>
+<polyline points="1174,390 1186,399 1174,408"/>
+<line x1="1174" y1="399" x2="1152" y2="399"/>
+<line x1="1152" y1="399" x2="1152" y2="639"/>
+<path d="M1070,299 C1092,299 1118,315.5 1130,332 C1118,348.5 1092,365 1070,365 Q1084,332 1070,299 Z"/>
+<path d="M938,255 H964 A26,33 0 0 1 964,321 H938 Z"/>
+<line x1="990" y1="288" x2="1052" y2="288"/>
+<line x1="1052" y1="288" x2="1052" y2="321"/>
+<line x1="1052" y1="321" x2="1076.2" y2="321"/>
+<path d="M938,343 H964 A26,33 0 0 1 964,409 H938 Z"/>
+<line x1="990" y1="376" x2="1032" y2="376"/>
+<line x1="1032" y1="376" x2="1032" y2="343"/>
+<line x1="1032" y1="343" x2="1076.2" y2="343"/>
+<line x1="1130" y1="332" x2="1174" y2="332"/>
+<line x1="1254" y1="332" x2="1298" y2="332"/>
+<line x1="1254" y1="406" x2="1298" y2="406"/>
+<line x1="1237.2" y1="398.4" x2="1246" y2="398.4" stroke-width="1.4"/>
+<rect x="1506" y="294" width="80" height="150" rx="2"/>
+<circle cx="1546" cy="290" r="4"/>
+<line x1="1546" y1="286" x2="1546" y2="270"/>
+<circle cx="1546" cy="448" r="4"/>
+<line x1="1546" y1="452" x2="1546" y2="468"/>
+<polyline points="1506,390 1518,399 1506,408"/>
+<line x1="1506" y1="399" x2="1484" y2="399"/>
+<line x1="1484" y1="399" x2="1484" y2="639"/>
+<line x1="1586" y1="332" x2="1630" y2="332"/>
+<line x1="1586" y1="406" x2="1630" y2="406"/>
+<line x1="1569.2" y1="398.4" x2="1578" y2="398.4" stroke-width="1.4"/>
+<line x1="240" y1="98" x2="240" y2="321"/>
+<line x1="240" y1="321" x2="284" y2="321"/>
+<line x1="218" y1="46" x2="218" y2="343"/>
+<line x1="218" y1="343" x2="284" y2="343"/>
+<line x1="196" y1="98" x2="196" y2="431"/>
+<line x1="196" y1="431" x2="284" y2="431"/>
+<line x1="174" y1="72" x2="174" y2="453"/>
+<line x1="174" y1="453" x2="284" y2="453"/>
+<line x1="152" y1="589" x2="152" y2="244"/>
+<path d="M152,244 L169.5,244 A4.5,4.5 0 0 1 178.5,244 L191.5,244 A4.5,4.5 0 0 1 200.5,244 L213.5,244 A4.5,4.5 0 0 1 222.5,244 L235.5,244 A4.5,4.5 0 0 1 244.5,244 L284,244"/>
+<line x1="130" y1="563" x2="130" y2="222"/>
+<path d="M130,222 L169.5,222 A4.5,4.5 0 0 1 178.5,222 L191.5,222 A4.5,4.5 0 0 1 200.5,222 L213.5,222 A4.5,4.5 0 0 1 222.5,222 L235.5,222 A4.5,4.5 0 0 1 244.5,222 L284,222"/>
+<line x1="108" y1="537" x2="108" y2="200"/>
+<path d="M108,200 L169.5,200 A4.5,4.5 0 0 1 178.5,200 L191.5,200 A4.5,4.5 0 0 1 200.5,200 L213.5,200 A4.5,4.5 0 0 1 222.5,200 L235.5,200 A4.5,4.5 0 0 1 244.5,200 L284,200"/>
+<line x1="894" y1="72" x2="894" y2="365"/>
+<line x1="894" y1="365" x2="938" y2="365"/>
+<line x1="872" y1="46" x2="872" y2="387"/>
+<line x1="872" y1="387" x2="938" y2="387"/>
+<line x1="850" y1="589" x2="850" y2="299"/>
+<path d="M850,299 L867.5,299 A4.5,4.5 0 0 1 876.5,299 L889.5,299 A4.5,4.5 0 0 1 898.5,299 L938,299"/>
+<line x1="828" y1="563" x2="828" y2="277"/>
+<path d="M828,277 L867.5,277 A4.5,4.5 0 0 1 876.5,277 L889.5,277 A4.5,4.5 0 0 1 898.5,277 L938,277"/>
+<line x1="1462" y1="589" x2="1462" y2="332"/>
+<line x1="1462" y1="332" x2="1506" y2="332"/>
 <path d="M218,46 L659.5,46 A4.5,4.5 0 0 1 668.5,46 L1293.5,46 A4.5,4.5 0 0 1 1302.5,46 L1630,46"/>
 <path d="M174,72 L213.5,72 A4.5,4.5 0 0 1 222.5,72 L659.5,72 A4.5,4.5 0 0 1 668.5,72 L867.5,72 A4.5,4.5 0 0 1 876.5,72 L1298,72"/>
 <path d="M196,98 L213.5,98 A4.5,4.5 0 0 1 222.5,98 L664,98"/>
-<path d="M152,525 L513.5,525 A4.5,4.5 0 0 1 522.5,525 L1147.5,525 A4.5,4.5 0 0 1 1156.5,525 L1479.5,525 A4.5,4.5 0 0 1 1488.5,525 L1630,525"/>
-<path d="M130,499 L147.5,499 A4.5,4.5 0 0 1 156.5,499 L513.5,499 A4.5,4.5 0 0 1 522.5,499 L845.5,499 A4.5,4.5 0 0 1 854.5,499 L1147.5,499 A4.5,4.5 0 0 1 1156.5,499 L1298,499"/>
-<path d="M108,473 L125.5,473 A4.5,4.5 0 0 1 134.5,473 L147.5,473 A4.5,4.5 0 0 1 156.5,473 L513.5,473 A4.5,4.5 0 0 1 522.5,473 L664,473"/>
-<line x1="664" y1="30" x2="664" y2="300"/>
-<line x1="664" y1="374" x2="664" y2="473"/>
-<line x1="1298" y1="30" x2="1298" y2="300"/>
-<line x1="1298" y1="374" x2="1298" y2="499"/>
-<line x1="1630" y1="30" x2="1630" y2="300"/>
-<line x1="1630" y1="374" x2="1630" y2="525"/>
-<line x1="478" y1="575" x2="1484" y2="575"/>
-<circle cx="518" cy="575" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1152" cy="575" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M152,589 L513.5,589 A4.5,4.5 0 0 1 522.5,589 L1147.5,589 A4.5,4.5 0 0 1 1156.5,589 L1479.5,589 A4.5,4.5 0 0 1 1488.5,589 L1630,589"/>
+<path d="M130,563 L147.5,563 A4.5,4.5 0 0 1 156.5,563 L513.5,563 A4.5,4.5 0 0 1 522.5,563 L845.5,563 A4.5,4.5 0 0 1 854.5,563 L1147.5,563 A4.5,4.5 0 0 1 1156.5,563 L1298,563"/>
+<path d="M108,537 L125.5,537 A4.5,4.5 0 0 1 134.5,537 L147.5,537 A4.5,4.5 0 0 1 156.5,537 L513.5,537 A4.5,4.5 0 0 1 522.5,537 L664,537"/>
+<line x1="664" y1="30" x2="664" y2="332"/>
+<line x1="664" y1="406" x2="664" y2="537"/>
+<line x1="1298" y1="30" x2="1298" y2="332"/>
+<line x1="1298" y1="406" x2="1298" y2="563"/>
+<line x1="1630" y1="30" x2="1630" y2="332"/>
+<line x1="1630" y1="406" x2="1630" y2="589"/>
+<line x1="478" y1="639" x2="1484" y2="639"/>
+<circle cx="518" cy="639" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1152" cy="639" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1630" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="872" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1298" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="894" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="664" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="240" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="850" cy="525" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1462" cy="525" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="828" cy="499" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="850" cy="589" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1462" cy="589" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="828" cy="563" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="580" y="345" text-anchor="middle" font-size="26">A</text>
-<text x="548" y="306" text-anchor="start" font-size="14">D</text>
-<text x="612" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="612" y="380" text-anchor="end" font-size="16">Q</text>
-<text x="1214" y="345" text-anchor="middle" font-size="26">B</text>
-<text x="1182" y="306" text-anchor="start" font-size="14">D</text>
-<text x="1246" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="1246" y="380" text-anchor="end" font-size="16">Q</text>
-<text x="1546" y="345" text-anchor="middle" font-size="26">C</text>
-<text x="1514" y="306" text-anchor="start" font-size="14">D</text>
-<text x="1578" y="306" text-anchor="end" font-size="16">Q</text>
-<text x="1578" y="380" text-anchor="end" font-size="16">Q</text>
+<text x="580" y="377" text-anchor="middle" font-size="26">A</text>
+<text x="580" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="580" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="580" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="580" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="548" y="338" text-anchor="start" font-size="14">D</text>
+<text x="612" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="612" y="412" text-anchor="end" font-size="16">Q</text>
+<text x="1214" y="377" text-anchor="middle" font-size="26">B</text>
+<text x="1214" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="1214" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="1214" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="1214" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="1182" y="338" text-anchor="start" font-size="14">D</text>
+<text x="1246" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="1246" y="412" text-anchor="end" font-size="16">Q</text>
+<text x="1546" y="377" text-anchor="middle" font-size="26">C</text>
+<text x="1546" y="264" text-anchor="middle" font-size="14">1</text>
+<text x="1546" y="486" text-anchor="middle" font-size="14">1</text>
+<text x="1546" y="311" text-anchor="middle" font-size="12">PR</text>
+<text x="1546" y="436" text-anchor="middle" font-size="12">CLR</text>
+<text x="1514" y="338" text-anchor="start" font-size="14">D</text>
+<text x="1578" y="338" text-anchor="end" font-size="16">Q</text>
+<text x="1578" y="412" text-anchor="end" font-size="16">Q</text>
 <text x="664" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1630" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="474" y="581" text-anchor="end" font-size="16">Clock</text>
+<text x="474" y="645" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -13586,71 +14392,97 @@ $T_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1144" height="335" viewBox="0 0 1144 335" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1144" height="399" viewBox="0 0 1144 399" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="63" width="80" height="150" rx="2"/>
-<polyline points="264,159 276,168 264,177"/>
-<line x1="264" y1="168" x2="242" y2="168"/>
-<line x1="242" y1="168" x2="242" y2="311"/>
-<path d="M168,68 H194 A26,33 0 0 1 194,134 H168 Z"/>
-<line x1="220" y1="101" x2="264" y2="101"/>
-<line x1="344" y1="101" x2="388" y2="101"/>
-<line x1="344" y1="175" x2="388" y2="175"/>
-<line x1="327.2" y1="167.4" x2="336" y2="167.4" stroke-width="1.4"/>
-<rect x="596" y="63" width="80" height="150" rx="2"/>
-<polyline points="596,159 608,168 596,177"/>
-<line x1="596" y1="168" x2="574" y2="168"/>
-<line x1="574" y1="168" x2="574" y2="311"/>
-<line x1="676" y1="101" x2="720" y2="101"/>
-<line x1="676" y1="175" x2="720" y2="175"/>
-<line x1="659.2" y1="167.4" x2="668" y2="167.4" stroke-width="1.4"/>
-<rect x="948" y="63" width="80" height="150" rx="2"/>
-<polyline points="948,159 960,168 948,177"/>
-<line x1="948" y1="168" x2="926" y2="168"/>
-<line x1="926" y1="168" x2="926" y2="311"/>
-<line x1="896" y1="101" x2="948" y2="101"/>
-<line x1="1028" y1="101" x2="1072" y2="101"/>
-<line x1="1028" y1="175" x2="1072" y2="175"/>
-<line x1="1011.2" y1="167.4" x2="1020" y2="167.4" stroke-width="1.4"/>
-<line x1="124" y1="261" x2="124" y2="112"/>
-<line x1="124" y1="112" x2="168" y2="112"/>
-<line x1="102" y1="235" x2="102" y2="90"/>
-<line x1="102" y1="90" x2="168" y2="90"/>
-<line x1="552" y1="261" x2="552" y2="101"/>
-<line x1="552" y1="101" x2="596" y2="101"/>
-<path d="M124,261 L237.5,261 A4.5,4.5 0 0 1 246.5,261 L569.5,261 A4.5,4.5 0 0 1 578.5,261 L921.5,261 A4.5,4.5 0 0 1 930.5,261 L1072,261"/>
-<path d="M102,235 L119.5,235 A4.5,4.5 0 0 1 128.5,235 L237.5,235 A4.5,4.5 0 0 1 246.5,235 L547.5,235 A4.5,4.5 0 0 1 556.5,235 L569.5,235 A4.5,4.5 0 0 1 578.5,235 L720,235"/>
-<line x1="388" y1="30" x2="388" y2="101"/>
-<line x1="720" y1="30" x2="720" y2="101"/>
-<line x1="720" y1="175" x2="720" y2="235"/>
-<line x1="1072" y1="30" x2="1072" y2="101"/>
-<line x1="1072" y1="175" x2="1072" y2="261"/>
-<line x1="202" y1="311" x2="926" y2="311"/>
-<circle cx="242" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="574" cy="311" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="552" cy="261" r="3.5" fill="currentColor" stroke="none"/>
+<rect x="264" y="95" width="80" height="150" rx="2"/>
+<circle cx="304" cy="91" r="4"/>
+<line x1="304" y1="87" x2="304" y2="71"/>
+<circle cx="304" cy="249" r="4"/>
+<line x1="304" y1="253" x2="304" y2="269"/>
+<polyline points="264,191 276,200 264,209"/>
+<line x1="264" y1="200" x2="242" y2="200"/>
+<line x1="242" y1="200" x2="242" y2="375"/>
+<path d="M168,100 H194 A26,33 0 0 1 194,166 H168 Z"/>
+<line x1="220" y1="133" x2="264" y2="133"/>
+<line x1="344" y1="133" x2="388" y2="133"/>
+<line x1="344" y1="207" x2="388" y2="207"/>
+<line x1="327.2" y1="199.4" x2="336" y2="199.4" stroke-width="1.4"/>
+<rect x="596" y="95" width="80" height="150" rx="2"/>
+<circle cx="636" cy="91" r="4"/>
+<line x1="636" y1="87" x2="636" y2="71"/>
+<circle cx="636" cy="249" r="4"/>
+<line x1="636" y1="253" x2="636" y2="269"/>
+<polyline points="596,191 608,200 596,209"/>
+<line x1="596" y1="200" x2="574" y2="200"/>
+<line x1="574" y1="200" x2="574" y2="375"/>
+<line x1="676" y1="133" x2="720" y2="133"/>
+<line x1="676" y1="207" x2="720" y2="207"/>
+<line x1="659.2" y1="199.4" x2="668" y2="199.4" stroke-width="1.4"/>
+<rect x="948" y="95" width="80" height="150" rx="2"/>
+<circle cx="988" cy="91" r="4"/>
+<line x1="988" y1="87" x2="988" y2="71"/>
+<circle cx="988" cy="249" r="4"/>
+<line x1="988" y1="253" x2="988" y2="269"/>
+<polyline points="948,191 960,200 948,209"/>
+<line x1="948" y1="200" x2="926" y2="200"/>
+<line x1="926" y1="200" x2="926" y2="375"/>
+<line x1="896" y1="133" x2="948" y2="133"/>
+<line x1="1028" y1="133" x2="1072" y2="133"/>
+<line x1="1028" y1="207" x2="1072" y2="207"/>
+<line x1="1011.2" y1="199.4" x2="1020" y2="199.4" stroke-width="1.4"/>
+<line x1="124" y1="325" x2="124" y2="144"/>
+<line x1="124" y1="144" x2="168" y2="144"/>
+<line x1="102" y1="299" x2="102" y2="122"/>
+<line x1="102" y1="122" x2="168" y2="122"/>
+<line x1="552" y1="325" x2="552" y2="133"/>
+<line x1="552" y1="133" x2="596" y2="133"/>
+<path d="M124,325 L237.5,325 A4.5,4.5 0 0 1 246.5,325 L569.5,325 A4.5,4.5 0 0 1 578.5,325 L921.5,325 A4.5,4.5 0 0 1 930.5,325 L1072,325"/>
+<path d="M102,299 L119.5,299 A4.5,4.5 0 0 1 128.5,299 L237.5,299 A4.5,4.5 0 0 1 246.5,299 L547.5,299 A4.5,4.5 0 0 1 556.5,299 L569.5,299 A4.5,4.5 0 0 1 578.5,299 L720,299"/>
+<line x1="388" y1="30" x2="388" y2="133"/>
+<line x1="720" y1="30" x2="720" y2="133"/>
+<line x1="720" y1="207" x2="720" y2="299"/>
+<line x1="1072" y1="30" x2="1072" y2="133"/>
+<line x1="1072" y1="207" x2="1072" y2="325"/>
+<line x1="202" y1="375" x2="926" y2="375"/>
+<circle cx="242" cy="375" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="574" cy="375" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="552" cy="325" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="146" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="107" text-anchor="start" font-size="14">T</text>
-<text x="336" y="107" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="181" text-anchor="end" font-size="16">Q</text>
-<text x="636" y="146" text-anchor="middle" font-size="26">B</text>
-<text x="604" y="107" text-anchor="start" font-size="14">T</text>
-<text x="668" y="107" text-anchor="end" font-size="16">Q</text>
-<text x="668" y="181" text-anchor="end" font-size="16">Q</text>
-<text x="988" y="146" text-anchor="middle" font-size="26">C</text>
-<text x="956" y="107" text-anchor="start" font-size="14">T</text>
-<text x="892" y="107" text-anchor="end" font-size="16">1</text>
-<text x="1020" y="107" text-anchor="end" font-size="16">Q</text>
-<text x="1020" y="181" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="178" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="65" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="287" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="112" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="237" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="139" text-anchor="start" font-size="14">T</text>
+<text x="336" y="139" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="213" text-anchor="end" font-size="16">Q</text>
+<text x="636" y="178" text-anchor="middle" font-size="26">B</text>
+<text x="636" y="65" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="287" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="112" text-anchor="middle" font-size="12">PR</text>
+<text x="636" y="237" text-anchor="middle" font-size="12">CLR</text>
+<text x="604" y="139" text-anchor="start" font-size="14">T</text>
+<text x="668" y="139" text-anchor="end" font-size="16">Q</text>
+<text x="668" y="213" text-anchor="end" font-size="16">Q</text>
+<text x="988" y="178" text-anchor="middle" font-size="26">C</text>
+<text x="988" y="65" text-anchor="middle" font-size="14">1</text>
+<text x="988" y="287" text-anchor="middle" font-size="14">1</text>
+<text x="988" y="112" text-anchor="middle" font-size="12">PR</text>
+<text x="988" y="237" text-anchor="middle" font-size="12">CLR</text>
+<text x="956" y="139" text-anchor="start" font-size="14">T</text>
+<text x="892" y="139" text-anchor="end" font-size="16">1</text>
+<text x="1020" y="139" text-anchor="end" font-size="16">Q</text>
+<text x="1020" y="213" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="720" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1072" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="317" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="381" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -14058,100 +14890,114 @@ $K_{C} = \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ J_{B} &= \overline{Q_{A}}Q_{C} \\ K_{B} &= Q_{A}Q_{C} \\ J_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B} \\ K_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="552" viewBox="0 0 1670 552" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="616" viewBox="0 0 1670 616" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="185" width="80" height="216" rx="2"/>
-<polyline points="308,284 320,293 308,302"/>
-<circle cx="304" cy="293" r="4"/>
-<line x1="300" y1="293" x2="286" y2="293"/>
-<line x1="286" y1="293" x2="286" y2="528"/>
-<path d="M212,190 H238 A26,33 0 0 1 238,256 H212 Z"/>
-<line x1="264" y1="223" x2="308" y2="223"/>
-<path d="M212,330 H238 A26,33 0 0 1 238,396 H212 Z"/>
-<path d="M264,363 L281.5,363 A4.5,4.5 0 0 1 290.5,363 L308,363"/>
-<line x1="388" y1="223" x2="432" y2="223"/>
-<line x1="388" y1="363" x2="432" y2="363"/>
-<line x1="371.2" y1="355.4" x2="380" y2="355.4" stroke-width="1.4"/>
-<rect x="796" y="185" width="80" height="216" rx="2"/>
-<polyline points="796,284 808,293 796,302"/>
-<circle cx="792" cy="293" r="4"/>
-<line x1="788" y1="293" x2="774" y2="293"/>
-<line x1="774" y1="293" x2="774" y2="528"/>
-<path d="M700,190 H726 A26,33 0 0 1 726,256 H700 Z"/>
-<line x1="752" y1="223" x2="796" y2="223"/>
-<path d="M700,330 H726 A26,33 0 0 1 726,396 H700 Z"/>
-<path d="M752,363 L769.5,363 A4.5,4.5 0 0 1 778.5,363 L796,363"/>
-<line x1="876" y1="223" x2="920" y2="223"/>
-<line x1="876" y1="363" x2="920" y2="363"/>
-<line x1="859.2" y1="355.4" x2="868" y2="355.4" stroke-width="1.4"/>
-<rect x="1474" y="185" width="80" height="216" rx="2"/>
-<polyline points="1474,284 1486,293 1474,302"/>
-<circle cx="1470" cy="293" r="4"/>
-<line x1="1466" y1="293" x2="1452" y2="293"/>
-<line x1="1452" y1="293" x2="1452" y2="528"/>
-<path d="M1370,190 C1392,190 1418,206.5 1430,223 C1418,239.5 1392,256 1370,256 Q1384,223 1370,190 Z"/>
-<path d="M1238,146 H1264 A26,33 0 0 1 1264,212 H1238 Z"/>
-<line x1="1290" y1="179" x2="1352" y2="179"/>
-<line x1="1352" y1="179" x2="1352" y2="212"/>
-<line x1="1352" y1="212" x2="1376.2" y2="212"/>
-<path d="M1238,234 H1264 A26,33 0 0 1 1264,300 H1238 Z"/>
-<line x1="1290" y1="267" x2="1332" y2="267"/>
-<line x1="1332" y1="267" x2="1332" y2="234"/>
-<line x1="1332" y1="234" x2="1376.2" y2="234"/>
-<line x1="1430" y1="223" x2="1474" y2="223"/>
-<path d="M1370,330 C1392,330 1418,346.5 1430,363 C1418,379.5 1392,396 1370,396 Q1384,363 1370,330 Z"/>
-<path d="M1362,330 Q1376,363 1362,396"/>
-<path d="M1430,363 L1447.5,363 A4.5,4.5 0 0 1 1456.5,363 L1474,363"/>
-<line x1="1554" y1="223" x2="1598" y2="223"/>
-<line x1="1554" y1="363" x2="1598" y2="363"/>
-<line x1="1537.2" y1="355.4" x2="1546" y2="355.4" stroke-width="1.4"/>
-<line x1="168" y1="72" x2="168" y2="212"/>
-<line x1="168" y1="212" x2="212" y2="212"/>
-<line x1="146" y1="478" x2="146" y2="374"/>
-<line x1="146" y1="374" x2="212" y2="374"/>
-<line x1="124" y1="452" x2="124" y2="352"/>
-<line x1="124" y1="352" x2="212" y2="352"/>
-<line x1="102" y1="478" x2="102" y2="234"/>
-<line x1="102" y1="234" x2="212" y2="234"/>
-<line x1="656" y1="46" x2="656" y2="234"/>
-<line x1="656" y1="234" x2="700" y2="234"/>
-<line x1="634" y1="98" x2="634" y2="352"/>
-<line x1="634" y1="352" x2="700" y2="352"/>
-<line x1="612" y1="46" x2="612" y2="374"/>
-<line x1="612" y1="374" x2="700" y2="374"/>
-<line x1="590" y1="426" x2="590" y2="212"/>
-<path d="M590,212 L607.5,212 A4.5,4.5 0 0 1 616.5,212 L629.5,212 A4.5,4.5 0 0 1 638.5,212 L651.5,212 A4.5,4.5 0 0 1 660.5,212 L700,212"/>
-<line x1="1194" y1="98" x2="1194" y2="256"/>
-<line x1="1194" y1="256" x2="1238" y2="256"/>
-<line x1="1172" y1="72" x2="1172" y2="278"/>
-<line x1="1172" y1="278" x2="1238" y2="278"/>
-<line x1="1148.2" y1="98" x2="1148.2" y2="352"/>
-<line x1="1148.2" y1="352" x2="1368.2" y2="352"/>
-<line x1="1126.2" y1="72" x2="1126.2" y2="374"/>
-<line x1="1126.2" y1="374" x2="1368.2" y2="374"/>
-<line x1="1084" y1="452" x2="1084" y2="190"/>
-<path d="M1084,190 L1121.7,190 A4.5,4.5 0 0 1 1130.7,190 L1143.7,190 A4.5,4.5 0 0 1 1152.7,190 L1167.5,190 A4.5,4.5 0 0 1 1176.5,190 L1189.5,190 A4.5,4.5 0 0 1 1198.5,190 L1238,190"/>
-<line x1="1062" y1="426" x2="1062" y2="168"/>
-<path d="M1062,168 L1121.7,168 A4.5,4.5 0 0 1 1130.7,168 L1143.7,168 A4.5,4.5 0 0 1 1152.7,168 L1167.5,168 A4.5,4.5 0 0 1 1176.5,168 L1189.5,168 A4.5,4.5 0 0 1 1198.5,168 L1238,168"/>
+<rect x="308" y="217" width="80" height="216" rx="2"/>
+<circle cx="348" cy="213" r="4"/>
+<line x1="348" y1="209" x2="348" y2="193"/>
+<circle cx="348" cy="437" r="4"/>
+<line x1="348" y1="441" x2="348" y2="457"/>
+<polyline points="308,316 320,325 308,334"/>
+<circle cx="304" cy="325" r="4"/>
+<line x1="300" y1="325" x2="286" y2="325"/>
+<line x1="286" y1="325" x2="286" y2="592"/>
+<path d="M212,222 H238 A26,33 0 0 1 238,288 H212 Z"/>
+<line x1="264" y1="255" x2="308" y2="255"/>
+<path d="M212,362 H238 A26,33 0 0 1 238,428 H212 Z"/>
+<path d="M264,395 L281.5,395 A4.5,4.5 0 0 1 290.5,395 L308,395"/>
+<line x1="388" y1="255" x2="432" y2="255"/>
+<line x1="388" y1="395" x2="432" y2="395"/>
+<line x1="371.2" y1="387.4" x2="380" y2="387.4" stroke-width="1.4"/>
+<rect x="796" y="217" width="80" height="216" rx="2"/>
+<circle cx="836" cy="213" r="4"/>
+<line x1="836" y1="209" x2="836" y2="193"/>
+<circle cx="836" cy="437" r="4"/>
+<line x1="836" y1="441" x2="836" y2="457"/>
+<polyline points="796,316 808,325 796,334"/>
+<circle cx="792" cy="325" r="4"/>
+<line x1="788" y1="325" x2="774" y2="325"/>
+<line x1="774" y1="325" x2="774" y2="592"/>
+<path d="M700,222 H726 A26,33 0 0 1 726,288 H700 Z"/>
+<line x1="752" y1="255" x2="796" y2="255"/>
+<path d="M700,362 H726 A26,33 0 0 1 726,428 H700 Z"/>
+<path d="M752,395 L769.5,395 A4.5,4.5 0 0 1 778.5,395 L796,395"/>
+<line x1="876" y1="255" x2="920" y2="255"/>
+<line x1="876" y1="395" x2="920" y2="395"/>
+<line x1="859.2" y1="387.4" x2="868" y2="387.4" stroke-width="1.4"/>
+<rect x="1474" y="217" width="80" height="216" rx="2"/>
+<circle cx="1514" cy="213" r="4"/>
+<line x1="1514" y1="209" x2="1514" y2="193"/>
+<circle cx="1514" cy="437" r="4"/>
+<line x1="1514" y1="441" x2="1514" y2="457"/>
+<polyline points="1474,316 1486,325 1474,334"/>
+<circle cx="1470" cy="325" r="4"/>
+<line x1="1466" y1="325" x2="1452" y2="325"/>
+<line x1="1452" y1="325" x2="1452" y2="592"/>
+<path d="M1370,222 C1392,222 1418,238.5 1430,255 C1418,271.5 1392,288 1370,288 Q1384,255 1370,222 Z"/>
+<path d="M1238,178 H1264 A26,33 0 0 1 1264,244 H1238 Z"/>
+<line x1="1290" y1="211" x2="1352" y2="211"/>
+<line x1="1352" y1="211" x2="1352" y2="244"/>
+<line x1="1352" y1="244" x2="1376.2" y2="244"/>
+<path d="M1238,266 H1264 A26,33 0 0 1 1264,332 H1238 Z"/>
+<line x1="1290" y1="299" x2="1332" y2="299"/>
+<line x1="1332" y1="299" x2="1332" y2="266"/>
+<line x1="1332" y1="266" x2="1376.2" y2="266"/>
+<line x1="1430" y1="255" x2="1474" y2="255"/>
+<path d="M1370,362 C1392,362 1418,378.5 1430,395 C1418,411.5 1392,428 1370,428 Q1384,395 1370,362 Z"/>
+<path d="M1362,362 Q1376,395 1362,428"/>
+<path d="M1430,395 L1447.5,395 A4.5,4.5 0 0 1 1456.5,395 L1474,395"/>
+<line x1="1554" y1="255" x2="1598" y2="255"/>
+<line x1="1554" y1="395" x2="1598" y2="395"/>
+<line x1="1537.2" y1="387.4" x2="1546" y2="387.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="244"/>
+<line x1="168" y1="244" x2="212" y2="244"/>
+<line x1="146" y1="542" x2="146" y2="406"/>
+<line x1="146" y1="406" x2="212" y2="406"/>
+<line x1="124" y1="516" x2="124" y2="384"/>
+<line x1="124" y1="384" x2="212" y2="384"/>
+<line x1="102" y1="542" x2="102" y2="266"/>
+<line x1="102" y1="266" x2="212" y2="266"/>
+<line x1="656" y1="46" x2="656" y2="266"/>
+<line x1="656" y1="266" x2="700" y2="266"/>
+<line x1="634" y1="98" x2="634" y2="384"/>
+<line x1="634" y1="384" x2="700" y2="384"/>
+<line x1="612" y1="46" x2="612" y2="406"/>
+<line x1="612" y1="406" x2="700" y2="406"/>
+<line x1="590" y1="490" x2="590" y2="244"/>
+<path d="M590,244 L607.5,244 A4.5,4.5 0 0 1 616.5,244 L629.5,244 A4.5,4.5 0 0 1 638.5,244 L651.5,244 A4.5,4.5 0 0 1 660.5,244 L700,244"/>
+<line x1="1194" y1="98" x2="1194" y2="288"/>
+<line x1="1194" y1="288" x2="1238" y2="288"/>
+<line x1="1172" y1="72" x2="1172" y2="310"/>
+<line x1="1172" y1="310" x2="1238" y2="310"/>
+<line x1="1148.2" y1="98" x2="1148.2" y2="384"/>
+<line x1="1148.2" y1="384" x2="1368.2" y2="384"/>
+<line x1="1126.2" y1="72" x2="1126.2" y2="406"/>
+<line x1="1126.2" y1="406" x2="1368.2" y2="406"/>
+<line x1="1084" y1="516" x2="1084" y2="222"/>
+<path d="M1084,222 L1121.7,222 A4.5,4.5 0 0 1 1130.7,222 L1143.7,222 A4.5,4.5 0 0 1 1152.7,222 L1167.5,222 A4.5,4.5 0 0 1 1176.5,222 L1189.5,222 A4.5,4.5 0 0 1 1198.5,222 L1238,222"/>
+<line x1="1062" y1="490" x2="1062" y2="200"/>
+<path d="M1062,200 L1121.7,200 A4.5,4.5 0 0 1 1130.7,200 L1143.7,200 A4.5,4.5 0 0 1 1152.7,200 L1167.5,200 A4.5,4.5 0 0 1 1176.5,200 L1189.5,200 A4.5,4.5 0 0 1 1198.5,200 L1238,200"/>
 <path d="M612,46 L915.5,46 A4.5,4.5 0 0 1 924.5,46 L1598,46"/>
 <path d="M168,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L607.5,72 A4.5,4.5 0 0 1 616.5,72 L651.5,72 A4.5,4.5 0 0 1 660.5,72 L1172,72"/>
 <path d="M432,98 L607.5,98 A4.5,4.5 0 0 1 616.5,98 L651.5,98 A4.5,4.5 0 0 1 660.5,98 L915.5,98 A4.5,4.5 0 0 1 924.5,98 L1121.7,98 A4.5,4.5 0 0 1 1130.7,98 L1167.5,98 A4.5,4.5 0 0 1 1176.5,98 L1194,98"/>
-<path d="M102,478 L281.5,478 A4.5,4.5 0 0 1 290.5,478 L769.5,478 A4.5,4.5 0 0 1 778.5,478 L1447.5,478 A4.5,4.5 0 0 1 1456.5,478 L1598,478"/>
-<path d="M124,452 L141.5,452 A4.5,4.5 0 0 1 150.5,452 L281.5,452 A4.5,4.5 0 0 1 290.5,452 L769.5,452 A4.5,4.5 0 0 1 778.5,452 L1084,452"/>
-<path d="M432,426 L769.5,426 A4.5,4.5 0 0 1 778.5,426 L915.5,426 A4.5,4.5 0 0 1 924.5,426 L1062,426"/>
-<line x1="432" y1="30" x2="432" y2="223"/>
-<line x1="432" y1="363" x2="432" y2="426"/>
-<line x1="920" y1="30" x2="920" y2="223"/>
-<line x1="920" y1="363" x2="920" y2="452"/>
-<line x1="1598" y1="30" x2="1598" y2="223"/>
-<line x1="1598" y1="363" x2="1598" y2="478"/>
-<line x1="246" y1="528" x2="1452" y2="528"/>
-<circle cx="286" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="774" cy="528" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M102,542 L281.5,542 A4.5,4.5 0 0 1 290.5,542 L769.5,542 A4.5,4.5 0 0 1 778.5,542 L1447.5,542 A4.5,4.5 0 0 1 1456.5,542 L1598,542"/>
+<path d="M124,516 L141.5,516 A4.5,4.5 0 0 1 150.5,516 L281.5,516 A4.5,4.5 0 0 1 290.5,516 L769.5,516 A4.5,4.5 0 0 1 778.5,516 L1084,516"/>
+<path d="M432,490 L769.5,490 A4.5,4.5 0 0 1 778.5,490 L915.5,490 A4.5,4.5 0 0 1 924.5,490 L1062,490"/>
+<line x1="432" y1="30" x2="432" y2="255"/>
+<line x1="432" y1="395" x2="432" y2="490"/>
+<line x1="920" y1="30" x2="920" y2="255"/>
+<line x1="920" y1="395" x2="920" y2="516"/>
+<line x1="1598" y1="30" x2="1598" y2="255"/>
+<line x1="1598" y1="395" x2="1598" y2="542"/>
+<line x1="246" y1="592" x2="1452" y2="592"/>
+<circle cx="286" cy="592" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="774" cy="592" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1598" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -14159,29 +15005,41 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}\overline{Q_{C}} \\ K_{A} &= \ov
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1148.2" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="146" cy="478" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="920" cy="452" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="426" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="146" cy="542" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="920" cy="516" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="490" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="301" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="229" text-anchor="start" font-size="14">J</text>
-<text x="316" y="369" text-anchor="start" font-size="14">K</text>
-<text x="380" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="836" y="301" text-anchor="middle" font-size="26">B</text>
-<text x="804" y="229" text-anchor="start" font-size="14">J</text>
-<text x="804" y="369" text-anchor="start" font-size="14">K</text>
-<text x="868" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="868" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="1514" y="301" text-anchor="middle" font-size="26">C</text>
-<text x="1482" y="229" text-anchor="start" font-size="14">J</text>
-<text x="1482" y="369" text-anchor="start" font-size="14">K</text>
-<text x="1546" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1546" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="333" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="261" text-anchor="start" font-size="14">J</text>
+<text x="316" y="401" text-anchor="start" font-size="14">K</text>
+<text x="380" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="836" y="333" text-anchor="middle" font-size="26">B</text>
+<text x="836" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="836" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="836" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="836" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="804" y="261" text-anchor="start" font-size="14">J</text>
+<text x="804" y="401" text-anchor="start" font-size="14">K</text>
+<text x="868" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="868" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="1514" y="333" text-anchor="middle" font-size="26">C</text>
+<text x="1514" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1514" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="1514" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1514" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="1482" y="261" text-anchor="start" font-size="14">J</text>
+<text x="1482" y="401" text-anchor="start" font-size="14">K</text>
+<text x="1546" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1546" y="401" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="920" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1598" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="534" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="598" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -14589,100 +15447,114 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S_{A} &= Q_{B}\overline{Q_{C}} \\ R_{B} &= Q_{A}Q_{C} \\ S_{B} &= \overline{Q_{A}}Q_{C} \\ R_{C} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="552" viewBox="0 0 1670 552" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1670" height="616" viewBox="0 0 1670 616" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="185" width="80" height="216" rx="2"/>
-<polyline points="308,284 320,293 308,302"/>
-<circle cx="304" cy="293" r="4"/>
-<line x1="300" y1="293" x2="286" y2="293"/>
-<line x1="286" y1="293" x2="286" y2="528"/>
-<path d="M212,190 H238 A26,33 0 0 1 238,256 H212 Z"/>
-<line x1="264" y1="223" x2="308" y2="223"/>
-<path d="M212,330 H238 A26,33 0 0 1 238,396 H212 Z"/>
-<path d="M264,363 L281.5,363 A4.5,4.5 0 0 1 290.5,363 L308,363"/>
-<line x1="388" y1="223" x2="432" y2="223"/>
-<line x1="388" y1="363" x2="432" y2="363"/>
-<line x1="371.2" y1="355.4" x2="380" y2="355.4" stroke-width="1.4"/>
-<rect x="796" y="185" width="80" height="216" rx="2"/>
-<polyline points="796,284 808,293 796,302"/>
-<circle cx="792" cy="293" r="4"/>
-<line x1="788" y1="293" x2="774" y2="293"/>
-<line x1="774" y1="293" x2="774" y2="528"/>
-<path d="M700,190 H726 A26,33 0 0 1 726,256 H700 Z"/>
-<line x1="752" y1="223" x2="796" y2="223"/>
-<path d="M700,330 H726 A26,33 0 0 1 726,396 H700 Z"/>
-<path d="M752,363 L769.5,363 A4.5,4.5 0 0 1 778.5,363 L796,363"/>
-<line x1="876" y1="223" x2="920" y2="223"/>
-<line x1="876" y1="363" x2="920" y2="363"/>
-<line x1="859.2" y1="355.4" x2="868" y2="355.4" stroke-width="1.4"/>
-<rect x="1474" y="185" width="80" height="216" rx="2"/>
-<polyline points="1474,284 1486,293 1474,302"/>
-<circle cx="1470" cy="293" r="4"/>
-<line x1="1466" y1="293" x2="1452" y2="293"/>
-<line x1="1452" y1="293" x2="1452" y2="528"/>
-<path d="M1370,190 C1392,190 1418,206.5 1430,223 C1418,239.5 1392,256 1370,256 Q1384,223 1370,190 Z"/>
-<path d="M1238,146 H1264 A26,33 0 0 1 1264,212 H1238 Z"/>
-<line x1="1290" y1="179" x2="1352" y2="179"/>
-<line x1="1352" y1="179" x2="1352" y2="212"/>
-<line x1="1352" y1="212" x2="1376.2" y2="212"/>
-<path d="M1238,234 H1264 A26,33 0 0 1 1264,300 H1238 Z"/>
-<line x1="1290" y1="267" x2="1332" y2="267"/>
-<line x1="1332" y1="267" x2="1332" y2="234"/>
-<line x1="1332" y1="234" x2="1376.2" y2="234"/>
-<line x1="1430" y1="223" x2="1474" y2="223"/>
-<path d="M1370,330 C1392,330 1418,346.5 1430,363 C1418,379.5 1392,396 1370,396 Q1384,363 1370,330 Z"/>
-<path d="M1362,330 Q1376,363 1362,396"/>
-<path d="M1430,363 L1447.5,363 A4.5,4.5 0 0 1 1456.5,363 L1474,363"/>
-<line x1="1554" y1="223" x2="1598" y2="223"/>
-<line x1="1554" y1="363" x2="1598" y2="363"/>
-<line x1="1537.2" y1="355.4" x2="1546" y2="355.4" stroke-width="1.4"/>
-<line x1="168" y1="72" x2="168" y2="212"/>
-<line x1="168" y1="212" x2="212" y2="212"/>
-<line x1="146" y1="478" x2="146" y2="374"/>
-<line x1="146" y1="374" x2="212" y2="374"/>
-<line x1="124" y1="452" x2="124" y2="352"/>
-<line x1="124" y1="352" x2="212" y2="352"/>
-<line x1="102" y1="478" x2="102" y2="234"/>
-<line x1="102" y1="234" x2="212" y2="234"/>
-<line x1="656" y1="46" x2="656" y2="234"/>
-<line x1="656" y1="234" x2="700" y2="234"/>
-<line x1="634" y1="98" x2="634" y2="352"/>
-<line x1="634" y1="352" x2="700" y2="352"/>
-<line x1="612" y1="46" x2="612" y2="374"/>
-<line x1="612" y1="374" x2="700" y2="374"/>
-<line x1="590" y1="426" x2="590" y2="212"/>
-<path d="M590,212 L607.5,212 A4.5,4.5 0 0 1 616.5,212 L629.5,212 A4.5,4.5 0 0 1 638.5,212 L651.5,212 A4.5,4.5 0 0 1 660.5,212 L700,212"/>
-<line x1="1194" y1="98" x2="1194" y2="256"/>
-<line x1="1194" y1="256" x2="1238" y2="256"/>
-<line x1="1172" y1="72" x2="1172" y2="278"/>
-<line x1="1172" y1="278" x2="1238" y2="278"/>
-<line x1="1148.2" y1="98" x2="1148.2" y2="352"/>
-<line x1="1148.2" y1="352" x2="1368.2" y2="352"/>
-<line x1="1126.2" y1="72" x2="1126.2" y2="374"/>
-<line x1="1126.2" y1="374" x2="1368.2" y2="374"/>
-<line x1="1084" y1="452" x2="1084" y2="190"/>
-<path d="M1084,190 L1121.7,190 A4.5,4.5 0 0 1 1130.7,190 L1143.7,190 A4.5,4.5 0 0 1 1152.7,190 L1167.5,190 A4.5,4.5 0 0 1 1176.5,190 L1189.5,190 A4.5,4.5 0 0 1 1198.5,190 L1238,190"/>
-<line x1="1062" y1="426" x2="1062" y2="168"/>
-<path d="M1062,168 L1121.7,168 A4.5,4.5 0 0 1 1130.7,168 L1143.7,168 A4.5,4.5 0 0 1 1152.7,168 L1167.5,168 A4.5,4.5 0 0 1 1176.5,168 L1189.5,168 A4.5,4.5 0 0 1 1198.5,168 L1238,168"/>
+<rect x="308" y="217" width="80" height="216" rx="2"/>
+<circle cx="348" cy="213" r="4"/>
+<line x1="348" y1="209" x2="348" y2="193"/>
+<circle cx="348" cy="437" r="4"/>
+<line x1="348" y1="441" x2="348" y2="457"/>
+<polyline points="308,316 320,325 308,334"/>
+<circle cx="304" cy="325" r="4"/>
+<line x1="300" y1="325" x2="286" y2="325"/>
+<line x1="286" y1="325" x2="286" y2="592"/>
+<path d="M212,222 H238 A26,33 0 0 1 238,288 H212 Z"/>
+<line x1="264" y1="255" x2="308" y2="255"/>
+<path d="M212,362 H238 A26,33 0 0 1 238,428 H212 Z"/>
+<path d="M264,395 L281.5,395 A4.5,4.5 0 0 1 290.5,395 L308,395"/>
+<line x1="388" y1="255" x2="432" y2="255"/>
+<line x1="388" y1="395" x2="432" y2="395"/>
+<line x1="371.2" y1="387.4" x2="380" y2="387.4" stroke-width="1.4"/>
+<rect x="796" y="217" width="80" height="216" rx="2"/>
+<circle cx="836" cy="213" r="4"/>
+<line x1="836" y1="209" x2="836" y2="193"/>
+<circle cx="836" cy="437" r="4"/>
+<line x1="836" y1="441" x2="836" y2="457"/>
+<polyline points="796,316 808,325 796,334"/>
+<circle cx="792" cy="325" r="4"/>
+<line x1="788" y1="325" x2="774" y2="325"/>
+<line x1="774" y1="325" x2="774" y2="592"/>
+<path d="M700,222 H726 A26,33 0 0 1 726,288 H700 Z"/>
+<line x1="752" y1="255" x2="796" y2="255"/>
+<path d="M700,362 H726 A26,33 0 0 1 726,428 H700 Z"/>
+<path d="M752,395 L769.5,395 A4.5,4.5 0 0 1 778.5,395 L796,395"/>
+<line x1="876" y1="255" x2="920" y2="255"/>
+<line x1="876" y1="395" x2="920" y2="395"/>
+<line x1="859.2" y1="387.4" x2="868" y2="387.4" stroke-width="1.4"/>
+<rect x="1474" y="217" width="80" height="216" rx="2"/>
+<circle cx="1514" cy="213" r="4"/>
+<line x1="1514" y1="209" x2="1514" y2="193"/>
+<circle cx="1514" cy="437" r="4"/>
+<line x1="1514" y1="441" x2="1514" y2="457"/>
+<polyline points="1474,316 1486,325 1474,334"/>
+<circle cx="1470" cy="325" r="4"/>
+<line x1="1466" y1="325" x2="1452" y2="325"/>
+<line x1="1452" y1="325" x2="1452" y2="592"/>
+<path d="M1370,222 C1392,222 1418,238.5 1430,255 C1418,271.5 1392,288 1370,288 Q1384,255 1370,222 Z"/>
+<path d="M1238,178 H1264 A26,33 0 0 1 1264,244 H1238 Z"/>
+<line x1="1290" y1="211" x2="1352" y2="211"/>
+<line x1="1352" y1="211" x2="1352" y2="244"/>
+<line x1="1352" y1="244" x2="1376.2" y2="244"/>
+<path d="M1238,266 H1264 A26,33 0 0 1 1264,332 H1238 Z"/>
+<line x1="1290" y1="299" x2="1332" y2="299"/>
+<line x1="1332" y1="299" x2="1332" y2="266"/>
+<line x1="1332" y1="266" x2="1376.2" y2="266"/>
+<line x1="1430" y1="255" x2="1474" y2="255"/>
+<path d="M1370,362 C1392,362 1418,378.5 1430,395 C1418,411.5 1392,428 1370,428 Q1384,395 1370,362 Z"/>
+<path d="M1362,362 Q1376,395 1362,428"/>
+<path d="M1430,395 L1447.5,395 A4.5,4.5 0 0 1 1456.5,395 L1474,395"/>
+<line x1="1554" y1="255" x2="1598" y2="255"/>
+<line x1="1554" y1="395" x2="1598" y2="395"/>
+<line x1="1537.2" y1="387.4" x2="1546" y2="387.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="244"/>
+<line x1="168" y1="244" x2="212" y2="244"/>
+<line x1="146" y1="542" x2="146" y2="406"/>
+<line x1="146" y1="406" x2="212" y2="406"/>
+<line x1="124" y1="516" x2="124" y2="384"/>
+<line x1="124" y1="384" x2="212" y2="384"/>
+<line x1="102" y1="542" x2="102" y2="266"/>
+<line x1="102" y1="266" x2="212" y2="266"/>
+<line x1="656" y1="46" x2="656" y2="266"/>
+<line x1="656" y1="266" x2="700" y2="266"/>
+<line x1="634" y1="98" x2="634" y2="384"/>
+<line x1="634" y1="384" x2="700" y2="384"/>
+<line x1="612" y1="46" x2="612" y2="406"/>
+<line x1="612" y1="406" x2="700" y2="406"/>
+<line x1="590" y1="490" x2="590" y2="244"/>
+<path d="M590,244 L607.5,244 A4.5,4.5 0 0 1 616.5,244 L629.5,244 A4.5,4.5 0 0 1 638.5,244 L651.5,244 A4.5,4.5 0 0 1 660.5,244 L700,244"/>
+<line x1="1194" y1="98" x2="1194" y2="288"/>
+<line x1="1194" y1="288" x2="1238" y2="288"/>
+<line x1="1172" y1="72" x2="1172" y2="310"/>
+<line x1="1172" y1="310" x2="1238" y2="310"/>
+<line x1="1148.2" y1="98" x2="1148.2" y2="384"/>
+<line x1="1148.2" y1="384" x2="1368.2" y2="384"/>
+<line x1="1126.2" y1="72" x2="1126.2" y2="406"/>
+<line x1="1126.2" y1="406" x2="1368.2" y2="406"/>
+<line x1="1084" y1="516" x2="1084" y2="222"/>
+<path d="M1084,222 L1121.7,222 A4.5,4.5 0 0 1 1130.7,222 L1143.7,222 A4.5,4.5 0 0 1 1152.7,222 L1167.5,222 A4.5,4.5 0 0 1 1176.5,222 L1189.5,222 A4.5,4.5 0 0 1 1198.5,222 L1238,222"/>
+<line x1="1062" y1="490" x2="1062" y2="200"/>
+<path d="M1062,200 L1121.7,200 A4.5,4.5 0 0 1 1130.7,200 L1143.7,200 A4.5,4.5 0 0 1 1152.7,200 L1167.5,200 A4.5,4.5 0 0 1 1176.5,200 L1189.5,200 A4.5,4.5 0 0 1 1198.5,200 L1238,200"/>
 <path d="M612,46 L915.5,46 A4.5,4.5 0 0 1 924.5,46 L1598,46"/>
 <path d="M168,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L607.5,72 A4.5,4.5 0 0 1 616.5,72 L651.5,72 A4.5,4.5 0 0 1 660.5,72 L1172,72"/>
 <path d="M432,98 L607.5,98 A4.5,4.5 0 0 1 616.5,98 L651.5,98 A4.5,4.5 0 0 1 660.5,98 L915.5,98 A4.5,4.5 0 0 1 924.5,98 L1121.7,98 A4.5,4.5 0 0 1 1130.7,98 L1167.5,98 A4.5,4.5 0 0 1 1176.5,98 L1194,98"/>
-<path d="M102,478 L281.5,478 A4.5,4.5 0 0 1 290.5,478 L769.5,478 A4.5,4.5 0 0 1 778.5,478 L1447.5,478 A4.5,4.5 0 0 1 1456.5,478 L1598,478"/>
-<path d="M124,452 L141.5,452 A4.5,4.5 0 0 1 150.5,452 L281.5,452 A4.5,4.5 0 0 1 290.5,452 L769.5,452 A4.5,4.5 0 0 1 778.5,452 L1084,452"/>
-<path d="M432,426 L769.5,426 A4.5,4.5 0 0 1 778.5,426 L915.5,426 A4.5,4.5 0 0 1 924.5,426 L1062,426"/>
-<line x1="432" y1="30" x2="432" y2="223"/>
-<line x1="432" y1="363" x2="432" y2="426"/>
-<line x1="920" y1="30" x2="920" y2="223"/>
-<line x1="920" y1="363" x2="920" y2="452"/>
-<line x1="1598" y1="30" x2="1598" y2="223"/>
-<line x1="1598" y1="363" x2="1598" y2="478"/>
-<line x1="246" y1="528" x2="1452" y2="528"/>
-<circle cx="286" cy="528" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="774" cy="528" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M102,542 L281.5,542 A4.5,4.5 0 0 1 290.5,542 L769.5,542 A4.5,4.5 0 0 1 778.5,542 L1447.5,542 A4.5,4.5 0 0 1 1456.5,542 L1598,542"/>
+<path d="M124,516 L141.5,516 A4.5,4.5 0 0 1 150.5,516 L281.5,516 A4.5,4.5 0 0 1 290.5,516 L769.5,516 A4.5,4.5 0 0 1 778.5,516 L1084,516"/>
+<path d="M432,490 L769.5,490 A4.5,4.5 0 0 1 778.5,490 L915.5,490 A4.5,4.5 0 0 1 924.5,490 L1062,490"/>
+<line x1="432" y1="30" x2="432" y2="255"/>
+<line x1="432" y1="395" x2="432" y2="490"/>
+<line x1="920" y1="30" x2="920" y2="255"/>
+<line x1="920" y1="395" x2="920" y2="516"/>
+<line x1="1598" y1="30" x2="1598" y2="255"/>
+<line x1="1598" y1="395" x2="1598" y2="542"/>
+<line x1="246" y1="592" x2="1452" y2="592"/>
+<circle cx="286" cy="592" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="774" cy="592" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1598" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="656" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="920" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -14690,29 +15562,41 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ S
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1148.2" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="146" cy="478" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="920" cy="452" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="426" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="146" cy="542" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="920" cy="516" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="490" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="301" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="229" text-anchor="start" font-size="14">S</text>
-<text x="316" y="369" text-anchor="start" font-size="14">R</text>
-<text x="380" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="836" y="301" text-anchor="middle" font-size="26">B</text>
-<text x="804" y="229" text-anchor="start" font-size="14">S</text>
-<text x="804" y="369" text-anchor="start" font-size="14">R</text>
-<text x="868" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="868" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="1514" y="301" text-anchor="middle" font-size="26">C</text>
-<text x="1482" y="229" text-anchor="start" font-size="14">S</text>
-<text x="1482" y="369" text-anchor="start" font-size="14">R</text>
-<text x="1546" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1546" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="333" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="261" text-anchor="start" font-size="14">S</text>
+<text x="316" y="401" text-anchor="start" font-size="14">R</text>
+<text x="380" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="836" y="333" text-anchor="middle" font-size="26">B</text>
+<text x="836" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="836" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="836" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="836" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="804" y="261" text-anchor="start" font-size="14">S</text>
+<text x="804" y="401" text-anchor="start" font-size="14">R</text>
+<text x="868" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="868" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="1514" y="333" text-anchor="middle" font-size="26">C</text>
+<text x="1514" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1514" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="1514" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1514" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="1482" y="261" text-anchor="start" font-size="14">S</text>
+<text x="1482" y="401" text-anchor="start" font-size="14">R</text>
+<text x="1546" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1546" y="401" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="920" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1598" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="534" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="598" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -14980,126 +15864,152 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= \overline{Q_{A}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{B}} + Q_{A}Q_{B}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1918" height="483" viewBox="0 0 1918 483" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1918" height="547" viewBox="0 0 1918 547" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="185" width="80" height="150" rx="2"/>
-<polyline points="454,281 466,290 454,299"/>
-<line x1="454" y1="290" x2="432" y2="290"/>
-<line x1="432" y1="290" x2="432" y2="459"/>
-<path d="M350,190 C372,190 398,206.5 410,223 C398,239.5 372,256 350,256 Q364,223 350,190 Z"/>
-<path d="M218,146 H244 A26,33 0 0 1 244,212 H218 Z"/>
-<line x1="270" y1="179" x2="332" y2="179"/>
-<line x1="332" y1="179" x2="332" y2="212"/>
-<line x1="332" y1="212" x2="356.2" y2="212"/>
-<path d="M218,234 H244 A26,33 0 0 1 244,300 H218 Z"/>
-<line x1="270" y1="267" x2="312" y2="267"/>
-<line x1="312" y1="267" x2="312" y2="234"/>
-<line x1="312" y1="234" x2="356.2" y2="234"/>
-<line x1="410" y1="223" x2="454" y2="223"/>
-<line x1="534" y1="223" x2="578" y2="223"/>
-<line x1="534" y1="297" x2="578" y2="297"/>
-<line x1="517.2" y1="289.4" x2="526" y2="289.4" stroke-width="1.4"/>
-<rect x="1088" y="185" width="80" height="150" rx="2"/>
-<polyline points="1088,281 1100,290 1088,299"/>
-<line x1="1088" y1="290" x2="1066" y2="290"/>
-<line x1="1066" y1="290" x2="1066" y2="459"/>
-<path d="M984,190 C1006,190 1032,206.5 1044,223 C1032,239.5 1006,256 984,256 Q998,223 984,190 Z"/>
-<path d="M852,146 H878 A26,33 0 0 1 878,212 H852 Z"/>
-<line x1="904" y1="179" x2="966" y2="179"/>
-<line x1="966" y1="179" x2="966" y2="212"/>
-<line x1="966" y1="212" x2="990.2" y2="212"/>
-<path d="M852,234 H878 A26,33 0 0 1 878,300 H852 Z"/>
-<line x1="904" y1="267" x2="946" y2="267"/>
-<line x1="946" y1="267" x2="946" y2="234"/>
-<line x1="946" y1="234" x2="990.2" y2="234"/>
-<line x1="1044" y1="223" x2="1088" y2="223"/>
-<line x1="1168" y1="223" x2="1212" y2="223"/>
-<line x1="1168" y1="297" x2="1212" y2="297"/>
-<line x1="1151.2" y1="289.4" x2="1160" y2="289.4" stroke-width="1.4"/>
-<rect x="1722" y="185" width="80" height="150" rx="2"/>
-<polyline points="1722,281 1734,290 1722,299"/>
-<line x1="1722" y1="290" x2="1700" y2="290"/>
-<line x1="1700" y1="290" x2="1700" y2="459"/>
-<path d="M1618,190 C1640,190 1666,206.5 1678,223 C1666,239.5 1640,256 1618,256 Q1632,223 1618,190 Z"/>
-<path d="M1486,146 H1512 A26,33 0 0 1 1512,212 H1486 Z"/>
-<line x1="1538" y1="179" x2="1600" y2="179"/>
-<line x1="1600" y1="179" x2="1600" y2="212"/>
-<line x1="1600" y1="212" x2="1624.2" y2="212"/>
-<path d="M1486,234 H1512 A26,33 0 0 1 1512,300 H1486 Z"/>
-<line x1="1538" y1="267" x2="1580" y2="267"/>
-<line x1="1580" y1="267" x2="1580" y2="234"/>
-<line x1="1580" y1="234" x2="1624.2" y2="234"/>
-<line x1="1678" y1="223" x2="1722" y2="223"/>
-<line x1="1802" y1="223" x2="1846" y2="223"/>
-<line x1="1802" y1="297" x2="1846" y2="297"/>
-<line x1="1785.2" y1="289.4" x2="1794" y2="289.4" stroke-width="1.4"/>
-<line x1="174" y1="72" x2="174" y2="168"/>
-<line x1="174" y1="168" x2="218" y2="168"/>
-<line x1="152" y1="98" x2="152" y2="256"/>
-<line x1="152" y1="256" x2="218" y2="256"/>
-<line x1="130" y1="46" x2="130" y2="278"/>
-<line x1="130" y1="278" x2="218" y2="278"/>
-<line x1="108" y1="409" x2="108" y2="190"/>
-<path d="M108,190 L125.5,190 A4.5,4.5 0 0 1 134.5,190 L147.5,190 A4.5,4.5 0 0 1 156.5,190 L218,190"/>
-<line x1="808" y1="46" x2="808" y2="190"/>
-<line x1="808" y1="190" x2="852" y2="190"/>
-<line x1="786" y1="72" x2="786" y2="256"/>
-<line x1="786" y1="256" x2="852" y2="256"/>
-<line x1="764" y1="409" x2="764" y2="278"/>
-<line x1="764" y1="278" x2="852" y2="278"/>
-<line x1="742" y1="357" x2="742" y2="168"/>
-<path d="M742,168 L781.5,168 A4.5,4.5 0 0 1 790.5,168 L803.5,168 A4.5,4.5 0 0 1 812.5,168 L852,168"/>
-<line x1="1442" y1="98" x2="1442" y2="256"/>
-<line x1="1442" y1="256" x2="1486" y2="256"/>
-<line x1="1420" y1="72" x2="1420" y2="278"/>
-<line x1="1420" y1="278" x2="1486" y2="278"/>
-<line x1="1398" y1="383" x2="1398" y2="190"/>
-<path d="M1398,190 L1415.5,190 A4.5,4.5 0 0 1 1424.5,190 L1437.5,190 A4.5,4.5 0 0 1 1446.5,190 L1486,190"/>
-<line x1="1376" y1="357" x2="1376" y2="168"/>
-<path d="M1376,168 L1415.5,168 A4.5,4.5 0 0 1 1424.5,168 L1437.5,168 A4.5,4.5 0 0 1 1446.5,168 L1486,168"/>
+<rect x="454" y="217" width="80" height="150" rx="2"/>
+<circle cx="494" cy="213" r="4"/>
+<line x1="494" y1="209" x2="494" y2="193"/>
+<circle cx="494" cy="371" r="4"/>
+<line x1="494" y1="375" x2="494" y2="391"/>
+<polyline points="454,313 466,322 454,331"/>
+<line x1="454" y1="322" x2="432" y2="322"/>
+<line x1="432" y1="322" x2="432" y2="523"/>
+<path d="M350,222 C372,222 398,238.5 410,255 C398,271.5 372,288 350,288 Q364,255 350,222 Z"/>
+<path d="M218,178 H244 A26,33 0 0 1 244,244 H218 Z"/>
+<line x1="270" y1="211" x2="332" y2="211"/>
+<line x1="332" y1="211" x2="332" y2="244"/>
+<line x1="332" y1="244" x2="356.2" y2="244"/>
+<path d="M218,266 H244 A26,33 0 0 1 244,332 H218 Z"/>
+<line x1="270" y1="299" x2="312" y2="299"/>
+<line x1="312" y1="299" x2="312" y2="266"/>
+<line x1="312" y1="266" x2="356.2" y2="266"/>
+<line x1="410" y1="255" x2="454" y2="255"/>
+<line x1="534" y1="255" x2="578" y2="255"/>
+<line x1="534" y1="329" x2="578" y2="329"/>
+<line x1="517.2" y1="321.4" x2="526" y2="321.4" stroke-width="1.4"/>
+<rect x="1088" y="217" width="80" height="150" rx="2"/>
+<circle cx="1128" cy="213" r="4"/>
+<line x1="1128" y1="209" x2="1128" y2="193"/>
+<circle cx="1128" cy="371" r="4"/>
+<line x1="1128" y1="375" x2="1128" y2="391"/>
+<polyline points="1088,313 1100,322 1088,331"/>
+<line x1="1088" y1="322" x2="1066" y2="322"/>
+<line x1="1066" y1="322" x2="1066" y2="523"/>
+<path d="M984,222 C1006,222 1032,238.5 1044,255 C1032,271.5 1006,288 984,288 Q998,255 984,222 Z"/>
+<path d="M852,178 H878 A26,33 0 0 1 878,244 H852 Z"/>
+<line x1="904" y1="211" x2="966" y2="211"/>
+<line x1="966" y1="211" x2="966" y2="244"/>
+<line x1="966" y1="244" x2="990.2" y2="244"/>
+<path d="M852,266 H878 A26,33 0 0 1 878,332 H852 Z"/>
+<line x1="904" y1="299" x2="946" y2="299"/>
+<line x1="946" y1="299" x2="946" y2="266"/>
+<line x1="946" y1="266" x2="990.2" y2="266"/>
+<line x1="1044" y1="255" x2="1088" y2="255"/>
+<line x1="1168" y1="255" x2="1212" y2="255"/>
+<line x1="1168" y1="329" x2="1212" y2="329"/>
+<line x1="1151.2" y1="321.4" x2="1160" y2="321.4" stroke-width="1.4"/>
+<rect x="1722" y="217" width="80" height="150" rx="2"/>
+<circle cx="1762" cy="213" r="4"/>
+<line x1="1762" y1="209" x2="1762" y2="193"/>
+<circle cx="1762" cy="371" r="4"/>
+<line x1="1762" y1="375" x2="1762" y2="391"/>
+<polyline points="1722,313 1734,322 1722,331"/>
+<line x1="1722" y1="322" x2="1700" y2="322"/>
+<line x1="1700" y1="322" x2="1700" y2="523"/>
+<path d="M1618,222 C1640,222 1666,238.5 1678,255 C1666,271.5 1640,288 1618,288 Q1632,255 1618,222 Z"/>
+<path d="M1486,178 H1512 A26,33 0 0 1 1512,244 H1486 Z"/>
+<line x1="1538" y1="211" x2="1600" y2="211"/>
+<line x1="1600" y1="211" x2="1600" y2="244"/>
+<line x1="1600" y1="244" x2="1624.2" y2="244"/>
+<path d="M1486,266 H1512 A26,33 0 0 1 1512,332 H1486 Z"/>
+<line x1="1538" y1="299" x2="1580" y2="299"/>
+<line x1="1580" y1="299" x2="1580" y2="266"/>
+<line x1="1580" y1="266" x2="1624.2" y2="266"/>
+<line x1="1678" y1="255" x2="1722" y2="255"/>
+<line x1="1802" y1="255" x2="1846" y2="255"/>
+<line x1="1802" y1="329" x2="1846" y2="329"/>
+<line x1="1785.2" y1="321.4" x2="1794" y2="321.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="200"/>
+<line x1="174" y1="200" x2="218" y2="200"/>
+<line x1="152" y1="98" x2="152" y2="288"/>
+<line x1="152" y1="288" x2="218" y2="288"/>
+<line x1="130" y1="46" x2="130" y2="310"/>
+<line x1="130" y1="310" x2="218" y2="310"/>
+<line x1="108" y1="473" x2="108" y2="222"/>
+<path d="M108,222 L125.5,222 A4.5,4.5 0 0 1 134.5,222 L147.5,222 A4.5,4.5 0 0 1 156.5,222 L218,222"/>
+<line x1="808" y1="46" x2="808" y2="222"/>
+<line x1="808" y1="222" x2="852" y2="222"/>
+<line x1="786" y1="72" x2="786" y2="288"/>
+<line x1="786" y1="288" x2="852" y2="288"/>
+<line x1="764" y1="473" x2="764" y2="310"/>
+<line x1="764" y1="310" x2="852" y2="310"/>
+<line x1="742" y1="421" x2="742" y2="200"/>
+<path d="M742,200 L781.5,200 A4.5,4.5 0 0 1 790.5,200 L803.5,200 A4.5,4.5 0 0 1 812.5,200 L852,200"/>
+<line x1="1442" y1="98" x2="1442" y2="288"/>
+<line x1="1442" y1="288" x2="1486" y2="288"/>
+<line x1="1420" y1="72" x2="1420" y2="310"/>
+<line x1="1420" y1="310" x2="1486" y2="310"/>
+<line x1="1398" y1="447" x2="1398" y2="222"/>
+<path d="M1398,222 L1415.5,222 A4.5,4.5 0 0 1 1424.5,222 L1437.5,222 A4.5,4.5 0 0 1 1446.5,222 L1486,222"/>
+<line x1="1376" y1="421" x2="1376" y2="200"/>
+<path d="M1376,200 L1415.5,200 A4.5,4.5 0 0 1 1424.5,200 L1437.5,200 A4.5,4.5 0 0 1 1446.5,200 L1486,200"/>
 <path d="M130,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1207.5,46 A4.5,4.5 0 0 1 1216.5,46 L1846,46"/>
 <path d="M174,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L803.5,72 A4.5,4.5 0 0 1 812.5,72 L1420,72"/>
 <path d="M152,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L781.5,98 A4.5,4.5 0 0 1 790.5,98 L803.5,98 A4.5,4.5 0 0 1 812.5,98 L1207.5,98 A4.5,4.5 0 0 1 1216.5,98 L1415.5,98 A4.5,4.5 0 0 1 1424.5,98 L1442,98"/>
-<path d="M108,409 L427.5,409 A4.5,4.5 0 0 1 436.5,409 L1061.5,409 A4.5,4.5 0 0 1 1070.5,409 L1695.5,409 A4.5,4.5 0 0 1 1704.5,409 L1846,409"/>
-<line x1="1212" y1="383" x2="1398" y2="383"/>
-<path d="M578,357 L759.5,357 A4.5,4.5 0 0 1 768.5,357 L1061.5,357 A4.5,4.5 0 0 1 1070.5,357 L1207.5,357 A4.5,4.5 0 0 1 1216.5,357 L1376,357"/>
-<line x1="578" y1="30" x2="578" y2="223"/>
-<line x1="578" y1="297" x2="578" y2="357"/>
-<line x1="1212" y1="30" x2="1212" y2="223"/>
-<line x1="1212" y1="297" x2="1212" y2="383"/>
-<line x1="1846" y1="30" x2="1846" y2="223"/>
-<line x1="1846" y1="297" x2="1846" y2="409"/>
-<line x1="392" y1="459" x2="1700" y2="459"/>
-<circle cx="432" cy="459" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1066" cy="459" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M108,473 L427.5,473 A4.5,4.5 0 0 1 436.5,473 L1061.5,473 A4.5,4.5 0 0 1 1070.5,473 L1695.5,473 A4.5,4.5 0 0 1 1704.5,473 L1846,473"/>
+<line x1="1212" y1="447" x2="1398" y2="447"/>
+<path d="M578,421 L759.5,421 A4.5,4.5 0 0 1 768.5,421 L1061.5,421 A4.5,4.5 0 0 1 1070.5,421 L1207.5,421 A4.5,4.5 0 0 1 1216.5,421 L1376,421"/>
+<line x1="578" y1="30" x2="578" y2="255"/>
+<line x1="578" y1="329" x2="578" y2="421"/>
+<line x1="1212" y1="30" x2="1212" y2="255"/>
+<line x1="1212" y1="329" x2="1212" y2="447"/>
+<line x1="1846" y1="30" x2="1846" y2="255"/>
+<line x1="1846" y1="329" x2="1846" y2="473"/>
+<line x1="392" y1="523" x2="1700" y2="523"/>
+<circle cx="432" cy="523" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1066" cy="523" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1846" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1212" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="764" cy="409" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="742" cy="357" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="473" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742" cy="421" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="268" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="229" text-anchor="start" font-size="14">D</text>
-<text x="526" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1128" y="268" text-anchor="middle" font-size="26">B</text>
-<text x="1096" y="229" text-anchor="start" font-size="14">D</text>
-<text x="1160" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1160" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1762" y="268" text-anchor="middle" font-size="26">C</text>
-<text x="1730" y="229" text-anchor="start" font-size="14">D</text>
-<text x="1794" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1794" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="300" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="261" text-anchor="start" font-size="14">D</text>
+<text x="526" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1128" y="300" text-anchor="middle" font-size="26">B</text>
+<text x="1128" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1128" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1128" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1128" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1096" y="261" text-anchor="start" font-size="14">D</text>
+<text x="1160" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1160" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1762" y="300" text-anchor="middle" font-size="26">C</text>
+<text x="1762" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1762" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1762" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1762" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1730" y="261" text-anchor="start" font-size="14">D</text>
+<text x="1794" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1794" y="335" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1212" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1846" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="465" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="529" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -15373,134 +16283,148 @@ $T_{C} = \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}Q_{C} \\ T_{C} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + \overline{Q_{A}}Q_{B}Q_{C} + Q_{A}\overline{Q_{B}}Q_{C} + Q_{A}Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="2222" height="720" viewBox="0 0 2222 720" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="2222" height="784" viewBox="0 0 2222 784" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="498" y="317" width="80" height="150" rx="2"/>
-<polyline points="498,413 510,422 498,431"/>
-<line x1="498" y1="422" x2="476" y2="422"/>
-<line x1="476" y1="422" x2="476" y2="696"/>
-<path d="M394,322 C416,322 442,338.5 454,355 C442,371.5 416,388 394,388 Q408,355 394,322 Z"/>
-<path d="M262,256 H288 A26,44 0 0 1 288,344 H262 Z"/>
-<line x1="314" y1="300" x2="376" y2="300"/>
-<line x1="376" y1="300" x2="376" y2="344"/>
-<line x1="376" y1="344" x2="400.2" y2="344"/>
-<path d="M262,366 H288 A26,44 0 0 1 288,454 H262 Z"/>
-<line x1="314" y1="410" x2="356" y2="410"/>
-<line x1="356" y1="410" x2="356" y2="366"/>
-<line x1="356" y1="366" x2="400.2" y2="366"/>
-<line x1="454" y1="355" x2="498" y2="355"/>
-<line x1="578" y1="355" x2="622" y2="355"/>
-<line x1="578" y1="429" x2="622" y2="429"/>
-<line x1="561.2" y1="421.4" x2="570" y2="421.4" stroke-width="1.4"/>
-<rect x="1176" y="317" width="80" height="150" rx="2"/>
-<polyline points="1176,413 1188,422 1176,431"/>
-<line x1="1176" y1="422" x2="1154" y2="422"/>
-<line x1="1154" y1="422" x2="1154" y2="696"/>
-<path d="M1072,322 C1094,322 1120,338.5 1132,355 C1120,371.5 1094,388 1072,388 Q1086,355 1072,322 Z"/>
-<path d="M940,256 H966 A26,44 0 0 1 966,344 H940 Z"/>
-<line x1="992" y1="300" x2="1054" y2="300"/>
-<line x1="1054" y1="300" x2="1054" y2="344"/>
-<line x1="1054" y1="344" x2="1078.2" y2="344"/>
-<path d="M940,366 H966 A26,44 0 0 1 966,454 H940 Z"/>
-<line x1="992" y1="410" x2="1034" y2="410"/>
-<line x1="1034" y1="410" x2="1034" y2="366"/>
-<line x1="1034" y1="366" x2="1078.2" y2="366"/>
-<line x1="1132" y1="355" x2="1176" y2="355"/>
-<line x1="1256" y1="355" x2="1300" y2="355"/>
-<line x1="1256" y1="429" x2="1300" y2="429"/>
-<line x1="1239.2" y1="421.4" x2="1248" y2="421.4" stroke-width="1.4"/>
-<rect x="2026" y="317" width="80" height="150" rx="2"/>
-<polyline points="2026,413 2038,422 2026,431"/>
-<line x1="2026" y1="422" x2="2004" y2="422"/>
-<line x1="2004" y1="422" x2="2004" y2="696"/>
-<path d="M1922,300 C1944,300 1970,327.5 1982,355 C1970,382.5 1944,410 1922,410 Q1936,355 1922,300 Z"/>
-<path d="M1750,146 H1776 A26,44 0 0 1 1776,234 H1750 Z"/>
-<line x1="1802" y1="190" x2="1904" y2="190"/>
-<line x1="1904" y1="190" x2="1904" y2="322"/>
-<line x1="1904" y1="322" x2="1926.5" y2="322"/>
-<path d="M1750,256 H1776 A26,44 0 0 1 1776,344 H1750 Z"/>
-<line x1="1802" y1="300" x2="1884" y2="300"/>
-<line x1="1884" y1="300" x2="1884" y2="344"/>
-<line x1="1884" y1="344" x2="1928.7" y2="344"/>
-<path d="M1750,366 H1776 A26,44 0 0 1 1776,454 H1750 Z"/>
-<path d="M1802,410 L1839.5,410 A4.5,4.5 0 0 1 1848.5,410 L1864,410"/>
-<line x1="1864" y1="410" x2="1864" y2="366"/>
-<line x1="1864" y1="366" x2="1928.7" y2="366"/>
-<path d="M1750,476 H1776 A26,44 0 0 1 1776,564 H1750 Z"/>
-<line x1="1802" y1="520" x2="1844" y2="520"/>
-<line x1="1844" y1="520" x2="1844" y2="388"/>
-<path d="M1844,388 L1859.5,388 A4.5,4.5 0 0 1 1868.5,388 L1926.5,388"/>
-<line x1="1982" y1="355" x2="2026" y2="355"/>
-<line x1="2106" y1="355" x2="2150" y2="355"/>
-<line x1="2106" y1="429" x2="2150" y2="429"/>
-<line x1="2089.2" y1="421.4" x2="2098" y2="421.4" stroke-width="1.4"/>
-<line x1="218" y1="72" x2="218" y2="300"/>
-<line x1="218" y1="300" x2="262" y2="300"/>
-<line x1="196" y1="98" x2="196" y2="388"/>
-<line x1="196" y1="388" x2="262" y2="388"/>
-<line x1="174" y1="646" x2="174" y2="432"/>
-<line x1="174" y1="432" x2="262" y2="432"/>
-<line x1="152" y1="620" x2="152" y2="410"/>
-<line x1="152" y1="410" x2="262" y2="410"/>
-<line x1="130" y1="646" x2="130" y2="322"/>
-<path d="M130,322 L191.5,322 A4.5,4.5 0 0 1 200.5,322 L262,322"/>
-<line x1="108" y1="594" x2="108" y2="278"/>
-<path d="M108,278 L191.5,278 A4.5,4.5 0 0 1 200.5,278 L213.5,278 A4.5,4.5 0 0 1 222.5,278 L262,278"/>
-<line x1="896" y1="46" x2="896" y2="322"/>
-<line x1="896" y1="322" x2="940" y2="322"/>
-<line x1="874" y1="98" x2="874" y2="388"/>
-<line x1="874" y1="388" x2="940" y2="388"/>
-<line x1="852" y1="72" x2="852" y2="410"/>
-<line x1="852" y1="410" x2="940" y2="410"/>
-<line x1="830" y1="46" x2="830" y2="432"/>
-<line x1="830" y1="432" x2="940" y2="432"/>
-<line x1="808" y1="620" x2="808" y2="300"/>
-<path d="M808,300 L825.5,300 A4.5,4.5 0 0 1 834.5,300 L847.5,300 A4.5,4.5 0 0 1 856.5,300 L869.5,300 A4.5,4.5 0 0 1 878.5,300 L891.5,300 A4.5,4.5 0 0 1 900.5,300 L940,300"/>
-<line x1="786" y1="594" x2="786" y2="278"/>
-<path d="M786,278 L825.5,278 A4.5,4.5 0 0 1 834.5,278 L847.5,278 A4.5,4.5 0 0 1 856.5,278 L869.5,278 A4.5,4.5 0 0 1 878.5,278 L891.5,278 A4.5,4.5 0 0 1 900.5,278 L940,278"/>
-<line x1="1706" y1="72" x2="1706" y2="300"/>
-<line x1="1706" y1="300" x2="1750" y2="300"/>
-<line x1="1684" y1="46" x2="1684" y2="322"/>
-<line x1="1684" y1="322" x2="1750" y2="322"/>
-<line x1="1662" y1="98" x2="1662" y2="388"/>
-<line x1="1662" y1="388" x2="1750" y2="388"/>
-<line x1="1640" y1="46" x2="1640" y2="432"/>
-<line x1="1640" y1="432" x2="1750" y2="432"/>
-<line x1="1618" y1="98" x2="1618" y2="498"/>
-<line x1="1618" y1="498" x2="1750" y2="498"/>
-<line x1="1596" y1="72" x2="1596" y2="520"/>
-<line x1="1596" y1="520" x2="1750" y2="520"/>
-<line x1="1574" y1="646" x2="1574" y2="542"/>
-<line x1="1574" y1="542" x2="1750" y2="542"/>
-<line x1="1552" y1="620" x2="1552" y2="410"/>
-<path d="M1552,410 L1591.5,410 A4.5,4.5 0 0 1 1600.5,410 L1613.5,410 A4.5,4.5 0 0 1 1622.5,410 L1635.5,410 A4.5,4.5 0 0 1 1644.5,410 L1750,410"/>
-<line x1="1530" y1="594" x2="1530" y2="278"/>
-<path d="M1530,278 L1591.5,278 A4.5,4.5 0 0 1 1600.5,278 L1613.5,278 A4.5,4.5 0 0 1 1622.5,278 L1635.5,278 A4.5,4.5 0 0 1 1644.5,278 L1657.5,278 A4.5,4.5 0 0 1 1666.5,278 L1679.5,278 A4.5,4.5 0 0 1 1688.5,278 L1701.5,278 A4.5,4.5 0 0 1 1710.5,278 L1750,278"/>
-<line x1="1508" y1="646" x2="1508" y2="212"/>
-<path d="M1508,212 L1591.5,212 A4.5,4.5 0 0 1 1600.5,212 L1613.5,212 A4.5,4.5 0 0 1 1622.5,212 L1635.5,212 A4.5,4.5 0 0 1 1644.5,212 L1657.5,212 A4.5,4.5 0 0 1 1666.5,212 L1679.5,212 A4.5,4.5 0 0 1 1688.5,212 L1701.5,212 A4.5,4.5 0 0 1 1710.5,212 L1750,212"/>
-<line x1="1486" y1="620" x2="1486" y2="190"/>
-<path d="M1486,190 L1591.5,190 A4.5,4.5 0 0 1 1600.5,190 L1613.5,190 A4.5,4.5 0 0 1 1622.5,190 L1635.5,190 A4.5,4.5 0 0 1 1644.5,190 L1657.5,190 A4.5,4.5 0 0 1 1666.5,190 L1679.5,190 A4.5,4.5 0 0 1 1688.5,190 L1701.5,190 A4.5,4.5 0 0 1 1710.5,190 L1750,190"/>
-<line x1="1464" y1="594" x2="1464" y2="168"/>
-<path d="M1464,168 L1591.5,168 A4.5,4.5 0 0 1 1600.5,168 L1613.5,168 A4.5,4.5 0 0 1 1622.5,168 L1635.5,168 A4.5,4.5 0 0 1 1644.5,168 L1657.5,168 A4.5,4.5 0 0 1 1666.5,168 L1679.5,168 A4.5,4.5 0 0 1 1688.5,168 L1701.5,168 A4.5,4.5 0 0 1 1710.5,168 L1750,168"/>
+<rect x="498" y="349" width="80" height="150" rx="2"/>
+<circle cx="538" cy="345" r="4"/>
+<line x1="538" y1="341" x2="538" y2="325"/>
+<circle cx="538" cy="503" r="4"/>
+<line x1="538" y1="507" x2="538" y2="523"/>
+<polyline points="498,445 510,454 498,463"/>
+<line x1="498" y1="454" x2="476" y2="454"/>
+<line x1="476" y1="454" x2="476" y2="760"/>
+<path d="M394,354 C416,354 442,370.5 454,387 C442,403.5 416,420 394,420 Q408,387 394,354 Z"/>
+<path d="M262,288 H288 A26,44 0 0 1 288,376 H262 Z"/>
+<line x1="314" y1="332" x2="376" y2="332"/>
+<line x1="376" y1="332" x2="376" y2="376"/>
+<line x1="376" y1="376" x2="400.2" y2="376"/>
+<path d="M262,398 H288 A26,44 0 0 1 288,486 H262 Z"/>
+<line x1="314" y1="442" x2="356" y2="442"/>
+<line x1="356" y1="442" x2="356" y2="398"/>
+<line x1="356" y1="398" x2="400.2" y2="398"/>
+<line x1="454" y1="387" x2="498" y2="387"/>
+<line x1="578" y1="387" x2="622" y2="387"/>
+<line x1="578" y1="461" x2="622" y2="461"/>
+<line x1="561.2" y1="453.4" x2="570" y2="453.4" stroke-width="1.4"/>
+<rect x="1176" y="349" width="80" height="150" rx="2"/>
+<circle cx="1216" cy="345" r="4"/>
+<line x1="1216" y1="341" x2="1216" y2="325"/>
+<circle cx="1216" cy="503" r="4"/>
+<line x1="1216" y1="507" x2="1216" y2="523"/>
+<polyline points="1176,445 1188,454 1176,463"/>
+<line x1="1176" y1="454" x2="1154" y2="454"/>
+<line x1="1154" y1="454" x2="1154" y2="760"/>
+<path d="M1072,354 C1094,354 1120,370.5 1132,387 C1120,403.5 1094,420 1072,420 Q1086,387 1072,354 Z"/>
+<path d="M940,288 H966 A26,44 0 0 1 966,376 H940 Z"/>
+<line x1="992" y1="332" x2="1054" y2="332"/>
+<line x1="1054" y1="332" x2="1054" y2="376"/>
+<line x1="1054" y1="376" x2="1078.2" y2="376"/>
+<path d="M940,398 H966 A26,44 0 0 1 966,486 H940 Z"/>
+<line x1="992" y1="442" x2="1034" y2="442"/>
+<line x1="1034" y1="442" x2="1034" y2="398"/>
+<line x1="1034" y1="398" x2="1078.2" y2="398"/>
+<line x1="1132" y1="387" x2="1176" y2="387"/>
+<line x1="1256" y1="387" x2="1300" y2="387"/>
+<line x1="1256" y1="461" x2="1300" y2="461"/>
+<line x1="1239.2" y1="453.4" x2="1248" y2="453.4" stroke-width="1.4"/>
+<rect x="2026" y="349" width="80" height="150" rx="2"/>
+<circle cx="2066" cy="345" r="4"/>
+<line x1="2066" y1="341" x2="2066" y2="325"/>
+<circle cx="2066" cy="503" r="4"/>
+<line x1="2066" y1="507" x2="2066" y2="523"/>
+<polyline points="2026,445 2038,454 2026,463"/>
+<line x1="2026" y1="454" x2="2004" y2="454"/>
+<line x1="2004" y1="454" x2="2004" y2="760"/>
+<path d="M1922,332 C1944,332 1970,359.5 1982,387 C1970,414.5 1944,442 1922,442 Q1936,387 1922,332 Z"/>
+<path d="M1750,178 H1776 A26,44 0 0 1 1776,266 H1750 Z"/>
+<line x1="1802" y1="222" x2="1904" y2="222"/>
+<line x1="1904" y1="222" x2="1904" y2="354"/>
+<line x1="1904" y1="354" x2="1926.5" y2="354"/>
+<path d="M1750,288 H1776 A26,44 0 0 1 1776,376 H1750 Z"/>
+<line x1="1802" y1="332" x2="1884" y2="332"/>
+<line x1="1884" y1="332" x2="1884" y2="376"/>
+<line x1="1884" y1="376" x2="1928.7" y2="376"/>
+<path d="M1750,398 H1776 A26,44 0 0 1 1776,486 H1750 Z"/>
+<path d="M1802,442 L1839.5,442 A4.5,4.5 0 0 1 1848.5,442 L1864,442"/>
+<line x1="1864" y1="442" x2="1864" y2="398"/>
+<line x1="1864" y1="398" x2="1928.7" y2="398"/>
+<path d="M1750,508 H1776 A26,44 0 0 1 1776,596 H1750 Z"/>
+<line x1="1802" y1="552" x2="1844" y2="552"/>
+<line x1="1844" y1="552" x2="1844" y2="420"/>
+<path d="M1844,420 L1859.5,420 A4.5,4.5 0 0 1 1868.5,420 L1926.5,420"/>
+<line x1="1982" y1="387" x2="2026" y2="387"/>
+<line x1="2106" y1="387" x2="2150" y2="387"/>
+<line x1="2106" y1="461" x2="2150" y2="461"/>
+<line x1="2089.2" y1="453.4" x2="2098" y2="453.4" stroke-width="1.4"/>
+<line x1="218" y1="72" x2="218" y2="332"/>
+<line x1="218" y1="332" x2="262" y2="332"/>
+<line x1="196" y1="98" x2="196" y2="420"/>
+<line x1="196" y1="420" x2="262" y2="420"/>
+<line x1="174" y1="710" x2="174" y2="464"/>
+<line x1="174" y1="464" x2="262" y2="464"/>
+<line x1="152" y1="684" x2="152" y2="442"/>
+<line x1="152" y1="442" x2="262" y2="442"/>
+<line x1="130" y1="710" x2="130" y2="354"/>
+<path d="M130,354 L191.5,354 A4.5,4.5 0 0 1 200.5,354 L262,354"/>
+<line x1="108" y1="658" x2="108" y2="310"/>
+<path d="M108,310 L191.5,310 A4.5,4.5 0 0 1 200.5,310 L213.5,310 A4.5,4.5 0 0 1 222.5,310 L262,310"/>
+<line x1="896" y1="46" x2="896" y2="354"/>
+<line x1="896" y1="354" x2="940" y2="354"/>
+<line x1="874" y1="98" x2="874" y2="420"/>
+<line x1="874" y1="420" x2="940" y2="420"/>
+<line x1="852" y1="72" x2="852" y2="442"/>
+<line x1="852" y1="442" x2="940" y2="442"/>
+<line x1="830" y1="46" x2="830" y2="464"/>
+<line x1="830" y1="464" x2="940" y2="464"/>
+<line x1="808" y1="684" x2="808" y2="332"/>
+<path d="M808,332 L825.5,332 A4.5,4.5 0 0 1 834.5,332 L847.5,332 A4.5,4.5 0 0 1 856.5,332 L869.5,332 A4.5,4.5 0 0 1 878.5,332 L891.5,332 A4.5,4.5 0 0 1 900.5,332 L940,332"/>
+<line x1="786" y1="658" x2="786" y2="310"/>
+<path d="M786,310 L825.5,310 A4.5,4.5 0 0 1 834.5,310 L847.5,310 A4.5,4.5 0 0 1 856.5,310 L869.5,310 A4.5,4.5 0 0 1 878.5,310 L891.5,310 A4.5,4.5 0 0 1 900.5,310 L940,310"/>
+<line x1="1706" y1="72" x2="1706" y2="332"/>
+<line x1="1706" y1="332" x2="1750" y2="332"/>
+<line x1="1684" y1="46" x2="1684" y2="354"/>
+<line x1="1684" y1="354" x2="1750" y2="354"/>
+<line x1="1662" y1="98" x2="1662" y2="420"/>
+<line x1="1662" y1="420" x2="1750" y2="420"/>
+<line x1="1640" y1="46" x2="1640" y2="464"/>
+<line x1="1640" y1="464" x2="1750" y2="464"/>
+<line x1="1618" y1="98" x2="1618" y2="530"/>
+<line x1="1618" y1="530" x2="1750" y2="530"/>
+<line x1="1596" y1="72" x2="1596" y2="552"/>
+<line x1="1596" y1="552" x2="1750" y2="552"/>
+<line x1="1574" y1="710" x2="1574" y2="574"/>
+<line x1="1574" y1="574" x2="1750" y2="574"/>
+<line x1="1552" y1="684" x2="1552" y2="442"/>
+<path d="M1552,442 L1591.5,442 A4.5,4.5 0 0 1 1600.5,442 L1613.5,442 A4.5,4.5 0 0 1 1622.5,442 L1635.5,442 A4.5,4.5 0 0 1 1644.5,442 L1750,442"/>
+<line x1="1530" y1="658" x2="1530" y2="310"/>
+<path d="M1530,310 L1591.5,310 A4.5,4.5 0 0 1 1600.5,310 L1613.5,310 A4.5,4.5 0 0 1 1622.5,310 L1635.5,310 A4.5,4.5 0 0 1 1644.5,310 L1657.5,310 A4.5,4.5 0 0 1 1666.5,310 L1679.5,310 A4.5,4.5 0 0 1 1688.5,310 L1701.5,310 A4.5,4.5 0 0 1 1710.5,310 L1750,310"/>
+<line x1="1508" y1="710" x2="1508" y2="244"/>
+<path d="M1508,244 L1591.5,244 A4.5,4.5 0 0 1 1600.5,244 L1613.5,244 A4.5,4.5 0 0 1 1622.5,244 L1635.5,244 A4.5,4.5 0 0 1 1644.5,244 L1657.5,244 A4.5,4.5 0 0 1 1666.5,244 L1679.5,244 A4.5,4.5 0 0 1 1688.5,244 L1701.5,244 A4.5,4.5 0 0 1 1710.5,244 L1750,244"/>
+<line x1="1486" y1="684" x2="1486" y2="222"/>
+<path d="M1486,222 L1591.5,222 A4.5,4.5 0 0 1 1600.5,222 L1613.5,222 A4.5,4.5 0 0 1 1622.5,222 L1635.5,222 A4.5,4.5 0 0 1 1644.5,222 L1657.5,222 A4.5,4.5 0 0 1 1666.5,222 L1679.5,222 A4.5,4.5 0 0 1 1688.5,222 L1701.5,222 A4.5,4.5 0 0 1 1710.5,222 L1750,222"/>
+<line x1="1464" y1="658" x2="1464" y2="200"/>
+<path d="M1464,200 L1591.5,200 A4.5,4.5 0 0 1 1600.5,200 L1613.5,200 A4.5,4.5 0 0 1 1622.5,200 L1635.5,200 A4.5,4.5 0 0 1 1644.5,200 L1657.5,200 A4.5,4.5 0 0 1 1666.5,200 L1679.5,200 A4.5,4.5 0 0 1 1688.5,200 L1701.5,200 A4.5,4.5 0 0 1 1710.5,200 L1750,200"/>
 <path d="M830,46 L1295.5,46 A4.5,4.5 0 0 1 1304.5,46 L2150,46"/>
 <path d="M218,72 L617.5,72 A4.5,4.5 0 0 1 626.5,72 L825.5,72 A4.5,4.5 0 0 1 834.5,72 L891.5,72 A4.5,4.5 0 0 1 900.5,72 L1635.5,72 A4.5,4.5 0 0 1 1644.5,72 L1679.5,72 A4.5,4.5 0 0 1 1688.5,72 L1706,72"/>
 <path d="M196,98 L213.5,98 A4.5,4.5 0 0 1 222.5,98 L825.5,98 A4.5,4.5 0 0 1 834.5,98 L847.5,98 A4.5,4.5 0 0 1 856.5,98 L891.5,98 A4.5,4.5 0 0 1 900.5,98 L1295.5,98 A4.5,4.5 0 0 1 1304.5,98 L1591.5,98 A4.5,4.5 0 0 1 1600.5,98 L1635.5,98 A4.5,4.5 0 0 1 1644.5,98 L1662,98"/>
-<path d="M130,646 L471.5,646 A4.5,4.5 0 0 1 480.5,646 L1149.5,646 A4.5,4.5 0 0 1 1158.5,646 L1999.5,646 A4.5,4.5 0 0 1 2008.5,646 L2150,646"/>
-<path d="M152,620 L169.5,620 A4.5,4.5 0 0 1 178.5,620 L471.5,620 A4.5,4.5 0 0 1 480.5,620 L1149.5,620 A4.5,4.5 0 0 1 1158.5,620 L1503.5,620 A4.5,4.5 0 0 1 1512.5,620 L1552,620"/>
-<path d="M108,594 L125.5,594 A4.5,4.5 0 0 1 134.5,594 L147.5,594 A4.5,4.5 0 0 1 156.5,594 L169.5,594 A4.5,4.5 0 0 1 178.5,594 L471.5,594 A4.5,4.5 0 0 1 480.5,594 L803.5,594 A4.5,4.5 0 0 1 812.5,594 L1149.5,594 A4.5,4.5 0 0 1 1158.5,594 L1295.5,594 A4.5,4.5 0 0 1 1304.5,594 L1481.5,594 A4.5,4.5 0 0 1 1490.5,594 L1503.5,594 A4.5,4.5 0 0 1 1512.5,594 L1530,594"/>
-<line x1="622" y1="30" x2="622" y2="355"/>
-<line x1="622" y1="429" x2="622" y2="594"/>
-<line x1="1300" y1="30" x2="1300" y2="355"/>
-<line x1="1300" y1="429" x2="1300" y2="620"/>
-<line x1="2150" y1="30" x2="2150" y2="355"/>
-<line x1="2150" y1="429" x2="2150" y2="646"/>
-<line x1="436" y1="696" x2="2004" y2="696"/>
-<circle cx="476" cy="696" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1154" cy="696" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M130,710 L471.5,710 A4.5,4.5 0 0 1 480.5,710 L1149.5,710 A4.5,4.5 0 0 1 1158.5,710 L1999.5,710 A4.5,4.5 0 0 1 2008.5,710 L2150,710"/>
+<path d="M152,684 L169.5,684 A4.5,4.5 0 0 1 178.5,684 L471.5,684 A4.5,4.5 0 0 1 480.5,684 L1149.5,684 A4.5,4.5 0 0 1 1158.5,684 L1503.5,684 A4.5,4.5 0 0 1 1512.5,684 L1552,684"/>
+<path d="M108,658 L125.5,658 A4.5,4.5 0 0 1 134.5,658 L147.5,658 A4.5,4.5 0 0 1 156.5,658 L169.5,658 A4.5,4.5 0 0 1 178.5,658 L471.5,658 A4.5,4.5 0 0 1 480.5,658 L803.5,658 A4.5,4.5 0 0 1 812.5,658 L1149.5,658 A4.5,4.5 0 0 1 1158.5,658 L1295.5,658 A4.5,4.5 0 0 1 1304.5,658 L1481.5,658 A4.5,4.5 0 0 1 1490.5,658 L1503.5,658 A4.5,4.5 0 0 1 1512.5,658 L1530,658"/>
+<line x1="622" y1="30" x2="622" y2="387"/>
+<line x1="622" y1="461" x2="622" y2="658"/>
+<line x1="1300" y1="30" x2="1300" y2="387"/>
+<line x1="1300" y1="461" x2="1300" y2="684"/>
+<line x1="2150" y1="30" x2="2150" y2="387"/>
+<line x1="2150" y1="461" x2="2150" y2="710"/>
+<line x1="436" y1="760" x2="2004" y2="760"/>
+<circle cx="476" cy="760" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1154" cy="760" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="2150" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="896" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1684" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -15511,32 +16435,44 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{A}}Q_{B}\overline{Q_{C}}
 <circle cx="622" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="874" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1618" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="174" cy="646" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1574" cy="646" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1508" cy="646" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1300" cy="620" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="808" cy="620" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1486" cy="620" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="622" cy="594" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="786" cy="594" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1464" cy="594" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="174" cy="710" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1574" cy="710" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1508" cy="710" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1300" cy="684" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="808" cy="684" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1486" cy="684" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="622" cy="658" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="786" cy="658" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1464" cy="658" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="538" y="400" text-anchor="middle" font-size="26">A</text>
-<text x="506" y="361" text-anchor="start" font-size="14">T</text>
-<text x="570" y="361" text-anchor="end" font-size="16">Q</text>
-<text x="570" y="435" text-anchor="end" font-size="16">Q</text>
-<text x="1216" y="400" text-anchor="middle" font-size="26">B</text>
-<text x="1184" y="361" text-anchor="start" font-size="14">T</text>
-<text x="1248" y="361" text-anchor="end" font-size="16">Q</text>
-<text x="1248" y="435" text-anchor="end" font-size="16">Q</text>
-<text x="2066" y="400" text-anchor="middle" font-size="26">C</text>
-<text x="2034" y="361" text-anchor="start" font-size="14">T</text>
-<text x="2098" y="361" text-anchor="end" font-size="16">Q</text>
-<text x="2098" y="435" text-anchor="end" font-size="16">Q</text>
+<text x="538" y="432" text-anchor="middle" font-size="26">A</text>
+<text x="538" y="319" text-anchor="middle" font-size="14">1</text>
+<text x="538" y="541" text-anchor="middle" font-size="14">1</text>
+<text x="538" y="366" text-anchor="middle" font-size="12">PR</text>
+<text x="538" y="491" text-anchor="middle" font-size="12">CLR</text>
+<text x="506" y="393" text-anchor="start" font-size="14">T</text>
+<text x="570" y="393" text-anchor="end" font-size="16">Q</text>
+<text x="570" y="467" text-anchor="end" font-size="16">Q</text>
+<text x="1216" y="432" text-anchor="middle" font-size="26">B</text>
+<text x="1216" y="319" text-anchor="middle" font-size="14">1</text>
+<text x="1216" y="541" text-anchor="middle" font-size="14">1</text>
+<text x="1216" y="366" text-anchor="middle" font-size="12">PR</text>
+<text x="1216" y="491" text-anchor="middle" font-size="12">CLR</text>
+<text x="1184" y="393" text-anchor="start" font-size="14">T</text>
+<text x="1248" y="393" text-anchor="end" font-size="16">Q</text>
+<text x="1248" y="467" text-anchor="end" font-size="16">Q</text>
+<text x="2066" y="432" text-anchor="middle" font-size="26">C</text>
+<text x="2066" y="319" text-anchor="middle" font-size="14">1</text>
+<text x="2066" y="541" text-anchor="middle" font-size="14">1</text>
+<text x="2066" y="366" text-anchor="middle" font-size="12">PR</text>
+<text x="2066" y="491" text-anchor="middle" font-size="12">CLR</text>
+<text x="2034" y="393" text-anchor="start" font-size="14">T</text>
+<text x="2098" y="393" text-anchor="end" font-size="16">Q</text>
+<text x="2098" y="467" text-anchor="end" font-size="16">Q</text>
 <text x="622" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1300" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="2150" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="432" y="702" text-anchor="end" font-size="16">Clock</text>
+<text x="432" y="766" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -15908,93 +16844,119 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B} &= Q_{A} \\ K_{B} &= \overline{Q_{A}} \\ J_{C} &= \overline{Q_{A}} + Q_{B} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1304" height="413" viewBox="0 0 1304 413" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1304" height="477" viewBox="0 0 1304 477" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="141" width="80" height="150" rx="2"/>
-<polyline points="302,207 314,216 302,225"/>
-<circle cx="298" cy="216" r="4"/>
-<line x1="294" y1="216" x2="280" y2="216"/>
-<line x1="280" y1="216" x2="280" y2="389"/>
-<path d="M190,146 H216 A26,33 0 0 1 216,212 H190 Z"/>
-<path d="M242,179 L253.5,179 A4.5,4.5 0 0 1 262.5,179 L302,179"/>
-<line x1="382" y1="179" x2="426" y2="179"/>
-<line x1="382" y1="253" x2="426" y2="253"/>
-<line x1="365.2" y1="245.4" x2="374" y2="245.4" stroke-width="1.4"/>
-<rect x="656" y="141" width="80" height="150" rx="2"/>
-<polyline points="656,207 668,216 656,225"/>
-<circle cx="652" cy="216" r="4"/>
-<line x1="648" y1="216" x2="634" y2="216"/>
-<line x1="634" y1="216" x2="634" y2="389"/>
-<line x1="736" y1="179" x2="780" y2="179"/>
-<line x1="736" y1="253" x2="780" y2="253"/>
-<line x1="719.2" y1="245.4" x2="728" y2="245.4" stroke-width="1.4"/>
-<rect x="1108" y="141" width="80" height="150" rx="2"/>
-<polyline points="1108,207 1120,216 1108,225"/>
-<circle cx="1104" cy="216" r="4"/>
-<line x1="1100" y1="216" x2="1086" y2="216"/>
-<line x1="1086" y1="216" x2="1086" y2="389"/>
-<path d="M1004,146 C1026,146 1052,162.5 1064,179 C1052,195.5 1026,212 1004,212 Q1018,179 1004,146 Z"/>
-<line x1="1064" y1="179" x2="1108" y2="179"/>
-<path d="M1056,253 L1081.5,253 A4.5,4.5 0 0 1 1090.5,253 L1108,253"/>
-<line x1="1188" y1="179" x2="1232" y2="179"/>
-<line x1="1188" y1="253" x2="1232" y2="253"/>
-<line x1="1171.2" y1="245.4" x2="1180" y2="245.4" stroke-width="1.4"/>
-<line x1="146" y1="46" x2="146" y2="190"/>
-<line x1="146" y1="190" x2="190" y2="190"/>
-<line x1="258" y1="72" x2="258" y2="253"/>
-<path d="M258,253 L275.5,253 A4.5,4.5 0 0 1 284.5,253 L302,253"/>
-<line x1="124" y1="339" x2="124" y2="168"/>
-<path d="M124,168 L141.5,168 A4.5,4.5 0 0 1 150.5,168 L190,168"/>
-<line x1="612" y1="98" x2="612" y2="179"/>
-<line x1="612" y1="179" x2="656" y2="179"/>
-<line x1="590" y1="313" x2="590" y2="253"/>
-<path d="M590,253 L629.5,253 A4.5,4.5 0 0 1 638.5,253 L656,253"/>
-<line x1="966.2" y1="72" x2="966.2" y2="190"/>
-<line x1="966.2" y1="190" x2="1010.2" y2="190"/>
-<line x1="944.2" y1="313" x2="944.2" y2="168"/>
-<path d="M944.2,168 L961.7,168 A4.5,4.5 0 0 1 970.7,168 L1010.2,168"/>
+<rect x="302" y="173" width="80" height="150" rx="2"/>
+<circle cx="342" cy="169" r="4"/>
+<line x1="342" y1="165" x2="342" y2="149"/>
+<circle cx="342" cy="327" r="4"/>
+<line x1="342" y1="331" x2="342" y2="347"/>
+<polyline points="302,239 314,248 302,257"/>
+<circle cx="298" cy="248" r="4"/>
+<line x1="294" y1="248" x2="280" y2="248"/>
+<line x1="280" y1="248" x2="280" y2="453"/>
+<path d="M190,178 H216 A26,33 0 0 1 216,244 H190 Z"/>
+<path d="M242,211 L253.5,211 A4.5,4.5 0 0 1 262.5,211 L302,211"/>
+<line x1="382" y1="211" x2="426" y2="211"/>
+<line x1="382" y1="285" x2="426" y2="285"/>
+<line x1="365.2" y1="277.4" x2="374" y2="277.4" stroke-width="1.4"/>
+<rect x="656" y="173" width="80" height="150" rx="2"/>
+<circle cx="696" cy="169" r="4"/>
+<line x1="696" y1="165" x2="696" y2="149"/>
+<circle cx="696" cy="327" r="4"/>
+<line x1="696" y1="331" x2="696" y2="347"/>
+<polyline points="656,239 668,248 656,257"/>
+<circle cx="652" cy="248" r="4"/>
+<line x1="648" y1="248" x2="634" y2="248"/>
+<line x1="634" y1="248" x2="634" y2="453"/>
+<line x1="736" y1="211" x2="780" y2="211"/>
+<line x1="736" y1="285" x2="780" y2="285"/>
+<line x1="719.2" y1="277.4" x2="728" y2="277.4" stroke-width="1.4"/>
+<rect x="1108" y="173" width="80" height="150" rx="2"/>
+<circle cx="1148" cy="169" r="4"/>
+<line x1="1148" y1="165" x2="1148" y2="149"/>
+<circle cx="1148" cy="327" r="4"/>
+<line x1="1148" y1="331" x2="1148" y2="347"/>
+<polyline points="1108,239 1120,248 1108,257"/>
+<circle cx="1104" cy="248" r="4"/>
+<line x1="1100" y1="248" x2="1086" y2="248"/>
+<line x1="1086" y1="248" x2="1086" y2="453"/>
+<path d="M1004,178 C1026,178 1052,194.5 1064,211 C1052,227.5 1026,244 1004,244 Q1018,211 1004,178 Z"/>
+<line x1="1064" y1="211" x2="1108" y2="211"/>
+<path d="M1056,285 L1081.5,285 A4.5,4.5 0 0 1 1090.5,285 L1108,285"/>
+<line x1="1188" y1="211" x2="1232" y2="211"/>
+<line x1="1188" y1="285" x2="1232" y2="285"/>
+<line x1="1171.2" y1="277.4" x2="1180" y2="277.4" stroke-width="1.4"/>
+<line x1="146" y1="46" x2="146" y2="222"/>
+<line x1="146" y1="222" x2="190" y2="222"/>
+<line x1="258" y1="72" x2="258" y2="285"/>
+<path d="M258,285 L275.5,285 A4.5,4.5 0 0 1 284.5,285 L302,285"/>
+<line x1="124" y1="403" x2="124" y2="200"/>
+<path d="M124,200 L141.5,200 A4.5,4.5 0 0 1 150.5,200 L190,200"/>
+<line x1="612" y1="98" x2="612" y2="211"/>
+<line x1="612" y1="211" x2="656" y2="211"/>
+<line x1="590" y1="377" x2="590" y2="285"/>
+<path d="M590,285 L629.5,285 A4.5,4.5 0 0 1 638.5,285 L656,285"/>
+<line x1="966.2" y1="72" x2="966.2" y2="222"/>
+<line x1="966.2" y1="222" x2="1010.2" y2="222"/>
+<line x1="944.2" y1="377" x2="944.2" y2="200"/>
+<path d="M944.2,200 L961.7,200 A4.5,4.5 0 0 1 970.7,200 L1010.2,200"/>
 <path d="M146,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L775.5,46 A4.5,4.5 0 0 1 784.5,46 L1232,46"/>
 <path d="M258,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L966.2,72"/>
 <line x1="426" y1="98" x2="612" y2="98"/>
-<path d="M124,339 L275.5,339 A4.5,4.5 0 0 1 284.5,339 L629.5,339 A4.5,4.5 0 0 1 638.5,339 L780,339"/>
-<path d="M426,313 L629.5,313 A4.5,4.5 0 0 1 638.5,313 L775.5,313 A4.5,4.5 0 0 1 784.5,313 L944.2,313"/>
-<line x1="426" y1="30" x2="426" y2="179"/>
-<line x1="426" y1="253" x2="426" y2="313"/>
-<line x1="780" y1="30" x2="780" y2="179"/>
-<line x1="780" y1="253" x2="780" y2="339"/>
-<line x1="1232" y1="30" x2="1232" y2="179"/>
-<line x1="240" y1="389" x2="1086" y2="389"/>
-<circle cx="280" cy="389" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="634" cy="389" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M124,403 L275.5,403 A4.5,4.5 0 0 1 284.5,403 L629.5,403 A4.5,4.5 0 0 1 638.5,403 L780,403"/>
+<path d="M426,377 L629.5,377 A4.5,4.5 0 0 1 638.5,377 L775.5,377 A4.5,4.5 0 0 1 784.5,377 L944.2,377"/>
+<line x1="426" y1="30" x2="426" y2="211"/>
+<line x1="426" y1="285" x2="426" y2="377"/>
+<line x1="780" y1="30" x2="780" y2="211"/>
+<line x1="780" y1="285" x2="780" y2="403"/>
+<line x1="1232" y1="30" x2="1232" y2="211"/>
+<line x1="240" y1="453" x2="1086" y2="453"/>
+<circle cx="280" cy="453" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="634" cy="453" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1232" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="780" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="313" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="377" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="224" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="185" text-anchor="start" font-size="14">J</text>
-<text x="310" y="259" text-anchor="start" font-size="14">K</text>
-<text x="374" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="696" y="224" text-anchor="middle" font-size="26">B</text>
-<text x="664" y="185" text-anchor="start" font-size="14">J</text>
-<text x="664" y="259" text-anchor="start" font-size="14">K</text>
-<text x="728" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="728" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="1148" y="224" text-anchor="middle" font-size="26">C</text>
-<text x="1116" y="185" text-anchor="start" font-size="14">J</text>
-<text x="1116" y="259" text-anchor="start" font-size="14">K</text>
-<text x="1052" y="259" text-anchor="end" font-size="16">1</text>
-<text x="1180" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1180" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="256" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="217" text-anchor="start" font-size="14">J</text>
+<text x="310" y="291" text-anchor="start" font-size="14">K</text>
+<text x="374" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="696" y="256" text-anchor="middle" font-size="26">B</text>
+<text x="696" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="696" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="664" y="217" text-anchor="start" font-size="14">J</text>
+<text x="664" y="291" text-anchor="start" font-size="14">K</text>
+<text x="728" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="728" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="1148" y="256" text-anchor="middle" font-size="26">C</text>
+<text x="1148" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1148" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="1148" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1148" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="1116" y="217" text-anchor="start" font-size="14">J</text>
+<text x="1116" y="291" text-anchor="start" font-size="14">K</text>
+<text x="1052" y="291" text-anchor="end" font-size="16">1</text>
+<text x="1180" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1180" y="291" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="780" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1232" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="395" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="459" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -16366,109 +17328,135 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B} \\ S_{A} &= \overline{Q_{B}}Q_{C} \\ R_{B} &= \overline{Q_{A}} \\ S_{B} &= Q_{A} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1524" height="516" viewBox="0 0 1524 516" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1524" height="580" viewBox="0 0 1524 580" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="185" width="80" height="183" rx="2"/>
-<polyline points="302,267.5 314,276.5 302,285.5"/>
-<circle cx="298" cy="276.5" r="4"/>
-<line x1="294" y1="276.5" x2="280" y2="276.5"/>
-<line x1="280" y1="276.5" x2="280" y2="492"/>
-<path d="M190,190 H216 A26,33 0 0 1 216,256 H190 Z"/>
-<path d="M242,223 L253.5,223 A4.5,4.5 0 0 1 262.5,223 L302,223"/>
-<line x1="382" y1="223" x2="426" y2="223"/>
-<line x1="382" y1="330" x2="426" y2="330"/>
-<line x1="365.2" y1="322.4" x2="374" y2="322.4" stroke-width="1.4"/>
-<rect x="656" y="185" width="80" height="183" rx="2"/>
-<polyline points="656,267.5 668,276.5 656,285.5"/>
-<circle cx="652" cy="276.5" r="4"/>
-<line x1="648" y1="276.5" x2="634" y2="276.5"/>
-<line x1="634" y1="276.5" x2="634" y2="492"/>
-<line x1="736" y1="223" x2="780" y2="223"/>
-<line x1="736" y1="330" x2="780" y2="330"/>
-<line x1="719.2" y1="322.4" x2="728" y2="322.4" stroke-width="1.4"/>
-<rect x="1328" y="185" width="80" height="183" rx="2"/>
-<polyline points="1328,267.5 1340,276.5 1328,285.5"/>
-<circle cx="1324" cy="276.5" r="4"/>
-<line x1="1320" y1="276.5" x2="1306" y2="276.5"/>
-<line x1="1306" y1="276.5" x2="1306" y2="492"/>
-<path d="M1208,190 C1230,190 1256,206.5 1268,223 C1256,239.5 1230,256 1208,256 Q1222,223 1208,190 Z"/>
-<path d="M1076,146 H1102 A26,33 0 0 1 1102,212 H1076 Z"/>
-<line x1="1128" y1="179" x2="1190" y2="179"/>
-<line x1="1190" y1="179" x2="1190" y2="212"/>
-<line x1="1190" y1="212" x2="1214.2" y2="212"/>
-<path d="M1076,234 H1102 A26,33 0 0 1 1102,300 H1076 Z"/>
-<line x1="1128" y1="267" x2="1170" y2="267"/>
-<line x1="1170" y1="267" x2="1170" y2="234"/>
-<line x1="1170" y1="234" x2="1214.2" y2="234"/>
-<path d="M1268,223 L1279.5,223 A4.5,4.5 0 0 1 1288.5,223 L1328,223"/>
-<line x1="1408" y1="223" x2="1452" y2="223"/>
-<line x1="1408" y1="330" x2="1452" y2="330"/>
-<line x1="1391.2" y1="322.4" x2="1400" y2="322.4" stroke-width="1.4"/>
-<line x1="146" y1="46" x2="146" y2="234"/>
-<line x1="146" y1="234" x2="190" y2="234"/>
-<line x1="258" y1="72" x2="258" y2="330"/>
-<path d="M258,330 L275.5,330 A4.5,4.5 0 0 1 284.5,330 L302,330"/>
-<line x1="124" y1="416" x2="124" y2="212"/>
-<path d="M124,212 L141.5,212 A4.5,4.5 0 0 1 150.5,212 L190,212"/>
-<line x1="612" y1="98" x2="612" y2="223"/>
-<line x1="612" y1="223" x2="656" y2="223"/>
-<line x1="590" y1="390" x2="590" y2="330"/>
-<path d="M590,330 L629.5,330 A4.5,4.5 0 0 1 638.5,330 L656,330"/>
-<line x1="1032" y1="72" x2="1032" y2="256"/>
-<line x1="1032" y1="256" x2="1076" y2="256"/>
-<line x1="1284" y1="46" x2="1284" y2="330"/>
-<path d="M1284,330 L1301.5,330 A4.5,4.5 0 0 1 1310.5,330 L1328,330"/>
-<line x1="1010" y1="442" x2="1010" y2="278"/>
-<line x1="1010" y1="278" x2="1076" y2="278"/>
-<line x1="988" y1="442" x2="988" y2="190"/>
-<path d="M988,190 L1027.5,190 A4.5,4.5 0 0 1 1036.5,190 L1076,190"/>
-<line x1="966" y1="390" x2="966" y2="168"/>
-<path d="M966,168 L1027.5,168 A4.5,4.5 0 0 1 1036.5,168 L1076,168"/>
+<rect x="302" y="217" width="80" height="183" rx="2"/>
+<circle cx="342" cy="213" r="4"/>
+<line x1="342" y1="209" x2="342" y2="193"/>
+<circle cx="342" cy="404" r="4"/>
+<line x1="342" y1="408" x2="342" y2="424"/>
+<polyline points="302,299.5 314,308.5 302,317.5"/>
+<circle cx="298" cy="308.5" r="4"/>
+<line x1="294" y1="308.5" x2="280" y2="308.5"/>
+<line x1="280" y1="308.5" x2="280" y2="556"/>
+<path d="M190,222 H216 A26,33 0 0 1 216,288 H190 Z"/>
+<path d="M242,255 L253.5,255 A4.5,4.5 0 0 1 262.5,255 L302,255"/>
+<line x1="382" y1="255" x2="426" y2="255"/>
+<line x1="382" y1="362" x2="426" y2="362"/>
+<line x1="365.2" y1="354.4" x2="374" y2="354.4" stroke-width="1.4"/>
+<rect x="656" y="217" width="80" height="183" rx="2"/>
+<circle cx="696" cy="213" r="4"/>
+<line x1="696" y1="209" x2="696" y2="193"/>
+<circle cx="696" cy="404" r="4"/>
+<line x1="696" y1="408" x2="696" y2="424"/>
+<polyline points="656,299.5 668,308.5 656,317.5"/>
+<circle cx="652" cy="308.5" r="4"/>
+<line x1="648" y1="308.5" x2="634" y2="308.5"/>
+<line x1="634" y1="308.5" x2="634" y2="556"/>
+<line x1="736" y1="255" x2="780" y2="255"/>
+<line x1="736" y1="362" x2="780" y2="362"/>
+<line x1="719.2" y1="354.4" x2="728" y2="354.4" stroke-width="1.4"/>
+<rect x="1328" y="217" width="80" height="183" rx="2"/>
+<circle cx="1368" cy="213" r="4"/>
+<line x1="1368" y1="209" x2="1368" y2="193"/>
+<circle cx="1368" cy="404" r="4"/>
+<line x1="1368" y1="408" x2="1368" y2="424"/>
+<polyline points="1328,299.5 1340,308.5 1328,317.5"/>
+<circle cx="1324" cy="308.5" r="4"/>
+<line x1="1320" y1="308.5" x2="1306" y2="308.5"/>
+<line x1="1306" y1="308.5" x2="1306" y2="556"/>
+<path d="M1208,222 C1230,222 1256,238.5 1268,255 C1256,271.5 1230,288 1208,288 Q1222,255 1208,222 Z"/>
+<path d="M1076,178 H1102 A26,33 0 0 1 1102,244 H1076 Z"/>
+<line x1="1128" y1="211" x2="1190" y2="211"/>
+<line x1="1190" y1="211" x2="1190" y2="244"/>
+<line x1="1190" y1="244" x2="1214.2" y2="244"/>
+<path d="M1076,266 H1102 A26,33 0 0 1 1102,332 H1076 Z"/>
+<line x1="1128" y1="299" x2="1170" y2="299"/>
+<line x1="1170" y1="299" x2="1170" y2="266"/>
+<line x1="1170" y1="266" x2="1214.2" y2="266"/>
+<path d="M1268,255 L1279.5,255 A4.5,4.5 0 0 1 1288.5,255 L1328,255"/>
+<line x1="1408" y1="255" x2="1452" y2="255"/>
+<line x1="1408" y1="362" x2="1452" y2="362"/>
+<line x1="1391.2" y1="354.4" x2="1400" y2="354.4" stroke-width="1.4"/>
+<line x1="146" y1="46" x2="146" y2="266"/>
+<line x1="146" y1="266" x2="190" y2="266"/>
+<line x1="258" y1="72" x2="258" y2="362"/>
+<path d="M258,362 L275.5,362 A4.5,4.5 0 0 1 284.5,362 L302,362"/>
+<line x1="124" y1="480" x2="124" y2="244"/>
+<path d="M124,244 L141.5,244 A4.5,4.5 0 0 1 150.5,244 L190,244"/>
+<line x1="612" y1="98" x2="612" y2="255"/>
+<line x1="612" y1="255" x2="656" y2="255"/>
+<line x1="590" y1="454" x2="590" y2="362"/>
+<path d="M590,362 L629.5,362 A4.5,4.5 0 0 1 638.5,362 L656,362"/>
+<line x1="1032" y1="72" x2="1032" y2="288"/>
+<line x1="1032" y1="288" x2="1076" y2="288"/>
+<line x1="1284" y1="46" x2="1284" y2="362"/>
+<path d="M1284,362 L1301.5,362 A4.5,4.5 0 0 1 1310.5,362 L1328,362"/>
+<line x1="1010" y1="506" x2="1010" y2="310"/>
+<line x1="1010" y1="310" x2="1076" y2="310"/>
+<line x1="988" y1="506" x2="988" y2="222"/>
+<path d="M988,222 L1027.5,222 A4.5,4.5 0 0 1 1036.5,222 L1076,222"/>
+<line x1="966" y1="454" x2="966" y2="200"/>
+<path d="M966,200 L1027.5,200 A4.5,4.5 0 0 1 1036.5,200 L1076,200"/>
 <path d="M146,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L775.5,46 A4.5,4.5 0 0 1 784.5,46 L1452,46"/>
 <path d="M258,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L1032,72"/>
 <line x1="426" y1="98" x2="612" y2="98"/>
-<path d="M988,442 L1301.5,442 A4.5,4.5 0 0 1 1310.5,442 L1452,442"/>
-<path d="M124,416 L275.5,416 A4.5,4.5 0 0 1 284.5,416 L629.5,416 A4.5,4.5 0 0 1 638.5,416 L780,416"/>
-<path d="M426,390 L629.5,390 A4.5,4.5 0 0 1 638.5,390 L775.5,390 A4.5,4.5 0 0 1 784.5,390 L966,390"/>
-<line x1="426" y1="30" x2="426" y2="223"/>
-<line x1="426" y1="330" x2="426" y2="390"/>
-<line x1="780" y1="30" x2="780" y2="223"/>
-<line x1="780" y1="330" x2="780" y2="416"/>
-<line x1="1452" y1="30" x2="1452" y2="223"/>
-<line x1="1452" y1="330" x2="1452" y2="442"/>
-<line x1="240" y1="492" x2="1306" y2="492"/>
-<circle cx="280" cy="492" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="634" cy="492" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M988,506 L1301.5,506 A4.5,4.5 0 0 1 1310.5,506 L1452,506"/>
+<path d="M124,480 L275.5,480 A4.5,4.5 0 0 1 284.5,480 L629.5,480 A4.5,4.5 0 0 1 638.5,480 L780,480"/>
+<path d="M426,454 L629.5,454 A4.5,4.5 0 0 1 638.5,454 L775.5,454 A4.5,4.5 0 0 1 784.5,454 L966,454"/>
+<line x1="426" y1="30" x2="426" y2="255"/>
+<line x1="426" y1="362" x2="426" y2="454"/>
+<line x1="780" y1="30" x2="780" y2="255"/>
+<line x1="780" y1="362" x2="780" y2="480"/>
+<line x1="1452" y1="30" x2="1452" y2="255"/>
+<line x1="1452" y1="362" x2="1452" y2="506"/>
+<line x1="240" y1="556" x2="1306" y2="556"/>
+<circle cx="280" cy="556" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="634" cy="556" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1452" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1284" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="780" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1010" cy="442" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="390" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1010" cy="506" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="454" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="284.5" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="229" text-anchor="start" font-size="14">S</text>
-<text x="310" y="336" text-anchor="start" font-size="14">R</text>
-<text x="374" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="336" text-anchor="end" font-size="16">Q</text>
-<text x="696" y="284.5" text-anchor="middle" font-size="26">B</text>
-<text x="664" y="229" text-anchor="start" font-size="14">S</text>
-<text x="664" y="336" text-anchor="start" font-size="14">R</text>
-<text x="728" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="728" y="336" text-anchor="end" font-size="16">Q</text>
-<text x="1368" y="284.5" text-anchor="middle" font-size="26">C</text>
-<text x="1336" y="229" text-anchor="start" font-size="14">S</text>
-<text x="1336" y="336" text-anchor="start" font-size="14">R</text>
-<text x="1400" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1400" y="336" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="316.5" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="442" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="392" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="261" text-anchor="start" font-size="14">S</text>
+<text x="310" y="368" text-anchor="start" font-size="14">R</text>
+<text x="374" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="368" text-anchor="end" font-size="16">Q</text>
+<text x="696" y="316.5" text-anchor="middle" font-size="26">B</text>
+<text x="696" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="442" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="696" y="392" text-anchor="middle" font-size="12">CLR</text>
+<text x="664" y="261" text-anchor="start" font-size="14">S</text>
+<text x="664" y="368" text-anchor="start" font-size="14">R</text>
+<text x="728" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="728" y="368" text-anchor="end" font-size="16">Q</text>
+<text x="1368" y="316.5" text-anchor="middle" font-size="26">C</text>
+<text x="1368" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1368" y="442" text-anchor="middle" font-size="14">1</text>
+<text x="1368" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1368" y="392" text-anchor="middle" font-size="12">CLR</text>
+<text x="1336" y="261" text-anchor="start" font-size="14">S</text>
+<text x="1336" y="368" text-anchor="start" font-size="14">R</text>
+<text x="1400" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1400" y="368" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="780" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1452" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="498" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="562" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -16710,108 +17698,134 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{B}}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= Q_{A} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + Q_{B}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1616" height="483" viewBox="0 0 1616 483" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1616" height="547" viewBox="0 0 1616 547" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="185" width="80" height="150" rx="2"/>
-<polyline points="454,281 466,290 454,299"/>
-<line x1="454" y1="290" x2="432" y2="290"/>
-<line x1="432" y1="290" x2="432" y2="459"/>
-<path d="M350,190 C372,190 398,206.5 410,223 C398,239.5 372,256 350,256 Q364,223 350,190 Z"/>
-<path d="M218,146 H244 A26,33 0 0 1 244,212 H218 Z"/>
-<line x1="270" y1="179" x2="332" y2="179"/>
-<line x1="332" y1="179" x2="332" y2="212"/>
-<line x1="332" y1="212" x2="356.2" y2="212"/>
-<path d="M218,234 H244 A26,33 0 0 1 244,300 H218 Z"/>
-<line x1="270" y1="267" x2="312" y2="267"/>
-<line x1="312" y1="267" x2="312" y2="234"/>
-<line x1="312" y1="234" x2="356.2" y2="234"/>
-<line x1="410" y1="223" x2="454" y2="223"/>
-<line x1="534" y1="223" x2="578" y2="223"/>
-<line x1="534" y1="297" x2="578" y2="297"/>
-<line x1="517.2" y1="289.4" x2="526" y2="289.4" stroke-width="1.4"/>
-<rect x="786" y="185" width="80" height="150" rx="2"/>
-<polyline points="786,281 798,290 786,299"/>
-<line x1="786" y1="290" x2="764" y2="290"/>
-<line x1="764" y1="290" x2="764" y2="459"/>
-<line x1="866" y1="223" x2="910" y2="223"/>
-<line x1="866" y1="297" x2="910" y2="297"/>
-<line x1="849.2" y1="289.4" x2="858" y2="289.4" stroke-width="1.4"/>
-<rect x="1420" y="185" width="80" height="150" rx="2"/>
-<polyline points="1420,281 1432,290 1420,299"/>
-<line x1="1420" y1="290" x2="1398" y2="290"/>
-<line x1="1398" y1="290" x2="1398" y2="459"/>
-<path d="M1316,190 C1338,190 1364,206.5 1376,223 C1364,239.5 1338,256 1316,256 Q1330,223 1316,190 Z"/>
-<path d="M1184,146 H1210 A26,33 0 0 1 1210,212 H1184 Z"/>
-<line x1="1236" y1="179" x2="1298" y2="179"/>
-<line x1="1298" y1="179" x2="1298" y2="212"/>
-<line x1="1298" y1="212" x2="1322.2" y2="212"/>
-<path d="M1184,234 H1210 A26,33 0 0 1 1210,300 H1184 Z"/>
-<line x1="1236" y1="267" x2="1278" y2="267"/>
-<line x1="1278" y1="267" x2="1278" y2="234"/>
-<line x1="1278" y1="234" x2="1322.2" y2="234"/>
-<line x1="1376" y1="223" x2="1420" y2="223"/>
-<line x1="1500" y1="223" x2="1544" y2="223"/>
-<line x1="1500" y1="297" x2="1544" y2="297"/>
-<line x1="1483.2" y1="289.4" x2="1492" y2="289.4" stroke-width="1.4"/>
-<line x1="174" y1="46" x2="174" y2="190"/>
-<line x1="174" y1="190" x2="218" y2="190"/>
-<line x1="152" y1="98" x2="152" y2="256"/>
-<line x1="152" y1="256" x2="218" y2="256"/>
-<line x1="130" y1="383" x2="130" y2="278"/>
-<line x1="130" y1="278" x2="218" y2="278"/>
-<line x1="108" y1="383" x2="108" y2="168"/>
-<path d="M108,168 L147.5,168 A4.5,4.5 0 0 1 156.5,168 L169.5,168 A4.5,4.5 0 0 1 178.5,168 L218,168"/>
-<line x1="742" y1="98" x2="742" y2="223"/>
-<line x1="742" y1="223" x2="786" y2="223"/>
-<line x1="1140" y1="72" x2="1140" y2="256"/>
-<line x1="1140" y1="256" x2="1184" y2="256"/>
-<line x1="1118" y1="409" x2="1118" y2="278"/>
-<line x1="1118" y1="278" x2="1184" y2="278"/>
-<line x1="1096" y1="409" x2="1096" y2="190"/>
-<path d="M1096,190 L1135.5,190 A4.5,4.5 0 0 1 1144.5,190 L1184,190"/>
-<line x1="1074" y1="357" x2="1074" y2="168"/>
-<path d="M1074,168 L1135.5,168 A4.5,4.5 0 0 1 1144.5,168 L1184,168"/>
+<rect x="454" y="217" width="80" height="150" rx="2"/>
+<circle cx="494" cy="213" r="4"/>
+<line x1="494" y1="209" x2="494" y2="193"/>
+<circle cx="494" cy="371" r="4"/>
+<line x1="494" y1="375" x2="494" y2="391"/>
+<polyline points="454,313 466,322 454,331"/>
+<line x1="454" y1="322" x2="432" y2="322"/>
+<line x1="432" y1="322" x2="432" y2="523"/>
+<path d="M350,222 C372,222 398,238.5 410,255 C398,271.5 372,288 350,288 Q364,255 350,222 Z"/>
+<path d="M218,178 H244 A26,33 0 0 1 244,244 H218 Z"/>
+<line x1="270" y1="211" x2="332" y2="211"/>
+<line x1="332" y1="211" x2="332" y2="244"/>
+<line x1="332" y1="244" x2="356.2" y2="244"/>
+<path d="M218,266 H244 A26,33 0 0 1 244,332 H218 Z"/>
+<line x1="270" y1="299" x2="312" y2="299"/>
+<line x1="312" y1="299" x2="312" y2="266"/>
+<line x1="312" y1="266" x2="356.2" y2="266"/>
+<line x1="410" y1="255" x2="454" y2="255"/>
+<line x1="534" y1="255" x2="578" y2="255"/>
+<line x1="534" y1="329" x2="578" y2="329"/>
+<line x1="517.2" y1="321.4" x2="526" y2="321.4" stroke-width="1.4"/>
+<rect x="786" y="217" width="80" height="150" rx="2"/>
+<circle cx="826" cy="213" r="4"/>
+<line x1="826" y1="209" x2="826" y2="193"/>
+<circle cx="826" cy="371" r="4"/>
+<line x1="826" y1="375" x2="826" y2="391"/>
+<polyline points="786,313 798,322 786,331"/>
+<line x1="786" y1="322" x2="764" y2="322"/>
+<line x1="764" y1="322" x2="764" y2="523"/>
+<line x1="866" y1="255" x2="910" y2="255"/>
+<line x1="866" y1="329" x2="910" y2="329"/>
+<line x1="849.2" y1="321.4" x2="858" y2="321.4" stroke-width="1.4"/>
+<rect x="1420" y="217" width="80" height="150" rx="2"/>
+<circle cx="1460" cy="213" r="4"/>
+<line x1="1460" y1="209" x2="1460" y2="193"/>
+<circle cx="1460" cy="371" r="4"/>
+<line x1="1460" y1="375" x2="1460" y2="391"/>
+<polyline points="1420,313 1432,322 1420,331"/>
+<line x1="1420" y1="322" x2="1398" y2="322"/>
+<line x1="1398" y1="322" x2="1398" y2="523"/>
+<path d="M1316,222 C1338,222 1364,238.5 1376,255 C1364,271.5 1338,288 1316,288 Q1330,255 1316,222 Z"/>
+<path d="M1184,178 H1210 A26,33 0 0 1 1210,244 H1184 Z"/>
+<line x1="1236" y1="211" x2="1298" y2="211"/>
+<line x1="1298" y1="211" x2="1298" y2="244"/>
+<line x1="1298" y1="244" x2="1322.2" y2="244"/>
+<path d="M1184,266 H1210 A26,33 0 0 1 1210,332 H1184 Z"/>
+<line x1="1236" y1="299" x2="1278" y2="299"/>
+<line x1="1278" y1="299" x2="1278" y2="266"/>
+<line x1="1278" y1="266" x2="1322.2" y2="266"/>
+<line x1="1376" y1="255" x2="1420" y2="255"/>
+<line x1="1500" y1="255" x2="1544" y2="255"/>
+<line x1="1500" y1="329" x2="1544" y2="329"/>
+<line x1="1483.2" y1="321.4" x2="1492" y2="321.4" stroke-width="1.4"/>
+<line x1="174" y1="46" x2="174" y2="222"/>
+<line x1="174" y1="222" x2="218" y2="222"/>
+<line x1="152" y1="98" x2="152" y2="288"/>
+<line x1="152" y1="288" x2="218" y2="288"/>
+<line x1="130" y1="447" x2="130" y2="310"/>
+<line x1="130" y1="310" x2="218" y2="310"/>
+<line x1="108" y1="447" x2="108" y2="200"/>
+<path d="M108,200 L147.5,200 A4.5,4.5 0 0 1 156.5,200 L169.5,200 A4.5,4.5 0 0 1 178.5,200 L218,200"/>
+<line x1="742" y1="98" x2="742" y2="255"/>
+<line x1="742" y1="255" x2="786" y2="255"/>
+<line x1="1140" y1="72" x2="1140" y2="288"/>
+<line x1="1140" y1="288" x2="1184" y2="288"/>
+<line x1="1118" y1="473" x2="1118" y2="310"/>
+<line x1="1118" y1="310" x2="1184" y2="310"/>
+<line x1="1096" y1="473" x2="1096" y2="222"/>
+<path d="M1096,222 L1135.5,222 A4.5,4.5 0 0 1 1144.5,222 L1184,222"/>
+<line x1="1074" y1="421" x2="1074" y2="200"/>
+<path d="M1074,200 L1135.5,200 A4.5,4.5 0 0 1 1144.5,200 L1184,200"/>
 <path d="M174,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L905.5,46 A4.5,4.5 0 0 1 914.5,46 L1544,46"/>
 <line x1="910" y1="72" x2="1140" y2="72"/>
 <path d="M152,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L742,98"/>
-<path d="M1096,409 L1393.5,409 A4.5,4.5 0 0 1 1402.5,409 L1544,409"/>
-<path d="M108,383 L427.5,383 A4.5,4.5 0 0 1 436.5,383 L759.5,383 A4.5,4.5 0 0 1 768.5,383 L910,383"/>
-<path d="M578,357 L759.5,357 A4.5,4.5 0 0 1 768.5,357 L905.5,357 A4.5,4.5 0 0 1 914.5,357 L1074,357"/>
-<line x1="578" y1="30" x2="578" y2="223"/>
-<line x1="578" y1="297" x2="578" y2="357"/>
-<line x1="910" y1="30" x2="910" y2="223"/>
-<line x1="910" y1="297" x2="910" y2="383"/>
-<line x1="1544" y1="30" x2="1544" y2="223"/>
-<line x1="1544" y1="297" x2="1544" y2="409"/>
-<line x1="392" y1="459" x2="1398" y2="459"/>
-<circle cx="432" cy="459" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="764" cy="459" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1096,473 L1393.5,473 A4.5,4.5 0 0 1 1402.5,473 L1544,473"/>
+<path d="M108,447 L427.5,447 A4.5,4.5 0 0 1 436.5,447 L759.5,447 A4.5,4.5 0 0 1 768.5,447 L910,447"/>
+<path d="M578,421 L759.5,421 A4.5,4.5 0 0 1 768.5,421 L905.5,421 A4.5,4.5 0 0 1 914.5,421 L1074,421"/>
+<line x1="578" y1="30" x2="578" y2="255"/>
+<line x1="578" y1="329" x2="578" y2="421"/>
+<line x1="910" y1="30" x2="910" y2="255"/>
+<line x1="910" y1="329" x2="910" y2="447"/>
+<line x1="1544" y1="30" x2="1544" y2="255"/>
+<line x1="1544" y1="329" x2="1544" y2="473"/>
+<line x1="392" y1="523" x2="1398" y2="523"/>
+<circle cx="432" cy="523" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="523" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1544" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="910" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1118" cy="409" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="130" cy="383" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1118" cy="473" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="130" cy="447" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="268" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="229" text-anchor="start" font-size="14">D</text>
-<text x="526" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="826" y="268" text-anchor="middle" font-size="26">B</text>
-<text x="794" y="229" text-anchor="start" font-size="14">D</text>
-<text x="858" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="858" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1460" y="268" text-anchor="middle" font-size="26">C</text>
-<text x="1428" y="229" text-anchor="start" font-size="14">D</text>
-<text x="1492" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1492" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="300" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="261" text-anchor="start" font-size="14">D</text>
+<text x="526" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="826" y="300" text-anchor="middle" font-size="26">B</text>
+<text x="826" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="826" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="826" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="826" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="794" y="261" text-anchor="start" font-size="14">D</text>
+<text x="858" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="858" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1460" y="300" text-anchor="middle" font-size="26">C</text>
+<text x="1460" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1460" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1460" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1460" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1428" y="261" text-anchor="start" font-size="14">D</text>
+<text x="1492" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1492" y="335" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="910" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1544" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="465" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="529" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -17056,85 +18070,111 @@ $T_{C} = \overline{Q_{A}} + Q_{B}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ T_{B} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ T_{C} &= \overline{Q_{A}} + Q_{B}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1388" height="387" viewBox="0 0 1388 387" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1388" height="451" viewBox="0 0 1388 451" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="141" width="80" height="150" rx="2"/>
-<polyline points="280,237 292,246 280,255"/>
-<line x1="280" y1="246" x2="258" y2="246"/>
-<line x1="258" y1="246" x2="258" y2="363"/>
-<path d="M176,146 C198,146 224,162.5 236,179 C224,195.5 198,212 176,212 Q190,179 176,146 Z"/>
-<path d="M168,146 Q182,179 168,212"/>
-<line x1="236" y1="179" x2="280" y2="179"/>
-<line x1="360" y1="179" x2="404" y2="179"/>
-<line x1="360" y1="253" x2="404" y2="253"/>
-<line x1="343.2" y1="245.4" x2="352" y2="245.4" stroke-width="1.4"/>
-<rect x="740" y="141" width="80" height="150" rx="2"/>
-<polyline points="740,237 752,246 740,255"/>
-<line x1="740" y1="246" x2="718" y2="246"/>
-<line x1="718" y1="246" x2="718" y2="363"/>
-<path d="M636,146 C658,146 684,162.5 696,179 C684,195.5 658,212 636,212 Q650,179 636,146 Z"/>
-<path d="M628,146 Q642,179 628,212"/>
-<line x1="696" y1="179" x2="740" y2="179"/>
-<line x1="820" y1="179" x2="864" y2="179"/>
-<line x1="820" y1="253" x2="864" y2="253"/>
-<line x1="803.2" y1="245.4" x2="812" y2="245.4" stroke-width="1.4"/>
-<rect x="1192" y="141" width="80" height="150" rx="2"/>
-<polyline points="1192,237 1204,246 1192,255"/>
-<line x1="1192" y1="246" x2="1170" y2="246"/>
-<line x1="1170" y1="246" x2="1170" y2="363"/>
-<path d="M1088,146 C1110,146 1136,162.5 1148,179 C1136,195.5 1110,212 1088,212 Q1102,179 1088,146 Z"/>
-<line x1="1148" y1="179" x2="1192" y2="179"/>
-<line x1="1272" y1="179" x2="1316" y2="179"/>
-<line x1="1272" y1="253" x2="1316" y2="253"/>
-<line x1="1255.2" y1="245.4" x2="1264" y2="245.4" stroke-width="1.4"/>
-<line x1="130.2" y1="72" x2="130.2" y2="168"/>
-<line x1="130.2" y1="168" x2="174.2" y2="168"/>
-<line x1="108.2" y1="46" x2="108.2" y2="190"/>
-<line x1="108.2" y1="190" x2="174.2" y2="190"/>
-<line x1="590.2" y1="98" x2="590.2" y2="168"/>
-<line x1="590.2" y1="168" x2="634.2" y2="168"/>
-<line x1="568.2" y1="72" x2="568.2" y2="190"/>
-<line x1="568.2" y1="190" x2="634.2" y2="190"/>
-<line x1="1050.2" y1="72" x2="1050.2" y2="190"/>
-<line x1="1050.2" y1="190" x2="1094.2" y2="190"/>
-<line x1="1028.2" y1="313" x2="1028.2" y2="168"/>
-<path d="M1028.2,168 L1045.7,168 A4.5,4.5 0 0 1 1054.7,168 L1094.2,168"/>
+<rect x="280" y="173" width="80" height="150" rx="2"/>
+<circle cx="320" cy="169" r="4"/>
+<line x1="320" y1="165" x2="320" y2="149"/>
+<circle cx="320" cy="327" r="4"/>
+<line x1="320" y1="331" x2="320" y2="347"/>
+<polyline points="280,269 292,278 280,287"/>
+<line x1="280" y1="278" x2="258" y2="278"/>
+<line x1="258" y1="278" x2="258" y2="427"/>
+<path d="M176,178 C198,178 224,194.5 236,211 C224,227.5 198,244 176,244 Q190,211 176,178 Z"/>
+<path d="M168,178 Q182,211 168,244"/>
+<line x1="236" y1="211" x2="280" y2="211"/>
+<line x1="360" y1="211" x2="404" y2="211"/>
+<line x1="360" y1="285" x2="404" y2="285"/>
+<line x1="343.2" y1="277.4" x2="352" y2="277.4" stroke-width="1.4"/>
+<rect x="740" y="173" width="80" height="150" rx="2"/>
+<circle cx="780" cy="169" r="4"/>
+<line x1="780" y1="165" x2="780" y2="149"/>
+<circle cx="780" cy="327" r="4"/>
+<line x1="780" y1="331" x2="780" y2="347"/>
+<polyline points="740,269 752,278 740,287"/>
+<line x1="740" y1="278" x2="718" y2="278"/>
+<line x1="718" y1="278" x2="718" y2="427"/>
+<path d="M636,178 C658,178 684,194.5 696,211 C684,227.5 658,244 636,244 Q650,211 636,178 Z"/>
+<path d="M628,178 Q642,211 628,244"/>
+<line x1="696" y1="211" x2="740" y2="211"/>
+<line x1="820" y1="211" x2="864" y2="211"/>
+<line x1="820" y1="285" x2="864" y2="285"/>
+<line x1="803.2" y1="277.4" x2="812" y2="277.4" stroke-width="1.4"/>
+<rect x="1192" y="173" width="80" height="150" rx="2"/>
+<circle cx="1232" cy="169" r="4"/>
+<line x1="1232" y1="165" x2="1232" y2="149"/>
+<circle cx="1232" cy="327" r="4"/>
+<line x1="1232" y1="331" x2="1232" y2="347"/>
+<polyline points="1192,269 1204,278 1192,287"/>
+<line x1="1192" y1="278" x2="1170" y2="278"/>
+<line x1="1170" y1="278" x2="1170" y2="427"/>
+<path d="M1088,178 C1110,178 1136,194.5 1148,211 C1136,227.5 1110,244 1088,244 Q1102,211 1088,178 Z"/>
+<line x1="1148" y1="211" x2="1192" y2="211"/>
+<line x1="1272" y1="211" x2="1316" y2="211"/>
+<line x1="1272" y1="285" x2="1316" y2="285"/>
+<line x1="1255.2" y1="277.4" x2="1264" y2="277.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="200"/>
+<line x1="130.2" y1="200" x2="174.2" y2="200"/>
+<line x1="108.2" y1="46" x2="108.2" y2="222"/>
+<line x1="108.2" y1="222" x2="174.2" y2="222"/>
+<line x1="590.2" y1="98" x2="590.2" y2="200"/>
+<line x1="590.2" y1="200" x2="634.2" y2="200"/>
+<line x1="568.2" y1="72" x2="568.2" y2="222"/>
+<line x1="568.2" y1="222" x2="634.2" y2="222"/>
+<line x1="1050.2" y1="72" x2="1050.2" y2="222"/>
+<line x1="1050.2" y1="222" x2="1094.2" y2="222"/>
+<line x1="1028.2" y1="377" x2="1028.2" y2="200"/>
+<path d="M1028.2,200 L1045.7,200 A4.5,4.5 0 0 1 1054.7,200 L1094.2,200"/>
 <path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L859.5,46 A4.5,4.5 0 0 1 868.5,46 L1316,46"/>
 <path d="M130.2,72 L399.5,72 A4.5,4.5 0 0 1 408.5,72 L1050.2,72"/>
 <path d="M404,98 L563.7,98 A4.5,4.5 0 0 1 572.7,98 L590.2,98"/>
-<path d="M404,313 L713.5,313 A4.5,4.5 0 0 1 722.5,313 L1028.2,313"/>
-<line x1="404" y1="30" x2="404" y2="179"/>
-<line x1="404" y1="253" x2="404" y2="313"/>
-<line x1="864" y1="30" x2="864" y2="179"/>
-<line x1="1316" y1="30" x2="1316" y2="179"/>
-<line x1="218" y1="363" x2="1170" y2="363"/>
-<circle cx="258" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="718" cy="363" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M404,377 L713.5,377 A4.5,4.5 0 0 1 722.5,377 L1028.2,377"/>
+<line x1="404" y1="30" x2="404" y2="211"/>
+<line x1="404" y1="285" x2="404" y2="377"/>
+<line x1="864" y1="30" x2="864" y2="211"/>
+<line x1="1316" y1="30" x2="1316" y2="211"/>
+<line x1="218" y1="427" x2="1170" y2="427"/>
+<circle cx="258" cy="427" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="718" cy="427" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1316" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="864" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="568.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="224" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="185" text-anchor="start" font-size="14">T</text>
-<text x="352" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="780" y="224" text-anchor="middle" font-size="26">B</text>
-<text x="748" y="185" text-anchor="start" font-size="14">T</text>
-<text x="812" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="812" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="1232" y="224" text-anchor="middle" font-size="26">C</text>
-<text x="1200" y="185" text-anchor="start" font-size="14">T</text>
-<text x="1264" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1264" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="256" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="217" text-anchor="start" font-size="14">T</text>
+<text x="352" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="780" y="256" text-anchor="middle" font-size="26">B</text>
+<text x="780" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="780" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="780" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="780" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="748" y="217" text-anchor="start" font-size="14">T</text>
+<text x="812" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="812" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="1232" y="256" text-anchor="middle" font-size="26">C</text>
+<text x="1232" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1232" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="1232" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1232" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="1200" y="217" text-anchor="start" font-size="14">T</text>
+<text x="1264" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1264" y="291" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="864" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1316" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="214" y="369" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="433" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -17357,58 +18397,76 @@ $K_{B} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B} \\ K_{A} &= 1 \\ J_{B} &= \overline{Q_{A}} \\ K_{B} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="764" height="332" viewBox="0 0 764 332" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="764" height="396" viewBox="0 0 764 396" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="194" y="86" width="80" height="150" rx="2"/>
-<polyline points="194,152 206,161 194,170"/>
-<circle cx="190" cy="161" r="4"/>
-<line x1="186" y1="161" x2="172" y2="161"/>
-<line x1="172" y1="161" x2="172" y2="308"/>
-<path d="M142,198 L167.5,198 A4.5,4.5 0 0 1 176.5,198 L194,198"/>
-<line x1="274" y1="124" x2="318" y2="124"/>
-<line x1="274" y1="198" x2="318" y2="198"/>
-<line x1="257.2" y1="190.4" x2="266" y2="190.4" stroke-width="1.4"/>
-<rect x="568" y="86" width="80" height="150" rx="2"/>
-<polyline points="568,152 580,161 568,170"/>
-<circle cx="564" cy="161" r="4"/>
-<line x1="560" y1="161" x2="546" y2="161"/>
-<line x1="546" y1="161" x2="546" y2="308"/>
-<path d="M516,198 L541.5,198 A4.5,4.5 0 0 1 550.5,198 L568,198"/>
-<line x1="648" y1="124" x2="692" y2="124"/>
-<line x1="648" y1="198" x2="692" y2="198"/>
-<line x1="631.2" y1="190.4" x2="640" y2="190.4" stroke-width="1.4"/>
-<line x1="150" y1="46" x2="150" y2="124"/>
-<line x1="150" y1="124" x2="194" y2="124"/>
-<line x1="480" y1="258" x2="480" y2="124"/>
-<line x1="480" y1="124" x2="568" y2="124"/>
+<rect x="194" y="118" width="80" height="150" rx="2"/>
+<circle cx="234" cy="114" r="4"/>
+<line x1="234" y1="110" x2="234" y2="94"/>
+<circle cx="234" cy="272" r="4"/>
+<line x1="234" y1="276" x2="234" y2="292"/>
+<polyline points="194,184 206,193 194,202"/>
+<circle cx="190" cy="193" r="4"/>
+<line x1="186" y1="193" x2="172" y2="193"/>
+<line x1="172" y1="193" x2="172" y2="372"/>
+<path d="M142,230 L167.5,230 A4.5,4.5 0 0 1 176.5,230 L194,230"/>
+<line x1="274" y1="156" x2="318" y2="156"/>
+<line x1="274" y1="230" x2="318" y2="230"/>
+<line x1="257.2" y1="222.4" x2="266" y2="222.4" stroke-width="1.4"/>
+<rect x="568" y="118" width="80" height="150" rx="2"/>
+<circle cx="608" cy="114" r="4"/>
+<line x1="608" y1="110" x2="608" y2="94"/>
+<circle cx="608" cy="272" r="4"/>
+<line x1="608" y1="276" x2="608" y2="292"/>
+<polyline points="568,184 580,193 568,202"/>
+<circle cx="564" cy="193" r="4"/>
+<line x1="560" y1="193" x2="546" y2="193"/>
+<line x1="546" y1="193" x2="546" y2="372"/>
+<path d="M516,230 L541.5,230 A4.5,4.5 0 0 1 550.5,230 L568,230"/>
+<line x1="648" y1="156" x2="692" y2="156"/>
+<line x1="648" y1="230" x2="692" y2="230"/>
+<line x1="631.2" y1="222.4" x2="640" y2="222.4" stroke-width="1.4"/>
+<line x1="150" y1="46" x2="150" y2="156"/>
+<line x1="150" y1="156" x2="194" y2="156"/>
+<line x1="480" y1="322" x2="480" y2="156"/>
+<line x1="480" y1="156" x2="568" y2="156"/>
 <path d="M150,46 L313.5,46 A4.5,4.5 0 0 1 322.5,46 L692,46"/>
-<line x1="318" y1="258" x2="480" y2="258"/>
-<line x1="318" y1="30" x2="318" y2="124"/>
-<line x1="318" y1="198" x2="318" y2="258"/>
-<line x1="692" y1="30" x2="692" y2="124"/>
-<line x1="132" y1="308" x2="546" y2="308"/>
-<circle cx="172" cy="308" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="318" y1="322" x2="480" y2="322"/>
+<line x1="318" y1="30" x2="318" y2="156"/>
+<line x1="318" y1="230" x2="318" y2="322"/>
+<line x1="692" y1="30" x2="692" y2="156"/>
+<line x1="132" y1="372" x2="546" y2="372"/>
+<circle cx="172" cy="372" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="692" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="234" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="202" y="130" text-anchor="start" font-size="14">J</text>
-<text x="202" y="204" text-anchor="start" font-size="14">K</text>
-<text x="138" y="204" text-anchor="end" font-size="16">1</text>
-<text x="266" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="266" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="608" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="576" y="130" text-anchor="start" font-size="14">J</text>
-<text x="576" y="204" text-anchor="start" font-size="14">K</text>
-<text x="512" y="204" text-anchor="end" font-size="16">1</text>
-<text x="640" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="640" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="234" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="234" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="234" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="234" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="234" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="202" y="162" text-anchor="start" font-size="14">J</text>
+<text x="202" y="236" text-anchor="start" font-size="14">K</text>
+<text x="138" y="236" text-anchor="end" font-size="16">1</text>
+<text x="266" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="266" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="608" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="608" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="608" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="608" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="608" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="576" y="162" text-anchor="start" font-size="14">J</text>
+<text x="576" y="236" text-anchor="start" font-size="14">K</text>
+<text x="512" y="236" text-anchor="end" font-size="16">1</text>
+<text x="640" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="640" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="318" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="692" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="128" y="314" text-anchor="end" font-size="16">Clock</text>
+<text x="128" y="378" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -17631,66 +18689,84 @@ $S_{B} = \overline{Q_{A}}\overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="852" height="361" viewBox="0 0 852 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="852" height="425" viewBox="0 0 852 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="89" width="80" height="150" rx="2"/>
-<polyline points="174,155 186,164 174,173"/>
-<circle cx="170" cy="164" r="4"/>
-<line x1="166" y1="164" x2="152" y2="164"/>
-<line x1="152" y1="164" x2="152" y2="337"/>
-<line x1="254" y1="127" x2="298" y2="127"/>
-<line x1="254" y1="201" x2="298" y2="201"/>
-<line x1="237.2" y1="193.4" x2="246" y2="193.4" stroke-width="1.4"/>
-<rect x="656" y="89" width="80" height="150" rx="2"/>
-<polyline points="656,155 668,164 656,173"/>
-<circle cx="652" cy="164" r="4"/>
-<line x1="648" y1="164" x2="634" y2="164"/>
-<line x1="634" y1="164" x2="634" y2="337"/>
-<path d="M544,94 H570 A26,33 0 0 1 570,160 H544 Z"/>
-<path d="M596,127 L607.5,127 A4.5,4.5 0 0 1 616.5,127 L656,127"/>
-<line x1="736" y1="127" x2="780" y2="127"/>
-<line x1="736" y1="201" x2="780" y2="201"/>
-<line x1="719.2" y1="193.4" x2="728" y2="193.4" stroke-width="1.4"/>
-<line x1="130" y1="46" x2="130" y2="127"/>
-<line x1="130" y1="127" x2="174" y2="127"/>
-<line x1="108" y1="287" x2="108" y2="201"/>
-<path d="M108,201 L147.5,201 A4.5,4.5 0 0 1 156.5,201 L174,201"/>
-<line x1="612" y1="46" x2="612" y2="201"/>
-<path d="M612,201 L629.5,201 A4.5,4.5 0 0 1 638.5,201 L656,201"/>
-<line x1="500" y1="287" x2="500" y2="138"/>
-<line x1="500" y1="138" x2="544" y2="138"/>
-<line x1="478" y1="261" x2="478" y2="116"/>
-<line x1="478" y1="116" x2="544" y2="116"/>
+<rect x="174" y="121" width="80" height="150" rx="2"/>
+<circle cx="214" cy="117" r="4"/>
+<line x1="214" y1="113" x2="214" y2="97"/>
+<circle cx="214" cy="275" r="4"/>
+<line x1="214" y1="279" x2="214" y2="295"/>
+<polyline points="174,187 186,196 174,205"/>
+<circle cx="170" cy="196" r="4"/>
+<line x1="166" y1="196" x2="152" y2="196"/>
+<line x1="152" y1="196" x2="152" y2="401"/>
+<line x1="254" y1="159" x2="298" y2="159"/>
+<line x1="254" y1="233" x2="298" y2="233"/>
+<line x1="237.2" y1="225.4" x2="246" y2="225.4" stroke-width="1.4"/>
+<rect x="656" y="121" width="80" height="150" rx="2"/>
+<circle cx="696" cy="117" r="4"/>
+<line x1="696" y1="113" x2="696" y2="97"/>
+<circle cx="696" cy="275" r="4"/>
+<line x1="696" y1="279" x2="696" y2="295"/>
+<polyline points="656,187 668,196 656,205"/>
+<circle cx="652" cy="196" r="4"/>
+<line x1="648" y1="196" x2="634" y2="196"/>
+<line x1="634" y1="196" x2="634" y2="401"/>
+<path d="M544,126 H570 A26,33 0 0 1 570,192 H544 Z"/>
+<path d="M596,159 L607.5,159 A4.5,4.5 0 0 1 616.5,159 L656,159"/>
+<line x1="736" y1="159" x2="780" y2="159"/>
+<line x1="736" y1="233" x2="780" y2="233"/>
+<line x1="719.2" y1="225.4" x2="728" y2="225.4" stroke-width="1.4"/>
+<line x1="130" y1="46" x2="130" y2="159"/>
+<line x1="130" y1="159" x2="174" y2="159"/>
+<line x1="108" y1="351" x2="108" y2="233"/>
+<path d="M108,233 L147.5,233 A4.5,4.5 0 0 1 156.5,233 L174,233"/>
+<line x1="612" y1="46" x2="612" y2="233"/>
+<path d="M612,233 L629.5,233 A4.5,4.5 0 0 1 638.5,233 L656,233"/>
+<line x1="500" y1="351" x2="500" y2="170"/>
+<line x1="500" y1="170" x2="544" y2="170"/>
+<line x1="478" y1="325" x2="478" y2="148"/>
+<line x1="478" y1="148" x2="544" y2="148"/>
 <path d="M130,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L780,46"/>
-<path d="M108,287 L147.5,287 A4.5,4.5 0 0 1 156.5,287 L629.5,287 A4.5,4.5 0 0 1 638.5,287 L780,287"/>
-<line x1="298" y1="261" x2="478" y2="261"/>
-<line x1="298" y1="30" x2="298" y2="127"/>
-<line x1="298" y1="201" x2="298" y2="261"/>
-<line x1="780" y1="30" x2="780" y2="127"/>
-<line x1="780" y1="201" x2="780" y2="287"/>
-<line x1="112" y1="337" x2="634" y2="337"/>
-<circle cx="152" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M108,351 L147.5,351 A4.5,4.5 0 0 1 156.5,351 L629.5,351 A4.5,4.5 0 0 1 638.5,351 L780,351"/>
+<line x1="298" y1="325" x2="478" y2="325"/>
+<line x1="298" y1="30" x2="298" y2="159"/>
+<line x1="298" y1="233" x2="298" y2="325"/>
+<line x1="780" y1="30" x2="780" y2="159"/>
+<line x1="780" y1="233" x2="780" y2="351"/>
+<line x1="112" y1="401" x2="634" y2="401"/>
+<circle cx="152" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="780" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="612" cy="46" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="500" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="500" cy="351" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="172" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="133" text-anchor="start" font-size="14">S</text>
-<text x="182" y="207" text-anchor="start" font-size="14">R</text>
-<text x="246" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="207" text-anchor="end" font-size="16">Q</text>
-<text x="696" y="172" text-anchor="middle" font-size="26">B</text>
-<text x="664" y="133" text-anchor="start" font-size="14">S</text>
-<text x="664" y="207" text-anchor="start" font-size="14">R</text>
-<text x="728" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="728" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="204" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="165" text-anchor="start" font-size="14">S</text>
+<text x="182" y="239" text-anchor="start" font-size="14">R</text>
+<text x="246" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="239" text-anchor="end" font-size="16">Q</text>
+<text x="696" y="204" text-anchor="middle" font-size="26">B</text>
+<text x="696" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="696" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="696" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="664" y="165" text-anchor="start" font-size="14">S</text>
+<text x="664" y="239" text-anchor="start" font-size="14">R</text>
+<text x="728" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="728" y="239" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="780" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="108" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -17842,56 +18918,74 @@ $D_{B} = \overline{Q_{A}}\overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B} \\ D_{B} &= \overline{Q_{A}}\overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="792" height="361" viewBox="0 0 792 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="792" height="425" viewBox="0 0 792 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="89" width="80" height="150" rx="2"/>
-<polyline points="152,185 164,194 152,203"/>
-<line x1="152" y1="194" x2="130" y2="194"/>
-<line x1="130" y1="194" x2="130" y2="337"/>
-<line x1="232" y1="127" x2="276" y2="127"/>
-<line x1="232" y1="201" x2="276" y2="201"/>
-<line x1="215.2" y1="193.4" x2="224" y2="193.4" stroke-width="1.4"/>
-<rect x="596" y="89" width="80" height="150" rx="2"/>
-<polyline points="596,185 608,194 596,203"/>
-<line x1="596" y1="194" x2="574" y2="194"/>
-<line x1="574" y1="194" x2="574" y2="337"/>
-<path d="M500,94 H526 A26,33 0 0 1 526,160 H500 Z"/>
-<line x1="552" y1="127" x2="596" y2="127"/>
-<line x1="676" y1="127" x2="720" y2="127"/>
-<line x1="676" y1="201" x2="720" y2="201"/>
-<line x1="659.2" y1="193.4" x2="668" y2="193.4" stroke-width="1.4"/>
-<line x1="108" y1="46" x2="108" y2="127"/>
-<line x1="108" y1="127" x2="152" y2="127"/>
-<line x1="456" y1="287" x2="456" y2="138"/>
-<line x1="456" y1="138" x2="500" y2="138"/>
-<line x1="434" y1="261" x2="434" y2="116"/>
-<line x1="434" y1="116" x2="500" y2="116"/>
+<rect x="152" y="121" width="80" height="150" rx="2"/>
+<circle cx="192" cy="117" r="4"/>
+<line x1="192" y1="113" x2="192" y2="97"/>
+<circle cx="192" cy="275" r="4"/>
+<line x1="192" y1="279" x2="192" y2="295"/>
+<polyline points="152,217 164,226 152,235"/>
+<line x1="152" y1="226" x2="130" y2="226"/>
+<line x1="130" y1="226" x2="130" y2="401"/>
+<line x1="232" y1="159" x2="276" y2="159"/>
+<line x1="232" y1="233" x2="276" y2="233"/>
+<line x1="215.2" y1="225.4" x2="224" y2="225.4" stroke-width="1.4"/>
+<rect x="596" y="121" width="80" height="150" rx="2"/>
+<circle cx="636" cy="117" r="4"/>
+<line x1="636" y1="113" x2="636" y2="97"/>
+<circle cx="636" cy="275" r="4"/>
+<line x1="636" y1="279" x2="636" y2="295"/>
+<polyline points="596,217 608,226 596,235"/>
+<line x1="596" y1="226" x2="574" y2="226"/>
+<line x1="574" y1="226" x2="574" y2="401"/>
+<path d="M500,126 H526 A26,33 0 0 1 526,192 H500 Z"/>
+<line x1="552" y1="159" x2="596" y2="159"/>
+<line x1="676" y1="159" x2="720" y2="159"/>
+<line x1="676" y1="233" x2="720" y2="233"/>
+<line x1="659.2" y1="225.4" x2="668" y2="225.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="159"/>
+<line x1="108" y1="159" x2="152" y2="159"/>
+<line x1="456" y1="351" x2="456" y2="170"/>
+<line x1="456" y1="170" x2="500" y2="170"/>
+<line x1="434" y1="325" x2="434" y2="148"/>
+<line x1="434" y1="148" x2="500" y2="148"/>
 <path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L720,46"/>
-<path d="M456,287 L569.5,287 A4.5,4.5 0 0 1 578.5,287 L720,287"/>
-<line x1="276" y1="261" x2="434" y2="261"/>
-<line x1="276" y1="30" x2="276" y2="127"/>
-<line x1="276" y1="201" x2="276" y2="261"/>
-<line x1="720" y1="30" x2="720" y2="127"/>
-<line x1="720" y1="201" x2="720" y2="287"/>
-<line x1="90" y1="337" x2="574" y2="337"/>
-<circle cx="130" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M456,351 L569.5,351 A4.5,4.5 0 0 1 578.5,351 L720,351"/>
+<line x1="276" y1="325" x2="434" y2="325"/>
+<line x1="276" y1="30" x2="276" y2="159"/>
+<line x1="276" y1="233" x2="276" y2="325"/>
+<line x1="720" y1="30" x2="720" y2="159"/>
+<line x1="720" y1="233" x2="720" y2="351"/>
+<line x1="90" y1="401" x2="574" y2="401"/>
+<circle cx="130" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="720" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="172" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="133" text-anchor="start" font-size="14">D</text>
-<text x="224" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="207" text-anchor="end" font-size="16">Q</text>
-<text x="636" y="172" text-anchor="middle" font-size="26">B</text>
-<text x="604" y="133" text-anchor="start" font-size="14">D</text>
-<text x="668" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="668" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="204" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="165" text-anchor="start" font-size="14">D</text>
+<text x="224" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="239" text-anchor="end" font-size="16">Q</text>
+<text x="636" y="204" text-anchor="middle" font-size="26">B</text>
+<text x="636" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="636" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="636" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="604" y="165" text-anchor="start" font-size="14">D</text>
+<text x="668" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="668" y="239" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="720" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="86" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -18046,56 +19140,74 @@ $T_{B} = \overline{Q_{A}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} + Q_{A} \\ T_{B} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="361" viewBox="0 0 800 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="425" viewBox="0 0 800 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="272" y="115" width="80" height="150" rx="2"/>
-<polyline points="272,211 284,220 272,229"/>
-<line x1="272" y1="220" x2="250" y2="220"/>
-<line x1="250" y1="220" x2="250" y2="337"/>
-<path d="M168,120 C190,120 216,136.5 228,153 C216,169.5 190,186 168,186 Q182,153 168,120 Z"/>
-<line x1="228" y1="153" x2="272" y2="153"/>
-<line x1="352" y1="153" x2="396" y2="153"/>
-<line x1="352" y1="227" x2="396" y2="227"/>
-<line x1="335.2" y1="219.4" x2="344" y2="219.4" stroke-width="1.4"/>
-<rect x="604" y="115" width="80" height="150" rx="2"/>
-<polyline points="604,211 616,220 604,229"/>
-<line x1="604" y1="220" x2="582" y2="220"/>
-<line x1="582" y1="220" x2="582" y2="337"/>
-<line x1="684" y1="153" x2="728" y2="153"/>
-<line x1="684" y1="227" x2="728" y2="227"/>
-<line x1="667.2" y1="219.4" x2="676" y2="219.4" stroke-width="1.4"/>
-<line x1="130.2" y1="46" x2="130.2" y2="142"/>
-<line x1="130.2" y1="142" x2="174.2" y2="142"/>
-<line x1="108.2" y1="72" x2="108.2" y2="164"/>
-<line x1="108.2" y1="164" x2="174.2" y2="164"/>
-<line x1="560" y1="287" x2="560" y2="153"/>
-<line x1="560" y1="153" x2="604" y2="153"/>
+<rect x="272" y="147" width="80" height="150" rx="2"/>
+<circle cx="312" cy="143" r="4"/>
+<line x1="312" y1="139" x2="312" y2="123"/>
+<circle cx="312" cy="301" r="4"/>
+<line x1="312" y1="305" x2="312" y2="321"/>
+<polyline points="272,243 284,252 272,261"/>
+<line x1="272" y1="252" x2="250" y2="252"/>
+<line x1="250" y1="252" x2="250" y2="401"/>
+<path d="M168,152 C190,152 216,168.5 228,185 C216,201.5 190,218 168,218 Q182,185 168,152 Z"/>
+<line x1="228" y1="185" x2="272" y2="185"/>
+<line x1="352" y1="185" x2="396" y2="185"/>
+<line x1="352" y1="259" x2="396" y2="259"/>
+<line x1="335.2" y1="251.4" x2="344" y2="251.4" stroke-width="1.4"/>
+<rect x="604" y="147" width="80" height="150" rx="2"/>
+<circle cx="644" cy="143" r="4"/>
+<line x1="644" y1="139" x2="644" y2="123"/>
+<circle cx="644" cy="301" r="4"/>
+<line x1="644" y1="305" x2="644" y2="321"/>
+<polyline points="604,243 616,252 604,261"/>
+<line x1="604" y1="252" x2="582" y2="252"/>
+<line x1="582" y1="252" x2="582" y2="401"/>
+<line x1="684" y1="185" x2="728" y2="185"/>
+<line x1="684" y1="259" x2="728" y2="259"/>
+<line x1="667.2" y1="251.4" x2="676" y2="251.4" stroke-width="1.4"/>
+<line x1="130.2" y1="46" x2="130.2" y2="174"/>
+<line x1="130.2" y1="174" x2="174.2" y2="174"/>
+<line x1="108.2" y1="72" x2="108.2" y2="196"/>
+<line x1="108.2" y1="196" x2="174.2" y2="196"/>
+<line x1="560" y1="351" x2="560" y2="185"/>
+<line x1="560" y1="185" x2="604" y2="185"/>
 <path d="M130.2,46 L391.5,46 A4.5,4.5 0 0 1 400.5,46 L728,46"/>
 <path d="M108.2,72 L125.7,72 A4.5,4.5 0 0 1 134.7,72 L396,72"/>
-<line x1="396" y1="287" x2="560" y2="287"/>
-<line x1="396" y1="30" x2="396" y2="153"/>
-<line x1="396" y1="227" x2="396" y2="287"/>
-<line x1="728" y1="30" x2="728" y2="153"/>
-<line x1="210" y1="337" x2="582" y2="337"/>
-<circle cx="250" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="396" y1="351" x2="560" y2="351"/>
+<line x1="396" y1="30" x2="396" y2="185"/>
+<line x1="396" y1="259" x2="396" y2="351"/>
+<line x1="728" y1="30" x2="728" y2="185"/>
+<line x1="210" y1="401" x2="582" y2="401"/>
+<circle cx="250" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="728" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="396" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="312" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="280" y="159" text-anchor="start" font-size="14">T</text>
-<text x="344" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="344" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="644" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="612" y="159" text-anchor="start" font-size="14">T</text>
-<text x="676" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="676" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="312" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="312" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="312" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="312" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="312" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="280" y="191" text-anchor="start" font-size="14">T</text>
+<text x="344" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="344" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="644" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="644" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="644" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="644" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="644" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="612" y="191" text-anchor="start" font-size="14">T</text>
+<text x="676" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="676" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="396" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="728" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
-<text x="206" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="206" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -18463,88 +19575,114 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= 1 \\ J_{B} = K_{B} &= Q_{C} \\ J_{C} &= \overline{Q_{A}} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1188" height="361" viewBox="0 0 1188 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1188" height="425" viewBox="0 0 1188 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="115" width="80" height="150" rx="2"/>
-<polyline points="264,181 276,190 264,199"/>
-<circle cx="260" cy="190" r="4"/>
-<line x1="256" y1="190" x2="242" y2="190"/>
-<line x1="242" y1="190" x2="242" y2="337"/>
-<path d="M168,120 H194 A26,33 0 0 1 194,186 H168 Z"/>
-<line x1="220" y1="153" x2="264" y2="153"/>
-<path d="M212,227 L237.5,227 A4.5,4.5 0 0 1 246.5,227 L264,227"/>
-<line x1="344" y1="153" x2="388" y2="153"/>
-<line x1="344" y1="227" x2="388" y2="227"/>
-<line x1="327.2" y1="219.4" x2="336" y2="219.4" stroke-width="1.4"/>
-<rect x="618" y="115" width="80" height="150" rx="2"/>
-<polyline points="618,181 630,190 618,199"/>
-<circle cx="614" cy="190" r="4"/>
-<line x1="610" y1="190" x2="596" y2="190"/>
-<line x1="596" y1="190" x2="596" y2="337"/>
-<line x1="572" y1="190" x2="572" y2="153"/>
-<line x1="572" y1="153" x2="618" y2="153"/>
-<line x1="572" y1="190" x2="572" y2="227"/>
-<path d="M572,227 L591.5,227 A4.5,4.5 0 0 1 600.5,227 L618,227"/>
-<line x1="698" y1="153" x2="742" y2="153"/>
-<line x1="698" y1="227" x2="742" y2="227"/>
-<line x1="681.2" y1="219.4" x2="690" y2="219.4" stroke-width="1.4"/>
-<rect x="992" y="115" width="80" height="150" rx="2"/>
-<polyline points="992,181 1004,190 992,199"/>
-<circle cx="988" cy="190" r="4"/>
-<line x1="984" y1="190" x2="970" y2="190"/>
-<line x1="970" y1="190" x2="970" y2="337"/>
-<path d="M940,227 L965.5,227 A4.5,4.5 0 0 1 974.5,227 L992,227"/>
-<line x1="1072" y1="153" x2="1116" y2="153"/>
-<line x1="1072" y1="227" x2="1116" y2="227"/>
-<line x1="1055.2" y1="219.4" x2="1064" y2="219.4" stroke-width="1.4"/>
-<line x1="124" y1="72" x2="124" y2="142"/>
-<line x1="124" y1="142" x2="168" y2="142"/>
-<line x1="102" y1="46" x2="102" y2="164"/>
-<line x1="102" y1="164" x2="168" y2="164"/>
-<line x1="528" y1="46" x2="528" y2="190"/>
-<line x1="528" y1="190" x2="572" y2="190"/>
-<line x1="904" y1="287" x2="904" y2="153"/>
-<line x1="904" y1="153" x2="992" y2="153"/>
+<rect x="264" y="147" width="80" height="150" rx="2"/>
+<circle cx="304" cy="143" r="4"/>
+<line x1="304" y1="139" x2="304" y2="123"/>
+<circle cx="304" cy="301" r="4"/>
+<line x1="304" y1="305" x2="304" y2="321"/>
+<polyline points="264,213 276,222 264,231"/>
+<circle cx="260" cy="222" r="4"/>
+<line x1="256" y1="222" x2="242" y2="222"/>
+<line x1="242" y1="222" x2="242" y2="401"/>
+<path d="M168,152 H194 A26,33 0 0 1 194,218 H168 Z"/>
+<line x1="220" y1="185" x2="264" y2="185"/>
+<path d="M212,259 L237.5,259 A4.5,4.5 0 0 1 246.5,259 L264,259"/>
+<line x1="344" y1="185" x2="388" y2="185"/>
+<line x1="344" y1="259" x2="388" y2="259"/>
+<line x1="327.2" y1="251.4" x2="336" y2="251.4" stroke-width="1.4"/>
+<rect x="618" y="147" width="80" height="150" rx="2"/>
+<circle cx="658" cy="143" r="4"/>
+<line x1="658" y1="139" x2="658" y2="123"/>
+<circle cx="658" cy="301" r="4"/>
+<line x1="658" y1="305" x2="658" y2="321"/>
+<polyline points="618,213 630,222 618,231"/>
+<circle cx="614" cy="222" r="4"/>
+<line x1="610" y1="222" x2="596" y2="222"/>
+<line x1="596" y1="222" x2="596" y2="401"/>
+<line x1="572" y1="222" x2="572" y2="185"/>
+<line x1="572" y1="185" x2="618" y2="185"/>
+<line x1="572" y1="222" x2="572" y2="259"/>
+<path d="M572,259 L591.5,259 A4.5,4.5 0 0 1 600.5,259 L618,259"/>
+<line x1="698" y1="185" x2="742" y2="185"/>
+<line x1="698" y1="259" x2="742" y2="259"/>
+<line x1="681.2" y1="251.4" x2="690" y2="251.4" stroke-width="1.4"/>
+<rect x="992" y="147" width="80" height="150" rx="2"/>
+<circle cx="1032" cy="143" r="4"/>
+<line x1="1032" y1="139" x2="1032" y2="123"/>
+<circle cx="1032" cy="301" r="4"/>
+<line x1="1032" y1="305" x2="1032" y2="321"/>
+<polyline points="992,213 1004,222 992,231"/>
+<circle cx="988" cy="222" r="4"/>
+<line x1="984" y1="222" x2="970" y2="222"/>
+<line x1="970" y1="222" x2="970" y2="401"/>
+<path d="M940,259 L965.5,259 A4.5,4.5 0 0 1 974.5,259 L992,259"/>
+<line x1="1072" y1="185" x2="1116" y2="185"/>
+<line x1="1072" y1="259" x2="1116" y2="259"/>
+<line x1="1055.2" y1="251.4" x2="1064" y2="251.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="174"/>
+<line x1="124" y1="174" x2="168" y2="174"/>
+<line x1="102" y1="46" x2="102" y2="196"/>
+<line x1="102" y1="196" x2="168" y2="196"/>
+<line x1="528" y1="46" x2="528" y2="222"/>
+<line x1="528" y1="222" x2="572" y2="222"/>
+<line x1="904" y1="351" x2="904" y2="185"/>
+<line x1="904" y1="185" x2="992" y2="185"/>
 <path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L737.5,46 A4.5,4.5 0 0 1 746.5,46 L1116,46"/>
 <path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L523.5,72 A4.5,4.5 0 0 1 532.5,72 L742,72"/>
-<path d="M388,287 L591.5,287 A4.5,4.5 0 0 1 600.5,287 L904,287"/>
-<line x1="388" y1="30" x2="388" y2="153"/>
-<line x1="388" y1="227" x2="388" y2="287"/>
-<line x1="742" y1="30" x2="742" y2="153"/>
-<line x1="1116" y1="30" x2="1116" y2="153"/>
-<line x1="202" y1="337" x2="970" y2="337"/>
-<circle cx="242" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="596" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="572" cy="190" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M388,351 L591.5,351 A4.5,4.5 0 0 1 600.5,351 L904,351"/>
+<line x1="388" y1="30" x2="388" y2="185"/>
+<line x1="388" y1="259" x2="388" y2="351"/>
+<line x1="742" y1="30" x2="742" y2="185"/>
+<line x1="1116" y1="30" x2="1116" y2="185"/>
+<line x1="202" y1="401" x2="970" y2="401"/>
+<circle cx="242" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="596" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="572" cy="222" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1116" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="528" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="742" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="159" text-anchor="start" font-size="14">J</text>
-<text x="272" y="233" text-anchor="start" font-size="14">K</text>
-<text x="208" y="233" text-anchor="end" font-size="16">1</text>
-<text x="336" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="658" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="626" y="159" text-anchor="start" font-size="14">J</text>
-<text x="626" y="233" text-anchor="start" font-size="14">K</text>
-<text x="690" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="690" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="1032" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="1000" y="159" text-anchor="start" font-size="14">J</text>
-<text x="1000" y="233" text-anchor="start" font-size="14">K</text>
-<text x="936" y="233" text-anchor="end" font-size="16">1</text>
-<text x="1064" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1064" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="191" text-anchor="start" font-size="14">J</text>
+<text x="272" y="265" text-anchor="start" font-size="14">K</text>
+<text x="208" y="265" text-anchor="end" font-size="16">1</text>
+<text x="336" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="658" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="658" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="658" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="658" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="658" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="626" y="191" text-anchor="start" font-size="14">J</text>
+<text x="626" y="265" text-anchor="start" font-size="14">K</text>
+<text x="690" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="690" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="1032" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="1032" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1032" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="1032" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1032" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="1000" y="191" text-anchor="start" font-size="14">J</text>
+<text x="1000" y="265" text-anchor="start" font-size="14">K</text>
+<text x="936" y="265" text-anchor="end" font-size="16">1</text>
+<text x="1064" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1064" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="742" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1116" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -18914,105 +20052,131 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= \overline{Q_{B}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1468" height="438" viewBox="0 0 1468 438" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1468" height="502" viewBox="0 0 1468 502" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="115" width="80" height="172" rx="2"/>
-<polyline points="302,192 314,201 302,210"/>
-<circle cx="298" cy="201" r="4"/>
-<line x1="294" y1="201" x2="280" y2="201"/>
-<line x1="280" y1="201" x2="280" y2="414"/>
-<path d="M190,120 H216 A26,33 0 0 1 216,186 H190 Z"/>
-<line x1="242" y1="153" x2="302" y2="153"/>
-<line x1="382" y1="153" x2="426" y2="153"/>
-<line x1="382" y1="249" x2="426" y2="249"/>
-<line x1="365.2" y1="241.4" x2="374" y2="241.4" stroke-width="1.4"/>
-<rect x="790" y="115" width="80" height="172" rx="2"/>
-<polyline points="790,192 802,201 790,210"/>
-<circle cx="786" cy="201" r="4"/>
-<line x1="782" y1="201" x2="768" y2="201"/>
-<line x1="768" y1="201" x2="768" y2="414"/>
-<path d="M694,120 H720 A26,33 0 0 1 720,186 H694 Z"/>
-<line x1="746" y1="153" x2="790" y2="153"/>
-<path d="M694,216 H720 A26,33 0 0 1 720,282 H694 Z"/>
-<path d="M746,249 L763.5,249 A4.5,4.5 0 0 1 772.5,249 L790,249"/>
-<line x1="870" y1="153" x2="914" y2="153"/>
-<line x1="870" y1="249" x2="914" y2="249"/>
-<line x1="853.2" y1="241.4" x2="862" y2="241.4" stroke-width="1.4"/>
-<rect x="1272" y="115" width="80" height="172" rx="2"/>
-<polyline points="1272,192 1284,201 1272,210"/>
-<circle cx="1268" cy="201" r="4"/>
-<line x1="1264" y1="201" x2="1250" y2="201"/>
-<line x1="1250" y1="201" x2="1250" y2="414"/>
-<path d="M1160,120 H1186 A26,33 0 0 1 1186,186 H1160 Z"/>
-<path d="M1212,153 L1223.5,153 A4.5,4.5 0 0 1 1232.5,153 L1272,153"/>
-<line x1="1352" y1="153" x2="1396" y2="153"/>
-<line x1="1352" y1="249" x2="1396" y2="249"/>
-<line x1="1335.2" y1="241.4" x2="1344" y2="241.4" stroke-width="1.4"/>
-<line x1="146" y1="72" x2="146" y2="142"/>
-<line x1="146" y1="142" x2="190" y2="142"/>
-<line x1="124" y1="46" x2="124" y2="164"/>
-<line x1="124" y1="164" x2="190" y2="164"/>
-<line x1="258" y1="338" x2="258" y2="249"/>
-<path d="M258,249 L275.5,249 A4.5,4.5 0 0 1 284.5,249 L302,249"/>
-<line x1="650" y1="46" x2="650" y2="164"/>
-<line x1="650" y1="164" x2="694" y2="164"/>
-<line x1="628" y1="72" x2="628" y2="238"/>
-<line x1="628" y1="238" x2="694" y2="238"/>
-<line x1="606" y1="46" x2="606" y2="260"/>
-<line x1="606" y1="260" x2="694" y2="260"/>
-<line x1="584" y1="338" x2="584" y2="142"/>
-<path d="M584,142 L601.5,142 A4.5,4.5 0 0 1 610.5,142 L623.5,142 A4.5,4.5 0 0 1 632.5,142 L645.5,142 A4.5,4.5 0 0 1 654.5,142 L694,142"/>
-<line x1="1228" y1="46" x2="1228" y2="249"/>
-<path d="M1228,249 L1245.5,249 A4.5,4.5 0 0 1 1254.5,249 L1272,249"/>
-<line x1="1116" y1="364" x2="1116" y2="164"/>
-<line x1="1116" y1="164" x2="1160" y2="164"/>
-<line x1="1094" y1="312" x2="1094" y2="142"/>
-<line x1="1094" y1="142" x2="1160" y2="142"/>
+<rect x="302" y="147" width="80" height="172" rx="2"/>
+<circle cx="342" cy="143" r="4"/>
+<line x1="342" y1="139" x2="342" y2="123"/>
+<circle cx="342" cy="323" r="4"/>
+<line x1="342" y1="327" x2="342" y2="343"/>
+<polyline points="302,224 314,233 302,242"/>
+<circle cx="298" cy="233" r="4"/>
+<line x1="294" y1="233" x2="280" y2="233"/>
+<line x1="280" y1="233" x2="280" y2="478"/>
+<path d="M190,152 H216 A26,33 0 0 1 216,218 H190 Z"/>
+<line x1="242" y1="185" x2="302" y2="185"/>
+<line x1="382" y1="185" x2="426" y2="185"/>
+<line x1="382" y1="281" x2="426" y2="281"/>
+<line x1="365.2" y1="273.4" x2="374" y2="273.4" stroke-width="1.4"/>
+<rect x="790" y="147" width="80" height="172" rx="2"/>
+<circle cx="830" cy="143" r="4"/>
+<line x1="830" y1="139" x2="830" y2="123"/>
+<circle cx="830" cy="323" r="4"/>
+<line x1="830" y1="327" x2="830" y2="343"/>
+<polyline points="790,224 802,233 790,242"/>
+<circle cx="786" cy="233" r="4"/>
+<line x1="782" y1="233" x2="768" y2="233"/>
+<line x1="768" y1="233" x2="768" y2="478"/>
+<path d="M694,152 H720 A26,33 0 0 1 720,218 H694 Z"/>
+<line x1="746" y1="185" x2="790" y2="185"/>
+<path d="M694,248 H720 A26,33 0 0 1 720,314 H694 Z"/>
+<path d="M746,281 L763.5,281 A4.5,4.5 0 0 1 772.5,281 L790,281"/>
+<line x1="870" y1="185" x2="914" y2="185"/>
+<line x1="870" y1="281" x2="914" y2="281"/>
+<line x1="853.2" y1="273.4" x2="862" y2="273.4" stroke-width="1.4"/>
+<rect x="1272" y="147" width="80" height="172" rx="2"/>
+<circle cx="1312" cy="143" r="4"/>
+<line x1="1312" y1="139" x2="1312" y2="123"/>
+<circle cx="1312" cy="323" r="4"/>
+<line x1="1312" y1="327" x2="1312" y2="343"/>
+<polyline points="1272,224 1284,233 1272,242"/>
+<circle cx="1268" cy="233" r="4"/>
+<line x1="1264" y1="233" x2="1250" y2="233"/>
+<line x1="1250" y1="233" x2="1250" y2="478"/>
+<path d="M1160,152 H1186 A26,33 0 0 1 1186,218 H1160 Z"/>
+<path d="M1212,185 L1223.5,185 A4.5,4.5 0 0 1 1232.5,185 L1272,185"/>
+<line x1="1352" y1="185" x2="1396" y2="185"/>
+<line x1="1352" y1="281" x2="1396" y2="281"/>
+<line x1="1335.2" y1="273.4" x2="1344" y2="273.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="174"/>
+<line x1="146" y1="174" x2="190" y2="174"/>
+<line x1="124" y1="46" x2="124" y2="196"/>
+<line x1="124" y1="196" x2="190" y2="196"/>
+<line x1="258" y1="402" x2="258" y2="281"/>
+<path d="M258,281 L275.5,281 A4.5,4.5 0 0 1 284.5,281 L302,281"/>
+<line x1="650" y1="46" x2="650" y2="196"/>
+<line x1="650" y1="196" x2="694" y2="196"/>
+<line x1="628" y1="72" x2="628" y2="270"/>
+<line x1="628" y1="270" x2="694" y2="270"/>
+<line x1="606" y1="46" x2="606" y2="292"/>
+<line x1="606" y1="292" x2="694" y2="292"/>
+<line x1="584" y1="402" x2="584" y2="174"/>
+<path d="M584,174 L601.5,174 A4.5,4.5 0 0 1 610.5,174 L623.5,174 A4.5,4.5 0 0 1 632.5,174 L645.5,174 A4.5,4.5 0 0 1 654.5,174 L694,174"/>
+<line x1="1228" y1="46" x2="1228" y2="281"/>
+<path d="M1228,281 L1245.5,281 A4.5,4.5 0 0 1 1254.5,281 L1272,281"/>
+<line x1="1116" y1="428" x2="1116" y2="196"/>
+<line x1="1116" y1="196" x2="1160" y2="196"/>
+<line x1="1094" y1="376" x2="1094" y2="174"/>
+<line x1="1094" y1="174" x2="1160" y2="174"/>
 <path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L909.5,46 A4.5,4.5 0 0 1 918.5,46 L1396,46"/>
 <path d="M146,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L601.5,72 A4.5,4.5 0 0 1 610.5,72 L645.5,72 A4.5,4.5 0 0 1 654.5,72 L914,72"/>
-<path d="M1116,364 L1245.5,364 A4.5,4.5 0 0 1 1254.5,364 L1396,364"/>
-<path d="M258,338 L275.5,338 A4.5,4.5 0 0 1 284.5,338 L763.5,338 A4.5,4.5 0 0 1 772.5,338 L914,338"/>
-<path d="M426,312 L579.5,312 A4.5,4.5 0 0 1 588.5,312 L763.5,312 A4.5,4.5 0 0 1 772.5,312 L909.5,312 A4.5,4.5 0 0 1 918.5,312 L1094,312"/>
-<line x1="426" y1="30" x2="426" y2="153"/>
-<line x1="426" y1="249" x2="426" y2="312"/>
-<line x1="914" y1="30" x2="914" y2="153"/>
-<line x1="914" y1="249" x2="914" y2="338"/>
-<line x1="1396" y1="30" x2="1396" y2="153"/>
-<line x1="1396" y1="249" x2="1396" y2="364"/>
-<line x1="240" y1="414" x2="1250" y2="414"/>
-<circle cx="280" cy="414" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="768" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1116,428 L1245.5,428 A4.5,4.5 0 0 1 1254.5,428 L1396,428"/>
+<path d="M258,402 L275.5,402 A4.5,4.5 0 0 1 284.5,402 L763.5,402 A4.5,4.5 0 0 1 772.5,402 L914,402"/>
+<path d="M426,376 L579.5,376 A4.5,4.5 0 0 1 588.5,376 L763.5,376 A4.5,4.5 0 0 1 772.5,376 L909.5,376 A4.5,4.5 0 0 1 918.5,376 L1094,376"/>
+<line x1="426" y1="30" x2="426" y2="185"/>
+<line x1="426" y1="281" x2="426" y2="376"/>
+<line x1="914" y1="30" x2="914" y2="185"/>
+<line x1="914" y1="281" x2="914" y2="402"/>
+<line x1="1396" y1="30" x2="1396" y2="185"/>
+<line x1="1396" y1="281" x2="1396" y2="428"/>
+<line x1="240" y1="478" x2="1250" y2="478"/>
+<circle cx="280" cy="478" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="768" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1396" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="606" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1228" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="914" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="584" cy="338" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="584" cy="402" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="209" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="159" text-anchor="start" font-size="14">S</text>
-<text x="310" y="255" text-anchor="start" font-size="14">R</text>
-<text x="374" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="830" y="209" text-anchor="middle" font-size="26">B</text>
-<text x="798" y="159" text-anchor="start" font-size="14">S</text>
-<text x="798" y="255" text-anchor="start" font-size="14">R</text>
-<text x="862" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="862" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="1312" y="209" text-anchor="middle" font-size="26">C</text>
-<text x="1280" y="159" text-anchor="start" font-size="14">S</text>
-<text x="1280" y="255" text-anchor="start" font-size="14">R</text>
-<text x="1344" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1344" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="241" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="191" text-anchor="start" font-size="14">S</text>
+<text x="310" y="287" text-anchor="start" font-size="14">R</text>
+<text x="374" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="830" y="241" text-anchor="middle" font-size="26">B</text>
+<text x="830" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="830" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="830" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="830" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="798" y="191" text-anchor="start" font-size="14">S</text>
+<text x="798" y="287" text-anchor="start" font-size="14">R</text>
+<text x="862" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="862" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="1312" y="241" text-anchor="middle" font-size="26">C</text>
+<text x="1312" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1312" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="1312" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1312" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="1280" y="191" text-anchor="start" font-size="14">S</text>
+<text x="1280" y="287" text-anchor="start" font-size="14">R</text>
+<text x="1344" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1344" y="287" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="914" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1396" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="420" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="484" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -19251,85 +20415,111 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} \\ D_{B} &= \overline{Q_{B}}Q_{C} + Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1364" height="387" viewBox="0 0 1364 387" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1364" height="451" viewBox="0 0 1364 451" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="115" width="80" height="150" rx="2"/>
-<polyline points="264,211 276,220 264,229"/>
-<line x1="264" y1="220" x2="242" y2="220"/>
-<line x1="242" y1="220" x2="242" y2="363"/>
-<path d="M168,120 H194 A26,33 0 0 1 194,186 H168 Z"/>
-<line x1="220" y1="153" x2="264" y2="153"/>
-<line x1="344" y1="153" x2="388" y2="153"/>
-<line x1="344" y1="227" x2="388" y2="227"/>
-<line x1="327.2" y1="219.4" x2="336" y2="219.4" stroke-width="1.4"/>
-<rect x="724" y="115" width="80" height="150" rx="2"/>
-<polyline points="724,211 736,220 724,229"/>
-<line x1="724" y1="220" x2="702" y2="220"/>
-<line x1="702" y1="220" x2="702" y2="363"/>
-<path d="M620,120 C642,120 668,136.5 680,153 C668,169.5 642,186 620,186 Q634,153 620,120 Z"/>
-<path d="M612,120 Q626,153 612,186"/>
-<line x1="680" y1="153" x2="724" y2="153"/>
-<line x1="804" y1="153" x2="848" y2="153"/>
-<line x1="804" y1="227" x2="848" y2="227"/>
-<line x1="787.2" y1="219.4" x2="796" y2="219.4" stroke-width="1.4"/>
-<rect x="1168" y="115" width="80" height="150" rx="2"/>
-<polyline points="1168,211 1180,220 1168,229"/>
-<line x1="1168" y1="220" x2="1146" y2="220"/>
-<line x1="1146" y1="220" x2="1146" y2="363"/>
-<path d="M1072,120 H1098 A26,33 0 0 1 1098,186 H1072 Z"/>
-<line x1="1124" y1="153" x2="1168" y2="153"/>
-<line x1="1248" y1="153" x2="1292" y2="153"/>
-<line x1="1248" y1="227" x2="1292" y2="227"/>
-<line x1="1231.2" y1="219.4" x2="1240" y2="219.4" stroke-width="1.4"/>
-<line x1="124" y1="72" x2="124" y2="142"/>
-<line x1="124" y1="142" x2="168" y2="142"/>
-<line x1="102" y1="46" x2="102" y2="164"/>
-<line x1="102" y1="164" x2="168" y2="164"/>
-<line x1="574.2" y1="72" x2="574.2" y2="142"/>
-<line x1="574.2" y1="142" x2="618.2" y2="142"/>
-<line x1="552.2" y1="46" x2="552.2" y2="164"/>
-<line x1="552.2" y1="164" x2="618.2" y2="164"/>
-<line x1="1028" y1="313" x2="1028" y2="164"/>
-<line x1="1028" y1="164" x2="1072" y2="164"/>
-<line x1="1006" y1="287" x2="1006" y2="142"/>
-<line x1="1006" y1="142" x2="1072" y2="142"/>
+<rect x="264" y="147" width="80" height="150" rx="2"/>
+<circle cx="304" cy="143" r="4"/>
+<line x1="304" y1="139" x2="304" y2="123"/>
+<circle cx="304" cy="301" r="4"/>
+<line x1="304" y1="305" x2="304" y2="321"/>
+<polyline points="264,243 276,252 264,261"/>
+<line x1="264" y1="252" x2="242" y2="252"/>
+<line x1="242" y1="252" x2="242" y2="427"/>
+<path d="M168,152 H194 A26,33 0 0 1 194,218 H168 Z"/>
+<line x1="220" y1="185" x2="264" y2="185"/>
+<line x1="344" y1="185" x2="388" y2="185"/>
+<line x1="344" y1="259" x2="388" y2="259"/>
+<line x1="327.2" y1="251.4" x2="336" y2="251.4" stroke-width="1.4"/>
+<rect x="724" y="147" width="80" height="150" rx="2"/>
+<circle cx="764" cy="143" r="4"/>
+<line x1="764" y1="139" x2="764" y2="123"/>
+<circle cx="764" cy="301" r="4"/>
+<line x1="764" y1="305" x2="764" y2="321"/>
+<polyline points="724,243 736,252 724,261"/>
+<line x1="724" y1="252" x2="702" y2="252"/>
+<line x1="702" y1="252" x2="702" y2="427"/>
+<path d="M620,152 C642,152 668,168.5 680,185 C668,201.5 642,218 620,218 Q634,185 620,152 Z"/>
+<path d="M612,152 Q626,185 612,218"/>
+<line x1="680" y1="185" x2="724" y2="185"/>
+<line x1="804" y1="185" x2="848" y2="185"/>
+<line x1="804" y1="259" x2="848" y2="259"/>
+<line x1="787.2" y1="251.4" x2="796" y2="251.4" stroke-width="1.4"/>
+<rect x="1168" y="147" width="80" height="150" rx="2"/>
+<circle cx="1208" cy="143" r="4"/>
+<line x1="1208" y1="139" x2="1208" y2="123"/>
+<circle cx="1208" cy="301" r="4"/>
+<line x1="1208" y1="305" x2="1208" y2="321"/>
+<polyline points="1168,243 1180,252 1168,261"/>
+<line x1="1168" y1="252" x2="1146" y2="252"/>
+<line x1="1146" y1="252" x2="1146" y2="427"/>
+<path d="M1072,152 H1098 A26,33 0 0 1 1098,218 H1072 Z"/>
+<line x1="1124" y1="185" x2="1168" y2="185"/>
+<line x1="1248" y1="185" x2="1292" y2="185"/>
+<line x1="1248" y1="259" x2="1292" y2="259"/>
+<line x1="1231.2" y1="251.4" x2="1240" y2="251.4" stroke-width="1.4"/>
+<line x1="124" y1="72" x2="124" y2="174"/>
+<line x1="124" y1="174" x2="168" y2="174"/>
+<line x1="102" y1="46" x2="102" y2="196"/>
+<line x1="102" y1="196" x2="168" y2="196"/>
+<line x1="574.2" y1="72" x2="574.2" y2="174"/>
+<line x1="574.2" y1="174" x2="618.2" y2="174"/>
+<line x1="552.2" y1="46" x2="552.2" y2="196"/>
+<line x1="552.2" y1="196" x2="618.2" y2="196"/>
+<line x1="1028" y1="377" x2="1028" y2="196"/>
+<line x1="1028" y1="196" x2="1072" y2="196"/>
+<line x1="1006" y1="351" x2="1006" y2="174"/>
+<line x1="1006" y1="174" x2="1072" y2="174"/>
 <path d="M102,46 L383.5,46 A4.5,4.5 0 0 1 392.5,46 L843.5,46 A4.5,4.5 0 0 1 852.5,46 L1292,46"/>
 <path d="M124,72 L383.5,72 A4.5,4.5 0 0 1 392.5,72 L547.7,72 A4.5,4.5 0 0 1 556.7,72 L848,72"/>
-<path d="M1028,313 L1141.5,313 A4.5,4.5 0 0 1 1150.5,313 L1292,313"/>
-<path d="M388,287 L697.5,287 A4.5,4.5 0 0 1 706.5,287 L1006,287"/>
-<line x1="388" y1="30" x2="388" y2="153"/>
-<line x1="388" y1="227" x2="388" y2="287"/>
-<line x1="848" y1="30" x2="848" y2="153"/>
-<line x1="1292" y1="30" x2="1292" y2="153"/>
-<line x1="1292" y1="227" x2="1292" y2="313"/>
-<line x1="202" y1="363" x2="1146" y2="363"/>
-<circle cx="242" cy="363" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="702" cy="363" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M1028,377 L1141.5,377 A4.5,4.5 0 0 1 1150.5,377 L1292,377"/>
+<path d="M388,351 L697.5,351 A4.5,4.5 0 0 1 706.5,351 L1006,351"/>
+<line x1="388" y1="30" x2="388" y2="185"/>
+<line x1="388" y1="259" x2="388" y2="351"/>
+<line x1="848" y1="30" x2="848" y2="185"/>
+<line x1="1292" y1="30" x2="1292" y2="185"/>
+<line x1="1292" y1="259" x2="1292" y2="377"/>
+<line x1="202" y1="427" x2="1146" y2="427"/>
+<circle cx="242" cy="427" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="702" cy="427" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1292" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="552.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="848" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="574.2" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="159" text-anchor="start" font-size="14">D</text>
-<text x="336" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="764" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="732" y="159" text-anchor="start" font-size="14">D</text>
-<text x="796" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="796" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="1208" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="1176" y="159" text-anchor="start" font-size="14">D</text>
-<text x="1240" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1240" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="191" text-anchor="start" font-size="14">D</text>
+<text x="336" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="764" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="764" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="764" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="764" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="764" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="732" y="191" text-anchor="start" font-size="14">D</text>
+<text x="796" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="796" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="1208" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="1208" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1208" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="1208" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1208" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="1176" y="191" text-anchor="start" font-size="14">D</text>
+<text x="1240" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1240" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="848" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1292" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="369" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="433" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -19567,81 +20757,107 @@ $T_{C} = \overline{Q_{A}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A} \\ T_{B} &= Q_{C} \\ T_{C} &= \overline{Q_{A}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1294" height="438" viewBox="0 0 1294 438" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1294" height="502" viewBox="0 0 1294 502" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="434" y="192" width="80" height="150" rx="2"/>
-<polyline points="434,288 446,297 434,306"/>
-<line x1="434" y1="297" x2="412" y2="297"/>
-<line x1="412" y1="297" x2="412" y2="414"/>
-<path d="M330,197 C352,197 378,213.5 390,230 C378,246.5 352,263 330,263 Q344,230 330,197 Z"/>
-<path d="M196,146 H222 A26,33 0 0 1 222,212 H196 Z"/>
-<path d="M248,179 L265.7,179 A4.5,4.5 0 0 1 274.7,179 L312,179"/>
-<line x1="312" y1="179" x2="312" y2="219"/>
-<line x1="312" y1="219" x2="336.2" y2="219"/>
-<line x1="390" y1="230" x2="434" y2="230"/>
-<line x1="514" y1="230" x2="558" y2="230"/>
-<line x1="514" y1="304" x2="558" y2="304"/>
-<line x1="497.2" y1="296.4" x2="506" y2="296.4" stroke-width="1.4"/>
-<rect x="766" y="192" width="80" height="150" rx="2"/>
-<polyline points="766,288 778,297 766,306"/>
-<line x1="766" y1="297" x2="744" y2="297"/>
-<line x1="744" y1="297" x2="744" y2="414"/>
-<line x1="846" y1="230" x2="890" y2="230"/>
-<line x1="846" y1="304" x2="890" y2="304"/>
-<line x1="829.2" y1="296.4" x2="838" y2="296.4" stroke-width="1.4"/>
-<rect x="1098" y="192" width="80" height="150" rx="2"/>
-<polyline points="1098,288 1110,297 1098,306"/>
-<line x1="1098" y1="297" x2="1076" y2="297"/>
-<line x1="1076" y1="297" x2="1076" y2="414"/>
-<line x1="1178" y1="230" x2="1222" y2="230"/>
-<line x1="1178" y1="304" x2="1222" y2="304"/>
-<line x1="1161.2" y1="296.4" x2="1170" y2="296.4" stroke-width="1.4"/>
-<line x1="152" y1="72" x2="152" y2="168"/>
-<line x1="152" y1="168" x2="196" y2="168"/>
-<line x1="130" y1="46" x2="130" y2="190"/>
-<line x1="130" y1="190" x2="196" y2="190"/>
-<line x1="270.2" y1="98" x2="270.2" y2="241"/>
-<line x1="270.2" y1="241" x2="336.2" y2="241"/>
-<line x1="722" y1="46" x2="722" y2="230"/>
-<line x1="722" y1="230" x2="766" y2="230"/>
-<line x1="1054" y1="364" x2="1054" y2="230"/>
-<line x1="1054" y1="230" x2="1098" y2="230"/>
+<rect x="434" y="224" width="80" height="150" rx="2"/>
+<circle cx="474" cy="220" r="4"/>
+<line x1="474" y1="216" x2="474" y2="200"/>
+<circle cx="474" cy="378" r="4"/>
+<line x1="474" y1="382" x2="474" y2="398"/>
+<polyline points="434,320 446,329 434,338"/>
+<line x1="434" y1="329" x2="412" y2="329"/>
+<line x1="412" y1="329" x2="412" y2="478"/>
+<path d="M330,229 C352,229 378,245.5 390,262 C378,278.5 352,295 330,295 Q344,262 330,229 Z"/>
+<path d="M196,178 H222 A26,33 0 0 1 222,244 H196 Z"/>
+<path d="M248,211 L265.7,211 A4.5,4.5 0 0 1 274.7,211 L312,211"/>
+<line x1="312" y1="211" x2="312" y2="251"/>
+<line x1="312" y1="251" x2="336.2" y2="251"/>
+<line x1="390" y1="262" x2="434" y2="262"/>
+<line x1="514" y1="262" x2="558" y2="262"/>
+<line x1="514" y1="336" x2="558" y2="336"/>
+<line x1="497.2" y1="328.4" x2="506" y2="328.4" stroke-width="1.4"/>
+<rect x="766" y="224" width="80" height="150" rx="2"/>
+<circle cx="806" cy="220" r="4"/>
+<line x1="806" y1="216" x2="806" y2="200"/>
+<circle cx="806" cy="378" r="4"/>
+<line x1="806" y1="382" x2="806" y2="398"/>
+<polyline points="766,320 778,329 766,338"/>
+<line x1="766" y1="329" x2="744" y2="329"/>
+<line x1="744" y1="329" x2="744" y2="478"/>
+<line x1="846" y1="262" x2="890" y2="262"/>
+<line x1="846" y1="336" x2="890" y2="336"/>
+<line x1="829.2" y1="328.4" x2="838" y2="328.4" stroke-width="1.4"/>
+<rect x="1098" y="224" width="80" height="150" rx="2"/>
+<circle cx="1138" cy="220" r="4"/>
+<line x1="1138" y1="216" x2="1138" y2="200"/>
+<circle cx="1138" cy="378" r="4"/>
+<line x1="1138" y1="382" x2="1138" y2="398"/>
+<polyline points="1098,320 1110,329 1098,338"/>
+<line x1="1098" y1="329" x2="1076" y2="329"/>
+<line x1="1076" y1="329" x2="1076" y2="478"/>
+<line x1="1178" y1="262" x2="1222" y2="262"/>
+<line x1="1178" y1="336" x2="1222" y2="336"/>
+<line x1="1161.2" y1="328.4" x2="1170" y2="328.4" stroke-width="1.4"/>
+<line x1="152" y1="72" x2="152" y2="200"/>
+<line x1="152" y1="200" x2="196" y2="200"/>
+<line x1="130" y1="46" x2="130" y2="222"/>
+<line x1="130" y1="222" x2="196" y2="222"/>
+<line x1="270.2" y1="98" x2="270.2" y2="273"/>
+<line x1="270.2" y1="273" x2="336.2" y2="273"/>
+<line x1="722" y1="46" x2="722" y2="262"/>
+<line x1="722" y1="262" x2="766" y2="262"/>
+<line x1="1054" y1="428" x2="1054" y2="262"/>
+<line x1="1054" y1="262" x2="1098" y2="262"/>
 <path d="M130,46 L553.5,46 A4.5,4.5 0 0 1 562.5,46 L885.5,46 A4.5,4.5 0 0 1 894.5,46 L1222,46"/>
 <path d="M152,72 L553.5,72 A4.5,4.5 0 0 1 562.5,72 L717.5,72 A4.5,4.5 0 0 1 726.5,72 L890,72"/>
 <line x1="270.2" y1="98" x2="558" y2="98"/>
-<path d="M558,364 L739.5,364 A4.5,4.5 0 0 1 748.5,364 L1054,364"/>
-<line x1="558" y1="30" x2="558" y2="230"/>
-<line x1="558" y1="304" x2="558" y2="364"/>
-<line x1="890" y1="30" x2="890" y2="230"/>
-<line x1="1222" y1="30" x2="1222" y2="230"/>
-<line x1="372" y1="414" x2="1076" y2="414"/>
-<circle cx="412" cy="414" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="744" cy="414" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M558,428 L739.5,428 A4.5,4.5 0 0 1 748.5,428 L1054,428"/>
+<line x1="558" y1="30" x2="558" y2="262"/>
+<line x1="558" y1="336" x2="558" y2="428"/>
+<line x1="890" y1="30" x2="890" y2="262"/>
+<line x1="1222" y1="30" x2="1222" y2="262"/>
+<line x1="372" y1="478" x2="1076" y2="478"/>
+<circle cx="412" cy="478" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="744" cy="478" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1222" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="722" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="890" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="558" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="474" y="275" text-anchor="middle" font-size="26">A</text>
-<text x="442" y="236" text-anchor="start" font-size="14">T</text>
-<text x="506" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="506" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="806" y="275" text-anchor="middle" font-size="26">B</text>
-<text x="774" y="236" text-anchor="start" font-size="14">T</text>
-<text x="838" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="838" y="310" text-anchor="end" font-size="16">Q</text>
-<text x="1138" y="275" text-anchor="middle" font-size="26">C</text>
-<text x="1106" y="236" text-anchor="start" font-size="14">T</text>
-<text x="1170" y="236" text-anchor="end" font-size="16">Q</text>
-<text x="1170" y="310" text-anchor="end" font-size="16">Q</text>
+<text x="474" y="307" text-anchor="middle" font-size="26">A</text>
+<text x="474" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="474" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="474" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="474" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="442" y="268" text-anchor="start" font-size="14">T</text>
+<text x="506" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="506" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="806" y="307" text-anchor="middle" font-size="26">B</text>
+<text x="806" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="806" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="806" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="806" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="774" y="268" text-anchor="start" font-size="14">T</text>
+<text x="838" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="838" y="342" text-anchor="end" font-size="16">Q</text>
+<text x="1138" y="307" text-anchor="middle" font-size="26">C</text>
+<text x="1138" y="194" text-anchor="middle" font-size="14">1</text>
+<text x="1138" y="416" text-anchor="middle" font-size="14">1</text>
+<text x="1138" y="241" text-anchor="middle" font-size="12">PR</text>
+<text x="1138" y="366" text-anchor="middle" font-size="12">CLR</text>
+<text x="1106" y="268" text-anchor="start" font-size="14">T</text>
+<text x="1170" y="268" text-anchor="end" font-size="16">Q</text>
+<text x="1170" y="342" text-anchor="end" font-size="16">Q</text>
 <text x="558" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="890" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1222" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="368" y="420" text-anchor="end" font-size="16">Clock</text>
+<text x="368" y="484" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -20040,72 +21256,86 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B} &= Q_{C} \\ K_{B} &= Q_{C} + Q_{A} \\ J_{C} &= \overline{Q_{A}} + \overline{Q_{B}} \\ K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="416" viewBox="0 0 1440 416" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="141" width="80" height="150" rx="2"/>
-<polyline points="302,207 314,216 302,225"/>
-<circle cx="298" cy="216" r="4"/>
-<line x1="294" y1="216" x2="280" y2="216"/>
-<line x1="280" y1="216" x2="280" y2="392"/>
-<path d="M190,146 H216 A26,33 0 0 1 216,212 H190 Z"/>
-<path d="M242,179 L253.5,179 A4.5,4.5 0 0 1 262.5,179 L302,179"/>
-<line x1="382" y1="179" x2="426" y2="179"/>
-<line x1="382" y1="253" x2="426" y2="253"/>
-<line x1="365.2" y1="245.4" x2="374" y2="245.4" stroke-width="1.4"/>
-<rect x="792" y="141" width="80" height="150" rx="2"/>
-<polyline points="792,207 804,216 792,225"/>
-<circle cx="788" cy="216" r="4"/>
-<line x1="784" y1="216" x2="770" y2="216"/>
-<line x1="770" y1="216" x2="770" y2="392"/>
-<path d="M672,220 C694,220 720,236.5 732,253 C720,269.5 694,286 672,286 Q686,253 672,220 Z"/>
-<path d="M732,253 L765.5,253 A4.5,4.5 0 0 1 774.5,253 L792,253"/>
-<line x1="872" y1="179" x2="916" y2="179"/>
-<line x1="872" y1="253" x2="916" y2="253"/>
-<line x1="855.2" y1="245.4" x2="864" y2="245.4" stroke-width="1.4"/>
-<rect x="1244" y="141" width="80" height="150" rx="2"/>
-<polyline points="1244,207 1256,216 1244,225"/>
-<circle cx="1240" cy="216" r="4"/>
-<line x1="1236" y1="216" x2="1222" y2="216"/>
-<line x1="1222" y1="216" x2="1222" y2="392"/>
-<path d="M1140,146 C1162,146 1188,162.5 1200,179 C1188,195.5 1162,212 1140,212 Q1154,179 1140,146 Z"/>
-<line x1="1200" y1="179" x2="1244" y2="179"/>
-<path d="M1192,253 L1217.5,253 A4.5,4.5 0 0 1 1226.5,253 L1244,253"/>
-<line x1="1324" y1="179" x2="1368" y2="179"/>
-<line x1="1324" y1="253" x2="1368" y2="253"/>
-<line x1="1307.2" y1="245.4" x2="1316" y2="245.4" stroke-width="1.4"/>
-<line x1="146" y1="72" x2="146" y2="168"/>
-<line x1="146" y1="168" x2="190" y2="168"/>
-<line x1="124" y1="46" x2="124" y2="190"/>
-<line x1="124" y1="190" x2="190" y2="190"/>
-<line x1="258" y1="72" x2="258" y2="253"/>
-<path d="M258,253 L275.5,253 A4.5,4.5 0 0 1 284.5,253 L302,253"/>
-<line x1="748" y1="46" x2="748" y2="179"/>
-<line x1="748" y1="179" x2="792" y2="179"/>
-<line x1="634.2" y1="46" x2="634.2" y2="242"/>
-<line x1="634.2" y1="242" x2="678.2" y2="242"/>
-<line x1="612.2" y1="98" x2="612.2" y2="264"/>
-<line x1="612.2" y1="264" x2="678.2" y2="264"/>
-<line x1="1102.2" y1="342" x2="1102.2" y2="190"/>
-<line x1="1102.2" y1="190" x2="1146.2" y2="190"/>
-<line x1="1080.2" y1="316" x2="1080.2" y2="168"/>
-<line x1="1080.2" y1="168" x2="1146.2" y2="168"/>
+<rect x="302" y="173" width="80" height="150" rx="2"/>
+<circle cx="342" cy="169" r="4"/>
+<line x1="342" y1="165" x2="342" y2="149"/>
+<circle cx="342" cy="327" r="4"/>
+<line x1="342" y1="331" x2="342" y2="347"/>
+<polyline points="302,239 314,248 302,257"/>
+<circle cx="298" cy="248" r="4"/>
+<line x1="294" y1="248" x2="280" y2="248"/>
+<line x1="280" y1="248" x2="280" y2="456"/>
+<path d="M190,178 H216 A26,33 0 0 1 216,244 H190 Z"/>
+<path d="M242,211 L253.5,211 A4.5,4.5 0 0 1 262.5,211 L302,211"/>
+<line x1="382" y1="211" x2="426" y2="211"/>
+<line x1="382" y1="285" x2="426" y2="285"/>
+<line x1="365.2" y1="277.4" x2="374" y2="277.4" stroke-width="1.4"/>
+<rect x="792" y="173" width="80" height="150" rx="2"/>
+<circle cx="832" cy="169" r="4"/>
+<line x1="832" y1="165" x2="832" y2="149"/>
+<circle cx="832" cy="327" r="4"/>
+<line x1="832" y1="331" x2="832" y2="347"/>
+<polyline points="792,239 804,248 792,257"/>
+<circle cx="788" cy="248" r="4"/>
+<line x1="784" y1="248" x2="770" y2="248"/>
+<line x1="770" y1="248" x2="770" y2="456"/>
+<path d="M672,252 C694,252 720,268.5 732,285 C720,301.5 694,318 672,318 Q686,285 672,252 Z"/>
+<path d="M732,285 L765.5,285 A4.5,4.5 0 0 1 774.5,285 L792,285"/>
+<line x1="872" y1="211" x2="916" y2="211"/>
+<line x1="872" y1="285" x2="916" y2="285"/>
+<line x1="855.2" y1="277.4" x2="864" y2="277.4" stroke-width="1.4"/>
+<rect x="1244" y="173" width="80" height="150" rx="2"/>
+<circle cx="1284" cy="169" r="4"/>
+<line x1="1284" y1="165" x2="1284" y2="149"/>
+<circle cx="1284" cy="327" r="4"/>
+<line x1="1284" y1="331" x2="1284" y2="347"/>
+<polyline points="1244,239 1256,248 1244,257"/>
+<circle cx="1240" cy="248" r="4"/>
+<line x1="1236" y1="248" x2="1222" y2="248"/>
+<line x1="1222" y1="248" x2="1222" y2="456"/>
+<path d="M1140,178 C1162,178 1188,194.5 1200,211 C1188,227.5 1162,244 1140,244 Q1154,211 1140,178 Z"/>
+<line x1="1200" y1="211" x2="1244" y2="211"/>
+<path d="M1192,285 L1217.5,285 A4.5,4.5 0 0 1 1226.5,285 L1244,285"/>
+<line x1="1324" y1="211" x2="1368" y2="211"/>
+<line x1="1324" y1="285" x2="1368" y2="285"/>
+<line x1="1307.2" y1="277.4" x2="1316" y2="277.4" stroke-width="1.4"/>
+<line x1="146" y1="72" x2="146" y2="200"/>
+<line x1="146" y1="200" x2="190" y2="200"/>
+<line x1="124" y1="46" x2="124" y2="222"/>
+<line x1="124" y1="222" x2="190" y2="222"/>
+<line x1="258" y1="72" x2="258" y2="285"/>
+<path d="M258,285 L275.5,285 A4.5,4.5 0 0 1 284.5,285 L302,285"/>
+<line x1="748" y1="46" x2="748" y2="211"/>
+<line x1="748" y1="211" x2="792" y2="211"/>
+<line x1="634.2" y1="46" x2="634.2" y2="274"/>
+<line x1="634.2" y1="274" x2="678.2" y2="274"/>
+<line x1="612.2" y1="98" x2="612.2" y2="296"/>
+<line x1="612.2" y1="296" x2="678.2" y2="296"/>
+<line x1="1102.2" y1="406" x2="1102.2" y2="222"/>
+<line x1="1102.2" y1="222" x2="1146.2" y2="222"/>
+<line x1="1080.2" y1="380" x2="1080.2" y2="200"/>
+<line x1="1080.2" y1="200" x2="1146.2" y2="200"/>
 <path d="M124,46 L421.5,46 A4.5,4.5 0 0 1 430.5,46 L911.5,46 A4.5,4.5 0 0 1 920.5,46 L1368,46"/>
 <path d="M146,72 L421.5,72 A4.5,4.5 0 0 1 430.5,72 L629.7,72 A4.5,4.5 0 0 1 638.7,72 L743.5,72 A4.5,4.5 0 0 1 752.5,72 L916,72"/>
 <line x1="426" y1="98" x2="612.2" y2="98"/>
-<line x1="916" y1="342" x2="1102.2" y2="342"/>
-<path d="M426,316 L765.5,316 A4.5,4.5 0 0 1 774.5,316 L911.5,316 A4.5,4.5 0 0 1 920.5,316 L1080.2,316"/>
-<line x1="426" y1="30" x2="426" y2="179"/>
-<line x1="426" y1="253" x2="426" y2="316"/>
-<line x1="916" y1="30" x2="916" y2="179"/>
-<line x1="916" y1="253" x2="916" y2="342"/>
-<line x1="1368" y1="30" x2="1368" y2="179"/>
-<line x1="240" y1="392" x2="1222" y2="392"/>
-<circle cx="280" cy="392" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="770" cy="392" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="916" y1="406" x2="1102.2" y2="406"/>
+<path d="M426,380 L765.5,380 A4.5,4.5 0 0 1 774.5,380 L911.5,380 A4.5,4.5 0 0 1 920.5,380 L1080.2,380"/>
+<line x1="426" y1="30" x2="426" y2="211"/>
+<line x1="426" y1="285" x2="426" y2="380"/>
+<line x1="916" y1="30" x2="916" y2="211"/>
+<line x1="916" y1="285" x2="916" y2="406"/>
+<line x1="1368" y1="30" x2="1368" y2="211"/>
+<line x1="240" y1="456" x2="1222" y2="456"/>
+<circle cx="280" cy="456" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="770" cy="456" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1368" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="748" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="634.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -20113,26 +21343,38 @@ $\mathbf{Ans}\quad \begin{aligned}J_{A} &= Q_{B}Q_{C} \\ K_{A} &= Q_{B} \\ J_{B}
 <circle cx="258" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="224" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="185" text-anchor="start" font-size="14">J</text>
-<text x="310" y="259" text-anchor="start" font-size="14">K</text>
-<text x="374" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="832" y="224" text-anchor="middle" font-size="26">B</text>
-<text x="800" y="185" text-anchor="start" font-size="14">J</text>
-<text x="800" y="259" text-anchor="start" font-size="14">K</text>
-<text x="864" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="864" y="259" text-anchor="end" font-size="16">Q</text>
-<text x="1284" y="224" text-anchor="middle" font-size="26">C</text>
-<text x="1252" y="185" text-anchor="start" font-size="14">J</text>
-<text x="1252" y="259" text-anchor="start" font-size="14">K</text>
-<text x="1188" y="259" text-anchor="end" font-size="16">1</text>
-<text x="1316" y="185" text-anchor="end" font-size="16">Q</text>
-<text x="1316" y="259" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="256" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="217" text-anchor="start" font-size="14">J</text>
+<text x="310" y="291" text-anchor="start" font-size="14">K</text>
+<text x="374" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="832" y="256" text-anchor="middle" font-size="26">B</text>
+<text x="832" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="832" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="832" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="832" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="800" y="217" text-anchor="start" font-size="14">J</text>
+<text x="800" y="291" text-anchor="start" font-size="14">K</text>
+<text x="864" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="864" y="291" text-anchor="end" font-size="16">Q</text>
+<text x="1284" y="256" text-anchor="middle" font-size="26">C</text>
+<text x="1284" y="143" text-anchor="middle" font-size="14">1</text>
+<text x="1284" y="365" text-anchor="middle" font-size="14">1</text>
+<text x="1284" y="190" text-anchor="middle" font-size="12">PR</text>
+<text x="1284" y="315" text-anchor="middle" font-size="12">CLR</text>
+<text x="1252" y="217" text-anchor="start" font-size="14">J</text>
+<text x="1252" y="291" text-anchor="start" font-size="14">K</text>
+<text x="1188" y="291" text-anchor="end" font-size="16">1</text>
+<text x="1316" y="217" text-anchor="end" font-size="16">Q</text>
+<text x="1316" y="291" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="916" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1368" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="398" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="462" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -20532,107 +21774,121 @@ $S_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B}\overline{Q_{C}} \\ S_{A} &= Q_{B}Q_{C} \\ R_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ S_{B} &= \overline{Q_{B}}Q_{C} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1854" height="596" viewBox="0 0 1854 596" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1854" height="660" viewBox="0 0 1854 660" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="185" width="80" height="216" rx="2"/>
-<polyline points="308,284 320,293 308,302"/>
-<circle cx="304" cy="293" r="4"/>
-<line x1="300" y1="293" x2="286" y2="293"/>
-<line x1="286" y1="293" x2="286" y2="572"/>
-<path d="M212,190 H238 A26,33 0 0 1 238,256 H212 Z"/>
-<line x1="264" y1="223" x2="308" y2="223"/>
-<path d="M212,330 H238 A26,33 0 0 1 238,396 H212 Z"/>
-<path d="M264,363 L281.5,363 A4.5,4.5 0 0 1 290.5,363 L308,363"/>
-<line x1="388" y1="223" x2="432" y2="223"/>
-<line x1="388" y1="363" x2="432" y2="363"/>
-<line x1="371.2" y1="355.4" x2="380" y2="355.4" stroke-width="1.4"/>
-<rect x="986" y="185" width="80" height="216" rx="2"/>
-<polyline points="986,284 998,293 986,302"/>
-<circle cx="982" cy="293" r="4"/>
-<line x1="978" y1="293" x2="964" y2="293"/>
-<line x1="964" y1="293" x2="964" y2="572"/>
-<path d="M890,190 H916 A26,33 0 0 1 916,256 H890 Z"/>
-<line x1="942" y1="223" x2="986" y2="223"/>
-<path d="M882,330 C904,330 930,346.5 942,363 C930,379.5 904,396 882,396 Q896,363 882,330 Z"/>
-<path d="M750,286 H776 A26,33 0 0 1 776,352 H750 Z"/>
-<line x1="802" y1="319" x2="864" y2="319"/>
-<line x1="864" y1="319" x2="864" y2="352"/>
-<line x1="864" y1="352" x2="888.2" y2="352"/>
-<path d="M750,374 H776 A26,33 0 0 1 776,440 H750 Z"/>
-<line x1="802" y1="407" x2="844" y2="407"/>
-<line x1="844" y1="407" x2="844" y2="374"/>
-<line x1="844" y1="374" x2="888.2" y2="374"/>
-<path d="M942,363 L959.5,363 A4.5,4.5 0 0 1 968.5,363 L986,363"/>
-<line x1="1066" y1="223" x2="1110" y2="223"/>
-<line x1="1066" y1="363" x2="1110" y2="363"/>
-<line x1="1049.2" y1="355.4" x2="1058" y2="355.4" stroke-width="1.4"/>
-<rect x="1658" y="185" width="80" height="216" rx="2"/>
-<polyline points="1658,284 1670,293 1658,302"/>
-<circle cx="1654" cy="293" r="4"/>
-<line x1="1650" y1="293" x2="1636" y2="293"/>
-<line x1="1636" y1="293" x2="1636" y2="572"/>
-<path d="M1538,190 C1560,190 1586,206.5 1598,223 C1586,239.5 1560,256 1538,256 Q1552,223 1538,190 Z"/>
-<path d="M1406,146 H1432 A26,33 0 0 1 1432,212 H1406 Z"/>
-<line x1="1458" y1="179" x2="1520" y2="179"/>
-<line x1="1520" y1="179" x2="1520" y2="212"/>
-<line x1="1520" y1="212" x2="1544.2" y2="212"/>
-<path d="M1406,234 H1432 A26,33 0 0 1 1432,300 H1406 Z"/>
-<line x1="1458" y1="267" x2="1500" y2="267"/>
-<line x1="1500" y1="267" x2="1500" y2="234"/>
-<line x1="1500" y1="234" x2="1544.2" y2="234"/>
-<path d="M1598,223 L1609.5,223 A4.5,4.5 0 0 1 1618.5,223 L1658,223"/>
-<line x1="1738" y1="223" x2="1782" y2="223"/>
-<line x1="1738" y1="363" x2="1782" y2="363"/>
-<line x1="1721.2" y1="355.4" x2="1730" y2="355.4" stroke-width="1.4"/>
-<line x1="168" y1="72" x2="168" y2="212"/>
-<line x1="168" y1="212" x2="212" y2="212"/>
-<line x1="146" y1="46" x2="146" y2="234"/>
-<line x1="146" y1="234" x2="212" y2="234"/>
-<line x1="124" y1="72" x2="124" y2="352"/>
-<line x1="124" y1="352" x2="212" y2="352"/>
-<line x1="102" y1="522" x2="102" y2="374"/>
-<line x1="102" y1="374" x2="212" y2="374"/>
-<line x1="802" y1="46" x2="802" y2="234"/>
-<line x1="802" y1="234" x2="890" y2="234"/>
-<line x1="706" y1="72" x2="706" y2="308"/>
-<path d="M706,308 L731.5,308 A4.5,4.5 0 0 1 740.5,308 L750,308"/>
-<line x1="684" y1="46" x2="684" y2="330"/>
-<path d="M684,330 L731.5,330 A4.5,4.5 0 0 1 740.5,330 L750,330"/>
-<line x1="662" y1="98" x2="662" y2="396"/>
-<path d="M662,396 L731.5,396 A4.5,4.5 0 0 1 740.5,396 L750,396"/>
-<line x1="640" y1="522" x2="640" y2="418"/>
-<path d="M640,418 L731.5,418 A4.5,4.5 0 0 1 740.5,418 L750,418"/>
-<line x1="736" y1="496" x2="736" y2="212"/>
-<path d="M736,212 L797.5,212 A4.5,4.5 0 0 1 806.5,212 L890,212"/>
-<line x1="1614" y1="46" x2="1614" y2="363"/>
-<path d="M1614,363 L1631.5,363 A4.5,4.5 0 0 1 1640.5,363 L1658,363"/>
-<line x1="1362" y1="522" x2="1362" y2="278"/>
-<line x1="1362" y1="278" x2="1406" y2="278"/>
-<line x1="1340" y1="496" x2="1340" y2="256"/>
-<line x1="1340" y1="256" x2="1406" y2="256"/>
-<line x1="1318" y1="522" x2="1318" y2="190"/>
-<line x1="1318" y1="190" x2="1406" y2="190"/>
-<line x1="1296" y1="470" x2="1296" y2="168"/>
-<line x1="1296" y1="168" x2="1406" y2="168"/>
+<rect x="308" y="217" width="80" height="216" rx="2"/>
+<circle cx="348" cy="213" r="4"/>
+<line x1="348" y1="209" x2="348" y2="193"/>
+<circle cx="348" cy="437" r="4"/>
+<line x1="348" y1="441" x2="348" y2="457"/>
+<polyline points="308,316 320,325 308,334"/>
+<circle cx="304" cy="325" r="4"/>
+<line x1="300" y1="325" x2="286" y2="325"/>
+<line x1="286" y1="325" x2="286" y2="636"/>
+<path d="M212,222 H238 A26,33 0 0 1 238,288 H212 Z"/>
+<line x1="264" y1="255" x2="308" y2="255"/>
+<path d="M212,362 H238 A26,33 0 0 1 238,428 H212 Z"/>
+<path d="M264,395 L281.5,395 A4.5,4.5 0 0 1 290.5,395 L308,395"/>
+<line x1="388" y1="255" x2="432" y2="255"/>
+<line x1="388" y1="395" x2="432" y2="395"/>
+<line x1="371.2" y1="387.4" x2="380" y2="387.4" stroke-width="1.4"/>
+<rect x="986" y="217" width="80" height="216" rx="2"/>
+<circle cx="1026" cy="213" r="4"/>
+<line x1="1026" y1="209" x2="1026" y2="193"/>
+<circle cx="1026" cy="437" r="4"/>
+<line x1="1026" y1="441" x2="1026" y2="457"/>
+<polyline points="986,316 998,325 986,334"/>
+<circle cx="982" cy="325" r="4"/>
+<line x1="978" y1="325" x2="964" y2="325"/>
+<line x1="964" y1="325" x2="964" y2="636"/>
+<path d="M890,222 H916 A26,33 0 0 1 916,288 H890 Z"/>
+<line x1="942" y1="255" x2="986" y2="255"/>
+<path d="M882,362 C904,362 930,378.5 942,395 C930,411.5 904,428 882,428 Q896,395 882,362 Z"/>
+<path d="M750,318 H776 A26,33 0 0 1 776,384 H750 Z"/>
+<line x1="802" y1="351" x2="864" y2="351"/>
+<line x1="864" y1="351" x2="864" y2="384"/>
+<line x1="864" y1="384" x2="888.2" y2="384"/>
+<path d="M750,406 H776 A26,33 0 0 1 776,472 H750 Z"/>
+<line x1="802" y1="439" x2="844" y2="439"/>
+<line x1="844" y1="439" x2="844" y2="406"/>
+<line x1="844" y1="406" x2="888.2" y2="406"/>
+<path d="M942,395 L959.5,395 A4.5,4.5 0 0 1 968.5,395 L986,395"/>
+<line x1="1066" y1="255" x2="1110" y2="255"/>
+<line x1="1066" y1="395" x2="1110" y2="395"/>
+<line x1="1049.2" y1="387.4" x2="1058" y2="387.4" stroke-width="1.4"/>
+<rect x="1658" y="217" width="80" height="216" rx="2"/>
+<circle cx="1698" cy="213" r="4"/>
+<line x1="1698" y1="209" x2="1698" y2="193"/>
+<circle cx="1698" cy="437" r="4"/>
+<line x1="1698" y1="441" x2="1698" y2="457"/>
+<polyline points="1658,316 1670,325 1658,334"/>
+<circle cx="1654" cy="325" r="4"/>
+<line x1="1650" y1="325" x2="1636" y2="325"/>
+<line x1="1636" y1="325" x2="1636" y2="636"/>
+<path d="M1538,222 C1560,222 1586,238.5 1598,255 C1586,271.5 1560,288 1538,288 Q1552,255 1538,222 Z"/>
+<path d="M1406,178 H1432 A26,33 0 0 1 1432,244 H1406 Z"/>
+<line x1="1458" y1="211" x2="1520" y2="211"/>
+<line x1="1520" y1="211" x2="1520" y2="244"/>
+<line x1="1520" y1="244" x2="1544.2" y2="244"/>
+<path d="M1406,266 H1432 A26,33 0 0 1 1432,332 H1406 Z"/>
+<line x1="1458" y1="299" x2="1500" y2="299"/>
+<line x1="1500" y1="299" x2="1500" y2="266"/>
+<line x1="1500" y1="266" x2="1544.2" y2="266"/>
+<path d="M1598,255 L1609.5,255 A4.5,4.5 0 0 1 1618.5,255 L1658,255"/>
+<line x1="1738" y1="255" x2="1782" y2="255"/>
+<line x1="1738" y1="395" x2="1782" y2="395"/>
+<line x1="1721.2" y1="387.4" x2="1730" y2="387.4" stroke-width="1.4"/>
+<line x1="168" y1="72" x2="168" y2="244"/>
+<line x1="168" y1="244" x2="212" y2="244"/>
+<line x1="146" y1="46" x2="146" y2="266"/>
+<line x1="146" y1="266" x2="212" y2="266"/>
+<line x1="124" y1="72" x2="124" y2="384"/>
+<line x1="124" y1="384" x2="212" y2="384"/>
+<line x1="102" y1="586" x2="102" y2="406"/>
+<line x1="102" y1="406" x2="212" y2="406"/>
+<line x1="802" y1="46" x2="802" y2="266"/>
+<line x1="802" y1="266" x2="890" y2="266"/>
+<line x1="706" y1="72" x2="706" y2="340"/>
+<path d="M706,340 L731.5,340 A4.5,4.5 0 0 1 740.5,340 L750,340"/>
+<line x1="684" y1="46" x2="684" y2="362"/>
+<path d="M684,362 L731.5,362 A4.5,4.5 0 0 1 740.5,362 L750,362"/>
+<line x1="662" y1="98" x2="662" y2="428"/>
+<path d="M662,428 L731.5,428 A4.5,4.5 0 0 1 740.5,428 L750,428"/>
+<line x1="640" y1="586" x2="640" y2="450"/>
+<path d="M640,450 L731.5,450 A4.5,4.5 0 0 1 740.5,450 L750,450"/>
+<line x1="736" y1="560" x2="736" y2="244"/>
+<path d="M736,244 L797.5,244 A4.5,4.5 0 0 1 806.5,244 L890,244"/>
+<line x1="1614" y1="46" x2="1614" y2="395"/>
+<path d="M1614,395 L1631.5,395 A4.5,4.5 0 0 1 1640.5,395 L1658,395"/>
+<line x1="1362" y1="586" x2="1362" y2="310"/>
+<line x1="1362" y1="310" x2="1406" y2="310"/>
+<line x1="1340" y1="560" x2="1340" y2="288"/>
+<line x1="1340" y1="288" x2="1406" y2="288"/>
+<line x1="1318" y1="586" x2="1318" y2="222"/>
+<line x1="1318" y1="222" x2="1406" y2="222"/>
+<line x1="1296" y1="534" x2="1296" y2="200"/>
+<line x1="1296" y1="200" x2="1406" y2="200"/>
 <path d="M146,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L1105.5,46 A4.5,4.5 0 0 1 1114.5,46 L1782,46"/>
 <path d="M124,72 L141.5,72 A4.5,4.5 0 0 1 150.5,72 L427.5,72 A4.5,4.5 0 0 1 436.5,72 L679.5,72 A4.5,4.5 0 0 1 688.5,72 L797.5,72 A4.5,4.5 0 0 1 806.5,72 L1110,72"/>
 <line x1="432" y1="98" x2="662" y2="98"/>
-<path d="M102,522 L281.5,522 A4.5,4.5 0 0 1 290.5,522 L959.5,522 A4.5,4.5 0 0 1 968.5,522 L1631.5,522 A4.5,4.5 0 0 1 1640.5,522 L1782,522"/>
-<path d="M736,496 L959.5,496 A4.5,4.5 0 0 1 968.5,496 L1313.5,496 A4.5,4.5 0 0 1 1322.5,496 L1340,496"/>
-<path d="M432,470 L635.5,470 A4.5,4.5 0 0 1 644.5,470 L731.5,470 A4.5,4.5 0 0 1 740.5,470 L959.5,470 A4.5,4.5 0 0 1 968.5,470 L1105.5,470 A4.5,4.5 0 0 1 1114.5,470 L1296,470"/>
-<line x1="432" y1="30" x2="432" y2="223"/>
-<line x1="432" y1="363" x2="432" y2="470"/>
-<line x1="1110" y1="30" x2="1110" y2="223"/>
-<line x1="1110" y1="363" x2="1110" y2="496"/>
-<line x1="1782" y1="30" x2="1782" y2="223"/>
-<line x1="1782" y1="363" x2="1782" y2="522"/>
-<line x1="246" y1="572" x2="1636" y2="572"/>
-<circle cx="286" cy="572" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="964" cy="572" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M102,586 L281.5,586 A4.5,4.5 0 0 1 290.5,586 L959.5,586 A4.5,4.5 0 0 1 968.5,586 L1631.5,586 A4.5,4.5 0 0 1 1640.5,586 L1782,586"/>
+<path d="M736,560 L959.5,560 A4.5,4.5 0 0 1 968.5,560 L1313.5,560 A4.5,4.5 0 0 1 1322.5,560 L1340,560"/>
+<path d="M432,534 L635.5,534 A4.5,4.5 0 0 1 644.5,534 L731.5,534 A4.5,4.5 0 0 1 740.5,534 L959.5,534 A4.5,4.5 0 0 1 968.5,534 L1105.5,534 A4.5,4.5 0 0 1 1114.5,534 L1296,534"/>
+<line x1="432" y1="30" x2="432" y2="255"/>
+<line x1="432" y1="395" x2="432" y2="534"/>
+<line x1="1110" y1="30" x2="1110" y2="255"/>
+<line x1="1110" y1="395" x2="1110" y2="560"/>
+<line x1="1782" y1="30" x2="1782" y2="255"/>
+<line x1="1782" y1="395" x2="1782" y2="586"/>
+<line x1="246" y1="636" x2="1636" y2="636"/>
+<circle cx="286" cy="636" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="964" cy="636" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1782" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="802" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="684" cy="46" r="3.5" fill="currentColor" stroke="none"/>
@@ -20641,30 +21897,42 @@ $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{B}\overline{Q_{C}} \\ S_{A} &= Q_{
 <circle cx="168" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="706" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="522" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1362" cy="522" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1318" cy="522" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1110" cy="496" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1362" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1318" cy="586" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1110" cy="560" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="301" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="229" text-anchor="start" font-size="14">S</text>
-<text x="316" y="369" text-anchor="start" font-size="14">R</text>
-<text x="380" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="1026" y="301" text-anchor="middle" font-size="26">B</text>
-<text x="994" y="229" text-anchor="start" font-size="14">S</text>
-<text x="994" y="369" text-anchor="start" font-size="14">R</text>
-<text x="1058" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1058" y="369" text-anchor="end" font-size="16">Q</text>
-<text x="1698" y="301" text-anchor="middle" font-size="26">C</text>
-<text x="1666" y="229" text-anchor="start" font-size="14">S</text>
-<text x="1666" y="369" text-anchor="start" font-size="14">R</text>
-<text x="1730" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1730" y="369" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="333" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="261" text-anchor="start" font-size="14">S</text>
+<text x="316" y="401" text-anchor="start" font-size="14">R</text>
+<text x="380" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="1026" y="333" text-anchor="middle" font-size="26">B</text>
+<text x="1026" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1026" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="1026" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1026" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="994" y="261" text-anchor="start" font-size="14">S</text>
+<text x="994" y="401" text-anchor="start" font-size="14">R</text>
+<text x="1058" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1058" y="401" text-anchor="end" font-size="16">Q</text>
+<text x="1698" y="333" text-anchor="middle" font-size="26">C</text>
+<text x="1698" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1698" y="475" text-anchor="middle" font-size="14">1</text>
+<text x="1698" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1698" y="425" text-anchor="middle" font-size="12">CLR</text>
+<text x="1666" y="261" text-anchor="start" font-size="14">S</text>
+<text x="1666" y="401" text-anchor="start" font-size="14">R</text>
+<text x="1730" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1730" y="401" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1110" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1782" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="578" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="642" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -20928,131 +22196,157 @@ $D_{C} = \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}}Q_{C} + \overline{Q_{A}}Q_{B}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{A}}\overline{Q_{C}} + \overline{Q_{B}}\overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1940" height="494" viewBox="0 0 1940 494" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1940" height="558" viewBox="0 0 1940 558" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="196" width="80" height="150" rx="2"/>
-<polyline points="454,292 466,301 454,310"/>
-<line x1="454" y1="301" x2="432" y2="301"/>
-<line x1="432" y1="301" x2="432" y2="470"/>
-<path d="M350,201 C372,201 398,217.5 410,234 C398,250.5 372,267 350,267 Q364,234 350,201 Z"/>
-<path d="M218,157 H244 A26,33 0 0 1 244,223 H218 Z"/>
-<line x1="270" y1="190" x2="332" y2="190"/>
-<line x1="332" y1="190" x2="332" y2="223"/>
-<line x1="332" y1="223" x2="356.2" y2="223"/>
-<path d="M218,245 H244 A26,33 0 0 1 244,311 H218 Z"/>
-<line x1="270" y1="278" x2="312" y2="278"/>
-<line x1="312" y1="278" x2="312" y2="245"/>
-<line x1="312" y1="245" x2="356.2" y2="245"/>
-<line x1="410" y1="234" x2="454" y2="234"/>
-<line x1="534" y1="234" x2="578" y2="234"/>
-<line x1="534" y1="308" x2="578" y2="308"/>
-<line x1="517.2" y1="300.4" x2="526" y2="300.4" stroke-width="1.4"/>
-<rect x="1110" y="196" width="80" height="150" rx="2"/>
-<polyline points="1110,292 1122,301 1110,310"/>
-<line x1="1110" y1="301" x2="1088" y2="301"/>
-<line x1="1088" y1="301" x2="1088" y2="470"/>
-<path d="M1006,201 C1028,201 1054,217.5 1066,234 C1054,250.5 1028,267 1006,267 Q1020,234 1006,201 Z"/>
-<path d="M874,146 H900 A26,33 0 0 1 900,212 H874 Z"/>
-<line x1="926" y1="179" x2="988" y2="179"/>
-<line x1="988" y1="179" x2="988" y2="223"/>
-<line x1="988" y1="223" x2="1012.2" y2="223"/>
-<path d="M874,245 H900 A26,44 0 0 1 900,333 H874 Z"/>
-<line x1="926" y1="289" x2="968" y2="289"/>
-<line x1="968" y1="289" x2="968" y2="245"/>
-<line x1="968" y1="245" x2="1012.2" y2="245"/>
-<line x1="1066" y1="234" x2="1110" y2="234"/>
-<line x1="1190" y1="234" x2="1234" y2="234"/>
-<line x1="1190" y1="308" x2="1234" y2="308"/>
-<line x1="1173.2" y1="300.4" x2="1182" y2="300.4" stroke-width="1.4"/>
-<rect x="1744" y="196" width="80" height="150" rx="2"/>
-<polyline points="1744,292 1756,301 1744,310"/>
-<line x1="1744" y1="301" x2="1722" y2="301"/>
-<line x1="1722" y1="301" x2="1722" y2="470"/>
-<path d="M1640,201 C1662,201 1688,217.5 1700,234 C1688,250.5 1662,267 1640,267 Q1654,234 1640,201 Z"/>
-<path d="M1508,157 H1534 A26,33 0 0 1 1534,223 H1508 Z"/>
-<line x1="1560" y1="190" x2="1622" y2="190"/>
-<line x1="1622" y1="190" x2="1622" y2="223"/>
-<line x1="1622" y1="223" x2="1646.2" y2="223"/>
-<path d="M1508,245 H1534 A26,33 0 0 1 1534,311 H1508 Z"/>
-<line x1="1560" y1="278" x2="1602" y2="278"/>
-<line x1="1602" y1="278" x2="1602" y2="245"/>
-<line x1="1602" y1="245" x2="1646.2" y2="245"/>
-<line x1="1700" y1="234" x2="1744" y2="234"/>
-<line x1="1824" y1="234" x2="1868" y2="234"/>
-<line x1="1824" y1="308" x2="1868" y2="308"/>
-<line x1="1807.2" y1="300.4" x2="1816" y2="300.4" stroke-width="1.4"/>
-<line x1="174" y1="72" x2="174" y2="179"/>
-<line x1="174" y1="179" x2="218" y2="179"/>
-<line x1="152" y1="46" x2="152" y2="201"/>
-<line x1="152" y1="201" x2="218" y2="201"/>
-<line x1="130" y1="98" x2="130" y2="267"/>
-<line x1="130" y1="267" x2="218" y2="267"/>
-<line x1="108" y1="394" x2="108" y2="289"/>
-<line x1="108" y1="289" x2="218" y2="289"/>
-<line x1="830" y1="46" x2="830" y2="190"/>
-<line x1="830" y1="190" x2="874" y2="190"/>
-<line x1="808" y1="72" x2="808" y2="289"/>
-<line x1="808" y1="289" x2="874" y2="289"/>
-<line x1="786" y1="420" x2="786" y2="311"/>
-<line x1="786" y1="311" x2="874" y2="311"/>
-<line x1="764" y1="368" x2="764" y2="267"/>
-<path d="M764,267 L803.5,267 A4.5,4.5 0 0 1 812.5,267 L874,267"/>
-<line x1="742" y1="394" x2="742" y2="168"/>
-<path d="M742,168 L803.5,168 A4.5,4.5 0 0 1 812.5,168 L825.5,168 A4.5,4.5 0 0 1 834.5,168 L874,168"/>
-<line x1="1464" y1="420" x2="1464" y2="289"/>
-<line x1="1464" y1="289" x2="1508" y2="289"/>
-<line x1="1442" y1="394" x2="1442" y2="267"/>
-<line x1="1442" y1="267" x2="1508" y2="267"/>
-<line x1="1420" y1="420" x2="1420" y2="201"/>
-<line x1="1420" y1="201" x2="1508" y2="201"/>
-<line x1="1398" y1="368" x2="1398" y2="179"/>
-<line x1="1398" y1="179" x2="1508" y2="179"/>
+<rect x="454" y="228" width="80" height="150" rx="2"/>
+<circle cx="494" cy="224" r="4"/>
+<line x1="494" y1="220" x2="494" y2="204"/>
+<circle cx="494" cy="382" r="4"/>
+<line x1="494" y1="386" x2="494" y2="402"/>
+<polyline points="454,324 466,333 454,342"/>
+<line x1="454" y1="333" x2="432" y2="333"/>
+<line x1="432" y1="333" x2="432" y2="534"/>
+<path d="M350,233 C372,233 398,249.5 410,266 C398,282.5 372,299 350,299 Q364,266 350,233 Z"/>
+<path d="M218,189 H244 A26,33 0 0 1 244,255 H218 Z"/>
+<line x1="270" y1="222" x2="332" y2="222"/>
+<line x1="332" y1="222" x2="332" y2="255"/>
+<line x1="332" y1="255" x2="356.2" y2="255"/>
+<path d="M218,277 H244 A26,33 0 0 1 244,343 H218 Z"/>
+<line x1="270" y1="310" x2="312" y2="310"/>
+<line x1="312" y1="310" x2="312" y2="277"/>
+<line x1="312" y1="277" x2="356.2" y2="277"/>
+<line x1="410" y1="266" x2="454" y2="266"/>
+<line x1="534" y1="266" x2="578" y2="266"/>
+<line x1="534" y1="340" x2="578" y2="340"/>
+<line x1="517.2" y1="332.4" x2="526" y2="332.4" stroke-width="1.4"/>
+<rect x="1110" y="228" width="80" height="150" rx="2"/>
+<circle cx="1150" cy="224" r="4"/>
+<line x1="1150" y1="220" x2="1150" y2="204"/>
+<circle cx="1150" cy="382" r="4"/>
+<line x1="1150" y1="386" x2="1150" y2="402"/>
+<polyline points="1110,324 1122,333 1110,342"/>
+<line x1="1110" y1="333" x2="1088" y2="333"/>
+<line x1="1088" y1="333" x2="1088" y2="534"/>
+<path d="M1006,233 C1028,233 1054,249.5 1066,266 C1054,282.5 1028,299 1006,299 Q1020,266 1006,233 Z"/>
+<path d="M874,178 H900 A26,33 0 0 1 900,244 H874 Z"/>
+<line x1="926" y1="211" x2="988" y2="211"/>
+<line x1="988" y1="211" x2="988" y2="255"/>
+<line x1="988" y1="255" x2="1012.2" y2="255"/>
+<path d="M874,277 H900 A26,44 0 0 1 900,365 H874 Z"/>
+<line x1="926" y1="321" x2="968" y2="321"/>
+<line x1="968" y1="321" x2="968" y2="277"/>
+<line x1="968" y1="277" x2="1012.2" y2="277"/>
+<line x1="1066" y1="266" x2="1110" y2="266"/>
+<line x1="1190" y1="266" x2="1234" y2="266"/>
+<line x1="1190" y1="340" x2="1234" y2="340"/>
+<line x1="1173.2" y1="332.4" x2="1182" y2="332.4" stroke-width="1.4"/>
+<rect x="1744" y="228" width="80" height="150" rx="2"/>
+<circle cx="1784" cy="224" r="4"/>
+<line x1="1784" y1="220" x2="1784" y2="204"/>
+<circle cx="1784" cy="382" r="4"/>
+<line x1="1784" y1="386" x2="1784" y2="402"/>
+<polyline points="1744,324 1756,333 1744,342"/>
+<line x1="1744" y1="333" x2="1722" y2="333"/>
+<line x1="1722" y1="333" x2="1722" y2="534"/>
+<path d="M1640,233 C1662,233 1688,249.5 1700,266 C1688,282.5 1662,299 1640,299 Q1654,266 1640,233 Z"/>
+<path d="M1508,189 H1534 A26,33 0 0 1 1534,255 H1508 Z"/>
+<line x1="1560" y1="222" x2="1622" y2="222"/>
+<line x1="1622" y1="222" x2="1622" y2="255"/>
+<line x1="1622" y1="255" x2="1646.2" y2="255"/>
+<path d="M1508,277 H1534 A26,33 0 0 1 1534,343 H1508 Z"/>
+<line x1="1560" y1="310" x2="1602" y2="310"/>
+<line x1="1602" y1="310" x2="1602" y2="277"/>
+<line x1="1602" y1="277" x2="1646.2" y2="277"/>
+<line x1="1700" y1="266" x2="1744" y2="266"/>
+<line x1="1824" y1="266" x2="1868" y2="266"/>
+<line x1="1824" y1="340" x2="1868" y2="340"/>
+<line x1="1807.2" y1="332.4" x2="1816" y2="332.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="211"/>
+<line x1="174" y1="211" x2="218" y2="211"/>
+<line x1="152" y1="46" x2="152" y2="233"/>
+<line x1="152" y1="233" x2="218" y2="233"/>
+<line x1="130" y1="98" x2="130" y2="299"/>
+<line x1="130" y1="299" x2="218" y2="299"/>
+<line x1="108" y1="458" x2="108" y2="321"/>
+<line x1="108" y1="321" x2="218" y2="321"/>
+<line x1="830" y1="46" x2="830" y2="222"/>
+<line x1="830" y1="222" x2="874" y2="222"/>
+<line x1="808" y1="72" x2="808" y2="321"/>
+<line x1="808" y1="321" x2="874" y2="321"/>
+<line x1="786" y1="484" x2="786" y2="343"/>
+<line x1="786" y1="343" x2="874" y2="343"/>
+<line x1="764" y1="432" x2="764" y2="299"/>
+<path d="M764,299 L803.5,299 A4.5,4.5 0 0 1 812.5,299 L874,299"/>
+<line x1="742" y1="458" x2="742" y2="200"/>
+<path d="M742,200 L803.5,200 A4.5,4.5 0 0 1 812.5,200 L825.5,200 A4.5,4.5 0 0 1 834.5,200 L874,200"/>
+<line x1="1464" y1="484" x2="1464" y2="321"/>
+<line x1="1464" y1="321" x2="1508" y2="321"/>
+<line x1="1442" y1="458" x2="1442" y2="299"/>
+<line x1="1442" y1="299" x2="1508" y2="299"/>
+<line x1="1420" y1="484" x2="1420" y2="233"/>
+<line x1="1420" y1="233" x2="1508" y2="233"/>
+<line x1="1398" y1="432" x2="1398" y2="211"/>
+<line x1="1398" y1="211" x2="1508" y2="211"/>
 <path d="M152,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1229.5,46 A4.5,4.5 0 0 1 1238.5,46 L1868,46"/>
 <path d="M174,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L825.5,72 A4.5,4.5 0 0 1 834.5,72 L1234,72"/>
 <path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L578,98"/>
-<path d="M786,420 L1083.5,420 A4.5,4.5 0 0 1 1092.5,420 L1717.5,420 A4.5,4.5 0 0 1 1726.5,420 L1868,420"/>
-<path d="M108,394 L427.5,394 A4.5,4.5 0 0 1 436.5,394 L781.5,394 A4.5,4.5 0 0 1 790.5,394 L1083.5,394 A4.5,4.5 0 0 1 1092.5,394 L1415.5,394 A4.5,4.5 0 0 1 1424.5,394 L1442,394"/>
-<path d="M578,368 L737.5,368 A4.5,4.5 0 0 1 746.5,368 L781.5,368 A4.5,4.5 0 0 1 790.5,368 L1083.5,368 A4.5,4.5 0 0 1 1092.5,368 L1229.5,368 A4.5,4.5 0 0 1 1238.5,368 L1398,368"/>
-<line x1="578" y1="30" x2="578" y2="234"/>
-<line x1="578" y1="308" x2="578" y2="368"/>
-<line x1="1234" y1="30" x2="1234" y2="234"/>
-<line x1="1234" y1="308" x2="1234" y2="394"/>
-<line x1="1868" y1="30" x2="1868" y2="234"/>
-<line x1="1868" y1="308" x2="1868" y2="420"/>
-<line x1="392" y1="470" x2="1722" y2="470"/>
-<circle cx="432" cy="470" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1088" cy="470" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M786,484 L1083.5,484 A4.5,4.5 0 0 1 1092.5,484 L1717.5,484 A4.5,4.5 0 0 1 1726.5,484 L1868,484"/>
+<path d="M108,458 L427.5,458 A4.5,4.5 0 0 1 436.5,458 L781.5,458 A4.5,4.5 0 0 1 790.5,458 L1083.5,458 A4.5,4.5 0 0 1 1092.5,458 L1415.5,458 A4.5,4.5 0 0 1 1424.5,458 L1442,458"/>
+<path d="M578,432 L737.5,432 A4.5,4.5 0 0 1 746.5,432 L781.5,432 A4.5,4.5 0 0 1 790.5,432 L1083.5,432 A4.5,4.5 0 0 1 1092.5,432 L1229.5,432 A4.5,4.5 0 0 1 1238.5,432 L1398,432"/>
+<line x1="578" y1="30" x2="578" y2="266"/>
+<line x1="578" y1="340" x2="578" y2="432"/>
+<line x1="1234" y1="30" x2="1234" y2="266"/>
+<line x1="1234" y1="340" x2="1234" y2="458"/>
+<line x1="1868" y1="30" x2="1868" y2="266"/>
+<line x1="1868" y1="340" x2="1868" y2="484"/>
+<line x1="392" y1="534" x2="1722" y2="534"/>
+<circle cx="432" cy="534" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1088" cy="534" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1868" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="830" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1464" cy="420" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1420" cy="420" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1234" cy="394" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="742" cy="394" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="764" cy="368" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1464" cy="484" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1420" cy="484" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1234" cy="458" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="742" cy="458" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="432" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="279" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="240" text-anchor="start" font-size="14">D</text>
-<text x="526" y="240" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1150" y="279" text-anchor="middle" font-size="26">B</text>
-<text x="1118" y="240" text-anchor="start" font-size="14">D</text>
-<text x="1182" y="240" text-anchor="end" font-size="16">Q</text>
-<text x="1182" y="314" text-anchor="end" font-size="16">Q</text>
-<text x="1784" y="279" text-anchor="middle" font-size="26">C</text>
-<text x="1752" y="240" text-anchor="start" font-size="14">D</text>
-<text x="1816" y="240" text-anchor="end" font-size="16">Q</text>
-<text x="1816" y="314" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="311" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="198" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="245" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="272" text-anchor="start" font-size="14">D</text>
+<text x="526" y="272" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1150" y="311" text-anchor="middle" font-size="26">B</text>
+<text x="1150" y="198" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="245" text-anchor="middle" font-size="12">PR</text>
+<text x="1150" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1118" y="272" text-anchor="start" font-size="14">D</text>
+<text x="1182" y="272" text-anchor="end" font-size="16">Q</text>
+<text x="1182" y="346" text-anchor="end" font-size="16">Q</text>
+<text x="1784" y="311" text-anchor="middle" font-size="26">C</text>
+<text x="1784" y="198" text-anchor="middle" font-size="14">1</text>
+<text x="1784" y="420" text-anchor="middle" font-size="14">1</text>
+<text x="1784" y="245" text-anchor="middle" font-size="12">PR</text>
+<text x="1784" y="370" text-anchor="middle" font-size="12">CLR</text>
+<text x="1752" y="272" text-anchor="start" font-size="14">D</text>
+<text x="1816" y="272" text-anchor="end" font-size="16">Q</text>
+<text x="1816" y="346" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1234" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1868" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="476" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="540" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -21315,82 +22609,96 @@ $T_{C} = \overline{Q_{A}} + \overline{Q_{B}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{B} \\ T_{B} &= Q_{C} + Q_{A}Q_{B} \\ T_{C} &= \overline{Q_{A}} + \overline{Q_{B}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1716" height="457" viewBox="0 0 1716 457" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1716" height="521" viewBox="0 0 1716 521" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="454" y="185" width="80" height="150" rx="2"/>
-<polyline points="454,281 466,290 454,299"/>
-<line x1="454" y1="290" x2="432" y2="290"/>
-<line x1="432" y1="290" x2="432" y2="433"/>
-<path d="M350,190 C372,190 398,206.5 410,223 C398,239.5 372,256 350,256 Q364,223 350,190 Z"/>
-<path d="M218,146 H244 A26,33 0 0 1 244,212 H218 Z"/>
-<line x1="270" y1="179" x2="332" y2="179"/>
-<line x1="332" y1="179" x2="332" y2="212"/>
-<line x1="332" y1="212" x2="356.2" y2="212"/>
-<path d="M218,234 H244 A26,33 0 0 1 244,300 H218 Z"/>
-<line x1="270" y1="267" x2="312" y2="267"/>
-<line x1="312" y1="267" x2="312" y2="234"/>
-<line x1="312" y1="234" x2="356.2" y2="234"/>
-<line x1="410" y1="223" x2="454" y2="223"/>
-<line x1="534" y1="223" x2="578" y2="223"/>
-<line x1="534" y1="297" x2="578" y2="297"/>
-<line x1="517.2" y1="289.4" x2="526" y2="289.4" stroke-width="1.4"/>
-<rect x="1068" y="185" width="80" height="150" rx="2"/>
-<polyline points="1068,281 1080,290 1068,299"/>
-<line x1="1068" y1="290" x2="1046" y2="290"/>
-<line x1="1046" y1="290" x2="1046" y2="433"/>
-<path d="M964,190 C986,190 1012,206.5 1024,223 C1012,239.5 986,256 964,256 Q978,223 964,190 Z"/>
-<path d="M830,241 H856 A26,33 0 0 1 856,307 H830 Z"/>
-<line x1="882" y1="274" x2="946" y2="274"/>
-<line x1="946" y1="274" x2="946" y2="234"/>
-<line x1="946" y1="234" x2="970.2" y2="234"/>
-<line x1="1024" y1="223" x2="1068" y2="223"/>
-<line x1="1148" y1="223" x2="1192" y2="223"/>
-<line x1="1148" y1="297" x2="1192" y2="297"/>
-<line x1="1131.2" y1="289.4" x2="1140" y2="289.4" stroke-width="1.4"/>
-<rect x="1520" y="185" width="80" height="150" rx="2"/>
-<polyline points="1520,281 1532,290 1520,299"/>
-<line x1="1520" y1="290" x2="1498" y2="290"/>
-<line x1="1498" y1="290" x2="1498" y2="433"/>
-<path d="M1416,190 C1438,190 1464,206.5 1476,223 C1464,239.5 1438,256 1416,256 Q1430,223 1416,190 Z"/>
-<line x1="1476" y1="223" x2="1520" y2="223"/>
-<line x1="1600" y1="223" x2="1644" y2="223"/>
-<line x1="1600" y1="297" x2="1644" y2="297"/>
-<line x1="1583.2" y1="289.4" x2="1592" y2="289.4" stroke-width="1.4"/>
-<line x1="174" y1="72" x2="174" y2="168"/>
-<line x1="174" y1="168" x2="218" y2="168"/>
-<line x1="152" y1="46" x2="152" y2="190"/>
-<line x1="152" y1="190" x2="218" y2="190"/>
-<line x1="130" y1="98" x2="130" y2="256"/>
-<line x1="130" y1="256" x2="218" y2="256"/>
-<line x1="108" y1="72" x2="108" y2="278"/>
-<line x1="108" y1="278" x2="218" y2="278"/>
-<line x1="904.2" y1="46" x2="904.2" y2="212"/>
-<line x1="904.2" y1="212" x2="970.2" y2="212"/>
-<line x1="786" y1="98" x2="786" y2="263"/>
-<line x1="786" y1="263" x2="830" y2="263"/>
-<line x1="764" y1="72" x2="764" y2="285"/>
-<line x1="764" y1="285" x2="830" y2="285"/>
-<line x1="1378.2" y1="383" x2="1378.2" y2="234"/>
-<line x1="1378.2" y1="234" x2="1422.2" y2="234"/>
-<line x1="1356.2" y1="357" x2="1356.2" y2="212"/>
-<line x1="1356.2" y1="212" x2="1422.2" y2="212"/>
+<rect x="454" y="217" width="80" height="150" rx="2"/>
+<circle cx="494" cy="213" r="4"/>
+<line x1="494" y1="209" x2="494" y2="193"/>
+<circle cx="494" cy="371" r="4"/>
+<line x1="494" y1="375" x2="494" y2="391"/>
+<polyline points="454,313 466,322 454,331"/>
+<line x1="454" y1="322" x2="432" y2="322"/>
+<line x1="432" y1="322" x2="432" y2="497"/>
+<path d="M350,222 C372,222 398,238.5 410,255 C398,271.5 372,288 350,288 Q364,255 350,222 Z"/>
+<path d="M218,178 H244 A26,33 0 0 1 244,244 H218 Z"/>
+<line x1="270" y1="211" x2="332" y2="211"/>
+<line x1="332" y1="211" x2="332" y2="244"/>
+<line x1="332" y1="244" x2="356.2" y2="244"/>
+<path d="M218,266 H244 A26,33 0 0 1 244,332 H218 Z"/>
+<line x1="270" y1="299" x2="312" y2="299"/>
+<line x1="312" y1="299" x2="312" y2="266"/>
+<line x1="312" y1="266" x2="356.2" y2="266"/>
+<line x1="410" y1="255" x2="454" y2="255"/>
+<line x1="534" y1="255" x2="578" y2="255"/>
+<line x1="534" y1="329" x2="578" y2="329"/>
+<line x1="517.2" y1="321.4" x2="526" y2="321.4" stroke-width="1.4"/>
+<rect x="1068" y="217" width="80" height="150" rx="2"/>
+<circle cx="1108" cy="213" r="4"/>
+<line x1="1108" y1="209" x2="1108" y2="193"/>
+<circle cx="1108" cy="371" r="4"/>
+<line x1="1108" y1="375" x2="1108" y2="391"/>
+<polyline points="1068,313 1080,322 1068,331"/>
+<line x1="1068" y1="322" x2="1046" y2="322"/>
+<line x1="1046" y1="322" x2="1046" y2="497"/>
+<path d="M964,222 C986,222 1012,238.5 1024,255 C1012,271.5 986,288 964,288 Q978,255 964,222 Z"/>
+<path d="M830,273 H856 A26,33 0 0 1 856,339 H830 Z"/>
+<line x1="882" y1="306" x2="946" y2="306"/>
+<line x1="946" y1="306" x2="946" y2="266"/>
+<line x1="946" y1="266" x2="970.2" y2="266"/>
+<line x1="1024" y1="255" x2="1068" y2="255"/>
+<line x1="1148" y1="255" x2="1192" y2="255"/>
+<line x1="1148" y1="329" x2="1192" y2="329"/>
+<line x1="1131.2" y1="321.4" x2="1140" y2="321.4" stroke-width="1.4"/>
+<rect x="1520" y="217" width="80" height="150" rx="2"/>
+<circle cx="1560" cy="213" r="4"/>
+<line x1="1560" y1="209" x2="1560" y2="193"/>
+<circle cx="1560" cy="371" r="4"/>
+<line x1="1560" y1="375" x2="1560" y2="391"/>
+<polyline points="1520,313 1532,322 1520,331"/>
+<line x1="1520" y1="322" x2="1498" y2="322"/>
+<line x1="1498" y1="322" x2="1498" y2="497"/>
+<path d="M1416,222 C1438,222 1464,238.5 1476,255 C1464,271.5 1438,288 1416,288 Q1430,255 1416,222 Z"/>
+<line x1="1476" y1="255" x2="1520" y2="255"/>
+<line x1="1600" y1="255" x2="1644" y2="255"/>
+<line x1="1600" y1="329" x2="1644" y2="329"/>
+<line x1="1583.2" y1="321.4" x2="1592" y2="321.4" stroke-width="1.4"/>
+<line x1="174" y1="72" x2="174" y2="200"/>
+<line x1="174" y1="200" x2="218" y2="200"/>
+<line x1="152" y1="46" x2="152" y2="222"/>
+<line x1="152" y1="222" x2="218" y2="222"/>
+<line x1="130" y1="98" x2="130" y2="288"/>
+<line x1="130" y1="288" x2="218" y2="288"/>
+<line x1="108" y1="72" x2="108" y2="310"/>
+<line x1="108" y1="310" x2="218" y2="310"/>
+<line x1="904.2" y1="46" x2="904.2" y2="244"/>
+<line x1="904.2" y1="244" x2="970.2" y2="244"/>
+<line x1="786" y1="98" x2="786" y2="295"/>
+<line x1="786" y1="295" x2="830" y2="295"/>
+<line x1="764" y1="72" x2="764" y2="317"/>
+<line x1="764" y1="317" x2="830" y2="317"/>
+<line x1="1378.2" y1="447" x2="1378.2" y2="266"/>
+<line x1="1378.2" y1="266" x2="1422.2" y2="266"/>
+<line x1="1356.2" y1="421" x2="1356.2" y2="244"/>
+<line x1="1356.2" y1="244" x2="1422.2" y2="244"/>
 <path d="M152,46 L573.5,46 A4.5,4.5 0 0 1 582.5,46 L1187.5,46 A4.5,4.5 0 0 1 1196.5,46 L1644,46"/>
 <path d="M108,72 L147.5,72 A4.5,4.5 0 0 1 156.5,72 L573.5,72 A4.5,4.5 0 0 1 582.5,72 L899.7,72 A4.5,4.5 0 0 1 908.7,72 L1192,72"/>
 <path d="M130,98 L147.5,98 A4.5,4.5 0 0 1 156.5,98 L169.5,98 A4.5,4.5 0 0 1 178.5,98 L759.5,98 A4.5,4.5 0 0 1 768.5,98 L786,98"/>
-<line x1="1192" y1="383" x2="1378.2" y2="383"/>
-<path d="M578,357 L1041.5,357 A4.5,4.5 0 0 1 1050.5,357 L1187.5,357 A4.5,4.5 0 0 1 1196.5,357 L1356.2,357"/>
-<line x1="578" y1="30" x2="578" y2="223"/>
-<line x1="578" y1="297" x2="578" y2="357"/>
-<line x1="1192" y1="30" x2="1192" y2="223"/>
-<line x1="1192" y1="297" x2="1192" y2="383"/>
-<line x1="1644" y1="30" x2="1644" y2="223"/>
-<line x1="392" y1="433" x2="1498" y2="433"/>
-<circle cx="432" cy="433" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1046" cy="433" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="1192" y1="447" x2="1378.2" y2="447"/>
+<path d="M578,421 L1041.5,421 A4.5,4.5 0 0 1 1050.5,421 L1187.5,421 A4.5,4.5 0 0 1 1196.5,421 L1356.2,421"/>
+<line x1="578" y1="30" x2="578" y2="255"/>
+<line x1="578" y1="329" x2="578" y2="421"/>
+<line x1="1192" y1="30" x2="1192" y2="255"/>
+<line x1="1192" y1="329" x2="1192" y2="447"/>
+<line x1="1644" y1="30" x2="1644" y2="255"/>
+<line x1="392" y1="497" x2="1498" y2="497"/>
+<circle cx="432" cy="497" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1046" cy="497" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1644" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="904.2" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1192" cy="72" r="3.5" fill="currentColor" stroke="none"/>
@@ -21398,22 +22706,34 @@ $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B}Q_{C} + Q_{A}Q_{B} \\ T_{B} &= Q
 <circle cx="764" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="578" cy="98" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="494" y="268" text-anchor="middle" font-size="26">A</text>
-<text x="462" y="229" text-anchor="start" font-size="14">T</text>
-<text x="526" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="526" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1108" y="268" text-anchor="middle" font-size="26">B</text>
-<text x="1076" y="229" text-anchor="start" font-size="14">T</text>
-<text x="1140" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1140" y="303" text-anchor="end" font-size="16">Q</text>
-<text x="1560" y="268" text-anchor="middle" font-size="26">C</text>
-<text x="1528" y="229" text-anchor="start" font-size="14">T</text>
-<text x="1592" y="229" text-anchor="end" font-size="16">Q</text>
-<text x="1592" y="303" text-anchor="end" font-size="16">Q</text>
+<text x="494" y="300" text-anchor="middle" font-size="26">A</text>
+<text x="494" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="494" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="494" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="462" y="261" text-anchor="start" font-size="14">T</text>
+<text x="526" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="526" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1108" y="300" text-anchor="middle" font-size="26">B</text>
+<text x="1108" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1108" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1108" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1108" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1076" y="261" text-anchor="start" font-size="14">T</text>
+<text x="1140" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1140" y="335" text-anchor="end" font-size="16">Q</text>
+<text x="1560" y="300" text-anchor="middle" font-size="26">C</text>
+<text x="1560" y="187" text-anchor="middle" font-size="14">1</text>
+<text x="1560" y="409" text-anchor="middle" font-size="14">1</text>
+<text x="1560" y="234" text-anchor="middle" font-size="12">PR</text>
+<text x="1560" y="359" text-anchor="middle" font-size="12">CLR</text>
+<text x="1528" y="261" text-anchor="start" font-size="14">T</text>
+<text x="1592" y="261" text-anchor="end" font-size="16">Q</text>
+<text x="1592" y="335" text-anchor="end" font-size="16">Q</text>
 <text x="578" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1192" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1644" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="388" y="439" text-anchor="end" font-size="16">Clock</text>
+<text x="388" y="503" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -21794,91 +23114,117 @@ $K_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ K_{A} &= \overline{Q_{C}} \\ J_{B} &= Q_{A}\overline{Q_{C}} \\ K_{B} &= \overline{Q_{C}} \\ J_{C} = K_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1332" height="361" viewBox="0 0 1332 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1332" height="425" viewBox="0 0 1332 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="302" y="89" width="80" height="150" rx="2"/>
-<polyline points="302,155 314,164 302,173"/>
-<circle cx="298" cy="164" r="4"/>
-<line x1="294" y1="164" x2="280" y2="164"/>
-<line x1="280" y1="164" x2="280" y2="337"/>
-<path d="M190,94 H216 A26,33 0 0 1 216,160 H190 Z"/>
-<line x1="242" y1="127" x2="302" y2="127"/>
-<line x1="382" y1="127" x2="426" y2="127"/>
-<line x1="382" y1="201" x2="426" y2="201"/>
-<line x1="365.2" y1="193.4" x2="374" y2="193.4" stroke-width="1.4"/>
-<rect x="784" y="89" width="80" height="150" rx="2"/>
-<polyline points="784,155 796,164 784,173"/>
-<circle cx="780" cy="164" r="4"/>
-<line x1="776" y1="164" x2="762" y2="164"/>
-<line x1="762" y1="164" x2="762" y2="337"/>
-<path d="M672,94 H698 A26,33 0 0 1 698,160 H672 Z"/>
-<line x1="724" y1="127" x2="784" y2="127"/>
-<line x1="864" y1="127" x2="908" y2="127"/>
-<line x1="864" y1="201" x2="908" y2="201"/>
-<line x1="847.2" y1="193.4" x2="856" y2="193.4" stroke-width="1.4"/>
-<rect x="1136" y="89" width="80" height="150" rx="2"/>
-<polyline points="1136,155 1148,164 1136,173"/>
-<circle cx="1132" cy="164" r="4"/>
-<line x1="1128" y1="164" x2="1114" y2="164"/>
-<line x1="1114" y1="164" x2="1114" y2="337"/>
-<line x1="1084" y1="127" x2="1136" y2="127"/>
-<path d="M1084,201 L1109.5,201 A4.5,4.5 0 0 1 1118.5,201 L1136,201"/>
-<line x1="1216" y1="127" x2="1260" y2="127"/>
-<line x1="1216" y1="201" x2="1260" y2="201"/>
-<line x1="1199.2" y1="193.4" x2="1208" y2="193.4" stroke-width="1.4"/>
-<line x1="258" y1="287" x2="258" y2="201"/>
-<path d="M258,201 L275.5,201 A4.5,4.5 0 0 1 284.5,201 L302,201"/>
-<line x1="146" y1="287" x2="146" y2="138"/>
-<line x1="146" y1="138" x2="190" y2="138"/>
-<line x1="124" y1="261" x2="124" y2="116"/>
-<line x1="124" y1="116" x2="190" y2="116"/>
-<line x1="628" y1="46" x2="628" y2="116"/>
-<line x1="628" y1="116" x2="672" y2="116"/>
-<line x1="740" y1="287" x2="740" y2="201"/>
-<path d="M740,201 L757.5,201 A4.5,4.5 0 0 1 766.5,201 L784,201"/>
-<line x1="606" y1="287" x2="606" y2="138"/>
-<line x1="606" y1="138" x2="672" y2="138"/>
+<rect x="302" y="121" width="80" height="150" rx="2"/>
+<circle cx="342" cy="117" r="4"/>
+<line x1="342" y1="113" x2="342" y2="97"/>
+<circle cx="342" cy="275" r="4"/>
+<line x1="342" y1="279" x2="342" y2="295"/>
+<polyline points="302,187 314,196 302,205"/>
+<circle cx="298" cy="196" r="4"/>
+<line x1="294" y1="196" x2="280" y2="196"/>
+<line x1="280" y1="196" x2="280" y2="401"/>
+<path d="M190,126 H216 A26,33 0 0 1 216,192 H190 Z"/>
+<line x1="242" y1="159" x2="302" y2="159"/>
+<line x1="382" y1="159" x2="426" y2="159"/>
+<line x1="382" y1="233" x2="426" y2="233"/>
+<line x1="365.2" y1="225.4" x2="374" y2="225.4" stroke-width="1.4"/>
+<rect x="784" y="121" width="80" height="150" rx="2"/>
+<circle cx="824" cy="117" r="4"/>
+<line x1="824" y1="113" x2="824" y2="97"/>
+<circle cx="824" cy="275" r="4"/>
+<line x1="824" y1="279" x2="824" y2="295"/>
+<polyline points="784,187 796,196 784,205"/>
+<circle cx="780" cy="196" r="4"/>
+<line x1="776" y1="196" x2="762" y2="196"/>
+<line x1="762" y1="196" x2="762" y2="401"/>
+<path d="M672,126 H698 A26,33 0 0 1 698,192 H672 Z"/>
+<line x1="724" y1="159" x2="784" y2="159"/>
+<line x1="864" y1="159" x2="908" y2="159"/>
+<line x1="864" y1="233" x2="908" y2="233"/>
+<line x1="847.2" y1="225.4" x2="856" y2="225.4" stroke-width="1.4"/>
+<rect x="1136" y="121" width="80" height="150" rx="2"/>
+<circle cx="1176" cy="117" r="4"/>
+<line x1="1176" y1="113" x2="1176" y2="97"/>
+<circle cx="1176" cy="275" r="4"/>
+<line x1="1176" y1="279" x2="1176" y2="295"/>
+<polyline points="1136,187 1148,196 1136,205"/>
+<circle cx="1132" cy="196" r="4"/>
+<line x1="1128" y1="196" x2="1114" y2="196"/>
+<line x1="1114" y1="196" x2="1114" y2="401"/>
+<line x1="1084" y1="159" x2="1136" y2="159"/>
+<path d="M1084,233 L1109.5,233 A4.5,4.5 0 0 1 1118.5,233 L1136,233"/>
+<line x1="1216" y1="159" x2="1260" y2="159"/>
+<line x1="1216" y1="233" x2="1260" y2="233"/>
+<line x1="1199.2" y1="225.4" x2="1208" y2="225.4" stroke-width="1.4"/>
+<line x1="258" y1="351" x2="258" y2="233"/>
+<path d="M258,233 L275.5,233 A4.5,4.5 0 0 1 284.5,233 L302,233"/>
+<line x1="146" y1="351" x2="146" y2="170"/>
+<line x1="146" y1="170" x2="190" y2="170"/>
+<line x1="124" y1="325" x2="124" y2="148"/>
+<line x1="124" y1="148" x2="190" y2="148"/>
+<line x1="628" y1="46" x2="628" y2="148"/>
+<line x1="628" y1="148" x2="672" y2="148"/>
+<line x1="740" y1="351" x2="740" y2="233"/>
+<path d="M740,233 L757.5,233 A4.5,4.5 0 0 1 766.5,233 L784,233"/>
+<line x1="606" y1="351" x2="606" y2="170"/>
+<line x1="606" y1="170" x2="672" y2="170"/>
 <line x1="426" y1="46" x2="628" y2="46"/>
-<path d="M146,287 L275.5,287 A4.5,4.5 0 0 1 284.5,287 L757.5,287 A4.5,4.5 0 0 1 766.5,287 L1109.5,287 A4.5,4.5 0 0 1 1118.5,287 L1260,287"/>
-<path d="M124,261 L141.5,261 A4.5,4.5 0 0 1 150.5,261 L253.5,261 A4.5,4.5 0 0 1 262.5,261 L275.5,261 A4.5,4.5 0 0 1 284.5,261 L601.5,261 A4.5,4.5 0 0 1 610.5,261 L735.5,261 A4.5,4.5 0 0 1 744.5,261 L757.5,261 A4.5,4.5 0 0 1 766.5,261 L908,261"/>
-<line x1="426" y1="30" x2="426" y2="127"/>
-<line x1="908" y1="30" x2="908" y2="127"/>
-<line x1="908" y1="201" x2="908" y2="261"/>
-<line x1="1260" y1="30" x2="1260" y2="127"/>
-<line x1="1260" y1="201" x2="1260" y2="287"/>
-<line x1="240" y1="337" x2="1114" y2="337"/>
-<circle cx="280" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="762" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M146,351 L275.5,351 A4.5,4.5 0 0 1 284.5,351 L757.5,351 A4.5,4.5 0 0 1 766.5,351 L1109.5,351 A4.5,4.5 0 0 1 1118.5,351 L1260,351"/>
+<path d="M124,325 L141.5,325 A4.5,4.5 0 0 1 150.5,325 L253.5,325 A4.5,4.5 0 0 1 262.5,325 L275.5,325 A4.5,4.5 0 0 1 284.5,325 L601.5,325 A4.5,4.5 0 0 1 610.5,325 L735.5,325 A4.5,4.5 0 0 1 744.5,325 L757.5,325 A4.5,4.5 0 0 1 766.5,325 L908,325"/>
+<line x1="426" y1="30" x2="426" y2="159"/>
+<line x1="908" y1="30" x2="908" y2="159"/>
+<line x1="908" y1="233" x2="908" y2="325"/>
+<line x1="1260" y1="30" x2="1260" y2="159"/>
+<line x1="1260" y1="233" x2="1260" y2="351"/>
+<line x1="240" y1="401" x2="1114" y2="401"/>
+<circle cx="280" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="762" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="426" cy="46" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="258" cy="287" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="740" cy="287" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="606" cy="287" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="258" cy="351" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="740" cy="351" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="606" cy="351" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="342" y="172" text-anchor="middle" font-size="26">A</text>
-<text x="310" y="133" text-anchor="start" font-size="14">J</text>
-<text x="310" y="207" text-anchor="start" font-size="14">K</text>
-<text x="374" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="374" y="207" text-anchor="end" font-size="16">Q</text>
-<text x="824" y="172" text-anchor="middle" font-size="26">B</text>
-<text x="792" y="133" text-anchor="start" font-size="14">J</text>
-<text x="792" y="207" text-anchor="start" font-size="14">K</text>
-<text x="856" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="856" y="207" text-anchor="end" font-size="16">Q</text>
-<text x="1176" y="172" text-anchor="middle" font-size="26">C</text>
-<text x="1144" y="133" text-anchor="start" font-size="14">J</text>
-<text x="1144" y="207" text-anchor="start" font-size="14">K</text>
-<text x="1080" y="133" text-anchor="end" font-size="16">1</text>
-<text x="1080" y="207" text-anchor="end" font-size="16">1</text>
-<text x="1208" y="133" text-anchor="end" font-size="16">Q</text>
-<text x="1208" y="207" text-anchor="end" font-size="16">Q</text>
+<text x="342" y="204" text-anchor="middle" font-size="26">A</text>
+<text x="342" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="342" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="342" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="310" y="165" text-anchor="start" font-size="14">J</text>
+<text x="310" y="239" text-anchor="start" font-size="14">K</text>
+<text x="374" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="374" y="239" text-anchor="end" font-size="16">Q</text>
+<text x="824" y="204" text-anchor="middle" font-size="26">B</text>
+<text x="824" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="824" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="824" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="824" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="792" y="165" text-anchor="start" font-size="14">J</text>
+<text x="792" y="239" text-anchor="start" font-size="14">K</text>
+<text x="856" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="856" y="239" text-anchor="end" font-size="16">Q</text>
+<text x="1176" y="204" text-anchor="middle" font-size="26">C</text>
+<text x="1176" y="91" text-anchor="middle" font-size="14">1</text>
+<text x="1176" y="313" text-anchor="middle" font-size="14">1</text>
+<text x="1176" y="138" text-anchor="middle" font-size="12">PR</text>
+<text x="1176" y="263" text-anchor="middle" font-size="12">CLR</text>
+<text x="1144" y="165" text-anchor="start" font-size="14">J</text>
+<text x="1144" y="239" text-anchor="start" font-size="14">K</text>
+<text x="1080" y="165" text-anchor="end" font-size="16">1</text>
+<text x="1080" y="239" text-anchor="end" font-size="16">1</text>
+<text x="1208" y="165" text-anchor="end" font-size="16">Q</text>
+<text x="1208" y="239" text-anchor="end" font-size="16">Q</text>
 <text x="426" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="908" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1260" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="236" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="236" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -22258,107 +23604,133 @@ $S_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}\overline{Q_{C}} \\ S_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} \\ R_{B} &= \overline{Q_{A}}\overline{Q_{C}} \\ S_{B} &= Q_{A}\overline{Q_{C}} \\ R_{C} &= Q_{C} \\ S_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="460" viewBox="0 0 1368 460" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1368" height="524" viewBox="0 0 1368 524" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="330" y="126" width="80" height="183" rx="2"/>
-<polyline points="330,208.5 342,217.5 330,226.5"/>
-<circle cx="326" cy="217.5" r="4"/>
-<line x1="322" y1="217.5" x2="308" y2="217.5"/>
-<line x1="308" y1="217.5" x2="308" y2="436"/>
-<path d="M234,120 H260 A26,44 0 0 1 260,208 H234 Z"/>
-<line x1="286" y1="164" x2="330" y2="164"/>
-<path d="M234,238 H260 A26,33 0 0 1 260,304 H234 Z"/>
-<path d="M286,271 L303.5,271 A4.5,4.5 0 0 1 312.5,271 L330,271"/>
-<line x1="410" y1="164" x2="454" y2="164"/>
-<line x1="410" y1="271" x2="454" y2="271"/>
-<line x1="393.2" y1="263.4" x2="402" y2="263.4" stroke-width="1.4"/>
-<rect x="818" y="126" width="80" height="183" rx="2"/>
-<polyline points="818,208.5 830,217.5 818,226.5"/>
-<circle cx="814" cy="217.5" r="4"/>
-<line x1="810" y1="217.5" x2="796" y2="217.5"/>
-<line x1="796" y1="217.5" x2="796" y2="436"/>
-<path d="M722,131 H748 A26,33 0 0 1 748,197 H722 Z"/>
-<line x1="774" y1="164" x2="818" y2="164"/>
-<path d="M722,238 H748 A26,33 0 0 1 748,304 H722 Z"/>
-<path d="M774,271 L791.5,271 A4.5,4.5 0 0 1 800.5,271 L818,271"/>
-<line x1="898" y1="164" x2="942" y2="164"/>
-<line x1="898" y1="271" x2="942" y2="271"/>
-<line x1="881.2" y1="263.4" x2="890" y2="263.4" stroke-width="1.4"/>
-<rect x="1172" y="126" width="80" height="183" rx="2"/>
-<polyline points="1172,208.5 1184,217.5 1172,226.5"/>
-<circle cx="1168" cy="217.5" r="4"/>
-<line x1="1164" y1="217.5" x2="1150" y2="217.5"/>
-<line x1="1150" y1="217.5" x2="1150" y2="436"/>
-<line x1="1252" y1="164" x2="1296" y2="164"/>
-<line x1="1252" y1="271" x2="1296" y2="271"/>
-<line x1="1235.2" y1="263.4" x2="1244" y2="263.4" stroke-width="1.4"/>
-<line x1="190" y1="72" x2="190" y2="260"/>
-<line x1="190" y1="260" x2="234" y2="260"/>
-<line x1="168" y1="386" x2="168" y2="282"/>
-<line x1="168" y1="282" x2="234" y2="282"/>
-<line x1="146" y1="386" x2="146" y2="186"/>
-<path d="M146,186 L185.5,186 A4.5,4.5 0 0 1 194.5,186 L234,186"/>
-<line x1="124" y1="360" x2="124" y2="164"/>
-<path d="M124,164 L185.5,164 A4.5,4.5 0 0 1 194.5,164 L234,164"/>
-<line x1="102" y1="334" x2="102" y2="142"/>
-<path d="M102,142 L185.5,142 A4.5,4.5 0 0 1 194.5,142 L234,142"/>
-<line x1="678" y1="72" x2="678" y2="153"/>
-<line x1="678" y1="153" x2="722" y2="153"/>
-<line x1="656" y1="386" x2="656" y2="282"/>
-<line x1="656" y1="282" x2="722" y2="282"/>
-<line x1="634" y1="334" x2="634" y2="260"/>
-<line x1="634" y1="260" x2="722" y2="260"/>
-<line x1="612" y1="386" x2="612" y2="175"/>
-<line x1="612" y1="175" x2="722" y2="175"/>
-<line x1="1128" y1="46" x2="1128" y2="271"/>
-<path d="M1128,271 L1145.5,271 A4.5,4.5 0 0 1 1154.5,271 L1172,271"/>
-<line x1="1106" y1="386" x2="1106" y2="164"/>
-<path d="M1106,164 L1123.5,164 A4.5,4.5 0 0 1 1132.5,164 L1172,164"/>
+<rect x="330" y="158" width="80" height="183" rx="2"/>
+<circle cx="370" cy="154" r="4"/>
+<line x1="370" y1="150" x2="370" y2="134"/>
+<circle cx="370" cy="345" r="4"/>
+<line x1="370" y1="349" x2="370" y2="365"/>
+<polyline points="330,240.5 342,249.5 330,258.5"/>
+<circle cx="326" cy="249.5" r="4"/>
+<line x1="322" y1="249.5" x2="308" y2="249.5"/>
+<line x1="308" y1="249.5" x2="308" y2="500"/>
+<path d="M234,152 H260 A26,44 0 0 1 260,240 H234 Z"/>
+<line x1="286" y1="196" x2="330" y2="196"/>
+<path d="M234,270 H260 A26,33 0 0 1 260,336 H234 Z"/>
+<path d="M286,303 L303.5,303 A4.5,4.5 0 0 1 312.5,303 L330,303"/>
+<line x1="410" y1="196" x2="454" y2="196"/>
+<line x1="410" y1="303" x2="454" y2="303"/>
+<line x1="393.2" y1="295.4" x2="402" y2="295.4" stroke-width="1.4"/>
+<rect x="818" y="158" width="80" height="183" rx="2"/>
+<circle cx="858" cy="154" r="4"/>
+<line x1="858" y1="150" x2="858" y2="134"/>
+<circle cx="858" cy="345" r="4"/>
+<line x1="858" y1="349" x2="858" y2="365"/>
+<polyline points="818,240.5 830,249.5 818,258.5"/>
+<circle cx="814" cy="249.5" r="4"/>
+<line x1="810" y1="249.5" x2="796" y2="249.5"/>
+<line x1="796" y1="249.5" x2="796" y2="500"/>
+<path d="M722,163 H748 A26,33 0 0 1 748,229 H722 Z"/>
+<line x1="774" y1="196" x2="818" y2="196"/>
+<path d="M722,270 H748 A26,33 0 0 1 748,336 H722 Z"/>
+<path d="M774,303 L791.5,303 A4.5,4.5 0 0 1 800.5,303 L818,303"/>
+<line x1="898" y1="196" x2="942" y2="196"/>
+<line x1="898" y1="303" x2="942" y2="303"/>
+<line x1="881.2" y1="295.4" x2="890" y2="295.4" stroke-width="1.4"/>
+<rect x="1172" y="158" width="80" height="183" rx="2"/>
+<circle cx="1212" cy="154" r="4"/>
+<line x1="1212" y1="150" x2="1212" y2="134"/>
+<circle cx="1212" cy="345" r="4"/>
+<line x1="1212" y1="349" x2="1212" y2="365"/>
+<polyline points="1172,240.5 1184,249.5 1172,258.5"/>
+<circle cx="1168" cy="249.5" r="4"/>
+<line x1="1164" y1="249.5" x2="1150" y2="249.5"/>
+<line x1="1150" y1="249.5" x2="1150" y2="500"/>
+<line x1="1252" y1="196" x2="1296" y2="196"/>
+<line x1="1252" y1="303" x2="1296" y2="303"/>
+<line x1="1235.2" y1="295.4" x2="1244" y2="295.4" stroke-width="1.4"/>
+<line x1="190" y1="72" x2="190" y2="292"/>
+<line x1="190" y1="292" x2="234" y2="292"/>
+<line x1="168" y1="450" x2="168" y2="314"/>
+<line x1="168" y1="314" x2="234" y2="314"/>
+<line x1="146" y1="450" x2="146" y2="218"/>
+<path d="M146,218 L185.5,218 A4.5,4.5 0 0 1 194.5,218 L234,218"/>
+<line x1="124" y1="424" x2="124" y2="196"/>
+<path d="M124,196 L185.5,196 A4.5,4.5 0 0 1 194.5,196 L234,196"/>
+<line x1="102" y1="398" x2="102" y2="174"/>
+<path d="M102,174 L185.5,174 A4.5,4.5 0 0 1 194.5,174 L234,174"/>
+<line x1="678" y1="72" x2="678" y2="185"/>
+<line x1="678" y1="185" x2="722" y2="185"/>
+<line x1="656" y1="450" x2="656" y2="314"/>
+<line x1="656" y1="314" x2="722" y2="314"/>
+<line x1="634" y1="398" x2="634" y2="292"/>
+<line x1="634" y1="292" x2="722" y2="292"/>
+<line x1="612" y1="450" x2="612" y2="207"/>
+<line x1="612" y1="207" x2="722" y2="207"/>
+<line x1="1128" y1="46" x2="1128" y2="303"/>
+<path d="M1128,303 L1145.5,303 A4.5,4.5 0 0 1 1154.5,303 L1172,303"/>
+<line x1="1106" y1="450" x2="1106" y2="196"/>
+<path d="M1106,196 L1123.5,196 A4.5,4.5 0 0 1 1132.5,196 L1172,196"/>
 <line x1="1128" y1="46" x2="1296" y2="46"/>
 <line x1="190" y1="72" x2="678" y2="72"/>
-<path d="M146,386 L303.5,386 A4.5,4.5 0 0 1 312.5,386 L791.5,386 A4.5,4.5 0 0 1 800.5,386 L1145.5,386 A4.5,4.5 0 0 1 1154.5,386 L1296,386"/>
-<path d="M124,360 L141.5,360 A4.5,4.5 0 0 1 150.5,360 L163.5,360 A4.5,4.5 0 0 1 172.5,360 L303.5,360 A4.5,4.5 0 0 1 312.5,360 L607.5,360 A4.5,4.5 0 0 1 616.5,360 L651.5,360 A4.5,4.5 0 0 1 660.5,360 L791.5,360 A4.5,4.5 0 0 1 800.5,360 L942,360"/>
-<path d="M102,334 L119.5,334 A4.5,4.5 0 0 1 128.5,334 L141.5,334 A4.5,4.5 0 0 1 150.5,334 L163.5,334 A4.5,4.5 0 0 1 172.5,334 L303.5,334 A4.5,4.5 0 0 1 312.5,334 L607.5,334 A4.5,4.5 0 0 1 616.5,334 L634,334"/>
-<line x1="454" y1="30" x2="454" y2="164"/>
-<line x1="454" y1="271" x2="454" y2="334"/>
-<line x1="942" y1="30" x2="942" y2="164"/>
-<line x1="942" y1="271" x2="942" y2="360"/>
-<line x1="1296" y1="30" x2="1296" y2="164"/>
-<line x1="1296" y1="271" x2="1296" y2="386"/>
-<line x1="268" y1="436" x2="1150" y2="436"/>
-<circle cx="308" cy="436" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="796" cy="436" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M146,450 L303.5,450 A4.5,4.5 0 0 1 312.5,450 L791.5,450 A4.5,4.5 0 0 1 800.5,450 L1145.5,450 A4.5,4.5 0 0 1 1154.5,450 L1296,450"/>
+<path d="M124,424 L141.5,424 A4.5,4.5 0 0 1 150.5,424 L163.5,424 A4.5,4.5 0 0 1 172.5,424 L303.5,424 A4.5,4.5 0 0 1 312.5,424 L607.5,424 A4.5,4.5 0 0 1 616.5,424 L651.5,424 A4.5,4.5 0 0 1 660.5,424 L791.5,424 A4.5,4.5 0 0 1 800.5,424 L942,424"/>
+<path d="M102,398 L119.5,398 A4.5,4.5 0 0 1 128.5,398 L141.5,398 A4.5,4.5 0 0 1 150.5,398 L163.5,398 A4.5,4.5 0 0 1 172.5,398 L303.5,398 A4.5,4.5 0 0 1 312.5,398 L607.5,398 A4.5,4.5 0 0 1 616.5,398 L634,398"/>
+<line x1="454" y1="30" x2="454" y2="196"/>
+<line x1="454" y1="303" x2="454" y2="398"/>
+<line x1="942" y1="30" x2="942" y2="196"/>
+<line x1="942" y1="303" x2="942" y2="424"/>
+<line x1="1296" y1="30" x2="1296" y2="196"/>
+<line x1="1296" y1="303" x2="1296" y2="450"/>
+<line x1="268" y1="500" x2="1150" y2="500"/>
+<circle cx="308" cy="500" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="796" cy="500" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1296" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="454" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="168" cy="386" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="656" cy="386" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="612" cy="386" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1106" cy="386" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="454" cy="334" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="168" cy="450" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="656" cy="450" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="612" cy="450" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1106" cy="450" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="454" cy="398" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="370" y="225.5" text-anchor="middle" font-size="26">A</text>
-<text x="338" y="170" text-anchor="start" font-size="14">S</text>
-<text x="338" y="277" text-anchor="start" font-size="14">R</text>
-<text x="402" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="402" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="858" y="225.5" text-anchor="middle" font-size="26">B</text>
-<text x="826" y="170" text-anchor="start" font-size="14">S</text>
-<text x="826" y="277" text-anchor="start" font-size="14">R</text>
-<text x="890" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="890" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="1212" y="225.5" text-anchor="middle" font-size="26">C</text>
-<text x="1180" y="170" text-anchor="start" font-size="14">S</text>
-<text x="1180" y="277" text-anchor="start" font-size="14">R</text>
-<text x="1244" y="170" text-anchor="end" font-size="16">Q</text>
-<text x="1244" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="370" y="257.5" text-anchor="middle" font-size="26">A</text>
+<text x="370" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="370" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="370" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="370" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="338" y="202" text-anchor="start" font-size="14">S</text>
+<text x="338" y="309" text-anchor="start" font-size="14">R</text>
+<text x="402" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="402" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="858" y="257.5" text-anchor="middle" font-size="26">B</text>
+<text x="858" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="858" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="858" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="858" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="826" y="202" text-anchor="start" font-size="14">S</text>
+<text x="826" y="309" text-anchor="start" font-size="14">R</text>
+<text x="890" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="890" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="1212" y="257.5" text-anchor="middle" font-size="26">C</text>
+<text x="1212" y="128" text-anchor="middle" font-size="14">1</text>
+<text x="1212" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="1212" y="175" text-anchor="middle" font-size="12">PR</text>
+<text x="1212" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="1180" y="202" text-anchor="start" font-size="14">S</text>
+<text x="1180" y="309" text-anchor="start" font-size="14">R</text>
+<text x="1244" y="202" text-anchor="end" font-size="16">Q</text>
+<text x="1244" y="309" text-anchor="end" font-size="16">Q</text>
 <text x="454" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="942" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1296" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="264" y="442" text-anchor="end" font-size="16">Clock</text>
+<text x="264" y="506" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -22608,111 +23980,137 @@ $D_{C} = \overline{Q_{C}}$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}\overline{Q_{B}}\overline{Q_{C}} + Q_{A}Q_{C} \\ D_{B} &= Q_{B}Q_{C} + Q_{A}\overline{Q_{C}} \\ D_{C} &= \overline{Q_{C}}\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="505" viewBox="0 0 1638 505" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1638" height="569" viewBox="0 0 1638 569" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="476" y="207" width="80" height="150" rx="2"/>
-<polyline points="476,303 488,312 476,321"/>
-<line x1="476" y1="312" x2="454" y2="312"/>
-<line x1="454" y1="312" x2="454" y2="481"/>
-<path d="M372,212 C394,212 420,228.5 432,245 C420,261.5 394,278 372,278 Q386,245 372,212 Z"/>
-<path d="M240,146 H266 A26,44 0 0 1 266,234 H240 Z"/>
-<line x1="292" y1="190" x2="354" y2="190"/>
-<line x1="354" y1="190" x2="354" y2="234"/>
-<line x1="354" y1="234" x2="378.2" y2="234"/>
-<path d="M240,267 H266 A26,33 0 0 1 266,333 H240 Z"/>
-<line x1="292" y1="300" x2="334" y2="300"/>
-<line x1="334" y1="300" x2="334" y2="256"/>
-<line x1="334" y1="256" x2="378.2" y2="256"/>
-<line x1="432" y1="245" x2="476" y2="245"/>
-<line x1="556" y1="245" x2="600" y2="245"/>
-<line x1="556" y1="319" x2="600" y2="319"/>
-<line x1="539.2" y1="311.4" x2="548" y2="311.4" stroke-width="1.4"/>
-<rect x="1110" y="207" width="80" height="150" rx="2"/>
-<polyline points="1110,303 1122,312 1110,321"/>
-<line x1="1110" y1="312" x2="1088" y2="312"/>
-<line x1="1088" y1="312" x2="1088" y2="481"/>
-<path d="M1006,212 C1028,212 1054,228.5 1066,245 C1054,261.5 1028,278 1006,278 Q1020,245 1006,212 Z"/>
-<path d="M874,168 H900 A26,33 0 0 1 900,234 H874 Z"/>
-<line x1="926" y1="201" x2="988" y2="201"/>
-<line x1="988" y1="201" x2="988" y2="234"/>
-<line x1="988" y1="234" x2="1012.2" y2="234"/>
-<path d="M874,256 H900 A26,33 0 0 1 900,322 H874 Z"/>
-<line x1="926" y1="289" x2="968" y2="289"/>
-<line x1="968" y1="289" x2="968" y2="256"/>
-<line x1="968" y1="256" x2="1012.2" y2="256"/>
-<line x1="1066" y1="245" x2="1110" y2="245"/>
-<line x1="1190" y1="245" x2="1234" y2="245"/>
-<line x1="1190" y1="319" x2="1234" y2="319"/>
-<line x1="1173.2" y1="311.4" x2="1182" y2="311.4" stroke-width="1.4"/>
-<rect x="1442" y="207" width="80" height="150" rx="2"/>
-<polyline points="1442,303 1454,312 1442,321"/>
-<line x1="1442" y1="312" x2="1420" y2="312"/>
-<line x1="1420" y1="312" x2="1420" y2="481"/>
-<line x1="1522" y1="245" x2="1566" y2="245"/>
-<line x1="1522" y1="319" x2="1566" y2="319"/>
-<line x1="1505.2" y1="311.4" x2="1514" y2="311.4" stroke-width="1.4"/>
-<line x1="196" y1="98" x2="196" y2="289"/>
-<line x1="196" y1="289" x2="240" y2="289"/>
-<line x1="174" y1="46" x2="174" y2="311"/>
-<line x1="174" y1="311" x2="240" y2="311"/>
-<line x1="152" y1="431" x2="152" y2="212"/>
-<path d="M152,212 L169.5,212 A4.5,4.5 0 0 1 178.5,212 L191.5,212 A4.5,4.5 0 0 1 200.5,212 L240,212"/>
-<line x1="130" y1="405" x2="130" y2="190"/>
-<path d="M130,190 L169.5,190 A4.5,4.5 0 0 1 178.5,190 L191.5,190 A4.5,4.5 0 0 1 200.5,190 L240,190"/>
-<line x1="108" y1="379" x2="108" y2="168"/>
-<path d="M108,168 L169.5,168 A4.5,4.5 0 0 1 178.5,168 L191.5,168 A4.5,4.5 0 0 1 200.5,168 L240,168"/>
-<line x1="830" y1="72" x2="830" y2="190"/>
-<line x1="830" y1="190" x2="874" y2="190"/>
-<line x1="808" y1="46" x2="808" y2="212"/>
-<line x1="808" y1="212" x2="874" y2="212"/>
-<line x1="786" y1="98" x2="786" y2="278"/>
-<line x1="786" y1="278" x2="874" y2="278"/>
-<line x1="764" y1="431" x2="764" y2="300"/>
-<line x1="764" y1="300" x2="874" y2="300"/>
-<line x1="1398" y1="431" x2="1398" y2="245"/>
-<line x1="1398" y1="245" x2="1442" y2="245"/>
+<rect x="476" y="239" width="80" height="150" rx="2"/>
+<circle cx="516" cy="235" r="4"/>
+<line x1="516" y1="231" x2="516" y2="215"/>
+<circle cx="516" cy="393" r="4"/>
+<line x1="516" y1="397" x2="516" y2="413"/>
+<polyline points="476,335 488,344 476,353"/>
+<line x1="476" y1="344" x2="454" y2="344"/>
+<line x1="454" y1="344" x2="454" y2="545"/>
+<path d="M372,244 C394,244 420,260.5 432,277 C420,293.5 394,310 372,310 Q386,277 372,244 Z"/>
+<path d="M240,178 H266 A26,44 0 0 1 266,266 H240 Z"/>
+<line x1="292" y1="222" x2="354" y2="222"/>
+<line x1="354" y1="222" x2="354" y2="266"/>
+<line x1="354" y1="266" x2="378.2" y2="266"/>
+<path d="M240,299 H266 A26,33 0 0 1 266,365 H240 Z"/>
+<line x1="292" y1="332" x2="334" y2="332"/>
+<line x1="334" y1="332" x2="334" y2="288"/>
+<line x1="334" y1="288" x2="378.2" y2="288"/>
+<line x1="432" y1="277" x2="476" y2="277"/>
+<line x1="556" y1="277" x2="600" y2="277"/>
+<line x1="556" y1="351" x2="600" y2="351"/>
+<line x1="539.2" y1="343.4" x2="548" y2="343.4" stroke-width="1.4"/>
+<rect x="1110" y="239" width="80" height="150" rx="2"/>
+<circle cx="1150" cy="235" r="4"/>
+<line x1="1150" y1="231" x2="1150" y2="215"/>
+<circle cx="1150" cy="393" r="4"/>
+<line x1="1150" y1="397" x2="1150" y2="413"/>
+<polyline points="1110,335 1122,344 1110,353"/>
+<line x1="1110" y1="344" x2="1088" y2="344"/>
+<line x1="1088" y1="344" x2="1088" y2="545"/>
+<path d="M1006,244 C1028,244 1054,260.5 1066,277 C1054,293.5 1028,310 1006,310 Q1020,277 1006,244 Z"/>
+<path d="M874,200 H900 A26,33 0 0 1 900,266 H874 Z"/>
+<line x1="926" y1="233" x2="988" y2="233"/>
+<line x1="988" y1="233" x2="988" y2="266"/>
+<line x1="988" y1="266" x2="1012.2" y2="266"/>
+<path d="M874,288 H900 A26,33 0 0 1 900,354 H874 Z"/>
+<line x1="926" y1="321" x2="968" y2="321"/>
+<line x1="968" y1="321" x2="968" y2="288"/>
+<line x1="968" y1="288" x2="1012.2" y2="288"/>
+<line x1="1066" y1="277" x2="1110" y2="277"/>
+<line x1="1190" y1="277" x2="1234" y2="277"/>
+<line x1="1190" y1="351" x2="1234" y2="351"/>
+<line x1="1173.2" y1="343.4" x2="1182" y2="343.4" stroke-width="1.4"/>
+<rect x="1442" y="239" width="80" height="150" rx="2"/>
+<circle cx="1482" cy="235" r="4"/>
+<line x1="1482" y1="231" x2="1482" y2="215"/>
+<circle cx="1482" cy="393" r="4"/>
+<line x1="1482" y1="397" x2="1482" y2="413"/>
+<polyline points="1442,335 1454,344 1442,353"/>
+<line x1="1442" y1="344" x2="1420" y2="344"/>
+<line x1="1420" y1="344" x2="1420" y2="545"/>
+<line x1="1522" y1="277" x2="1566" y2="277"/>
+<line x1="1522" y1="351" x2="1566" y2="351"/>
+<line x1="1505.2" y1="343.4" x2="1514" y2="343.4" stroke-width="1.4"/>
+<line x1="196" y1="98" x2="196" y2="321"/>
+<line x1="196" y1="321" x2="240" y2="321"/>
+<line x1="174" y1="46" x2="174" y2="343"/>
+<line x1="174" y1="343" x2="240" y2="343"/>
+<line x1="152" y1="495" x2="152" y2="244"/>
+<path d="M152,244 L169.5,244 A4.5,4.5 0 0 1 178.5,244 L191.5,244 A4.5,4.5 0 0 1 200.5,244 L240,244"/>
+<line x1="130" y1="469" x2="130" y2="222"/>
+<path d="M130,222 L169.5,222 A4.5,4.5 0 0 1 178.5,222 L191.5,222 A4.5,4.5 0 0 1 200.5,222 L240,222"/>
+<line x1="108" y1="443" x2="108" y2="200"/>
+<path d="M108,200 L169.5,200 A4.5,4.5 0 0 1 178.5,200 L191.5,200 A4.5,4.5 0 0 1 200.5,200 L240,200"/>
+<line x1="830" y1="72" x2="830" y2="222"/>
+<line x1="830" y1="222" x2="874" y2="222"/>
+<line x1="808" y1="46" x2="808" y2="244"/>
+<line x1="808" y1="244" x2="874" y2="244"/>
+<line x1="786" y1="98" x2="786" y2="310"/>
+<line x1="786" y1="310" x2="874" y2="310"/>
+<line x1="764" y1="495" x2="764" y2="332"/>
+<line x1="764" y1="332" x2="874" y2="332"/>
+<line x1="1398" y1="495" x2="1398" y2="277"/>
+<line x1="1398" y1="277" x2="1442" y2="277"/>
 <path d="M174,46 L595.5,46 A4.5,4.5 0 0 1 604.5,46 L1229.5,46 A4.5,4.5 0 0 1 1238.5,46 L1566,46"/>
 <line x1="830" y1="72" x2="1234" y2="72"/>
 <line x1="196" y1="98" x2="786" y2="98"/>
-<path d="M152,431 L449.5,431 A4.5,4.5 0 0 1 458.5,431 L1083.5,431 A4.5,4.5 0 0 1 1092.5,431 L1415.5,431 A4.5,4.5 0 0 1 1424.5,431 L1566,431"/>
-<path d="M130,405 L147.5,405 A4.5,4.5 0 0 1 156.5,405 L449.5,405 A4.5,4.5 0 0 1 458.5,405 L759.5,405 A4.5,4.5 0 0 1 768.5,405 L1083.5,405 A4.5,4.5 0 0 1 1092.5,405 L1234,405"/>
-<path d="M108,379 L125.5,379 A4.5,4.5 0 0 1 134.5,379 L147.5,379 A4.5,4.5 0 0 1 156.5,379 L449.5,379 A4.5,4.5 0 0 1 458.5,379 L600,379"/>
-<line x1="600" y1="30" x2="600" y2="245"/>
-<line x1="600" y1="319" x2="600" y2="379"/>
-<line x1="1234" y1="30" x2="1234" y2="245"/>
-<line x1="1234" y1="319" x2="1234" y2="405"/>
-<line x1="1566" y1="30" x2="1566" y2="245"/>
-<line x1="1566" y1="319" x2="1566" y2="431"/>
-<line x1="414" y1="481" x2="1420" y2="481"/>
-<circle cx="454" cy="481" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1088" cy="481" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M152,495 L449.5,495 A4.5,4.5 0 0 1 458.5,495 L1083.5,495 A4.5,4.5 0 0 1 1092.5,495 L1415.5,495 A4.5,4.5 0 0 1 1424.5,495 L1566,495"/>
+<path d="M130,469 L147.5,469 A4.5,4.5 0 0 1 156.5,469 L449.5,469 A4.5,4.5 0 0 1 458.5,469 L759.5,469 A4.5,4.5 0 0 1 768.5,469 L1083.5,469 A4.5,4.5 0 0 1 1092.5,469 L1234,469"/>
+<path d="M108,443 L125.5,443 A4.5,4.5 0 0 1 134.5,443 L147.5,443 A4.5,4.5 0 0 1 156.5,443 L449.5,443 A4.5,4.5 0 0 1 458.5,443 L600,443"/>
+<line x1="600" y1="30" x2="600" y2="277"/>
+<line x1="600" y1="351" x2="600" y2="443"/>
+<line x1="1234" y1="30" x2="1234" y2="277"/>
+<line x1="1234" y1="351" x2="1234" y2="469"/>
+<line x1="1566" y1="30" x2="1566" y2="277"/>
+<line x1="1566" y1="351" x2="1566" y2="495"/>
+<line x1="414" y1="545" x2="1420" y2="545"/>
+<circle cx="454" cy="545" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1088" cy="545" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1566" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="808" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1234" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="600" cy="98" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="764" cy="431" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="1398" cy="431" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="764" cy="495" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="1398" cy="495" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="516" y="290" text-anchor="middle" font-size="26">A</text>
-<text x="484" y="251" text-anchor="start" font-size="14">D</text>
-<text x="548" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="548" y="325" text-anchor="end" font-size="16">Q</text>
-<text x="1150" y="290" text-anchor="middle" font-size="26">B</text>
-<text x="1118" y="251" text-anchor="start" font-size="14">D</text>
-<text x="1182" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="1182" y="325" text-anchor="end" font-size="16">Q</text>
-<text x="1482" y="290" text-anchor="middle" font-size="26">C</text>
-<text x="1450" y="251" text-anchor="start" font-size="14">D</text>
-<text x="1514" y="251" text-anchor="end" font-size="16">Q</text>
-<text x="1514" y="325" text-anchor="end" font-size="16">Q</text>
+<text x="516" y="322" text-anchor="middle" font-size="26">A</text>
+<text x="516" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="516" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="516" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="484" y="283" text-anchor="start" font-size="14">D</text>
+<text x="548" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="548" y="357" text-anchor="end" font-size="16">Q</text>
+<text x="1150" y="322" text-anchor="middle" font-size="26">B</text>
+<text x="1150" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="1150" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="1150" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="1118" y="283" text-anchor="start" font-size="14">D</text>
+<text x="1182" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="1182" y="357" text-anchor="end" font-size="16">Q</text>
+<text x="1482" y="322" text-anchor="middle" font-size="26">C</text>
+<text x="1482" y="209" text-anchor="middle" font-size="14">1</text>
+<text x="1482" y="431" text-anchor="middle" font-size="14">1</text>
+<text x="1482" y="256" text-anchor="middle" font-size="12">PR</text>
+<text x="1482" y="381" text-anchor="middle" font-size="12">CLR</text>
+<text x="1450" y="283" text-anchor="start" font-size="14">D</text>
+<text x="1514" y="283" text-anchor="end" font-size="16">Q</text>
+<text x="1514" y="357" text-anchor="end" font-size="16">Q</text>
 <text x="600" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1234" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1566" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="410" y="487" text-anchor="end" font-size="16">Clock</text>
+<text x="410" y="551" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -22960,92 +24358,118 @@ $T_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= \overline{Q_{B}}\overline{Q_{C}} \\ T_{B} &= Q_{B}\overline{Q_{C}} + Q_{A}\overline{Q_{C}} \\ T_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1446" height="431" viewBox="0 0 1446 431" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1446" height="495" viewBox="0 0 1446 495" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="264" y="159" width="80" height="150" rx="2"/>
-<polyline points="264,255 276,264 264,273"/>
-<line x1="264" y1="264" x2="242" y2="264"/>
-<line x1="242" y1="264" x2="242" y2="407"/>
-<path d="M168,164 H194 A26,33 0 0 1 194,230 H168 Z"/>
-<line x1="220" y1="197" x2="264" y2="197"/>
-<line x1="344" y1="197" x2="388" y2="197"/>
-<line x1="344" y1="271" x2="388" y2="271"/>
-<line x1="327.2" y1="263.4" x2="336" y2="263.4" stroke-width="1.4"/>
-<rect x="898" y="159" width="80" height="150" rx="2"/>
-<polyline points="898,255 910,264 898,273"/>
-<line x1="898" y1="264" x2="876" y2="264"/>
-<line x1="876" y1="264" x2="876" y2="407"/>
-<path d="M794,164 C816,164 842,180.5 854,197 C842,213.5 816,230 794,230 Q808,197 794,164 Z"/>
-<path d="M662,120 H688 A26,33 0 0 1 688,186 H662 Z"/>
-<line x1="714" y1="153" x2="776" y2="153"/>
-<line x1="776" y1="153" x2="776" y2="186"/>
-<line x1="776" y1="186" x2="800.2" y2="186"/>
-<path d="M662,208 H688 A26,33 0 0 1 688,274 H662 Z"/>
-<line x1="714" y1="241" x2="756" y2="241"/>
-<line x1="756" y1="241" x2="756" y2="208"/>
-<line x1="756" y1="208" x2="800.2" y2="208"/>
-<line x1="854" y1="197" x2="898" y2="197"/>
-<line x1="978" y1="197" x2="1022" y2="197"/>
-<line x1="978" y1="271" x2="1022" y2="271"/>
-<line x1="961.2" y1="263.4" x2="970" y2="263.4" stroke-width="1.4"/>
-<rect x="1250" y="159" width="80" height="150" rx="2"/>
-<polyline points="1250,255 1262,264 1250,273"/>
-<line x1="1250" y1="264" x2="1228" y2="264"/>
-<line x1="1228" y1="264" x2="1228" y2="407"/>
-<line x1="1198" y1="197" x2="1250" y2="197"/>
-<line x1="1330" y1="197" x2="1374" y2="197"/>
-<line x1="1330" y1="271" x2="1374" y2="271"/>
-<line x1="1313.2" y1="263.4" x2="1322" y2="263.4" stroke-width="1.4"/>
-<line x1="124" y1="357" x2="124" y2="208"/>
-<line x1="124" y1="208" x2="168" y2="208"/>
-<line x1="102" y1="331" x2="102" y2="186"/>
-<line x1="102" y1="186" x2="168" y2="186"/>
-<line x1="618" y1="46" x2="618" y2="142"/>
-<line x1="618" y1="142" x2="662" y2="142"/>
-<line x1="596" y1="72" x2="596" y2="230"/>
-<line x1="596" y1="230" x2="662" y2="230"/>
-<line x1="574" y1="357" x2="574" y2="252"/>
-<line x1="574" y1="252" x2="662" y2="252"/>
-<line x1="552" y1="357" x2="552" y2="164"/>
-<path d="M552,164 L591.5,164 A4.5,4.5 0 0 1 600.5,164 L662,164"/>
+<rect x="264" y="191" width="80" height="150" rx="2"/>
+<circle cx="304" cy="187" r="4"/>
+<line x1="304" y1="183" x2="304" y2="167"/>
+<circle cx="304" cy="345" r="4"/>
+<line x1="304" y1="349" x2="304" y2="365"/>
+<polyline points="264,287 276,296 264,305"/>
+<line x1="264" y1="296" x2="242" y2="296"/>
+<line x1="242" y1="296" x2="242" y2="471"/>
+<path d="M168,196 H194 A26,33 0 0 1 194,262 H168 Z"/>
+<line x1="220" y1="229" x2="264" y2="229"/>
+<line x1="344" y1="229" x2="388" y2="229"/>
+<line x1="344" y1="303" x2="388" y2="303"/>
+<line x1="327.2" y1="295.4" x2="336" y2="295.4" stroke-width="1.4"/>
+<rect x="898" y="191" width="80" height="150" rx="2"/>
+<circle cx="938" cy="187" r="4"/>
+<line x1="938" y1="183" x2="938" y2="167"/>
+<circle cx="938" cy="345" r="4"/>
+<line x1="938" y1="349" x2="938" y2="365"/>
+<polyline points="898,287 910,296 898,305"/>
+<line x1="898" y1="296" x2="876" y2="296"/>
+<line x1="876" y1="296" x2="876" y2="471"/>
+<path d="M794,196 C816,196 842,212.5 854,229 C842,245.5 816,262 794,262 Q808,229 794,196 Z"/>
+<path d="M662,152 H688 A26,33 0 0 1 688,218 H662 Z"/>
+<line x1="714" y1="185" x2="776" y2="185"/>
+<line x1="776" y1="185" x2="776" y2="218"/>
+<line x1="776" y1="218" x2="800.2" y2="218"/>
+<path d="M662,240 H688 A26,33 0 0 1 688,306 H662 Z"/>
+<line x1="714" y1="273" x2="756" y2="273"/>
+<line x1="756" y1="273" x2="756" y2="240"/>
+<line x1="756" y1="240" x2="800.2" y2="240"/>
+<line x1="854" y1="229" x2="898" y2="229"/>
+<line x1="978" y1="229" x2="1022" y2="229"/>
+<line x1="978" y1="303" x2="1022" y2="303"/>
+<line x1="961.2" y1="295.4" x2="970" y2="295.4" stroke-width="1.4"/>
+<rect x="1250" y="191" width="80" height="150" rx="2"/>
+<circle cx="1290" cy="187" r="4"/>
+<line x1="1290" y1="183" x2="1290" y2="167"/>
+<circle cx="1290" cy="345" r="4"/>
+<line x1="1290" y1="349" x2="1290" y2="365"/>
+<polyline points="1250,287 1262,296 1250,305"/>
+<line x1="1250" y1="296" x2="1228" y2="296"/>
+<line x1="1228" y1="296" x2="1228" y2="471"/>
+<line x1="1198" y1="229" x2="1250" y2="229"/>
+<line x1="1330" y1="229" x2="1374" y2="229"/>
+<line x1="1330" y1="303" x2="1374" y2="303"/>
+<line x1="1313.2" y1="295.4" x2="1322" y2="295.4" stroke-width="1.4"/>
+<line x1="124" y1="421" x2="124" y2="240"/>
+<line x1="124" y1="240" x2="168" y2="240"/>
+<line x1="102" y1="395" x2="102" y2="218"/>
+<line x1="102" y1="218" x2="168" y2="218"/>
+<line x1="618" y1="46" x2="618" y2="174"/>
+<line x1="618" y1="174" x2="662" y2="174"/>
+<line x1="596" y1="72" x2="596" y2="262"/>
+<line x1="596" y1="262" x2="662" y2="262"/>
+<line x1="574" y1="421" x2="574" y2="284"/>
+<line x1="574" y1="284" x2="662" y2="284"/>
+<line x1="552" y1="421" x2="552" y2="196"/>
+<path d="M552,196 L591.5,196 A4.5,4.5 0 0 1 600.5,196 L662,196"/>
 <line x1="618" y1="46" x2="1022" y2="46"/>
 <line x1="388" y1="72" x2="596" y2="72"/>
-<path d="M124,357 L237.5,357 A4.5,4.5 0 0 1 246.5,357 L871.5,357 A4.5,4.5 0 0 1 880.5,357 L1223.5,357 A4.5,4.5 0 0 1 1232.5,357 L1374,357"/>
-<path d="M102,331 L119.5,331 A4.5,4.5 0 0 1 128.5,331 L237.5,331 A4.5,4.5 0 0 1 246.5,331 L547.5,331 A4.5,4.5 0 0 1 556.5,331 L569.5,331 A4.5,4.5 0 0 1 578.5,331 L871.5,331 A4.5,4.5 0 0 1 880.5,331 L1022,331"/>
-<line x1="388" y1="30" x2="388" y2="197"/>
-<line x1="1022" y1="30" x2="1022" y2="197"/>
-<line x1="1022" y1="271" x2="1022" y2="331"/>
-<line x1="1374" y1="30" x2="1374" y2="197"/>
-<line x1="1374" y1="271" x2="1374" y2="357"/>
-<line x1="202" y1="407" x2="1228" y2="407"/>
-<circle cx="242" cy="407" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="876" cy="407" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M124,421 L237.5,421 A4.5,4.5 0 0 1 246.5,421 L871.5,421 A4.5,4.5 0 0 1 880.5,421 L1223.5,421 A4.5,4.5 0 0 1 1232.5,421 L1374,421"/>
+<path d="M102,395 L119.5,395 A4.5,4.5 0 0 1 128.5,395 L237.5,395 A4.5,4.5 0 0 1 246.5,395 L547.5,395 A4.5,4.5 0 0 1 556.5,395 L569.5,395 A4.5,4.5 0 0 1 578.5,395 L871.5,395 A4.5,4.5 0 0 1 880.5,395 L1022,395"/>
+<line x1="388" y1="30" x2="388" y2="229"/>
+<line x1="1022" y1="30" x2="1022" y2="229"/>
+<line x1="1022" y1="303" x2="1022" y2="395"/>
+<line x1="1374" y1="30" x2="1374" y2="229"/>
+<line x1="1374" y1="303" x2="1374" y2="421"/>
+<line x1="202" y1="471" x2="1228" y2="471"/>
+<circle cx="242" cy="471" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="876" cy="471" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="1022" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="388" cy="72" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="574" cy="357" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="552" cy="357" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="574" cy="421" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="552" cy="421" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="304" y="242" text-anchor="middle" font-size="26">A</text>
-<text x="272" y="203" text-anchor="start" font-size="14">T</text>
-<text x="336" y="203" text-anchor="end" font-size="16">Q</text>
-<text x="336" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="938" y="242" text-anchor="middle" font-size="26">B</text>
-<text x="906" y="203" text-anchor="start" font-size="14">T</text>
-<text x="970" y="203" text-anchor="end" font-size="16">Q</text>
-<text x="970" y="277" text-anchor="end" font-size="16">Q</text>
-<text x="1290" y="242" text-anchor="middle" font-size="26">C</text>
-<text x="1258" y="203" text-anchor="start" font-size="14">T</text>
-<text x="1194" y="203" text-anchor="end" font-size="16">1</text>
-<text x="1322" y="203" text-anchor="end" font-size="16">Q</text>
-<text x="1322" y="277" text-anchor="end" font-size="16">Q</text>
+<text x="304" y="274" text-anchor="middle" font-size="26">A</text>
+<text x="304" y="161" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="304" y="208" text-anchor="middle" font-size="12">PR</text>
+<text x="304" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="272" y="235" text-anchor="start" font-size="14">T</text>
+<text x="336" y="235" text-anchor="end" font-size="16">Q</text>
+<text x="336" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="938" y="274" text-anchor="middle" font-size="26">B</text>
+<text x="938" y="161" text-anchor="middle" font-size="14">1</text>
+<text x="938" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="938" y="208" text-anchor="middle" font-size="12">PR</text>
+<text x="938" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="906" y="235" text-anchor="start" font-size="14">T</text>
+<text x="970" y="235" text-anchor="end" font-size="16">Q</text>
+<text x="970" y="309" text-anchor="end" font-size="16">Q</text>
+<text x="1290" y="274" text-anchor="middle" font-size="26">C</text>
+<text x="1290" y="161" text-anchor="middle" font-size="14">1</text>
+<text x="1290" y="383" text-anchor="middle" font-size="14">1</text>
+<text x="1290" y="208" text-anchor="middle" font-size="12">PR</text>
+<text x="1290" y="333" text-anchor="middle" font-size="12">CLR</text>
+<text x="1258" y="235" text-anchor="start" font-size="14">T</text>
+<text x="1194" y="235" text-anchor="end" font-size="16">1</text>
+<text x="1322" y="235" text-anchor="end" font-size="16">Q</text>
+<text x="1322" y="309" text-anchor="end" font-size="16">Q</text>
 <text x="388" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="1022" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1374" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="198" y="413" text-anchor="end" font-size="16">Clock</text>
+<text x="198" y="477" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -23397,79 +24821,105 @@ $K_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1 \\ J_{C} = K_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="306" viewBox="0 0 1074 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="370" viewBox="0 0 1074 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="86" width="80" height="150" rx="2"/>
-<polyline points="174,152 186,161 174,170"/>
-<circle cx="170" cy="161" r="4"/>
-<line x1="166" y1="161" x2="152" y2="161"/>
-<line x1="152" y1="161" x2="152" y2="282"/>
-<line x1="128" y1="161" x2="128" y2="124"/>
-<line x1="128" y1="124" x2="174" y2="124"/>
-<line x1="128" y1="161" x2="128" y2="198"/>
-<path d="M128,198 L147.5,198 A4.5,4.5 0 0 1 156.5,198 L174,198"/>
-<line x1="254" y1="124" x2="298" y2="124"/>
-<line x1="254" y1="198" x2="298" y2="198"/>
-<line x1="237.2" y1="190.4" x2="246" y2="190.4" stroke-width="1.4"/>
-<rect x="526" y="86" width="80" height="150" rx="2"/>
-<polyline points="526,152 538,161 526,170"/>
-<circle cx="522" cy="161" r="4"/>
-<line x1="518" y1="161" x2="504" y2="161"/>
-<line x1="504" y1="161" x2="504" y2="282"/>
-<line x1="474" y1="124" x2="526" y2="124"/>
-<path d="M474,198 L499.5,198 A4.5,4.5 0 0 1 508.5,198 L526,198"/>
-<line x1="606" y1="124" x2="650" y2="124"/>
-<line x1="606" y1="198" x2="650" y2="198"/>
-<line x1="589.2" y1="190.4" x2="598" y2="190.4" stroke-width="1.4"/>
-<rect x="878" y="86" width="80" height="150" rx="2"/>
-<polyline points="878,152 890,161 878,170"/>
-<circle cx="874" cy="161" r="4"/>
-<line x1="870" y1="161" x2="856" y2="161"/>
-<line x1="856" y1="161" x2="856" y2="282"/>
-<line x1="826" y1="124" x2="878" y2="124"/>
-<path d="M826,198 L851.5,198 A4.5,4.5 0 0 1 860.5,198 L878,198"/>
-<line x1="958" y1="124" x2="1002" y2="124"/>
-<line x1="958" y1="198" x2="1002" y2="198"/>
-<line x1="941.2" y1="190.4" x2="950" y2="190.4" stroke-width="1.4"/>
-<line x1="84" y1="46" x2="84" y2="161"/>
-<line x1="84" y1="161" x2="128" y2="161"/>
+<rect x="174" y="118" width="80" height="150" rx="2"/>
+<circle cx="214" cy="114" r="4"/>
+<line x1="214" y1="110" x2="214" y2="94"/>
+<circle cx="214" cy="272" r="4"/>
+<line x1="214" y1="276" x2="214" y2="292"/>
+<polyline points="174,184 186,193 174,202"/>
+<circle cx="170" cy="193" r="4"/>
+<line x1="166" y1="193" x2="152" y2="193"/>
+<line x1="152" y1="193" x2="152" y2="346"/>
+<line x1="128" y1="193" x2="128" y2="156"/>
+<line x1="128" y1="156" x2="174" y2="156"/>
+<line x1="128" y1="193" x2="128" y2="230"/>
+<path d="M128,230 L147.5,230 A4.5,4.5 0 0 1 156.5,230 L174,230"/>
+<line x1="254" y1="156" x2="298" y2="156"/>
+<line x1="254" y1="230" x2="298" y2="230"/>
+<line x1="237.2" y1="222.4" x2="246" y2="222.4" stroke-width="1.4"/>
+<rect x="526" y="118" width="80" height="150" rx="2"/>
+<circle cx="566" cy="114" r="4"/>
+<line x1="566" y1="110" x2="566" y2="94"/>
+<circle cx="566" cy="272" r="4"/>
+<line x1="566" y1="276" x2="566" y2="292"/>
+<polyline points="526,184 538,193 526,202"/>
+<circle cx="522" cy="193" r="4"/>
+<line x1="518" y1="193" x2="504" y2="193"/>
+<line x1="504" y1="193" x2="504" y2="346"/>
+<line x1="474" y1="156" x2="526" y2="156"/>
+<path d="M474,230 L499.5,230 A4.5,4.5 0 0 1 508.5,230 L526,230"/>
+<line x1="606" y1="156" x2="650" y2="156"/>
+<line x1="606" y1="230" x2="650" y2="230"/>
+<line x1="589.2" y1="222.4" x2="598" y2="222.4" stroke-width="1.4"/>
+<rect x="878" y="118" width="80" height="150" rx="2"/>
+<circle cx="918" cy="114" r="4"/>
+<line x1="918" y1="110" x2="918" y2="94"/>
+<circle cx="918" cy="272" r="4"/>
+<line x1="918" y1="276" x2="918" y2="292"/>
+<polyline points="878,184 890,193 878,202"/>
+<circle cx="874" cy="193" r="4"/>
+<line x1="870" y1="193" x2="856" y2="193"/>
+<line x1="856" y1="193" x2="856" y2="346"/>
+<line x1="826" y1="156" x2="878" y2="156"/>
+<path d="M826,230 L851.5,230 A4.5,4.5 0 0 1 860.5,230 L878,230"/>
+<line x1="958" y1="156" x2="1002" y2="156"/>
+<line x1="958" y1="230" x2="1002" y2="230"/>
+<line x1="941.2" y1="222.4" x2="950" y2="222.4" stroke-width="1.4"/>
+<line x1="84" y1="46" x2="84" y2="193"/>
+<line x1="84" y1="193" x2="128" y2="193"/>
 <path d="M84,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L650,46"/>
-<line x1="298" y1="30" x2="298" y2="124"/>
-<line x1="650" y1="30" x2="650" y2="124"/>
-<line x1="1002" y1="30" x2="1002" y2="124"/>
-<line x1="112" y1="282" x2="856" y2="282"/>
-<circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="504" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="298" y1="30" x2="298" y2="156"/>
+<line x1="650" y1="30" x2="650" y2="156"/>
+<line x1="1002" y1="30" x2="1002" y2="156"/>
+<line x1="112" y1="346" x2="856" y2="346"/>
+<circle cx="152" cy="346" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="193" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="504" cy="346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="130" text-anchor="start" font-size="14">J</text>
-<text x="182" y="204" text-anchor="start" font-size="14">K</text>
-<text x="246" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="566" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="534" y="130" text-anchor="start" font-size="14">J</text>
-<text x="534" y="204" text-anchor="start" font-size="14">K</text>
-<text x="470" y="130" text-anchor="end" font-size="16">1</text>
-<text x="470" y="204" text-anchor="end" font-size="16">1</text>
-<text x="598" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="598" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="918" y="169" text-anchor="middle" font-size="26">C</text>
-<text x="886" y="130" text-anchor="start" font-size="14">J</text>
-<text x="886" y="204" text-anchor="start" font-size="14">K</text>
-<text x="822" y="130" text-anchor="end" font-size="16">0</text>
-<text x="822" y="204" text-anchor="end" font-size="16">0</text>
-<text x="950" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="950" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="162" text-anchor="start" font-size="14">J</text>
+<text x="182" y="236" text-anchor="start" font-size="14">K</text>
+<text x="246" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="566" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="566" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="566" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="534" y="162" text-anchor="start" font-size="14">J</text>
+<text x="534" y="236" text-anchor="start" font-size="14">K</text>
+<text x="470" y="162" text-anchor="end" font-size="16">1</text>
+<text x="470" y="236" text-anchor="end" font-size="16">1</text>
+<text x="598" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="598" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="918" y="201" text-anchor="middle" font-size="26">C</text>
+<text x="918" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="918" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="886" y="162" text-anchor="start" font-size="14">J</text>
+<text x="886" y="236" text-anchor="start" font-size="14">K</text>
+<text x="822" y="162" text-anchor="end" font-size="16">0</text>
+<text x="822" y="236" text-anchor="end" font-size="16">0</text>
+<text x="950" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="950" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="650" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1002" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="108" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -23822,92 +25272,118 @@ $S_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}} \\ R_{C} &= 0 \\ S_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="412" viewBox="0 0 1210 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="476" viewBox="0 0 1210 476" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="115" width="80" height="172" rx="2"/>
-<polyline points="308,192 320,201 308,210"/>
-<circle cx="304" cy="201" r="4"/>
-<line x1="300" y1="201" x2="286" y2="201"/>
-<line x1="286" y1="201" x2="286" y2="388"/>
-<path d="M212,120 H238 A26,33 0 0 1 238,186 H212 Z"/>
-<line x1="264" y1="153" x2="308" y2="153"/>
-<path d="M212,216 H238 A26,33 0 0 1 238,282 H212 Z"/>
-<path d="M264,249 L281.5,249 A4.5,4.5 0 0 1 290.5,249 L308,249"/>
-<line x1="388" y1="153" x2="432" y2="153"/>
-<line x1="388" y1="249" x2="432" y2="249"/>
-<line x1="371.2" y1="241.4" x2="380" y2="241.4" stroke-width="1.4"/>
-<rect x="662" y="115" width="80" height="172" rx="2"/>
-<polyline points="662,192 674,201 662,210"/>
-<circle cx="658" cy="201" r="4"/>
-<line x1="654" y1="201" x2="640" y2="201"/>
-<line x1="640" y1="201" x2="640" y2="388"/>
-<line x1="742" y1="153" x2="786" y2="153"/>
-<line x1="742" y1="249" x2="786" y2="249"/>
-<line x1="725.2" y1="241.4" x2="734" y2="241.4" stroke-width="1.4"/>
-<rect x="1014" y="115" width="80" height="172" rx="2"/>
-<polyline points="1014,192 1026,201 1014,210"/>
-<circle cx="1010" cy="201" r="4"/>
-<line x1="1006" y1="201" x2="992" y2="201"/>
-<line x1="992" y1="201" x2="992" y2="388"/>
-<line x1="962" y1="153" x2="1014" y2="153"/>
-<path d="M962,249 L987.5,249 A4.5,4.5 0 0 1 996.5,249 L1014,249"/>
-<line x1="1094" y1="153" x2="1138" y2="153"/>
-<line x1="1094" y1="249" x2="1138" y2="249"/>
-<line x1="1077.2" y1="241.4" x2="1086" y2="241.4" stroke-width="1.4"/>
-<line x1="168" y1="46" x2="168" y2="164"/>
-<line x1="168" y1="164" x2="212" y2="164"/>
-<line x1="146" y1="72" x2="146" y2="238"/>
-<line x1="146" y1="238" x2="212" y2="238"/>
-<line x1="124" y1="46" x2="124" y2="260"/>
-<line x1="124" y1="260" x2="212" y2="260"/>
-<line x1="102" y1="312" x2="102" y2="142"/>
-<path d="M102,142 L119.5,142 A4.5,4.5 0 0 1 128.5,142 L141.5,142 A4.5,4.5 0 0 1 150.5,142 L163.5,142 A4.5,4.5 0 0 1 172.5,142 L212,142"/>
-<line x1="618" y1="46" x2="618" y2="249"/>
-<path d="M618,249 L635.5,249 A4.5,4.5 0 0 1 644.5,249 L662,249"/>
-<line x1="596" y1="338" x2="596" y2="153"/>
-<path d="M596,153 L613.5,153 A4.5,4.5 0 0 1 622.5,153 L662,153"/>
+<rect x="308" y="147" width="80" height="172" rx="2"/>
+<circle cx="348" cy="143" r="4"/>
+<line x1="348" y1="139" x2="348" y2="123"/>
+<circle cx="348" cy="323" r="4"/>
+<line x1="348" y1="327" x2="348" y2="343"/>
+<polyline points="308,224 320,233 308,242"/>
+<circle cx="304" cy="233" r="4"/>
+<line x1="300" y1="233" x2="286" y2="233"/>
+<line x1="286" y1="233" x2="286" y2="452"/>
+<path d="M212,152 H238 A26,33 0 0 1 238,218 H212 Z"/>
+<line x1="264" y1="185" x2="308" y2="185"/>
+<path d="M212,248 H238 A26,33 0 0 1 238,314 H212 Z"/>
+<path d="M264,281 L281.5,281 A4.5,4.5 0 0 1 290.5,281 L308,281"/>
+<line x1="388" y1="185" x2="432" y2="185"/>
+<line x1="388" y1="281" x2="432" y2="281"/>
+<line x1="371.2" y1="273.4" x2="380" y2="273.4" stroke-width="1.4"/>
+<rect x="662" y="147" width="80" height="172" rx="2"/>
+<circle cx="702" cy="143" r="4"/>
+<line x1="702" y1="139" x2="702" y2="123"/>
+<circle cx="702" cy="323" r="4"/>
+<line x1="702" y1="327" x2="702" y2="343"/>
+<polyline points="662,224 674,233 662,242"/>
+<circle cx="658" cy="233" r="4"/>
+<line x1="654" y1="233" x2="640" y2="233"/>
+<line x1="640" y1="233" x2="640" y2="452"/>
+<line x1="742" y1="185" x2="786" y2="185"/>
+<line x1="742" y1="281" x2="786" y2="281"/>
+<line x1="725.2" y1="273.4" x2="734" y2="273.4" stroke-width="1.4"/>
+<rect x="1014" y="147" width="80" height="172" rx="2"/>
+<circle cx="1054" cy="143" r="4"/>
+<line x1="1054" y1="139" x2="1054" y2="123"/>
+<circle cx="1054" cy="323" r="4"/>
+<line x1="1054" y1="327" x2="1054" y2="343"/>
+<polyline points="1014,224 1026,233 1014,242"/>
+<circle cx="1010" cy="233" r="4"/>
+<line x1="1006" y1="233" x2="992" y2="233"/>
+<line x1="992" y1="233" x2="992" y2="452"/>
+<line x1="962" y1="185" x2="1014" y2="185"/>
+<path d="M962,281 L987.5,281 A4.5,4.5 0 0 1 996.5,281 L1014,281"/>
+<line x1="1094" y1="185" x2="1138" y2="185"/>
+<line x1="1094" y1="281" x2="1138" y2="281"/>
+<line x1="1077.2" y1="273.4" x2="1086" y2="273.4" stroke-width="1.4"/>
+<line x1="168" y1="46" x2="168" y2="196"/>
+<line x1="168" y1="196" x2="212" y2="196"/>
+<line x1="146" y1="72" x2="146" y2="270"/>
+<line x1="146" y1="270" x2="212" y2="270"/>
+<line x1="124" y1="46" x2="124" y2="292"/>
+<line x1="124" y1="292" x2="212" y2="292"/>
+<line x1="102" y1="376" x2="102" y2="174"/>
+<path d="M102,174 L119.5,174 A4.5,4.5 0 0 1 128.5,174 L141.5,174 A4.5,4.5 0 0 1 150.5,174 L163.5,174 A4.5,4.5 0 0 1 172.5,174 L212,174"/>
+<line x1="618" y1="46" x2="618" y2="281"/>
+<path d="M618,281 L635.5,281 A4.5,4.5 0 0 1 644.5,281 L662,281"/>
+<line x1="596" y1="402" x2="596" y2="185"/>
+<path d="M596,185 L613.5,185 A4.5,4.5 0 0 1 622.5,185 L662,185"/>
 <path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L786,46"/>
 <path d="M146,72 L163.5,72 A4.5,4.5 0 0 1 172.5,72 L432,72"/>
-<path d="M596,338 L635.5,338 A4.5,4.5 0 0 1 644.5,338 L786,338"/>
-<path d="M102,312 L281.5,312 A4.5,4.5 0 0 1 290.5,312 L432,312"/>
-<line x1="432" y1="30" x2="432" y2="153"/>
-<line x1="432" y1="249" x2="432" y2="312"/>
-<line x1="786" y1="30" x2="786" y2="153"/>
-<line x1="786" y1="249" x2="786" y2="338"/>
-<line x1="1138" y1="30" x2="1138" y2="153"/>
-<line x1="246" y1="388" x2="992" y2="388"/>
-<circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M596,402 L635.5,402 A4.5,4.5 0 0 1 644.5,402 L786,402"/>
+<path d="M102,376 L281.5,376 A4.5,4.5 0 0 1 290.5,376 L432,376"/>
+<line x1="432" y1="30" x2="432" y2="185"/>
+<line x1="432" y1="281" x2="432" y2="376"/>
+<line x1="786" y1="30" x2="786" y2="185"/>
+<line x1="786" y1="281" x2="786" y2="402"/>
+<line x1="1138" y1="30" x2="1138" y2="185"/>
+<line x1="246" y1="452" x2="992" y2="452"/>
+<circle cx="286" cy="452" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="452" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="209" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="159" text-anchor="start" font-size="14">S</text>
-<text x="316" y="255" text-anchor="start" font-size="14">R</text>
-<text x="380" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="702" y="209" text-anchor="middle" font-size="26">B</text>
-<text x="670" y="159" text-anchor="start" font-size="14">S</text>
-<text x="670" y="255" text-anchor="start" font-size="14">R</text>
-<text x="734" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="734" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="1054" y="209" text-anchor="middle" font-size="26">C</text>
-<text x="1022" y="159" text-anchor="start" font-size="14">S</text>
-<text x="1022" y="255" text-anchor="start" font-size="14">R</text>
-<text x="958" y="159" text-anchor="end" font-size="16">0</text>
-<text x="958" y="255" text-anchor="end" font-size="16">0</text>
-<text x="1086" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1086" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="241" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="191" text-anchor="start" font-size="14">S</text>
+<text x="316" y="287" text-anchor="start" font-size="14">R</text>
+<text x="380" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="241" text-anchor="middle" font-size="26">B</text>
+<text x="702" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="702" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="670" y="191" text-anchor="start" font-size="14">S</text>
+<text x="670" y="287" text-anchor="start" font-size="14">R</text>
+<text x="734" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="241" text-anchor="middle" font-size="26">C</text>
+<text x="1054" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1054" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="1022" y="191" text-anchor="start" font-size="14">S</text>
+<text x="1022" y="287" text-anchor="start" font-size="14">R</text>
+<text x="958" y="191" text-anchor="end" font-size="16">0</text>
+<text x="958" y="287" text-anchor="end" font-size="16">0</text>
+<text x="1086" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="287" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="394" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="458" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -24137,73 +25613,99 @@ $D_{C} = 1$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}} \\ D_{C} &= 1\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="361" viewBox="0 0 1160 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="425" viewBox="0 0 1160 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="115" width="80" height="150" rx="2"/>
-<polyline points="280,211 292,220 280,229"/>
-<line x1="280" y1="220" x2="258" y2="220"/>
-<line x1="258" y1="220" x2="258" y2="337"/>
-<path d="M176,120 C198,120 224,136.5 236,153 C224,169.5 198,186 176,186 Q190,153 176,120 Z"/>
-<path d="M168,120 Q182,153 168,186"/>
-<line x1="236" y1="153" x2="280" y2="153"/>
-<line x1="360" y1="153" x2="404" y2="153"/>
-<line x1="360" y1="227" x2="404" y2="227"/>
-<line x1="343.2" y1="219.4" x2="352" y2="219.4" stroke-width="1.4"/>
-<rect x="612" y="115" width="80" height="150" rx="2"/>
-<polyline points="612,211 624,220 612,229"/>
-<line x1="612" y1="220" x2="590" y2="220"/>
-<line x1="590" y1="220" x2="590" y2="337"/>
-<line x1="692" y1="153" x2="736" y2="153"/>
-<line x1="692" y1="227" x2="736" y2="227"/>
-<line x1="675.2" y1="219.4" x2="684" y2="219.4" stroke-width="1.4"/>
-<rect x="964" y="115" width="80" height="150" rx="2"/>
-<polyline points="964,211 976,220 964,229"/>
-<line x1="964" y1="220" x2="942" y2="220"/>
-<line x1="942" y1="220" x2="942" y2="337"/>
-<line x1="912" y1="153" x2="964" y2="153"/>
-<line x1="1044" y1="153" x2="1088" y2="153"/>
-<line x1="1044" y1="227" x2="1088" y2="227"/>
-<line x1="1027.2" y1="219.4" x2="1036" y2="219.4" stroke-width="1.4"/>
-<line x1="130.2" y1="72" x2="130.2" y2="142"/>
-<line x1="130.2" y1="142" x2="174.2" y2="142"/>
-<line x1="108.2" y1="46" x2="108.2" y2="164"/>
-<line x1="108.2" y1="164" x2="174.2" y2="164"/>
-<line x1="568" y1="287" x2="568" y2="153"/>
-<line x1="568" y1="153" x2="612" y2="153"/>
+<rect x="280" y="147" width="80" height="150" rx="2"/>
+<circle cx="320" cy="143" r="4"/>
+<line x1="320" y1="139" x2="320" y2="123"/>
+<circle cx="320" cy="301" r="4"/>
+<line x1="320" y1="305" x2="320" y2="321"/>
+<polyline points="280,243 292,252 280,261"/>
+<line x1="280" y1="252" x2="258" y2="252"/>
+<line x1="258" y1="252" x2="258" y2="401"/>
+<path d="M176,152 C198,152 224,168.5 236,185 C224,201.5 198,218 176,218 Q190,185 176,152 Z"/>
+<path d="M168,152 Q182,185 168,218"/>
+<line x1="236" y1="185" x2="280" y2="185"/>
+<line x1="360" y1="185" x2="404" y2="185"/>
+<line x1="360" y1="259" x2="404" y2="259"/>
+<line x1="343.2" y1="251.4" x2="352" y2="251.4" stroke-width="1.4"/>
+<rect x="612" y="147" width="80" height="150" rx="2"/>
+<circle cx="652" cy="143" r="4"/>
+<line x1="652" y1="139" x2="652" y2="123"/>
+<circle cx="652" cy="301" r="4"/>
+<line x1="652" y1="305" x2="652" y2="321"/>
+<polyline points="612,243 624,252 612,261"/>
+<line x1="612" y1="252" x2="590" y2="252"/>
+<line x1="590" y1="252" x2="590" y2="401"/>
+<line x1="692" y1="185" x2="736" y2="185"/>
+<line x1="692" y1="259" x2="736" y2="259"/>
+<line x1="675.2" y1="251.4" x2="684" y2="251.4" stroke-width="1.4"/>
+<rect x="964" y="147" width="80" height="150" rx="2"/>
+<circle cx="1004" cy="143" r="4"/>
+<line x1="1004" y1="139" x2="1004" y2="123"/>
+<circle cx="1004" cy="301" r="4"/>
+<line x1="1004" y1="305" x2="1004" y2="321"/>
+<polyline points="964,243 976,252 964,261"/>
+<line x1="964" y1="252" x2="942" y2="252"/>
+<line x1="942" y1="252" x2="942" y2="401"/>
+<line x1="912" y1="185" x2="964" y2="185"/>
+<line x1="1044" y1="185" x2="1088" y2="185"/>
+<line x1="1044" y1="259" x2="1088" y2="259"/>
+<line x1="1027.2" y1="251.4" x2="1036" y2="251.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="174"/>
+<line x1="130.2" y1="174" x2="174.2" y2="174"/>
+<line x1="108.2" y1="46" x2="108.2" y2="196"/>
+<line x1="108.2" y1="196" x2="174.2" y2="196"/>
+<line x1="568" y1="351" x2="568" y2="185"/>
+<line x1="568" y1="185" x2="612" y2="185"/>
 <path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L736,46"/>
 <line x1="130.2" y1="72" x2="404" y2="72"/>
-<path d="M568,287 L585.5,287 A4.5,4.5 0 0 1 594.5,287 L736,287"/>
-<line x1="404" y1="30" x2="404" y2="153"/>
-<line x1="736" y1="30" x2="736" y2="153"/>
-<line x1="736" y1="227" x2="736" y2="287"/>
-<line x1="1088" y1="30" x2="1088" y2="153"/>
-<line x1="218" y1="337" x2="942" y2="337"/>
-<circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M568,351 L585.5,351 A4.5,4.5 0 0 1 594.5,351 L736,351"/>
+<line x1="404" y1="30" x2="404" y2="185"/>
+<line x1="736" y1="30" x2="736" y2="185"/>
+<line x1="736" y1="259" x2="736" y2="351"/>
+<line x1="1088" y1="30" x2="1088" y2="185"/>
+<line x1="218" y1="401" x2="942" y2="401"/>
+<circle cx="258" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="159" text-anchor="start" font-size="14">D</text>
-<text x="352" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="652" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="620" y="159" text-anchor="start" font-size="14">D</text>
-<text x="684" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="684" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="1004" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="972" y="159" text-anchor="start" font-size="14">D</text>
-<text x="908" y="159" text-anchor="end" font-size="16">1</text>
-<text x="1036" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1036" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="191" text-anchor="start" font-size="14">D</text>
+<text x="352" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="652" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="652" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="652" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="620" y="191" text-anchor="start" font-size="14">D</text>
+<text x="684" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="684" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="1004" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="1004" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1004" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="1004" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1004" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="972" y="191" text-anchor="start" font-size="14">D</text>
+<text x="908" y="191" text-anchor="end" font-size="16">1</text>
+<text x="1036" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1036" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="736" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1088" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="214" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -24427,64 +25929,90 @@ $T_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1 \\ T_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="306" viewBox="0 0 1052 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="370" viewBox="0 0 1052 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="86" width="80" height="150" rx="2"/>
-<polyline points="152,182 164,191 152,200"/>
-<line x1="152" y1="191" x2="130" y2="191"/>
-<line x1="130" y1="191" x2="130" y2="282"/>
-<line x1="232" y1="124" x2="276" y2="124"/>
-<line x1="232" y1="198" x2="276" y2="198"/>
-<line x1="215.2" y1="190.4" x2="224" y2="190.4" stroke-width="1.4"/>
-<rect x="504" y="86" width="80" height="150" rx="2"/>
-<polyline points="504,182 516,191 504,200"/>
-<line x1="504" y1="191" x2="482" y2="191"/>
-<line x1="482" y1="191" x2="482" y2="282"/>
-<line x1="452" y1="124" x2="504" y2="124"/>
-<line x1="584" y1="124" x2="628" y2="124"/>
-<line x1="584" y1="198" x2="628" y2="198"/>
-<line x1="567.2" y1="190.4" x2="576" y2="190.4" stroke-width="1.4"/>
-<rect x="856" y="86" width="80" height="150" rx="2"/>
-<polyline points="856,182 868,191 856,200"/>
-<line x1="856" y1="191" x2="834" y2="191"/>
-<line x1="834" y1="191" x2="834" y2="282"/>
-<line x1="804" y1="124" x2="856" y2="124"/>
-<line x1="936" y1="124" x2="980" y2="124"/>
-<line x1="936" y1="198" x2="980" y2="198"/>
-<line x1="919.2" y1="190.4" x2="928" y2="190.4" stroke-width="1.4"/>
-<line x1="108" y1="46" x2="108" y2="124"/>
-<line x1="108" y1="124" x2="152" y2="124"/>
+<rect x="152" y="118" width="80" height="150" rx="2"/>
+<circle cx="192" cy="114" r="4"/>
+<line x1="192" y1="110" x2="192" y2="94"/>
+<circle cx="192" cy="272" r="4"/>
+<line x1="192" y1="276" x2="192" y2="292"/>
+<polyline points="152,214 164,223 152,232"/>
+<line x1="152" y1="223" x2="130" y2="223"/>
+<line x1="130" y1="223" x2="130" y2="346"/>
+<line x1="232" y1="156" x2="276" y2="156"/>
+<line x1="232" y1="230" x2="276" y2="230"/>
+<line x1="215.2" y1="222.4" x2="224" y2="222.4" stroke-width="1.4"/>
+<rect x="504" y="118" width="80" height="150" rx="2"/>
+<circle cx="544" cy="114" r="4"/>
+<line x1="544" y1="110" x2="544" y2="94"/>
+<circle cx="544" cy="272" r="4"/>
+<line x1="544" y1="276" x2="544" y2="292"/>
+<polyline points="504,214 516,223 504,232"/>
+<line x1="504" y1="223" x2="482" y2="223"/>
+<line x1="482" y1="223" x2="482" y2="346"/>
+<line x1="452" y1="156" x2="504" y2="156"/>
+<line x1="584" y1="156" x2="628" y2="156"/>
+<line x1="584" y1="230" x2="628" y2="230"/>
+<line x1="567.2" y1="222.4" x2="576" y2="222.4" stroke-width="1.4"/>
+<rect x="856" y="118" width="80" height="150" rx="2"/>
+<circle cx="896" cy="114" r="4"/>
+<line x1="896" y1="110" x2="896" y2="94"/>
+<circle cx="896" cy="272" r="4"/>
+<line x1="896" y1="276" x2="896" y2="292"/>
+<polyline points="856,214 868,223 856,232"/>
+<line x1="856" y1="223" x2="834" y2="223"/>
+<line x1="834" y1="223" x2="834" y2="346"/>
+<line x1="804" y1="156" x2="856" y2="156"/>
+<line x1="936" y1="156" x2="980" y2="156"/>
+<line x1="936" y1="230" x2="980" y2="230"/>
+<line x1="919.2" y1="222.4" x2="928" y2="222.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="156"/>
+<line x1="108" y1="156" x2="152" y2="156"/>
 <path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L628,46"/>
-<line x1="276" y1="30" x2="276" y2="124"/>
-<line x1="628" y1="30" x2="628" y2="124"/>
-<line x1="980" y1="30" x2="980" y2="124"/>
-<line x1="90" y1="282" x2="834" y2="282"/>
-<circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="482" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="276" y1="30" x2="276" y2="156"/>
+<line x1="628" y1="30" x2="628" y2="156"/>
+<line x1="980" y1="30" x2="980" y2="156"/>
+<line x1="90" y1="346" x2="834" y2="346"/>
+<circle cx="130" cy="346" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="482" cy="346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="130" text-anchor="start" font-size="14">T</text>
-<text x="224" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="544" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="512" y="130" text-anchor="start" font-size="14">T</text>
-<text x="448" y="130" text-anchor="end" font-size="16">1</text>
-<text x="576" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="576" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="896" y="169" text-anchor="middle" font-size="26">C</text>
-<text x="864" y="130" text-anchor="start" font-size="14">T</text>
-<text x="800" y="130" text-anchor="end" font-size="16">0</text>
-<text x="928" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="928" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="162" text-anchor="start" font-size="14">T</text>
+<text x="224" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="544" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="544" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="544" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="512" y="162" text-anchor="start" font-size="14">T</text>
+<text x="448" y="162" text-anchor="end" font-size="16">1</text>
+<text x="576" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="576" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="896" y="201" text-anchor="middle" font-size="26">C</text>
+<text x="896" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="896" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="896" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="896" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="864" y="162" text-anchor="start" font-size="14">T</text>
+<text x="800" y="162" text-anchor="end" font-size="16">0</text>
+<text x="928" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="928" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="628" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="980" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="86" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -24836,79 +26364,105 @@ $K_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ JK จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}J_{A} = K_{A} &= Q_{B} \\ J_{B} = K_{B} &= 1 \\ J_{C} = K_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="306" viewBox="0 0 1074 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1074" height="370" viewBox="0 0 1074 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="174" y="86" width="80" height="150" rx="2"/>
-<polyline points="174,152 186,161 174,170"/>
-<circle cx="170" cy="161" r="4"/>
-<line x1="166" y1="161" x2="152" y2="161"/>
-<line x1="152" y1="161" x2="152" y2="282"/>
-<line x1="128" y1="161" x2="128" y2="124"/>
-<line x1="128" y1="124" x2="174" y2="124"/>
-<line x1="128" y1="161" x2="128" y2="198"/>
-<path d="M128,198 L147.5,198 A4.5,4.5 0 0 1 156.5,198 L174,198"/>
-<line x1="254" y1="124" x2="298" y2="124"/>
-<line x1="254" y1="198" x2="298" y2="198"/>
-<line x1="237.2" y1="190.4" x2="246" y2="190.4" stroke-width="1.4"/>
-<rect x="526" y="86" width="80" height="150" rx="2"/>
-<polyline points="526,152 538,161 526,170"/>
-<circle cx="522" cy="161" r="4"/>
-<line x1="518" y1="161" x2="504" y2="161"/>
-<line x1="504" y1="161" x2="504" y2="282"/>
-<line x1="474" y1="124" x2="526" y2="124"/>
-<path d="M474,198 L499.5,198 A4.5,4.5 0 0 1 508.5,198 L526,198"/>
-<line x1="606" y1="124" x2="650" y2="124"/>
-<line x1="606" y1="198" x2="650" y2="198"/>
-<line x1="589.2" y1="190.4" x2="598" y2="190.4" stroke-width="1.4"/>
-<rect x="878" y="86" width="80" height="150" rx="2"/>
-<polyline points="878,152 890,161 878,170"/>
-<circle cx="874" cy="161" r="4"/>
-<line x1="870" y1="161" x2="856" y2="161"/>
-<line x1="856" y1="161" x2="856" y2="282"/>
-<line x1="826" y1="124" x2="878" y2="124"/>
-<path d="M826,198 L851.5,198 A4.5,4.5 0 0 1 860.5,198 L878,198"/>
-<line x1="958" y1="124" x2="1002" y2="124"/>
-<line x1="958" y1="198" x2="1002" y2="198"/>
-<line x1="941.2" y1="190.4" x2="950" y2="190.4" stroke-width="1.4"/>
-<line x1="84" y1="46" x2="84" y2="161"/>
-<line x1="84" y1="161" x2="128" y2="161"/>
+<rect x="174" y="118" width="80" height="150" rx="2"/>
+<circle cx="214" cy="114" r="4"/>
+<line x1="214" y1="110" x2="214" y2="94"/>
+<circle cx="214" cy="272" r="4"/>
+<line x1="214" y1="276" x2="214" y2="292"/>
+<polyline points="174,184 186,193 174,202"/>
+<circle cx="170" cy="193" r="4"/>
+<line x1="166" y1="193" x2="152" y2="193"/>
+<line x1="152" y1="193" x2="152" y2="346"/>
+<line x1="128" y1="193" x2="128" y2="156"/>
+<line x1="128" y1="156" x2="174" y2="156"/>
+<line x1="128" y1="193" x2="128" y2="230"/>
+<path d="M128,230 L147.5,230 A4.5,4.5 0 0 1 156.5,230 L174,230"/>
+<line x1="254" y1="156" x2="298" y2="156"/>
+<line x1="254" y1="230" x2="298" y2="230"/>
+<line x1="237.2" y1="222.4" x2="246" y2="222.4" stroke-width="1.4"/>
+<rect x="526" y="118" width="80" height="150" rx="2"/>
+<circle cx="566" cy="114" r="4"/>
+<line x1="566" y1="110" x2="566" y2="94"/>
+<circle cx="566" cy="272" r="4"/>
+<line x1="566" y1="276" x2="566" y2="292"/>
+<polyline points="526,184 538,193 526,202"/>
+<circle cx="522" cy="193" r="4"/>
+<line x1="518" y1="193" x2="504" y2="193"/>
+<line x1="504" y1="193" x2="504" y2="346"/>
+<line x1="474" y1="156" x2="526" y2="156"/>
+<path d="M474,230 L499.5,230 A4.5,4.5 0 0 1 508.5,230 L526,230"/>
+<line x1="606" y1="156" x2="650" y2="156"/>
+<line x1="606" y1="230" x2="650" y2="230"/>
+<line x1="589.2" y1="222.4" x2="598" y2="222.4" stroke-width="1.4"/>
+<rect x="878" y="118" width="80" height="150" rx="2"/>
+<circle cx="918" cy="114" r="4"/>
+<line x1="918" y1="110" x2="918" y2="94"/>
+<circle cx="918" cy="272" r="4"/>
+<line x1="918" y1="276" x2="918" y2="292"/>
+<polyline points="878,184 890,193 878,202"/>
+<circle cx="874" cy="193" r="4"/>
+<line x1="870" y1="193" x2="856" y2="193"/>
+<line x1="856" y1="193" x2="856" y2="346"/>
+<line x1="826" y1="156" x2="878" y2="156"/>
+<path d="M826,230 L851.5,230 A4.5,4.5 0 0 1 860.5,230 L878,230"/>
+<line x1="958" y1="156" x2="1002" y2="156"/>
+<line x1="958" y1="230" x2="1002" y2="230"/>
+<line x1="941.2" y1="222.4" x2="950" y2="222.4" stroke-width="1.4"/>
+<line x1="84" y1="46" x2="84" y2="193"/>
+<line x1="84" y1="193" x2="128" y2="193"/>
 <path d="M84,46 L293.5,46 A4.5,4.5 0 0 1 302.5,46 L650,46"/>
-<line x1="298" y1="30" x2="298" y2="124"/>
-<line x1="650" y1="30" x2="650" y2="124"/>
-<line x1="1002" y1="30" x2="1002" y2="124"/>
-<line x1="112" y1="282" x2="856" y2="282"/>
-<circle cx="152" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="128" cy="161" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="504" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="298" y1="30" x2="298" y2="156"/>
+<line x1="650" y1="30" x2="650" y2="156"/>
+<line x1="1002" y1="30" x2="1002" y2="156"/>
+<line x1="112" y1="346" x2="856" y2="346"/>
+<circle cx="152" cy="346" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="128" cy="193" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="504" cy="346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="650" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="214" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="182" y="130" text-anchor="start" font-size="14">J</text>
-<text x="182" y="204" text-anchor="start" font-size="14">K</text>
-<text x="246" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="246" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="566" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="534" y="130" text-anchor="start" font-size="14">J</text>
-<text x="534" y="204" text-anchor="start" font-size="14">K</text>
-<text x="470" y="130" text-anchor="end" font-size="16">1</text>
-<text x="470" y="204" text-anchor="end" font-size="16">1</text>
-<text x="598" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="598" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="918" y="169" text-anchor="middle" font-size="26">C</text>
-<text x="886" y="130" text-anchor="start" font-size="14">J</text>
-<text x="886" y="204" text-anchor="start" font-size="14">K</text>
-<text x="822" y="130" text-anchor="end" font-size="16">0</text>
-<text x="822" y="204" text-anchor="end" font-size="16">0</text>
-<text x="950" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="950" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="214" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="214" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="214" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="214" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="182" y="162" text-anchor="start" font-size="14">J</text>
+<text x="182" y="236" text-anchor="start" font-size="14">K</text>
+<text x="246" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="246" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="566" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="566" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="566" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="566" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="534" y="162" text-anchor="start" font-size="14">J</text>
+<text x="534" y="236" text-anchor="start" font-size="14">K</text>
+<text x="470" y="162" text-anchor="end" font-size="16">1</text>
+<text x="470" y="236" text-anchor="end" font-size="16">1</text>
+<text x="598" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="598" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="918" y="201" text-anchor="middle" font-size="26">C</text>
+<text x="918" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="918" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="918" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="886" y="162" text-anchor="start" font-size="14">J</text>
+<text x="886" y="236" text-anchor="start" font-size="14">K</text>
+<text x="822" y="162" text-anchor="end" font-size="16">0</text>
+<text x="822" y="236" text-anchor="end" font-size="16">0</text>
+<text x="950" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="950" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="298" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="650" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1002" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="108" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="108" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -25261,92 +26815,118 @@ $S_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ RS จึงวาดแบบขอบขาลง (มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}R_{A} &= Q_{A}Q_{B} \\ S_{A} &= \overline{Q_{A}}Q_{B} \\ R_{B} &= Q_{B} \\ S_{B} &= \overline{Q_{B}} \\ R_{C} &= 0 \\ S_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="412" viewBox="0 0 1210 412" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1210" height="476" viewBox="0 0 1210 476" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="308" y="115" width="80" height="172" rx="2"/>
-<polyline points="308,192 320,201 308,210"/>
-<circle cx="304" cy="201" r="4"/>
-<line x1="300" y1="201" x2="286" y2="201"/>
-<line x1="286" y1="201" x2="286" y2="388"/>
-<path d="M212,120 H238 A26,33 0 0 1 238,186 H212 Z"/>
-<line x1="264" y1="153" x2="308" y2="153"/>
-<path d="M212,216 H238 A26,33 0 0 1 238,282 H212 Z"/>
-<path d="M264,249 L281.5,249 A4.5,4.5 0 0 1 290.5,249 L308,249"/>
-<line x1="388" y1="153" x2="432" y2="153"/>
-<line x1="388" y1="249" x2="432" y2="249"/>
-<line x1="371.2" y1="241.4" x2="380" y2="241.4" stroke-width="1.4"/>
-<rect x="662" y="115" width="80" height="172" rx="2"/>
-<polyline points="662,192 674,201 662,210"/>
-<circle cx="658" cy="201" r="4"/>
-<line x1="654" y1="201" x2="640" y2="201"/>
-<line x1="640" y1="201" x2="640" y2="388"/>
-<line x1="742" y1="153" x2="786" y2="153"/>
-<line x1="742" y1="249" x2="786" y2="249"/>
-<line x1="725.2" y1="241.4" x2="734" y2="241.4" stroke-width="1.4"/>
-<rect x="1014" y="115" width="80" height="172" rx="2"/>
-<polyline points="1014,192 1026,201 1014,210"/>
-<circle cx="1010" cy="201" r="4"/>
-<line x1="1006" y1="201" x2="992" y2="201"/>
-<line x1="992" y1="201" x2="992" y2="388"/>
-<line x1="962" y1="153" x2="1014" y2="153"/>
-<path d="M962,249 L987.5,249 A4.5,4.5 0 0 1 996.5,249 L1014,249"/>
-<line x1="1094" y1="153" x2="1138" y2="153"/>
-<line x1="1094" y1="249" x2="1138" y2="249"/>
-<line x1="1077.2" y1="241.4" x2="1086" y2="241.4" stroke-width="1.4"/>
-<line x1="168" y1="46" x2="168" y2="164"/>
-<line x1="168" y1="164" x2="212" y2="164"/>
-<line x1="146" y1="72" x2="146" y2="238"/>
-<line x1="146" y1="238" x2="212" y2="238"/>
-<line x1="124" y1="46" x2="124" y2="260"/>
-<line x1="124" y1="260" x2="212" y2="260"/>
-<line x1="102" y1="312" x2="102" y2="142"/>
-<path d="M102,142 L119.5,142 A4.5,4.5 0 0 1 128.5,142 L141.5,142 A4.5,4.5 0 0 1 150.5,142 L163.5,142 A4.5,4.5 0 0 1 172.5,142 L212,142"/>
-<line x1="618" y1="46" x2="618" y2="249"/>
-<path d="M618,249 L635.5,249 A4.5,4.5 0 0 1 644.5,249 L662,249"/>
-<line x1="596" y1="338" x2="596" y2="153"/>
-<path d="M596,153 L613.5,153 A4.5,4.5 0 0 1 622.5,153 L662,153"/>
+<rect x="308" y="147" width="80" height="172" rx="2"/>
+<circle cx="348" cy="143" r="4"/>
+<line x1="348" y1="139" x2="348" y2="123"/>
+<circle cx="348" cy="323" r="4"/>
+<line x1="348" y1="327" x2="348" y2="343"/>
+<polyline points="308,224 320,233 308,242"/>
+<circle cx="304" cy="233" r="4"/>
+<line x1="300" y1="233" x2="286" y2="233"/>
+<line x1="286" y1="233" x2="286" y2="452"/>
+<path d="M212,152 H238 A26,33 0 0 1 238,218 H212 Z"/>
+<line x1="264" y1="185" x2="308" y2="185"/>
+<path d="M212,248 H238 A26,33 0 0 1 238,314 H212 Z"/>
+<path d="M264,281 L281.5,281 A4.5,4.5 0 0 1 290.5,281 L308,281"/>
+<line x1="388" y1="185" x2="432" y2="185"/>
+<line x1="388" y1="281" x2="432" y2="281"/>
+<line x1="371.2" y1="273.4" x2="380" y2="273.4" stroke-width="1.4"/>
+<rect x="662" y="147" width="80" height="172" rx="2"/>
+<circle cx="702" cy="143" r="4"/>
+<line x1="702" y1="139" x2="702" y2="123"/>
+<circle cx="702" cy="323" r="4"/>
+<line x1="702" y1="327" x2="702" y2="343"/>
+<polyline points="662,224 674,233 662,242"/>
+<circle cx="658" cy="233" r="4"/>
+<line x1="654" y1="233" x2="640" y2="233"/>
+<line x1="640" y1="233" x2="640" y2="452"/>
+<line x1="742" y1="185" x2="786" y2="185"/>
+<line x1="742" y1="281" x2="786" y2="281"/>
+<line x1="725.2" y1="273.4" x2="734" y2="273.4" stroke-width="1.4"/>
+<rect x="1014" y="147" width="80" height="172" rx="2"/>
+<circle cx="1054" cy="143" r="4"/>
+<line x1="1054" y1="139" x2="1054" y2="123"/>
+<circle cx="1054" cy="323" r="4"/>
+<line x1="1054" y1="327" x2="1054" y2="343"/>
+<polyline points="1014,224 1026,233 1014,242"/>
+<circle cx="1010" cy="233" r="4"/>
+<line x1="1006" y1="233" x2="992" y2="233"/>
+<line x1="992" y1="233" x2="992" y2="452"/>
+<line x1="962" y1="185" x2="1014" y2="185"/>
+<path d="M962,281 L987.5,281 A4.5,4.5 0 0 1 996.5,281 L1014,281"/>
+<line x1="1094" y1="185" x2="1138" y2="185"/>
+<line x1="1094" y1="281" x2="1138" y2="281"/>
+<line x1="1077.2" y1="273.4" x2="1086" y2="273.4" stroke-width="1.4"/>
+<line x1="168" y1="46" x2="168" y2="196"/>
+<line x1="168" y1="196" x2="212" y2="196"/>
+<line x1="146" y1="72" x2="146" y2="270"/>
+<line x1="146" y1="270" x2="212" y2="270"/>
+<line x1="124" y1="46" x2="124" y2="292"/>
+<line x1="124" y1="292" x2="212" y2="292"/>
+<line x1="102" y1="376" x2="102" y2="174"/>
+<path d="M102,174 L119.5,174 A4.5,4.5 0 0 1 128.5,174 L141.5,174 A4.5,4.5 0 0 1 150.5,174 L163.5,174 A4.5,4.5 0 0 1 172.5,174 L212,174"/>
+<line x1="618" y1="46" x2="618" y2="281"/>
+<path d="M618,281 L635.5,281 A4.5,4.5 0 0 1 644.5,281 L662,281"/>
+<line x1="596" y1="402" x2="596" y2="185"/>
+<path d="M596,185 L613.5,185 A4.5,4.5 0 0 1 622.5,185 L662,185"/>
 <path d="M124,46 L427.5,46 A4.5,4.5 0 0 1 436.5,46 L786,46"/>
 <path d="M146,72 L163.5,72 A4.5,4.5 0 0 1 172.5,72 L432,72"/>
-<path d="M596,338 L635.5,338 A4.5,4.5 0 0 1 644.5,338 L786,338"/>
-<path d="M102,312 L281.5,312 A4.5,4.5 0 0 1 290.5,312 L432,312"/>
-<line x1="432" y1="30" x2="432" y2="153"/>
-<line x1="432" y1="249" x2="432" y2="312"/>
-<line x1="786" y1="30" x2="786" y2="153"/>
-<line x1="786" y1="249" x2="786" y2="338"/>
-<line x1="1138" y1="30" x2="1138" y2="153"/>
-<line x1="246" y1="388" x2="992" y2="388"/>
-<circle cx="286" cy="388" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="640" cy="388" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M596,402 L635.5,402 A4.5,4.5 0 0 1 644.5,402 L786,402"/>
+<path d="M102,376 L281.5,376 A4.5,4.5 0 0 1 290.5,376 L432,376"/>
+<line x1="432" y1="30" x2="432" y2="185"/>
+<line x1="432" y1="281" x2="432" y2="376"/>
+<line x1="786" y1="30" x2="786" y2="185"/>
+<line x1="786" y1="281" x2="786" y2="402"/>
+<line x1="1138" y1="30" x2="1138" y2="185"/>
+<line x1="246" y1="452" x2="992" y2="452"/>
+<circle cx="286" cy="452" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="640" cy="452" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="786" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="168" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="618" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="432" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="348" y="209" text-anchor="middle" font-size="26">A</text>
-<text x="316" y="159" text-anchor="start" font-size="14">S</text>
-<text x="316" y="255" text-anchor="start" font-size="14">R</text>
-<text x="380" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="380" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="702" y="209" text-anchor="middle" font-size="26">B</text>
-<text x="670" y="159" text-anchor="start" font-size="14">S</text>
-<text x="670" y="255" text-anchor="start" font-size="14">R</text>
-<text x="734" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="734" y="255" text-anchor="end" font-size="16">Q</text>
-<text x="1054" y="209" text-anchor="middle" font-size="26">C</text>
-<text x="1022" y="159" text-anchor="start" font-size="14">S</text>
-<text x="1022" y="255" text-anchor="start" font-size="14">R</text>
-<text x="958" y="159" text-anchor="end" font-size="16">0</text>
-<text x="958" y="255" text-anchor="end" font-size="16">0</text>
-<text x="1086" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1086" y="255" text-anchor="end" font-size="16">Q</text>
+<text x="348" y="241" text-anchor="middle" font-size="26">A</text>
+<text x="348" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="348" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="348" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="316" y="191" text-anchor="start" font-size="14">S</text>
+<text x="316" y="287" text-anchor="start" font-size="14">R</text>
+<text x="380" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="380" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="702" y="241" text-anchor="middle" font-size="26">B</text>
+<text x="702" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="702" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="702" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="670" y="191" text-anchor="start" font-size="14">S</text>
+<text x="670" y="287" text-anchor="start" font-size="14">R</text>
+<text x="734" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="734" y="287" text-anchor="end" font-size="16">Q</text>
+<text x="1054" y="241" text-anchor="middle" font-size="26">C</text>
+<text x="1054" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="361" text-anchor="middle" font-size="14">1</text>
+<text x="1054" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1054" y="311" text-anchor="middle" font-size="12">CLR</text>
+<text x="1022" y="191" text-anchor="start" font-size="14">S</text>
+<text x="1022" y="287" text-anchor="start" font-size="14">R</text>
+<text x="958" y="191" text-anchor="end" font-size="16">0</text>
+<text x="958" y="287" text-anchor="end" font-size="16">0</text>
+<text x="1086" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1086" y="287" text-anchor="end" font-size="16">Q</text>
 <text x="432" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="786" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1138" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="242" y="394" text-anchor="end" font-size="16">Clock</text>
+<text x="242" y="458" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -25574,73 +27154,99 @@ $D_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ D จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}D_{A} &= \overline{Q_{A}}Q_{B} + Q_{A}\overline{Q_{B}} \\ D_{B} &= \overline{Q_{B}} \\ D_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="361" viewBox="0 0 1160 361" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="425" viewBox="0 0 1160 425" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="280" y="115" width="80" height="150" rx="2"/>
-<polyline points="280,211 292,220 280,229"/>
-<line x1="280" y1="220" x2="258" y2="220"/>
-<line x1="258" y1="220" x2="258" y2="337"/>
-<path d="M176,120 C198,120 224,136.5 236,153 C224,169.5 198,186 176,186 Q190,153 176,120 Z"/>
-<path d="M168,120 Q182,153 168,186"/>
-<line x1="236" y1="153" x2="280" y2="153"/>
-<line x1="360" y1="153" x2="404" y2="153"/>
-<line x1="360" y1="227" x2="404" y2="227"/>
-<line x1="343.2" y1="219.4" x2="352" y2="219.4" stroke-width="1.4"/>
-<rect x="612" y="115" width="80" height="150" rx="2"/>
-<polyline points="612,211 624,220 612,229"/>
-<line x1="612" y1="220" x2="590" y2="220"/>
-<line x1="590" y1="220" x2="590" y2="337"/>
-<line x1="692" y1="153" x2="736" y2="153"/>
-<line x1="692" y1="227" x2="736" y2="227"/>
-<line x1="675.2" y1="219.4" x2="684" y2="219.4" stroke-width="1.4"/>
-<rect x="964" y="115" width="80" height="150" rx="2"/>
-<polyline points="964,211 976,220 964,229"/>
-<line x1="964" y1="220" x2="942" y2="220"/>
-<line x1="942" y1="220" x2="942" y2="337"/>
-<line x1="912" y1="153" x2="964" y2="153"/>
-<line x1="1044" y1="153" x2="1088" y2="153"/>
-<line x1="1044" y1="227" x2="1088" y2="227"/>
-<line x1="1027.2" y1="219.4" x2="1036" y2="219.4" stroke-width="1.4"/>
-<line x1="130.2" y1="72" x2="130.2" y2="142"/>
-<line x1="130.2" y1="142" x2="174.2" y2="142"/>
-<line x1="108.2" y1="46" x2="108.2" y2="164"/>
-<line x1="108.2" y1="164" x2="174.2" y2="164"/>
-<line x1="568" y1="287" x2="568" y2="153"/>
-<line x1="568" y1="153" x2="612" y2="153"/>
+<rect x="280" y="147" width="80" height="150" rx="2"/>
+<circle cx="320" cy="143" r="4"/>
+<line x1="320" y1="139" x2="320" y2="123"/>
+<circle cx="320" cy="301" r="4"/>
+<line x1="320" y1="305" x2="320" y2="321"/>
+<polyline points="280,243 292,252 280,261"/>
+<line x1="280" y1="252" x2="258" y2="252"/>
+<line x1="258" y1="252" x2="258" y2="401"/>
+<path d="M176,152 C198,152 224,168.5 236,185 C224,201.5 198,218 176,218 Q190,185 176,152 Z"/>
+<path d="M168,152 Q182,185 168,218"/>
+<line x1="236" y1="185" x2="280" y2="185"/>
+<line x1="360" y1="185" x2="404" y2="185"/>
+<line x1="360" y1="259" x2="404" y2="259"/>
+<line x1="343.2" y1="251.4" x2="352" y2="251.4" stroke-width="1.4"/>
+<rect x="612" y="147" width="80" height="150" rx="2"/>
+<circle cx="652" cy="143" r="4"/>
+<line x1="652" y1="139" x2="652" y2="123"/>
+<circle cx="652" cy="301" r="4"/>
+<line x1="652" y1="305" x2="652" y2="321"/>
+<polyline points="612,243 624,252 612,261"/>
+<line x1="612" y1="252" x2="590" y2="252"/>
+<line x1="590" y1="252" x2="590" y2="401"/>
+<line x1="692" y1="185" x2="736" y2="185"/>
+<line x1="692" y1="259" x2="736" y2="259"/>
+<line x1="675.2" y1="251.4" x2="684" y2="251.4" stroke-width="1.4"/>
+<rect x="964" y="147" width="80" height="150" rx="2"/>
+<circle cx="1004" cy="143" r="4"/>
+<line x1="1004" y1="139" x2="1004" y2="123"/>
+<circle cx="1004" cy="301" r="4"/>
+<line x1="1004" y1="305" x2="1004" y2="321"/>
+<polyline points="964,243 976,252 964,261"/>
+<line x1="964" y1="252" x2="942" y2="252"/>
+<line x1="942" y1="252" x2="942" y2="401"/>
+<line x1="912" y1="185" x2="964" y2="185"/>
+<line x1="1044" y1="185" x2="1088" y2="185"/>
+<line x1="1044" y1="259" x2="1088" y2="259"/>
+<line x1="1027.2" y1="251.4" x2="1036" y2="251.4" stroke-width="1.4"/>
+<line x1="130.2" y1="72" x2="130.2" y2="174"/>
+<line x1="130.2" y1="174" x2="174.2" y2="174"/>
+<line x1="108.2" y1="46" x2="108.2" y2="196"/>
+<line x1="108.2" y1="196" x2="174.2" y2="196"/>
+<line x1="568" y1="351" x2="568" y2="185"/>
+<line x1="568" y1="185" x2="612" y2="185"/>
 <path d="M108.2,46 L399.5,46 A4.5,4.5 0 0 1 408.5,46 L736,46"/>
 <line x1="130.2" y1="72" x2="404" y2="72"/>
-<path d="M568,287 L585.5,287 A4.5,4.5 0 0 1 594.5,287 L736,287"/>
-<line x1="404" y1="30" x2="404" y2="153"/>
-<line x1="736" y1="30" x2="736" y2="153"/>
-<line x1="736" y1="227" x2="736" y2="287"/>
-<line x1="1088" y1="30" x2="1088" y2="153"/>
-<line x1="218" y1="337" x2="942" y2="337"/>
-<circle cx="258" cy="337" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="590" cy="337" r="3.5" fill="currentColor" stroke="none"/>
+<path d="M568,351 L585.5,351 A4.5,4.5 0 0 1 594.5,351 L736,351"/>
+<line x1="404" y1="30" x2="404" y2="185"/>
+<line x1="736" y1="30" x2="736" y2="185"/>
+<line x1="736" y1="259" x2="736" y2="351"/>
+<line x1="1088" y1="30" x2="1088" y2="185"/>
+<line x1="218" y1="401" x2="942" y2="401"/>
+<circle cx="258" cy="401" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="590" cy="401" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="736" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="404" cy="72" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="320" y="198" text-anchor="middle" font-size="26">A</text>
-<text x="288" y="159" text-anchor="start" font-size="14">D</text>
-<text x="352" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="352" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="652" y="198" text-anchor="middle" font-size="26">B</text>
-<text x="620" y="159" text-anchor="start" font-size="14">D</text>
-<text x="684" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="684" y="233" text-anchor="end" font-size="16">Q</text>
-<text x="1004" y="198" text-anchor="middle" font-size="26">C</text>
-<text x="972" y="159" text-anchor="start" font-size="14">D</text>
-<text x="908" y="159" text-anchor="end" font-size="16">0</text>
-<text x="1036" y="159" text-anchor="end" font-size="16">Q</text>
-<text x="1036" y="233" text-anchor="end" font-size="16">Q</text>
+<text x="320" y="230" text-anchor="middle" font-size="26">A</text>
+<text x="320" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="320" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="320" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="288" y="191" text-anchor="start" font-size="14">D</text>
+<text x="352" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="352" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="652" y="230" text-anchor="middle" font-size="26">B</text>
+<text x="652" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="652" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="652" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="620" y="191" text-anchor="start" font-size="14">D</text>
+<text x="684" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="684" y="265" text-anchor="end" font-size="16">Q</text>
+<text x="1004" y="230" text-anchor="middle" font-size="26">C</text>
+<text x="1004" y="117" text-anchor="middle" font-size="14">1</text>
+<text x="1004" y="339" text-anchor="middle" font-size="14">1</text>
+<text x="1004" y="164" text-anchor="middle" font-size="12">PR</text>
+<text x="1004" y="289" text-anchor="middle" font-size="12">CLR</text>
+<text x="972" y="191" text-anchor="start" font-size="14">D</text>
+<text x="908" y="191" text-anchor="end" font-size="16">0</text>
+<text x="1036" y="191" text-anchor="end" font-size="16">Q</text>
+<text x="1036" y="265" text-anchor="end" font-size="16">Q</text>
 <text x="404" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="736" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="1088" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="214" y="343" text-anchor="end" font-size="16">Clock</text>
+<text x="214" y="407" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>
@@ -25864,64 +27470,90 @@ $T_{C} = 0$
 - ฟลิป-ฟลอปทุกตัวใช้ขอบแบบเดียวกัน และต่อ Clock เส้นเดียวกัน
 - ข้อนี้ใช้ T จึงวาดแบบขอบขาขึ้น (ไม่มีวงกลมที่ขา CLK)
 
+**ขา PR และ CLR** ของฟลิป-ฟลอปทำงานเมื่อเป็น $0$ (มีวงกลมที่ขา) วงจรนับทั่วไปไม่ใช้ จึงต่อไว้ที่ $1$ ทุกตัว
+
 $\mathbf{Ans}\quad \begin{aligned}T_{A} &= Q_{B} \\ T_{B} &= 1 \\ T_{C} &= 0\end{aligned}$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="306" viewBox="0 0 1052 306" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="1052" height="370" viewBox="0 0 1052 370" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="square">
-<rect x="152" y="86" width="80" height="150" rx="2"/>
-<polyline points="152,182 164,191 152,200"/>
-<line x1="152" y1="191" x2="130" y2="191"/>
-<line x1="130" y1="191" x2="130" y2="282"/>
-<line x1="232" y1="124" x2="276" y2="124"/>
-<line x1="232" y1="198" x2="276" y2="198"/>
-<line x1="215.2" y1="190.4" x2="224" y2="190.4" stroke-width="1.4"/>
-<rect x="504" y="86" width="80" height="150" rx="2"/>
-<polyline points="504,182 516,191 504,200"/>
-<line x1="504" y1="191" x2="482" y2="191"/>
-<line x1="482" y1="191" x2="482" y2="282"/>
-<line x1="452" y1="124" x2="504" y2="124"/>
-<line x1="584" y1="124" x2="628" y2="124"/>
-<line x1="584" y1="198" x2="628" y2="198"/>
-<line x1="567.2" y1="190.4" x2="576" y2="190.4" stroke-width="1.4"/>
-<rect x="856" y="86" width="80" height="150" rx="2"/>
-<polyline points="856,182 868,191 856,200"/>
-<line x1="856" y1="191" x2="834" y2="191"/>
-<line x1="834" y1="191" x2="834" y2="282"/>
-<line x1="804" y1="124" x2="856" y2="124"/>
-<line x1="936" y1="124" x2="980" y2="124"/>
-<line x1="936" y1="198" x2="980" y2="198"/>
-<line x1="919.2" y1="190.4" x2="928" y2="190.4" stroke-width="1.4"/>
-<line x1="108" y1="46" x2="108" y2="124"/>
-<line x1="108" y1="124" x2="152" y2="124"/>
+<rect x="152" y="118" width="80" height="150" rx="2"/>
+<circle cx="192" cy="114" r="4"/>
+<line x1="192" y1="110" x2="192" y2="94"/>
+<circle cx="192" cy="272" r="4"/>
+<line x1="192" y1="276" x2="192" y2="292"/>
+<polyline points="152,214 164,223 152,232"/>
+<line x1="152" y1="223" x2="130" y2="223"/>
+<line x1="130" y1="223" x2="130" y2="346"/>
+<line x1="232" y1="156" x2="276" y2="156"/>
+<line x1="232" y1="230" x2="276" y2="230"/>
+<line x1="215.2" y1="222.4" x2="224" y2="222.4" stroke-width="1.4"/>
+<rect x="504" y="118" width="80" height="150" rx="2"/>
+<circle cx="544" cy="114" r="4"/>
+<line x1="544" y1="110" x2="544" y2="94"/>
+<circle cx="544" cy="272" r="4"/>
+<line x1="544" y1="276" x2="544" y2="292"/>
+<polyline points="504,214 516,223 504,232"/>
+<line x1="504" y1="223" x2="482" y2="223"/>
+<line x1="482" y1="223" x2="482" y2="346"/>
+<line x1="452" y1="156" x2="504" y2="156"/>
+<line x1="584" y1="156" x2="628" y2="156"/>
+<line x1="584" y1="230" x2="628" y2="230"/>
+<line x1="567.2" y1="222.4" x2="576" y2="222.4" stroke-width="1.4"/>
+<rect x="856" y="118" width="80" height="150" rx="2"/>
+<circle cx="896" cy="114" r="4"/>
+<line x1="896" y1="110" x2="896" y2="94"/>
+<circle cx="896" cy="272" r="4"/>
+<line x1="896" y1="276" x2="896" y2="292"/>
+<polyline points="856,214 868,223 856,232"/>
+<line x1="856" y1="223" x2="834" y2="223"/>
+<line x1="834" y1="223" x2="834" y2="346"/>
+<line x1="804" y1="156" x2="856" y2="156"/>
+<line x1="936" y1="156" x2="980" y2="156"/>
+<line x1="936" y1="230" x2="980" y2="230"/>
+<line x1="919.2" y1="222.4" x2="928" y2="222.4" stroke-width="1.4"/>
+<line x1="108" y1="46" x2="108" y2="156"/>
+<line x1="108" y1="156" x2="152" y2="156"/>
 <path d="M108,46 L271.5,46 A4.5,4.5 0 0 1 280.5,46 L628,46"/>
-<line x1="276" y1="30" x2="276" y2="124"/>
-<line x1="628" y1="30" x2="628" y2="124"/>
-<line x1="980" y1="30" x2="980" y2="124"/>
-<line x1="90" y1="282" x2="834" y2="282"/>
-<circle cx="130" cy="282" r="3.5" fill="currentColor" stroke="none"/>
-<circle cx="482" cy="282" r="3.5" fill="currentColor" stroke="none"/>
+<line x1="276" y1="30" x2="276" y2="156"/>
+<line x1="628" y1="30" x2="628" y2="156"/>
+<line x1="980" y1="30" x2="980" y2="156"/>
+<line x1="90" y1="346" x2="834" y2="346"/>
+<circle cx="130" cy="346" r="3.5" fill="currentColor" stroke="none"/>
+<circle cx="482" cy="346" r="3.5" fill="currentColor" stroke="none"/>
 <circle cx="628" cy="46" r="3.5" fill="currentColor" stroke="none"/>
 </g>
-<text x="192" y="169" text-anchor="middle" font-size="26">A</text>
-<text x="160" y="130" text-anchor="start" font-size="14">T</text>
-<text x="224" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="224" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="544" y="169" text-anchor="middle" font-size="26">B</text>
-<text x="512" y="130" text-anchor="start" font-size="14">T</text>
-<text x="448" y="130" text-anchor="end" font-size="16">1</text>
-<text x="576" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="576" y="204" text-anchor="end" font-size="16">Q</text>
-<text x="896" y="169" text-anchor="middle" font-size="26">C</text>
-<text x="864" y="130" text-anchor="start" font-size="14">T</text>
-<text x="800" y="130" text-anchor="end" font-size="16">0</text>
-<text x="928" y="130" text-anchor="end" font-size="16">Q</text>
-<text x="928" y="204" text-anchor="end" font-size="16">Q</text>
+<text x="192" y="201" text-anchor="middle" font-size="26">A</text>
+<text x="192" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="192" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="192" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="160" y="162" text-anchor="start" font-size="14">T</text>
+<text x="224" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="224" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="544" y="201" text-anchor="middle" font-size="26">B</text>
+<text x="544" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="544" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="544" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="512" y="162" text-anchor="start" font-size="14">T</text>
+<text x="448" y="162" text-anchor="end" font-size="16">1</text>
+<text x="576" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="576" y="236" text-anchor="end" font-size="16">Q</text>
+<text x="896" y="201" text-anchor="middle" font-size="26">C</text>
+<text x="896" y="88" text-anchor="middle" font-size="14">1</text>
+<text x="896" y="310" text-anchor="middle" font-size="14">1</text>
+<text x="896" y="135" text-anchor="middle" font-size="12">PR</text>
+<text x="896" y="260" text-anchor="middle" font-size="12">CLR</text>
+<text x="864" y="162" text-anchor="start" font-size="14">T</text>
+<text x="800" y="162" text-anchor="end" font-size="16">0</text>
+<text x="928" y="162" text-anchor="end" font-size="16">Q</text>
+<text x="928" y="236" text-anchor="end" font-size="16">Q</text>
 <text x="276" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">A</tspan></text>
 <text x="628" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">B</tspan></text>
 <text x="980" y="24" text-anchor="middle" font-size="16">Q<tspan dy="4" font-size="10">C</tspan></text>
-<text x="86" y="288" text-anchor="end" font-size="16">Clock</text>
+<text x="86" y="352" text-anchor="end" font-size="16">Clock</text>
 </g>
 </svg>
 </div>

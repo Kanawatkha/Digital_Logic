@@ -718,42 +718,54 @@ $\mathbf{Ans}\quad Q(t+1) = \overline{R} + S\,Q(t)$
 </svg>
 </div>
 
-**สัญลักษณ์ของ Clock RS ฟลิป-ฟลอป** ขา CLK มีเครื่องหมาย $>$ ถ้ามีวงกลมที่ขา CLK แสดงว่าทำงานที่ขอบขาลง ถ้าไม่มีวงกลมทำงานที่ขอบขาขึ้น
+**สัญลักษณ์ของ Clock RS ฟลิป-ฟลอป** ขา CLK มีเครื่องหมาย $>$ ถ้ามีวงกลมที่ขา CLK แสดงว่าทำงานที่ขอบขาลง ถ้าไม่มีวงกลมทำงานที่ขอบขาขึ้น ขา PR (Preset, ในบทนี้เรียกว่า PS) และ CLR (Clear) อยู่ด้านบนและด้านล่าง มีวงกลมแสดงว่าทำงานเมื่อเป็น $0$
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="252" viewBox="0 0 560 252" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="52" y="14" width="80" height="150" rx="2"/>
-<line x1="16" y1="52" x2="52" y2="52"/>
-<line x1="16" y1="126" x2="52" y2="126"/>
-<polyline points="52,80 64,89 52,98"/>
-<line x1="16" y1="89" x2="52" y2="89"/>
-<line x1="132" y1="52" x2="168" y2="52"/>
-<line x1="132" y1="126" x2="168" y2="126"/>
-<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
-<rect x="332" y="14" width="80" height="150" rx="2"/>
-<line x1="296" y1="52" x2="332" y2="52"/>
-<line x1="296" y1="126" x2="332" y2="126"/>
-<polyline points="332,80 344,89 332,98"/>
-<circle cx="328" cy="89" r="4"/>
-<line x1="296" y1="89" x2="324" y2="89"/>
-<line x1="412" y1="52" x2="448" y2="52"/>
-<line x1="412" y1="126" x2="448" y2="126"/>
-<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+<rect x="52" y="38" width="80" height="150" rx="2"/>
+<line x1="16" y1="76" x2="52" y2="76"/>
+<line x1="16" y1="150" x2="52" y2="150"/>
+<polyline points="52,104 64,113 52,122"/>
+<line x1="16" y1="113" x2="52" y2="113"/>
+<circle cx="92" cy="34" r="4"/>
+<line x1="92" y1="30" x2="92" y2="12"/>
+<circle cx="92" cy="192" r="4"/>
+<line x1="92" y1="196" x2="92" y2="214"/>
+<line x1="132" y1="76" x2="168" y2="76"/>
+<line x1="132" y1="150" x2="168" y2="150"/>
+<line x1="115.2" y1="142.4" x2="124" y2="142.4" stroke-width="1.4"/>
+<rect x="332" y="38" width="80" height="150" rx="2"/>
+<line x1="296" y1="76" x2="332" y2="76"/>
+<line x1="296" y1="150" x2="332" y2="150"/>
+<polyline points="332,104 344,113 332,122"/>
+<circle cx="328" cy="113" r="4"/>
+<line x1="296" y1="113" x2="324" y2="113"/>
+<circle cx="372" cy="34" r="4"/>
+<line x1="372" y1="30" x2="372" y2="12"/>
+<circle cx="372" cy="192" r="4"/>
+<line x1="372" y1="196" x2="372" y2="214"/>
+<line x1="412" y1="76" x2="448" y2="76"/>
+<line x1="412" y1="150" x2="448" y2="150"/>
+<line x1="395.2" y1="142.4" x2="404" y2="142.4" stroke-width="1.4"/>
 </g>
-<text x="92" y="98" text-anchor="middle" font-size="26">RS</text>
-<text x="60" y="58" text-anchor="start" font-size="14">S</text>
-<text x="60" y="132" text-anchor="start" font-size="14">R</text>
-<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
-<text x="372" y="98" text-anchor="middle" font-size="26">RS</text>
-<text x="340" y="58" text-anchor="start" font-size="14">S</text>
-<text x="340" y="132" text-anchor="start" font-size="14">R</text>
-<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+<text x="92" y="122" text-anchor="middle" font-size="26">RS</text>
+<text x="60" y="82" text-anchor="start" font-size="14">S</text>
+<text x="60" y="156" text-anchor="start" font-size="14">R</text>
+<text x="92" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="92" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="124" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="122" text-anchor="middle" font-size="26">RS</text>
+<text x="340" y="82" text-anchor="start" font-size="14">S</text>
+<text x="340" y="156" text-anchor="start" font-size="14">R</text>
+<text x="372" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="372" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="404" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
 </g>
 </svg>
 </div>
@@ -930,39 +942,51 @@ $$Q(t+1) = J\,\overline{Q}(t) + \overline{K}\,Q(t)$$
 **สัญลักษณ์ของ JK ฟลิป-ฟลอป**
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="252" viewBox="0 0 560 252" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="52" y="14" width="80" height="150" rx="2"/>
-<line x1="16" y1="52" x2="52" y2="52"/>
-<line x1="16" y1="126" x2="52" y2="126"/>
-<polyline points="52,80 64,89 52,98"/>
-<line x1="16" y1="89" x2="52" y2="89"/>
-<line x1="132" y1="52" x2="168" y2="52"/>
-<line x1="132" y1="126" x2="168" y2="126"/>
-<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
-<rect x="332" y="14" width="80" height="150" rx="2"/>
-<line x1="296" y1="52" x2="332" y2="52"/>
-<line x1="296" y1="126" x2="332" y2="126"/>
-<polyline points="332,80 344,89 332,98"/>
-<circle cx="328" cy="89" r="4"/>
-<line x1="296" y1="89" x2="324" y2="89"/>
-<line x1="412" y1="52" x2="448" y2="52"/>
-<line x1="412" y1="126" x2="448" y2="126"/>
-<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+<rect x="52" y="38" width="80" height="150" rx="2"/>
+<line x1="16" y1="76" x2="52" y2="76"/>
+<line x1="16" y1="150" x2="52" y2="150"/>
+<polyline points="52,104 64,113 52,122"/>
+<line x1="16" y1="113" x2="52" y2="113"/>
+<circle cx="92" cy="34" r="4"/>
+<line x1="92" y1="30" x2="92" y2="12"/>
+<circle cx="92" cy="192" r="4"/>
+<line x1="92" y1="196" x2="92" y2="214"/>
+<line x1="132" y1="76" x2="168" y2="76"/>
+<line x1="132" y1="150" x2="168" y2="150"/>
+<line x1="115.2" y1="142.4" x2="124" y2="142.4" stroke-width="1.4"/>
+<rect x="332" y="38" width="80" height="150" rx="2"/>
+<line x1="296" y1="76" x2="332" y2="76"/>
+<line x1="296" y1="150" x2="332" y2="150"/>
+<polyline points="332,104 344,113 332,122"/>
+<circle cx="328" cy="113" r="4"/>
+<line x1="296" y1="113" x2="324" y2="113"/>
+<circle cx="372" cy="34" r="4"/>
+<line x1="372" y1="30" x2="372" y2="12"/>
+<circle cx="372" cy="192" r="4"/>
+<line x1="372" y1="196" x2="372" y2="214"/>
+<line x1="412" y1="76" x2="448" y2="76"/>
+<line x1="412" y1="150" x2="448" y2="150"/>
+<line x1="395.2" y1="142.4" x2="404" y2="142.4" stroke-width="1.4"/>
 </g>
-<text x="92" y="98" text-anchor="middle" font-size="26">JK</text>
-<text x="60" y="58" text-anchor="start" font-size="14">J</text>
-<text x="60" y="132" text-anchor="start" font-size="14">K</text>
-<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
-<text x="372" y="98" text-anchor="middle" font-size="26">JK</text>
-<text x="340" y="58" text-anchor="start" font-size="14">J</text>
-<text x="340" y="132" text-anchor="start" font-size="14">K</text>
-<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+<text x="92" y="122" text-anchor="middle" font-size="26">JK</text>
+<text x="60" y="82" text-anchor="start" font-size="14">J</text>
+<text x="60" y="156" text-anchor="start" font-size="14">K</text>
+<text x="92" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="92" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="124" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="122" text-anchor="middle" font-size="26">JK</text>
+<text x="340" y="82" text-anchor="start" font-size="14">J</text>
+<text x="340" y="156" text-anchor="start" font-size="14">K</text>
+<text x="372" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="372" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="404" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
 </g>
 </svg>
 </div>
@@ -1515,35 +1539,47 @@ $$Q(t+1) = D$$
 **สัญลักษณ์ของ D ฟลิป-ฟลอป**
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="252" viewBox="0 0 560 252" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="52" y="14" width="80" height="150" rx="2"/>
-<line x1="16" y1="52" x2="52" y2="52"/>
-<polyline points="52,110 64,119 52,128"/>
-<line x1="16" y1="119" x2="52" y2="119"/>
-<line x1="132" y1="52" x2="168" y2="52"/>
-<line x1="132" y1="126" x2="168" y2="126"/>
-<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
-<rect x="332" y="14" width="80" height="150" rx="2"/>
-<line x1="296" y1="52" x2="332" y2="52"/>
-<polyline points="332,110 344,119 332,128"/>
-<circle cx="328" cy="119" r="4"/>
-<line x1="296" y1="119" x2="324" y2="119"/>
-<line x1="412" y1="52" x2="448" y2="52"/>
-<line x1="412" y1="126" x2="448" y2="126"/>
-<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+<rect x="52" y="38" width="80" height="150" rx="2"/>
+<line x1="16" y1="76" x2="52" y2="76"/>
+<polyline points="52,134 64,143 52,152"/>
+<line x1="16" y1="143" x2="52" y2="143"/>
+<circle cx="92" cy="34" r="4"/>
+<line x1="92" y1="30" x2="92" y2="12"/>
+<circle cx="92" cy="192" r="4"/>
+<line x1="92" y1="196" x2="92" y2="214"/>
+<line x1="132" y1="76" x2="168" y2="76"/>
+<line x1="132" y1="150" x2="168" y2="150"/>
+<line x1="115.2" y1="142.4" x2="124" y2="142.4" stroke-width="1.4"/>
+<rect x="332" y="38" width="80" height="150" rx="2"/>
+<line x1="296" y1="76" x2="332" y2="76"/>
+<polyline points="332,134 344,143 332,152"/>
+<circle cx="328" cy="143" r="4"/>
+<line x1="296" y1="143" x2="324" y2="143"/>
+<circle cx="372" cy="34" r="4"/>
+<line x1="372" y1="30" x2="372" y2="12"/>
+<circle cx="372" cy="192" r="4"/>
+<line x1="372" y1="196" x2="372" y2="214"/>
+<line x1="412" y1="76" x2="448" y2="76"/>
+<line x1="412" y1="150" x2="448" y2="150"/>
+<line x1="395.2" y1="142.4" x2="404" y2="142.4" stroke-width="1.4"/>
 </g>
-<text x="92" y="98" text-anchor="middle" font-size="26">D</text>
-<text x="60" y="58" text-anchor="start" font-size="14">D</text>
-<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
-<text x="372" y="98" text-anchor="middle" font-size="26">D</text>
-<text x="340" y="58" text-anchor="start" font-size="14">D</text>
-<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+<text x="92" y="122" text-anchor="middle" font-size="26">D</text>
+<text x="60" y="82" text-anchor="start" font-size="14">D</text>
+<text x="92" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="92" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="124" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="122" text-anchor="middle" font-size="26">D</text>
+<text x="340" y="82" text-anchor="start" font-size="14">D</text>
+<text x="372" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="372" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="404" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
 </g>
 </svg>
 </div>
@@ -1731,35 +1767,47 @@ $$Q(t+1) = \overline{T}\,Q(t) + T\,\overline{Q}(t)$$
 **สัญลักษณ์ของ T ฟลิป-ฟลอป**
 
 <div align="center">
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="204" viewBox="0 0 560 204" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="252" viewBox="0 0 560 252" font-family="Times New Roman, serif" font-size="18" fill="currentColor">
 <g transform="translate(0,0)">
 <g stroke="currentColor" stroke-width="1.8" fill="none">
-<rect x="52" y="14" width="80" height="150" rx="2"/>
-<line x1="16" y1="52" x2="52" y2="52"/>
-<polyline points="52,110 64,119 52,128"/>
-<line x1="16" y1="119" x2="52" y2="119"/>
-<line x1="132" y1="52" x2="168" y2="52"/>
-<line x1="132" y1="126" x2="168" y2="126"/>
-<line x1="115.2" y1="118.4" x2="124" y2="118.4" stroke-width="1.4"/>
-<rect x="332" y="14" width="80" height="150" rx="2"/>
-<line x1="296" y1="52" x2="332" y2="52"/>
-<polyline points="332,110 344,119 332,128"/>
-<circle cx="328" cy="119" r="4"/>
-<line x1="296" y1="119" x2="324" y2="119"/>
-<line x1="412" y1="52" x2="448" y2="52"/>
-<line x1="412" y1="126" x2="448" y2="126"/>
-<line x1="395.2" y1="118.4" x2="404" y2="118.4" stroke-width="1.4"/>
+<rect x="52" y="38" width="80" height="150" rx="2"/>
+<line x1="16" y1="76" x2="52" y2="76"/>
+<polyline points="52,134 64,143 52,152"/>
+<line x1="16" y1="143" x2="52" y2="143"/>
+<circle cx="92" cy="34" r="4"/>
+<line x1="92" y1="30" x2="92" y2="12"/>
+<circle cx="92" cy="192" r="4"/>
+<line x1="92" y1="196" x2="92" y2="214"/>
+<line x1="132" y1="76" x2="168" y2="76"/>
+<line x1="132" y1="150" x2="168" y2="150"/>
+<line x1="115.2" y1="142.4" x2="124" y2="142.4" stroke-width="1.4"/>
+<rect x="332" y="38" width="80" height="150" rx="2"/>
+<line x1="296" y1="76" x2="332" y2="76"/>
+<polyline points="332,134 344,143 332,152"/>
+<circle cx="328" cy="143" r="4"/>
+<line x1="296" y1="143" x2="324" y2="143"/>
+<circle cx="372" cy="34" r="4"/>
+<line x1="372" y1="30" x2="372" y2="12"/>
+<circle cx="372" cy="192" r="4"/>
+<line x1="372" y1="196" x2="372" y2="214"/>
+<line x1="412" y1="76" x2="448" y2="76"/>
+<line x1="412" y1="150" x2="448" y2="150"/>
+<line x1="395.2" y1="142.4" x2="404" y2="142.4" stroke-width="1.4"/>
 </g>
-<text x="92" y="98" text-anchor="middle" font-size="26">T</text>
-<text x="60" y="58" text-anchor="start" font-size="14">T</text>
-<text x="124" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="124" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="92" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
-<text x="372" y="98" text-anchor="middle" font-size="26">T</text>
-<text x="340" y="58" text-anchor="start" font-size="14">T</text>
-<text x="404" y="58" text-anchor="end" font-size="16">Q</text>
-<text x="404" y="132" text-anchor="end" font-size="16">Q</text>
-<text x="372" y="192" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
+<text x="92" y="122" text-anchor="middle" font-size="26">T</text>
+<text x="60" y="82" text-anchor="start" font-size="14">T</text>
+<text x="92" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="92" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="124" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="124" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="92" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาขึ้น (↑)</text>
+<text x="372" y="122" text-anchor="middle" font-size="26">T</text>
+<text x="340" y="82" text-anchor="start" font-size="14">T</text>
+<text x="372" y="55" text-anchor="middle" font-size="12">PR</text>
+<text x="372" y="180" text-anchor="middle" font-size="12">CLR</text>
+<text x="404" y="82" text-anchor="end" font-size="16">Q</text>
+<text x="404" y="156" text-anchor="end" font-size="16">Q</text>
+<text x="372" y="240" text-anchor="middle" font-family="Mitr, Tahoma, sans-serif" font-size="15">ทำงานที่ขอบขาลง (↓)</text>
 </g>
 </svg>
 </div>
